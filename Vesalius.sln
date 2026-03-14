@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishNet.Demos", "FishNet.De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{2685D9F6-A3CD-30E6-73E1-7FEC0E6CDFAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{667A0292-A100-B0A4-78EE-B8CFC4F44E22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{2685D9F6-A3CD-30E6-73E1-7FEC0E6CDFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2685D9F6-A3CD-30E6-73E1-7FEC0E6CDFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2685D9F6-A3CD-30E6-73E1-7FEC0E6CDFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667A0292-A100-B0A4-78EE-B8CFC4F44E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667A0292-A100-B0A4-78EE-B8CFC4F44E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667A0292-A100-B0A4-78EE-B8CFC4F44E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667A0292-A100-B0A4-78EE-B8CFC4F44E22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
