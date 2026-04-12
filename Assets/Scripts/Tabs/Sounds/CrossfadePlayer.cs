@@ -3,17 +3,20 @@ using UnityEngine.Audio;
 
 public class CrossfadePlayer : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] clips;
-    [SerializeField] private AudioMixerGroup[] mixerGroups; // parallel to clips
-    [SerializeField] private bool loop = true;
-
+    private AudioClip[] clips;
+    private AudioMixerGroup mixerGroup;
     private AudioSource[] sources;
+    private bool loop = true;
+
+    public void SetClips(AudioClip[] newClips, AudioMixerGroup newMixerGroup = null)
+    {
+        clips = newClips;
+        mixerGroup = newMixerGroup;
+    }
 
     public void Play()
     {
         if (clips == null || clips.Length == 0) { Debug.LogError("No clips assigned"); return; }
-        if (mixerGroups != null && mixerGroups.Length != clips.Length)
-            Debug.LogWarning("mixerGroups length doesn't match clips — some sources won't have a mixer group");
 
         Stop();
 
@@ -29,8 +32,8 @@ public class CrossfadePlayer : MonoBehaviour
             src.volume = 0f;
             src.playOnAwake = false;
 
-            if (mixerGroups != null && i < mixerGroups.Length)
-                src.outputAudioMixerGroup = mixerGroups[i];
+            if (mixerGroup != null)
+                src.outputAudioMixerGroup = mixerGroup;
 
             src.Play();
             sources[i] = src;
@@ -45,7 +48,6 @@ public class CrossfadePlayer : MonoBehaviour
         sources = null;
     }
 
-    // fadeVal: 0 = first clip, 1 = last clip
     public void SetFadeValue(float fadeVal)
     {
         if (sources == null || sources.Length == 0) return;
@@ -63,11 +65,6 @@ public class CrossfadePlayer : MonoBehaviour
             if (i == startSample + 1) volume = remainderPercentage;
             sources[i].volume = volume;
         }
-    }
-
-    public void SetClips(AudioClip[] newClips)
-    {
-        clips = newClips;
     }
 
     private void OnDestroy() => Stop();
