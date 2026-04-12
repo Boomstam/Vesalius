@@ -65,5 +65,10 @@ public class CrossfadePlayer : MonoBehaviour
         }
     }
 
+    public void SetClips(AudioClip[] newClips)
+    {
+        clips = newClips;
+    }
+
     private void OnDestroy() => Stop();
 }
