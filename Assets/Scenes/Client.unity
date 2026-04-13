@@ -1984,20 +1984,19 @@ MonoBehaviour:
   tabManagement: {fileID: 429975879}
   infoToggleButton: {fileID: 1984027640}
   quitTutorialButton: {fileID: 1285460019}
-  textAnimators:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  imageAnimators:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1117109128}
-  - {fileID: 1826418297}
-  - {fileID: 573791536}
-  - {fileID: 0}
+  chapterAnimations:
+  - Chapter: 2
+    TextAnimators: []
+    ImageAnimators:
+    - {fileID: 1117109128}
+  - Chapter: 3
+    TextAnimators: []
+    ImageAnimators:
+    - {fileID: 1826418297}
+  - Chapter: 4
+    TextAnimators: []
+    ImageAnimators:
+    - {fileID: 573791536}
   TutorialActive: 0
 --- !u!1 &726349805
 GameObject:

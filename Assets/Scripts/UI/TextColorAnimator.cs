@@ -18,6 +18,8 @@ public class TextColorAnimator : MonoBehaviour
     private void Awake()
     {
         _text = GetComponent<TMP_Text>();
+        
+        // Had to put this script and ImageColorAnimator before my other scripts or the _initialColor could be already changed  
         _initialColor = _text.color;
     }
 

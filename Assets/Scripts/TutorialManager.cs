@@ -11,36 +11,30 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private Button infoToggleButton;
     [SerializeField] private Button quitTutorialButton;
 
-    [Header("Per-Chapter Animators (parallel arrays, indexed by chapter)")]
-    [SerializeField] private TextColorAnimator[] textAnimators;
-    [SerializeField] private ImageColorAnimator[] imageAnimators;
+    [Header("Chapter Animations")]
+    [SerializeField] private ChapterAnimationEntry[] chapterAnimations;
 
-    public bool TutorialActive = false;
+    [System.Serializable]
+    public class ChapterAnimationEntry
+    {
+        public int Chapter;
+        public TextColorAnimator[] TextAnimators;
+        public ImageColorAnimator[] ImageAnimators;
+    }
     
+    public bool TutorialActive = false;
+
     private int _previousTab = 1;
 
-    // Unity fires all onClick listeners for a button in the same EventSystem update.
-    // When HideTutorial runs, it switches to _previousTab and locks tab 0 — but
-    // TabManagement's own ShowTab(0) lambda fires in the same update tick, after
-    // HideTutorial returns, which would immediately switch back to tab 0.
-    // The lock in TabManagement suppresses that lambda, but we can only safely
-    // unlock it on the next frame, once that same-frame lambda has already been ignored.
-    // A coroutine can't be used here because the tutorial panel GameObject (which this
-    // component may live on) becomes inactive during HideTutorial, which would kill
-    // the coroutine before it runs. Update() is safe because TutorialManager itself
-    // remains active.
     private bool _pendingUnlock = false;
 
     private const int TutorialTabIndex = 0;
 
-    // Using Awake so listeners are registered before Start runs on any object.
-    // This ensures ToggleTutorial is wired up before TabManagement.Awake adds
-    // its own lambda to the same button.
     private void Awake()
     {
         infoToggleButton.onClick.AddListener(ToggleTutorial);
         quitTutorialButton.onClick.AddListener(HideTutorial);
-        
+
         infoManager.OnChapterChanged += OnChapterChanged;
     }
 
@@ -74,7 +68,6 @@ public class TutorialManager : MonoBehaviour
         infoManager.ResetToStart();
         infoManager.GoToChapter(0);
 
-        // Chapter 0 is never the last chapter, so hide immediately.
         quitTutorialButton.gameObject.SetActive(false);
 
         tabManagement.LockTabZero();
@@ -93,44 +86,64 @@ public class TutorialManager : MonoBehaviour
         _pendingUnlock = true;
     }
 
-    
-
     private void OnChapterChanged(int index)
     {
         StopAllAnimators();
         StartAnimatorsForChapter(index);
 
-        // Show the quit button only on the final chapter.
         bool isLastChapter = index == infoManager.ChapterCount - 1;
         quitTutorialButton.gameObject.SetActive(isLastChapter);
+
     }
 
-    private void StartAnimatorsForChapter(int index)
+    private ChapterAnimationEntry FindEntry(int chapterIndex)
     {
-        if (textAnimators != null && index < textAnimators.Length && textAnimators[index] != null)
-            textAnimators[index].StartAnimation();
-
-        if (imageAnimators != null && index < imageAnimators.Length && imageAnimators[index] != null)
-            imageAnimators[index].StartAnimation();
+        if (chapterAnimations == null) return null;
+        foreach (var entry in chapterAnimations)
+            if (entry.Chapter == chapterIndex) return entry;
+        return null;
     }
 
-    private void StopAnimatorsForChapter(int index)
+    private void StartAnimatorsForChapter(int chapterIndex)
     {
-        if (textAnimators != null && index < textAnimators.Length && textAnimators[index] != null)
-            textAnimators[index].StopAnimation();
+        var entry = FindEntry(chapterIndex);
+        if (entry == null) return;
 
-        if (imageAnimators != null && index < imageAnimators.Length && imageAnimators[index] != null)
-            imageAnimators[index].StopAnimation();
+        if (entry.TextAnimators != null)
+            foreach (var a in entry.TextAnimators)
+                if (a != null) a.StartAnimation();
+
+        if (entry.ImageAnimators != null)
+            foreach (var a in entry.ImageAnimators)
+                if (a != null) a.StartAnimation();
+    }
+
+    private void StopAnimatorsForChapter(int chapterIndex)
+    {
+        var entry = FindEntry(chapterIndex);
+        if (entry == null) return;
+
+        if (entry.TextAnimators != null)
+            foreach (var a in entry.TextAnimators)
+                if (a != null) a.StopAnimation();
+
+        if (entry.ImageAnimators != null)
+            foreach (var a in entry.ImageAnimators)
+                if (a != null) a.StopAnimation();
     }
 
     private void StopAllAnimators()
     {
-        if (textAnimators != null)
-            foreach (var a in textAnimators)
-                if (a != null) a.StopAnimation();
+        if (chapterAnimations == null) return;
+        foreach (var entry in chapterAnimations)
+        {
+            if (entry.TextAnimators != null)
+                foreach (var a in entry.TextAnimators)
+                    if (a != null) a.StopAnimation();
 
-        if (imageAnimators != null)
-            foreach (var a in imageAnimators)
-                if (a != null) a.StopAnimation();
+            if (entry.ImageAnimators != null)
+                foreach (var a in entry.ImageAnimators)
+                    if (a != null) a.StopAnimation();
+        }
     }
 }

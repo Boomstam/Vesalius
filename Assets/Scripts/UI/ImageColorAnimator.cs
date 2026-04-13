@@ -20,6 +20,7 @@ public class ImageColorAnimator : MonoBehaviour
     {
         _image = GetComponent<Image>();
         
+        // Had to put this script and TextColorAnimator before my other scripts or the _initialColor could be already changed
         _initialColor = _image.color;
     }
 
