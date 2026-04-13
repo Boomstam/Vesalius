@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e4a30af35ccc06478592b32c8f12540
+guid: e4cbde918bea7114f9f2a588ad4ee7f5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -13,6 +13,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 207815
   packageName: 'FishNet: Networking Evolved'
-  packageVersion: 4.6.22R
-  assetPath: Assets/FishNet/Runtime/Editor/NetworkProfiler/Types.cs
-  uploadId: 866910
+  packageVersion: 4.7.1R
+  assetPath: Assets/FishNet/Runtime/Editor/NetworkProfiler/NetworkTraffic.cs
+  uploadId: 892096

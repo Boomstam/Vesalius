@@ -5,7 +5,6 @@ public class TabManagement : MonoBehaviour
 {
     [Header("Tab Buttons")]
     public Button btnInfo;
-    public Button btnVisuals;
     public Button btnSounds;
 
     [Header("Tab Panels")]
@@ -20,11 +19,10 @@ public class TabManagement : MonoBehaviour
 
     private void Start()
     {
-        tabButtons = new Button[] { btnInfo, btnVisuals, btnSounds };
+        tabButtons = new Button[] { btnInfo, btnSounds };
 
         btnInfo.onClick.AddListener(() => ShowTab(0));
-        btnVisuals.onClick.AddListener(() => ShowTab(1));
-        btnSounds.onClick.AddListener(() => ShowTab(2));
+        btnSounds.onClick.AddListener(() => ShowTab(1));
         ShowTab(0);
     }
 

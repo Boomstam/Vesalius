@@ -72,8 +72,8 @@
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\GenericInstanceType.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\IMetadataScope.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\PointerType.cs" />
-    <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\PropertyAttributes.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\IGenericParameterProvider.cs" />
+    <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\PropertyAttributes.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\IMetadataTokenProvider.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\TypeSystem.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\ExportedType.cs" />
@@ -160,9 +160,9 @@
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\LinkedResource.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\Import.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\AssemblyWriter.cs" />
-    <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\MarshalInfo.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\GenericInstanceMethod.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\ModuleReference.cs" />
+    <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\MarshalInfo.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\IMethodSignature.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\TypeResolver.cs" />
     <Compile Include="Assets\FishNet\CodeGenerating\cecil-0.11.4\Mono.Cecil\SentinelType.cs" />

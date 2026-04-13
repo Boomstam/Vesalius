@@ -19,6 +19,7 @@ using GameKit.Dependencies.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using FishNet.Managing.Observing;
 using GameKit.Dependencies.Utilities.Types;
 using Unity.Profiling;
 using UnityEngine;
@@ -139,7 +140,7 @@ namespace FishNet.Object
                     /* The checked data is greater than
                      * what was being searched. This means
                      * to insert right before it. */
-                    
+
                     if (lTick > tick)
                     {
                         result = DataPlacementResult.InsertMiddle;
@@ -226,7 +227,7 @@ namespace FishNet.Object
         /// <remarks>This is only used by prediction.</remarks>
         private TransformProperties _lastCheckedTransformProperties;
         #endregion
-        
+
         /// <summary>
         /// Called when the object is destroyed.
         /// </summary>
@@ -422,6 +423,10 @@ namespace FishNet.Object
             else
                 writer = CreateRpc(hash, methodWriter, PacketId.Reconcile, rpcChannel);
 
+            #if !UNITY_SERVER
+            int observersWrittenTo = 0;
+            #endif
+
             // If state forwarding is not enabled then only send to owner.
             if (!stateForwarding)
             {
@@ -430,15 +435,22 @@ namespace FishNet.Object
             // State forwarding, send to all.
             else
             {
-                foreach (NetworkConnection nc in Observers)
-                    nc.WriteState(writer);
+                {
+                    #if !UNITY_SERVER
+                    observersWrittenTo = Observers.Count;
+                    #endif
+
+                    //Send to everyone unconditionally when not using LOD.
+                    foreach (NetworkConnection nc in Observers)
+                        nc.WriteState(writer);
+                }
             }
 
             #if !UNITY_SERVER
             if (_networkTrafficStatistics != null)
             {
-                int written = stateForwarding ? writer.Length * Observers.Count : writer.Length;
-                _networkTrafficStatistics.AddInboundPacketIdData(PacketId.Reconcile, GetRpcName(PacketId.Reconcile, hash), written + Managing.Transporting.TransportManager.PACKETID_LENGTH, gameObject, asServer: true);
+                int writtenBytes = stateForwarding ? writer.Length * observersWrittenTo : writer.Length;
+                _networkTrafficStatistics.AddOutboundPacketIdData(PacketId.Reconcile, GetRpcName(PacketId.Reconcile, hash), writtenBytes + Managing.Transporting.TransportManager.PACKETID_LENGTH, gameObject, asServer: true);
             }
             #endif
 
@@ -897,7 +909,9 @@ namespace FishNet.Object
             #else
             methodWriter.WriteReplicate<T>(replicatesHistory, offset);
             #endif
-            _transportManagerCache.CheckSetReliableChannel(methodWriter.Length + MAXIMUM_RPC_HEADER_SIZE, ref channel);
+
+            channel = _transportManagerCache.GetReliableChannelIfOverMTU(methodWriter.Length + MAXIMUM_RPC_HEADER_SIZE, channel);
+
             PooledWriter writer = CreateRpc(hash, methodWriter, PacketId.Replicate, channel);
 
             #if !UNITY_SERVER
@@ -912,7 +926,7 @@ namespace FishNet.Object
                 #if !UNITY_SERVER
                 written = writer.Length;
                 #endif
-                NetworkManager.TransportManager.SendToServer((byte)channel, writer.GetArraySegment(), splitLargeMessages: true);
+                NetworkManager.TransportManager.SendToServer((byte)channel, writer.GetArraySegment());
             }
             else
             {
@@ -929,7 +943,7 @@ namespace FishNet.Object
                     #if !UNITY_SERVER
                     written = writer.Length * (Observers.Count - _networkConnectionCache.Count);
                     #endif
-                    NetworkManager.TransportManager.SendToClients((byte)channel, writer.GetArraySegment(), Observers, _networkConnectionCache, splitLargeMessages: true);
+                    NetworkManager.TransportManager.SendToClients((byte)channel, writer.GetArraySegment(), Observers, _networkConnectionCache);
                 }
             }
 
@@ -1085,7 +1099,7 @@ namespace FishNet.Object
             }
             #endif
 
-            NetworkManager.TransportManager.SendToClients((byte)channel, writer.GetArraySegment(), Observers, _networkConnectionCache, false);
+            NetworkManager.TransportManager.SendToClients((byte)channel, writer.GetArraySegment(), Observers, _networkConnectionCache);
 
             methodWriter.StoreLength();
             writer.StoreLength();
@@ -1304,10 +1318,6 @@ namespace FishNet.Object
         [MakePublic]
         internal void Reconcile_Client<T, T2>(ReconcileUserLogicDelegate<T> reconcileDel, RingBuffer<ReplicateDataContainer<T2>> replicatesHistory, RingBuffer<LocalReconcile<T>> reconcilesHistory, T data) where T : IReconcileData where T2 : IReplicateData, new()
         {
-            bool isBehaviourReconciling = IsBehaviourReconciling;
-            if (!isBehaviourReconciling)
-                return;
-
             const long unsetHistoryIndex = -1;
             long historyIndex = unsetHistoryIndex;
 
@@ -1341,6 +1351,19 @@ namespace FishNet.Object
                     uint lrTick = reconcilesHistory[(int)historyIndex].Tick;
                     if (lrTick != reconcileTick)
                         historyIndex = unsetHistoryIndex;
+
+                    //If index is set and behaviour is not reconciling then apply data.
+                    if (!IsBehaviourReconciling && historyIndex != unsetHistoryIndex)
+                    {
+                        LocalReconcile<T> localReconcile = reconcilesHistory[(int)historyIndex];
+                        //Before disposing get the writer and call reconcile reader so it's parsed.
+                        PooledWriter reconcileWritten = localReconcile.Writer;
+                        /* Although this is actually from the local client the datasource is being set to server since server
+                         * is what typically sends reconciles. */
+                        PooledReader reader = ReaderPool.Retrieve(reconcileWritten.GetArraySegment(), _networkObjectCache.NetworkManager, Reader.DataSource.Server);
+                        data = Reconcile_Reader_Local<T>(localReconcile.Tick, reader);
+                        ReaderPool.Store(reader);
+                    }
                 }
             }
 
@@ -1358,12 +1381,9 @@ namespace FishNet.Object
                 reconcilesHistory.RemoveRange(true, (int)historyIndex);
             }
 
-            //If does not have data still then exit method.
+            //If this behaviour does not have data still then exit method.
             if (!IsBehaviourReconciling)
                 return;
-
-            //Set on the networkObject that a reconcile can now occur.
-            _networkObjectCache.IsObjectReconciling = true;
 
             uint dataTick = data.GetTick();
             _lastReconcileTick = dataTick;
@@ -1406,6 +1426,9 @@ namespace FishNet.Object
                     replicatesHistory[i].Dispose();
                 replicatesHistory.RemoveRange(true, removeCount);
             }
+
+            //Set on the networkObject that a reconcile can now occur.
+            _networkObjectCache.IsObjectReconciling = true;
 
             //Call reconcile user logic.
             reconcileDel?.Invoke(data, Channel.Reliable);
