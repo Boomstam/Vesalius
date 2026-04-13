@@ -17,7 +17,12 @@ public class TabManagement : MonoBehaviour
     [Header("Colors")]
     public Color activeColor = Color.white;
     public Color inactiveColor = new Color(0.7f, 0.7f, 0.7f);
-
+    
+    [Header("Tutorial Manager")]
+    public TutorialManager tutorialManager;
+    
+    private const string PlayerPrefsKey = "TutorialShown";
+    
     public int CurrentTab => currentTab;
 
     private int currentTab = 1;
@@ -46,7 +51,21 @@ public class TabManagement : MonoBehaviour
             });
         }
 
-        ShowTab(0);
+        if (!PlayerPrefs.HasKey(PlayerPrefsKey))
+        {
+            PlayerPrefs.SetInt(PlayerPrefsKey, 1);
+            PlayerPrefs.Save();
+            
+            tutorialManager.TutorialActive = true;
+            
+            ShowTab(0);
+        }
+        else
+        {
+            tutorialManager.TutorialActive = false;
+            
+            ShowTab(1);
+        }
     }
 
     public void LockTabZero()

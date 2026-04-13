@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
-    private const string PlayerPrefsKey = "TutorialShown";
-
     [Header("Dependencies")]
     [SerializeField] private InfoManager infoManager;
     [SerializeField] private TabManagement tabManagement;
@@ -17,7 +15,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private TextColorAnimator[] textAnimators;
     [SerializeField] private ImageColorAnimator[] imageAnimators;
 
-    private bool _tutorialActive = false;
+    public bool TutorialActive = false;
+    
     private int _previousTab = 1;
 
     // Unity fires all onClick listeners for a button in the same EventSystem update.
@@ -41,26 +40,8 @@ public class TutorialManager : MonoBehaviour
     {
         infoToggleButton.onClick.AddListener(ToggleTutorial);
         quitTutorialButton.onClick.AddListener(HideTutorial);
+        
         infoManager.OnChapterChanged += OnChapterChanged;
-    }
-
-    private void Start()
-    {
-        if (!PlayerPrefs.HasKey(PlayerPrefsKey) || Application.isEditor)
-        {
-            PlayerPrefs.SetInt(PlayerPrefsKey, 1);
-            PlayerPrefs.Save();
-            ShowTutorial();
-        }
-    }
-
-    private void OnDestroy()
-    {
-        infoToggleButton.onClick.RemoveListener(ToggleTutorial);
-        quitTutorialButton.onClick.RemoveListener(HideTutorial);
-
-        if (infoManager != null)
-            infoManager.OnChapterChanged -= OnChapterChanged;
     }
 
     private void Update()
@@ -74,7 +55,7 @@ public class TutorialManager : MonoBehaviour
 
     private void ToggleTutorial()
     {
-        if (_tutorialActive)
+        if (TutorialActive)
             HideTutorial();
         else
             ShowTutorial();
@@ -82,18 +63,19 @@ public class TutorialManager : MonoBehaviour
 
     private void ShowTutorial()
     {
+        Debug.Log("ShowTutorial");
+
         if (tabManagement.CurrentTab != TutorialTabIndex)
             _previousTab = tabManagement.CurrentTab;
 
-        _tutorialActive = true;
-
-        // Cancel any pending unlock from a previous HideTutorial call —
-        // if Show is called before the next frame, the deferred unlock must
-        // not fire and undo the lock we're about to set.
+        TutorialActive = true;
         _pendingUnlock = false;
 
         infoManager.ResetToStart();
         infoManager.GoToChapter(0);
+
+        // Chapter 0 is never the last chapter, so hide immediately.
+        quitTutorialButton.gameObject.SetActive(false);
 
         tabManagement.LockTabZero();
         tabManagement.ShowTab(TutorialTabIndex);
@@ -103,7 +85,7 @@ public class TutorialManager : MonoBehaviour
     private void HideTutorial()
     {
         StopAnimatorsForChapter(infoManager.CurrentIndex);
-        _tutorialActive = false;
+        TutorialActive = false;
 
         tabManagement.ShowTab(_previousTab);
         tabManagement.EnableAllTabsButTheFirst();
@@ -111,10 +93,16 @@ public class TutorialManager : MonoBehaviour
         _pendingUnlock = true;
     }
 
+    
+
     private void OnChapterChanged(int index)
     {
         StopAllAnimators();
         StartAnimatorsForChapter(index);
+
+        // Show the quit button only on the final chapter.
+        bool isLastChapter = index == infoManager.ChapterCount - 1;
+        quitTutorialButton.gameObject.SetActive(isLastChapter);
     }
 
     private void StartAnimatorsForChapter(int index)

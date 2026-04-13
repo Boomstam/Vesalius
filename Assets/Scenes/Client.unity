@@ -925,6 +925,7 @@ MonoBehaviour:
     panel: {fileID: 1006655684}
   activeColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   inactiveColor: {r: 0.20784314, g: 0.20784314, b: 0.20784314, a: 0.92156863}
+  tutorialManager: {fileID: 606116905}
 --- !u!1 &487396210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +1998,7 @@ MonoBehaviour:
   - {fileID: 1826418297}
   - {fileID: 573791536}
   - {fileID: 0}
+  TutorialActive: 0
 --- !u!1 &726349805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2373,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3653,7 +3655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1285460018
 RectTransform:
   m_ObjectHideFlags: 0
