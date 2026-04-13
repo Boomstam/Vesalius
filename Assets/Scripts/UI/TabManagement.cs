@@ -51,6 +51,8 @@ public class TabManagement : MonoBehaviour
             });
         }
 
+        tutorialManager.Initialize();
+        
         if (!PlayerPrefs.HasKey(PlayerPrefsKey))
         {
             PlayerPrefs.SetInt(PlayerPrefsKey, 1);
@@ -59,11 +61,14 @@ public class TabManagement : MonoBehaviour
             tutorialManager.TutorialActive = true;
             
             ShowTab(0);
+            
+            tutorialManager.OnChapterChanged(0);
+
         }
         else
         {
             tutorialManager.TutorialActive = false;
-            
+
             ShowTab(1);
         }
     }
@@ -80,16 +85,15 @@ public class TabManagement : MonoBehaviour
 
     public void ShowTab(int index)
     {
-        Debug.Log(index);
+        Debug.Log("ShowTab " + index);
         
         currentTab = index;
-
+        
         for (int i = 0; i < tabs.Length; i++)
         {
-            if (tabs[i].panel != null)
-                tabs[i].panel.SetActive(i == index);
-
-            if (tabs[i].button != null)
+            tabs[i].panel.SetActive(i == index);
+            
+            if(i != 0) // Don't change the buttons for the first tab
             {
                 tabs[i].button.transition = Selectable.Transition.None;
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
@@ -100,14 +104,12 @@ public class TabManagement : MonoBehaviour
     public void DisableAllTabsButTheFirst()
     {
         for (int i = 1; i < tabs.Length; i++)
-            if (tabs[i].button != null)
-                tabs[i].button.interactable = false;
+            tabs[i].button.interactable = false;
     }
 
     public void EnableAllTabsButTheFirst()
     {
         for (int i = 1; i < tabs.Length; i++)
-            if (tabs[i].button != null)
-                tabs[i].button.interactable = true;
+            tabs[i].button.interactable = true;
     }
 }

@@ -30,14 +30,6 @@ public class TutorialManager : MonoBehaviour
 
     private const int TutorialTabIndex = 0;
 
-    private void Awake()
-    {
-        infoToggleButton.onClick.AddListener(ToggleTutorial);
-        quitTutorialButton.onClick.AddListener(HideTutorial);
-
-        infoManager.OnChapterChanged += OnChapterChanged;
-    }
-
     private void Update()
     {
         if (_pendingUnlock)
@@ -47,15 +39,25 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
+    public void Initialize()
+    {
+        infoToggleButton.onClick.AddListener(ToggleTutorial);
+        quitTutorialButton.onClick.AddListener(HideTutorial);
+
+        infoManager.OnChapterChanged += OnChapterChanged;
+    }
+    
     private void ToggleTutorial()
     {
+        Debug.Log("ToggleTutorial, TutorialActive : " + TutorialActive);
+        
         if (TutorialActive)
             HideTutorial();
         else
             ShowTutorial();
     }
 
-    private void ShowTutorial()
+    public void ShowTutorial()
     {
         Debug.Log("ShowTutorial");
 
@@ -77,6 +79,8 @@ public class TutorialManager : MonoBehaviour
 
     private void HideTutorial()
     {
+        Debug.Log("HideTutorial");
+        
         StopAnimatorsForChapter(infoManager.CurrentIndex);
         TutorialActive = false;
 
@@ -86,8 +90,10 @@ public class TutorialManager : MonoBehaviour
         _pendingUnlock = true;
     }
 
-    private void OnChapterChanged(int index)
+    public void OnChapterChanged(int index)
     {
+        Debug.Log("OnChapterChanged " + index);
+        
         StopAllAnimators();
         StartAnimatorsForChapter(index);
 
