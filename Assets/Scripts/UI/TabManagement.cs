@@ -1,51 +1,50 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TabManagement : MonoBehaviour
 {
-    [Header("Tab Buttons")]
-    public Button btnInfo;
-    public Button btnSounds;
+    [Serializable]
+    public struct Tab
+    {
+        public Button button;
+        public GameObject panel;
+    }
 
-    [Header("Tab Panels")]
-    public GameObject[] tabPanels;
+    [Header("Tabs")]
+    public Tab[] tabs;
 
-    [Header("Tab Button Colors")]
+    [Header("Colors")]
     public Color activeColor = Color.white;
     public Color inactiveColor = new Color(0.7f, 0.7f, 0.7f);
 
-    private Button[] tabButtons;
     private int currentTab = -1;
 
     private void Start()
     {
-        tabButtons = new Button[] { btnInfo, btnSounds };
+        for (int i = 0; i < tabs.Length; i++)
+        {
+            int index = i; // capture for closure
+            tabs[i].button.onClick.AddListener(() => ShowTab(index));
+        }
 
-        btnInfo.onClick.AddListener(() => ShowTab(0));
-        btnSounds.onClick.AddListener(() => ShowTab(1));
         ShowTab(0);
     }
 
-    public void ShowTab(int index)
+    private void ShowTab(int index)
     {
         if (index == currentTab) return;
         currentTab = index;
 
-        // Toggle panels
-        for (int i = 0; i < tabPanels.Length; i++)
+        for (int i = 0; i < tabs.Length; i++)
         {
-            if (tabPanels[i] != null)
-                tabPanels[i].SetActive(i == index);
-        }
+            if (tabs[i].panel != null)
+                tabs[i].panel.SetActive(i == index);
 
-        // Update button visuals
-        for (int i = 0; i < tabButtons.Length; i++)
-        {
-            if (tabButtons[i] != null)
+            if (tabs[i].button != null)
             {
-                ColorBlock colors = tabButtons[i].colors;
-                colors.normalColor = (i == index) ? activeColor : inactiveColor;
-                tabButtons[i].colors = colors;
+                tabs[i].button.transition = Selectable.Transition.None;
+                tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
         }
     }
