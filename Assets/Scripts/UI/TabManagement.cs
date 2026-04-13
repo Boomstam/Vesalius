@@ -22,26 +22,46 @@ public class TabManagement : MonoBehaviour
 
     private int currentTab = 1;
 
-    private void Start()
+    // When the tutorial is active, tab 0's own onClick lambda must be suppressed.
+    // Tab 0's button is the same GameObject as the info toggle button, so both
+    // TutorialManager's ToggleTutorial listener and this tab's ShowTab(0) lambda
+    // fire on every click. Without the lock, HideTutorial correctly switches away
+    // from tab 0, but then the lambda immediately switches back to it.
+    private bool _tabZeroLocked = false;
+
+    // Using Awake (not Start) so listeners are registered before TutorialManager.Start
+    // runs and potentially calls ShowTutorial, which relies on the lock mechanism.
+    private void Awake()
     {
         for (int i = 0; i < tabs.Length; i++)
         {
             int index = i;
-            tabs[i].button.onClick.AddListener(() => ShowTab(index));
+            tabs[i].button.onClick.AddListener(() =>
+            {
+                if (index == 0 && _tabZeroLocked)
+                {
+                    return;
+                }
+                ShowTab(index);
+            });
         }
 
         ShowTab(0);
     }
 
+    public void LockTabZero()
+    {
+        _tabZeroLocked = true;
+    }
+
+    public void UnlockTabZero()
+    {
+        _tabZeroLocked = false;
+    }
+
     public void ShowTab(int index)
     {
-        Debug.Log("Showing tab " + index);
-        
-        if (index == currentTab) return;
-        
         currentTab = index;
-        
-        Debug.Log("Change tab");
 
         for (int i = 0; i < tabs.Length; i++)
         {
@@ -50,7 +70,7 @@ public class TabManagement : MonoBehaviour
 
             if (tabs[i].button != null)
             {
-                // tabs[i].button.transition = Selectable.Transition.None;
+                tabs[i].button.transition = Selectable.Transition.None;
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
         }
@@ -60,10 +80,7 @@ public class TabManagement : MonoBehaviour
     {
         for (int i = 1; i < tabs.Length; i++)
             if (tabs[i].button != null)
-            {
                 tabs[i].button.interactable = false;
-                Debug.Log("Disable tab " + i);
-            }
     }
 
     public void EnableAllTabsButTheFirst()
