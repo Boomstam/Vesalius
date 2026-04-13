@@ -35,8 +35,13 @@ public class TabManagement : MonoBehaviour
 
     public void ShowTab(int index)
     {
+        Debug.Log("Showing tab " + index);
+        
         if (index == currentTab) return;
+        
         currentTab = index;
+        
+        Debug.Log("Change tab");
 
         for (int i = 0; i < tabs.Length; i++)
         {
@@ -45,7 +50,7 @@ public class TabManagement : MonoBehaviour
 
             if (tabs[i].button != null)
             {
-                tabs[i].button.transition = Selectable.Transition.None;
+                // tabs[i].button.transition = Selectable.Transition.None;
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
         }
@@ -55,7 +60,10 @@ public class TabManagement : MonoBehaviour
     {
         for (int i = 1; i < tabs.Length; i++)
             if (tabs[i].button != null)
+            {
                 tabs[i].button.interactable = false;
+                Debug.Log("Disable tab " + i);
+            }
     }
 
     public void EnableAllTabsButTheFirst()

@@ -1521,6 +1521,7 @@ GameObject:
   - component: {fileID: 573791535}
   - component: {fileID: 573791534}
   - component: {fileID: 573791533}
+  - component: {fileID: 573791536}
   m_Layer: 0
   m_Name: Tab_Sounds
   m_TagString: Untagged
@@ -1630,6 +1631,44 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &573791536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573791531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8a483617d0d334ab84883e6bb3af24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageColorAnimator
+  targetColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &590786433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,37 +1925,47 @@ MonoBehaviour:
   infoBackground: {fileID: 1082043647}
   chapters:
   - title: Tutorial
-    content: "Born in Brussels in 1514 into a long line of court physicians, Andreas
-      Vesalius grew up near the so-called \u201CHell Street,\u201D close to the Galgenberg,
-      the hill where executions took place.\n\nAs a young boy, he observed the bodies
-      of the condemned, an experience that awakened both his fascination and his
-      scientific curiosity."
+    content: "Dit is de 'tutorial', bedoeld om je wegwijs te maken in de app. Je
+      kan hem voor de voorstelling begint steeds terug openen via het informatie-icoon
+      linksboven. \n\nDaarnaast vind je ook de knop om je taal veranderen.\n\nJe
+      gaat naar het volgende onderdeel door op het '>'-teken rechts van de titel
+      hierboven te klikken. Via de '<'-knop links kan je terug naar het vorige onderdeel."
     backgroundImage: {fileID: 21300000, guid: caf3044da6a939448ace1313f4cdf6c5, type: 3}
-  - title: 1
-    content: "Between 1533 and 1536, he studied in Paris under Jacques Dubois. Eager
-      to deepen his anatomical knowledge, he secretly exhumed bodies from the Cemetery
-      of the Innocents.\n\nInfluenced by the writings of al-Razi (Rhazes), his first
-      publication in 1537 was a paraphrase of the ninth book of al-Razi\u2019s work.
-      This marked a decisive shift away from Galenic dogma toward direct observation."
+  - title: Tabs
+    content: 'Tot het moment dat de voorstelling begint, zal je onderaan uit 3 tabs
+      kunnen kiezen. Deze zijn bedoeld als achtergrond informatie en om de even met
+      het hanteren van geluiden te leren omgaan.
+
+
+      Zolang de tutorial actief
+      is zijn ze even gedeactiveerd. Als je de tutorial afsluit kan je ze beginnen
+      ontdekken. '
     backgroundImage: {fileID: 21300000, guid: c3474d51848ad4047b0703161e5391d8, type: 3}
-  - title: 2
-    content: 'Vesalius quickly gained fame in Venice and Padua. At just 23, he became
-      a professor at the University of Padua. In 1543, he published De humani corporis
-      fabrica, a groundbreaking anatomical treatise.
-
-
-      He later served Emperor
-      Charles V and married Anne Witekind in Brussels in 1544.'
+  - title: Vesalius
+    content: "Onder deze tab kan je het boeiende leven van Vesalius wat beter leren
+      kennen. \n\nDe info is samengesteld door Dr. Thomas Moors."
     backgroundImage: {fileID: 21300000, guid: 48a79eafb99bec248a1ab19ca39673f9, type: 3}
-  - title: 3
-    content: 'Although protected by Emperor Philip II, his dissections provoked criticism
-      from the Church and from traditional physicians.
+  - title: De stem van Andreas
+    content: 'Via deze tab kan je meer te weten komen over de film ''De stem van
+      Andreas'' van Mireille Capelle, die de voorstelling zal inleiden. '
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Sounds
+    content: "Bij deze tab kan je al eens wat experimenteren met het bedienen van
+      de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon
+      zullen komen en zo een onderdeel vormen van het muzikale geheel.\n\nHet principe
+      is dat je via 2 sliders de klank kan be\xEFnvloeden. Probeer zeker eens uit!\n\nTijdens
+      de voorstelling is het de bedoeling dat je volume van je gsm op het maximum
+      zet."
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Einde tutorial
+    content: 'Van zodra de voorstelling begint, zullen de tutorial, het informatie-icoon
+      en ook de tabs onderaan verdwijnen. Dan zal de app duidelijk aangeven wanneer
+      je iets moet doen.
 
 
-      Accused before the
-      Inquisition in Spain, he departed for Jerusalem in 1564. On his return journey,
-      exhausted and ill, he died on the Greek island of Zante (Zakynthos) in October
-      1564.'
+      Klik op de knop ''Quit Tutorial'' onderaan of op
+      het informatie-icoon linksboven om de tutorial af te sluiten. Je kan hem ook
+      steeds terug openen tot de voorstelling begint, door op dat icoontje te klikken.'
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
 --- !u!114 &606116905
 MonoBehaviour:
@@ -1939,10 +1988,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   imageAnimators:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1117109128}
+  - {fileID: 1826418297}
+  - {fileID: 573791536}
   - {fileID: 0}
 --- !u!1 &726349805
 GameObject:
@@ -2967,6 +3020,7 @@ GameObject:
   - component: {fileID: 1117109127}
   - component: {fileID: 1117109126}
   - component: {fileID: 1117109125}
+  - component: {fileID: 1117109128}
   m_Layer: 0
   m_Name: Tab_Vesalius
   m_TagString: Untagged
@@ -3076,6 +3130,44 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1117109128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117109123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8a483617d0d334ab84883e6bb3af24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageColorAnimator
+  targetColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1139349293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,6 +4383,7 @@ GameObject:
   - component: {fileID: 1826418296}
   - component: {fileID: 1826418295}
   - component: {fileID: 1826418294}
+  - component: {fileID: 1826418297}
   m_Layer: 0
   m_Name: Tab_Film
   m_TagString: Untagged
@@ -4400,6 +4493,44 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1826418297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826418292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8a483617d0d334ab84883e6bb3af24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageColorAnimator
+  targetColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1871401736
 GameObject:
   m_ObjectHideFlags: 0

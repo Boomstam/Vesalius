@@ -19,11 +19,12 @@ public class ImageColorAnimator : MonoBehaviour
     private void Awake()
     {
         _image = GetComponent<Image>();
-        _initialColor = _image.color;
     }
 
     public void StartAnimation()
     {
+        _initialColor = _image.color;
+        
         if (_activeCoroutine != null)
             StopCoroutine(_activeCoroutine);
 

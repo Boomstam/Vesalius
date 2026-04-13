@@ -78,7 +78,9 @@ public class TutorialManager : MonoBehaviour
         infoManager.GoToChapter(0);
 
         tabManagement.ShowTab(TutorialTabIndex);
+        
         tabManagement.DisableAllTabsButTheFirst();
+
     }
 
     private void HideTutorial()
