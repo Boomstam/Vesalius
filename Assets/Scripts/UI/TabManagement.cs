@@ -18,20 +18,22 @@ public class TabManagement : MonoBehaviour
     public Color activeColor = Color.white;
     public Color inactiveColor = new Color(0.7f, 0.7f, 0.7f);
 
-    private int currentTab = -1;
+    public int CurrentTab => currentTab;
+
+    private int currentTab = 1;
 
     private void Start()
     {
         for (int i = 0; i < tabs.Length; i++)
         {
-            int index = i; // capture for closure
+            int index = i;
             tabs[i].button.onClick.AddListener(() => ShowTab(index));
         }
 
         ShowTab(0);
     }
 
-    private void ShowTab(int index)
+    public void ShowTab(int index)
     {
         if (index == currentTab) return;
         currentTab = index;
@@ -47,5 +49,19 @@ public class TabManagement : MonoBehaviour
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
         }
+    }
+
+    public void DisableAllTabsButTheFirst()
+    {
+        for (int i = 1; i < tabs.Length; i++)
+            if (tabs[i].button != null)
+                tabs[i].button.interactable = false;
+    }
+
+    public void EnableAllTabsButTheFirst()
+    {
+        for (int i = 1; i < tabs.Length; i++)
+            if (tabs[i].button != null)
+                tabs[i].button.interactable = true;
     }
 }

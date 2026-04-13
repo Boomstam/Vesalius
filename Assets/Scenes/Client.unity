@@ -915,10 +915,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TabManagement
   tabs:
+  - button: {fileID: 1984027640}
+    panel: {fileID: 606116902}
   - button: {fileID: 1117109127}
     panel: {fileID: 4277731064508341171}
   - button: {fileID: 1826418296}
-    panel: {fileID: 0}
+    panel: {fileID: 738763781}
   - button: {fileID: 573791535}
     panel: {fileID: 1006655684}
   activeColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
@@ -1833,6 +1835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 606116903}
+  - component: {fileID: 606116905}
   - component: {fileID: 606116904}
   m_Layer: 0
   m_Name: Tutorial
@@ -1882,21 +1885,21 @@ MonoBehaviour:
   nextInfoButton: {fileID: 1218556494}
   infoBackground: {fileID: 1082043647}
   chapters:
-  - title: "The Child of \u201CHell Street\u201D"
+  - title: Tutorial
     content: "Born in Brussels in 1514 into a long line of court physicians, Andreas
       Vesalius grew up near the so-called \u201CHell Street,\u201D close to the Galgenberg,
       the hill where executions took place.\n\nAs a young boy, he observed the bodies
       of the condemned, an experience that awakened both his fascination and his
       scientific curiosity."
     backgroundImage: {fileID: 21300000, guid: caf3044da6a939448ace1313f4cdf6c5, type: 3}
-  - title: Paris and the Discovery of al-Razi
+  - title: 1
     content: "Between 1533 and 1536, he studied in Paris under Jacques Dubois. Eager
       to deepen his anatomical knowledge, he secretly exhumed bodies from the Cemetery
       of the Innocents.\n\nInfluenced by the writings of al-Razi (Rhazes), his first
       publication in 1537 was a paraphrase of the ninth book of al-Razi\u2019s work.
       This marked a decisive shift away from Galenic dogma toward direct observation."
     backgroundImage: {fileID: 21300000, guid: c3474d51848ad4047b0703161e5391d8, type: 3}
-  - title: The Glory of Venice and Charles V
+  - title: 2
     content: 'Vesalius quickly gained fame in Venice and Padua. At just 23, he became
       a professor at the University of Padua. In 1543, he published De humani corporis
       fabrica, a groundbreaking anatomical treatise.
@@ -1905,7 +1908,7 @@ MonoBehaviour:
       He later served Emperor
       Charles V and married Anne Witekind in Brussels in 1544.'
     backgroundImage: {fileID: 21300000, guid: 48a79eafb99bec248a1ab19ca39673f9, type: 3}
-  - title: The Inquisition and the end in Zante
+  - title: 3
     content: 'Although protected by Emperor Philip II, his dissections provoked criticism
       from the Church and from traditional physicians.
 
@@ -1915,6 +1918,32 @@ MonoBehaviour:
       exhausted and ill, he died on the Greek island of Zante (Zakynthos) in October
       1564.'
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+--- !u!114 &606116905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606116902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d8717bab2fde499c238cb06d60bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialManager
+  infoManager: {fileID: 606116904}
+  tabManagement: {fileID: 429975879}
+  infoToggleButton: {fileID: 1984027640}
+  quitTutorialButton: {fileID: 1285460019}
+  textAnimators:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  imageAnimators:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &726349805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,21 +2105,21 @@ MonoBehaviour:
   nextInfoButton: {fileID: 739600761}
   infoBackground: {fileID: 2065429924}
   chapters:
-  - title: "The Child of \u201CHell Street\u201D"
+  - title: Film
     content: "Born in Brussels in 1514 into a long line of court physicians, Andreas
       Vesalius grew up near the so-called \u201CHell Street,\u201D close to the Galgenberg,
       the hill where executions took place.\n\nAs a young boy, he observed the bodies
       of the condemned, an experience that awakened both his fascination and his
       scientific curiosity."
     backgroundImage: {fileID: 21300000, guid: caf3044da6a939448ace1313f4cdf6c5, type: 3}
-  - title: Paris and the Discovery of al-Razi
+  - title: f1
     content: "Between 1533 and 1536, he studied in Paris under Jacques Dubois. Eager
       to deepen his anatomical knowledge, he secretly exhumed bodies from the Cemetery
       of the Innocents.\n\nInfluenced by the writings of al-Razi (Rhazes), his first
       publication in 1537 was a paraphrase of the ninth book of al-Razi\u2019s work.
       This marked a decisive shift away from Galenic dogma toward direct observation."
     backgroundImage: {fileID: 21300000, guid: c3474d51848ad4047b0703161e5391d8, type: 3}
-  - title: The Glory of Venice and Charles V
+  - title: f2
     content: 'Vesalius quickly gained fame in Venice and Padua. At just 23, he became
       a professor at the University of Padua. In 1543, he published De humani corporis
       fabrica, a groundbreaking anatomical treatise.
@@ -2099,7 +2128,7 @@ MonoBehaviour:
       He later served Emperor
       Charles V and married Anne Witekind in Brussels in 1544.'
     backgroundImage: {fileID: 21300000, guid: 48a79eafb99bec248a1ab19ca39673f9, type: 3}
-  - title: The Inquisition and the end in Zante
+  - title: f3
     content: 'Although protected by Emperor Philip II, his dissections provoked criticism
       from the Church and from traditional physicians.
 
@@ -2939,7 +2968,7 @@ GameObject:
   - component: {fileID: 1117109126}
   - component: {fileID: 1117109125}
   m_Layer: 0
-  m_Name: Tab_Info
+  m_Name: Tab_Vesalius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3550,7 +3579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.172, y: 0.039608523}
   m_AnchorMax: {x: 0.8428889, y: 0.097}
-  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285460019
