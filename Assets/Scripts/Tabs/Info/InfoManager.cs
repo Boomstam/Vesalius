@@ -15,17 +15,19 @@ public class InfoManager : MonoBehaviour
     }
 
     [System.Serializable]
-    private class LocalizedChapter
+    private class LocalizedEntry
     {
+        public string type;
+        public string key;
         public string title;
         public string content;
     }
 
     [System.Serializable]
-    private class LocalizedChapterCollection
+    private class LocalizedEntryCollection
     {
         public string locale;
-        public LocalizedChapter[] chapters;
+        public LocalizedEntry[] entries;
     }
 
     [Header("UI References")]
@@ -159,10 +161,10 @@ public class InfoManager : MonoBehaviour
             return;
         }
 
-        LocalizedChapterCollection localizedData = JsonUtility.FromJson<LocalizedChapterCollection>(jsonAsset.text);
-        if (localizedData == null || localizedData.chapters == null || localizedData.chapters.Length == 0)
+        LocalizedEntryCollection localizedData = JsonUtility.FromJson<LocalizedEntryCollection>(jsonAsset.text);
+        if (localizedData == null || localizedData.entries == null || localizedData.entries.Length == 0)
         {
-            Debug.LogWarning($"InfoManager on '{gameObject.name}' found no chapters in '{resourcePath}'.");
+            Debug.LogWarning($"InfoManager on '{gameObject.name}' found no entries in '{resourcePath}'.");
             return;
         }
 
@@ -172,34 +174,49 @@ public class InfoManager : MonoBehaviour
             return;
         }
 
-        if (localizedData.chapters.Length != chapters.Length)
+        // Walk entries, collecting only chapter-type entries to merge onto serialized chapters.
+        int chapterIndex = 0;
+        foreach (LocalizedEntry entry in localizedData.entries)
         {
-            Debug.LogWarning(
-                $"InfoManager on '{gameObject.name}' found {localizedData.chapters.Length} JSON chapters in '{chaptersJsonResourcePath}' but has {chapters.Length} serialized chapters. Applying the overlapping chapter count.");
-        }
-
-        int chapterCount = Mathf.Min(chapters.Length, localizedData.chapters.Length);
-        for (int i = 0; i < chapterCount; i++)
-        {
-            LocalizedChapter localizedChapter = localizedData.chapters[i];
-            if (localizedChapter == null)
+            if (entry == null)
             {
                 continue;
             }
 
-            ChapterData chapter = chapters[i];
-
-            if (!string.IsNullOrWhiteSpace(localizedChapter.title))
+            if (!string.Equals(entry.type, "chapter", StringComparison.OrdinalIgnoreCase))
             {
-                chapter.title = localizedChapter.title;
+                continue;
             }
 
-            if (!string.IsNullOrWhiteSpace(localizedChapter.content))
+            if (chapterIndex >= chapters.Length)
             {
-                chapter.content = localizedChapter.content;
+                Debug.LogWarning(
+                    $"InfoManager on '{gameObject.name}': JSON has more chapter entries than serialized chapters. " +
+                    $"Extra entries are ignored.");
+                break;
             }
 
-            chapters[i] = chapter;
+            ChapterData chapter = chapters[chapterIndex];
+
+            if (!string.IsNullOrWhiteSpace(entry.title))
+            {
+                chapter.title = entry.title;
+            }
+
+            if (!string.IsNullOrWhiteSpace(entry.content))
+            {
+                chapter.content = entry.content;
+            }
+
+            chapters[chapterIndex] = chapter;
+            chapterIndex++;
+        }
+
+        if (chapterIndex < chapters.Length)
+        {
+            Debug.LogWarning(
+                $"InfoManager on '{gameObject.name}': JSON has fewer chapter entries ({chapterIndex}) than " +
+                $"serialized chapters ({chapters.Length}). Remaining chapters keep their serialized text.");
         }
     }
 

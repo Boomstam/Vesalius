@@ -53,6 +53,7 @@
     <Compile Include="Assets\FishNet\Upgrading\MirrorUpgrade.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
+    <Compile Include="Assets\Scripts\Tabs\ContentImageManager.cs" />
     <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
     <Compile Include="Assets\Scripts\TutorialManager.cs" />
