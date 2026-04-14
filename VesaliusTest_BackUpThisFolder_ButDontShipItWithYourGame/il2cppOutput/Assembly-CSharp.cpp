@@ -207,7 +207,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC7A7939E82BEFEF8DDB755713442AA62963F09F8
 IL2CPP_EXTERN_C String_t* _stringLiteralC9923A671FA0AB1FE4845F5D90B5F03D894BFAFF;
 IL2CPP_EXTERN_C String_t* _stringLiteralE677E119BF05C5B69FA6A6C3A70326D28F80F657;
 IL2CPP_EXTERN_C String_t* _stringLiteralEBEC30D693BA459B3E48D8D2205EEFC425E7EEF5;
-IL2CPP_EXTERN_C String_t* _stringLiteralEE9A13F83A2BCF95BDD7C077C37F59BF443B938F;
 IL2CPP_EXTERN_C String_t* _stringLiteralF3E84B722399601AD7E281754E917478AA9AD48D;
 IL2CPP_EXTERN_C String_t* _stringLiteralFCE381C81B740302BB37D917EC526F53ED92E5CB;
 IL2CPP_EXTERN_C const RuntimeMethod* Array_Empty_TisChapterData_t6B5D64498D9A5F3494546C2A6E4680AF7EEF22E2_m700494324AF8EC7A161D70E3E915B8D0A1EBE95B_RuntimeMethod_var;
@@ -2632,8 +2631,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE (String_t* ___0_key, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LanguageManager_FromCode_m6BC6AD6DD44F183E96A48859487EF31CE03C2303 (String_t* ___0_languageCode, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Application_get_systemLanguage_m4D8B6DC60ED7236DD233C8DCB9E13D287B4FCF65 (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass10_0__ctor_m7A37CD437710E27ED3D18BE77188369C7B0F4AA1 (U3CU3Ec__DisplayClass10_0_t361FC0896E31E0A1305EFF014E148901408E72DC* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Initialize_m72CD84187A54B5E9B8B4491EF9061929561A2786 (TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948 (String_t* ___0_key, int32_t ___1_value, const RuntimeMethod* method) ;
@@ -5718,7 +5715,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Update_m70510E69FAE81B01
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:36>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:37>
 		bool L_0 = __this->____pendingUnlock;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -5728,9 +5725,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Update_m70510E69FAE81B01
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:38>
-		__this->____pendingUnlock = (bool)0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:39>
+		__this->____pendingUnlock = (bool)0;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:40>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_2 = __this->___tabManagement;
 		NullCheck(L_2);
 		TabManagement_UnlockTabZero_m614F7638ADC4736A541464C235D2376CA9BDFBDA(L_2, NULL);
@@ -5738,7 +5735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Update_m70510E69FAE81B01
 
 IL_0020:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:41>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:42>
 		return;
 	}
 }
@@ -5756,7 +5753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Initialize_m72CD84187A54
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:45>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:46>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___infoToggleButton;
 		NullCheck(L_0);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_1;
@@ -5765,7 +5762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Initialize_m72CD84187A54
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_2, __this, (intptr_t)((void*)TutorialManager_ToggleTutorial_m4DEFC726481B72E5C457D40CB91FF88952A82BA5_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_1, L_2, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:46>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:47>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___quitTutorialButton;
 		NullCheck(L_3);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_4;
@@ -5774,13 +5771,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_Initialize_m72CD84187A54
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_5, __this, (intptr_t)((void*)TutorialManager_HideTutorial_mA38D3DBA9D98E1752D5299779BCDB3F4AC8BB079_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_4, L_5, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:48>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:49>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_6 = __this->___infoManager;
 		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_7 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
 		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_7, __this, (intptr_t)((void*)TutorialManager_OnChapterChanged_m464A1FE8406E79B3CA227D73CDE5CCE8D85B1B41_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		InfoManager_add_OnChapterChanged_m1456C0226C006BD9FEC7D25BDEB492D64D32F130(L_6, L_7, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:49>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:50>
 		return;
 	}
 }
@@ -5789,7 +5786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_ToggleTutorial_m4DEFC726
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:53>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:54>
 		bool L_0 = __this->___TutorialActive;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -5799,20 +5796,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_ToggleTutorial_m4DEFC726
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:54>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:55>
 		TutorialManager_HideTutorial_mA38D3DBA9D98E1752D5299779BCDB3F4AC8BB079(__this, NULL);
 		goto IL_001b;
 	}
 
 IL_0014:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:56>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:57>
 		TutorialManager_ShowTutorial_mECF5DDCBAE9A551B12F10F4E23C7D568A063CB57(__this, NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:57>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:58>
 		return;
 	}
 }
@@ -5821,7 +5818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_ShowTutorial_mECF5DDCBAE
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:61>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:62>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_0 = __this->___tabManagement;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -5834,7 +5831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_ShowTutorial_mECF5DDCBAE
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:62>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:63>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_3 = __this->___tabManagement;
 		NullCheck(L_3);
 		int32_t L_4;
@@ -5844,42 +5841,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_ShowTutorial_mECF5DDCBAE
 
 IL_0024:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:64>
-		__this->___TutorialActive = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:65>
+		__this->___TutorialActive = (bool)1;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:66>
 		__this->____pendingUnlock = (bool)0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:67>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:68>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_5 = __this->___infoManager;
 		NullCheck(L_5);
 		InfoManager_ResetToStart_mDACBE1C8B61A7E2067152F864277800FAEF3F249(L_5, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:68>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:69>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_6 = __this->___infoManager;
 		NullCheck(L_6);
 		InfoManager_GoToChapter_m2D3C1B5DFB04822773AEF069D6D5A214DE83505E(L_6, 0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:70>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:71>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___quitTutorialButton;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
 		L_8 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_7, NULL);
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:71>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:72>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___tutorialActiveLabel;
 		NullCheck(L_9);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, (bool)1, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:73>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:74>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_10 = __this->___tabManagement;
 		NullCheck(L_10);
 		TabManagement_LockTabZero_m21DCFC748EEF87275D4D6F0C05E945C1E1B28B13(L_10, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:74>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:75>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_11 = __this->___tabManagement;
 		NullCheck(L_11);
 		TabManagement_ShowTab_mA6E7F5E983759BD192B31F032E94B666405EF035(L_11, 0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:75>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:76>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_12 = __this->___tabManagement;
 		NullCheck(L_12);
 		TabManagement_DisableAllTabsButTheFirst_m10E671D910BACA7F0DF9070C4EF2C22204DBC2A4(L_12, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:76>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:77>
 		return;
 	}
 }
@@ -5887,26 +5884,26 @@ IL_0024:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_HideTutorial_mA38D3DBA9D98E1752D5299779BCDB3F4AC8BB079 (TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:80>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:81>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_0 = __this->___infoManager;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = InfoManager_get_CurrentIndex_mBF08EBCEF1B2C3E929301DBD36E142C0D0B4B4D1_inline(L_0, NULL);
 		TutorialManager_StopAnimatorsForChapter_m14C1CF70A45BF4C25A4FE50ABBD77909411D702C(__this, L_1, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:81>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:82>
 		__this->___TutorialActive = (bool)0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:83>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:84>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_2 = __this->___tabManagement;
 		int32_t L_3 = __this->____previousTab;
 		NullCheck(L_2);
 		TabManagement_ShowTab_mA6E7F5E983759BD192B31F032E94B666405EF035(L_2, L_3, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:84>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:85>
 		TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* L_4 = __this->___tabManagement;
 		NullCheck(L_4);
 		TabManagement_EnableAllTabsButTheFirst_m395E61EA0EEC3251111E37857341275B1898C609(L_4, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:86>
-		__this->____pendingUnlock = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:87>
+		__this->____pendingUnlock = (bool)1;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:88>
 		return;
 	}
 }
@@ -5915,32 +5912,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_OnChapterChanged_m464A1F
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:91>
-		TutorialManager_StopAllAnimators_mA399B3B2967D3E2B1BE5E1A2662AC4DA94D2B09C(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:92>
-		int32_t L_0 = ___0_index;
-		TutorialManager_StartAnimatorsForChapter_m7744C0195BB3E0012F3AE21369B58BC35FC1BE1B(__this, L_0, NULL);
+		TutorialManager_StopAllAnimators_mA399B3B2967D3E2B1BE5E1A2662AC4DA94D2B09C(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:94>
-		int32_t L_1 = ___0_index;
-		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_2 = __this->___infoManager;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = InfoManager_get_ChapterCount_m7C90AEF7C50F8920879A329D99EADDC914E85E5D(L_2, NULL);
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_3, 1))))? 1 : 0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:96>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___quitTutorialButton;
+		int32_t L_0 = ___0_index;
+		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_1 = __this->___infoManager;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = InfoManager_get_ChapterCount_m7C90AEF7C50F8920879A329D99EADDC914E85E5D(L_1, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_2, 1))))? 1 : 0);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:95>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___quitTutorialButton;
+		NullCheck(L_3);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
+		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_3, NULL);
+		bool L_5 = V_0;
 		NullCheck(L_4);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
-		L_5 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_4, NULL);
-		bool L_6 = V_0;
-		NullCheck(L_5);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, L_6, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:97>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___tutorialActiveLabel;
-		bool L_8 = V_0;
-		NullCheck(L_7);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0), NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, L_5, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:96>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___tutorialActiveLabel;
+		bool L_7 = V_0;
+		NullCheck(L_6);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:98>
+		int32_t L_8 = ___0_index;
+		TutorialManager_StartAnimatorsForChapter_m7744C0195BB3E0012F3AE21369B58BC35FC1BE1B(__this, L_8, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:99>
 		return;
 	}
 }
@@ -5954,7 +5951,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA9
 	ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* V_4 = NULL;
 	bool V_5 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:102>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:103>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_0 = __this->___chapterAnimations;
 		V_0 = (bool)((((RuntimeObject*)(ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_1 = V_0;
@@ -5964,14 +5961,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA9
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:102>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:103>
 		V_1 = (ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E*)NULL;
 		goto IL_0046;
 	}
 
 IL_0012:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:103>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:104>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_2 = __this->___chapterAnimations;
 		V_2 = L_2;
 		V_3 = 0;
@@ -5980,14 +5977,14 @@ IL_0012:
 
 IL_001e:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:103>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:104>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_3 = V_2;
 		int32_t L_4 = V_3;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_4 = L_6;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:104>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:105>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_7 = V_4;
 		NullCheck(L_7);
 		int32_t L_8 = L_7->___Chapter;
@@ -6000,7 +5997,7 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:104>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:105>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_11 = V_4;
 		V_1 = L_11;
 		goto IL_0046;
@@ -6014,7 +6011,7 @@ IL_0038:
 
 IL_003c:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:103>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:104>
 		int32_t L_13 = V_3;
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_14 = V_2;
 		NullCheck(L_14);
@@ -6024,14 +6021,14 @@ IL_003c:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:105>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:106>
 		V_1 = (ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E*)NULL;
 		goto IL_0046;
 	}
 
 IL_0046:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:106>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:107>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_15 = V_1;
 		return L_15;
 	}
@@ -6058,12 +6055,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StartAnimatorsForChapter
 	ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* V_10 = NULL;
 	bool V_11 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:110>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:111>
 		int32_t L_0 = ___0_chapterIndex;
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_1;
 		L_1 = TutorialManager_FindEntry_mD7F3170D89B58730FFEAD0817E0BD606E7F3E1E5(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:111>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:112>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_2 = V_0;
 		V_1 = (bool)((((RuntimeObject*)(ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_3 = V_1;
@@ -6073,13 +6070,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StartAnimatorsForChapter
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:111>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:112>
 		goto IL_00a1;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:113>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:114>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_4 = V_0;
 		NullCheck(L_4);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_5 = L_4->___TextAnimators;
@@ -6091,7 +6088,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:114>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:115>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_7 = V_0;
 		NullCheck(L_7);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_8 = L_7->___TextAnimators;
@@ -6102,14 +6099,14 @@ IL_0016:
 
 IL_0030:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:114>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:115>
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_9 = V_3;
 		int32_t L_10 = V_4;
 		NullCheck(L_9);
 		int32_t L_11 = L_10;
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
 		V_5 = L_12;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:115>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:116>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_13 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -6122,7 +6119,7 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:115>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:116>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_16 = V_5;
 		NullCheck(L_16);
 		TextColorAnimator_StartAnimation_mF7B99B5381FB15FE55FFFC064548F775D7977F56(L_16, NULL);
@@ -6136,7 +6133,7 @@ IL_004c:
 
 IL_0052:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:114>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:115>
 		int32_t L_18 = V_4;
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_19 = V_3;
 		NullCheck(L_19);
@@ -6148,7 +6145,7 @@ IL_0052:
 
 IL_0059:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:117>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:118>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_20 = V_0;
 		NullCheck(L_20);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_21 = L_20->___ImageAnimators;
@@ -6160,7 +6157,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:118>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:119>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_23 = V_0;
 		NullCheck(L_23);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_24 = L_23->___ImageAnimators;
@@ -6171,14 +6168,14 @@ IL_0059:
 
 IL_0076:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:118>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:119>
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_25 = V_8;
 		int32_t L_26 = V_9;
 		NullCheck(L_25);
 		int32_t L_27 = L_26;
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_28 = (L_25)->GetAt(static_cast<il2cpp_array_size_t>(L_27));
 		V_10 = L_28;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:119>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:120>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_29 = V_10;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_30;
@@ -6191,7 +6188,7 @@ IL_0076:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:119>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:120>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_32 = V_10;
 		NullCheck(L_32);
 		ImageColorAnimator_StartAnimation_mC8DF4DC7B54A217939D2DE3D93F875B449B88026(L_32, NULL);
@@ -6205,7 +6202,7 @@ IL_0093:
 
 IL_0099:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:118>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:119>
 		int32_t L_34 = V_9;
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_35 = V_8;
 		NullCheck(L_35);
@@ -6217,7 +6214,7 @@ IL_0099:
 
 IL_00a1:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:120>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:121>
 		return;
 	}
 }
@@ -6243,12 +6240,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StopAnimatorsForChapter_
 	ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* V_10 = NULL;
 	bool V_11 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:124>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:125>
 		int32_t L_0 = ___0_chapterIndex;
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_1;
 		L_1 = TutorialManager_FindEntry_mD7F3170D89B58730FFEAD0817E0BD606E7F3E1E5(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:125>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:126>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_2 = V_0;
 		V_1 = (bool)((((RuntimeObject*)(ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_3 = V_1;
@@ -6258,13 +6255,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StopAnimatorsForChapter_
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:125>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:126>
 		goto IL_00a1;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:127>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:128>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_4 = V_0;
 		NullCheck(L_4);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_5 = L_4->___TextAnimators;
@@ -6276,7 +6273,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:128>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:129>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_7 = V_0;
 		NullCheck(L_7);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_8 = L_7->___TextAnimators;
@@ -6287,14 +6284,14 @@ IL_0016:
 
 IL_0030:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:128>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:129>
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_9 = V_3;
 		int32_t L_10 = V_4;
 		NullCheck(L_9);
 		int32_t L_11 = L_10;
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
 		V_5 = L_12;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:129>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:130>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_13 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -6307,7 +6304,7 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:129>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:130>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_16 = V_5;
 		NullCheck(L_16);
 		TextColorAnimator_StopAnimation_mB8F6B3D9E546E31ACFBE6FEE32912DB8B5CC3A01(L_16, NULL);
@@ -6321,7 +6318,7 @@ IL_004c:
 
 IL_0052:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:128>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:129>
 		int32_t L_18 = V_4;
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_19 = V_3;
 		NullCheck(L_19);
@@ -6333,7 +6330,7 @@ IL_0052:
 
 IL_0059:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:131>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:132>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_20 = V_0;
 		NullCheck(L_20);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_21 = L_20->___ImageAnimators;
@@ -6345,7 +6342,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:132>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:133>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_23 = V_0;
 		NullCheck(L_23);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_24 = L_23->___ImageAnimators;
@@ -6356,14 +6353,14 @@ IL_0059:
 
 IL_0076:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:132>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:133>
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_25 = V_8;
 		int32_t L_26 = V_9;
 		NullCheck(L_25);
 		int32_t L_27 = L_26;
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_28 = (L_25)->GetAt(static_cast<il2cpp_array_size_t>(L_27));
 		V_10 = L_28;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:133>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:134>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_29 = V_10;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_30;
@@ -6376,7 +6373,7 @@ IL_0076:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:133>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:134>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_32 = V_10;
 		NullCheck(L_32);
 		ImageColorAnimator_StopAnimation_m0F771DF50700A33621759D5857800952D17A02F9(L_32, NULL);
@@ -6390,7 +6387,7 @@ IL_0093:
 
 IL_0099:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:132>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:133>
 		int32_t L_34 = V_9;
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_35 = V_8;
 		NullCheck(L_35);
@@ -6402,7 +6399,7 @@ IL_0099:
 
 IL_00a1:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:134>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:135>
 		return;
 	}
 }
@@ -6430,7 +6427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StopAllAnimators_mA399B3
 	ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* V_12 = NULL;
 	bool V_13 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:138>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:139>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_0 = __this->___chapterAnimations;
 		V_0 = (bool)((((RuntimeObject*)(ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_1 = V_0;
@@ -6440,13 +6437,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager_StopAllAnimators_mA399B3
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:138>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:139>
 		goto IL_00c5;
 	}
 
 IL_0013:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:139>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:140>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_2 = __this->___chapterAnimations;
 		V_1 = L_2;
 		V_2 = 0;
@@ -6455,14 +6452,14 @@ IL_0013:
 
 IL_0022:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:139>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:140>
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_3 = V_1;
 		int32_t L_4 = V_2;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_3 = L_6;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:141>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:142>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_7 = V_3;
 		NullCheck(L_7);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_8 = L_7->___TextAnimators;
@@ -6474,7 +6471,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:143>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_10 = V_3;
 		NullCheck(L_10);
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_11 = L_10->___TextAnimators;
@@ -6485,14 +6482,14 @@ IL_0022:
 
 IL_0044:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:143>
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_12 = V_5;
 		int32_t L_13 = V_6;
 		NullCheck(L_12);
 		int32_t L_14 = L_13;
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
 		V_7 = L_15;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:143>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:144>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_16 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -6505,7 +6502,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:143>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:144>
 		TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* L_19 = V_7;
 		NullCheck(L_19);
 		TextColorAnimator_StopAnimation_mB8F6B3D9E546E31ACFBE6FEE32912DB8B5CC3A01(L_19, NULL);
@@ -6519,7 +6516,7 @@ IL_0061:
 
 IL_0067:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:143>
 		int32_t L_21 = V_6;
 		TextColorAnimatorU5BU5D_t0E79A7692D9EC7A89A003DF97CC30DAA692C6DE8* L_22 = V_5;
 		NullCheck(L_22);
@@ -6531,7 +6528,7 @@ IL_0067:
 
 IL_006f:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:145>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:146>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_23 = V_3;
 		NullCheck(L_23);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_24 = L_23->___ImageAnimators;
@@ -6543,7 +6540,7 @@ IL_006f:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:146>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:147>
 		ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E* L_26 = V_3;
 		NullCheck(L_26);
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_27 = L_26->___ImageAnimators;
@@ -6554,14 +6551,14 @@ IL_006f:
 
 IL_008c:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:146>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:147>
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_28 = V_10;
 		int32_t L_29 = V_11;
 		NullCheck(L_28);
 		int32_t L_30 = L_29;
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_31 = (L_28)->GetAt(static_cast<il2cpp_array_size_t>(L_30));
 		V_12 = L_31;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:147>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:148>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_32 = V_12;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -6574,7 +6571,7 @@ IL_008c:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:147>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:148>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_35 = V_12;
 		NullCheck(L_35);
 		ImageColorAnimator_StopAnimation_m0F771DF50700A33621759D5857800952D17A02F9(L_35, NULL);
@@ -6588,7 +6585,7 @@ IL_00a9:
 
 IL_00af:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:146>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:147>
 		int32_t L_37 = V_11;
 		ImageColorAnimatorU5BU5D_t0156310120CA2C99DF83939CCF00CADEBFD52675* L_38 = V_10;
 		NullCheck(L_38);
@@ -6606,7 +6603,7 @@ IL_00b7:
 
 IL_00bc:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:139>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:140>
 		int32_t L_40 = V_2;
 		ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* L_41 = V_1;
 		NullCheck(L_41);
@@ -6618,7 +6615,7 @@ IL_00bc:
 
 IL_00c5:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:149>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:150>
 		return;
 	}
 }
@@ -6626,11 +6623,11 @@ IL_00c5:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TutorialManager__ctor_m5DF15FACAE927F11F4CD3E6162A8FEE01B406E16 (TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:26>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:27>
 		__this->___TutorialActive = (bool)0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:28>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:29>
 		__this->____previousTab = 1;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:30>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/TutorialManager.cs:31>
 		__this->____pendingUnlock = (bool)0;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -6670,18 +6667,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator_Awake_mCFA3A483356483
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:21>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:22>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0;
 		L_0 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(__this, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		__this->____image = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____image), (void*)L_0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:24>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:25>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->____image;
 		NullCheck(L_1);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		L_2 = VirtualFuncInvoker0< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(22, L_1);
 		__this->____initialColor = L_2;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:25>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:26>
 		return;
 	}
 }
@@ -6690,7 +6687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator_StartAnimation_mC8DF4
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:29>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:30>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->____activeCoroutine;
 		V_0 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_1 = V_0;
@@ -6700,21 +6697,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator_StartAnimation_mC8DF4
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:30>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:31>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->____activeCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_2, NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:32>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:33>
 		RuntimeObject* L_3;
 		L_3 = ImageColorAnimator_AnimateColor_m05150A72131D2EAE36C8D34E6F9E31095B3DD52F(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4;
 		L_4 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_3, NULL);
 		__this->____activeCoroutine = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____activeCoroutine), (void*)L_4);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:33>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:34>
 		return;
 	}
 }
@@ -6723,7 +6720,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator_StopAnimation_m0F771D
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:37>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:38>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->____activeCoroutine;
 		V_0 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_1 = V_0;
@@ -6733,22 +6730,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator_StopAnimation_m0F771D
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:39>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:40>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->____activeCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_2, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:40>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:41>
 		__this->____activeCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____activeCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0024:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:43>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:44>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->____image;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->____initialColor;
 		NullCheck(L_3);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_3, L_4);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:44>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:45>
 		return;
 	}
 }
@@ -6775,13 +6772,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ImageColorAnimator_AnimateColo
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageColorAnimator__ctor_m2DF740CA2AF46D0318A7B08BABFE5CCA4E3A7388 (ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:9>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:10>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		L_0 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		__this->___targetColor = L_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:12>
-		__this->___duration = (1.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:13>
+		__this->___duration = (1.0f);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:14>
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_1;
 		L_1 = AnimationCurve_EaseInOut_m01DD06E6C8962F8F62F293C9EAE491C3D3F2CAF3((0.0f), (0.0f), (1.0f), (1.0f), NULL);
 		__this->___curve = L_1;
@@ -6869,7 +6866,7 @@ IL_0027:
 IL_0029:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:48>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:49>
 		__this->___U3CelapsedU3E5__1 = (0.0f);
 		goto IL_01d9;
 	}
@@ -6881,12 +6878,12 @@ IL_0041:
 
 IL_0047:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:54>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:55>
 		float L_2 = __this->___U3CelapsedU3E5__1;
 		float L_3;
 		L_3 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__1 = ((float)il2cpp_codegen_add(L_2, L_3));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:55>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:56>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_4 = __this->___U3CU3E4__this;
 		NullCheck(L_4);
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_5 = L_4->___curve;
@@ -6898,7 +6895,7 @@ IL_0047:
 		float L_9;
 		L_9 = AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C(L_5, ((float)(L_6/L_8)), NULL);
 		__this->___U3CtU3E5__2 = L_9;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:56>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:57>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_10 = __this->___U3CU3E4__this;
 		NullCheck(L_10);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11 = L_10->____image;
@@ -6913,7 +6910,7 @@ IL_0047:
 		L_17 = Color_Lerp_mE79F87889843ECDC188E4CB5B5E1F1B2256E5EBE_inline(L_13, L_15, L_16, NULL);
 		NullCheck(L_11);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_11, L_17);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:57>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:58>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -6927,7 +6924,7 @@ IL_00c4:
 
 IL_00cc:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:52>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:53>
 		float L_18 = __this->___U3CelapsedU3E5__1;
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_19 = __this->___U3CU3E4__this;
 		NullCheck(L_19);
@@ -6940,7 +6937,7 @@ IL_00cc:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:60>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:61>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_22 = __this->___U3CU3E4__this;
 		NullCheck(L_22);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_23 = L_22->____image;
@@ -6949,19 +6946,19 @@ IL_00cc:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_25 = L_24->___targetColor;
 		NullCheck(L_23);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_23, L_25);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:61>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:62>
 		__this->___U3CelapsedU3E5__1 = (0.0f);
 		goto IL_0197;
 	}
 
 IL_0112:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:65>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:66>
 		float L_26 = __this->___U3CelapsedU3E5__1;
 		float L_27;
 		L_27 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__1 = ((float)il2cpp_codegen_add(L_26, L_27));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:66>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:67>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_28 = __this->___U3CU3E4__this;
 		NullCheck(L_28);
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_29 = L_28->___curve;
@@ -6973,7 +6970,7 @@ IL_0112:
 		float L_33;
 		L_33 = AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C(L_29, ((float)(L_30/L_32)), NULL);
 		__this->___U3CtU3E5__3 = L_33;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:67>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:68>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_34 = __this->___U3CU3E4__this;
 		NullCheck(L_34);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_35 = L_34->____image;
@@ -6988,7 +6985,7 @@ IL_0112:
 		L_41 = Color_Lerp_mE79F87889843ECDC188E4CB5B5E1F1B2256E5EBE_inline(L_37, L_39, L_40, NULL);
 		NullCheck(L_35);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_35, L_41);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:68>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:69>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -7002,7 +6999,7 @@ IL_018f:
 
 IL_0197:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:63>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:64>
 		float L_42 = __this->___U3CelapsedU3E5__1;
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_43 = __this->___U3CU3E4__this;
 		NullCheck(L_43);
@@ -7015,7 +7012,7 @@ IL_0197:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:71>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:72>
 		ImageColorAnimator_tE62A8C129C10595D035139254A6533531E6C0890* L_46 = __this->___U3CU3E4__this;
 		NullCheck(L_46);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_47 = L_46->____image;
@@ -7024,13 +7021,13 @@ IL_0197:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_49 = L_48->____initialColor;
 		NullCheck(L_47);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_47, L_49);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:72>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:73>
 		__this->___U3CelapsedU3E5__1 = (0.0f);
 	}
 
 IL_01d9:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:50>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ImageColorAnimator.cs:51>
 		V_3 = (bool)1;
 		goto IL_0041;
 	}
@@ -7616,11 +7613,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LanguageManager_UpdateLanguageButtonLabe
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral48C46932A3A9ED5FCDB84A90DAB40D419251C616);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBF8C5087D9D95C6F5B57E87C5CBCD0A3686B55C3);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEE9A13F83A2BCF95BDD7C077C37F59BF443B938F);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -7643,7 +7638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LanguageManager_UpdateLanguageButtonLabe
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:101>
-		goto IL_004e;
+		goto IL_0033;
 	}
 
 IL_0014:
@@ -7675,20 +7670,11 @@ IL_002d:
 	{
 		NullCheck(G_B5_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66, G_B5_1, G_B5_0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:106>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = __this->___languageButtonLabel;
-		NullCheck(L_5);
-		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(65, L_5);
-		String_t* L_7;
-		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralEE9A13F83A2BCF95BDD7C077C37F59BF443B938F, L_6, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_7, NULL);
 	}
 
-IL_004e:
+IL_0033:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:107>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:105>
 		return;
 	}
 }
@@ -7704,9 +7690,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LanguageManager_FromCode_m6BC6AD6DD44
 	int32_t V_0 = 0;
 	int32_t G_B3_0 = 0;
 	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:109>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:110>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:111>
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:112>
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:113>
 		String_t* L_0 = ___0_languageCode;
 		bool L_1;
 		L_1 = String_Equals_mCC34895D0DB2AD440C9D8767032215BC86B5C48B(L_0, _stringLiteral6DB33ADD301402F08747C4EE933A8EF10A8128F7, 5, NULL);
@@ -7733,7 +7719,7 @@ IL_0013:
 
 IL_0016:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:114>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/LanguageManager.cs:112>
 		int32_t L_2 = V_0;
 		return L_2;
 	}
