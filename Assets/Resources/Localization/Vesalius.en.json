@@ -17,8 +17,8 @@
     },
     {
       "type": "image",
-      "key": "TEST_IMAGE_VESALIUS",
-      "title": "Portrait of Andreas Vesalius"
+      "key": "0. General",
+      "title": "De Humani Corporis Fabrica"
     },
     {
       "type": "chapter",
@@ -37,6 +37,41 @@
       "key": "the_voice_of_andreas",
       "title": "The Voice of Andreas",
       "content": "Complementing the musical work is a film by Mireille Capelle, titled \"The Voice of Andreas.\"\n\nConceived as a reflective and interpretative portrait, the film explores Vesalius as both a historical figure and a representation of humanity.\n\nWhile grounded in research, the film takes on a very personal viewpoint, offering a nuanced and imaginative perspective on his life and legacy."
+    },
+    {
+      "type": "image",
+      "key": "1. Bones",
+      "title": "The Bones"
+    },
+    {
+      "type": "image",
+      "key": "2. Muscles",
+      "title": "The Muscles"
+    },
+    {
+      "type": "image",
+      "key": "3. Arteries",
+      "title": "The Arteries"
+    },
+    {
+      "type": "image",
+      "key": "4. Nerves",
+      "title": "The Nerves"
+    },
+    {
+      "type": "image",
+      "key": "5. Digestion",
+      "title": "The Digestion"
+    },
+    {
+      "type": "image",
+      "key": "6. Heart",
+      "title": "The Heart"
+    },
+    {
+      "type": "image",
+      "key": "7. Brain",
+      "title": "The Brain"
     }
   ]
 }

@@ -17,8 +17,8 @@
     },
     {
       "type": "image",
-      "key": "TEST_IMAGE_VESALIUS",
-      "title": "Portret van Andreas Vesalius"
+      "key": "0. General",
+      "title": "De Humani Corporis Fabrica"
     },
     {
       "type": "chapter",
@@ -37,6 +37,41 @@
       "key": "the_voice_of_andreas",
       "title": "De stem van Andreas",
       "content": "Als aanvulling op het muzikale werk is er een film van Mireille Capelle, getiteld 'De stem van Andreas'.\n\nDe film is opgevat als een reflectief en interpreterend portret en verkent Vesalius zowel als historische figuur als representatie van de mens.\n\nHoewel de film gestoeld is op onderzoek, kiest hij voor een uitgesproken persoonlijk perspectief en biedt hij een genuanceerde en verbeeldingsrijke blik op zijn leven en nalatenschap."
+    },
+    {
+      "type": "image",
+      "key": "1. Bones",
+      "title": "De Beenderen"
+    },
+    {
+      "type": "image",
+      "key": "2. Muscles",
+      "title": "De Spieren"
+    },
+    {
+      "type": "image",
+      "key": "3. Arteries",
+      "title": "De Aderen"
+    },
+    {
+      "type": "image",
+      "key": "4. Nerves",
+      "title": "Het Zenuwstelsel"
+    },
+    {
+      "type": "image",
+      "key": "5. Digestion",
+      "title": "Het Spijsverteringstelsel"
+    },
+    {
+      "type": "image",
+      "key": "6. Heart",
+      "title": "Het Hart"
+    },
+    {
+      "type": "image",
+      "key": "7. Brain",
+      "title": "De Hersenen"
     }
   ]
 }
