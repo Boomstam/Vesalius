@@ -55,8 +55,6 @@
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
-    <Compile Include="Assets\Scripts\Tabs\Sounds\BandedCrossfadePlayer.cs" />
-    <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadeUI.cs" />
     <Compile Include="Assets\Scripts\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\UI\TabManagement.cs" />
     <None Include="Assets\Resources\Localization\Vesalius.nl.json" />

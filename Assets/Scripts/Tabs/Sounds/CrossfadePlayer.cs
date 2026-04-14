@@ -1,71 +1,109 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class CrossfadePlayer : MonoBehaviour
 {
-    private AudioClip[] clips;
-    private AudioMixerGroup mixerGroup;
-    private AudioSource[] sources;
-    private bool loop = true;
+    [Header("Clips — matched by index")]
+    [SerializeField] private AudioClip[] lowClips;
+    [SerializeField] private AudioClip[] highClips;
 
-    public void SetClips(AudioClip[] newClips, AudioMixerGroup newMixerGroup = null)
+    [Header("Mixer Groups")]
+    [SerializeField] private AudioMixerGroup lowMixerGroup;
+    [SerializeField] private AudioMixerGroup highMixerGroup;
+
+    [Header("Mixer Exposed Parameters")]
+    [SerializeField] private string lowParamName  = "Low";
+    [SerializeField] private string highParamName = "High";
+
+    [Header("UI")]
+    [SerializeField] private Slider crossfadeSlider;
+
+    private AudioSource lowSource;
+    private AudioSource highSource;
+    private int lastIndex = -1;
+
+    // ─── Lifecycle ────────────────────────────────────────────────────────────
+
+    private void OnEnable()
     {
-        clips = newClips;
-        mixerGroup = newMixerGroup;
+        EnsureSources();
+        PlayRandomPair();
+        crossfadeSlider.onValueChanged.AddListener(OnSliderChanged);
+        OnSliderChanged(crossfadeSlider.value);
     }
 
-    public void Play()
+    private void OnDisable()
     {
-        if (clips == null || clips.Length == 0) { Debug.LogError("No clips assigned"); return; }
-
-        Stop();
-
-        sources = new AudioSource[clips.Length];
-        for (int i = 0; i < clips.Length; i++)
-        {
-            GameObject child = new GameObject($"Source_{i}");
-            child.transform.SetParent(transform);
-
-            AudioSource src = child.AddComponent<AudioSource>();
-            src.clip = clips[i];
-            src.loop = loop;
-            src.volume = 0f;
-            src.playOnAwake = false;
-
-            if (mixerGroup != null)
-                src.outputAudioMixerGroup = mixerGroup;
-
-            src.Play();
-            sources[i] = src;
-        }
+        crossfadeSlider.onValueChanged.RemoveListener(OnSliderChanged);
+        lowSource.Stop();
+        highSource.Stop();
     }
 
-    public void Stop()
+    // ─── Setup ────────────────────────────────────────────────────────────────
+
+    private void EnsureSources()
     {
-        if (sources == null) return;
-        foreach (var src in sources)
-            if (src != null) Destroy(src.gameObject);
-        sources = null;
+        if (lowSource  == null) lowSource  = CreateSource("Source_Low",  lowMixerGroup);
+        if (highSource == null) highSource = CreateSource("Source_High", highMixerGroup);
     }
 
-    public void SetFadeValue(float fadeVal)
+    private AudioSource CreateSource(string goName, AudioMixerGroup group)
     {
-        if (sources == null || sources.Length == 0) return;
-        if (sources.Length == 1) { sources[0].volume = 1f; return; }
-
-        fadeVal = Mathf.Clamp01(fadeVal);
-        float percentagePerSource = 1f / (sources.Length - 1);
-        int startSample = Mathf.Min(Mathf.FloorToInt(fadeVal / percentagePerSource), sources.Length - 2);
-        float remainderPercentage = (fadeVal - percentagePerSource * startSample) / percentagePerSource;
-
-        for (int i = 0; i < sources.Length; i++)
-        {
-            float volume = 0f;
-            if (i == startSample)     volume = 1f - remainderPercentage;
-            if (i == startSample + 1) volume = remainderPercentage;
-            sources[i].volume = volume;
-        }
+        var go  = new GameObject(goName);
+        go.transform.SetParent(transform);
+        var src = go.AddComponent<AudioSource>();
+        src.loop        = true;
+        src.playOnAwake = false;
+        src.volume      = 1f;
+        if (group != null) src.outputAudioMixerGroup = group;
+        return src;
     }
 
-    private void OnDestroy() => Stop();
+    // ─── Playback ─────────────────────────────────────────────────────────────
+
+    private void PlayRandomPair()
+    {
+        int count = Mathf.Min(lowClips.Length, highClips.Length);
+        if (count == 0) { Debug.LogError("[BandedCrossfadePlayer] No clips assigned."); return; }
+
+        int index = PickIndex(count);
+        lastIndex = index;
+
+        lowSource.clip  = lowClips[index];
+        highSource.clip = highClips[index];
+
+        lowSource.Play();
+        highSource.Play();
+    }
+
+    private int PickIndex(int count)
+    {
+        if (count == 1) return 0;
+
+        int index;
+        do { index = Random.Range(0, count); }
+        while (index == lastIndex);
+        return index;
+    }
+
+    // ─── Crossfade ────────────────────────────────────────────────────────────
+
+    private void OnSliderChanged(float t)
+    {
+        // t=0 → full low, t=1 → full high
+        // Using log scale to match human hearing, clamped to avoid -inf dB
+        const float minVol = 0.0001f;
+        float lowVol  = Mathf.Clamp(1f - t, minVol, 1f);
+        float highVol = Mathf.Clamp(t,       minVol, 1f);
+
+        lowMixerGroup.audioMixer.SetFloat(lowParamName,  Mathf.Log10(lowVol)  * 20f);
+        highMixerGroup.audioMixer.SetFloat(highParamName, Mathf.Log10(highVol) * 20f);
+    }
+
+    private void OnDestroy()
+    {
+        if (lowSource  != null) Destroy(lowSource.gameObject);
+        if (highSource != null) Destroy(highSource.gameObject);
+    }
 }

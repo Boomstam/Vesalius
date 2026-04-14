@@ -748,50 +748,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &217140659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 217140661}
-  - component: {fileID: 217140660}
-  m_Layer: 0
-  m_Name: CrossfadePlayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &217140660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217140659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154e6a6201353094a9a0dbc668a2dca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrossfadePlayer
---- !u!4 &217140661
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217140659}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 584.39124, y: 1353.1287, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &263015457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,11 +3050,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1050153474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcb90be91cd324e9c36937ca06729d, type: 3}
+  m_Script: {fileID: 11500000, guid: 154e6a6201353094a9a0dbc668a2dca0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrossfadeUI
-  crossfadePlayer: {fileID: 217140660}
-  slider: {fileID: 1050153477}
+  m_EditorClassIdentifier: Assembly-CSharp::CrossfadePlayer
+  lowClips:
+  - {fileID: 8300000, guid: 34371a463bf2a7a438ba749511e9a655, type: 3}
+  - {fileID: 8300000, guid: 6ee8da475cfc088408705f182b906966, type: 3}
+  - {fileID: 8300000, guid: 4ae7ef139ae86f447a9e9217a1295296, type: 3}
+  highClips:
+  - {fileID: 8300000, guid: bb69c90683b168544a553db3388f64de, type: 3}
+  - {fileID: 8300000, guid: fad50ff8321f80b4099615bc4780fe08, type: 3}
+  - {fileID: 8300000, guid: ef33b08556c58d443b9b03c0797b370a, type: 3}
+  lowMixerGroup: {fileID: -2630263940995340084, guid: 0a316802b15da354097940bc3882233a, type: 2}
+  highMixerGroup: {fileID: 8204088355967438773, guid: 0a316802b15da354097940bc3882233a, type: 2}
+  lowParamName: Low 1
+  highParamName: High 1
+  crossfadeSlider: {fileID: 1050153477}
 --- !u!1 &1079690237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,11 +3856,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1265113680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcb90be91cd324e9c36937ca06729d, type: 3}
+  m_Script: {fileID: 11500000, guid: 154e6a6201353094a9a0dbc668a2dca0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrossfadeUI
-  crossfadePlayer: {fileID: 217140660}
-  slider: {fileID: 1265113682}
+  m_EditorClassIdentifier: Assembly-CSharp::CrossfadePlayer
+  lowClips:
+  - {fileID: 8300000, guid: 0c9492f42f88280418a7ab4ea89fa3aa, type: 3}
+  - {fileID: 8300000, guid: 0f22621b05ccc1849844d7a3d22a1031, type: 3}
+  - {fileID: 8300000, guid: 11743b09b0251294ab876383297c201c, type: 3}
+  - {fileID: 8300000, guid: e39b342f80d11b4429b61491db3a0d6b, type: 3}
+  - {fileID: 8300000, guid: 8985e708919bf6f4caabb86527708c5a, type: 3}
+  - {fileID: 8300000, guid: 736adf156671dbd4ea98d77a5d756d5d, type: 3}
+  - {fileID: 8300000, guid: 2babea095fd128f418255bcaa73ae574, type: 3}
+  - {fileID: 8300000, guid: 727b58a2e8bfccf40afeafb3be5353bd, type: 3}
+  - {fileID: 8300000, guid: 9ed64d5eba15db041972d6d99ad3e9d9, type: 3}
+  highClips:
+  - {fileID: 8300000, guid: 7bad7ea750dda2f4bbfd7aa871bf8b30, type: 3}
+  - {fileID: 8300000, guid: f5d3b575ea57af445933518172f1ca47, type: 3}
+  - {fileID: 8300000, guid: da114a5f96b6b96428c888c40ad97875, type: 3}
+  - {fileID: 8300000, guid: 6a791c5d9a21e6549b3cfaa0f31f9b24, type: 3}
+  - {fileID: 8300000, guid: 9ebca9a35e0138c41b4bc0d6aca85c10, type: 3}
+  - {fileID: 8300000, guid: 2b16b0192d7307c409c2a190f052e542, type: 3}
+  - {fileID: 8300000, guid: ad5460dc8dae66e449330b778399d6c1, type: 3}
+  - {fileID: 8300000, guid: f9064c4528d6e51408d1959bc4f9053b, type: 3}
+  - {fileID: 8300000, guid: 51d6091b1d87efb46a247902c7dc82eb, type: 3}
+  lowMixerGroup: {fileID: 2343546996403721691, guid: 0a316802b15da354097940bc3882233a, type: 2}
+  highMixerGroup: {fileID: -3973069102534246993, guid: 0a316802b15da354097940bc3882233a, type: 2}
+  lowParamName: Low
+  highParamName: High
+  crossfadeSlider: {fileID: 1265113682}
 --- !u!1 &1285460017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,4 +6748,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 726349809}
   - {fileID: 1883343733}
-  - {fileID: 217140661}
