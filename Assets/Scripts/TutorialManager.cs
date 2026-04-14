@@ -91,12 +91,11 @@ public class TutorialManager : MonoBehaviour
     {
         StopAllAnimators();
         
-        StartAnimatorsForChapter(index);
-
         bool isLastChapter = index == infoManager.ChapterCount - 1;
-        
         quitTutorialButton.gameObject.SetActive(isLastChapter);
         tutorialActiveLabel.SetActive(!isLastChapter);
+        
+        StartAnimatorsForChapter(index);
     }
 
     private ChapterAnimationEntry FindEntry(int chapterIndex)
