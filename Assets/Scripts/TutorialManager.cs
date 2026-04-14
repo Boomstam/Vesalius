@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,6 +90,7 @@ public class TutorialManager : MonoBehaviour
     public void OnChapterChanged(int index)
     {
         StopAllAnimators();
+        
         StartAnimatorsForChapter(index);
 
         bool isLastChapter = index == infoManager.ChapterCount - 1;
