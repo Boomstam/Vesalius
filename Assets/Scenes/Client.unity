@@ -748,6 +748,50 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &217140659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217140661}
+  - component: {fileID: 217140660}
+  m_Layer: 0
+  m_Name: CrossfadePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217140660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217140659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154e6a6201353094a9a0dbc668a2dca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossfadePlayer
+--- !u!4 &217140661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217140659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 584.39124, y: 1353.1287, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &263015457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,6 +3003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1050153475}
+  - component: {fileID: 1050153478}
   - component: {fileID: 1050153477}
   m_Layer: 0
   m_Name: Tutorial Slider 2
@@ -3040,6 +3085,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1050153478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050153474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bcb90be91cd324e9c36937ca06729d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossfadeUI
+  crossfadePlayer: {fileID: 217140660}
+  slider: {fileID: 1050153477}
 --- !u!1 &1079690237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,6 +3798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1265113681}
+  - component: {fileID: 1265113683}
   - component: {fileID: 1265113682}
   m_Layer: 0
   m_Name: Tutorial Slider 1
@@ -3820,6 +3880,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1265113683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265113680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bcb90be91cd324e9c36937ca06729d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrossfadeUI
+  crossfadePlayer: {fileID: 217140660}
+  slider: {fileID: 1265113682}
 --- !u!1 &1285460017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6069,13 +6143,13 @@ MonoBehaviour:
       1564.'
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
   - title: The Voice of Andreas
-    content: 'Complementing the musical work is a film by Mireille Capelle, titled
+    content: Complementing the musical work is a film by Mireille Capelle, titled
       "The Voice of Andreas." Conceived as a reflective and interpretative portrait,
       the film explores Vesalius as both a historical figure and a representation
       of humanity. It traces his life from childhood to adulthood, blending documented
       history with elements of fiction. While grounded in research, the film acknowledges
       the ambiguities and contradictions within historical sources, offering a nuanced
-      and imaginative perspective on his life and legacy.'
+      and imaginative perspective on his life and legacy.
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
 --- !u!1 &4277731064508341171
 GameObject:
@@ -6684,3 +6758,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 726349809}
   - {fileID: 1883343733}
+  - {fileID: 217140661}
