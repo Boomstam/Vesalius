@@ -1,0 +1,27 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Vesalius",
+  "chapters": [
+    {
+      "key": "the_child_of_hell_street",
+      "title": "The Child of \"Hell Street\"",
+      "content": "Born in Brussels in 1514 into a long line of court physicians, Andreas Vesalius grew up near the so-called \"Hell Street,\" close to the Galgenberg, the hill where executions took place.\n\nAs a young boy, he observed the bodies of the condemned, an experience that awakened both his fascination and his scientific curiosity."
+    },
+    {
+      "key": "paris_and_the_discovery_of_al_razi",
+      "title": "Paris and the Discovery of al-Razi",
+      "content": "Between 1533 and 1536, he studied in Paris under Jacques Dubois. Eager to deepen his anatomical knowledge, he secretly exhumed bodies from the Cemetery of the Innocents.\n\nInfluenced by the writings of al-Razi (Rhazes), his first publication in 1537 was a paraphrase of the ninth book of al-Razi's work. This marked a decisive shift away from Galenic dogma toward direct observation."
+    },
+    {
+      "key": "the_glory_of_venice_and_charles_v",
+      "title": "The Glory of Venice and Charles V",
+      "content": "Vesalius quickly gained fame in Venice and Padua. At just 23, he became a professor at the University of Padua. In 1543, he published De humani corporis fabrica, a groundbreaking anatomical treatise.\n\nHe later served Emperor Charles V and married Anne Witekind in Brussels in 1544."
+    },
+    {
+      "key": "the_inquisition_and_the_end_in_zante",
+      "title": "The Inquisition and the end in Zante",
+      "content": "Although protected by Emperor Philip II, his dissections provoked criticism from the Church and from traditional physicians.\n\nAccused before the Inquisition in Spain, he departed for Jerusalem in 1564. On his return journey, exhausted and ill, he died on the Greek island of Zante (Zakynthos) in October 1564."
+    }
+  ]
+}

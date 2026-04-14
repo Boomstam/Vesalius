@@ -1,0 +1,16 @@
+{
+  "locale": "default",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "notes": "Current scene defaults extracted as-is. Some values are English placeholders or labels.",
+  "ui": {
+    "info_title_placeholder": "INFO_TITLE",
+    "info_content_placeholder": "Here will come the info text",
+    "previous_button_label": "<",
+    "next_button_label": ">",
+    "stop_tutorial_button_label": "STOP TUTORIAL",
+    "language_button_label": "NL",
+    "tab_sounds_label": "SOUNDS",
+    "tab_film_label": "FILM",
+    "tab_vesalius_label": "VESALIUS"
+  }
+}
