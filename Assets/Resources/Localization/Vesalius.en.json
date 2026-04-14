@@ -1,0 +1,32 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Vesalius",
+  "chapters": [
+    {
+      "key": "anatomy_of_sound",
+      "title": "Anatomy of Sound",
+      "content": "The Voice of Andreas Vesalius (2025-2026)\n\n\"Anatomy of Sound\" is a contemporary musical work composed by Mathias Coppens for HERMESensemble.\n\nLasting approximately forty-five minutes, the piece explores the human body through sound, structure, and perception, drawing inspiration from the legacy of Andreas Vesalius."
+    },
+    {
+      "key": "andreas_vesalius_a_revolutionary_anatomist",
+      "title": "Andreas Vesalius: A Revolutionary Anatomist",
+      "content": "Andreas Vesalius (1514-1564) was a pioneering Renaissance anatomist who transformed the study of the human body.\n\nAt a time when human dissection was widely prohibited, he conducted direct anatomical investigations, challenging long-standing misconceptions.\n\nHis detailed drawings and publications laid the foundations for modern anatomy and continue to influence medical science today."
+    },
+    {
+      "key": "a_life_in_service_of_knowledge_and_power",
+      "title": "A Life in Service of Knowledge and Power",
+      "content": "Born in Brussels into a family of physicians and pharmacists serving the royal court, Vesalius followed a path deeply rooted in medical tradition.\n\nHis expertise led him to serve as a physician to Emperor Charles V and later to Philip II of Spain, placing him at the intersection of science, politics, and royal authority."
+    },
+    {
+      "key": "structure_of_the_composition",
+      "title": "Structure of the Composition",
+      "content": "The composition is divided into seven parts, echoing the structure of Vesalius' seminal anatomical work.\n\nEach section focuses on a different aspect of the human body, such as nerves, muscles, the heart, and blood, translating physical systems into musical form.\n\nTogether, these parts create a layered exploration of the body as both a biological and symbolic entity."
+    },
+    {
+      "key": "the_voice_of_andreas",
+      "title": "The Voice of Andreas",
+      "content": "Complementing the musical work is a film by Mireille Capelle, titled \"The Voice of Andreas.\"\n\nConceived as a reflective and interpretative portrait, the film explores Vesalius as both a historical figure and a representation of humanity.\n\nWhile grounded in research, the film takes on a very personal viewpoint, offering a nuanced and imaginative perspective on his life and legacy."
+    }
+  ]
+}

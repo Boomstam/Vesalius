@@ -2002,6 +2002,7 @@ MonoBehaviour:
   previousInfoButton: {fileID: 37479086}
   nextInfoButton: {fileID: 1218556494}
   infoBackground: {fileID: 1082043647}
+  chaptersJsonResourcePath: Localization/Tutorial.nl
   chapters:
   - title: Tutorial
     content: "Dit is de 'tutorial', bedoeld om je wegwijs te maken in de app. Je
@@ -2284,6 +2285,7 @@ MonoBehaviour:
   previousInfoButton: {fileID: 2118830410}
   nextInfoButton: {fileID: 739600761}
   infoBackground: {fileID: 2065429924}
+  chaptersJsonResourcePath: Localization/Film.en
   chapters:
   - title: Film
     content: "Born in Brussels in 1514 into a long line of court physicians, Andreas
@@ -6014,6 +6016,7 @@ MonoBehaviour:
   previousInfoButton: {fileID: 7201840312523105159}
   nextInfoButton: {fileID: 2354091877147183579}
   infoBackground: {fileID: 7262810642417388811}
+  chaptersJsonResourcePath: Localization/Vesalius.en
   chapters:
   - title: "The Child of \u201CHell Street\u201D"
     content: "Born in Brussels in 1514 into a long line of court physicians, Andreas
@@ -6047,6 +6050,15 @@ MonoBehaviour:
       Inquisition in Spain, he departed for Jerusalem in 1564. On his return journey,
       exhausted and ill, he died on the Greek island of Zante (Zakynthos) in October
       1564.'
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: The Voice of Andreas
+    content: 'Complementing the musical work is a film by Mireille Capelle, titled
+      "The Voice of Andreas." Conceived as a reflective and interpretative portrait,
+      the film explores Vesalius as both a historical figure and a representation
+      of humanity. It traces his life from childhood to adulthood, blending documented
+      history with elements of fiction. While grounded in research, the film acknowledges
+      the ambiguities and contradictions within historical sources, offering a nuanced
+      and imaginative perspective on his life and legacy.'
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
 --- !u!1 &4277731064508341171
 GameObject:

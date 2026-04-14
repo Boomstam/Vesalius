@@ -1,7 +1,7 @@
 {
   "locale": "en",
   "sourceScene": "Assets/Scenes/Client.unity",
-  "sourceGameObjectPath": "MainCanvas/Content/Vesalius",
+  "sourceGameObjectPath": "MainCanvas/Content/Film",
   "chapters": [
     {
       "key": "the_child_of_hell_street",
