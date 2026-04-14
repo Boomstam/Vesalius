@@ -1,0 +1,27 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Film",
+  "chapters": [
+    {
+      "key": "the_child_of_hell_street",
+      "title": "The Child of \"Hell Street\"",
+      "content": "Andreas Vesalius werd in 1514 in Brussel geboren in een lange lijn van hofartsen. Hij groeide op nabij de zogenoemde 'Helstraat', dicht bij de Galgenberg, de heuvel waar terechtstellingen plaatsvonden.\n\nAls jonge jongen zag hij de lichamen van veroordeelden, een ervaring die zowel zijn fascinatie als zijn wetenschappelijke nieuwsgierigheid wekte."
+    },
+    {
+      "key": "paris_and_the_discovery_of_al_razi",
+      "title": "Paris and the Discovery of al-Razi",
+      "content": "Tussen 1533 en 1536 studeerde hij in Parijs bij Jacques Dubois. Gedreven om zijn anatomische kennis te verdiepen, groef hij in het geheim lichamen op uit het Cimetière des Innocents.\n\nOnder invloed van de geschriften van al-Razi (Rhazes) verscheen zijn eerste publicatie in 1537 als een parafrase van het negende boek van al-Razi's werk. Dat markeerde een beslissende breuk met het galenische dogma ten gunste van directe observatie."
+    },
+    {
+      "key": "the_glory_of_venice_and_charles_v",
+      "title": "The Glory of Venice and Charles V",
+      "content": "Vesalius verwierf al snel faam in Venetië en Padua. Op amper 23-jarige leeftijd werd hij professor aan de Universiteit van Padua. In 1543 publiceerde hij De humani corporis fabrica, een baanbrekend anatomisch traktaat.\n\nLater trad hij in dienst van keizer Karel V en trouwde hij in 1544 in Brussel met Anne Witekind."
+    },
+    {
+      "key": "the_inquisition_and_the_end_in_zante",
+      "title": "The Inquisition and the end in Zante",
+      "content": "Hoewel hij beschermd werd door koning Filips II, lokten zijn dissecties kritiek uit vanuit de Kerk en van traditionele artsen.\n\nNadat hij in Spanje voor de inquisitie werd beschuldigd, vertrok hij in 1564 naar Jeruzalem. Op de terugreis stierf hij, uitgeput en ziek, in oktober 1564 op het Griekse eiland Zante (Zakynthos)."
+    }
+  ]
+}

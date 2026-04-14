@@ -6,12 +6,12 @@
     {
       "key": "tutorial",
       "title": "Tutorial",
-      "content": "Dit is de 'tutorial', bedoeld om je wegwijs te maken in de app. Je kan hem voor de voorstelling begint steeds terug openen via het informatie-icoon linksboven.\n\nDaarnaast vind je ook de knop om je taal veranderen.\n\nJe gaat naar het volgende onderdeel door op het '>'-teken rechts van de titel hierboven te klikken. Via de '<'-knop links kan je terug naar het vorige onderdeel."
+      "content": "Dit is de tutorial, bedoeld om je wegwijs te maken in de app. Je kan hem, voor de voorstelling begint, steeds opnieuw openen via het informatie-icoon linksboven.\n\nDaarnaast vind je daar ook de knop om van taal te veranderen.\n\nJe gaat naar het volgende onderdeel door op het '>'-teken rechts van de titel hierboven te klikken. Via de '<'-knop links kan je terug naar het vorige onderdeel."
     },
     {
       "key": "tabs",
       "title": "Tabs",
-      "content": "Tot het moment dat de voorstelling begint, zal je onderaan uit 3 tabs kunnen kiezen. Deze zijn bedoeld als achtergrond informatie en om de even met het hanteren van geluiden te leren omgaan.\n\nZolang de tutorial actief is zijn ze even gedeactiveerd. Als je de tutorial afsluit kan je ze beginnen ontdekken."
+      "content": "Tot het moment dat de voorstelling begint, kan je onderaan uit drie tabs kiezen. Die zijn bedoeld als achtergrondinformatie en om al even vertrouwd te raken met het bedienen van de geluiden.\n\nZolang de tutorial actief is, zijn ze tijdelijk gedeactiveerd. Als je de tutorial afsluit, kan je ze beginnen te ontdekken."
     },
     {
       "key": "vesalius",
@@ -20,38 +20,38 @@
     },
     {
       "key": "de_stem_van_andreas",
-      "title": "De stem van Andreas",
+      "title": "The Voice of Andreas",
       "content": "Via deze tab kan je meer te weten komen over de film 'De stem van Andreas' van Mireille Capelle, die de voorstelling zal inleiden."
     },
     {
       "key": "sounds",
       "title": "Sounds",
-      "content": "Bij deze tab kan je al eens wat experimenteren met het bedienen van de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon zullen komen en zo een onderdeel vormen van het muzikale geheel.\n\nHet principe is dat je via 2 sliders de klank kan beïnvloeden. Speel er mee zoveel je wil, probeer zeker eens uit!\n\nTijdens de voorstelling is het de bedoeling dat je het volume van je gsm op maximum zet."
+      "content": "Bij deze tab kan je al eens experimenteren met het bedienen van de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon zullen komen en zo deel zullen uitmaken van het muzikale geheel.\n\nHet principe is dat je via twee sliders de klank kan beïnvloeden. Speel ermee zoveel je wil, probeer het zeker eens uit.\n\nTijdens de voorstelling is het de bedoeling dat je het volume van je gsm op maximum zet."
     },
     {
       "key": "participatie",
-      "title": "Participatie",
-      "content": "Op een aantal momenten tijdens de voorstelling krijgt een groep mensen de kans om naar voor te komen, willekeurig gekozen.\n\nDaar worden deze dan duidelijk gemaakt wat op dat moment de bedoeling is. Het gaat telkens over heel eenvoudige handelingen."
+      "title": "Participation",
+      "content": "Op een aantal momenten tijdens de voorstelling krijgt een groep mensen de kans om naar voren te komen, willekeurig gekozen.\n\nDaar wordt dan duidelijk gemaakt wat op dat moment de bedoeling is. Het gaat telkens om heel eenvoudige handelingen."
     },
     {
       "key": "effecten",
-      "title": "Effecten",
-      "content": "Op een aantal momenten zal je gsm iets gaan doen, bijvoorbeeld visueel.\n\nAls je geen sliders ziet om klank te manipuleren of geen boodschap krijgt om naar voor te gaan, hoef je niet met de app te interageren maar draag je automatisch bij tot de atmosfeer van de muziek."
+      "title": "Effects",
+      "content": "Op een aantal momenten zal je gsm iets doen, bijvoorbeeld visueel.\n\nAls je geen sliders ziet om klank te manipuleren of geen boodschap krijgt om naar voren te gaan, hoef je niet met de app te interageren, maar draag je automatisch bij aan de sfeer van de muziek."
     },
     {
       "key": "uitleg",
-      "title": "Uitleg",
-      "content": "Wanneer er even niets met de app gebeurd, zal er wat uitleg getoond worden over het specifieke orgaan dat op dat moment aan bod is in het stuk.\n\nBekijk deze gerust even wanneer je daar zin hebt, dit kan helpen het verhaal van de compositie te kaderen."
+      "title": "Explanation",
+      "content": "Wanneer er even niets met de app gebeurt, zal er wat uitleg getoond worden over het specifieke orgaan dat op dat moment aan bod komt in het stuk.\n\nBekijk die gerust wanneer je daar zin in hebt. Het kan helpen om het verhaal van de compositie te kaderen."
     },
     {
       "key": "connectie",
-      "title": "Connectie",
-      "content": "De app wordt aangestuurd vanop een centrale server.\n\nOm hiermee te connecteren zal je op het juiste lokale netwerk moeten inloggen. Als de connectie gelukt is zal je dat zien aan het icoontje rechtsboven.\n\nDe connectie met een lokaal netwerk zorgt er meteen voor dat je geen internet en dus ook al wat minder storende berichten krijgt.\n\nJe kan verder best je gsm op 'Niet Storen' zetten (let op, zet je volume niet af), dan krijg je zeker geen meldingen of berichten."
+      "title": "Connection",
+      "content": "De app wordt aangestuurd vanaf een centrale server.\n\nOm hiermee te connecteren zal je op het juiste lokale netwerk moeten inloggen. Als de connectie gelukt is, zal je dat zien aan het icoontje rechtsboven.\n\nDe connectie met een lokaal netwerk zorgt er meteen voor dat je geen internet hebt en dus ook al wat minder storende berichten krijgt.\n\nJe zet je gsm verder best op 'Niet storen' (let op: zet je volume niet af), dan krijg je zeker geen meldingen of berichten."
     },
     {
       "key": "einde_tutorial",
-      "title": "Einde tutorial",
-      "content": "Van zodra de voorstelling begint, zullen de tutorial, het informatie-icoon en ook de tabs onderaan verdwijnen. Dan zal de app duidelijk aangeven wanneer je eventueel iets moet doen.\n\nKlik op de knop 'Stop Tutorial' onderaan of op het informatie-icoon linksboven om de tutorial af te sluiten. Je kan hem ook steeds terug openen tot de voorstelling begint, door op dat icoontje te klikken."
+      "title": "End of Tutorial",
+      "content": "Van zodra de voorstelling begint, zullen de tutorial, het informatie-icoon en ook de tabs onderaan verdwijnen. Dan zal de app duidelijk aangeven wanneer je eventueel iets moet doen.\n\nKlik op de knop 'Stop Tutorial' onderaan of op het informatie-icoon linksboven om de tutorial af te sluiten. Je kan hem ook steeds opnieuw openen tot de voorstelling begint, door op dat icoontje te klikken."
     }
   ]
 }

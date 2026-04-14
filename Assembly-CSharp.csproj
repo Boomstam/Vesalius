@@ -53,15 +53,18 @@
     <Compile Include="Assets\FishNet\Upgrading\MirrorUpgrade.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
+    <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\BandedCrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadeUI.cs" />
     <Compile Include="Assets\Scripts\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\UI\TabManagement.cs" />
+    <None Include="Assets\Resources\Localization\Vesalius.nl.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\Resources\Localization\UI.default.json" />
+    <None Include="Assets\Resources\Localization\Tutorial.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Resources\Localization\Tutorial.nl.json" />
     <None Include="Assets\FishNet\LICENSE.txt" />
@@ -86,6 +89,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Resources\Localization\Film.nl.json" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Fonts\Cormorant\OFL.txt" />

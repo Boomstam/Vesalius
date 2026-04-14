@@ -1,0 +1,32 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Vesalius",
+  "chapters": [
+    {
+      "key": "anatomy_of_sound",
+      "title": "Anatomy of Sound",
+      "content": "\n\n'Anatomy of Sound' is een hedendaags muzikaal werk, gecomponeerd door Mathias Coppens voor HERMESensemble.\n\nMet een duur van ongeveer vijfenveertig minuten verkent het stuk het menselijk lichaam via klank, structuur en waarneming, geïnspireerd door de nalatenschap van Andreas Vesalius."
+    },
+    {
+      "key": "andreas_vesalius_a_revolutionary_anatomist",
+      "title": "Andreas Vesalius: A Revolutionary Anatomist",
+      "content": "Andreas Vesalius (1514-1564) was een baanbrekende renaissancistische anatoom die de studie van het menselijk lichaam ingrijpend veranderde.\n\nIn een tijd waarin het ontleden van menselijke lichamen grotendeels verboden was, voerde hij directe anatomische onderzoeken uit en stelde hij hardnekkige misvattingen ter discussie.\n\nZijn gedetailleerde tekeningen en publicaties legden de basis voor de moderne anatomie en beïnvloeden de medische wetenschap tot op vandaag."
+    },
+    {
+      "key": "a_life_in_service_of_knowledge_and_power",
+      "title": "A Life in Service of Knowledge and Power",
+      "content": "Geboren in Brussel in een familie van artsen en apothekers die aan het hof verbonden waren, volgde Vesalius een pad dat diep geworteld was in de medische traditie.\n\nZijn expertise bracht hem in dienst als arts van keizer Karel V en later van Filips II van Spanje, waardoor hij zich op het snijvlak van wetenschap, politiek en koninklijke macht bevond."
+    },
+    {
+      "key": "structure_of_the_composition",
+      "title": "Structure of the Composition",
+      "content": "De compositie is onderverdeeld in zeven delen, als echo van de opbouw van Vesalius' baanbrekende anatomische werk.\n\nElk deel richt zich op een ander aspect van het menselijk lichaam, zoals zenuwen, spieren, het hart en het bloed, en vertaalt lichamelijke systemen naar muzikale vorm.\n\nSamen vormen deze delen een gelaagde verkenning van het lichaam als zowel biologische als symbolische entiteit."
+    },
+    {
+      "key": "the_voice_of_andreas",
+      "title": "The Voice of Andreas",
+      "content": "Als aanvulling op het muzikale werk is er een film van Mireille Capelle, getiteld 'De stem van Andreas'.\n\nDe film is opgevat als een reflectief en interpreterend portret en verkent Vesalius zowel als historische figuur als representatie van de mens.\n\nHoewel de film gestoeld is op onderzoek, kiest hij voor een uitgesproken persoonlijk perspectief en biedt hij een genuanceerde en verbeeldingsrijke blik op zijn leven en nalatenschap."
+    }
+  ]
+}

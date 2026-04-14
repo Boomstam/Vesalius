@@ -46,13 +46,26 @@ public class InfoManager : MonoBehaviour
     public int ChapterCount => chapters?.Length ?? 0;
 
     private int _currentIndex;
+    private ChapterData[] _defaultChapters;
+    private string _localizedResourceBasePath;
+
+    private void Awake()
+    {
+        _defaultChapters = CloneChapters(chapters);
+        _localizedResourceBasePath = ExtractLocalizedResourceBasePath(chaptersJsonResourcePath);
+    }
 
     private void Start()
     {
-        LoadChapterTextFromJson();
+        LoadChapterTextForCurrentLanguage();
 
         previousInfoButton.onClick.AddListener(OnPrevious);
         nextInfoButton.onClick.AddListener(OnNext);
+
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged += OnLanguageChanged;
+        }
 
         if (ChapterCount > 0)
         {
@@ -64,6 +77,11 @@ public class InfoManager : MonoBehaviour
     {
         previousInfoButton.onClick.RemoveListener(OnPrevious);
         nextInfoButton.onClick.RemoveListener(OnNext);
+
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -= OnLanguageChanged;
+        }
     }
 
     // Resets to chapter 0 without firing the event, used by TutorialManager
@@ -126,22 +144,25 @@ public class InfoManager : MonoBehaviour
 
     private void LoadChapterTextFromJson()
     {
-        if (string.IsNullOrWhiteSpace(chaptersJsonResourcePath))
+        chapters = CloneChapters(_defaultChapters);
+
+        string resourcePath = ResolveLocalizedResourcePath();
+        if (string.IsNullOrWhiteSpace(resourcePath))
         {
             return;
         }
 
-        TextAsset jsonAsset = Resources.Load<TextAsset>(chaptersJsonResourcePath);
+        TextAsset jsonAsset = Resources.Load<TextAsset>(resourcePath);
         if (jsonAsset == null)
         {
-            Debug.LogWarning($"InfoManager on '{gameObject.name}' could not load JSON at Resources path '{chaptersJsonResourcePath}'.");
+            Debug.LogWarning($"InfoManager on '{gameObject.name}' could not load JSON at Resources path '{resourcePath}'.");
             return;
         }
 
         LocalizedChapterCollection localizedData = JsonUtility.FromJson<LocalizedChapterCollection>(jsonAsset.text);
         if (localizedData == null || localizedData.chapters == null || localizedData.chapters.Length == 0)
         {
-            Debug.LogWarning($"InfoManager on '{gameObject.name}' found no chapters in '{chaptersJsonResourcePath}'.");
+            Debug.LogWarning($"InfoManager on '{gameObject.name}' found no chapters in '{resourcePath}'.");
             return;
         }
 
@@ -180,5 +201,73 @@ public class InfoManager : MonoBehaviour
 
             chapters[i] = chapter;
         }
+    }
+
+    private void LoadChapterTextForCurrentLanguage()
+    {
+        LoadChapterTextFromJson();
+
+        if (ChapterCount == 0)
+        {
+            return;
+        }
+
+        _currentIndex = Mathf.Clamp(_currentIndex, 0, ChapterCount - 1);
+        DisplayChapter(_currentIndex);
+    }
+
+    private void OnLanguageChanged(LanguageManager.AppLanguage _)
+    {
+        LoadChapterTextForCurrentLanguage();
+    }
+
+    private string ResolveLocalizedResourcePath()
+    {
+        if (!string.IsNullOrWhiteSpace(_localizedResourceBasePath))
+        {
+            string preferredPath = $"{_localizedResourceBasePath}.{LanguageManager.CurrentLanguageCode}";
+            if (Resources.Load<TextAsset>(preferredPath) != null)
+            {
+                return preferredPath;
+            }
+        }
+
+        return chaptersJsonResourcePath;
+    }
+
+    private static string ExtractLocalizedResourceBasePath(string resourcePath)
+    {
+        if (string.IsNullOrWhiteSpace(resourcePath))
+        {
+            return resourcePath;
+        }
+
+        int separatorIndex = resourcePath.LastIndexOf('.');
+        if (separatorIndex < 0 || separatorIndex >= resourcePath.Length - 1)
+        {
+            return resourcePath;
+        }
+
+        string suffix = resourcePath.Substring(separatorIndex + 1);
+        if (suffix.Equals("en", StringComparison.OrdinalIgnoreCase) ||
+            suffix.Equals("nl", StringComparison.OrdinalIgnoreCase) ||
+            suffix.Equals("default", StringComparison.OrdinalIgnoreCase))
+        {
+            return resourcePath.Substring(0, separatorIndex);
+        }
+
+        return resourcePath;
+    }
+
+    private static ChapterData[] CloneChapters(ChapterData[] source)
+    {
+        if (source == null)
+        {
+            return Array.Empty<ChapterData>();
+        }
+
+        ChapterData[] clone = new ChapterData[source.Length];
+        Array.Copy(source, clone, source.Length);
+        return clone;
     }
 }
