@@ -2,53 +2,63 @@
   "locale": "en",
   "sourceScene": "Assets/Scenes/Client.unity",
   "sourceGameObjectPath": "MainCanvas/Content/Tutorial",
-  "chapters": [
+  "entries": [
     {
+      "type": "chapter",
       "key": "tutorial",
       "title": "Tutorial",
       "content": "This tutorial is here to help you find your way around the app. Before the performance begins, you can always reopen it via the information icon in the top-left corner.\n\nThat is also where you will find the button to change the language.\n\nYou can move to the next section by clicking the '>' sign to the right of the title above. Use the '<' button on the left to go back to the previous section."
     },
     {
+      "type": "chapter",
       "key": "tabs",
       "title": "Tabs",
       "content": "Until the performance begins, you can choose from three tabs at the bottom. They are meant to offer background information and let you get familiar with handling the sounds.\n\nAs long as the tutorial is active, they are temporarily disabled. Once you close the tutorial, you can start exploring them."
     },
     {
+      "type": "chapter",
       "key": "vesalius",
       "title": "Vesalius",
       "content": "Under this tab, you can get to know the fascinating life of Vesalius a little better.\n\nThe information was compiled by Dr. Thomas Moors."
     },
     {
+      "type": "chapter",
       "key": "de_stem_van_andreas",
       "title": "The Voice of Andreas",
       "content": "Through this tab, you can learn more about the film 'The Voice of Andreas' by Mireille Capelle, which will introduce the performance."
     },
     {
+      "type": "chapter",
       "key": "sounds",
       "title": "Sounds",
       "content": "In this tab, you can already experiment with controlling the sounds that will come from your phone at a few moments during the performance, becoming part of the musical whole.\n\nThe idea is that you can influence the sound using two sliders. Feel free to play around with them as much as you like, definitely give it a try.\n\nDuring the performance, the intention is for you to turn your phone volume up to maximum."
     },
     {
+      "type": "chapter",
       "key": "participatie",
       "title": "Participation",
       "content": "At a number of moments during the performance, a randomly selected group of people will get the chance to come forward.\n\nThey will then be clearly told what is expected at that moment. It will always involve very simple actions."
     },
     {
+      "type": "chapter",
       "key": "effecten",
       "title": "Effects",
       "content": "At certain moments, your phone will do something, for example visually.\n\nIf you do not see any sliders to manipulate sound or receive no message asking you to come forward, you do not need to interact with the app, but you are still automatically contributing to the atmosphere of the music."
     },
     {
+      "type": "chapter",
       "key": "uitleg",
       "title": "Explanation",
       "content": "Whenever nothing is happening in the app for a moment, some explanation will be shown about the specific organ that is being highlighted in the piece at that time.\n\nFeel free to read it whenever you want. It can help place the story of the composition in context."
     },
     {
+      "type": "chapter",
       "key": "connectie",
       "title": "Connection",
       "content": "The app is controlled from a central server.\n\nTo connect to it, you will need to log in to the correct local network. Once the connection succeeds, you will see it in the icon in the top-right corner.\n\nConnecting to a local network also means you will not have internet access, so you should receive fewer distracting messages.\n\nIt is best to set your phone to 'Do Not Disturb' as well (just be careful not to mute your volume), so you definitely will not receive notifications or messages."
     },
     {
+      "type": "chapter",
       "key": "einde_tutorial",
       "title": "End of Tutorial",
       "content": "As soon as the performance begins, the tutorial, the information icon, and the tabs at the bottom will disappear. The app will then clearly indicate when you may need to do something.\n\nClick the 'Stop Tutorial' button at the bottom or the information icon in the top-left corner to close the tutorial. You can always reopen it until the performance begins by clicking that icon."

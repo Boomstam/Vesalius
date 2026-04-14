@@ -102,8 +102,6 @@ public class LanguageManager : MonoBehaviour
         }
 
         languageButtonLabel.text = (CurrentLanguage == AppLanguage.English) ? "EN" : "NL";
-        
-        Debug.Log("languageButtonLabel.text now: "  + languageButtonLabel.text);
     }
 
     private static AppLanguage FromCode(string languageCode)
