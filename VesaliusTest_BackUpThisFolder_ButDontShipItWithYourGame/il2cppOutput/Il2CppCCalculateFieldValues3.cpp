@@ -7798,6 +7798,7 @@ struct TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF  : public MonoB
 	TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* ___tabManagement;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___infoToggleButton;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___quitTutorialButton;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tutorialActiveLabel;
 	ChapterAnimationEntryU5BU5D_tF94B519721639767A328485D0EE23738EE19BABC* ___chapterAnimations;
 	bool ___TutorialActive;
 	int32_t ____previousTab;
@@ -10109,9 +10110,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9667[10] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9668[3] = 
 {
 	static_cast<int32_t>(offsetof(ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E, ___Chapter)),static_cast<int32_t>(offsetof(ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E, ___TextAnimators)),static_cast<int32_t>(offsetof(ChapterAnimationEntry_t3CA7A5CEFE49B9554F9AA983F1BF522B2D38848E, ___ImageAnimators)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9669[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9669[10] = 
 {
-	static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___infoManager)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___tabManagement)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___infoToggleButton)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___quitTutorialButton)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___chapterAnimations)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___TutorialActive)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ____previousTab)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ____pendingUnlock)),0,};
+	static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___infoManager)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___tabManagement)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___infoToggleButton)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___quitTutorialButton)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___tutorialActiveLabel)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___chapterAnimations)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ___TutorialActive)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ____previousTab)),static_cast<int32_t>(offsetof(TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF, ____pendingUnlock)),0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9670[6] = 
 {
 	static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CelapsedU3E5__1)),static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CtU3E5__2)),static_cast<int32_t>(offsetof(U3CAnimateColorU3Ed__9_tF160A82B386E265ECECA33B7E063B76597332114, ___U3CtU3E5__3)),};
