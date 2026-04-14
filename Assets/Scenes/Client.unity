@@ -642,6 +642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198929956}
+  - component: {fileID: 198929959}
   - component: {fileID: 198929958}
   - component: {fileID: 198929957}
   m_Layer: 0
@@ -667,7 +668,7 @@ RectTransform:
   m_Father: {fileID: 263015458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.896, y: 0.94356096}
-  m_AnchorMax: {x: 0.9907407, y: 1}
+  m_AnchorMax: {x: 0.9907407, y: 0.9930552}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -684,14 +685,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.87058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.87058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 339b5ec1636a24e479e5b6dbf8b0e0fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db0131c9144bc52469dd0f98be7cd369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -709,6 +710,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198929955}
   m_CullTransparentMesh: 1
+--- !u!114 &198929959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198929955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8a483617d0d334ab84883e6bb3af24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageColorAnimator
+  targetColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 0.87058824}
+  duration: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &263015457
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +933,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: -2
+  m_Spacing: -1
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1993,19 +2032,56 @@ MonoBehaviour:
     content: "Bij deze tab kan je al eens wat experimenteren met het bedienen van
       de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon
       zullen komen en zo een onderdeel vormen van het muzikale geheel.\n\nHet principe
-      is dat je via 2 sliders de klank kan be\xEFnvloeden. Probeer zeker eens uit!\n\nTijdens
-      de voorstelling is het de bedoeling dat je volume van je gsm op het maximum
-      zet."
+      is dat je via 2 sliders de klank kan be\xEFnvloeden. Speel er mee zoveel je
+      wil, probeer zeker eens uit!\n\nTijdens de voorstelling is het de bedoeling
+      dat je het volume van je gsm op maximum zet."
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Participatie
+    content: 'Op een aantal momenten tijdens de voorstelling krijgt een groep mensen
+      de kans om naar voor te komen, willekeurig gekozen.
+
+
+      Daar worden deze
+      dan duidelijk gemaakt wat op dat moment de bedoeling is. Het gaat telkens over
+      heel eenvoudige handelingen.'
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Effecten
+    content: 'Op een aantal momenten zal je gsm iets gaan doen, bijvoorbeeld visueel.
+
+
+      Als
+      je geen sliders ziet om klank te manipuleren of geen boodschap krijgt om naar
+      voor te gaan, hoef je niet met de app te interageren maar draag je automatisch
+      bij tot de atmosfeer van de muziek. '
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Uitleg
+    content: 'Wanneer er even niets met de app gebeurd, zal er wat uitleg getoond
+      worden over het specifieke orgaan dat op dat moment aan bod is in het stuk.
+
+
+      Bekijk
+      deze gerust even wanneer je daar zin hebt, dit kan helpen het verhaal van de
+      compositie te kaderen. '
+    backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
+  - title: Connectie
+    content: "De app wordt aangestuurd vanop een centrale server. \n\nOm hiermee
+      te connecteren zal je op het juiste lokale netwerk moeten inloggen. Als de
+      connectie gelukt is zal je dat zien aan het icoontje rechtsboven.\n\nDe connectie
+      met een lokaal netwerk zorgt er meteen voor dat je geen internet en dus ook
+      al wat minder storende berichten krijgt.\n\nJe kan verder best je gsm op 'Niet
+      Storen' zetten (let op, zet je volume niet af), dan krijg je zeker geen meldingen
+      of berichten."
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
   - title: Einde tutorial
     content: 'Van zodra de voorstelling begint, zullen de tutorial, het informatie-icoon
       en ook de tabs onderaan verdwijnen. Dan zal de app duidelijk aangeven wanneer
-      je iets moet doen.
+      je eventueel iets moet doen.
 
 
-      Klik op de knop ''Quit Tutorial'' onderaan of op
-      het informatie-icoon linksboven om de tutorial af te sluiten. Je kan hem ook
-      steeds terug openen tot de voorstelling begint, door op dat icoontje te klikken.'
+      Klik op de knop ''Stop Tutorial'' onderaan
+      of op het informatie-icoon linksboven om de tutorial af te sluiten. Je kan
+      hem ook steeds terug openen tot de voorstelling begint, door op dat icoontje
+      te klikken.'
     backgroundImage: {fileID: 21300000, guid: d8f4e78290ec9c84faab619b21ced15e, type: 3}
 --- !u!114 &606116905
 MonoBehaviour:
@@ -2042,6 +2118,11 @@ MonoBehaviour:
     TextAnimators: []
     ImageAnimators:
     - {fileID: 573791536}
+  - Chapter: 8
+    TextAnimators: []
+    ImageAnimators:
+    - {fileID: 198929959}
+    - {fileID: 1925828847}
   TutorialActive: 0
 --- !u!1 &726349805
 GameObject:
@@ -2384,7 +2465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT TUTORIAL
+  m_text: STOP TUTORIAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 521740149602ad244ada9e2325a2c15e, type: 2}
   m_sharedMaterial: {fileID: 8643093592616615153, guid: 521740149602ad244ada9e2325a2c15e, type: 2}
@@ -4817,6 +4898,7 @@ GameObject:
   - component: {fileID: 1925828844}
   - component: {fileID: 1925828846}
   - component: {fileID: 1925828845}
+  - component: {fileID: 1925828847}
   m_Layer: 0
   m_Name: Not Connected Overlay Image
   m_TagString: Untagged
@@ -4840,8 +4922,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -92}
+  m_AnchoredPosition: {x: 3.3409004, y: -0.09730148}
+  m_SizeDelta: {x: 4.5872, y: -74.1907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925828845
 MonoBehaviour:
@@ -4856,7 +4938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7490196, g: 0.0627451, b: 0.0627451, a: 0.87058824}
+  m_Color: {r: 0.7490196, g: 0.0627451, b: 0.0627451, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4881,6 +4963,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925828843}
   m_CullTransparentMesh: 1
+--- !u!114 &1925828847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925828843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8a483617d0d334ab84883e6bb3af24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageColorAnimator
+  targetColor: {r: 0.7490196, g: 0.0627451, b: 0.0627451, a: 0.3137255}
+  duration: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1974276272
 GameObject:
   m_ObjectHideFlags: 0

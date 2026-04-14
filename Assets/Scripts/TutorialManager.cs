@@ -49,8 +49,6 @@ public class TutorialManager : MonoBehaviour
     
     private void ToggleTutorial()
     {
-        Debug.Log("ToggleTutorial, TutorialActive : " + TutorialActive);
-        
         if (TutorialActive)
             HideTutorial();
         else
@@ -59,8 +57,6 @@ public class TutorialManager : MonoBehaviour
 
     public void ShowTutorial()
     {
-        Debug.Log("ShowTutorial");
-
         if (tabManagement.CurrentTab != TutorialTabIndex)
             _previousTab = tabManagement.CurrentTab;
 
@@ -79,8 +75,6 @@ public class TutorialManager : MonoBehaviour
 
     private void HideTutorial()
     {
-        Debug.Log("HideTutorial");
-        
         StopAnimatorsForChapter(infoManager.CurrentIndex);
         TutorialActive = false;
 
@@ -92,8 +86,6 @@ public class TutorialManager : MonoBehaviour
 
     public void OnChapterChanged(int index)
     {
-        Debug.Log("OnChapterChanged " + index);
-        
         StopAllAnimators();
         StartAnimatorsForChapter(index);
 

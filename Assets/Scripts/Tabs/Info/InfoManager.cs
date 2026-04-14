@@ -56,8 +56,6 @@ public class InfoManager : MonoBehaviour
 
     public void GoToChapter(int index)
     {
-        Debug.Log("GoToChapter "  + index);
-        
         index = Mathf.Clamp(index, 0, chapters.Length - 1);
         _currentIndex = index;
         DisplayChapter(_currentIndex);

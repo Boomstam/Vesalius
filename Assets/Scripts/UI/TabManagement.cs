@@ -85,8 +85,6 @@ public class TabManagement : MonoBehaviour
 
     public void ShowTab(int index)
     {
-        Debug.Log("ShowTab " + index);
-        
         currentTab = index;
         
         for (int i = 0; i < tabs.Length; i++)

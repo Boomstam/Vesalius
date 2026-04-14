@@ -26,8 +26,6 @@ public class ImageColorAnimator : MonoBehaviour
 
     public void StartAnimation()
     {
-        Debug.Log("StartAnimation on "  + gameObject.name);
-        
         if (_activeCoroutine != null)
             StopCoroutine(_activeCoroutine);
 
@@ -35,9 +33,7 @@ public class ImageColorAnimator : MonoBehaviour
     }
 
     public void StopAnimation()
-    {        
-        Debug.Log("StopAnimation on "  + gameObject.name);
-
+    {
         if (_activeCoroutine != null)
         {
             StopCoroutine(_activeCoroutine);
