@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button infoToggleButton;
     [SerializeField] private Button quitTutorialButton;
+    [SerializeField] private GameObject tutorialActiveLabel;
 
     [Header("Chapter Animations")]
     [SerializeField] private ChapterAnimationEntry[] chapterAnimations;
@@ -67,6 +68,7 @@ public class TutorialManager : MonoBehaviour
         infoManager.GoToChapter(0);
 
         quitTutorialButton.gameObject.SetActive(false);
+        tutorialActiveLabel.SetActive(true);
 
         tabManagement.LockTabZero();
         tabManagement.ShowTab(TutorialTabIndex);
@@ -90,8 +92,9 @@ public class TutorialManager : MonoBehaviour
         StartAnimatorsForChapter(index);
 
         bool isLastChapter = index == infoManager.ChapterCount - 1;
+        
         quitTutorialButton.gameObject.SetActive(isLastChapter);
-
+        tutorialActiveLabel.SetActive(!isLastChapter);
     }
 
     private ChapterAnimationEntry FindEntry(int chapterIndex)
