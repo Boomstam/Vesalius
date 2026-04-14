@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -149,10 +150,7 @@ public class InfoManager : MonoBehaviour
         chapters = CloneChapters(_defaultChapters);
 
         string resourcePath = ResolveLocalizedResourcePath();
-        if (string.IsNullOrWhiteSpace(resourcePath))
-        {
-            return;
-        }
+        if (string.IsNullOrWhiteSpace(resourcePath)) return;
 
         TextAsset jsonAsset = Resources.Load<TextAsset>(resourcePath);
         if (jsonAsset == null)
@@ -168,56 +166,35 @@ public class InfoManager : MonoBehaviour
             return;
         }
 
-        if (chapters == null || chapters.Length == 0)
-        {
-            Debug.LogWarning($"InfoManager on '{gameObject.name}' has no serialized chapters to merge JSON text into.");
-            return;
-        }
-
-        // Walk entries, collecting only chapter-type entries to merge onto serialized chapters.
+        // Build full slot list from JSON: chapters get merged text, images become blank placeholders.
+        var result = new List<ChapterData>();
         int chapterIndex = 0;
+
         foreach (LocalizedEntry entry in localizedData.entries)
         {
-            if (entry == null)
+            if (entry == null) continue;
+
+            if (string.Equals(entry.type, "chapter", StringComparison.OrdinalIgnoreCase))
             {
-                continue;
-            }
+                ChapterData chapter = chapterIndex < chapters.Length
+                    ? chapters[chapterIndex]
+                    : new ChapterData();
 
-            if (!string.Equals(entry.type, "chapter", StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrWhiteSpace(entry.title))   chapter.title   = entry.title;
+                if (!string.IsNullOrWhiteSpace(entry.content)) chapter.content = entry.content;
+
+                result.Add(chapter);
+                chapterIndex++;
+            }
+            else if (string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
             {
-                continue;
+                // Blank placeholder — title will be set by DisplayChapter via the image entry's title,
+                // but we still need a slot so indices stay in sync with ContentImageManager.
+                result.Add(new ChapterData { title = entry.title ?? string.Empty });
             }
-
-            if (chapterIndex >= chapters.Length)
-            {
-                Debug.LogWarning(
-                    $"InfoManager on '{gameObject.name}': JSON has more chapter entries than serialized chapters. " +
-                    $"Extra entries are ignored.");
-                break;
-            }
-
-            ChapterData chapter = chapters[chapterIndex];
-
-            if (!string.IsNullOrWhiteSpace(entry.title))
-            {
-                chapter.title = entry.title;
-            }
-
-            if (!string.IsNullOrWhiteSpace(entry.content))
-            {
-                chapter.content = entry.content;
-            }
-
-            chapters[chapterIndex] = chapter;
-            chapterIndex++;
         }
 
-        if (chapterIndex < chapters.Length)
-        {
-            Debug.LogWarning(
-                $"InfoManager on '{gameObject.name}': JSON has fewer chapter entries ({chapterIndex}) than " +
-                $"serialized chapters ({chapters.Length}). Remaining chapters keep their serialized text.");
-        }
+        chapters = result.ToArray();
     }
 
     private void LoadChapterTextForCurrentLanguage()

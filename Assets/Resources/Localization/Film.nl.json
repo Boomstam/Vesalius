@@ -16,11 +16,6 @@
       "content": "Tussen 1533 en 1536 studeerde hij in Parijs bij Jacques Dubois. Gedreven om zijn anatomische kennis te verdiepen, groef hij in het geheim lichamen op uit het Cimetière des Innocents.\n\nOnder invloed van de geschriften van al-Razi (Rhazes) verscheen zijn eerste publicatie in 1537 als een parafrase van het negende boek van al-Razi's werk. Dat markeerde een beslissende breuk met het galenische dogma ten gunste van directe observatie."
     },
     {
-      "type": "image",
-      "key": "TEST_IMAGE_FILM",
-      "title": "Vesalius in Parijs"
-    },
-    {
       "type": "chapter",
       "key": "the_glory_of_venice_and_charles_v",
       "title": "De glorie van Venice en Charles V",
@@ -31,6 +26,11 @@
       "key": "the_inquisition_and_the_end_in_zante",
       "title": "De Inquisitie en het einde in Zante",
       "content": "Hoewel hij beschermd werd door koning Filips II, lokten zijn dissecties kritiek uit vanuit de Kerk en van traditionele artsen.\n\nNadat hij in Spanje voor de inquisitie werd beschuldigd, vertrok hij in 1564 naar Jeruzalem. Op de terugreis stierf hij, uitgeput en ziek, in oktober 1564 op het Griekse eiland Zante (Zakynthos)."
+    },
+    {
+      "type": "image",
+      "key": "TEST_IMAGE_FILM",
+      "title": "HUMANI CORPORIS OSSIUM"
     }
   ]
 }

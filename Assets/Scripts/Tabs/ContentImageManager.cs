@@ -85,10 +85,7 @@ public class ContentImageManager : MonoBehaviour
         _chapterImageMap.Clear();
 
         string resourcePath = ResolveLocalizedResourcePath();
-        if (string.IsNullOrWhiteSpace(resourcePath))
-        {
-            return;
-        }
+        if (string.IsNullOrWhiteSpace(resourcePath)) return;
 
         TextAsset jsonAsset = Resources.Load<TextAsset>(resourcePath);
         if (jsonAsset == null)
@@ -98,60 +95,38 @@ public class ContentImageManager : MonoBehaviour
         }
 
         LocalizedEntryCollection data = JsonUtility.FromJson<LocalizedEntryCollection>(jsonAsset.text);
-        if (data == null || data.entries == null || data.entries.Length == 0)
-        {
-            return;
-        }
+        if (data == null || data.entries == null || data.entries.Length == 0) return;
 
-        int chapterIndex = -1;
+        int slotIndex = 0;
 
         foreach (LocalizedEntry entry in data.entries)
         {
-            if (entry == null)
-            {
-                continue;
-            }
+            if (entry == null) continue;
 
             if (string.Equals(entry.type, "chapter", StringComparison.OrdinalIgnoreCase))
             {
-                chapterIndex++;
+                slotIndex++;
                 continue;
             }
 
-            if (!string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
             {
-                continue;
-            }
+                Sprite sprite = FindSprite(entry.key);
+                if (sprite == null)
+                {
+                    throw new Exception(
+                        $"ContentImageManager on '{gameObject.name}': No sprite asset found with name '{entry.key}'. " +
+                        $"Add it to the imageAssets array in the Inspector.");
+                }
 
-            if (chapterIndex < 0)
-            {
-                Debug.LogWarning(
-                    $"ContentImageManager on '{gameObject.name}': Image entry with key '{entry.key}' " +
-                    $"appears before any chapter entry in '{resourcePath}' and will be ignored.");
-                continue;
-            }
+                _chapterImageMap[slotIndex] = new ImageEntry
+                {
+                    sprite = sprite,
+                    title  = entry.title ?? string.Empty
+                };
 
-            if (_chapterImageMap.ContainsKey(chapterIndex))
-            {
-                throw new Exception(
-                    $"ContentImageManager on '{gameObject.name}': Two image entries map to the same chapter index " +
-                    $"{chapterIndex} in '{resourcePath}'. Fix the JSON entry order so no two image entries are " +
-                    $"adjacent without a chapter entry between them.");
+                slotIndex++;
             }
-
-            Sprite sprite = FindSprite(entry.key);
-            if (sprite == null)
-            {
-                throw new Exception(
-                    $"ContentImageManager on '{gameObject.name}': No sprite asset found with name '{entry.key}'. " +
-                    $"Add it to the imageAssets array in the Inspector.");
-            }
-
-            _chapterImageMap[chapterIndex] = new ImageEntry
-            {
-                sprite = sprite,
-                title  = entry.title ?? string.Empty
-            };
         }
     }
 
