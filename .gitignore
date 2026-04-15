@@ -1,4 +1,4 @@
-﻿Library
+Library
 Temp
 Logs
 .vs
@@ -6,3 +6,4 @@ Logs
 .vsconfig
 .utmp
 VesaliusTest.apk
+.vscode
