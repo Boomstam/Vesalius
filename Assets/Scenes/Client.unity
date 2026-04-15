@@ -954,6 +954,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948cb2b714ae1594d857b7b29546d9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TabManagement
+  tabInfoManagers:
+  - {fileID: 606116904}
+  - {fileID: 4265571342435792631}
+  - {fileID: 738763783}
+  - {fileID: 0}
   tabs:
   - button: {fileID: 1984027640}
     panel: {fileID: 606116902}
@@ -2999,7 +3004,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.7
+  m_fontSize: 52.35
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1

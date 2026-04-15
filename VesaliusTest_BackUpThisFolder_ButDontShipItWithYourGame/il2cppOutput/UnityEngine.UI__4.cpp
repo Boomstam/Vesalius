@@ -1535,8 +1535,8 @@ struct List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3_StaticFields
 struct U3CPrivateImplementationDetailsU3E_t3A51899FBAA581553000230A6A0F92898553245F_StaticFields
 {
 	__StaticArrayInitTypeSizeU3D12_tE6E9A5118C80D71EA1E9325D404FAB06593F00C3 ___1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB;
-	__StaticArrayInitTypeSizeU3D5639_tE606AD466DEF7A7C4093744AC1D6AD7666027CE0 ___C1CBBE080DE2B9351B3BCDB305A0FD9051C35B55C4DC2746CDFCE336A68AF82C;
-	__StaticArrayInitTypeSizeU3D8348_t46198045B697732313A28585B397764D6FB136D1 ___E60333BC1EF31A9496C97CBC3049040832C9BC73CCF2B35911CA81C24DBFACF8;
+	__StaticArrayInitTypeSizeU3D8348_t46198045B697732313A28585B397764D6FB136D1 ___925E76DA982B43A9C123B98E29DFBEB61E78854E2B0B55C4BD57B691C7EFB5B7;
+	__StaticArrayInitTypeSizeU3D5639_tE606AD466DEF7A7C4093744AC1D6AD7666027CE0 ___B069AE15948DE92E612F6388CAD6BAF5E014C7326CB366D3AF2B92A2C5B6ABC7;
 };
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields
 {
@@ -1668,40 +1668,6 @@ struct VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_StaticFields
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-struct BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799  : public RuntimeArray
-{
-	ALIGN_FIELD (8) BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* m_Items[1];
-
-	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-};
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
 {
 	ALIGN_FIELD (8) String_t* m_Items[1];
@@ -1731,6 +1697,40 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 		return m_Items + index;
 	}
 	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799  : public RuntimeArray
+{
+	ALIGN_FIELD (8) BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* m_Items[1];
+
+	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
@@ -2215,6 +2215,18 @@ inline bool Enumerator_MoveNext_m69F94D82492DD2778B91F594B491223C02265150 (Enume
 {
 	return ((  bool (*) (Enumerator_tAC6F215019B1EAEAEE81308CEBA6052DECD5EE7E*, const RuntimeMethod*))Enumerator_MoveNext_m4DC143BC57F14EDD85AB13B6D6F3B5D0E319B30E_gshared)(__this, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099C9FA171CE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_Clear_m0E9DA70AC69CF143CEA8428AFC5BA552F99643AE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972 (float* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mB47B29ECB21FA3A4ACEABEFA18077A5A6BBCCB27_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_values, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RaycastResult_ToString_m0267000494B09783ABD507B9329ADB01FBBC5428 (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
 inline bool List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C (List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* __this, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_item, const RuntimeMethod* method)
 {
 	return ((  bool (*) (List_1_t02E640552264E3DEAE676267B620815D33BCD0DF*, BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*, const RuntimeMethod*))List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared)(__this, ___0_item, method);
@@ -2236,8 +2248,6 @@ inline BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* Component_
 	return ((  BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentsInParent_TisRuntimeObject_m161F08219ECBE099E346F616990662F0117D4C8E_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_values, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnEnable_m8989ABF5C038905A68E5536BED2E6FFAF8767FFC (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_AddRaycaster_mD2EE52F55FBDB3BEAAF583C4445D4D16B09B6350 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_RemoveRaycasters_m0800E0ACE007AD43B62D10C1029EC85E7DE28999 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) ;
@@ -2257,7 +2267,6 @@ inline Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* GameObject_GetCompone
 {
 	return ((  Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RaycastHit2D_get_distance_mD0FE1482E2768CF587AFB65488459697EAB64613 (RaycastHit2D_t3EAAA06E6603C6BC61AC1291DD881C5C1E23BDFA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 RaycastHit2D_get_point_mB35E988E9E04328EFE926228A18334326721A36B (RaycastHit2D_t3EAAA06E6603C6BC61AC1291DD881C5C1E23BDFA* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) ;
@@ -2296,7 +2305,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Camera_get_cullingMask_m6F5AFF8FB522F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D (LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___0_mask, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEventData_get_displayIndex_m8B2088561EA850F1CAD124797F0F6E3756F584FA_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 MultipleDisplayUtilities_RelativeMouseAtScaled_m80E65BE9255F7D65D9341FDFDB0CA11470703E71 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_position, int32_t ___1_displayIndex, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Camera_get_targetDisplay_m204A169C94EEABDB491FA5A77CC684146B10DF80 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Camera_get_pixelRect_m5F40F5C324EB252261F66962411EE08CC4BE39E7 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* __this, const RuntimeMethod* method) ;
@@ -2316,22 +2324,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5 (RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Single_CompareTo_m06F7868162EB392D3E99103D1A0BD27463C9E66F (float* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastHitComparer__ctor_mAB0536EE515BF2BD1B29BE3B39E8BA9E9CFE97C3 (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099C9FA171CE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_Clear_m0E9DA70AC69CF143CEA8428AFC5BA552F99643AE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972 (float* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mB47B29ECB21FA3A4ACEABEFA18077A5A6BBCCB27_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RaycastResult_ToString_m0267000494B09783ABD507B9329ADB01FBBC5428 (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_isActiveAndEnabled_mEB4ECCE9761A7016BC619557CEFEA1A30D3BF28A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_mA8DA39B6324392BB93203A4D4CB85AF87231CB62_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mC10F098442E56919947154402A77EDE28DC9B7BE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_mA8DA39B6324392BB93203A4D4CB85AF87231CB62_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mC10F098442E56919947154402A77EDE28DC9B7BE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) ;
 inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
@@ -2354,12 +2354,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67540
+// Method Definition Index: 67855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* ButtonState_get_eventData_m4767730784143F1DCE06B6138658A31CBC5E155F (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* __this, const RuntimeMethod* method) 
 {
 	MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:157>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_0 = __this->___m_EventData;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2367,29 +2367,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MouseButtonEventData_t0761D63D3A2B13090597C22
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:157>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67541
+// Method Definition Index: 67856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonState_set_eventData_mA9D59CB9A1565A7D99569E87D88B90738FEF4E1F (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* __this, MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:158>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_0 = ___0_value;
 		__this->___m_EventData = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_EventData), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:158>
 		return;
 	}
 }
-// Method Definition Index: 67542
+// Method Definition Index: 67857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ButtonState_get_button_m2210A465432D0F990F2380B6357AD2FBA4A7540D (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:163>
 		int32_t L_0 = __this->___m_Button;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2397,27 +2397,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ButtonState_get_button_m2210A465432D0
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:163>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67543
+// Method Definition Index: 67858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonState_set_button_mFAE3F16E2B027BD6B854F18E7C7C2D6CDAB023DE (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:164>
 		int32_t L_0 = ___0_value;
 		__this->___m_Button = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:164>
 		return;
 	}
 }
-// Method Definition Index: 67544
+// Method Definition Index: 67859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonState__ctor_m4D7C25C0E1FC598646FFBD436B9A2042DB41AC9E (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:153>
 		__this->___m_Button = 0;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -2431,7 +2431,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonState__ctor_m4D7C25C0E1FC598646FFB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67545
+// Method Definition Index: 67860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseState_AnyPressesThisFrame_m4887FF61D58D641496B95C83710C8A4E841970F3 (MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2447,20 +2447,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseState_AnyPressesThisFrame_m4887FF61
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:176>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_0 = __this->___m_TrackedButtons;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_inline(L_0, List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
 		V_1 = 0;
 		goto IL_0035;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:179>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:179>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_2 = __this->___m_TrackedButtons;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -2480,21 +2480,21 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:180>
 		V_3 = (bool)1;
 		goto IL_0043;
 	}
 
 IL_0030:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:177>
 		int32_t L_9 = V_1;
 		int32_t L_10 = V_0;
 		V_4 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
@@ -2505,19 +2505,19 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:182>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:182>
 		V_3 = (bool)0;
 		goto IL_0043;
 	}
 
 IL_0043:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:183>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:183>
 		bool L_12 = V_3;
 		return L_12;
 	}
 }
-// Method Definition Index: 67546
+// Method Definition Index: 67861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseState_AnyReleasesThisFrame_m4FBA37A12735418AD0970F11BC44850517B05E93 (MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2533,20 +2533,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseState_AnyReleasesThisFrame_m4FBA37A
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:187>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_0 = __this->___m_TrackedButtons;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_inline(L_0, List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
 		V_1 = 0;
 		goto IL_0035;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:190>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:190>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_2 = __this->___m_TrackedButtons;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -2566,21 +2566,21 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:191>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:191>
 		V_3 = (bool)1;
 		goto IL_0043;
 	}
 
 IL_0030:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:188>
 		int32_t L_9 = V_1;
 		int32_t L_10 = V_0;
 		V_4 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
@@ -2591,19 +2591,19 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:193>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:193>
 		V_3 = (bool)0;
 		goto IL_0043;
 	}
 
 IL_0043:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:194>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:194>
 		bool L_12 = V_3;
 		return L_12;
 	}
 }
-// Method Definition Index: 67547
+// Method Definition Index: 67862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* MouseState_GetButtonState_mD25E7D214B0499DBBE3B3E532CD7085C1A021E51 (MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* __this, int32_t ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2624,22 +2624,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8
 	bool V_5 = false;
 	ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* V_6 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:198>
 		V_0 = (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503*)NULL;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:199>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:199>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_0 = __this->___m_TrackedButtons;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_inline(L_0, List_1_get_Count_m233342468962DDEB9AF56781CA53376E97591CA4_RuntimeMethod_var);
 		V_1 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
 		V_2 = 0;
 		goto IL_0041;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:202>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:202>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_2 = __this->___m_TrackedButtons;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
@@ -2657,27 +2657,27 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:204>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_8 = __this->___m_TrackedButtons;
 		int32_t L_9 = V_2;
 		NullCheck(L_8);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_10;
 		L_10 = List_1_get_Item_m8ABD0D7036E193AF7F9275ABE1630C49E5002A24(L_8, L_9, List_1_get_Item_m8ABD0D7036E193AF7F9275ABE1630C49E5002A24_RuntimeMethod_var);
 		V_0 = L_10;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:205>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:205>
 		goto IL_004b;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
 		int32_t L_11 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:200>
 		int32_t L_12 = V_2;
 		int32_t L_13 = V_1;
 		V_4 = (bool)((((int32_t)L_12) < ((int32_t)L_13))? 1 : 0);
@@ -2690,7 +2690,7 @@ IL_0041:
 
 IL_004b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:209>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:209>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_15 = V_0;
 		V_5 = (bool)((((RuntimeObject*)(ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503*)L_15) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_16 = V_5;
@@ -2700,7 +2700,7 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:211>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:211>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_17 = (ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503*)il2cpp_codegen_object_new(ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503_il2cpp_TypeInfo_var);
 		ButtonState__ctor_m4D7C25C0E1FC598646FFBD436B9A2042DB41AC9E(L_17, NULL);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_18 = L_17;
@@ -2713,7 +2713,7 @@ IL_004b:
 		NullCheck(L_20);
 		ButtonState_set_eventData_mA9D59CB9A1565A7D99569E87D88B90738FEF4E1F(L_20, L_21, NULL);
 		V_0 = L_20;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:212>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:212>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_22 = __this->___m_TrackedButtons;
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_23 = V_0;
 		NullCheck(L_22);
@@ -2722,7 +2722,7 @@ IL_004b:
 
 IL_007e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:214>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:214>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_24 = V_0;
 		V_6 = L_24;
 		goto IL_0083;
@@ -2730,22 +2730,22 @@ IL_007e:
 
 IL_0083:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:215>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_25 = V_6;
 		return L_25;
 	}
 }
-// Method Definition Index: 67548
+// Method Definition Index: 67863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState_SetButtonState_m72DA468C8D10E76923FA5F993BBDBCFFF57E4326 (MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* __this, int32_t ___0_button, int32_t ___1_stateForMouseButton, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___2_data, const RuntimeMethod* method) 
 {
 	ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:219>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:219>
 		int32_t L_0 = ___0_button;
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_1;
 		L_1 = MouseState_GetButtonState_mD25E7D214B0499DBBE3B3E532CD7085C1A021E51(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:220>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:220>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_2 = V_0;
 		NullCheck(L_2);
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_3;
@@ -2753,7 +2753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState_SetButtonState_m72DA468C8D10E
 		int32_t L_4 = ___1_stateForMouseButton;
 		NullCheck(L_3);
 		L_3->___buttonState = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:221>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:221>
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_5 = V_0;
 		NullCheck(L_5);
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_6;
@@ -2762,11 +2762,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState_SetButtonState_m72DA468C8D10E
 		NullCheck(L_6);
 		L_6->___buttonData = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___buttonData), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:222>
 		return;
 	}
 }
-// Method Definition Index: 67549
+// Method Definition Index: 67864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState__ctor_mF4A8041A86E50D91202770E73CE0DAF12BB207D9 (MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2777,7 +2777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState__ctor_mF4A8041A86E50D91202770
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:172>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:172>
 		List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3* L_0 = (List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3*)il2cpp_codegen_object_new(List_1_t6D515F3BEDA0E1BF16E735CE960F740AB8ACBDD3_il2cpp_TypeInfo_var);
 		List_1__ctor_m4E26266DF028F44B765A8CB0C5DA32AA2C04B209(L_0, List_1__ctor_m4E26266DF028F44B765A8CB0C5DA32AA2C04B209_RuntimeMethod_var);
 		__this->___m_TrackedButtons = L_0;
@@ -2794,13 +2794,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseState__ctor_mF4A8041A86E50D91202770
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67550
+// Method Definition Index: 67865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseButtonEventData_PressedThisFrame_mEE5DC95537AAEB346C57DCA85917E0701A44388D (MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:245>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:245>
 		int32_t L_0 = __this->___buttonState;
 		if (!L_0)
 		{
@@ -2826,18 +2826,18 @@ IL_0015:
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:246>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 67551
+// Method Definition Index: 67866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MouseButtonEventData_ReleasedThisFrame_m5AD4F06D1CA6E0ACD6E84EEFAD4FB112098AFD51 (MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:253>
 		int32_t L_0 = __this->___buttonState;
 		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
@@ -2863,12 +2863,12 @@ IL_0016:
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:254>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/PointerInputModule.cs:254>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 67552
+// Method Definition Index: 67867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseButtonEventData__ctor_m9EDAC7F39F1D3CFBB93403DDE620A5147C4469A2 (MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2884,7 +2884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MouseButtonEventData__ctor_m9EDAC7F39F1D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67553
+// Method Definition Index: 67868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule__ctor_m77BAC1DB71B81FFCD2791DE706BD4FE239F47C27 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2899,58 +2899,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule__ctor_m77BAC1DB71B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:19>
 		__this->___m_ConsecutiveMoveCount = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:26>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_0 = (Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493*)il2cpp_codegen_object_new(Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m1D9661C57D08A16BB4A93388888AA1FFAB621320(L_0, Dictionary_2__ctor_m1D9661C57D08A16BB4A93388888AA1FFAB621320_RuntimeMethod_var);
 		__this->___m_InputPointerEvents = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InputPointerEvents), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:48>
 		__this->___m_HorizontalAxis = _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_HorizontalAxis), (void*)_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:54>
 		__this->___m_VerticalAxis = _stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_VerticalAxis), (void*)_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:60>
 		__this->___m_SubmitButton = _stringLiteral190CDBBC7377A308B78E27EF91319FD2DA386895;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SubmitButton), (void*)_stringLiteral190CDBBC7377A308B78E27EF91319FD2DA386895);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:66>
 		__this->___m_CancelButton = _stringLiteral93717CD8FCD45BAB4F15D3BACC989A6A93BA2674;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CancelButton), (void*)_stringLiteral93717CD8FCD45BAB4F15D3BACC989A6A93BA2674);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:69>
 		__this->___m_InputActionsPerSecond = (10.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:72>
 		__this->___m_RepeatDelay = (0.5f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:30>
 		PointerInputModule__ctor_mBF074492478BFC24F87EF2C941D6C11A8ACDAF11(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:32>
 		return;
 	}
 }
-// Method Definition Index: 67554
+// Method Definition Index: 67869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t StandaloneInputModule_get_inputMode_m38D63EDD9DE39E7AFE1821BDE201625C292C66D9 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:44>
 		V_0 = 0;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:44>
 		int32_t L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 67555
+// Method Definition Index: 67870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_get_allowActivationOnMobileDevice_m03E7DC8FCBE7B43A223EADABB454445C91664A1B (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:82>
 		bool L_0 = __this->___m_ForceModuleActive;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2958,28 +2958,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_get_allowActivatio
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:82>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67556
+// Method Definition Index: 67871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_allowActivationOnMobileDevice_mFFFF3E19FBD199ED9BFAEC535E5BD11F5027FF25 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:83>
 		bool L_0 = ___0_value;
 		__this->___m_ForceModuleActive = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:83>
 		return;
 	}
 }
-// Method Definition Index: 67557
+// Method Definition Index: 67872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_get_forceModuleActive_m381A5525E48FD280EB91ECEEEF138E7603C004B8 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:96>
 		bool L_0 = __this->___m_ForceModuleActive;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2987,28 +2987,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_get_forceModuleAct
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:96>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67558
+// Method Definition Index: 67873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_forceModuleActive_m4C3FD8550258266795D24863D8B531F2402500DD (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:97>
 		bool L_0 = ___0_value;
 		__this->___m_ForceModuleActive = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:97>
 		return;
 	}
 }
-// Method Definition Index: 67559
+// Method Definition Index: 67874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float StandaloneInputModule_get_inputActionsPerSecond_m584ABC794A3864BF91EEB27E62ED6E8081DEE0A5 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:105>
 		float L_0 = __this->___m_InputActionsPerSecond;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3016,28 +3016,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float StandaloneInputModule_get_inputActionsP
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:105>
 		float L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67560
+// Method Definition Index: 67875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_inputActionsPerSecond_mF367AFA55FF576533999F2DFB60514D7247228FF (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:106>
 		float L_0 = ___0_value;
 		__this->___m_InputActionsPerSecond = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:106>
 		return;
 	}
 }
-// Method Definition Index: 67561
+// Method Definition Index: 67876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float StandaloneInputModule_get_repeatDelay_mDB85393BD9AA45BF8C5B94F5E3A523F5480D1F6F (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:117>
 		float L_0 = __this->___m_RepeatDelay;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3045,28 +3045,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float StandaloneInputModule_get_repeatDelay_m
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:117>
 		float L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67562
+// Method Definition Index: 67877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_repeatDelay_m236DB6414CFAE01609187B97E955D95A32F0CB40 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:118>
 		float L_0 = ___0_value;
 		__this->___m_RepeatDelay = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:118>
 		return;
 	}
 }
-// Method Definition Index: 67563
+// Method Definition Index: 67878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_horizontalAxis_mDB47CA6F06F26837BBC4853877F69817590161F0 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:126>
 		String_t* L_0 = __this->___m_HorizontalAxis;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3074,29 +3074,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_horizonta
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:126>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67564
+// Method Definition Index: 67879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_horizontalAxis_mF71F2B0B425BD0455AF54F39EEEE43DD80DE27EC (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:127>
 		String_t* L_0 = ___0_value;
 		__this->___m_HorizontalAxis = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_HorizontalAxis), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:127>
 		return;
 	}
 }
-// Method Definition Index: 67565
+// Method Definition Index: 67880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_verticalAxis_m5F00ECDA3B18F48BCBD6F9E7B4AD67A1F56CFAC2 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:135>
 		String_t* L_0 = __this->___m_VerticalAxis;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3104,29 +3104,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_verticalA
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:135>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67566
+// Method Definition Index: 67881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_verticalAxis_mB0FE6DC9517F0ABF0107F72FC04A322FD91C2AC0 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:136>
 		String_t* L_0 = ___0_value;
 		__this->___m_VerticalAxis = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_VerticalAxis), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:136>
 		return;
 	}
 }
-// Method Definition Index: 67567
+// Method Definition Index: 67882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_submitButton_mAF097B352341EB53A42F71052F3469F205243D40 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:144>
 		String_t* L_0 = __this->___m_SubmitButton;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3134,29 +3134,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_submitBut
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:144>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67568
+// Method Definition Index: 67883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_submitButton_m571CB829C6D76AD062BA105D0903F08CEA0BCCC7 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:145>
 		String_t* L_0 = ___0_value;
 		__this->___m_SubmitButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SubmitButton), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:145>
 		return;
 	}
 }
-// Method Definition Index: 67569
+// Method Definition Index: 67884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_cancelButton_mE6F80897FDAA6D931803BF6C3A9E4A45877E5585 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:153>
 		String_t* L_0 = __this->___m_CancelButton;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3164,47 +3164,47 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* StandaloneInputModule_get_cancelBut
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:153>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67570
+// Method Definition Index: 67885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_set_cancelButton_m63A06532F16A21785B3BD5AD3B79509B4441B7EF (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:154>
 		String_t* L_0 = ___0_value;
 		__this->___m_CancelButton = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CancelButton), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:154>
 		return;
 	}
 }
-// Method Definition Index: 67571
+// Method Definition Index: 67886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ShouldIgnoreEventsOnNoFocus_m423AA5752E528E3B32F105EE2B341FCF5E9F8285 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:162>
 		V_0 = (bool)1;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:164>
 		bool L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 67572
+// Method Definition Index: 67887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_UpdateModule_m8B42D289F6AB3EBE6071FB5B904A7449118EAA6B (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:168>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -3237,18 +3237,18 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:170>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:170>
 		StandaloneInputModule_ReleasePointerDrags_mDFB6B6F3F68D0362E8E110A8EBAE88A4C756D283(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:171>
 		goto IL_0042;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:174>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:174>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = __this->___m_MousePosition;
 		__this->___m_LastMousePosition = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:175>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:175>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_5;
 		L_5 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_5);
@@ -3259,11 +3259,11 @@ IL_0025:
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:176>
 		return;
 	}
 }
-// Method Definition Index: 67573
+// Method Definition Index: 67888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ReleasePointerDrags_mDFB6B6F3F68D0362E8E110A8EBAE88A4C756D283 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3303,7 +3303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ReleasePointerDrag
 	memset((&V_9), 0, sizeof(V_9));
 	int32_t G_B15_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:180>
 		il2cpp_codegen_runtime_class_init_inline(CollectionPool_2_t5B361942F59C43867F72F5B0D244C2D537EC0694_il2cpp_TypeInfo_var);
 		PooledObject_1_t9CB3B8254592D2A8A28461F56F28442CBB5BE8DE L_0;
 		L_0 = CollectionPool_2_Get_mAC90788170550C49BE7E07E08DC24C6F4B1F282B((&V_0), CollectionPool_2_Get_mAC90788170550C49BE7E07E08DC24C6F4B1F282B_RuntimeMethod_var);
@@ -3322,7 +3322,7 @@ FINALLY_00d5:
 		try
 		{
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
+				//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
 				Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_1 = __this->___m_InputPointerEvents;
 				NullCheck(L_1);
 				KeyCollection_t358D9D86EA73609D5A330DEAD2AFC492CC3882BA* L_2;
@@ -3350,11 +3350,11 @@ FINALLY_003b_1:
 
 IL_001e_2:
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
 						int32_t L_4;
 						L_4 = Enumerator_get_Current_m67FC0A0C4AE2A21C73D46433CED7F97C2D796513_inline((&V_2), Enumerator_get_Current_m67FC0A0C4AE2A21C73D46433CED7F97C2D796513_RuntimeMethod_var);
 						V_3 = L_4;
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:187>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:187>
 						List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_5 = V_0;
 						int32_t L_6 = V_3;
 						NullCheck(L_5);
@@ -3363,7 +3363,7 @@ IL_001e_2:
 
 IL_0030_2:
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:185>
 						bool L_7;
 						L_7 = Enumerator_MoveNext_m45DBFC9EF25CA884F5E8AB066298A8879255C4EF((&V_2), Enumerator_MoveNext_m45DBFC9EF25CA884F5E8AB066298A8879255C4EF_RuntimeMethod_var);
 						if (L_7)
@@ -3383,7 +3383,7 @@ IL_0030_2:
 
 IL_004a_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
+				//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
 				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_8 = V_0;
 				NullCheck(L_8);
 				Enumerator_t9DBCD072C72E44AB8959D9884EF7F528028F20EC L_9;
@@ -3408,11 +3408,11 @@ FINALLY_00c3_1:
 
 IL_0055_2:
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
 						int32_t L_10;
 						L_10 = Enumerator_get_Current_mB49912FF111A954F2C326BF4FA29A53C1027187B_inline((&V_4), Enumerator_get_Current_mB49912FF111A954F2C326BF4FA29A53C1027187B_RuntimeMethod_var);
 						V_5 = L_10;
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:193>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:193>
 						Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_11 = __this->___m_InputPointerEvents;
 						int32_t L_12 = V_5;
 						NullCheck(L_11);
@@ -3426,13 +3426,13 @@ IL_0055_2:
 						}
 					}
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:194>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:194>
 						goto IL_00b8_2;
 					}
 
 IL_0079_2:
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:196>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:196>
 						PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_15 = V_6;
 						if (!L_15)
 						{
@@ -3476,7 +3476,7 @@ IL_0096_2:
 						}
 					}
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:198>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:198>
 						PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_22 = V_6;
 						PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_23 = V_6;
 						NullCheck(L_23);
@@ -3494,7 +3494,7 @@ IL_00b7_2:
 
 IL_00b8_2:
 					{
-						//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
+						//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:191>
 						bool L_26;
 						L_26 = Enumerator_MoveNext_m39C71A39758E2B4A04F44F20FCEFAF7009D5F312((&V_4), Enumerator_MoveNext_m39C71A39758E2B4A04F44F20FCEFAF7009D5F312_RuntimeMethod_var);
 						if (L_26)
@@ -3525,15 +3525,15 @@ IL_00d2_1:
 
 IL_00e4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:203>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:203>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_27 = __this->___m_InputPointerEvents;
 		NullCheck(L_27);
 		Dictionary_2_Clear_mBB95A511CAA4D6BCF1D6EC54722BCA4DA4B37CF9(L_27, Dictionary_2_Clear_mBB95A511CAA4D6BCF1D6EC54722BCA4DA4B37CF9_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:204>
 		return;
 	}
 }
-// Method Definition Index: 67574
+// Method Definition Index: 67889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ReleaseMouse_mC5C3083C356ACD5CD420A58662D99A6CACC5FAF5 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_pointerEvent, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_currentOverGo, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3558,7 +3558,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ReleaseMouse_mC5C3
 	int32_t G_B8_0 = 0;
 	int32_t G_B13_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:208>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:208>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_pointerEvent;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -3569,12 +3569,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ReleaseMouse_mC5C3
 		L_3 = ExecuteEvents_get_pointerUpHandler_m51B83B4AD7498D6F7A2CBD5F2331E91A37AE4CF2(NULL);
 		bool L_4;
 		L_4 = ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6(L_1, L_2, L_3, ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:210>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:210>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = ___1_currentOverGo;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E(L_5, ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E_RuntimeMethod_var);
 		V_0 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:213>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:213>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = ___0_pointerEvent;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -3612,7 +3612,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:215>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = ___0_pointerEvent;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
@@ -3627,7 +3627,7 @@ IL_0031:
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:217>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:217>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_19 = ___0_pointerEvent;
 		NullCheck(L_19);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20;
@@ -3664,7 +3664,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:219>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:219>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = ___1_currentOverGo;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_26 = ___0_pointerEvent;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -3676,23 +3676,23 @@ IL_0060:
 
 IL_0073:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:222>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_29 = ___0_pointerEvent;
 		NullCheck(L_29);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_29, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:223>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:223>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_30 = ___0_pointerEvent;
 		NullCheck(L_30);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_30, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:224>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:224>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_31 = ___0_pointerEvent;
 		NullCheck(L_31);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_31, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:225>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:225>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_32 = ___0_pointerEvent;
 		NullCheck(L_32);
 		PointerEventData_set_pointerClick_m8FA5D91C9556A722BAE8ADBBB5353C79854D74C0_inline(L_32, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:227>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:227>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_33 = ___0_pointerEvent;
 		NullCheck(L_33);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34;
@@ -3729,7 +3729,7 @@ IL_00aa:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:228>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:228>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_39 = ___0_pointerEvent;
 		NullCheck(L_39);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40;
@@ -3744,15 +3744,15 @@ IL_00aa:
 
 IL_00c0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:230>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:230>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_44 = ___0_pointerEvent;
 		NullCheck(L_44);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_44, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:231>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:231>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_45 = ___0_pointerEvent;
 		NullCheck(L_45);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_45, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:237>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:237>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_46 = ___1_currentOverGo;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_47 = ___0_pointerEvent;
 		NullCheck(L_47);
@@ -3769,10 +3769,10 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:239>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:239>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_51 = ___0_pointerEvent;
 		BaseInputModule_HandlePointerExitAndEnter_m0815F06EAF8F937916E0656D66A69844CB211298(__this, L_51, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:240>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:240>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_52 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53 = ___1_currentOverGo;
 		BaseInputModule_HandlePointerExitAndEnter_m0815F06EAF8F937916E0656D66A69844CB211298(__this, L_52, L_53, NULL);
@@ -3780,7 +3780,7 @@ IL_00c0:
 
 IL_00f6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:243>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:243>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_54 = __this->___m_InputPointerEvents;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_55 = ___0_pointerEvent;
 		NullCheck(L_55);
@@ -3789,11 +3789,11 @@ IL_00f6:
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_57 = ___0_pointerEvent;
 		NullCheck(L_54);
 		Dictionary_2_set_Item_mA3872E971B6B3EE564DCC1B84782ABE176D4877E(L_54, L_56, L_57, Dictionary_2_set_Item_mA3872E971B6B3EE564DCC1B84782ABE176D4877E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:244>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:244>
 		return;
 	}
 }
-// Method Definition Index: 67575
+// Method Definition Index: 67890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ShouldActivateModule_m6E9E205A37636246BFE65CAC33E1EF703A4D99AF (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3803,7 +3803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ShouldActivateModu
 	memset((&V_3), 0, sizeof(V_3));
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:248>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:248>
 		bool L_0;
 		L_0 = BaseInputModule_ShouldActivateModule_m51B70F9097EF7FEB20B62D4D775F7FEA853185A1(__this, NULL);
 		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -3814,17 +3814,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ShouldActivateModu
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:249>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:249>
 		V_2 = (bool)0;
 		goto IL_00d2;
 	}
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:251>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:251>
 		bool L_2 = __this->___m_ForceModuleActive;
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:252>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:252>
 		bool L_3 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_4;
 		L_4 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -3833,7 +3833,7 @@ IL_0015:
 		bool L_6;
 		L_6 = VirtualFuncInvoker1< bool, String_t* >::Invoke(33, L_4, L_5);
 		V_0 = (bool)((int32_t)((int32_t)L_3|(int32_t)L_6));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:253>
 		bool L_7 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_8;
 		L_8 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -3842,7 +3842,7 @@ IL_0015:
 		bool L_10;
 		L_10 = VirtualFuncInvoker1< bool, String_t* >::Invoke(33, L_8, L_9);
 		V_0 = (bool)((int32_t)((int32_t)L_7|(int32_t)L_10));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:254>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:254>
 		bool L_11 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_12;
 		L_12 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -3853,7 +3853,7 @@ IL_0015:
 		bool L_15;
 		L_15 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_14, (0.0f), NULL);
 		V_0 = (bool)((int32_t)((int32_t)L_11|((((int32_t)L_15) == ((int32_t)0))? 1 : 0)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:255>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:255>
 		bool L_16 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_17;
 		L_17 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -3864,7 +3864,7 @@ IL_0015:
 		bool L_20;
 		L_20 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_19, (0.0f), NULL);
 		V_0 = (bool)((int32_t)((int32_t)L_16|((((int32_t)L_20) == ((int32_t)0))? 1 : 0)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:256>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:256>
 		bool L_21 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_22 = __this->___m_MousePosition;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = __this->___m_LastMousePosition;
@@ -3874,7 +3874,7 @@ IL_0015:
 		float L_25;
 		L_25 = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline((&V_3), NULL);
 		V_0 = (bool)((int32_t)((int32_t)L_21|((((float)L_25) > ((float)(0.0f)))? 1 : 0)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:257>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:257>
 		bool L_26 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_27;
 		L_27 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -3882,7 +3882,7 @@ IL_0015:
 		bool L_28;
 		L_28 = VirtualFuncInvoker1< bool, int32_t >::Invoke(23, L_27, 0);
 		V_0 = (bool)((int32_t)((int32_t)L_26|(int32_t)L_28));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:259>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:259>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_29;
 		L_29 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_29);
@@ -3896,13 +3896,13 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:260>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:260>
 		V_0 = (bool)1;
 	}
 
 IL_00ce:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:262>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:262>
 		bool L_32 = V_0;
 		V_2 = L_32;
 		goto IL_00d2;
@@ -3910,12 +3910,12 @@ IL_00ce:
 
 IL_00d2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:263>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:263>
 		bool L_33 = V_2;
 		return L_33;
 	}
 }
-// Method Definition Index: 67576
+// Method Definition Index: 67891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ActivateModule_m1F28B8DB0FC20082694221BE5B1B275E9B7224BB (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3929,7 +3929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ActivateModule_m1F
 	bool V_2 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:270>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:270>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -3962,36 +3962,36 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:271>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:271>
 		goto IL_007c;
 	}
 
 IL_001d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:273>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:273>
 		BaseInputModule_ActivateModule_m2C693E95727E13FDF06D54FA8762A040175AC3BA(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:274>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:274>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_4;
 		L_4 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_4);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5;
 		L_5 = VirtualFuncInvoker0< Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 >::Invoke(26, L_4);
 		__this->___m_MousePosition = L_5;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:275>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:275>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_6;
 		L_6 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_6);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
 		L_7 = VirtualFuncInvoker0< Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 >::Invoke(26, L_6);
 		__this->___m_LastMousePosition = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:277>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:277>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_8;
 		L_8 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
 		L_9 = EventSystem_get_currentSelectedGameObject_mD606FFACF3E72755298A523CBB709535CF08C98A(L_8, NULL);
 		V_0 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:278>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:278>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -4004,7 +4004,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:279>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:279>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_13;
 		L_13 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_13);
@@ -4015,7 +4015,7 @@ IL_001d:
 
 IL_0069:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:281>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:281>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_15;
 		L_15 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_0;
@@ -4027,23 +4027,23 @@ IL_0069:
 
 IL_007c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:282>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:282>
 		return;
 	}
 }
-// Method Definition Index: 67577
+// Method Definition Index: 67892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_DeactivateModule_m064C1EB615C0E0B0EDFC6F6F5079E55270DF1468 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:289>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:289>
 		BaseInputModule_DeactivateModule_mAE698307DADBE4DE8A26BD3DE5F3F7E3D75B385D(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:290>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:290>
 		PointerInputModule_ClearSelection_mC5852667E5B9CA97C2A4CAB3D7C907344511C1D2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:291>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:291>
 		return;
 	}
 }
-// Method Definition Index: 67578
+// Method Definition Index: 67893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_Process_mBD949CC45BBCAB5A0FAF5E24F3BB4C3B22FF3E81 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4055,7 +4055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_Process_mBD949CC45
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:295>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:295>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -4088,17 +4088,17 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:296>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:296>
 		goto IL_007a;
 	}
 
 IL_001d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:298>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:298>
 		bool L_4;
 		L_4 = StandaloneInputModule_SendUpdateEventToSelectedObject_mE1C4AEB5B19378C2BF97DD3EAF4AA9C0EC5E7520(__this, NULL);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:304>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:304>
 		bool L_5;
 		L_5 = StandaloneInputModule_ProcessTouchEvents_m042FC6B13874B1EE6699BBB51F02FE3A435A25F0(__this, NULL);
 		if (L_5)
@@ -4131,13 +4131,13 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:305>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:305>
 		StandaloneInputModule_ProcessMouseEvent_mCE1BA96E47D9A4448614CB9DAF5A406754F655DD(__this, NULL);
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:307>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:307>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_9;
 		L_9 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_9);
@@ -4151,7 +4151,7 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:309>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:309>
 		bool L_12 = V_0;
 		V_4 = (bool)((((int32_t)L_12) == ((int32_t)0))? 1 : 0);
 		bool L_13 = V_4;
@@ -4161,7 +4161,7 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:310>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:310>
 		bool L_14 = V_0;
 		bool L_15;
 		L_15 = StandaloneInputModule_SendMoveEventToSelectedObject_mC71D1E623B1DB82DC4E035277AC5FFA7CD64E981(__this, NULL);
@@ -4170,7 +4170,7 @@ IL_0045:
 
 IL_0068:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:312>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:312>
 		bool L_16 = V_0;
 		V_5 = (bool)((((int32_t)L_16) == ((int32_t)0))? 1 : 0);
 		bool L_17 = V_5;
@@ -4180,7 +4180,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:313>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:313>
 		bool L_18;
 		L_18 = StandaloneInputModule_SendSubmitEventToSelectedObject_m7121ACC09ABA46FF5CDDEAE7B26507BE06A2953F(__this, NULL);
 	}
@@ -4191,11 +4191,11 @@ IL_0079:
 
 IL_007a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:315>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:315>
 		return;
 	}
 }
-// Method Definition Index: 67579
+// Method Definition Index: 67894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ProcessTouchEvents_m042FC6B13874B1EE6699BBB51F02FE3A435A25F0 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -4209,14 +4209,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ProcessTouchEvents
 	bool V_7 = false;
 	bool V_8 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
 		V_0 = 0;
 		goto IL_006b;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:321>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:321>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_0;
 		L_0 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		int32_t L_1 = V_0;
@@ -4224,7 +4224,7 @@ IL_0005:
 		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_2;
 		L_2 = VirtualFuncInvoker1< Touch_t03E51455ED508492B3F278903A0114FA0E87B417, int32_t >::Invoke(31, L_0, L_1);
 		V_1 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:323>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:323>
 		int32_t L_3;
 		L_3 = Touch_get_type_mB505EF2DCF13160DFA0C6AAF406DCB4CBED20745((&V_1), NULL);
 		V_5 = (bool)((((int32_t)L_3) == ((int32_t)1))? 1 : 0);
@@ -4235,23 +4235,23 @@ IL_0005:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:324>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:324>
 		goto IL_0067;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:328>
 		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_5 = V_1;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6;
 		L_6 = PointerInputModule_GetTouchPointerEventData_m55EBA8BD04214AAD8E98B9109D44610496A5B2E1(__this, L_5, (&V_3), (&V_2), NULL);
 		V_4 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:330>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:330>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = V_4;
 		bool L_8 = V_3;
 		bool L_9 = V_2;
 		StandaloneInputModule_ProcessTouchPress_mD72A0807626DA04E47313F9553249DD4A32625E3(__this, L_7, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:332>
 		bool L_10 = V_2;
 		V_6 = (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0);
 		bool L_11 = V_6;
@@ -4261,10 +4261,10 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:334>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:334>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_12 = V_4;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(31, __this, L_12);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:335>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:335>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = V_4;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(32, __this, L_13);
 		goto IL_0066;
@@ -4272,7 +4272,7 @@ IL_0025:
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:338>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:338>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = V_4;
 		PointerInputModule_RemovePointerData_m012713A1B4511855549793D6BA2B7998134B1BE9(__this, L_14, NULL);
 	}
@@ -4283,14 +4283,14 @@ IL_0066:
 
 IL_0067:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
 		int32_t L_15 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
 IL_006b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:319>
 		int32_t L_16 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_17;
 		L_17 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -4305,7 +4305,7 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:340>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:340>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_20;
 		L_20 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_20);
@@ -4317,12 +4317,12 @@ IL_006b:
 
 IL_0091:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:341>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:341>
 		bool L_22 = V_8;
 		return L_22;
 	}
 }
-// Method Definition Index: 67580
+// Method Definition Index: 67895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_mD72A0807626DA04E47313F9553249DD4A32625E3 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_pointerEvent, bool ___1_pressed, bool ___2_released, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4367,7 +4367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 	int32_t G_B25_0 = 0;
 	int32_t G_B30_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:354>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:354>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_pointerEvent;
 		NullCheck(L_0);
 		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_1;
@@ -4376,7 +4376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1((&V_1), NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:357>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:357>
 		bool L_3 = ___1_pressed;
 		V_2 = L_3;
 		bool L_4 = V_2;
@@ -4386,25 +4386,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:359>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:359>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_pointerEvent;
 		NullCheck(L_5);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_5, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:360>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:360>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6 = ___0_pointerEvent;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
 		L_7 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		NullCheck(L_6);
 		PointerEventData_set_delta_mD200AF7CCAEAD92D947091902AF864CB4ACE0F1D_inline(L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:361>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:361>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_8 = ___0_pointerEvent;
 		NullCheck(L_8);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_8, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:362>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:362>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_9 = ___0_pointerEvent;
 		NullCheck(L_9);
 		PointerEventData_set_useDragThreshold_m63FE2034E4B240F1A0A902B1EB893B3DBA2D848B_inline(L_9, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:363>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:363>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_10 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_11 = ___0_pointerEvent;
 		NullCheck(L_11);
@@ -4412,7 +4412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 		L_12 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_11, NULL);
 		NullCheck(L_10);
 		PointerEventData_set_pressPosition_m85544FBAB798DABE70067508294A6C4841A95379_inline(L_10, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:364>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:364>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = ___0_pointerEvent;
 		NullCheck(L_14);
@@ -4420,11 +4420,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 		L_15 = PointerEventData_get_pointerCurrentRaycast_m1C6B7D707CEE9C6574DD443289D90102EDC7A2C4_inline(L_14, NULL);
 		NullCheck(L_13);
 		PointerEventData_set_pointerPressRaycast_m55CA127474B4CBCA795A9C872B7630AAF766F852_inline(L_13, L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:366>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:366>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_17 = ___0_pointerEvent;
 		PointerInputModule_DeselectIfSelectionChanged_m8F111DD2317E33C4F0498F651BC52BD5C984A95B(__this, L_16, L_17, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:368>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:368>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_18 = ___0_pointerEvent;
 		NullCheck(L_18);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
@@ -4441,11 +4441,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:371>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:371>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_23 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_0;
 		BaseInputModule_HandlePointerExitAndEnter_m0815F06EAF8F937916E0656D66A69844CB211298(__this, L_23, L_24, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:372>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:372>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_25 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_0;
 		NullCheck(L_25);
@@ -4454,7 +4454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessTouchPress_
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:375>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:375>
 		float L_27;
 		L_27 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_28 = ___0_pointerEvent;
@@ -4462,7 +4462,7 @@ IL_0085:
 		float L_29;
 		L_29 = PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline(L_28, NULL);
 		V_3 = ((float)il2cpp_codegen_subtract(L_27, L_29));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:376>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:376>
 		float L_30 = V_3;
 		V_8 = (bool)((((int32_t)((!(((float)L_30) >= ((float)(0.300000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_31 = V_8;
@@ -4472,7 +4472,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:378>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:378>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_32 = ___0_pointerEvent;
 		NullCheck(L_32);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_32, 0, NULL);
@@ -4480,7 +4480,7 @@ IL_0085:
 
 IL_00ad:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:384>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:384>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_34 = ___0_pointerEvent;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -4489,12 +4489,12 @@ IL_00ad:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36;
 		L_36 = ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C(L_33, L_34, L_35, ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C_RuntimeMethod_var);
 		V_4 = L_36;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:386>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:386>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_37 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38;
 		L_38 = ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E(L_37, ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E_RuntimeMethod_var);
 		V_5 = L_38;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:389>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:389>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_40;
@@ -4507,18 +4507,18 @@ IL_00ad:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:390>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:390>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42 = V_5;
 		V_4 = L_42;
 	}
 
 IL_00d5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:394>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:394>
 		float L_43;
 		L_43 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_6 = L_43;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:396>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:396>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = V_4;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_45 = ___0_pointerEvent;
 		NullCheck(L_45);
@@ -4535,14 +4535,14 @@ IL_00d5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:398>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:398>
 		float L_49 = V_6;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_50 = ___0_pointerEvent;
 		NullCheck(L_50);
 		float L_51;
 		L_51 = PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline(L_50, NULL);
 		V_11 = ((float)il2cpp_codegen_subtract(L_49, L_51));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:399>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:399>
 		float L_52 = V_11;
 		V_12 = (bool)((((float)L_52) < ((float)(0.300000012f)))? 1 : 0);
 		bool L_53 = V_12;
@@ -4552,7 +4552,7 @@ IL_00d5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:400>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:400>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_54 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_55 = L_54;
 		NullCheck(L_55);
@@ -4567,7 +4567,7 @@ IL_00d5:
 
 IL_011f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:402>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:402>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_58 = ___0_pointerEvent;
 		NullCheck(L_58);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_58, 1, NULL);
@@ -4575,7 +4575,7 @@ IL_011f:
 
 IL_0127:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:404>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:404>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_59 = ___0_pointerEvent;
 		float L_60 = V_6;
 		NullCheck(L_59);
@@ -4585,7 +4585,7 @@ IL_0127:
 
 IL_0133:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:408>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:408>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_61 = ___0_pointerEvent;
 		NullCheck(L_61);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_61, 1, NULL);
@@ -4593,27 +4593,27 @@ IL_0133:
 
 IL_013d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:411>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:411>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_62 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = V_4;
 		NullCheck(L_62);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_62, L_63, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:412>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:412>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_64 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_65 = V_0;
 		NullCheck(L_64);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_64, L_65, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:413>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:413>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_66 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_67 = V_5;
 		NullCheck(L_66);
 		PointerEventData_set_pointerClick_m8FA5D91C9556A722BAE8ADBBB5353C79854D74C0_inline(L_66, L_67, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:415>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:415>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_68 = ___0_pointerEvent;
 		float L_69 = V_6;
 		NullCheck(L_68);
 		PointerEventData_set_clickTime_m93D27EB35F490AC9100369A23002F09148F85996_inline(L_68, L_69, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:418>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:418>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_70 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_71 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -4621,7 +4621,7 @@ IL_013d:
 		L_72 = ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA(L_71, ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA_RuntimeMethod_var);
 		NullCheck(L_70);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_70, L_72, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:420>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:420>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_73 = ___0_pointerEvent;
 		NullCheck(L_73);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_74;
@@ -4637,7 +4637,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:421>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:421>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_77 = ___0_pointerEvent;
 		NullCheck(L_77);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_78;
@@ -4656,7 +4656,7 @@ IL_0191:
 
 IL_0192:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:425>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:425>
 		bool L_82 = ___2_released;
 		V_15 = L_82;
 		bool L_83 = V_15;
@@ -4666,7 +4666,7 @@ IL_0192:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:428>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:428>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_84 = ___0_pointerEvent;
 		NullCheck(L_84);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_85;
@@ -4677,12 +4677,12 @@ IL_0192:
 		L_87 = ExecuteEvents_get_pointerUpHandler_m51B83B4AD7498D6F7A2CBD5F2331E91A37AE4CF2(NULL);
 		bool L_88;
 		L_88 = ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6(L_85, L_86, L_87, ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:433>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:433>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_89 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_90;
 		L_90 = ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E(L_89, ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E_RuntimeMethod_var);
 		V_16 = L_90;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:436>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:436>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_91 = ___0_pointerEvent;
 		NullCheck(L_91);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_92;
@@ -4720,7 +4720,7 @@ IL_01cf:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:438>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:438>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_98 = ___0_pointerEvent;
 		NullCheck(L_98);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_99;
@@ -4735,7 +4735,7 @@ IL_01cf:
 
 IL_01e9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:441>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:441>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_103 = ___0_pointerEvent;
 		NullCheck(L_103);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_104;
@@ -4772,7 +4772,7 @@ IL_0200:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:443>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:443>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_109 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_110 = ___0_pointerEvent;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -4784,23 +4784,23 @@ IL_0200:
 
 IL_0215:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:446>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:446>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_113 = ___0_pointerEvent;
 		NullCheck(L_113);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_113, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:447>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:447>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_114 = ___0_pointerEvent;
 		NullCheck(L_114);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_114, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:448>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:448>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_115 = ___0_pointerEvent;
 		NullCheck(L_115);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_115, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:449>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:449>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_116 = ___0_pointerEvent;
 		NullCheck(L_116);
 		PointerEventData_set_pointerClick_m8FA5D91C9556A722BAE8ADBBB5353C79854D74C0_inline(L_116, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:451>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:451>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_117 = ___0_pointerEvent;
 		NullCheck(L_117);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_118;
@@ -4837,7 +4837,7 @@ IL_024c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:452>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:452>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_123 = ___0_pointerEvent;
 		NullCheck(L_123);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_124;
@@ -4852,15 +4852,15 @@ IL_024c:
 
 IL_0264:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:454>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:454>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_128 = ___0_pointerEvent;
 		NullCheck(L_128);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_128, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:455>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:455>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_129 = ___0_pointerEvent;
 		NullCheck(L_129);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_129, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:458>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:458>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_130 = ___0_pointerEvent;
 		NullCheck(L_130);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_131;
@@ -4871,7 +4871,7 @@ IL_0264:
 		L_133 = ExecuteEvents_get_pointerExitHandler_m03735363884BC967C1B04246B51FE98886C9C6DE(NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_134;
 		L_134 = ExecuteEvents_ExecuteHierarchy_TisIPointerExitHandler_t1AA3FC124CC77401AF27435A3D6E611F5C7A57EE_m50CEB3F041077A74C37270714BBF0CC3EB37DD92(L_131, L_132, L_133, ExecuteEvents_ExecuteHierarchy_TisIPointerExitHandler_t1AA3FC124CC77401AF27435A3D6E611F5C7A57EE_m50CEB3F041077A74C37270714BBF0CC3EB37DD92_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:459>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:459>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_135 = ___0_pointerEvent;
 		NullCheck(L_135);
 		PointerEventData_set_pointerEnter_m2DA660C24CBDE9B83DF2B2D09D9AF0E94A770D17_inline(L_135, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
@@ -4879,7 +4879,7 @@ IL_0264:
 
 IL_028f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:462>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:462>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_136 = __this->___m_InputPointerEvents;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_137 = ___0_pointerEvent;
 		NullCheck(L_137);
@@ -4888,11 +4888,11 @@ IL_028f:
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_139 = ___0_pointerEvent;
 		NullCheck(L_136);
 		Dictionary_2_set_Item_mA3872E971B6B3EE564DCC1B84782ABE176D4877E(L_136, L_138, L_139, Dictionary_2_set_Item_mA3872E971B6B3EE564DCC1B84782ABE176D4877E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:463>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:463>
 		return;
 	}
 }
-// Method Definition Index: 67581
+// Method Definition Index: 67896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendSubmitEventToSelectedObject_m7121ACC09ABA46FF5CDDEAE7B26507BE06A2953F (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4910,7 +4910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendSubmitEventToS
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:471>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:471>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -4927,18 +4927,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendSubmitEventToS
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:472>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:472>
 		V_2 = (bool)0;
 		goto IL_0084;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:474>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:474>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_4;
 		L_4 = VirtualFuncInvoker0< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(19, __this);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:475>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:475>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_5;
 		L_5 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_6 = __this->___m_SubmitButton;
@@ -4953,7 +4953,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:476>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:476>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_9;
 		L_9 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_9);
@@ -4969,7 +4969,7 @@ IL_001a:
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:478>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:478>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_14;
 		L_14 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_15 = __this->___m_CancelButton;
@@ -4984,7 +4984,7 @@ IL_004d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:479>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:479>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_18;
 		L_18 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_18);
@@ -5000,7 +5000,7 @@ IL_004d:
 
 IL_007b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:480>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:480>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_23 = V_0;
 		NullCheck(L_23);
 		bool L_24;
@@ -5011,12 +5011,12 @@ IL_007b:
 
 IL_0084:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:481>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:481>
 		bool L_25 = V_2;
 		return L_25;
 	}
 }
-// Method Definition Index: 67582
+// Method Definition Index: 67897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 StandaloneInputModule_GetRawMoveVector_mFF583B1720780B7D8D2DD3248F947ED8D855610B (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -5030,11 +5030,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:485>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:485>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		L_0 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:486>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:486>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_1;
 		L_1 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_2 = __this->___m_HorizontalAxis;
@@ -5042,7 +5042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		float L_3;
 		L_3 = VirtualFuncInvoker1< float, String_t* >::Invoke(32, L_1, L_2);
 		(&V_0)->___x = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:487>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:487>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_4;
 		L_4 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_5 = __this->___m_VerticalAxis;
@@ -5050,7 +5050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		float L_6;
 		L_6 = VirtualFuncInvoker1< float, String_t* >::Invoke(32, L_4, L_5);
 		(&V_0)->___y = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:489>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:489>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_7;
 		L_7 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_8 = __this->___m_HorizontalAxis;
@@ -5065,7 +5065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:491>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:491>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = V_0;
 		float L_12 = L_11.___x;
 		V_2 = (bool)((((float)L_12) < ((float)(0.0f)))? 1 : 0);
@@ -5076,13 +5076,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:492>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:492>
 		(&V_0)->___x = (-1.0f);
 	}
 
 IL_006a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:493>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:493>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14 = V_0;
 		float L_15 = L_14.___x;
 		V_3 = (bool)((((float)L_15) > ((float)(0.0f)))? 1 : 0);
@@ -5093,7 +5093,7 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:494>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:494>
 		(&V_0)->___x = (1.0f);
 	}
 
@@ -5103,7 +5103,7 @@ IL_0087:
 
 IL_0088:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:496>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:496>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_17;
 		L_17 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		String_t* L_18 = __this->___m_VerticalAxis;
@@ -5118,7 +5118,7 @@ IL_0088:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:498>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:498>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21 = V_0;
 		float L_22 = L_21.___y;
 		V_5 = (bool)((((float)L_22) < ((float)(0.0f)))? 1 : 0);
@@ -5129,13 +5129,13 @@ IL_0088:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:499>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:499>
 		(&V_0)->___y = (-1.0f);
 	}
 
 IL_00bf:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:500>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:500>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = V_0;
 		float L_25 = L_24.___y;
 		V_6 = (bool)((((float)L_25) > ((float)(0.0f)))? 1 : 0);
@@ -5146,7 +5146,7 @@ IL_00bf:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:501>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:501>
 		(&V_0)->___y = (1.0f);
 	}
 
@@ -5156,7 +5156,7 @@ IL_00de:
 
 IL_00df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:503>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:503>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = V_0;
 		V_7 = L_27;
 		goto IL_00e4;
@@ -5164,12 +5164,12 @@ IL_00df:
 
 IL_00e4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:504>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:504>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_28 = V_7;
 		return L_28;
 	}
 }
-// Method Definition Index: 67583
+// Method Definition Index: 67898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendMoveEventToSelectedObject_mC71D1E623B1DB82DC4E035277AC5FFA7CD64E981 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5194,15 +5194,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendMoveEventToSel
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:512>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:512>
 		float L_0;
 		L_0 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:514>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:514>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = StandaloneInputModule_GetRawMoveVector_mFF583B1720780B7D8D2DD3248F947ED8D855610B(__this, NULL);
 		V_1 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:515>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:515>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = V_1;
 		float L_3 = L_2.___x;
 		bool L_4;
@@ -5236,22 +5236,22 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:517>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:517>
 		__this->___m_ConsecutiveMoveCount = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:518>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:518>
 		V_5 = (bool)0;
 		goto IL_0145;
 	}
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:521>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:521>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = __this->___m_LastMoveVector;
 		float L_11;
 		L_11 = Vector2_Dot_mC1E68FDB4FB462A279A303C043B8FD0AC11C8458_inline(L_9, L_10, NULL);
 		V_2 = (bool)((((float)L_11) > ((float)(0.0f)))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:524>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:524>
 		bool L_12 = V_2;
 		if (!L_12)
 		{
@@ -5279,7 +5279,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:526>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:526>
 		float L_15 = V_0;
 		float L_16 = __this->___m_PrevActionTime;
 		float L_17 = __this->___m_RepeatDelay;
@@ -5291,7 +5291,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:527>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:527>
 		V_5 = (bool)0;
 		goto IL_0145;
 	}
@@ -5303,7 +5303,7 @@ IL_0094:
 
 IL_0097:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:532>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:532>
 		float L_19 = V_0;
 		float L_20 = __this->___m_PrevActionTime;
 		float L_21 = __this->___m_InputActionsPerSecond;
@@ -5315,7 +5315,7 @@ IL_0097:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:533>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:533>
 		V_5 = (bool)0;
 		goto IL_0145;
 	}
@@ -5326,7 +5326,7 @@ IL_00bf:
 
 IL_00c0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:536>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:536>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = V_1;
 		float L_24 = L_23.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_25 = V_1;
@@ -5334,7 +5334,7 @@ IL_00c0:
 		AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* L_27;
 		L_27 = VirtualFuncInvoker3< AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938*, float, float, float >::Invoke(18, __this, L_24, L_26, (0.600000024f));
 		V_3 = L_27;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:538>
 		AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* L_28 = V_3;
 		NullCheck(L_28);
 		int32_t L_29;
@@ -5347,7 +5347,7 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:540>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:540>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_31;
 		L_31 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_31);
@@ -5359,7 +5359,7 @@ IL_00c0:
 		L_34 = ExecuteEvents_get_moveHandler_mF717824AB0018BBED3C2DF3C67486E3B2B3836D2(NULL);
 		bool L_35;
 		L_35 = ExecuteEvents_Execute_TisIMoveHandler_t6C9BB42118BAEEDF258B967391CCCD6A5C7976AB_m77205DFCC4110B95CC241F556BE89F612EFFD2CA(L_32, L_33, L_34, ExecuteEvents_Execute_TisIMoveHandler_t6C9BB42118BAEEDF258B967391CCCD6A5C7976AB_m77205DFCC4110B95CC241F556BE89F612EFFD2CA_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:541>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:541>
 		bool L_36 = V_2;
 		V_10 = (bool)((((int32_t)L_36) == ((int32_t)0))? 1 : 0);
 		bool L_37 = V_10;
@@ -5369,19 +5369,19 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:542>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:542>
 		__this->___m_ConsecutiveMoveCount = 0;
 	}
 
 IL_0113:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:543>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:543>
 		int32_t L_38 = __this->___m_ConsecutiveMoveCount;
 		__this->___m_ConsecutiveMoveCount = ((int32_t)il2cpp_codegen_add(L_38, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:544>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:544>
 		float L_39 = V_0;
 		__this->___m_PrevActionTime = L_39;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:545>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:545>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_40 = V_1;
 		__this->___m_LastMoveVector = L_40;
 		goto IL_013b;
@@ -5389,13 +5389,13 @@ IL_0113:
 
 IL_0132:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:549>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:549>
 		__this->___m_ConsecutiveMoveCount = 0;
 	}
 
 IL_013b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:552>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:552>
 		AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* L_41 = V_3;
 		NullCheck(L_41);
 		bool L_42;
@@ -5406,39 +5406,39 @@ IL_013b:
 
 IL_0145:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:553>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:553>
 		bool L_43 = V_5;
 		return L_43;
 	}
 }
-// Method Definition Index: 67584
+// Method Definition Index: 67899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_mCE1BA96E47D9A4448614CB9DAF5A406754F655DD (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:557>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:557>
 		StandaloneInputModule_ProcessMouseEvent_m8A8214EB9286BA31C18F515BCC3349DF740B2BBA(__this, 0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:558>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:558>
 		return;
 	}
 }
-// Method Definition Index: 67585
+// Method Definition Index: 67900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_ForceAutoSelect_m8A0FD9795D64CAF49AED184D30FA5C7AB6439C75 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:563>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:563>
 		V_0 = (bool)0;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:564>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:564>
 		bool L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 67586
+// Method Definition Index: 67901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_m8A8214EB9286BA31C18F515BCC3349DF740B2BBA (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, int32_t ___0_id, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5458,12 +5458,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 	memset((&V_4), 0, sizeof(V_4));
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_5 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:571>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:571>
 		int32_t L_0 = ___0_id;
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_1;
 		L_1 = VirtualFuncInvoker1< MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09*, int32_t >::Invoke(30, __this, L_0);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:572>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:572>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_2 = V_0;
 		NullCheck(L_2);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_3;
@@ -5472,7 +5472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_4;
 		L_4 = ButtonState_get_eventData_m4767730784143F1DCE06B6138658A31CBC5E155F(L_3, NULL);
 		V_1 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:574>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:574>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_5 = V_1;
 		NullCheck(L_5);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6 = L_5->___buttonData;
@@ -5484,20 +5484,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		L_8 = RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1((&V_2), NULL);
 		__this->___m_CurrentFocusedGameObject = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CurrentFocusedGameObject), (void*)L_8);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:577>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:577>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_9 = V_1;
 		StandaloneInputModule_ProcessMousePress_m24665E707FEF5C80719847D62A8A8AEABE27C6C5(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:578>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:578>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_10 = V_1;
 		NullCheck(L_10);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_11 = L_10->___buttonData;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(31, __this, L_11);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:579>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:579>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_12 = V_1;
 		NullCheck(L_12);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = L_12->___buttonData;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(32, __this, L_13);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:582>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:582>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_14 = V_0;
 		NullCheck(L_14);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_15;
@@ -5506,7 +5506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_16;
 		L_16 = ButtonState_get_eventData_m4767730784143F1DCE06B6138658A31CBC5E155F(L_15, NULL);
 		StandaloneInputModule_ProcessMousePress_m24665E707FEF5C80719847D62A8A8AEABE27C6C5(__this, L_16, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:583>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:583>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_17 = V_0;
 		NullCheck(L_17);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_18;
@@ -5517,7 +5517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		NullCheck(L_19);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_20 = L_19->___buttonData;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(32, __this, L_20);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:584>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:584>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_21 = V_0;
 		NullCheck(L_21);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_22;
@@ -5526,7 +5526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_23;
 		L_23 = ButtonState_get_eventData_m4767730784143F1DCE06B6138658A31CBC5E155F(L_22, NULL);
 		StandaloneInputModule_ProcessMousePress_m24665E707FEF5C80719847D62A8A8AEABE27C6C5(__this, L_23, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:585>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:585>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_24 = V_0;
 		NullCheck(L_24);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_25;
@@ -5537,7 +5537,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		NullCheck(L_26);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_27 = L_26->___buttonData;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(32, __this, L_27);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:587>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:587>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_28 = V_1;
 		NullCheck(L_28);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_29 = L_28->___buttonData;
@@ -5557,7 +5557,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:589>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:589>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_34 = V_1;
 		NullCheck(L_34);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_35 = L_34->___buttonData;
@@ -5571,7 +5571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38;
 		L_38 = ExecuteEvents_GetEventHandler_TisIScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F_m3BFE4214B6075DAE2F291E508DC912DC72262D2E(L_37, ExecuteEvents_GetEventHandler_TisIScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F_m3BFE4214B6075DAE2F291E508DC912DC72262D2E_RuntimeMethod_var);
 		V_5 = L_38;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:590>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:590>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39 = V_5;
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_40 = V_1;
 		NullCheck(L_40);
@@ -5584,11 +5584,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMouseEvent_
 
 IL_00fb:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:592>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:592>
 		return;
 	}
 }
-// Method Definition Index: 67587
+// Method Definition Index: 67902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendUpdateEventToSelectedObject_mE1C4AEB5B19378C2BF97DD3EAF4AA9C0EC5E7520 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5603,7 +5603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendUpdateEventToS
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:596>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:596>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -5620,18 +5620,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StandaloneInputModule_SendUpdateEventToS
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:597>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:597>
 		V_2 = (bool)0;
 		goto IL_0041;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:599>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:599>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_4;
 		L_4 = VirtualFuncInvoker0< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(19, __this);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:600>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:600>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_5;
 		L_5 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_5);
@@ -5643,7 +5643,7 @@ IL_001a:
 		L_8 = ExecuteEvents_get_updateSelectedHandler_m8AF7543437082AD4F5690AAA77F2623AE28C3D09(NULL);
 		bool L_9;
 		L_9 = ExecuteEvents_Execute_TisIUpdateSelectedHandler_tBBACEC3A6478F7DA4B682AFDA8CF59C6C3FCC9CC_m8AFB13536731ABE80F6AE964DA907EE6B27F055E(L_6, L_7, L_8, ExecuteEvents_Execute_TisIUpdateSelectedHandler_tBBACEC3A6478F7DA4B682AFDA8CF59C6C3FCC9CC_m8AFB13536731ABE80F6AE964DA907EE6B27F055E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:601>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:601>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_10 = V_0;
 		NullCheck(L_10);
 		bool L_11;
@@ -5654,12 +5654,12 @@ IL_001a:
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:602>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:602>
 		bool L_12 = V_2;
 		return L_12;
 	}
 }
-// Method Definition Index: 67588
+// Method Definition Index: 67903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_m24665E707FEF5C80719847D62A8A8AEABE27C6C5 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5692,12 +5692,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 	bool V_14 = false;
 	bool V_15 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:609>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:609>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_0 = ___0_data;
 		NullCheck(L_0);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_1 = L_0->___buttonData;
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:610>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:610>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_2 = V_0;
 		NullCheck(L_2);
 		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_3;
@@ -5706,7 +5706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1((&V_2), NULL);
 		V_1 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:613>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:613>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_5 = ___0_data;
 		NullCheck(L_5);
 		bool L_6;
@@ -5719,25 +5719,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:615>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:615>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_8 = V_0;
 		NullCheck(L_8);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_8, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:616>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:616>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_9 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10;
 		L_10 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		NullCheck(L_9);
 		PointerEventData_set_delta_mD200AF7CCAEAD92D947091902AF864CB4ACE0F1D_inline(L_9, L_10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:617>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:617>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_11 = V_0;
 		NullCheck(L_11);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_11, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:618>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:618>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_12 = V_0;
 		NullCheck(L_12);
 		PointerEventData_set_useDragThreshold_m63FE2034E4B240F1A0A902B1EB893B3DBA2D848B_inline(L_12, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:619>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:619>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = V_0;
 		NullCheck(L_14);
@@ -5745,7 +5745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		L_15 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_14, NULL);
 		NullCheck(L_13);
 		PointerEventData_set_pressPosition_m85544FBAB798DABE70067508294A6C4841A95379_inline(L_13, L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:620>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:620>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_16 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_17 = V_0;
 		NullCheck(L_17);
@@ -5753,11 +5753,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		L_18 = PointerEventData_get_pointerCurrentRaycast_m1C6B7D707CEE9C6574DD443289D90102EDC7A2C4_inline(L_17, NULL);
 		NullCheck(L_16);
 		PointerEventData_set_pointerPressRaycast_m55CA127474B4CBCA795A9C872B7630AAF766F852_inline(L_16, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:622>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:622>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = V_1;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_20 = V_0;
 		PointerInputModule_DeselectIfSelectionChanged_m8F111DD2317E33C4F0498F651BC52BD5C984A95B(__this, L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:624>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:624>
 		float L_21;
 		L_21 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_22 = V_0;
@@ -5765,7 +5765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		float L_23;
 		L_23 = PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline(L_22, NULL);
 		V_4 = ((float)il2cpp_codegen_subtract(L_21, L_23));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:625>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:625>
 		float L_24 = V_4;
 		V_8 = (bool)((((int32_t)((!(((float)L_24) >= ((float)(0.300000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_25 = V_8;
@@ -5775,7 +5775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:627>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:627>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_26 = V_0;
 		NullCheck(L_26);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_26, 0, NULL);
@@ -5783,7 +5783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandaloneInputModule_ProcessMousePress_
 
 IL_0096:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:633>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:633>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = V_1;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_28 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -5792,12 +5792,12 @@ IL_0096:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
 		L_30 = ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C(L_27, L_28, L_29, ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C_RuntimeMethod_var);
 		V_5 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:634>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:634>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = V_1;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
 		L_32 = ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E(L_31, ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E_RuntimeMethod_var);
 		V_6 = L_32;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:637>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:637>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_34;
@@ -5810,18 +5810,18 @@ IL_0096:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:638>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:638>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36 = V_6;
 		V_5 = L_36;
 	}
 
 IL_00be:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:642>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:642>
 		float L_37;
 		L_37 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_7 = L_37;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:644>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:644>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = V_5;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_39 = V_0;
 		NullCheck(L_39);
@@ -5838,14 +5838,14 @@ IL_00be:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:646>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:646>
 		float L_43 = V_7;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_44 = V_0;
 		NullCheck(L_44);
 		float L_45;
 		L_45 = PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline(L_44, NULL);
 		V_11 = ((float)il2cpp_codegen_subtract(L_43, L_45));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:647>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:647>
 		float L_46 = V_11;
 		V_12 = (bool)((((float)L_46) < ((float)(0.300000012f)))? 1 : 0);
 		bool L_47 = V_12;
@@ -5855,7 +5855,7 @@ IL_00be:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:648>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:648>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_48 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_49 = L_48;
 		NullCheck(L_49);
@@ -5870,7 +5870,7 @@ IL_00be:
 
 IL_0108:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:650>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:650>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_52 = V_0;
 		NullCheck(L_52);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_52, 1, NULL);
@@ -5878,7 +5878,7 @@ IL_0108:
 
 IL_0110:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:652>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:652>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_53 = V_0;
 		float L_54 = V_7;
 		NullCheck(L_53);
@@ -5888,7 +5888,7 @@ IL_0110:
 
 IL_011c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:656>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:656>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_55 = V_0;
 		NullCheck(L_55);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_55, 1, NULL);
@@ -5896,27 +5896,27 @@ IL_011c:
 
 IL_0126:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:659>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:659>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_56 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_57 = V_5;
 		NullCheck(L_56);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_56, L_57, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:660>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:660>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_58 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59 = V_1;
 		NullCheck(L_58);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_58, L_59, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:661>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:661>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_60 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_61 = V_6;
 		NullCheck(L_60);
 		PointerEventData_set_pointerClick_m8FA5D91C9556A722BAE8ADBBB5353C79854D74C0_inline(L_60, L_61, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:663>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:663>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_62 = V_0;
 		float L_63 = V_7;
 		NullCheck(L_62);
 		PointerEventData_set_clickTime_m93D27EB35F490AC9100369A23002F09148F85996_inline(L_62, L_63, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:666>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:666>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_64 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_65 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -5924,7 +5924,7 @@ IL_0126:
 		L_66 = ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA(L_65, ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA_RuntimeMethod_var);
 		NullCheck(L_64);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_64, L_66, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:668>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:668>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_67 = V_0;
 		NullCheck(L_67);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_68;
@@ -5940,7 +5940,7 @@ IL_0126:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:669>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:669>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_71 = V_0;
 		NullCheck(L_71);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_72;
@@ -5955,7 +5955,7 @@ IL_0126:
 
 IL_017a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:671>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:671>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_76 = __this->___m_InputPointerEvents;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_77 = V_0;
 		NullCheck(L_77);
@@ -5968,7 +5968,7 @@ IL_017a:
 
 IL_018e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:675>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:675>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_80 = ___0_data;
 		NullCheck(L_80);
 		bool L_81;
@@ -5981,7 +5981,7 @@ IL_018e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:677>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:677>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_83 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_84 = V_1;
 		StandaloneInputModule_ReleaseMouse_mC5C3083C356ACD5CD420A58662D99A6CACC5FAF5(__this, L_83, L_84, NULL);
@@ -5989,16 +5989,16 @@ IL_018e:
 
 IL_01a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:679>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:679>
 		return;
 	}
 }
-// Method Definition Index: 67589
+// Method Definition Index: 67904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* StandaloneInputModule_GetCurrentFocusedGameObject_m6E67A53E66DE554CCD13A943638815631A3E8E87 (StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530* __this, const RuntimeMethod* method) 
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:683>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:683>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_CurrentFocusedGameObject;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6006,7 +6006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:684>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs:684>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = V_0;
 		return L_1;
 	}
@@ -6027,22 +6027,22 @@ IL_000a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67590
+// Method Definition Index: 67905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule__ctor_mCBE23B5A3A8CE1CD042A061D7E070B04A45E3075 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:11>
 		PointerInputModule__ctor_mBF074492478BFC24F87EF2C941D6C11A8ACDAF11(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:12>
 		return;
 	}
 }
-// Method Definition Index: 67591
+// Method Definition Index: 67906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_get_allowActivationOnStandalone_m2F9A65E10F7BE98D250CC3D6C9CABA3BCCE95995 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:26>
 		bool L_0 = __this->___m_ForceModuleActive;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6050,28 +6050,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_get_allowActivationOnSt
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:26>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67592
+// Method Definition Index: 67907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_set_allowActivationOnStandalone_m5AB9798D9B6071B37FC67E0D1A81A58A0A59D7AD (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:27>
 		bool L_0 = ___0_value;
 		__this->___m_ForceModuleActive = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:27>
 		return;
 	}
 }
-// Method Definition Index: 67593
+// Method Definition Index: 67908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_get_forceModuleActive_m7200F7B6C80EDD69987615B8356B6B2497461FCA (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:32>
 		bool L_0 = __this->___m_ForceModuleActive;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6079,23 +6079,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_get_forceModuleActive_m
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:32>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67594
+// Method Definition Index: 67909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_set_forceModuleActive_m32676A04010774CA55055EE93A05ED6C6388D2C2 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:33>
 		bool L_0 = ___0_value;
 		__this->___m_ForceModuleActive = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:33>
 		return;
 	}
 }
-// Method Definition Index: 67595
+// Method Definition Index: 67910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_UpdateModule_mE6F4F74D770ACFEF3C46611C71CBE705342EA608 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6110,7 +6110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_UpdateModule_mE6F4F74D7
 	bool V_1 = false;
 	int32_t G_B5_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:38>
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = BaseInputModule_get_eventSystem_m341B2378F61A58D5432906B9EE1E12265E2FAB33(__this, NULL);
 		NullCheck(L_0);
@@ -6124,7 +6124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_UpdateModule_mE6F4F74D7
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:40>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_3 = __this->___m_InputPointerEvent;
 		if (!L_3)
 		{
@@ -6168,7 +6168,7 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:41>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_10 = __this->___m_InputPointerEvent;
 		NullCheck(L_10);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11;
@@ -6183,34 +6183,34 @@ IL_003d:
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:43>
 		__this->___m_InputPointerEvent = (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InputPointerEvent), (void*)(PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB*)NULL);
 	}
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:46>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15 = __this->___m_MousePosition;
 		__this->___m_LastMousePosition = L_15;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:47>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_16;
 		L_16 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_16);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17;
 		L_17 = VirtualFuncInvoker0< Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 >::Invoke(26, L_16);
 		__this->___m_MousePosition = L_17;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:48>
 		return;
 	}
 }
-// Method Definition Index: 67596
+// Method Definition Index: 67911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_IsModuleSupported_m795B5298EC90DC063A96147CF3B3287EC27C9799 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:52>
 		bool L_0;
 		L_0 = TouchInputModule_get_forceModuleActive_m7200F7B6C80EDD69987615B8356B6B2497461FCA(__this, NULL);
 		if (L_0)
@@ -6241,12 +6241,12 @@ IL_0017:
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:53>
 		bool L_3 = V_0;
 		return L_3;
 	}
 }
-// Method Definition Index: 67597
+// Method Definition Index: 67912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_ShouldActivateModule_m4B17231DE579430D27088D6592378FB7547ADBDC (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -6257,7 +6257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_ShouldActivateModule_m4
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:57>
 		bool L_0;
 		L_0 = BaseInputModule_ShouldActivateModule_m51B70F9097EF7FEB20B62D4D775F7FEA853185A1(__this, NULL);
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -6268,14 +6268,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_ShouldActivateModule_m4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:58>
 		V_1 = (bool)0;
 		goto IL_0075;
 	}
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:60>
 		bool L_2 = __this->___m_ForceModuleActive;
 		V_2 = L_2;
 		bool L_3 = V_2;
@@ -6285,14 +6285,14 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:61>
 		V_1 = (bool)1;
 		goto IL_0075;
 	}
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:63>
 		bool L_4;
 		L_4 = TouchInputModule_UseFakeInput_m66A84384ADA044187F239B1CFC143C42E5E56774(__this, NULL);
 		V_3 = L_4;
@@ -6303,14 +6303,14 @@ IL_0020:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:65>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_6;
 		L_6 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_6);
 		bool L_7;
 		L_7 = VirtualFuncInvoker1< bool, int32_t >::Invoke(23, L_6, 0);
 		V_4 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:67>
 		bool L_8 = V_4;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = __this->___m_MousePosition;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = __this->___m_LastMousePosition;
@@ -6320,7 +6320,7 @@ IL_0020:
 		float L_12;
 		L_12 = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline((&V_5), NULL);
 		V_4 = (bool)((int32_t)((int32_t)L_8|((((float)L_12) > ((float)(0.0f)))? 1 : 0)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:68>
 		bool L_13 = V_4;
 		V_1 = L_13;
 		goto IL_0075;
@@ -6328,7 +6328,7 @@ IL_0020:
 
 IL_0064:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:71>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_14;
 		L_14 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_14);
@@ -6340,17 +6340,17 @@ IL_0064:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:72>
 		bool L_16 = V_1;
 		return L_16;
 	}
 }
-// Method Definition Index: 67598
+// Method Definition Index: 67913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_UseFakeInput_m66A84384ADA044187F239B1CFC143C42E5E56774 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:76>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_0;
 		L_0 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_0);
@@ -6362,17 +6362,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchInputModule_UseFakeInput_m66A84384A
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:77>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 67599
+// Method Definition Index: 67914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_Process_m3C0CB50AB7D9E92B519787F7742AE0976FB36841 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:81>
 		bool L_0;
 		L_0 = TouchInputModule_UseFakeInput_m66A84384ADA044187F239B1CFC143C42E5E56774(__this, NULL);
 		V_0 = L_0;
@@ -6383,24 +6383,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_Process_m3C0CB50AB7D9E9
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:82>
 		TouchInputModule_FakeTouches_m264BF2C70234CD04B0162FE4CED673B1A77A84F9(__this, NULL);
 		goto IL_001b;
 	}
 
 IL_0014:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:84>
 		TouchInputModule_ProcessTouchEvents_mBB28D85996F6280141E39A462BC35EF01373E514(__this, NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 67600
+// Method Definition Index: 67915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_FakeTouches_m264BF2C70234CD04B0162FE4CED673B1A77A84F9 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* V_0 = NULL;
@@ -6408,11 +6408,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_FakeTouches_m264BF2C702
 	bool V_2 = false;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:92>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_0;
 		L_0 = VirtualFuncInvoker1< MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09*, int32_t >::Invoke(30, __this, 0);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:94>
 		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_1 = V_0;
 		NullCheck(L_1);
 		ButtonState_tB671FC9C48F167DBC1CDAFEB53C373D8567AE503* L_2;
@@ -6421,7 +6421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_FakeTouches_m264BF2C702
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_3;
 		L_3 = ButtonState_get_eventData_m4767730784143F1DCE06B6138658A31CBC5E155F(L_2, NULL);
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:97>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_4 = V_1;
 		NullCheck(L_4);
 		bool L_5;
@@ -6434,7 +6434,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_FakeTouches_m264BF2C702
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:98>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_7 = V_1;
 		NullCheck(L_7);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_8 = L_7->___buttonData;
@@ -6446,7 +6446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_FakeTouches_m264BF2C702
 
 IL_0031:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:100>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_10 = V_1;
 		NullCheck(L_10);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_11 = L_10->___buttonData;
@@ -6459,7 +6459,7 @@ IL_0031:
 		bool L_15;
 		L_15 = MouseButtonEventData_ReleasedThisFrame_m5AD4F06D1CA6E0ACD6E84EEFAD4FB112098AFD51(L_14, NULL);
 		TouchInputModule_ProcessTouchPress_m1DC51E52E6B419F02626EB567A60411A0FCFA517(__this, L_11, L_13, L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:103>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_16;
 		L_16 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		NullCheck(L_16);
@@ -6473,12 +6473,12 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:105>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_19 = V_1;
 		NullCheck(L_19);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_20 = L_19->___buttonData;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(31, __this, L_20);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:106>
 		MouseButtonEventData_t0761D63D3A2B13090597C22DD97597CC7FE4D154* L_21 = V_1;
 		NullCheck(L_21);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_22 = L_21->___buttonData;
@@ -6487,11 +6487,11 @@ IL_0031:
 
 IL_0076:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:108>
 		return;
 	}
 }
-// Method Definition Index: 67601
+// Method Definition Index: 67916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchEvents_mBB28D85996F6280141E39A462BC35EF01373E514 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6504,14 +6504,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchEvents_mBB2
 	bool V_6 = false;
 	bool V_7 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
 		V_0 = 0;
 		goto IL_006b;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:117>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_0;
 		L_0 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
 		int32_t L_1 = V_0;
@@ -6519,7 +6519,7 @@ IL_0005:
 		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_2;
 		L_2 = VirtualFuncInvoker1< Touch_t03E51455ED508492B3F278903A0114FA0E87B417, int32_t >::Invoke(31, L_0, L_1);
 		V_1 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:119>
 		int32_t L_3;
 		L_3 = Touch_get_type_mB505EF2DCF13160DFA0C6AAF406DCB4CBED20745((&V_1), NULL);
 		V_5 = (bool)((((int32_t)L_3) == ((int32_t)1))? 1 : 0);
@@ -6530,23 +6530,23 @@ IL_0005:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:120>
 		goto IL_0067;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:124>
 		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_5 = V_1;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6;
 		L_6 = PointerInputModule_GetTouchPointerEventData_m55EBA8BD04214AAD8E98B9109D44610496A5B2E1(__this, L_5, (&V_3), (&V_2), NULL);
 		V_4 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:126>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = V_4;
 		bool L_8 = V_3;
 		bool L_9 = V_2;
 		TouchInputModule_ProcessTouchPress_m1DC51E52E6B419F02626EB567A60411A0FCFA517(__this, L_7, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:128>
 		bool L_10 = V_2;
 		V_6 = (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0);
 		bool L_11 = V_6;
@@ -6556,10 +6556,10 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:130>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:130>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_12 = V_4;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(31, __this, L_12);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:131>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = V_4;
 		VirtualActionInvoker1< PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* >::Invoke(32, __this, L_13);
 		goto IL_0066;
@@ -6567,7 +6567,7 @@ IL_0025:
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:134>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:134>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = V_4;
 		PointerInputModule_RemovePointerData_m012713A1B4511855549793D6BA2B7998134B1BE9(__this, L_14, NULL);
 	}
@@ -6578,14 +6578,14 @@ IL_0066:
 
 IL_0067:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
 		int32_t L_15 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
 IL_006b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:115>
 		int32_t L_16 = V_0;
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_17;
 		L_17 = BaseInputModule_get_input_mCB3F78528AA14A7AD7E957870DBB0152B4BF13FB(__this, NULL);
@@ -6600,11 +6600,11 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:136>
 		return;
 	}
 }
-// Method Definition Index: 67602
+// Method Definition Index: 67917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC51E52E6B419F02626EB567A60411A0FCFA517 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_pointerEvent, bool ___1_pressed, bool ___2_released, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6645,7 +6645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 	int32_t G_B23_0 = 0;
 	int32_t G_B28_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:140>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:140>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_pointerEvent;
 		NullCheck(L_0);
 		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_1;
@@ -6654,7 +6654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1((&V_1), NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:143>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:143>
 		bool L_3 = ___1_pressed;
 		V_2 = L_3;
 		bool L_4 = V_2;
@@ -6664,25 +6664,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:145>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_pointerEvent;
 		NullCheck(L_5);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_5, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:146>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6 = ___0_pointerEvent;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
 		L_7 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		NullCheck(L_6);
 		PointerEventData_set_delta_mD200AF7CCAEAD92D947091902AF864CB4ACE0F1D_inline(L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:147>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_8 = ___0_pointerEvent;
 		NullCheck(L_8);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_8, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:148>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:148>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_9 = ___0_pointerEvent;
 		NullCheck(L_9);
 		PointerEventData_set_useDragThreshold_m63FE2034E4B240F1A0A902B1EB893B3DBA2D848B_inline(L_9, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:149>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:149>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_10 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_11 = ___0_pointerEvent;
 		NullCheck(L_11);
@@ -6690,7 +6690,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 		L_12 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_11, NULL);
 		NullCheck(L_10);
 		PointerEventData_set_pressPosition_m85544FBAB798DABE70067508294A6C4841A95379_inline(L_10, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:150>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_13 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = ___0_pointerEvent;
 		NullCheck(L_14);
@@ -6698,11 +6698,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 		L_15 = PointerEventData_get_pointerCurrentRaycast_m1C6B7D707CEE9C6574DD443289D90102EDC7A2C4_inline(L_14, NULL);
 		NullCheck(L_13);
 		PointerEventData_set_pointerPressRaycast_m55CA127474B4CBCA795A9C872B7630AAF766F852_inline(L_13, L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:152>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:152>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_17 = ___0_pointerEvent;
 		PointerInputModule_DeselectIfSelectionChanged_m8F111DD2317E33C4F0498F651BC52BD5C984A95B(__this, L_16, L_17, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:154>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_18 = ___0_pointerEvent;
 		NullCheck(L_18);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
@@ -6719,11 +6719,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:157>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_23 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_0;
 		BaseInputModule_HandlePointerExitAndEnter_m0815F06EAF8F937916E0656D66A69844CB211298(__this, L_23, L_24, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:158>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_25 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_0;
 		NullCheck(L_25);
@@ -6732,7 +6732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_ProcessTouchPress_m1DC5
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:164>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_28 = ___0_pointerEvent;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -6741,7 +6741,7 @@ IL_0085:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
 		L_30 = ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C(L_27, L_28, L_29, ExecuteEvents_ExecuteHierarchy_TisIPointerDownHandler_t42CC83619BB6295404D44090142F7726003CE573_mF031AC46543C02039764EDB1B0673DFA36B1F58C_RuntimeMethod_var);
 		V_3 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:167>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:167>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -6754,7 +6754,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:168>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
@@ -6764,11 +6764,11 @@ IL_0085:
 
 IL_00a6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:172>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:172>
 		float L_36;
 		L_36 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_4 = L_36;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:174>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:174>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_37 = V_3;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_38 = ___0_pointerEvent;
 		NullCheck(L_38);
@@ -6785,14 +6785,14 @@ IL_00a6:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:176>
 		float L_42 = V_4;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_43 = ___0_pointerEvent;
 		NullCheck(L_43);
 		float L_44;
 		L_44 = PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline(L_43, NULL);
 		V_8 = ((float)il2cpp_codegen_subtract(L_42, L_44));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:177>
 		float L_45 = V_8;
 		V_9 = (bool)((((float)L_45) < ((float)(0.300000012f)))? 1 : 0);
 		bool L_46 = V_9;
@@ -6802,7 +6802,7 @@ IL_00a6:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:178>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:178>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_47 = ___0_pointerEvent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_48 = L_47;
 		NullCheck(L_48);
@@ -6817,7 +6817,7 @@ IL_00a6:
 
 IL_00ef:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:180>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_51 = ___0_pointerEvent;
 		NullCheck(L_51);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_51, 1, NULL);
@@ -6825,7 +6825,7 @@ IL_00ef:
 
 IL_00f7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:182>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:182>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_52 = ___0_pointerEvent;
 		float L_53 = V_4;
 		NullCheck(L_52);
@@ -6835,7 +6835,7 @@ IL_00f7:
 
 IL_0103:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:186>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:186>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_54 = ___0_pointerEvent;
 		NullCheck(L_54);
 		PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline(L_54, 1, NULL);
@@ -6843,22 +6843,22 @@ IL_0103:
 
 IL_010d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:189>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_55 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_56 = V_3;
 		NullCheck(L_55);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_55, L_56, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:190>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:190>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_57 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = V_0;
 		NullCheck(L_57);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_57, L_58, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:192>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:192>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_59 = ___0_pointerEvent;
 		float L_60 = V_4;
 		NullCheck(L_59);
 		PointerEventData_set_clickTime_m93D27EB35F490AC9100369A23002F09148F85996_inline(L_59, L_60, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:195>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:195>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_61 = ___0_pointerEvent;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -6866,7 +6866,7 @@ IL_010d:
 		L_63 = ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA(L_62, ExecuteEvents_GetEventHandler_TisIDragHandler_t9FF2B3D79AB401D7E2485254973D15C0F117D00D_m9AA4E18082F53C60962F70D75570F1D400C37FBA_RuntimeMethod_var);
 		NullCheck(L_61);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_61, L_63, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:197>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:197>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_64 = ___0_pointerEvent;
 		NullCheck(L_64);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_65;
@@ -6882,7 +6882,7 @@ IL_010d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:198>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_68 = ___0_pointerEvent;
 		NullCheck(L_68);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_69;
@@ -6897,7 +6897,7 @@ IL_010d:
 
 IL_0157:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:200>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_73 = ___0_pointerEvent;
 		__this->___m_InputPointerEvent = L_73;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InputPointerEvent), (void*)L_73);
@@ -6905,7 +6905,7 @@ IL_0157:
 
 IL_015f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:204>
 		bool L_74 = ___2_released;
 		V_12 = L_74;
 		bool L_75 = V_12;
@@ -6915,7 +6915,7 @@ IL_015f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:207>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:207>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_76 = ___0_pointerEvent;
 		NullCheck(L_76);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_77;
@@ -6926,12 +6926,12 @@ IL_015f:
 		L_79 = ExecuteEvents_get_pointerUpHandler_m51B83B4AD7498D6F7A2CBD5F2331E91A37AE4CF2(NULL);
 		bool L_80;
 		L_80 = ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6(L_77, L_78, L_79, ExecuteEvents_Execute_TisIPointerUpHandler_tB2D4D0ABEAFF77BE8D0159D638D85E1AF7BAF210_mBB70745D5D17BF6402CABEFF0F52911F88C197A6_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:212>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:212>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81 = V_0;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_82;
 		L_82 = ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E(L_81, ExecuteEvents_GetEventHandler_TisIPointerClickHandler_t77341AA19DE37C26F5F619DE8BD28B70D5A2B5D8_m3363BED905E60A4545A8CA5B8C68BA709E99536E_RuntimeMethod_var);
 		V_13 = L_82;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:215>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_83 = ___0_pointerEvent;
 		NullCheck(L_83);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_84;
@@ -6969,7 +6969,7 @@ IL_019c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:217>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:217>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_90 = ___0_pointerEvent;
 		NullCheck(L_90);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_91;
@@ -6985,7 +6985,7 @@ IL_019c:
 
 IL_01b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:219>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:219>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_95 = ___0_pointerEvent;
 		NullCheck(L_95);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_96;
@@ -7022,7 +7022,7 @@ IL_01cf:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:221>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:221>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_101 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_102 = ___0_pointerEvent;
 		il2cpp_codegen_runtime_class_init_inline(ExecuteEvents_t74DCF8B83743EE2773ACF182344612A048E2CC59_il2cpp_TypeInfo_var);
@@ -7034,19 +7034,19 @@ IL_01cf:
 
 IL_01e4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:224>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:224>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_105 = ___0_pointerEvent;
 		NullCheck(L_105);
 		PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline(L_105, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:225>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:225>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_106 = ___0_pointerEvent;
 		NullCheck(L_106);
 		PointerEventData_set_pointerPress_m51241AAA6E5F87ADEBBB8DB7D4452CE45200BEE8(L_106, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:226>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:226>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_107 = ___0_pointerEvent;
 		NullCheck(L_107);
 		PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline(L_107, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:228>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:228>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_108 = ___0_pointerEvent;
 		NullCheck(L_108);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_109;
@@ -7083,7 +7083,7 @@ IL_0213:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:229>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:229>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_114 = ___0_pointerEvent;
 		NullCheck(L_114);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_115;
@@ -7098,15 +7098,15 @@ IL_0213:
 
 IL_022b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:231>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:231>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_119 = ___0_pointerEvent;
 		NullCheck(L_119);
 		PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline(L_119, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:232>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:232>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_120 = ___0_pointerEvent;
 		NullCheck(L_120);
 		PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline(L_120, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:235>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:235>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_121 = ___0_pointerEvent;
 		NullCheck(L_121);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_122;
@@ -7117,11 +7117,11 @@ IL_022b:
 		L_124 = ExecuteEvents_get_pointerExitHandler_m03735363884BC967C1B04246B51FE98886C9C6DE(NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_125;
 		L_125 = ExecuteEvents_ExecuteHierarchy_TisIPointerExitHandler_t1AA3FC124CC77401AF27435A3D6E611F5C7A57EE_m50CEB3F041077A74C37270714BBF0CC3EB37DD92(L_122, L_123, L_124, ExecuteEvents_ExecuteHierarchy_TisIPointerExitHandler_t1AA3FC124CC77401AF27435A3D6E611F5C7A57EE_m50CEB3F041077A74C37270714BBF0CC3EB37DD92_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:236>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:236>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_126 = ___0_pointerEvent;
 		NullCheck(L_126);
 		PointerEventData_set_pointerEnter_m2DA660C24CBDE9B83DF2B2D09D9AF0E94A770D17_inline(L_126, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:238>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:238>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_127 = ___0_pointerEvent;
 		__this->___m_InputPointerEvent = L_127;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InputPointerEvent), (void*)L_127);
@@ -7129,23 +7129,23 @@ IL_022b:
 
 IL_025d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:240>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:240>
 		return;
 	}
 }
-// Method Definition Index: 67603
+// Method Definition Index: 67918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchInputModule_DeactivateModule_m7CF377DBC376C3EC560523E76514E9F47CCC9DEE (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:244>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:244>
 		BaseInputModule_DeactivateModule_mAE698307DADBE4DE8A26BD3DE5F3F7E3D75B385D(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:245>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:245>
 		PointerInputModule_ClearSelection_mC5852667E5B9CA97C2A4CAB3D7C907344511C1D2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:246>
 		return;
 	}
 }
-// Method Definition Index: 67604
+// Method Definition Index: 67919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TouchInputModule_ToString_m1AD08DB012D85A33FC0EA3322D5AA5EB98CD1956 (TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7175,11 +7175,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TouchInputModule_ToString_m1AD08DB0
 	String_t* G_B3_0 = NULL;
 	StringBuilder_t* G_B3_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:250>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:250>
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:251>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:251>
 		StringBuilder_t* L_1 = V_0;
 		bool L_2;
 		L_2 = TouchInputModule_UseFakeInput_m66A84384ADA044187F239B1CFC143C42E5E56774(__this, NULL);
@@ -7207,7 +7207,7 @@ IL_001c:
 		NullCheck(G_B3_1);
 		StringBuilder_t* L_3;
 		L_3 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(G_B3_1, G_B3_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:252>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:252>
 		bool L_4;
 		L_4 = TouchInputModule_UseFakeInput_m66A84384ADA044187F239B1CFC143C42E5E56774(__this, NULL);
 		V_1 = L_4;
@@ -7218,11 +7218,11 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:254>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:254>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_6;
 		L_6 = PointerInputModule_GetLastPointerEventData_m6355023718EB2DCF6D9C226A57B63B70CCEECAB4(__this, (-1), NULL);
 		V_2 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:255>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:255>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = V_2;
 		V_3 = (bool)((!(((RuntimeObject*)(PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB*)L_7) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_8 = V_3;
@@ -7232,7 +7232,7 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:256>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:256>
 		StringBuilder_t* L_9 = V_0;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_10 = V_2;
 		NullCheck(L_10);
@@ -7250,7 +7250,7 @@ IL_004a:
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
 		Dictionary_2_t489B023479196B8FC9709A9F834FC38729BD9493* L_13 = ((PointerInputModule_tD71E11FA989C22D83883E120EAA4F05929907556*)__this)->___m_PointerData;
 		NullCheck(L_13);
 		Enumerator_tAC6F215019B1EAEAEE81308CEBA6052DECD5EE7E L_14;
@@ -7275,11 +7275,11 @@ FINALLY_0086:
 
 IL_005e_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
+				//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
 				KeyValuePair_2_tC51A92A69CB9B2F98A91443EE066E405EDCA4296 L_15;
 				L_15 = Enumerator_get_Current_mEC2B6AFDB80F9344C20DF0D6A63925642A413615_inline((&V_4), Enumerator_get_Current_mEC2B6AFDB80F9344C20DF0D6A63925642A413615_RuntimeMethod_var);
 				V_5 = L_15;
-				//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:261>
+				//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:261>
 				StringBuilder_t* L_16 = V_0;
 				String_t* L_17;
 				L_17 = KeyValuePair_2_ToString_m5F8161F26E20B830F794E3C0B87C0570D011D4AD((&V_5), KeyValuePair_2_ToString_m5F8161F26E20B830F794E3C0B87C0570D011D4AD_RuntimeMethod_var);
@@ -7290,7 +7290,7 @@ IL_005e_1:
 
 IL_007b_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
+				//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:260>
 				bool L_19;
 				L_19 = Enumerator_MoveNext_m69F94D82492DD2778B91F594B491223C02265150((&V_4), Enumerator_MoveNext_m69F94D82492DD2778B91F594B491223C02265150_RuntimeMethod_var);
 				if (L_19)
@@ -7314,7 +7314,7 @@ IL_0095:
 
 IL_0096:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:263>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:263>
 		StringBuilder_t* L_20 = V_0;
 		NullCheck(L_20);
 		String_t* L_21;
@@ -7325,7 +7325,7 @@ IL_0096:
 
 IL_00a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:264>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/InputModules/TouchInputModule.cs:264>
 		String_t* L_22 = V_6;
 		return L_22;
 	}
@@ -7338,1968 +7338,6 @@ IL_00a0:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 67605
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_AddRaycaster_mD2EE52F55FBDB3BEAAF583C4445D4D16B09B6350 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:11>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_1 = ___0_baseRaycaster;
-		NullCheck(L_0);
-		bool L_2;
-		L_2 = List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C(L_0, L_1, List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
-		V_0 = L_2;
-		bool L_3 = V_0;
-		if (!L_3)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:12>
-		goto IL_001e;
-	}
-
-IL_0012:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:14>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_4 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_5 = ___0_baseRaycaster;
-		NullCheck(L_4);
-		List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_inline(L_4, L_5, List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_RuntimeMethod_var);
-	}
-
-IL_001e:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:15>
-		return;
-	}
-}
-// Method Definition Index: 67606
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* RaycasterManager_GetRaycasters_m876BA9CA8DB8E6D351DC4A97473753503B7017DE (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* V_0 = NULL;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:22>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
-		V_0 = L_0;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:23>
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_1 = V_0;
-		return L_1;
-	}
-}
-// Method Definition Index: 67607
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_RemoveRaycasters_m0800E0ACE007AD43B62D10C1029EC85E7DE28999 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:27>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_1 = ___0_baseRaycaster;
-		NullCheck(L_0);
-		bool L_2;
-		L_2 = List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C(L_0, L_1, List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
-		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		bool L_3 = V_0;
-		if (!L_3)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:28>
-		goto IL_0021;
-	}
-
-IL_0015:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:29>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_4 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_5 = ___0_baseRaycaster;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B(L_4, L_5, List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B_RuntimeMethod_var);
-	}
-
-IL_0021:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:30>
-		return;
-	}
-}
-// Method Definition Index: 67608
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager__cctor_m06146026A557346F1469D15E855918E746125F90 (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t02E640552264E3DEAE676267B620815D33BCD0DF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycasterManager.cs:7>
-		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = (List_1_t02E640552264E3DEAE676267B620815D33BCD0DF*)il2cpp_codegen_object_new(List_1_t02E640552264E3DEAE676267B620815D33BCD0DF_il2cpp_TypeInfo_var);
-		List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41(L_0, List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41_RuntimeMethod_var);
-		((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters), (void*)L_0);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 67611
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_priority_m79C109ECC138B84A60F9CFA40242628A8B29C838 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:32>
-		V_0 = 0;
-		goto IL_0005;
-	}
-
-IL_0005:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:32>
-		int32_t L_0 = V_0;
-		return L_0;
-	}
-}
-// Method Definition Index: 67612
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_sortOrderPriority_m4E0BEBF85F720AE4B7C78E99CCD786779C3E7226 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:40>
-		V_0 = ((int32_t)-2147483648LL);
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:40>
-		int32_t L_0 = V_0;
-		return L_0;
-	}
-}
-// Method Definition Index: 67613
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_renderOrderPriority_m03C407856FF76393AB6EE26FA173131B8F36CA66 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:48>
-		V_0 = ((int32_t)-2147483648LL);
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:48>
-		int32_t L_0 = V_0;
-		return L_0;
-	}
-}
-// Method Definition Index: 67614
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* BaseRaycaster_get_rootRaycaster_m63E20D85A8B9867AC196768924F8BE579668BF28 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* V_1 = NULL;
-	bool V_2 = false;
-	BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* V_3 = NULL;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:58>
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_0 = __this->___m_RootRaycaster;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
-		{
-			goto IL_0030;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:60>
-		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_3;
-		L_3 = Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C(__this, Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C_RuntimeMethod_var);
-		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:61>
-		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_4 = V_1;
-		NullCheck(L_4);
-		V_2 = (bool)((!(((uint32_t)(((RuntimeArray*)L_4)->max_length)) <= ((uint32_t)0)))? 1 : 0);
-		bool L_5 = V_2;
-		if (!L_5)
-		{
-			goto IL_002f;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:62>
-		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_6 = V_1;
-		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_7 = V_1;
-		NullCheck(L_7);
-		NullCheck(L_6);
-		int32_t L_8 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_7)->max_length)), 1));
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
-		__this->___m_RootRaycaster = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)L_9);
-	}
-
-IL_002f:
-	{
-	}
-
-IL_0030:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:65>
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_10 = __this->___m_RootRaycaster;
-		V_3 = L_10;
-		goto IL_0039;
-	}
-
-IL_0039:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:66>
-		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_11 = V_3;
-		return L_11;
-	}
-}
-// Method Definition Index: 67615
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BaseRaycaster_ToString_m12811CE16AB7E07C949B78CDE309C4B2E44B5377 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2E8BE7BC315CC297C7A3C2864B3A2ED1BD553384);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70F1769C72FCAF144F53009F7DA60ED467C29635);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75B536F4B16F980DC1BE8BFB67378A32681C6F79);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9D2B27E9061DE91A9190184698F3F04E23827CA1);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	String_t* V_1 = NULL;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B2_0 = NULL;
-	int32_t G_B2_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B2_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B2_3 = NULL;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B1_0 = NULL;
-	int32_t G_B1_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B1_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B1_3 = NULL;
-	String_t* G_B3_0 = NULL;
-	int32_t G_B3_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B3_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B3_3 = NULL;
-	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* G_B5_0 = NULL;
-	int32_t G_B5_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_3 = NULL;
-	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* G_B4_0 = NULL;
-	int32_t G_B4_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_3 = NULL;
-	String_t* G_B6_0 = NULL;
-	int32_t G_B6_1 = 0;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:71>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:72>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:73>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:74>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)8);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = L_0;
-		NullCheck(L_1);
-		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral70F1769C72FCAF144F53009F7DA60ED467C29635);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = L_1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
-		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = L_3;
-		if (L_4)
-		{
-			G_B2_0 = L_4;
-			G_B2_1 = 1;
-			G_B2_2 = L_2;
-			G_B2_3 = L_2;
-			goto IL_001e;
-		}
-		G_B1_0 = L_4;
-		G_B1_1 = 1;
-		G_B1_2 = L_2;
-		G_B1_3 = L_2;
-	}
-	{
-		G_B3_0 = ((String_t*)(NULL));
-		G_B3_1 = G_B1_1;
-		G_B3_2 = G_B1_2;
-		G_B3_3 = G_B1_3;
-		goto IL_0023;
-	}
-
-IL_001e:
-	{
-		NullCheck(G_B2_0);
-		String_t* L_5;
-		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B2_0);
-		G_B3_0 = L_5;
-		G_B3_1 = G_B2_1;
-		G_B3_2 = G_B2_2;
-		G_B3_3 = G_B2_3;
-	}
-
-IL_0023:
-	{
-		NullCheck(G_B3_2);
-		(G_B3_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B3_1), (String_t*)G_B3_0);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = G_B3_3;
-		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral9D2B27E9061DE91A9190184698F3F04E23827CA1);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8;
-		L_8 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = L_8;
-		if (L_9)
-		{
-			G_B5_0 = L_9;
-			G_B5_1 = 3;
-			G_B5_2 = L_7;
-			G_B5_3 = L_7;
-			goto IL_003b;
-		}
-		G_B4_0 = L_9;
-		G_B4_1 = 3;
-		G_B4_2 = L_7;
-		G_B4_3 = L_7;
-	}
-	{
-		G_B6_0 = ((String_t*)(NULL));
-		G_B6_1 = G_B4_1;
-		G_B6_2 = G_B4_2;
-		G_B6_3 = G_B4_3;
-		goto IL_0040;
-	}
-
-IL_003b:
-	{
-		NullCheck(G_B5_0);
-		String_t* L_10;
-		L_10 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B5_0);
-		G_B6_0 = L_10;
-		G_B6_1 = G_B5_1;
-		G_B6_2 = G_B5_2;
-		G_B6_3 = G_B5_3;
-	}
-
-IL_0040:
-	{
-		NullCheck(G_B6_2);
-		(G_B6_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B6_1), (String_t*)G_B6_0);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = G_B6_3;
-		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral2E8BE7BC315CC297C7A3C2864B3A2ED1BD553384);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = L_11;
-		int32_t L_13;
-		L_13 = VirtualFuncInvoker0< int32_t >::Invoke(20, __this);
-		V_0 = L_13;
-		String_t* L_14;
-		L_14 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
-		NullCheck(L_12);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_14);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_12;
-		NullCheck(L_15);
-		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral75B536F4B16F980DC1BE8BFB67378A32681C6F79);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = L_15;
-		int32_t L_17;
-		L_17 = VirtualFuncInvoker0< int32_t >::Invoke(21, __this);
-		V_0 = L_17;
-		String_t* L_18;
-		L_18 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
-		NullCheck(L_16);
-		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)L_18);
-		String_t* L_19;
-		L_19 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_16, NULL);
-		V_1 = L_19;
-		goto IL_007b;
-	}
-
-IL_007b:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:75>
-		String_t* L_20 = V_1;
-		return L_20;
-	}
-}
-// Method Definition Index: 67616
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnEnable_m87CCF1ACD4116BB8BC0D9DB427F5B07C6FDE3D96 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:79>
-		UIBehaviour_OnEnable_m8989ABF5C038905A68E5536BED2E6FFAF8767FFC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:80>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		RaycasterManager_AddRaycaster_mD2EE52F55FBDB3BEAAF583C4445D4D16B09B6350(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:81>
-		return;
-	}
-}
-// Method Definition Index: 67617
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnDisable_mC90A700D5F78DDAD0DD926983C2A8D7C50A5D880 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:85>
-		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
-		RaycasterManager_RemoveRaycasters_m0800E0ACE007AD43B62D10C1029EC85E7DE28999(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:86>
-		UIBehaviour_OnDisable_m18D5A0B93F65FB50F4D6CE8197EC07F3452C5DDE(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:87>
-		return;
-	}
-}
-// Method Definition Index: 67618
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnCanvasHierarchyChanged_m20A82CFED659012D1F052C5026B8294B44D99BD7 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:91>
-		UIBehaviour_OnCanvasHierarchyChanged_mCAC018CB33FA00E857288B64E3722226638A1229(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:92>
-		__this->___m_RootRaycaster = (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)(BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:93>
-		return;
-	}
-}
-// Method Definition Index: 67619
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnTransformParentChanged_m121068CDDBC97032FF51C4ED944D4C126CB58F7F (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:97>
-		UIBehaviour_OnTransformParentChanged_mAD56D3C6049A1746F00DC2643D1666F7DE921384(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:98>
-		__this->___m_RootRaycaster = (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)(BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:99>
-		return;
-	}
-}
-// Method Definition Index: 67620
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster__ctor_m1B6A963368E54C1E450BE15FAF1AE082142A1683 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
-{
-	{
-		UIBehaviour__ctor_m24C66A65DDD996E779871C6655CF11B871F11337(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 67621
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics2DRaycaster__ctor_mF2F12F2AF9DDCA74EB09349D038A67F3D3F88CF9 (Physics2DRaycaster_t8E0FE5BD8DC96C60EE4BA334B0607B63A69761A7* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:26>
-		PhysicsRaycaster__ctor_mB7D4BAC26DC219A10060B35498EE9D5F05AD0E80(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:27>
-		return;
-	}
-}
-// Method Definition Index: 67622
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics2DRaycaster_Raycast_m9F6AA9C9DC7A34C01959F2053446D3FFCE567630 (Physics2DRaycaster_t8E0FE5BD8DC96C60EE4BA334B0607B63A69761A7* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, List_1_t8292C421BBB00D7661DC07462822936152BAB446* ___1_resultAppendList, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	float V_1 = 0.0f;
-	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	bool V_8 = false;
-	bool V_9 = false;
-	int32_t V_10 = 0;
-	int32_t V_11 = 0;
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_12 = NULL;
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_13 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_14;
-	memset((&V_14), 0, sizeof(V_14));
-	SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* V_15 = NULL;
-	bool V_16 = false;
-	bool V_17 = false;
-	bool V_18 = false;
-	bool V_19 = false;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_20;
-	memset((&V_20), 0, sizeof(V_20));
-	bool V_21 = false;
-	bool V_22 = false;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B23_0 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B22_0 = NULL;
-	int32_t G_B24_0 = 0;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B24_1 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B26_0 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B25_0 = NULL;
-	int32_t G_B27_0 = 0;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B27_1 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B29_0 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B28_0 = NULL;
-	int32_t G_B30_0 = 0;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B30_1 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B32_0 = NULL;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B31_0 = NULL;
-	int32_t G_B33_0 = 0;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B33_1 = NULL;
-	int32_t G_B36_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:35>
-		il2cpp_codegen_initobj((&V_0), sizeof(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:36>
-		V_1 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:37>
-		V_2 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:38>
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
-		bool L_1;
-		L_1 = PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B(__this, L_0, (&V_0), (&V_2), (&V_1), NULL);
-		V_4 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_4;
-		if (!L_2)
-		{
-			goto IL_002c;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:39>
-		goto IL_0328;
-	}
-
-IL_002c:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:41>
-		V_3 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:43>
-		int32_t L_3;
-		L_3 = PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911(__this, NULL);
-		V_5 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_5;
-		if (!L_4)
-		{
-			goto IL_007f;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:45>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_5;
-		L_5 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_5);
-		GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C* L_6 = L_5->___getRayIntersectionAll;
-		V_6 = (bool)((((RuntimeObject*)(GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_7 = V_6;
-		if (!L_7)
-		{
-			goto IL_0056;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:46>
-		goto IL_0328;
-	}
-
-IL_0056:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:47>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_8;
-		L_8 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_8);
-		GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C* L_9 = L_8->___getRayIntersectionAll;
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_10 = V_0;
-		float L_11 = V_1;
-		int32_t L_12;
-		L_12 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
-		NullCheck(L_9);
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_13;
-		L_13 = GetRayIntersectionAllCallback_Invoke_m917AA4108EBDC724AFEF39BFD06A586B7461F497_inline(L_9, L_10, L_11, L_12, NULL);
-		__this->___m_Hits = L_13;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_13);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:48>
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_14 = __this->___m_Hits;
-		NullCheck(L_14);
-		V_3 = ((int32_t)(((RuntimeArray*)L_14)->max_length));
-		goto IL_00ed;
-	}
-
-IL_007f:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:52>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_15;
-		L_15 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_15);
-		GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980* L_16 = L_15->___getRayIntersectionAllNonAlloc;
-		V_7 = (bool)((((RuntimeObject*)(GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980*)L_16) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_17 = V_7;
-		if (!L_17)
-		{
-			goto IL_0098;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:53>
-		goto IL_0328;
-	}
-
-IL_0098:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:55>
-		int32_t L_18 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_LastMaxRayIntersections;
-		int32_t L_19 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_MaxRayIntersections;
-		V_8 = (bool)((((int32_t)((((int32_t)L_18) == ((int32_t)L_19))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_20 = V_8;
-		if (!L_20)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:57>
-		int32_t L_21;
-		L_21 = PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911(__this, NULL);
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_22 = (RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7*)(RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7*)SZArrayNew(RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7_il2cpp_TypeInfo_var, (uint32_t)L_21);
-		__this->___m_Hits = L_22;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_22);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:58>
-		int32_t L_23 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_MaxRayIntersections;
-		((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_LastMaxRayIntersections = L_23;
-	}
-
-IL_00ce:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:61>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_24;
-		L_24 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_24);
-		GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980* L_25 = L_24->___getRayIntersectionAllNonAlloc;
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_26 = V_0;
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_27 = __this->___m_Hits;
-		float L_28 = V_1;
-		int32_t L_29;
-		L_29 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
-		NullCheck(L_25);
-		int32_t L_30;
-		L_30 = GetRayIntersectionAllNonAllocCallback_Invoke_mFAA36E9AF362DC72204EEF53B28DBFC3367D09A7_inline(L_25, L_26, L_27, L_28, L_29, NULL);
-		V_3 = L_30;
-	}
-
-IL_00ed:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:64>
-		int32_t L_31 = V_3;
-		V_9 = (bool)((!(((uint32_t)L_31) <= ((uint32_t)0)))? 1 : 0);
-		bool L_32 = V_9;
-		if (!L_32)
-		{
-			goto IL_0328;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
-		V_10 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
-		int32_t L_33 = V_3;
-		V_11 = L_33;
-		goto IL_0318;
-	}
-
-IL_0106:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:68>
-		V_12 = (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF*)NULL;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:70>
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_34 = __this->___m_Hits;
-		int32_t L_35 = V_10;
-		NullCheck(L_34);
-		Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* L_36;
-		L_36 = RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD(((L_34)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_35))), NULL);
-		NullCheck(L_36);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_37;
-		L_37 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_36, NULL);
-		NullCheck(L_37);
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_38;
-		L_38 = GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A(L_37, GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A_RuntimeMethod_var);
-		V_13 = L_38;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:71>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_39 = V_13;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_40;
-		L_40 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_39, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_16 = L_40;
-		bool L_41 = V_16;
-		if (!L_41)
-		{
-			goto IL_017a;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:73>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_42 = V_13;
-		V_17 = (bool)((!(((RuntimeObject*)(SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B*)((SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B*)IsInstSealed((RuntimeObject*)L_42, SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_43 = V_17;
-		if (!L_43)
-		{
-			goto IL_014d;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:75>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_44 = V_13;
-		V_12 = L_44;
-	}
-
-IL_014d:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:78>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_45 = V_13;
-		V_18 = (bool)((!(((RuntimeObject*)(TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB*)((TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB*)IsInstSealed((RuntimeObject*)L_45, TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_46 = V_18;
-		if (!L_46)
-		{
-			goto IL_0163;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:80>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_47 = V_13;
-		V_12 = L_47;
-	}
-
-IL_0163:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:83>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_48 = V_13;
-		V_19 = (bool)((!(((RuntimeObject*)(SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC*)((SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC*)IsInstClass((RuntimeObject*)L_48, SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_49 = V_19;
-		if (!L_49)
-		{
-			goto IL_0179;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:85>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_50 = V_13;
-		V_12 = L_50;
-	}
-
-IL_0179:
-	{
-	}
-
-IL_017a:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:89>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:90>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:91>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:92>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:93>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:94>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:95>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:96>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:97>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:98>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:99>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:100>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:101>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:102>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:103>
-		il2cpp_codegen_initobj((&V_20), sizeof(RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023));
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_51 = __this->___m_Hits;
-		int32_t L_52 = V_10;
-		NullCheck(L_51);
-		Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* L_53;
-		L_53 = RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD(((L_51)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_52))), NULL);
-		NullCheck(L_53);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54;
-		L_54 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_53, NULL);
-		RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E((&V_20), L_54, NULL);
-		(&V_20)->___module = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_20)->___module), (void*)__this);
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_55 = __this->___m_Hits;
-		int32_t L_56 = V_10;
-		NullCheck(L_55);
-		float L_57;
-		L_57 = RaycastHit2D_get_distance_mD0FE1482E2768CF587AFB65488459697EAB64613(((L_55)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_56))), NULL);
-		(&V_20)->___distance = L_57;
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_58 = __this->___m_Hits;
-		int32_t L_59 = V_10;
-		NullCheck(L_58);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_60;
-		L_60 = RaycastHit2D_get_point_mB35E988E9E04328EFE926228A18334326721A36B(((L_58)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_59))), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_61;
-		L_61 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_60, NULL);
-		(&V_20)->___worldPosition = L_61;
-		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_62 = __this->___m_Hits;
-		int32_t L_63 = V_10;
-		NullCheck(L_62);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_64;
-		L_64 = RaycastHit2D_get_normal_m75F1EBDE347BACEB5A6A6AA72543C740806AB5F2(((L_62)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_63))), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65;
-		L_65 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_64, NULL);
-		(&V_20)->___worldNormal = L_65;
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_66 = ___0_eventData;
-		NullCheck(L_66);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_67;
-		L_67 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_66, NULL);
-		(&V_20)->___screenPosition = L_67;
-		int32_t L_68 = V_2;
-		(&V_20)->___displayIndex = L_68;
-		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_69 = ___1_resultAppendList;
-		NullCheck(L_69);
-		int32_t L_70;
-		L_70 = List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_inline(L_69, List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
-		(&V_20)->___index = ((float)L_70);
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_71 = V_12;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_72;
-		L_72 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_71, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_72)
-		{
-			G_B23_0 = (&V_20);
-			goto IL_0234;
-		}
-		G_B22_0 = (&V_20);
-	}
-	{
-		int32_t L_73;
-		L_73 = SortingGroup_get_invalidSortingGroupID_mEA453186185B225FA2410988959180BAEC604310(NULL);
-		G_B24_0 = L_73;
-		G_B24_1 = G_B22_0;
-		goto IL_023b;
-	}
-
-IL_0234:
-	{
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_74 = V_12;
-		NullCheck(L_74);
-		int32_t L_75;
-		L_75 = Renderer_get_sortingGroupID_m1DEFE39027236FF31AB603993BBC13C072E52118(L_74, NULL);
-		G_B24_0 = L_75;
-		G_B24_1 = G_B23_0;
-	}
-
-IL_023b:
-	{
-		G_B24_1->___sortingGroupID = G_B24_0;
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_76 = V_12;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_77;
-		L_77 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_76, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_77)
-		{
-			G_B26_0 = (&V_20);
-			goto IL_024f;
-		}
-		G_B25_0 = (&V_20);
-	}
-	{
-		G_B27_0 = 0;
-		G_B27_1 = G_B25_0;
-		goto IL_0256;
-	}
-
-IL_024f:
-	{
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_78 = V_12;
-		NullCheck(L_78);
-		int32_t L_79;
-		L_79 = Renderer_get_sortingGroupOrder_m40F058B3AFC92CCEF2475E0BD9A96464154E999E(L_78, NULL);
-		G_B27_0 = L_79;
-		G_B27_1 = G_B26_0;
-	}
-
-IL_0256:
-	{
-		G_B27_1->___sortingGroupOrder = G_B27_0;
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_80 = V_12;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_81;
-		L_81 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_80, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_81)
-		{
-			G_B29_0 = (&V_20);
-			goto IL_026a;
-		}
-		G_B28_0 = (&V_20);
-	}
-	{
-		G_B30_0 = 0;
-		G_B30_1 = G_B28_0;
-		goto IL_0271;
-	}
-
-IL_026a:
-	{
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_82 = V_12;
-		NullCheck(L_82);
-		int32_t L_83;
-		L_83 = Renderer_get_sortingLayerID_m3D7AE74F1B87099810CF969CB4520C85F9AE5F92(L_82, NULL);
-		G_B30_0 = L_83;
-		G_B30_1 = G_B29_0;
-	}
-
-IL_0271:
-	{
-		G_B30_1->___sortingLayer = G_B30_0;
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_84 = V_12;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_85;
-		L_85 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_84, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_85)
-		{
-			G_B32_0 = (&V_20);
-			goto IL_0285;
-		}
-		G_B31_0 = (&V_20);
-	}
-	{
-		G_B33_0 = 0;
-		G_B33_1 = G_B31_0;
-		goto IL_028c;
-	}
-
-IL_0285:
-	{
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_86 = V_12;
-		NullCheck(L_86);
-		int32_t L_87;
-		L_87 = Renderer_get_sortingOrder_m4CE7ADEEC8E2F28CC1D10B1D4091A10F8F1583FA(L_86, NULL);
-		G_B33_0 = L_87;
-		G_B33_1 = G_B32_0;
-	}
-
-IL_028c:
-	{
-		G_B33_1->___sortingOrder = G_B33_0;
-		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_88 = V_20;
-		V_14 = L_88;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:105>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:106>
-		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_89 = V_14;
-		int32_t L_90 = L_89.___sortingGroupID;
-		int32_t L_91;
-		L_91 = SortingGroup_get_invalidSortingGroupID_mEA453186185B225FA2410988959180BAEC604310(NULL);
-		if ((((int32_t)L_90) == ((int32_t)L_91)))
-		{
-			goto IL_02b8;
-		}
-	}
-	{
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_92 = V_12;
-		NullCheck(L_92);
-		int32_t L_93;
-		L_93 = Renderer_get_sortingGroupID_m1DEFE39027236FF31AB603993BBC13C072E52118(L_92, NULL);
-		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_94;
-		L_94 = SortingGroup_GetSortingGroupByIndex_mC4CFB06D8C4B0EA27FC4BDC60AA05F4E0B28426B(L_93, NULL);
-		V_15 = L_94;
-		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_95 = V_15;
-		G_B36_0 = ((!(((RuntimeObject*)(SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759*)L_95) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		goto IL_02b9;
-	}
-
-IL_02b8:
-	{
-		G_B36_0 = 0;
-	}
-
-IL_02b9:
-	{
-		V_21 = (bool)G_B36_0;
-		bool L_96 = V_21;
-		if (!L_96)
-		{
-			goto IL_0308;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:109>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_97;
-		L_97 = Ray_get_direction_m21C2D22D3BD4A683BD4DC191AB22DD05F5EC2086_inline((&V_0), NULL);
-		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_98 = V_15;
-		NullCheck(L_98);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_99;
-		L_99 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_98, NULL);
-		NullCheck(L_99);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_100;
-		L_100 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_99, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_101;
-		L_101 = Ray_get_origin_m97604A8F180316A410DCD77B7D74D04522FA1BA6_inline((&V_0), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_102;
-		L_102 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_100, L_101, NULL);
-		float L_103;
-		L_103 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_97, L_102, NULL);
-		(&V_14)->___distance = L_103;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:110>
-		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_104 = V_15;
-		NullCheck(L_104);
-		int32_t L_105;
-		L_105 = SortingGroup_get_sortingLayerID_m37C70CEA78DA6E28F405C67EDE95D5C2191F0055(L_104, NULL);
-		(&V_14)->___sortingLayer = L_105;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:111>
-		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_106 = V_15;
-		NullCheck(L_106);
-		int32_t L_107;
-		L_107 = SortingGroup_get_sortingOrder_mC80606E6BB9A6D5E3AB61A0451C48203A0C1AB6A(L_106, NULL);
-		(&V_14)->___sortingOrder = L_107;
-	}
-
-IL_0308:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:114>
-		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_108 = ___1_resultAppendList;
-		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_109 = V_14;
-		NullCheck(L_108);
-		List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_inline(L_108, L_109, List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
-		int32_t L_110 = V_10;
-		V_10 = ((int32_t)il2cpp_codegen_add(L_110, 1));
-	}
-
-IL_0318:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
-		int32_t L_111 = V_10;
-		int32_t L_112 = V_11;
-		V_22 = (bool)((((int32_t)L_111) < ((int32_t)L_112))? 1 : 0);
-		bool L_113 = V_22;
-		if (L_113)
-		{
-			goto IL_0106;
-		}
-	}
-	{
-	}
-
-IL_0328:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:118>
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 67623
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster__ctor_mB7D4BAC26DC219A10060B35498EE9D5F05AD0E80 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:27>
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0;
-		L_0 = LayerMask_op_Implicit_m01C8996A2CB2085328B9C33539C43139660D8222((-1), NULL);
-		__this->___m_EventMask = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:33>
-		__this->___m_MaxRayIntersections = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:34>
-		__this->___m_LastMaxRayIntersections = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:40>
-		BaseRaycaster__ctor_m1B6A963368E54C1E450BE15FAF1AE082142A1683(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:41>
-		return;
-	}
-}
-// Method Definition Index: 67624
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* PhysicsRaycaster_get_eventCamera_m95026618116D1781A906DDE4AF9C415F2374013C (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	bool V_1 = false;
-	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_2 = NULL;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:47>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0 = __this->___m_EventCamera;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
-		{
-			goto IL_001d;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:48>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_3;
-		L_3 = Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4(__this, Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
-		__this->___m_EventCamera = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_EventCamera), (void*)L_3);
-	}
-
-IL_001d:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:50>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4 = __this->___m_EventCamera;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_1 = L_5;
-		bool L_6 = V_1;
-		if (!L_6)
-		{
-			goto IL_0035;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:51>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_7;
-		L_7 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
-		V_2 = L_7;
-		goto IL_003e;
-	}
-
-IL_0035:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:53>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8 = __this->___m_EventCamera;
-		V_2 = L_8;
-		goto IL_003e;
-	}
-
-IL_003e:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:54>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = V_2;
-		return L_9;
-	}
-}
-// Method Definition Index: 67625
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_depth_mCC2E924588088DB1DCA160765C09734D3C4F7F60 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t G_B3_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:63>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
-		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_1)
-		{
-			goto IL_0016;
-		}
-	}
-	{
-		G_B3_0 = ((int32_t)16777215);
-		goto IL_0022;
-	}
-
-IL_0016:
-	{
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
-		L_2 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_2);
-		float L_3;
-		L_3 = Camera_get_depth_mDF67FFF8ED61750467DFC4C6D8F236850AD1BB1D(L_2, NULL);
-		G_B3_0 = il2cpp_codegen_cast_double_to_int<int32_t>(L_3);
-	}
-
-IL_0022:
-	{
-		V_0 = G_B3_0;
-		goto IL_0025;
-	}
-
-IL_0025:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:63>
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
-// Method Definition Index: 67626
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t G_B3_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:71>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
-		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_1)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		G_B3_0 = (-1);
-		goto IL_0029;
-	}
-
-IL_0012:
-	{
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
-		L_2 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = Camera_get_cullingMask_m6F5AFF8FB522F876D99E839BF77D8F27F26A1EF8(L_2, NULL);
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_4 = __this->___m_EventMask;
-		int32_t L_5;
-		L_5 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_4, NULL);
-		G_B3_0 = ((int32_t)(L_3&L_5));
-	}
-
-IL_0029:
-	{
-		V_0 = G_B3_0;
-		goto IL_002c;
-	}
-
-IL_002c:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:71>
-		int32_t L_6 = V_0;
-		return L_6;
-	}
-}
-// Method Definition Index: 67627
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB PhysicsRaycaster_get_eventMask_mA8FE3884CD425BD59BD22784F4D5219159426DB9 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:79>
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0 = __this->___m_EventMask;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:79>
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_1 = V_0;
-		return L_1;
-	}
-}
-// Method Definition Index: 67628
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_set_eventMask_mD5110BE565C7E3F1738369519D44587452CA056D (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___0_value, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:80>
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0 = ___0_value;
-		__this->___m_EventMask = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:80>
-		return;
-	}
-}
-// Method Definition Index: 67629
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:91>
-		int32_t L_0 = __this->___m_MaxRayIntersections;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:91>
-		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-// Method Definition Index: 67630
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_set_maxRayIntersections_mECCF07932870A3B5C8875AE6204FC1ECB2CE01F7 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, int32_t ___0_value, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:92>
-		int32_t L_0 = ___0_value;
-		__this->___m_MaxRayIntersections = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:92>
-		return;
-	}
-}
-// Method Definition Index: 67631
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* ___1_ray, int32_t* ___2_eventDisplayIndex, float* ___3_distanceToClipPlane, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	float V_1 = 0.0f;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_7;
-	memset((&V_7), 0, sizeof(V_7));
-	float* G_B11_0 = NULL;
-	float* G_B10_0 = NULL;
-	float G_B12_0 = 0.0f;
-	float* G_B12_1 = NULL;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:105>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
-		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_2 = L_1;
-		bool L_2 = V_2;
-		if (!L_2)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:106>
-		V_3 = (bool)0;
-		goto IL_00ee;
-	}
-
-IL_0018:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:108>
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_3 = ___0_eventData;
-		NullCheck(L_3);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
-		L_4 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_3, NULL);
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_eventData;
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = PointerEventData_get_displayIndex_m8B2088561EA850F1CAD124797F0F6E3756F584FA_inline(L_5, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
-		L_7 = MultipleDisplayUtilities_RelativeMouseAtScaled_m80E65BE9255F7D65D9341FDFDB0CA11470703E71(L_4, L_6, NULL);
-		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:109>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
-		bool L_10;
-		L_10 = Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline(L_8, L_9, NULL);
-		V_4 = L_10;
-		bool L_11 = V_4;
-		if (!L_11)
-		{
-			goto IL_0067;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:112>
-		int32_t* L_12 = ___2_eventDisplayIndex;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
-		float L_14 = L_13.___z;
-		*((int32_t*)L_12) = (int32_t)il2cpp_codegen_cast_double_to_int<int32_t>(L_14);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:115>
-		int32_t* L_15 = ___2_eventDisplayIndex;
-		int32_t L_16 = *((int32_t*)L_15);
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_17;
-		L_17 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_17);
-		int32_t L_18;
-		L_18 = Camera_get_targetDisplay_m204A169C94EEABDB491FA5A77CC684146B10DF80(L_17, NULL);
-		V_5 = (bool)((((int32_t)((((int32_t)L_16) == ((int32_t)L_18))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_19 = V_5;
-		if (!L_19)
-		{
-			goto IL_0064;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:116>
-		V_3 = (bool)0;
-		goto IL_00ee;
-	}
-
-IL_0064:
-	{
-		goto IL_0075;
-	}
-
-IL_0067:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:122>
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_20 = ___0_eventData;
-		NullCheck(L_20);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21;
-		L_21 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_20, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		L_22 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_21, NULL);
-		V_0 = L_22;
-	}
-
-IL_0075:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:126>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_23;
-		L_23 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_23);
-		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_24;
-		L_24 = Camera_get_pixelRect_m5F40F5C324EB252261F66962411EE08CC4BE39E7(L_23, NULL);
-		V_7 = L_24;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
-		bool L_26;
-		L_26 = Rect_Contains_mB1160CD465F3E9616AA4EED72AFFD611BD8D2B6B_inline((&V_7), L_25, NULL);
-		V_6 = (bool)((((int32_t)L_26) == ((int32_t)0))? 1 : 0);
-		bool L_27 = V_6;
-		if (!L_27)
-		{
-			goto IL_0097;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:127>
-		V_3 = (bool)0;
-		goto IL_00ee;
-	}
-
-IL_0097:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:129>
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* L_28 = ___1_ray;
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_29;
-		L_29 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = V_0;
-		NullCheck(L_29);
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_31;
-		L_31 = Camera_ScreenPointToRay_m2887B9A49880B7AB670C57D66B67D6A6689FE315(L_29, L_30, NULL);
-		*(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00*)L_28 = L_31;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:131>
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* L_32 = ___1_ray;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
-		L_33 = Ray_get_direction_m21C2D22D3BD4A683BD4DC191AB22DD05F5EC2086_inline(L_32, NULL);
-		float L_34 = L_33.___z;
-		V_1 = L_34;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:132>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:133>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:134>
-		float* L_35 = ___3_distanceToClipPlane;
-		float L_36 = V_1;
-		bool L_37;
-		L_37 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline((0.0f), L_36, NULL);
-		if (L_37)
-		{
-			G_B11_0 = L_35;
-			goto IL_00e4;
-		}
-		G_B10_0 = L_35;
-	}
-	{
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_38;
-		L_38 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_38);
-		float L_39;
-		L_39 = Camera_get_farClipPlane_m1D7128B85B5DB866F75FBE8CEBA48335716B67BD(L_38, NULL);
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_40;
-		L_40 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
-		NullCheck(L_40);
-		float L_41;
-		L_41 = Camera_get_nearClipPlane_m5E8FAF84326E3192CB036BD29DCCDAF6A9861013(L_40, NULL);
-		float L_42 = V_1;
-		float L_43;
-		L_43 = fabsf(((float)(((float)il2cpp_codegen_subtract(L_39, L_41))/L_42)));
-		G_B12_0 = L_43;
-		G_B12_1 = G_B10_0;
-		goto IL_00e9;
-	}
-
-IL_00e4:
-	{
-		G_B12_0 = (std::numeric_limits<float>::infinity());
-		G_B12_1 = G_B11_0;
-	}
-
-IL_00e9:
-	{
-		*((float*)G_B12_1) = (float)G_B12_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:135>
-		V_3 = (bool)1;
-		goto IL_00ee;
-	}
-
-IL_00ee:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:136>
-		bool L_44 = V_3;
-		return L_44;
-	}
-}
-// Method Definition Index: 67632
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_Raycast_mB29925EB33102E9BEAA76658F8A59CA666C78B1A (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, List_1_t8292C421BBB00D7661DC07462822936152BAB446* ___1_resultAppendList, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	int32_t V_1 = 0;
-	float V_2 = 0.0f;
-	int32_t V_3 = 0;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	bool V_8 = false;
-	bool V_9 = false;
-	bool V_10 = false;
-	int32_t V_11 = 0;
-	int32_t V_12 = 0;
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_13;
-	memset((&V_13), 0, sizeof(V_13));
-	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_14;
-	memset((&V_14), 0, sizeof(V_14));
-	bool V_15 = false;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:141>
-		il2cpp_codegen_initobj((&V_0), sizeof(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00));
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:142>
-		V_1 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:143>
-		V_2 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:144>
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
-		bool L_1;
-		L_1 = PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B(__this, L_0, (&V_0), (&V_1), (&V_2), NULL);
-		V_4 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_4;
-		if (!L_2)
-		{
-			goto IL_002c;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:145>
-		goto IL_01f5;
-	}
-
-IL_002c:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:147>
-		V_3 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:149>
-		int32_t L_3 = __this->___m_MaxRayIntersections;
-		V_5 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_5;
-		if (!L_4)
-		{
-			goto IL_007f;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:151>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_5;
-		L_5 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_5);
-		RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A* L_6 = L_5->___raycast3DAll;
-		V_6 = (bool)((((RuntimeObject*)(RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_7 = V_6;
-		if (!L_7)
-		{
-			goto IL_0056;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:152>
-		goto IL_01f5;
-	}
-
-IL_0056:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:154>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_8;
-		L_8 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_8);
-		RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A* L_9 = L_8->___raycast3DAll;
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_10 = V_0;
-		float L_11 = V_2;
-		int32_t L_12;
-		L_12 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
-		NullCheck(L_9);
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_13;
-		L_13 = RaycastAllCallback_Invoke_mB30319766AF5F0D5145A6C0AFFEA829A31A5D4B7_inline(L_9, L_10, L_11, L_12, NULL);
-		__this->___m_Hits = L_13;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_13);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:155>
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_14 = __this->___m_Hits;
-		NullCheck(L_14);
-		V_3 = ((int32_t)(((RuntimeArray*)L_14)->max_length));
-		goto IL_00ed;
-	}
-
-IL_007f:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:159>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_15;
-		L_15 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_15);
-		GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC* L_16 = L_15->___getRaycastNonAlloc;
-		V_7 = (bool)((((RuntimeObject*)(GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC*)L_16) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_17 = V_7;
-		if (!L_17)
-		{
-			goto IL_0098;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:160>
-		goto IL_01f5;
-	}
-
-IL_0098:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:161>
-		int32_t L_18 = __this->___m_LastMaxRayIntersections;
-		int32_t L_19 = __this->___m_MaxRayIntersections;
-		V_8 = (bool)((((int32_t)((((int32_t)L_18) == ((int32_t)L_19))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_20 = V_8;
-		if (!L_20)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:163>
-		int32_t L_21 = __this->___m_MaxRayIntersections;
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_22 = (RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)SZArrayNew(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8_il2cpp_TypeInfo_var, (uint32_t)L_21);
-		__this->___m_Hits = L_22;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_22);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:164>
-		int32_t L_23 = __this->___m_MaxRayIntersections;
-		__this->___m_LastMaxRayIntersections = L_23;
-	}
-
-IL_00ce:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:167>
-		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_24;
-		L_24 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
-		NullCheck(L_24);
-		GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC* L_25 = L_24->___getRaycastNonAlloc;
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_26 = V_0;
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_27 = __this->___m_Hits;
-		float L_28 = V_2;
-		int32_t L_29;
-		L_29 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
-		NullCheck(L_25);
-		int32_t L_30;
-		L_30 = GetRaycastNonAllocCallback_Invoke_m36411365E9622819DAB93D0BB0F169FEE99F07D9_inline(L_25, L_26, L_27, L_28, L_29, NULL);
-		V_3 = L_30;
-	}
-
-IL_00ed:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:170>
-		int32_t L_31 = V_3;
-		V_9 = (bool)((!(((uint32_t)L_31) <= ((uint32_t)0)))? 1 : 0);
-		bool L_32 = V_9;
-		if (!L_32)
-		{
-			goto IL_01f5;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:172>
-		int32_t L_33 = V_3;
-		V_10 = (bool)((((int32_t)L_33) > ((int32_t)1))? 1 : 0);
-		bool L_34 = V_10;
-		if (!L_34)
-		{
-			goto IL_0118;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:173>
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_35 = __this->___m_Hits;
-		int32_t L_36 = V_3;
-		il2cpp_codegen_runtime_class_init_inline(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
-		RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* L_37 = ((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance;
-		Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB(L_35, 0, L_36, L_37, Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB_RuntimeMethod_var);
-	}
-
-IL_0118:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
-		V_11 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
-		int32_t L_38 = V_3;
-		V_12 = L_38;
-		goto IL_01e5;
-	}
-
-IL_0123:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:177>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:178>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:179>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:180>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:181>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:182>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:183>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:184>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:185>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:186>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:187>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:188>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:189>
-		il2cpp_codegen_initobj((&V_14), sizeof(RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023));
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_39 = __this->___m_Hits;
-		int32_t L_40 = V_11;
-		NullCheck(L_39);
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_41;
-		L_41 = RaycastHit_get_collider_m84B160439BBEAB6D9E94B799F720E25C9E2D444D(((L_39)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_40))), NULL);
-		NullCheck(L_41);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42;
-		L_42 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_41, NULL);
-		RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E((&V_14), L_42, NULL);
-		(&V_14)->___module = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_14)->___module), (void*)__this);
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_43 = __this->___m_Hits;
-		int32_t L_44 = V_11;
-		NullCheck(L_43);
-		float L_45;
-		L_45 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78(((L_43)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_44))), NULL);
-		(&V_14)->___distance = L_45;
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_46 = __this->___m_Hits;
-		int32_t L_47 = V_11;
-		NullCheck(L_46);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48;
-		L_48 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39(((L_46)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_47))), NULL);
-		(&V_14)->___worldPosition = L_48;
-		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_49 = __this->___m_Hits;
-		int32_t L_50 = V_11;
-		NullCheck(L_49);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_51;
-		L_51 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5(((L_49)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_50))), NULL);
-		(&V_14)->___worldNormal = L_51;
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_52 = ___0_eventData;
-		NullCheck(L_52);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53;
-		L_53 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_52, NULL);
-		(&V_14)->___screenPosition = L_53;
-		int32_t L_54 = V_1;
-		(&V_14)->___displayIndex = L_54;
-		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_55 = ___1_resultAppendList;
-		NullCheck(L_55);
-		int32_t L_56;
-		L_56 = List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_inline(L_55, List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
-		(&V_14)->___index = ((float)L_56);
-		(&V_14)->___sortingLayer = 0;
-		(&V_14)->___sortingOrder = 0;
-		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_57 = V_14;
-		V_13 = L_57;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:190>
-		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_58 = ___1_resultAppendList;
-		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_59 = V_13;
-		NullCheck(L_58);
-		List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_inline(L_58, L_59, List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
-		int32_t L_60 = V_11;
-		V_11 = ((int32_t)il2cpp_codegen_add(L_60, 1));
-	}
-
-IL_01e5:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
-		int32_t L_61 = V_11;
-		int32_t L_62 = V_12;
-		V_15 = (bool)((((int32_t)L_61) < ((int32_t)L_62))? 1 : 0);
-		bool L_63 = V_15;
-		if (L_63)
-		{
-			goto IL_0123;
-		}
-	}
-	{
-	}
-
-IL_01f5:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:194>
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 67633
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RaycastHitComparer_Compare_mB5B88FE52375A12B781682C712FE58193F417A03 (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* __this, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___0_x, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___1_y, const RuntimeMethod* method) 
-{
-	float V_0 = 0.0f;
-	int32_t V_1 = 0;
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:202>
-		float L_0;
-		L_0 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&___0_x), NULL);
-		V_0 = L_0;
-		float L_1;
-		L_1 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&___1_y), NULL);
-		int32_t L_2;
-		L_2 = Single_CompareTo_m06F7868162EB392D3E99103D1A0BD27463C9E66F((&V_0), L_1, NULL);
-		V_1 = L_2;
-		goto IL_001a;
-	}
-
-IL_001a:
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:203>
-		int32_t L_3 = V_1;
-		return L_3;
-	}
-}
-// Method Definition Index: 67634
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastHitComparer__ctor_mAB0536EE515BF2BD1B29BE3B39E8BA9E9CFE97C3 (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-// Method Definition Index: 67635
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastHitComparer__cctor_m772D29066D594105261C78CDDB5724BE28A773FA (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:199>
-		RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* L_0 = (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1*)il2cpp_codegen_object_new(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
-		RaycastHitComparer__ctor_mAB0536EE515BF2BD1B29BE3B39E8BA9E9CFE97C3(L_0, NULL);
-		((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance), (void*)L_0);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -9362,12 +7400,12 @@ IL2CPP_EXTERN_C void RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023_mar
 IL2CPP_EXTERN_C void RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023_marshal_com_cleanup(RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 67636
+// Method Definition Index: 67920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1 (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) 
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:17>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_GameObject;
 		V_0 = L_0;
 		goto IL_000a;
@@ -9375,7 +7413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:17>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = V_0;
 		return L_1;
 	}
@@ -9389,15 +7427,15 @@ IL2CPP_EXTERN_C  GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* RaycastRe
 	_returnValue = RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 67637
+// Method Definition Index: 67921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:18>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___m_GameObject = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_GameObject), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:18>
 		return;
 	}
 }
@@ -9408,7 +7446,7 @@ IL2CPP_EXTERN_C  void RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB
 	_thisAdjusted = reinterpret_cast<RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023*>(__this + _offset);
 	RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E(_thisAdjusted, ___0_value, method);
 }
-// Method Definition Index: 67638
+// Method Definition Index: 67922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099C9FA171CE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9420,7 +7458,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RaycastResult_get_isValid_m69957B97C041A
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:111>
 		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_0 = __this->___module;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -9453,7 +7491,7 @@ IL_001e:
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:111>
 		bool L_4 = V_0;
 		return L_4;
 	}
@@ -9467,52 +7505,52 @@ IL2CPP_EXTERN_C  bool RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099
 	_returnValue = RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099C9FA171CE(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 67639
+// Method Definition Index: 67923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastResult_Clear_m0E9DA70AC69CF143CEA8428AFC5BA552F99643AE (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:137>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:137>
 		RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E(__this, (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:138>
 		__this->___module = (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___module), (void*)(BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:139>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:139>
 		__this->___distance = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:140>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:140>
 		__this->___index = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:141>
 		__this->___depth = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:142>
 		__this->___sortingLayer = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:143>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:143>
 		__this->___sortingOrder = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:144>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
 		L_0 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		__this->___origin = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:145>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		__this->___worldNormal = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:146>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		__this->___worldPosition = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:147>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
 		L_4 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_3, NULL);
 		__this->___screenPosition = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:148>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:148>
 		__this->___displayIndex = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:150>
 		__this->___document = (UIDocument_t4186BEBCC01278F63B895274AA08AD9ADFBF4C77*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___document), (void*)(UIDocument_t4186BEBCC01278F63B895274AA08AD9ADFBF4C77*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:151>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:151>
 		__this->___element = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___element), (void*)(VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:153>
 		return;
 	}
 }
@@ -9523,7 +7561,7 @@ IL2CPP_EXTERN_C  void RaycastResult_Clear_m0E9DA70AC69CF143CEA8428AFC5BA552F9964
 	_thisAdjusted = reinterpret_cast<RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023*>(__this + _offset);
 	RaycastResult_Clear_m0E9DA70AC69CF143CEA8428AFC5BA552F99643AE(_thisAdjusted, method);
 }
-// Method Definition Index: 67640
+// Method Definition Index: 67924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RaycastResult_ToString_m0267000494B09783ABD507B9329ADB01FBBC5428 (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9573,7 +7611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RaycastResult_ToString_m0267000494B
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B8_2 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B8_3 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:157>
 		bool L_0;
 		L_0 = RaycastResult_get_isValid_m69957B97C041A9E3FAF4ECA82BB8099C9FA171CE(__this, NULL);
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -9584,25 +7622,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RaycastResult_ToString_m0267000494B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:158>
 		V_1 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		goto IL_016f;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:160>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:161>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:162>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:163>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:164>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:165>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:166>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:167>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:168>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:169>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:170>
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:160>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:166>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:167>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:169>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:170>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:171>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)24));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = L_2;
 		NullCheck(L_3);
@@ -9795,7 +7833,7 @@ IL_0059:
 
 IL_016f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/RaycastResult.cs:172>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycastResult.cs:172>
 		String_t* L_56 = V_1;
 		return L_56;
 	}
@@ -9817,52 +7855,2014 @@ IL2CPP_EXTERN_C  String_t* RaycastResult_ToString_m0267000494B09783ABD507B9329AD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67641
+// Method Definition Index: 67925
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_AddRaycaster_mD2EE52F55FBDB3BEAAF583C4445D4D16B09B6350 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:11>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_1 = ___0_baseRaycaster;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C(L_0, L_1, List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:12>
+		goto IL_001e;
+	}
+
+IL_0012:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:14>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_4 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_5 = ___0_baseRaycaster;
+		NullCheck(L_4);
+		List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_inline(L_4, L_5, List_1_Add_m82AF5EAB1EA13F21CE5250B008E4EBCFEDAB6D53_RuntimeMethod_var);
+	}
+
+IL_001e:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:15>
+		return;
+	}
+}
+// Method Definition Index: 67926
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* RaycasterManager_GetRaycasters_m876BA9CA8DB8E6D351DC4A97473753503B7017DE (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* V_0 = NULL;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:22>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:23>
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 67927
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager_RemoveRaycasters_m0800E0ACE007AD43B62D10C1029EC85E7DE28999 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___0_baseRaycaster, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:27>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_1 = ___0_baseRaycaster;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C(L_0, L_1, List_1_Contains_m1F747311B8D41F5857768B1D6D5C51C43CA8BE4C_RuntimeMethod_var);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:28>
+		goto IL_0021;
+	}
+
+IL_0015:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:29>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_4 = ((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters;
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_5 = ___0_baseRaycaster;
+		NullCheck(L_4);
+		bool L_6;
+		L_6 = List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B(L_4, L_5, List_1_Remove_m585A9E471D1C60EE46BA224A58947647F1E2B83B_RuntimeMethod_var);
+	}
+
+IL_0021:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:30>
+		return;
+	}
+}
+// Method Definition Index: 67928
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycasterManager__cctor_m06146026A557346F1469D15E855918E746125F90 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t02E640552264E3DEAE676267B620815D33BCD0DF_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/RaycasterManager.cs:7>
+		List_1_t02E640552264E3DEAE676267B620815D33BCD0DF* L_0 = (List_1_t02E640552264E3DEAE676267B620815D33BCD0DF*)il2cpp_codegen_object_new(List_1_t02E640552264E3DEAE676267B620815D33BCD0DF_il2cpp_TypeInfo_var);
+		List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41(L_0, List_1__ctor_m53B48CB7A08406A33847E0C3D9D7511DE8FB0D41_RuntimeMethod_var);
+		((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_StaticFields*)il2cpp_codegen_static_fields_for(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var))->___s_Raycasters), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 67931
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_priority_m79C109ECC138B84A60F9CFA40242628A8B29C838 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:32>
+		V_0 = 0;
+		goto IL_0005;
+	}
+
+IL_0005:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:32>
+		int32_t L_0 = V_0;
+		return L_0;
+	}
+}
+// Method Definition Index: 67932
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_sortOrderPriority_m4E0BEBF85F720AE4B7C78E99CCD786779C3E7226 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:40>
+		V_0 = ((int32_t)-2147483648LL);
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:40>
+		int32_t L_0 = V_0;
+		return L_0;
+	}
+}
+// Method Definition Index: 67933
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BaseRaycaster_get_renderOrderPriority_m03C407856FF76393AB6EE26FA173131B8F36CA66 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:48>
+		V_0 = ((int32_t)-2147483648LL);
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:48>
+		int32_t L_0 = V_0;
+		return L_0;
+	}
+}
+// Method Definition Index: 67934
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* BaseRaycaster_get_rootRaycaster_m63E20D85A8B9867AC196768924F8BE579668BF28 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* V_1 = NULL;
+	bool V_2 = false;
+	BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* V_3 = NULL;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:58>
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_0 = __this->___m_RootRaycaster;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:60>
+		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_3;
+		L_3 = Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C(__this, Component_GetComponentsInParent_TisBaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832_mA869CA05E07609C8F435F1D779B138F3F2425F8C_RuntimeMethod_var);
+		V_1 = L_3;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:61>
+		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_4 = V_1;
+		NullCheck(L_4);
+		V_2 = (bool)((!(((uint32_t)(((RuntimeArray*)L_4)->max_length)) <= ((uint32_t)0)))? 1 : 0);
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:62>
+		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_6 = V_1;
+		BaseRaycasterU5BU5D_tAE62D3FF1A5FF9DE20B2756DA4F4F8981925A799* L_7 = V_1;
+		NullCheck(L_7);
+		NullCheck(L_6);
+		int32_t L_8 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_7)->max_length)), 1));
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
+		__this->___m_RootRaycaster = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)L_9);
+	}
+
+IL_002f:
+	{
+	}
+
+IL_0030:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:65>
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_10 = __this->___m_RootRaycaster;
+		V_3 = L_10;
+		goto IL_0039;
+	}
+
+IL_0039:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:66>
+		BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* L_11 = V_3;
+		return L_11;
+	}
+}
+// Method Definition Index: 67935
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BaseRaycaster_ToString_m12811CE16AB7E07C949B78CDE309C4B2E44B5377 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2E8BE7BC315CC297C7A3C2864B3A2ED1BD553384);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70F1769C72FCAF144F53009F7DA60ED467C29635);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75B536F4B16F980DC1BE8BFB67378A32681C6F79);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9D2B27E9061DE91A9190184698F3F04E23827CA1);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	String_t* V_1 = NULL;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B2_0 = NULL;
+	int32_t G_B2_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B2_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B2_3 = NULL;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B1_0 = NULL;
+	int32_t G_B1_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B1_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B1_3 = NULL;
+	String_t* G_B3_0 = NULL;
+	int32_t G_B3_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B3_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B3_3 = NULL;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* G_B5_0 = NULL;
+	int32_t G_B5_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_3 = NULL;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* G_B4_0 = NULL;
+	int32_t G_B4_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_3 = NULL;
+	String_t* G_B6_0 = NULL;
+	int32_t G_B6_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:74>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)8);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = L_0;
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral70F1769C72FCAF144F53009F7DA60ED467C29635);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = L_1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = L_3;
+		if (L_4)
+		{
+			G_B2_0 = L_4;
+			G_B2_1 = 1;
+			G_B2_2 = L_2;
+			G_B2_3 = L_2;
+			goto IL_001e;
+		}
+		G_B1_0 = L_4;
+		G_B1_1 = 1;
+		G_B1_2 = L_2;
+		G_B1_3 = L_2;
+	}
+	{
+		G_B3_0 = ((String_t*)(NULL));
+		G_B3_1 = G_B1_1;
+		G_B3_2 = G_B1_2;
+		G_B3_3 = G_B1_3;
+		goto IL_0023;
+	}
+
+IL_001e:
+	{
+		NullCheck(G_B2_0);
+		String_t* L_5;
+		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B2_0);
+		G_B3_0 = L_5;
+		G_B3_1 = G_B2_1;
+		G_B3_2 = G_B2_2;
+		G_B3_3 = G_B2_3;
+	}
+
+IL_0023:
+	{
+		NullCheck(G_B3_2);
+		(G_B3_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B3_1), (String_t*)G_B3_0);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = G_B3_3;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral9D2B27E9061DE91A9190184698F3F04E23827CA1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8;
+		L_8 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = L_8;
+		if (L_9)
+		{
+			G_B5_0 = L_9;
+			G_B5_1 = 3;
+			G_B5_2 = L_7;
+			G_B5_3 = L_7;
+			goto IL_003b;
+		}
+		G_B4_0 = L_9;
+		G_B4_1 = 3;
+		G_B4_2 = L_7;
+		G_B4_3 = L_7;
+	}
+	{
+		G_B6_0 = ((String_t*)(NULL));
+		G_B6_1 = G_B4_1;
+		G_B6_2 = G_B4_2;
+		G_B6_3 = G_B4_3;
+		goto IL_0040;
+	}
+
+IL_003b:
+	{
+		NullCheck(G_B5_0);
+		String_t* L_10;
+		L_10 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B5_0);
+		G_B6_0 = L_10;
+		G_B6_1 = G_B5_1;
+		G_B6_2 = G_B5_2;
+		G_B6_3 = G_B5_3;
+	}
+
+IL_0040:
+	{
+		NullCheck(G_B6_2);
+		(G_B6_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B6_1), (String_t*)G_B6_0);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = G_B6_3;
+		NullCheck(L_11);
+		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral2E8BE7BC315CC297C7A3C2864B3A2ED1BD553384);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = L_11;
+		int32_t L_13;
+		L_13 = VirtualFuncInvoker0< int32_t >::Invoke(20, __this);
+		V_0 = L_13;
+		String_t* L_14;
+		L_14 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
+		NullCheck(L_12);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_14);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_12;
+		NullCheck(L_15);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral75B536F4B16F980DC1BE8BFB67378A32681C6F79);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = L_15;
+		int32_t L_17;
+		L_17 = VirtualFuncInvoker0< int32_t >::Invoke(21, __this);
+		V_0 = L_17;
+		String_t* L_18;
+		L_18 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
+		NullCheck(L_16);
+		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)L_18);
+		String_t* L_19;
+		L_19 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_16, NULL);
+		V_1 = L_19;
+		goto IL_007b;
+	}
+
+IL_007b:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:75>
+		String_t* L_20 = V_1;
+		return L_20;
+	}
+}
+// Method Definition Index: 67936
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnEnable_m87CCF1ACD4116BB8BC0D9DB427F5B07C6FDE3D96 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:79>
+		UIBehaviour_OnEnable_m8989ABF5C038905A68E5536BED2E6FFAF8767FFC(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:80>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		RaycasterManager_AddRaycaster_mD2EE52F55FBDB3BEAAF583C4445D4D16B09B6350(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:81>
+		return;
+	}
+}
+// Method Definition Index: 67937
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnDisable_mC90A700D5F78DDAD0DD926983C2A8D7C50A5D880 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:85>
+		il2cpp_codegen_runtime_class_init_inline(RaycasterManager_tE359EBDE4F0EF3681A6E3662B340AC4D53502074_il2cpp_TypeInfo_var);
+		RaycasterManager_RemoveRaycasters_m0800E0ACE007AD43B62D10C1029EC85E7DE28999(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:86>
+		UIBehaviour_OnDisable_m18D5A0B93F65FB50F4D6CE8197EC07F3452C5DDE(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:87>
+		return;
+	}
+}
+// Method Definition Index: 67938
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnCanvasHierarchyChanged_m20A82CFED659012D1F052C5026B8294B44D99BD7 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:91>
+		UIBehaviour_OnCanvasHierarchyChanged_mCAC018CB33FA00E857288B64E3722226638A1229(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:92>
+		__this->___m_RootRaycaster = (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)(BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:93>
+		return;
+	}
+}
+// Method Definition Index: 67939
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster_OnTransformParentChanged_m121068CDDBC97032FF51C4ED944D4C126CB58F7F (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:97>
+		UIBehaviour_OnTransformParentChanged_mAD56D3C6049A1746F00DC2643D1666F7DE921384(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:98>
+		__this->___m_RootRaycaster = (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RootRaycaster), (void*)(BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832*)NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/BaseRaycaster.cs:99>
+		return;
+	}
+}
+// Method Definition Index: 67940
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRaycaster__ctor_m1B6A963368E54C1E450BE15FAF1AE082142A1683 (BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* __this, const RuntimeMethod* method) 
+{
+	{
+		UIBehaviour__ctor_m24C66A65DDD996E779871C6655CF11B871F11337(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 67941
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics2DRaycaster__ctor_mF2F12F2AF9DDCA74EB09349D038A67F3D3F88CF9 (Physics2DRaycaster_t8E0FE5BD8DC96C60EE4BA334B0607B63A69761A7* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:26>
+		PhysicsRaycaster__ctor_mB7D4BAC26DC219A10060B35498EE9D5F05AD0E80(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:27>
+		return;
+	}
+}
+// Method Definition Index: 67942
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics2DRaycaster_Raycast_m9F6AA9C9DC7A34C01959F2053446D3FFCE567630 (Physics2DRaycaster_t8E0FE5BD8DC96C60EE4BA334B0607B63A69761A7* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, List_1_t8292C421BBB00D7661DC07462822936152BAB446* ___1_resultAppendList, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	int32_t V_10 = 0;
+	int32_t V_11 = 0;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_12 = NULL;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_13 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_14;
+	memset((&V_14), 0, sizeof(V_14));
+	SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* V_15 = NULL;
+	bool V_16 = false;
+	bool V_17 = false;
+	bool V_18 = false;
+	bool V_19 = false;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_20;
+	memset((&V_20), 0, sizeof(V_20));
+	bool V_21 = false;
+	bool V_22 = false;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B23_0 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B22_0 = NULL;
+	int32_t G_B24_0 = 0;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B24_1 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B26_0 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B25_0 = NULL;
+	int32_t G_B27_0 = 0;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B27_1 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B29_0 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B28_0 = NULL;
+	int32_t G_B30_0 = 0;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B30_1 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B32_0 = NULL;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B31_0 = NULL;
+	int32_t G_B33_0 = 0;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* G_B33_1 = NULL;
+	int32_t G_B36_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:35>
+		il2cpp_codegen_initobj((&V_0), sizeof(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00));
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:36>
+		V_1 = (0.0f);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:37>
+		V_2 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:38>
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
+		bool L_1;
+		L_1 = PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B(__this, L_0, (&V_0), (&V_2), (&V_1), NULL);
+		V_4 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
+		bool L_2 = V_4;
+		if (!L_2)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:39>
+		goto IL_0328;
+	}
+
+IL_002c:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:41>
+		V_3 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:43>
+		int32_t L_3;
+		L_3 = PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911(__this, NULL);
+		V_5 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
+		bool L_4 = V_5;
+		if (!L_4)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:45>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_5;
+		L_5 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_5);
+		GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C* L_6 = L_5->___getRayIntersectionAll;
+		V_6 = (bool)((((RuntimeObject*)(GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_7 = V_6;
+		if (!L_7)
+		{
+			goto IL_0056;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:46>
+		goto IL_0328;
+	}
+
+IL_0056:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:47>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_8;
+		L_8 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_8);
+		GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C* L_9 = L_8->___getRayIntersectionAll;
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_10 = V_0;
+		float L_11 = V_1;
+		int32_t L_12;
+		L_12 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
+		NullCheck(L_9);
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_13;
+		L_13 = GetRayIntersectionAllCallback_Invoke_m917AA4108EBDC724AFEF39BFD06A586B7461F497_inline(L_9, L_10, L_11, L_12, NULL);
+		__this->___m_Hits = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_13);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:48>
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_14 = __this->___m_Hits;
+		NullCheck(L_14);
+		V_3 = ((int32_t)(((RuntimeArray*)L_14)->max_length));
+		goto IL_00ed;
+	}
+
+IL_007f:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:52>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_15;
+		L_15 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_15);
+		GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980* L_16 = L_15->___getRayIntersectionAllNonAlloc;
+		V_7 = (bool)((((RuntimeObject*)(GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980*)L_16) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_17 = V_7;
+		if (!L_17)
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:53>
+		goto IL_0328;
+	}
+
+IL_0098:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:55>
+		int32_t L_18 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_LastMaxRayIntersections;
+		int32_t L_19 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_MaxRayIntersections;
+		V_8 = (bool)((((int32_t)((((int32_t)L_18) == ((int32_t)L_19))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_20 = V_8;
+		if (!L_20)
+		{
+			goto IL_00ce;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:57>
+		int32_t L_21;
+		L_21 = PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911(__this, NULL);
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_22 = (RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7*)(RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7*)SZArrayNew(RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7_il2cpp_TypeInfo_var, (uint32_t)L_21);
+		__this->___m_Hits = L_22;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_22);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:58>
+		int32_t L_23 = ((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_MaxRayIntersections;
+		((PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD*)__this)->___m_LastMaxRayIntersections = L_23;
+	}
+
+IL_00ce:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:61>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_24;
+		L_24 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_24);
+		GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980* L_25 = L_24->___getRayIntersectionAllNonAlloc;
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_26 = V_0;
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_27 = __this->___m_Hits;
+		float L_28 = V_1;
+		int32_t L_29;
+		L_29 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
+		NullCheck(L_25);
+		int32_t L_30;
+		L_30 = GetRayIntersectionAllNonAllocCallback_Invoke_mFAA36E9AF362DC72204EEF53B28DBFC3367D09A7_inline(L_25, L_26, L_27, L_28, L_29, NULL);
+		V_3 = L_30;
+	}
+
+IL_00ed:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:64>
+		int32_t L_31 = V_3;
+		V_9 = (bool)((!(((uint32_t)L_31) <= ((uint32_t)0)))? 1 : 0);
+		bool L_32 = V_9;
+		if (!L_32)
+		{
+			goto IL_0328;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
+		V_10 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
+		int32_t L_33 = V_3;
+		V_11 = L_33;
+		goto IL_0318;
+	}
+
+IL_0106:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:68>
+		V_12 = (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF*)NULL;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:70>
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_34 = __this->___m_Hits;
+		int32_t L_35 = V_10;
+		NullCheck(L_34);
+		Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* L_36;
+		L_36 = RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD(((L_34)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_35))), NULL);
+		NullCheck(L_36);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_37;
+		L_37 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_36, NULL);
+		NullCheck(L_37);
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_38;
+		L_38 = GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A(L_37, GameObject_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m026EB44DB6238F13E2AFBECF1FBBE924CB1B040A_RuntimeMethod_var);
+		V_13 = L_38;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:71>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_39 = V_13;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_40;
+		L_40 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_39, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_16 = L_40;
+		bool L_41 = V_16;
+		if (!L_41)
+		{
+			goto IL_017a;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:73>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_42 = V_13;
+		V_17 = (bool)((!(((RuntimeObject*)(SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B*)((SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B*)IsInstSealed((RuntimeObject*)L_42, SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_43 = V_17;
+		if (!L_43)
+		{
+			goto IL_014d;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:75>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_44 = V_13;
+		V_12 = L_44;
+	}
+
+IL_014d:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:78>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_45 = V_13;
+		V_18 = (bool)((!(((RuntimeObject*)(TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB*)((TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB*)IsInstSealed((RuntimeObject*)L_45, TilemapRenderer_t1A45FD335E86172CFBB77D657E1D6705A477A6CB_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_46 = V_18;
+		if (!L_46)
+		{
+			goto IL_0163;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:80>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_47 = V_13;
+		V_12 = L_47;
+	}
+
+IL_0163:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:83>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_48 = V_13;
+		V_19 = (bool)((!(((RuntimeObject*)(SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC*)((SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC*)IsInstClass((RuntimeObject*)L_48, SpriteShapeRenderer_tE998BB73CF661079736CCC23617E597AB230A4AC_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_49 = V_19;
+		if (!L_49)
+		{
+			goto IL_0179;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:85>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_50 = V_13;
+		V_12 = L_50;
+	}
+
+IL_0179:
+	{
+	}
+
+IL_017a:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:103>
+		il2cpp_codegen_initobj((&V_20), sizeof(RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023));
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_51 = __this->___m_Hits;
+		int32_t L_52 = V_10;
+		NullCheck(L_51);
+		Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* L_53;
+		L_53 = RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD(((L_51)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_52))), NULL);
+		NullCheck(L_53);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54;
+		L_54 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_53, NULL);
+		RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E((&V_20), L_54, NULL);
+		(&V_20)->___module = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_20)->___module), (void*)__this);
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_55 = __this->___m_Hits;
+		int32_t L_56 = V_10;
+		NullCheck(L_55);
+		float L_57;
+		L_57 = RaycastHit2D_get_distance_mD0FE1482E2768CF587AFB65488459697EAB64613(((L_55)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_56))), NULL);
+		(&V_20)->___distance = L_57;
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_58 = __this->___m_Hits;
+		int32_t L_59 = V_10;
+		NullCheck(L_58);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_60;
+		L_60 = RaycastHit2D_get_point_mB35E988E9E04328EFE926228A18334326721A36B(((L_58)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_59))), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_61;
+		L_61 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_60, NULL);
+		(&V_20)->___worldPosition = L_61;
+		RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* L_62 = __this->___m_Hits;
+		int32_t L_63 = V_10;
+		NullCheck(L_62);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_64;
+		L_64 = RaycastHit2D_get_normal_m75F1EBDE347BACEB5A6A6AA72543C740806AB5F2(((L_62)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_63))), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65;
+		L_65 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_64, NULL);
+		(&V_20)->___worldNormal = L_65;
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_66 = ___0_eventData;
+		NullCheck(L_66);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_67;
+		L_67 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_66, NULL);
+		(&V_20)->___screenPosition = L_67;
+		int32_t L_68 = V_2;
+		(&V_20)->___displayIndex = L_68;
+		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_69 = ___1_resultAppendList;
+		NullCheck(L_69);
+		int32_t L_70;
+		L_70 = List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_inline(L_69, List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
+		(&V_20)->___index = ((float)L_70);
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_71 = V_12;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_72;
+		L_72 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_71, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_72)
+		{
+			G_B23_0 = (&V_20);
+			goto IL_0234;
+		}
+		G_B22_0 = (&V_20);
+	}
+	{
+		int32_t L_73;
+		L_73 = SortingGroup_get_invalidSortingGroupID_mEA453186185B225FA2410988959180BAEC604310(NULL);
+		G_B24_0 = L_73;
+		G_B24_1 = G_B22_0;
+		goto IL_023b;
+	}
+
+IL_0234:
+	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_74 = V_12;
+		NullCheck(L_74);
+		int32_t L_75;
+		L_75 = Renderer_get_sortingGroupID_m1DEFE39027236FF31AB603993BBC13C072E52118(L_74, NULL);
+		G_B24_0 = L_75;
+		G_B24_1 = G_B23_0;
+	}
+
+IL_023b:
+	{
+		G_B24_1->___sortingGroupID = G_B24_0;
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_76 = V_12;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_77;
+		L_77 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_76, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_77)
+		{
+			G_B26_0 = (&V_20);
+			goto IL_024f;
+		}
+		G_B25_0 = (&V_20);
+	}
+	{
+		G_B27_0 = 0;
+		G_B27_1 = G_B25_0;
+		goto IL_0256;
+	}
+
+IL_024f:
+	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_78 = V_12;
+		NullCheck(L_78);
+		int32_t L_79;
+		L_79 = Renderer_get_sortingGroupOrder_m40F058B3AFC92CCEF2475E0BD9A96464154E999E(L_78, NULL);
+		G_B27_0 = L_79;
+		G_B27_1 = G_B26_0;
+	}
+
+IL_0256:
+	{
+		G_B27_1->___sortingGroupOrder = G_B27_0;
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_80 = V_12;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_81;
+		L_81 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_80, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_81)
+		{
+			G_B29_0 = (&V_20);
+			goto IL_026a;
+		}
+		G_B28_0 = (&V_20);
+	}
+	{
+		G_B30_0 = 0;
+		G_B30_1 = G_B28_0;
+		goto IL_0271;
+	}
+
+IL_026a:
+	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_82 = V_12;
+		NullCheck(L_82);
+		int32_t L_83;
+		L_83 = Renderer_get_sortingLayerID_m3D7AE74F1B87099810CF969CB4520C85F9AE5F92(L_82, NULL);
+		G_B30_0 = L_83;
+		G_B30_1 = G_B29_0;
+	}
+
+IL_0271:
+	{
+		G_B30_1->___sortingLayer = G_B30_0;
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_84 = V_12;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_85;
+		L_85 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_84, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_85)
+		{
+			G_B32_0 = (&V_20);
+			goto IL_0285;
+		}
+		G_B31_0 = (&V_20);
+	}
+	{
+		G_B33_0 = 0;
+		G_B33_1 = G_B31_0;
+		goto IL_028c;
+	}
+
+IL_0285:
+	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_86 = V_12;
+		NullCheck(L_86);
+		int32_t L_87;
+		L_87 = Renderer_get_sortingOrder_m4CE7ADEEC8E2F28CC1D10B1D4091A10F8F1583FA(L_86, NULL);
+		G_B33_0 = L_87;
+		G_B33_1 = G_B32_0;
+	}
+
+IL_028c:
+	{
+		G_B33_1->___sortingOrder = G_B33_0;
+		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_88 = V_20;
+		V_14 = L_88;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:106>
+		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_89 = V_14;
+		int32_t L_90 = L_89.___sortingGroupID;
+		int32_t L_91;
+		L_91 = SortingGroup_get_invalidSortingGroupID_mEA453186185B225FA2410988959180BAEC604310(NULL);
+		if ((((int32_t)L_90) == ((int32_t)L_91)))
+		{
+			goto IL_02b8;
+		}
+	}
+	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_92 = V_12;
+		NullCheck(L_92);
+		int32_t L_93;
+		L_93 = Renderer_get_sortingGroupID_m1DEFE39027236FF31AB603993BBC13C072E52118(L_92, NULL);
+		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_94;
+		L_94 = SortingGroup_GetSortingGroupByIndex_mC4CFB06D8C4B0EA27FC4BDC60AA05F4E0B28426B(L_93, NULL);
+		V_15 = L_94;
+		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_95 = V_15;
+		G_B36_0 = ((!(((RuntimeObject*)(SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759*)L_95) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		goto IL_02b9;
+	}
+
+IL_02b8:
+	{
+		G_B36_0 = 0;
+	}
+
+IL_02b9:
+	{
+		V_21 = (bool)G_B36_0;
+		bool L_96 = V_21;
+		if (!L_96)
+		{
+			goto IL_0308;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:109>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_97;
+		L_97 = Ray_get_direction_m21C2D22D3BD4A683BD4DC191AB22DD05F5EC2086_inline((&V_0), NULL);
+		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_98 = V_15;
+		NullCheck(L_98);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_99;
+		L_99 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_98, NULL);
+		NullCheck(L_99);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_100;
+		L_100 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_99, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_101;
+		L_101 = Ray_get_origin_m97604A8F180316A410DCD77B7D74D04522FA1BA6_inline((&V_0), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_102;
+		L_102 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_100, L_101, NULL);
+		float L_103;
+		L_103 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_97, L_102, NULL);
+		(&V_14)->___distance = L_103;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:110>
+		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_104 = V_15;
+		NullCheck(L_104);
+		int32_t L_105;
+		L_105 = SortingGroup_get_sortingLayerID_m37C70CEA78DA6E28F405C67EDE95D5C2191F0055(L_104, NULL);
+		(&V_14)->___sortingLayer = L_105;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:111>
+		SortingGroup_tA8DA95BF22F76688DAF54122EB3EEA35C70E9759* L_106 = V_15;
+		NullCheck(L_106);
+		int32_t L_107;
+		L_107 = SortingGroup_get_sortingOrder_mC80606E6BB9A6D5E3AB61A0451C48203A0C1AB6A(L_106, NULL);
+		(&V_14)->___sortingOrder = L_107;
+	}
+
+IL_0308:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:114>
+		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_108 = ___1_resultAppendList;
+		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_109 = V_14;
+		NullCheck(L_108);
+		List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_inline(L_108, L_109, List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
+		int32_t L_110 = V_10;
+		V_10 = ((int32_t)il2cpp_codegen_add(L_110, 1));
+	}
+
+IL_0318:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:66>
+		int32_t L_111 = V_10;
+		int32_t L_112 = V_11;
+		V_22 = (bool)((((int32_t)L_111) < ((int32_t)L_112))? 1 : 0);
+		bool L_113 = V_22;
+		if (L_113)
+		{
+			goto IL_0106;
+		}
+	}
+	{
+	}
+
+IL_0328:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/Physics2DRaycaster.cs:118>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 67943
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster__ctor_mB7D4BAC26DC219A10060B35498EE9D5F05AD0E80 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:27>
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0;
+		L_0 = LayerMask_op_Implicit_m01C8996A2CB2085328B9C33539C43139660D8222((-1), NULL);
+		__this->___m_EventMask = L_0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:33>
+		__this->___m_MaxRayIntersections = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:34>
+		__this->___m_LastMaxRayIntersections = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:40>
+		BaseRaycaster__ctor_m1B6A963368E54C1E450BE15FAF1AE082142A1683(__this, NULL);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:41>
+		return;
+	}
+}
+// Method Definition Index: 67944
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* PhysicsRaycaster_get_eventCamera_m95026618116D1781A906DDE4AF9C415F2374013C (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_2 = NULL;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:47>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0 = __this->___m_EventCamera;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:48>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_3;
+		L_3 = Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4(__this, Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
+		__this->___m_EventCamera = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_EventCamera), (void*)L_3);
+	}
+
+IL_001d:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:50>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4 = __this->___m_EventCamera;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_5;
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:51>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_7;
+		L_7 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		V_2 = L_7;
+		goto IL_003e;
+	}
+
+IL_0035:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:53>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8 = __this->___m_EventCamera;
+		V_2 = L_8;
+		goto IL_003e;
+	}
+
+IL_003e:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:54>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = V_2;
+		return L_9;
+	}
+}
+// Method Definition Index: 67945
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_depth_mCC2E924588088DB1DCA160765C09734D3C4F7F60 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:63>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
+		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		G_B3_0 = ((int32_t)16777215);
+		goto IL_0022;
+	}
+
+IL_0016:
+	{
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = Camera_get_depth_mDF67FFF8ED61750467DFC4C6D8F236850AD1BB1D(L_2, NULL);
+		G_B3_0 = il2cpp_codegen_cast_double_to_int<int32_t>(L_3);
+	}
+
+IL_0022:
+	{
+		V_0 = G_B3_0;
+		goto IL_0025;
+	}
+
+IL_0025:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:63>
+		int32_t L_4 = V_0;
+		return L_4;
+	}
+}
+// Method Definition Index: 67946
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:71>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
+		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		G_B3_0 = (-1);
+		goto IL_0029;
+	}
+
+IL_0012:
+	{
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = Camera_get_cullingMask_m6F5AFF8FB522F876D99E839BF77D8F27F26A1EF8(L_2, NULL);
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_4 = __this->___m_EventMask;
+		int32_t L_5;
+		L_5 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_4, NULL);
+		G_B3_0 = ((int32_t)(L_3&L_5));
+	}
+
+IL_0029:
+	{
+		V_0 = G_B3_0;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:71>
+		int32_t L_6 = V_0;
+		return L_6;
+	}
+}
+// Method Definition Index: 67947
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB PhysicsRaycaster_get_eventMask_mA8FE3884CD425BD59BD22784F4D5219159426DB9 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:79>
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0 = __this->___m_EventMask;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:79>
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 67948
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_set_eventMask_mD5110BE565C7E3F1738369519D44587452CA056D (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:80>
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0 = ___0_value;
+		__this->___m_EventMask = L_0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:80>
+		return;
+	}
+}
+// Method Definition Index: 67949
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsRaycaster_get_maxRayIntersections_mA06D0B5E291BCF94AE1EF4ED7B68890F39395911 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:91>
+		int32_t L_0 = __this->___m_MaxRayIntersections;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:91>
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 67950
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_set_maxRayIntersections_mECCF07932870A3B5C8875AE6204FC1ECB2CE01F7 (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:92>
+		int32_t L_0 = ___0_value;
+		__this->___m_MaxRayIntersections = L_0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:92>
+		return;
+	}
+}
+// Method Definition Index: 67951
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* ___1_ray, int32_t* ___2_eventDisplayIndex, float* ___3_distanceToClipPlane, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	float* G_B11_0 = NULL;
+	float* G_B10_0 = NULL;
+	float G_B12_0 = 0.0f;
+	float* G_B12_1 = NULL;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:105>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
+		L_0 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_2 = L_1;
+		bool L_2 = V_2;
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:106>
+		V_3 = (bool)0;
+		goto IL_00ee;
+	}
+
+IL_0018:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:108>
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_3 = ___0_eventData;
+		NullCheck(L_3);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		L_4 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_3, NULL);
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_eventData;
+		NullCheck(L_5);
+		int32_t L_6;
+		L_6 = PointerEventData_get_displayIndex_m8B2088561EA850F1CAD124797F0F6E3756F584FA_inline(L_5, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = MultipleDisplayUtilities_RelativeMouseAtScaled_m80E65BE9255F7D65D9341FDFDB0CA11470703E71(L_4, L_6, NULL);
+		V_0 = L_7;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:109>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		bool L_10;
+		L_10 = Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline(L_8, L_9, NULL);
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
+		{
+			goto IL_0067;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:112>
+		int32_t* L_12 = ___2_eventDisplayIndex;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
+		float L_14 = L_13.___z;
+		*((int32_t*)L_12) = (int32_t)il2cpp_codegen_cast_double_to_int<int32_t>(L_14);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:115>
+		int32_t* L_15 = ___2_eventDisplayIndex;
+		int32_t L_16 = *((int32_t*)L_15);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_17;
+		L_17 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_17);
+		int32_t L_18;
+		L_18 = Camera_get_targetDisplay_m204A169C94EEABDB491FA5A77CC684146B10DF80(L_17, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_16) == ((int32_t)L_18))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_19 = V_5;
+		if (!L_19)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:116>
+		V_3 = (bool)0;
+		goto IL_00ee;
+	}
+
+IL_0064:
+	{
+		goto IL_0075;
+	}
+
+IL_0067:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:122>
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_20 = ___0_eventData;
+		NullCheck(L_20);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21;
+		L_21 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_20, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
+		L_22 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_21, NULL);
+		V_0 = L_22;
+	}
+
+IL_0075:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:126>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_23;
+		L_23 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_23);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_24;
+		L_24 = Camera_get_pixelRect_m5F40F5C324EB252261F66962411EE08CC4BE39E7(L_23, NULL);
+		V_7 = L_24;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		bool L_26;
+		L_26 = Rect_Contains_mB1160CD465F3E9616AA4EED72AFFD611BD8D2B6B_inline((&V_7), L_25, NULL);
+		V_6 = (bool)((((int32_t)L_26) == ((int32_t)0))? 1 : 0);
+		bool L_27 = V_6;
+		if (!L_27)
+		{
+			goto IL_0097;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:127>
+		V_3 = (bool)0;
+		goto IL_00ee;
+	}
+
+IL_0097:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:129>
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* L_28 = ___1_ray;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_29;
+		L_29 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = V_0;
+		NullCheck(L_29);
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_31;
+		L_31 = Camera_ScreenPointToRay_m2887B9A49880B7AB670C57D66B67D6A6689FE315(L_29, L_30, NULL);
+		*(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00*)L_28 = L_31;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:131>
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* L_32 = ___1_ray;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
+		L_33 = Ray_get_direction_m21C2D22D3BD4A683BD4DC191AB22DD05F5EC2086_inline(L_32, NULL);
+		float L_34 = L_33.___z;
+		V_1 = L_34;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:132>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:133>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:134>
+		float* L_35 = ___3_distanceToClipPlane;
+		float L_36 = V_1;
+		bool L_37;
+		L_37 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline((0.0f), L_36, NULL);
+		if (L_37)
+		{
+			G_B11_0 = L_35;
+			goto IL_00e4;
+		}
+		G_B10_0 = L_35;
+	}
+	{
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_38;
+		L_38 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_38);
+		float L_39;
+		L_39 = Camera_get_farClipPlane_m1D7128B85B5DB866F75FBE8CEBA48335716B67BD(L_38, NULL);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_40;
+		L_40 = VirtualFuncInvoker0< Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* >::Invoke(18, __this);
+		NullCheck(L_40);
+		float L_41;
+		L_41 = Camera_get_nearClipPlane_m5E8FAF84326E3192CB036BD29DCCDAF6A9861013(L_40, NULL);
+		float L_42 = V_1;
+		float L_43;
+		L_43 = fabsf(((float)(((float)il2cpp_codegen_subtract(L_39, L_41))/L_42)));
+		G_B12_0 = L_43;
+		G_B12_1 = G_B10_0;
+		goto IL_00e9;
+	}
+
+IL_00e4:
+	{
+		G_B12_0 = (std::numeric_limits<float>::infinity());
+		G_B12_1 = G_B11_0;
+	}
+
+IL_00e9:
+	{
+		*((float*)G_B12_1) = (float)G_B12_0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:135>
+		V_3 = (bool)1;
+		goto IL_00ee;
+	}
+
+IL_00ee:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:136>
+		bool L_44 = V_3;
+		return L_44;
+	}
+}
+// Method Definition Index: 67952
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhysicsRaycaster_Raycast_mB29925EB33102E9BEAA76658F8A59CA666C78B1A (PhysicsRaycaster_t0ACA9046D8D0B195B59DB1F7CA4DD6BB634A56DD* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, List_1_t8292C421BBB00D7661DC07462822936152BAB446* ___1_resultAppendList, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	float V_2 = 0.0f;
+	int32_t V_3 = 0;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	int32_t V_11 = 0;
+	int32_t V_12 = 0;
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_13;
+	memset((&V_13), 0, sizeof(V_13));
+	RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 V_14;
+	memset((&V_14), 0, sizeof(V_14));
+	bool V_15 = false;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:141>
+		il2cpp_codegen_initobj((&V_0), sizeof(Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00));
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:142>
+		V_1 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:143>
+		V_2 = (0.0f);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:144>
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
+		bool L_1;
+		L_1 = PhysicsRaycaster_ComputeRayAndDistance_mCFEFA9D83EC1E63393454E383FFFEF89E14C173B(__this, L_0, (&V_0), (&V_1), (&V_2), NULL);
+		V_4 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
+		bool L_2 = V_4;
+		if (!L_2)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:145>
+		goto IL_01f5;
+	}
+
+IL_002c:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:147>
+		V_3 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:149>
+		int32_t L_3 = __this->___m_MaxRayIntersections;
+		V_5 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
+		bool L_4 = V_5;
+		if (!L_4)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:151>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_5;
+		L_5 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_5);
+		RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A* L_6 = L_5->___raycast3DAll;
+		V_6 = (bool)((((RuntimeObject*)(RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_7 = V_6;
+		if (!L_7)
+		{
+			goto IL_0056;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:152>
+		goto IL_01f5;
+	}
+
+IL_0056:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:154>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_8;
+		L_8 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_8);
+		RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A* L_9 = L_8->___raycast3DAll;
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_10 = V_0;
+		float L_11 = V_2;
+		int32_t L_12;
+		L_12 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
+		NullCheck(L_9);
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_13;
+		L_13 = RaycastAllCallback_Invoke_mB30319766AF5F0D5145A6C0AFFEA829A31A5D4B7_inline(L_9, L_10, L_11, L_12, NULL);
+		__this->___m_Hits = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_13);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:155>
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_14 = __this->___m_Hits;
+		NullCheck(L_14);
+		V_3 = ((int32_t)(((RuntimeArray*)L_14)->max_length));
+		goto IL_00ed;
+	}
+
+IL_007f:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:159>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_15;
+		L_15 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_15);
+		GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC* L_16 = L_15->___getRaycastNonAlloc;
+		V_7 = (bool)((((RuntimeObject*)(GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC*)L_16) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_17 = V_7;
+		if (!L_17)
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:160>
+		goto IL_01f5;
+	}
+
+IL_0098:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:161>
+		int32_t L_18 = __this->___m_LastMaxRayIntersections;
+		int32_t L_19 = __this->___m_MaxRayIntersections;
+		V_8 = (bool)((((int32_t)((((int32_t)L_18) == ((int32_t)L_19))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_20 = V_8;
+		if (!L_20)
+		{
+			goto IL_00ce;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:163>
+		int32_t L_21 = __this->___m_MaxRayIntersections;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_22 = (RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*)SZArrayNew(RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8_il2cpp_TypeInfo_var, (uint32_t)L_21);
+		__this->___m_Hits = L_22;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Hits), (void*)L_22);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:164>
+		int32_t L_23 = __this->___m_MaxRayIntersections;
+		__this->___m_LastMaxRayIntersections = L_23;
+	}
+
+IL_00ce:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:167>
+		ReflectionMethodsCache_t711B47CE11EA2092B94127FF8D3361AE2E4859F5* L_24;
+		L_24 = ReflectionMethodsCache_get_Singleton_m77EFD7AC0043333E09987BD601113B810453C42B(NULL);
+		NullCheck(L_24);
+		GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC* L_25 = L_24->___getRaycastNonAlloc;
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_26 = V_0;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_27 = __this->___m_Hits;
+		float L_28 = V_2;
+		int32_t L_29;
+		L_29 = PhysicsRaycaster_get_finalEventMask_m20AD2327FE81B38A5853B23970A587EAA2ECCB1B(__this, NULL);
+		NullCheck(L_25);
+		int32_t L_30;
+		L_30 = GetRaycastNonAllocCallback_Invoke_m36411365E9622819DAB93D0BB0F169FEE99F07D9_inline(L_25, L_26, L_27, L_28, L_29, NULL);
+		V_3 = L_30;
+	}
+
+IL_00ed:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:170>
+		int32_t L_31 = V_3;
+		V_9 = (bool)((!(((uint32_t)L_31) <= ((uint32_t)0)))? 1 : 0);
+		bool L_32 = V_9;
+		if (!L_32)
+		{
+			goto IL_01f5;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:172>
+		int32_t L_33 = V_3;
+		V_10 = (bool)((((int32_t)L_33) > ((int32_t)1))? 1 : 0);
+		bool L_34 = V_10;
+		if (!L_34)
+		{
+			goto IL_0118;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:173>
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_35 = __this->___m_Hits;
+		int32_t L_36 = V_3;
+		il2cpp_codegen_runtime_class_init_inline(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
+		RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* L_37 = ((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance;
+		Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB(L_35, 0, L_36, L_37, Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mBF83A49E9B1F007DD08F7E076AF45D2AED7A45EB_RuntimeMethod_var);
+	}
+
+IL_0118:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
+		V_11 = 0;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
+		int32_t L_38 = V_3;
+		V_12 = L_38;
+		goto IL_01e5;
+	}
+
+IL_0123:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:178>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:179>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:181>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:182>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:183>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:184>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:185>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:186>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:189>
+		il2cpp_codegen_initobj((&V_14), sizeof(RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023));
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_39 = __this->___m_Hits;
+		int32_t L_40 = V_11;
+		NullCheck(L_39);
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_41;
+		L_41 = RaycastHit_get_collider_m84B160439BBEAB6D9E94B799F720E25C9E2D444D(((L_39)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_40))), NULL);
+		NullCheck(L_41);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42;
+		L_42 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_41, NULL);
+		RaycastResult_set_gameObject_mCFEB66C0E3F01AC5E55040FE8BEB16E40427BD9E((&V_14), L_42, NULL);
+		(&V_14)->___module = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_14)->___module), (void*)__this);
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_43 = __this->___m_Hits;
+		int32_t L_44 = V_11;
+		NullCheck(L_43);
+		float L_45;
+		L_45 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78(((L_43)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_44))), NULL);
+		(&V_14)->___distance = L_45;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_46 = __this->___m_Hits;
+		int32_t L_47 = V_11;
+		NullCheck(L_46);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48;
+		L_48 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39(((L_46)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_47))), NULL);
+		(&V_14)->___worldPosition = L_48;
+		RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* L_49 = __this->___m_Hits;
+		int32_t L_50 = V_11;
+		NullCheck(L_49);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_51;
+		L_51 = RaycastHit_get_normal_mD8741B70D2039C5CAFC4368D4CE59D89562040B5(((L_49)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_50))), NULL);
+		(&V_14)->___worldNormal = L_51;
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_52 = ___0_eventData;
+		NullCheck(L_52);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53;
+		L_53 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_52, NULL);
+		(&V_14)->___screenPosition = L_53;
+		int32_t L_54 = V_1;
+		(&V_14)->___displayIndex = L_54;
+		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_55 = ___1_resultAppendList;
+		NullCheck(L_55);
+		int32_t L_56;
+		L_56 = List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_inline(L_55, List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var);
+		(&V_14)->___index = ((float)L_56);
+		(&V_14)->___sortingLayer = 0;
+		(&V_14)->___sortingOrder = 0;
+		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_57 = V_14;
+		V_13 = L_57;
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:190>
+		List_1_t8292C421BBB00D7661DC07462822936152BAB446* L_58 = ___1_resultAppendList;
+		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_59 = V_13;
+		NullCheck(L_58);
+		List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_inline(L_58, L_59, List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_RuntimeMethod_var);
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
+		int32_t L_60 = V_11;
+		V_11 = ((int32_t)il2cpp_codegen_add(L_60, 1));
+	}
+
+IL_01e5:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:175>
+		int32_t L_61 = V_11;
+		int32_t L_62 = V_12;
+		V_15 = (bool)((((int32_t)L_61) < ((int32_t)L_62))? 1 : 0);
+		bool L_63 = V_15;
+		if (L_63)
+		{
+			goto IL_0123;
+		}
+	}
+	{
+	}
+
+IL_01f5:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:194>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 67953
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RaycastHitComparer_Compare_mB5B88FE52375A12B781682C712FE58193F417A03 (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* __this, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___0_x, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___1_y, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	int32_t V_1 = 0;
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:202>
+		float L_0;
+		L_0 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&___0_x), NULL);
+		V_0 = L_0;
+		float L_1;
+		L_1 = RaycastHit_get_distance_m035194B0E9BB6229259CFC43B095A9C8E5011C78((&___1_y), NULL);
+		int32_t L_2;
+		L_2 = Single_CompareTo_m06F7868162EB392D3E99103D1A0BD27463C9E66F((&V_0), L_1, NULL);
+		V_1 = L_2;
+		goto IL_001a;
+	}
+
+IL_001a:
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:203>
+		int32_t L_3 = V_1;
+		return L_3;
+	}
+}
+// Method Definition Index: 67954
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastHitComparer__ctor_mAB0536EE515BF2BD1B29BE3B39E8BA9E9CFE97C3 (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 67955
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RaycastHitComparer__cctor_m772D29066D594105261C78CDDB5724BE28A773FA (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/Raycasters/PhysicsRaycaster.cs:199>
+		RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1* L_0 = (RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1*)il2cpp_codegen_object_new(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var);
+		RaycastHitComparer__ctor_mAB0536EE515BF2BD1B29BE3B39E8BA9E9CFE97C3(L_0, NULL);
+		((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields*)il2cpp_codegen_static_fields_for(RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_il2cpp_TypeInfo_var))->___instance), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 67956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_Awake_mDF9D1A4867C8E730C59A7CAE97709CA9B8F3A0F2 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:9>
 		return;
 	}
 }
-// Method Definition Index: 67642
+// Method Definition Index: 67957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnEnable_m8989ABF5C038905A68E5536BED2E6FFAF8767FFC (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:12>
 		return;
 	}
 }
-// Method Definition Index: 67643
+// Method Definition Index: 67958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_Start_mB12643ED6D859CD3682B4BF5B9CA7F72E8A72B45 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 67644
+// Method Definition Index: 67959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnDisable_m18D5A0B93F65FB50F4D6CE8197EC07F3452C5DDE (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 67645
+// Method Definition Index: 67960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnDestroy_mF225CF9163823F19BE5E2B2735D35898A20D608B (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 67646
+// Method Definition Index: 67961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIBehaviour_IsActive_m9E79A0650C81204AF9A861BBBA8685D9563AE9C4 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:28>
 		bool L_0;
 		L_0 = Behaviour_get_isActiveAndEnabled_mEB4ECCE9761A7016BC619557CEFEA1A30D3BF28A(__this, NULL);
 		V_0 = L_0;
@@ -9871,60 +9871,60 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIBehaviour_IsActive_m9E79A0650C81204AF9
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:29>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67647
+// Method Definition Index: 67962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnRectTransformDimensionsChange_m86A6D20E0EBF41CDB89DD1E87F23624263B68159 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:42>
 		return;
 	}
 }
-// Method Definition Index: 67648
+// Method Definition Index: 67963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnBeforeTransformParentChanged_m980EF41E33A7541BD6C65AEC305B25A19C9CA30F (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 67649
+// Method Definition Index: 67964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnTransformParentChanged_mAD56D3C6049A1746F00DC2643D1666F7DE921384 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:48>
 		return;
 	}
 }
-// Method Definition Index: 67650
+// Method Definition Index: 67965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnDidApplyAnimationProperties_mE011A7C92134E28AE2AF3A0EBFB2E4AB88ABE748 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 67651
+// Method Definition Index: 67966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnCanvasGroupChanged_m592FA8BF5238E712E73E2D99258EE0DB6D88D84B (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 67652
+// Method Definition Index: 67967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour_OnCanvasHierarchyChanged_mCAC018CB33FA00E857288B64E3722226638A1229 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:60>
 		return;
 	}
 }
-// Method Definition Index: 67653
+// Method Definition Index: 67968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIBehaviour_IsDestroyed_m2E9FFA28686D1C82697FB467002541CC58A06BCA (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9935,7 +9935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIBehaviour_IsDestroyed_m2E9FFA28686D1C8
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:73>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(__this, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -9945,12 +9945,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIBehaviour_IsDestroyed_m2E9FFA28686D1C8
 
 IL_000b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/UIBehaviour.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/UIBehaviour.cs:74>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 67654
+// Method Definition Index: 67969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour__ctor_m24C66A65DDD996E779871C6655CF11B871F11337 (UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9993,123 +9993,123 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIBehaviour__ctor_m24C66A65DDD996E779871
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 67288
+// Method Definition Index: 67603
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PointerEventData_get_pointerDrag_m36BF08A32216845A8095C5F74DFE6C9959A11E96_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:80>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___U3CpointerDragU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67320
+// Method Definition Index: 67635
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PointerEventData_get_dragging_mE0AD837F228E3830D4A74657AD3D47F53F6C87E9_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:189>
 		bool L_0 = __this->___U3CdraggingU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67292
+// Method Definition Index: 67607
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 PointerEventData_get_pointerCurrentRaycast_m1C6B7D707CEE9C6574DD443289D90102EDC7A2C4_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:90>
 		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_0 = __this->___U3CpointerCurrentRaycastU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67290
+// Method Definition Index: 67605
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PointerEventData_get_pointerClick_m2AFE23543BC381EC734E85ADB16DD63BA2017FEB_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:85>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___U3CpointerClickU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67296
+// Method Definition Index: 67611
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PointerEventData_get_eligibleForClick_m4B01A1640C694FD7421BDFB19CF763BC85672C8E_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:102>
 		bool L_0 = __this->___U3CeligibleForClickU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67297
+// Method Definition Index: 67612
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_eligibleForClick_m360125CB3E348F3CF64C39F163467A842E479C21_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:102>
 		bool L_0 = ___0_value;
 		__this->___U3CeligibleForClickU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67287
+// Method Definition Index: 67602
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_rawPointerPress_mEEC4E3C7CD00F1DDCD3DA98DA5837E71BB8455E3_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:75>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___U3CrawPointerPressU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrawPointerPressU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 67291
+// Method Definition Index: 67606
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pointerClick_m8FA5D91C9556A722BAE8ADBBB5353C79854D74C0_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:85>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___U3CpointerClickU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpointerClickU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 67321
+// Method Definition Index: 67636
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_dragging_m43982B3F95F05986F40A736914CFBC45D2A9BB8E_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:189>
 		bool L_0 = ___0_value;
 		__this->___U3CdraggingU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67289
+// Method Definition Index: 67604
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pointerDrag_m0E8D72362B07962843671C39ADC8F4D5E4915010_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:80>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___U3CpointerDragU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpointerDragU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 67282
+// Method Definition Index: 67597
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PointerEventData_get_pointerEnter_m6CE76D5C0C36C4666CDDE348B57885C52D495A4B_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:62>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___U3CpointerEnterU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67300
+// Method Definition Index: 67615
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEventData_get_pointerId_m81DDB468147FE75C1474C9C6C35753BB53A21275_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:112>
 		int32_t L_0 = __this->___U3CpointerIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 50459
+// Method Definition Index: 50747
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10145,7 +10145,7 @@ IL_0035:
 		return L_10;
 	}
 }
-// Method Definition Index: 50496
+// Method Definition Index: 50784
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -10166,7 +10166,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 50490
+// Method Definition Index: 50778
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10177,7 +10177,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_sqrMagnitude_mA
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3))));
 	}
 }
-// Method Definition Index: 50507
+// Method Definition Index: 50795
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10191,50 +10191,50 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 67305
+// Method Definition Index: 67620
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_delta_mD200AF7CCAEAD92D947091902AF864CB4ACE0F1D_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:122>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:122>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_value;
 		__this->___U3CdeltaU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67319
+// Method Definition Index: 67634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_useDragThreshold_m63FE2034E4B240F1A0A902B1EB893B3DBA2D848B_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:184>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:184>
 		bool L_0 = ___0_value;
 		__this->___U3CuseDragThresholdU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67302
+// Method Definition Index: 67617
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:117>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CpositionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67307
+// Method Definition Index: 67622
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pressPosition_m85544FBAB798DABE70067508294A6C4841A95379_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:127>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_value;
 		__this->___U3CpressPositionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67295
+// Method Definition Index: 67610
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pointerPressRaycast_m55CA127474B4CBCA795A9C872B7630AAF766F852_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:95>
 		RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 L_0 = ___0_value;
 		__this->___U3CpointerPressRaycastU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___U3CpointerPressRaycastU3Ek__BackingField))->___m_GameObject), (void*)NULL);
@@ -10250,65 +10250,65 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pointer
 		return;
 	}
 }
-// Method Definition Index: 67283
+// Method Definition Index: 67598
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_pointerEnter_m2DA660C24CBDE9B83DF2B2D09D9AF0E94A770D17_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:62>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_value;
 		__this->___U3CpointerEnterU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpointerEnterU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 67312
+// Method Definition Index: 67627
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float PointerEventData_get_clickTime_m5ABE0298E8CEF28B6BD7E750E940756CD78AB96E_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:145>
 		float L_0 = __this->___U3CclickTimeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67315
+// Method Definition Index: 67630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_clickCount_m0A87C2C367987492F310786DC9C3DF1616EA4D49_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:171>
 		int32_t L_0 = ___0_value;
 		__this->___U3CclickCountU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 67284
+// Method Definition Index: 67599
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PointerEventData_get_lastPress_m46720C62503214A44EE947679A8BA307BC2AEEDC_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:70>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___U3ClastPressU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67314
+// Method Definition Index: 67629
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEventData_get_clickCount_m3977011C09DB9F904B1AAC3708B821B8D6AC0F9F_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:171>
 		int32_t L_0 = __this->___U3CclickCountU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67313
+// Method Definition Index: 67628
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_clickTime_m93D27EB35F490AC9100369A23002F09148F85996_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:145>
 		float L_0 = ___0_value;
 		__this->___U3CclickTimeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 50488
+// Method Definition Index: 50776
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_Dot_mC1E68FDB4FB462A279A303C043B8FD0AC11C8458_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -10323,37 +10323,100 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_Dot_mC1E68FDB4FB462
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7))));
 	}
 }
-// Method Definition Index: 67271
+// Method Definition Index: 67586
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AxisEventData_get_moveDir_mC8E219BB19708AC67C202C860DF2E6D08C29B8B9_inline (AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/AxisEventData.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/AxisEventData.cs:16>
 		int32_t L_0 = __this->___U3CmoveDirU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 67316
+// Method Definition Index: 67631
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_scrollDelta_m38C419C3E84811D17D1A42973AF7B3A457B316EA_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:176>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CscrollDeltaU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 66993
+// Method Definition Index: 50640
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 50644
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___upVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 50793
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_v;
+		float L_1 = L_0.___x;
+		(&V_0)->___x = L_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___0_v;
+		float L_3 = L_2.___y;
+		(&V_0)->___y = L_3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = V_0;
+		return L_4;
+	}
+}
+// Method Definition Index: 50656
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = Vector3_ToString_mA8DA39B6324392BB93203A4D4CB85AF87231CB62_inline(__this, (String_t*)NULL, (RuntimeObject*)NULL, NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 50770
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mB47B29ECB21FA3A4ACEABEFA18077A5A6BBCCB27_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = Vector2_ToString_mC10F098442E56919947154402A77EDE28DC9B7BE_inline(__this, (String_t*)NULL, (RuntimeObject*)NULL, NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 67308
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* GetRayIntersectionAllCallback_Invoke_m917AA4108EBDC724AFEF39BFD06A586B7461F497_inline (GetRayIntersectionAllCallback_t52E7AE4ECEA3F9744FF7F8448F852C872A70315C* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___0_r, float ___1_f, int32_t ___2_i, const RuntimeMethod* method) 
 {
 	typedef RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* (*FunctionPointerType) (RuntimeObject*, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00, float, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_r, ___1_f, ___2_i, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 66997
+// Method Definition Index: 67312
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GetRayIntersectionAllNonAllocCallback_Invoke_mFAA36E9AF362DC72204EEF53B28DBFC3367D09A7_inline (GetRayIntersectionAllNonAllocCallback_t28D7ACEBBE525DE0CBEA67986E4C3891D694F980* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___0_r, RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7* ___1_results, float ___2_f, int32_t ___3_i, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00, RaycastHit2DU5BU5D_t28739C686586993113318B63C84927FD43063FC7*, float, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_r, ___1_results, ___2_f, ___3_i, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 50506
+// Method Definition Index: 50794
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -10371,7 +10434,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_4;
 	}
 }
-// Method Definition Index: 48867
+// Method Definition Index: 49153
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Ray_get_direction_m21C2D22D3BD4A683BD4DC191AB22DD05F5EC2086_inline (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10379,7 +10442,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 48865
+// Method Definition Index: 49151
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Ray_get_origin_m97604A8F180316A410DCD77B7D74D04522FA1BA6_inline (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10387,7 +10450,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 50361
+// Method Definition Index: 50649
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -10413,7 +10476,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 50338
+// Method Definition Index: 50626
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -10432,30 +10495,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A3
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
 	}
 }
-// Method Definition Index: 67298
+// Method Definition Index: 67613
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEventData_get_displayIndex_m8B2088561EA850F1CAD124797F0F6E3756F584FA_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.ugui@8ccc29d23a79/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:107>
 		int32_t L_0 = __this->___U3CdisplayIndexU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 50352
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector;
-		return L_0;
-	}
-}
-// Method Definition Index: 50367
+// Method Definition Index: 50655
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -10466,7 +10515,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 48907
+// Method Definition Index: 49193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_Contains_mB1160CD465F3E9616AA4EED72AFFD611BD8D2B6B_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_point, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10525,68 +10574,19 @@ IL_003b:
 		return (bool)G_B5_0;
 	}
 }
-// Method Definition Index: 66981
+// Method Definition Index: 67296
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* RaycastAllCallback_Invoke_mB30319766AF5F0D5145A6C0AFFEA829A31A5D4B7_inline (RaycastAllCallback_t4AFFDCDAA6F02DD74E1E2DE455BA011D82BED47A* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___0_r, float ___1_f, int32_t ___2_i, const RuntimeMethod* method) 
 {
 	typedef RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* (*FunctionPointerType) (RuntimeObject*, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00, float, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_r, ___1_f, ___2_i, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 66985
+// Method Definition Index: 67300
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GetRaycastNonAllocCallback_Invoke_m36411365E9622819DAB93D0BB0F169FEE99F07D9_inline (GetRaycastNonAllocCallback_tC3DA6EE6063FE663DD0A9FC52439D825DE4A1FFC* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___0_r, RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8* ___1_results, float ___2_f, int32_t ___3_i, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00, RaycastHitU5BU5D_t008B8309DE422FE7567068D743D68054D5EBF1A8*, float, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_r, ___1_results, ___2_f, ___3_i, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 50356
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___upVector;
-		return L_0;
-	}
-}
-// Method Definition Index: 50505
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
-{
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		il2cpp_codegen_initobj((&V_0), sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_v;
-		float L_1 = L_0.___x;
-		(&V_0)->___x = L_1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___0_v;
-		float L_3 = L_2.___y;
-		(&V_0)->___y = L_3;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = V_0;
-		return L_4;
-	}
-}
-// Method Definition Index: 50368
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
-{
-	{
-		String_t* L_0;
-		L_0 = Vector3_ToString_mA8DA39B6324392BB93203A4D4CB85AF87231CB62_inline(__this, (String_t*)NULL, (RuntimeObject*)NULL, NULL);
-		return L_0;
-	}
-}
-// Method Definition Index: 50482
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mB47B29ECB21FA3A4ACEABEFA18077A5A6BBCCB27_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
-{
-	{
-		String_t* L_0;
-		L_0 = Vector2_ToString_mC10F098442E56919947154402A77EDE28DC9B7BE_inline(__this, (String_t*)NULL, (RuntimeObject*)NULL, NULL);
-		return L_0;
-	}
-}
-// Method Definition Index: 9454
+// Method Definition Index: 9456
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10594,7 +10594,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 9464
+// Method Definition Index: 9466
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -10632,7 +10632,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 9379
+// Method Definition Index: 9381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Enumerator_get_Current_m8A0598EF34186B32CD19AAE697F86E8C19494FA4_gshared_inline (Enumerator_t9E8B7A8E56EF3FDE46965824E1C7001E47045468* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10640,7 +10640,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Enumerator_get_Current_m8
 		return L_0;
 	}
 }
-// Method Definition Index: 9464
+// Method Definition Index: 9466
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) 
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_0 = NULL;
@@ -10678,7 +10678,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 9514
+// Method Definition Index: 9516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Enumerator_get_Current_mB49912FF111A954F2C326BF4FA29A53C1027187B_gshared_inline (Enumerator_t9DBCD072C72E44AB8959D9884EF7F528028F20EC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10686,7 +10686,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Enumerator_get_Current_mB
 		return L_0;
 	}
 }
-// Method Definition Index: 9356
+// Method Definition Index: 9358
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tDC26B09C26BA829DDE331BCB6AF7C508C763D7A3 Enumerator_get_Current_m90160D324DA0D9F5624A345F47D8E226A118911A_gshared_inline (Enumerator_tE92C1AC40A104A179B94F8A013728FD9314CFBD3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10694,7 +10694,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tDC26B09C26BA829DD
 		return L_0;
 	}
 }
-// Method Definition Index: 9454
+// Method Definition Index: 9456
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_gshared_inline (List_1_t8292C421BBB00D7661DC07462822936152BAB446* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10702,7 +10702,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mE2EBEDC
 		return L_0;
 	}
 }
-// Method Definition Index: 9464
+// Method Definition Index: 9466
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEB6DFEA132B5B7BF540D34177054003185D250E7_gshared_inline (List_1_t8292C421BBB00D7661DC07462822936152BAB446* __this, RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 ___0_item, const RuntimeMethod* method) 
 {
 	RaycastResultU5BU5D_tEAF6B3C3088179304676571328CBB001D8CECBC7* V_0 = NULL;
@@ -10740,7 +10740,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 50439
+// Method Definition Index: 50727
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -10777,67 +10777,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 50366
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
-{
-	float V_0 = 0.0f;
-	float V_1 = 0.0f;
-	float V_2 = 0.0f;
-	float V_3 = 0.0f;
-	bool V_4 = false;
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
-		float L_1 = L_0.___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
-		float L_3 = L_2.___x;
-		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
-		float L_5 = L_4.___y;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
-		float L_7 = L_6.___y;
-		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
-		float L_9 = L_8.___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
-		float L_11 = L_10.___z;
-		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
-		float L_12 = V_0;
-		float L_13 = V_0;
-		float L_14 = V_1;
-		float L_15 = V_1;
-		float L_16 = V_2;
-		float L_17 = V_2;
-		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))));
-		float L_18 = V_3;
-		V_4 = (bool)((((float)L_18) < ((float)(9.99999944E-11f)))? 1 : 0);
-		goto IL_0043;
-	}
-
-IL_0043:
-	{
-		bool L_19 = V_4;
-		return L_19;
-	}
-}
-// Method Definition Index: 48902
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = __this->___m_Width;
-		float L_1 = __this->___m_XMin;
-		return ((float)il2cpp_codegen_add(L_0, L_1));
-	}
-}
-// Method Definition Index: 48904
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = __this->___m_Height;
-		float L_1 = __this->___m_YMin;
-		return ((float)il2cpp_codegen_add(L_0, L_1));
-	}
-}
-// Method Definition Index: 50369
+// Method Definition Index: 50657
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector3_ToString_mA8DA39B6324392BB93203A4D4CB85AF87231CB62_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10915,7 +10855,7 @@ IL_005a:
 		return L_20;
 	}
 }
-// Method Definition Index: 50483
+// Method Definition Index: 50771
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Vector2_ToString_mC10F098442E56919947154402A77EDE28DC9B7BE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, String_t* ___0_format, RuntimeObject* ___1_formatProvider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10986,5 +10926,65 @@ IL_004d:
 	{
 		String_t* L_16 = V_2;
 		return L_16;
+	}
+}
+// Method Definition Index: 50654
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	bool V_4 = false;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
+		float L_3 = L_2.___x;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
+		float L_7 = L_6.___y;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
+		float L_11 = L_10.___z;
+		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		float L_12 = V_0;
+		float L_13 = V_0;
+		float L_14 = V_1;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		float L_17 = V_2;
+		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))));
+		float L_18 = V_3;
+		V_4 = (bool)((((float)L_18) < ((float)(9.99999944E-11f)))? 1 : 0);
+		goto IL_0043;
+	}
+
+IL_0043:
+	{
+		bool L_19 = V_4;
+		return L_19;
+	}
+}
+// Method Definition Index: 49188
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___m_Width;
+		float L_1 = __this->___m_XMin;
+		return ((float)il2cpp_codegen_add(L_0, L_1));
+	}
+}
+// Method Definition Index: 49190
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___m_Height;
+		float L_1 = __this->___m_YMin;
+		return ((float)il2cpp_codegen_add(L_0, L_1));
 	}
 }

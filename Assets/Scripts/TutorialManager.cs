@@ -23,7 +23,8 @@ public class TutorialManager : MonoBehaviour
         public TextColorAnimator[] TextAnimators;
         public ImageColorAnimator[] ImageAnimators;
     }
-    
+    public InfoManager InfoManager => infoManager;
+
     public bool TutorialActive = false;
 
     private int _previousTab = 1;

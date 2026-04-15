@@ -11,7 +11,7 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstl
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
 --output=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -130,7 +130,7 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstl
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
 --output=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -149,7 +149,7 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstl
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
 --output=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/

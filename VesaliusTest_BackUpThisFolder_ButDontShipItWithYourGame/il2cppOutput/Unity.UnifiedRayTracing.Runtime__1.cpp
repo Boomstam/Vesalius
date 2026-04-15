@@ -941,7 +941,7 @@ struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184  : public Behaviour_t019
 struct U3CPrivateImplementationDetailsU3E_t348FC24C49524BD918B71209BA3B3F50A77E0428_StaticFields
 {
 	__StaticArrayInitTypeSizeU3D5037_t90D1C8BF67FD721F191AF0B340DE6A5CDDE7DB21 ___8D2F77D65C3B9E7D7B481C7D5FD58780AF9688C9A0F419372CE32909F980F4FE;
-	__StaticArrayInitTypeSizeU3D4346_tCAE889F976B69E9C1B363AB80FBABD66CCB3BEF2 ___E74DB3A524965888ADF7FEA923D9173DA94DA318872C905799805EC2F20DA761;
+	__StaticArrayInitTypeSizeU3D4346_tCAE889F976B69E9C1B363AB80FBABD66CCB3BEF2 ___8FC3B6B4EA62FD3B1353E379E7C053976226715301AB7B0C60DBA4B640D4B58D;
 };
 struct SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_StaticFields
 {
@@ -1278,7 +1278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __JobReflectionRegistrationOutput__18748
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73678
+// Method Definition Index: 73159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RadeonRaysInstance__ctor_m096BB61A3345DD7D39A02B0A5E420D75CAD71006 (RadeonRaysInstance_t61B00802DF8AAF00280561B73E377D2D9E03E93B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1294,34 +1294,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RadeonRaysInstance__ctor_m096BB61A3345DD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73679
+// Method Definition Index: 73160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshBlas_IncRef_mC4E56D0ED5C68E1188AC87D8BBD30DA27703308F (MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:745>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:745>
 		uint32_t L_0 = __this->___refCount;
 		__this->___refCount = ((int32_t)il2cpp_codegen_add((int32_t)L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:745>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:745>
 		return;
 	}
 }
-// Method Definition Index: 73680
+// Method Definition Index: 73161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshBlas_DecRef_mFBDCFD0C7AA295C7B13CB0D34E4D7243DA28181F (MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:746>
 		uint32_t L_0 = __this->___refCount;
 		__this->___refCount = ((int32_t)il2cpp_codegen_subtract((int32_t)L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:746>
 		return;
 	}
 }
-// Method Definition Index: 73681
+// Method Definition Index: 73162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MeshBlas_IsUnreferenced_m4394EF42DAC20276BBDE0B82BAB8404D1026C374 (MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:747>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:747>
 		uint32_t L_0 = __this->___refCount;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		goto IL_000d;
@@ -1329,18 +1329,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MeshBlas_IsUnreferenced_m4394EF42DAC2027
 
 IL_000d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:747>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:747>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 73682
+// Method Definition Index: 73163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshBlas__ctor_m06028F878261C1576764AF885D03BFDE562A0641 (MeshBlas_tA944843D34F1D79DA6D31525E850F0D850EB4FF4* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:742>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:742>
 		__this->___bvhBuilt = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:744>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingAccelStruct.cs:744>
 		__this->___refCount = 0;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -1354,21 +1354,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshBlas__ctor_m06028F878261C1576764AF88
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73683
+// Method Definition Index: 73164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingBackend__ctor_m46E4D9091113B7AF07AA79D62DF6B2F8532BDD3F (ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903* __this, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___0_resources, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:5>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:7>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_0 = ___0_resources;
 		__this->___m_Resources = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Resources), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:8>
 		return;
 	}
 }
-// Method Definition Index: 73684
+// Method Definition Index: 73165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_CreateRayTracingShader_m60C73A7EDC1D317A95BEBB11332075682A9C646F (ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903* __this, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_shader, String_t* ___1_kernelName, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_dispatchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1381,11 +1381,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_Creat
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:12>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = ___0_shader;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D((bool)((!(((RuntimeObject*)(ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*)((ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*)IsInstSealed((RuntimeObject*)L_0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:13>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = ___0_shader;
 		String_t* L_2 = ___1_kernelName;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_3 = ___2_dispatchBuffer;
@@ -1397,12 +1397,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_Creat
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:14>
 		RuntimeObject* L_5 = V_0;
 		return L_5;
 	}
 }
-// Method Definition Index: 73685
+// Method Definition Index: 73166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_CreateAccelerationStructure_mF4D77349EE1BC88F23874F391BF53ABB96AE1283 (ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903* __this, AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* ___0_options, ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* ___1_counter, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1413,7 +1413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_Creat
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:18>
 		AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* L_0 = ___0_options;
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_1 = __this->___m_Resources;
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_2 = ___1_counter;
@@ -1425,23 +1425,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ComputeRayTracingBackend_Creat
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:19>
 		RuntimeObject* L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 73686
+// Method Definition Index: 73167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t ComputeRayTracingBackend_GetRequiredTraceScratchBufferSizeInBytes_m2671A79D3FF3BBFB78E8C4BA9E63350F8EF68F25 (ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903* __this, uint32_t ___0_width, uint32_t ___1_height, uint32_t ___2_depth, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
 	uint64_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:23>
 		uint32_t L_0 = ___0_width;
 		uint32_t L_1 = ___1_height;
 		uint32_t L_2 = ___2_depth;
 		V_0 = ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_multiply((int32_t)L_0, (int32_t)L_1)), (int32_t)L_2));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:24>
 		uint32_t L_3 = V_0;
 		uint64_t L_4;
 		L_4 = RadeonRaysAPI_GetTraceMemoryRequirements_mA85A37783DF178A3EFF3E541C85521FF796178B1(L_3, NULL);
@@ -1453,7 +1453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t ComputeRayTracingBackend_GetRequired
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingBackend.cs:25>
 		uint64_t L_6 = V_1;
 		return L_6;
 	}
@@ -1466,7 +1466,7 @@ IL_0017:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73687
+// Method Definition Index: 73168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader__ctor_m4BCFBFBEE78AF447CF2B8569914FD5F9D226D2D6 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_shader, String_t* ___1_dispatchFuncName, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_dispatchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1479,26 +1479,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader__ctor_m4BCFBFBEE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:19>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:21>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_shader;
 		__this->___m_Shader = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Shader), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:22>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = __this->___m_Shader;
 		String_t* L_2 = ___1_dispatchFuncName;
 		NullCheck(L_1);
 		int32_t L_3;
 		L_3 = ComputeShader_FindKernel_m3BA5C50794FA6AF4C432E55FBBD7CB266532F659(L_1, L_2, NULL);
 		__this->___m_KernelIndex = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:23>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_4 = __this->___m_Shader;
 		NullCheck(L_4);
 		int32_t L_5;
 		L_5 = ComputeShader_FindKernel_m3BA5C50794FA6AF4C432E55FBBD7CB266532F659(L_4, _stringLiteral81FA1A85ADECE01E4285FBB531A40DCF9C0F3814, NULL);
 		__this->___m_ComputeIndirectDispatchDimsKernelIndex = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:24>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_6 = __this->___m_Shader;
 		int32_t L_7 = __this->___m_KernelIndex;
 		NullCheck(L_6);
@@ -1512,8 +1512,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader__ctor_m4BCFBFBEE
 		L_11 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral37D073C8D41309AE39B1F2A9A519BC716DBBDEA2, L_10, _stringLiteralC2AE62DE837187878DFBC0A4F93D55F00FFB8A4F, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_mA460392021AC0A8210C9081E3C1C9652DBF32BF6(L_8, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:26>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:27>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_12 = __this->___m_Shader;
 		int32_t L_13 = __this->___m_KernelIndex;
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B* L_14 = (uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B*)(&__this->___m_ThreadGroupSizes);
@@ -1524,21 +1524,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader__ctor_m4BCFBFBEE
 		uint32_t* L_19 = (uint32_t*)(&L_18->___z);
 		NullCheck(L_12);
 		ComputeShader_GetKernelThreadGroupSizes_m693428494DB1FD3CFC69FCE4E0093A2C4AAE1CBE(L_12, L_13, L_15, L_17, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:28>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_20 = ___2_dispatchBuffer;
 		__this->___m_DispatchBuffer = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DispatchBuffer), (void*)L_20);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 73688
+// Method Definition Index: 73169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B ComputeRayTracingShader_GetThreadGroupSizes_mA1A2D1436ADC15756268177DA79AB71814D648C7 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, const RuntimeMethod* method) 
 {
 	uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:33>
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B L_0 = __this->___m_ThreadGroupSizes;
 		V_0 = L_0;
 		goto IL_000a;
@@ -1546,12 +1546,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:34>
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 73689
+// Method Definition Index: 73170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetAccelerationStructure_mB39AA2A25849FB7EFC5ED03CC6463C8D56DBE599 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, String_t* ___1_name, RuntimeObject* ___2_accelStruct, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1565,27 +1565,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetAccelerationS
 	}
 	ComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:38>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:40>
 		RuntimeObject* L_1 = ___2_accelStruct;
 		V_0 = ((ComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A*)IsInstClass((RuntimeObject*)L_1, ComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:41>
 		ComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Assert_tDC16963451AC4364803739B73A4477ADCB365863_il2cpp_TypeInfo_var);
 		Assert_IsNotNull_TisComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A_mF8DD19FD2CFFD0949AA869BA56CCD58ED809199C(L_2, Assert_IsNotNull_TisComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A_mF8DD19FD2CFFD0949AA869BA56CCD58ED809199C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:43>
 		ComputeRayTracingAccelStruct_tE5BC0C98CF7E0D19A66D71C051F97FC04C9AA86A* L_3 = V_0;
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_4 = ___0_cmd;
 		String_t* L_5 = ___1_name;
 		NullCheck(L_3);
 		ComputeRayTracingAccelStruct_Bind_mA7D7E78006A5EEEF754684FE608E29BFA9CD344C(L_3, L_4, L_5, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 73690
+// Method Definition Index: 73171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIntParam_m70AA5DF206638B4827C03A99C451AC2D05C884E1 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, int32_t ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1595,21 +1595,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIntParam_m70A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:48>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:50>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		int32_t L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeIntParam_m253E1647D4F7E5613A31E0EF4DE4A67FDDEA4CC6(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 73691
+// Method Definition Index: 73172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetFloatParam_m0A31BE044504CAC70214C7C421E58FF0EFE5F1A3 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, float ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1619,21 +1619,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetFloatParam_m0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:55>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:57>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		float L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeFloatParam_m0DBB0B5057ACC774CCE6E05A9D70BF98C62D63A8(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:58>
 		return;
 	}
 }
-// Method Definition Index: 73692
+// Method Definition Index: 73173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetVectorParam_m4B9C6BA10322BDFCE468807D2B11F275B4D483CF (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1643,21 +1643,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetVectorParam_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:62>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:64>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeVectorParam_m2D4D62159DE2AD402DEDE016615D74708D499E83(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:65>
 		return;
 	}
 }
-// Method Definition Index: 73693
+// Method Definition Index: 73174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetMatrixParam_mAA472F7F4FA91D338ABC98DCAC48817CCF3498B2 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1667,21 +1667,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetMatrixParam_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:69>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:71>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeMatrixParam_mACD1D51DC9FF0D852A2C2F4C19F4114395E446C0(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 73694
+// Method Definition Index: 73175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetTextureParam_m26803D360D35ABCF98EB1FD897F706B3D160C7B8 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B ___2_rt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1691,10 +1691,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetTextureParam_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:76>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:78>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = __this->___m_KernelIndex;
@@ -1702,11 +1702,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetTextureParam_
 		RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B L_5 = ___2_rt;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeTextureParam_m424FDFD63D63C76BBDD76FB4641A6847C4430AE5(L_1, L_2, L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:79>
 		return;
 	}
 }
-// Method Definition Index: 73695
+// Method Definition Index: 73176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_m7AF86E3B279EFC38160FF7276E123E24DCDE9B51 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_buffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1716,10 +1716,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:83>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:85>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = __this->___m_KernelIndex;
@@ -1727,11 +1727,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_m
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_5 = ___2_buffer;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_1, L_2, L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:86>
 		return;
 	}
 }
-// Method Definition Index: 73696
+// Method Definition Index: 73177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_mD367ABDF284FBFA54142BD3768B8F87FCDCAA171 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* ___2_buffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1741,10 +1741,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:90>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:92>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_2 = __this->___m_Shader;
 		int32_t L_3 = __this->___m_KernelIndex;
@@ -1752,11 +1752,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetBufferParam_m
 		ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* L_5 = ___2_buffer;
 		NullCheck(L_1);
 		CommandBuffer_SetComputeBufferParam_mED9D27CA19444477F8E4F99327F2050794C60266(L_1, L_2, L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:93>
 		return;
 	}
 }
-// Method Definition Index: 73697
+// Method Definition Index: 73178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBufferParam_mCC5A715088AEE4043FCC69A91A4DE6A314B524AF (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_buffer, int32_t ___3_offset, int32_t ___4_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1767,13 +1767,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBuffe
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:97>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:98>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:100>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
@@ -1782,11 +1782,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBuffe
 		int32_t L_7 = ___4_size;
 		NullCheck(L_2);
 		CommandBuffer_SetComputeConstantBufferParam_m48F4E1B36934A99378EB7BBD7B2A533D9597AA62(L_2, L_3, L_4, L_5, L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:101>
 		return;
 	}
 }
-// Method Definition Index: 73698
+// Method Definition Index: 73179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBufferParam_mF6A92097ABCB8763DEB319CC997F274DCC1C29D2 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* ___2_buffer, int32_t ___3_offset, int32_t ___4_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1797,13 +1797,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBuffe
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:105>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:106>
 		ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:108>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
@@ -1812,11 +1812,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetConstantBuffe
 		int32_t L_7 = ___4_size;
 		NullCheck(L_2);
 		CommandBuffer_SetComputeConstantBufferParam_m6A44487CA400FFE5BAD1EE411EABB46CFD7863F5(L_2, L_3, L_4, L_5, L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:109>
 		return;
 	}
 }
-// Method Definition Index: 73699
+// Method Definition Index: 73180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m6D79BC78AE2CB8D28AB1A752F5D3E1C69924CC04 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, uint32_t ___2_width, uint32_t ___3_height, uint32_t ___4_depth, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1837,17 +1837,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m6D79BC
 	bool V_4 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:113>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:115>
 		uint32_t L_1 = ___2_width;
 		uint32_t L_2 = ___3_height;
 		uint32_t L_3 = ___4_depth;
 		uint64_t L_4;
 		L_4 = ComputeRayTracingShader_GetTraceScratchBufferRequiredSizeInBytes_m9BB45E11B6E313982A29828E6E5E4BC905DE37B7(__this, L_1, L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:116>
 		uint64_t L_5 = V_0;
 		V_4 = (bool)((!(((uint64_t)L_5) <= ((uint64_t)((int64_t)0))))? 1 : 0);
 		bool L_6 = V_4;
@@ -1857,7 +1857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m6D79BC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:118>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_7 = ___1_scratchBuffer;
 		if (!L_7)
 		{
@@ -1886,13 +1886,13 @@ IL_003e:
 IL_003f:
 	{
 		Utils_CheckArg_m0FA10DAE9DB5DFBB35CDBFF2B915FFED4B2FAC1A((bool)G_B4_0, _stringLiteral0EB8DC451AA6636E93442F0CB163AD7F3D8C9AA4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:119>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_13 = ___1_scratchBuffer;
 		NullCheck(L_13);
 		int32_t L_14;
 		L_14 = GraphicsBuffer_get_stride_mC2A315A56C5C7EA6B3BB349D25C85C97D5B9B534(L_13, NULL);
 		Utils_CheckArg_m0FA10DAE9DB5DFBB35CDBFF2B915FFED4B2FAC1A((bool)((((int32_t)L_14) == ((int32_t)4))? 1 : 0), _stringLiteralC6BCDDFD56120BDA34E2AF431691266473F0B3A2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:120>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_15 = ___1_scratchBuffer;
 		NullCheck(L_15);
 		int32_t L_16;
@@ -1902,7 +1902,7 @@ IL_003f:
 
 IL_0074:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:123>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:123>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_17 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_18 = __this->___m_Shader;
 		int32_t L_19 = __this->___m_KernelIndex;
@@ -1911,7 +1911,7 @@ IL_0074:
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_21 = ___1_scratchBuffer;
 		NullCheck(L_17);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_17, L_18, L_19, L_20, L_21, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:124>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_22 = ___0_cmd;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_23 = __this->___m_DispatchBuffer;
 		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_24 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)3);
@@ -1929,33 +1929,33 @@ IL_0074:
 		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(2), (uint32_t)L_30);
 		NullCheck(L_22);
 		CommandBuffer_SetBufferData_m39BFF88AE7BF2DC92E2DA62713E79596B37BE8D9(L_22, L_23, (RuntimeArray*)L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:125>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:125>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_31 = ___0_cmd;
 		int32_t L_32 = ((SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_StaticFields*)il2cpp_codegen_static_fields_for(SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_il2cpp_TypeInfo_var))->____UnifiedRT_DispatchDims;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_33 = __this->___m_DispatchBuffer;
 		ComputeRayTracingShader_SetBufferParam_m7AF86E3B279EFC38160FF7276E123E24DCDE9B51(__this, L_31, L_32, L_33, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:127>
 		uint32_t L_34 = ___2_width;
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B* L_35 = (uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B*)(&__this->___m_ThreadGroupSizes);
 		uint32_t L_36 = L_35->___x;
 		int32_t L_37;
 		L_37 = GraphicsHelpers_DivUp_mCFFB6AFB016A2E4DD71E330B863A7DDC1DAF9076(L_34, L_36, NULL);
 		V_1 = L_37;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:128>
 		uint32_t L_38 = ___3_height;
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B* L_39 = (uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B*)(&__this->___m_ThreadGroupSizes);
 		uint32_t L_40 = L_39->___y;
 		int32_t L_41;
 		L_41 = GraphicsHelpers_DivUp_mCFFB6AFB016A2E4DD71E330B863A7DDC1DAF9076(L_38, L_40, NULL);
 		V_2 = L_41;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:129>
 		uint32_t L_42 = ___4_depth;
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B* L_43 = (uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B*)(&__this->___m_ThreadGroupSizes);
 		uint32_t L_44 = L_43->___z;
 		int32_t L_45;
 		L_45 = GraphicsHelpers_DivUp_mCFFB6AFB016A2E4DD71E330B863A7DDC1DAF9076(L_42, L_44, NULL);
 		V_3 = L_45;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:130>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:130>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_46 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_47 = __this->___m_Shader;
 		int32_t L_48 = __this->___m_KernelIndex;
@@ -1964,11 +1964,11 @@ IL_0074:
 		uint32_t L_51 = V_3;
 		NullCheck(L_46);
 		CommandBuffer_DispatchCompute_mF9F5605B77F0480FD4B8C3BCAEC2FC59A24E31A2(L_46, L_47, L_48, L_49, L_50, L_51, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:131>
 		return;
 	}
 }
-// Method Definition Index: 73700
+// Method Definition Index: 73181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m196025D2E084F5CC026AA8CB8C10218872063022 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_argsBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1980,12 +1980,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m196025
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:135>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:136>
 		V_0 = ((int32_t)272);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:137>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:137>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = ___2_argsBuffer;
 		NullCheck(L_1);
 		int32_t L_2;
@@ -1993,20 +1993,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_Dispatch_m196025
 		int32_t L_3 = V_0;
 		int32_t L_4 = V_0;
 		Utils_CheckArg_m0FA10DAE9DB5DFBB35CDBFF2B915FFED4B2FAC1A((bool)((((int32_t)((int32_t)((int32_t)L_2&(int32_t)L_3))) == ((int32_t)L_4))? 1 : 0), _stringLiteral6FD64A606C5EAC9FA13604AD6D87CBDF920A1FC2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:139>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:139>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_5 = ___0_cmd;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_6 = ___2_argsBuffer;
 		ComputeRayTracingShader_SetIndirectDispatchDimensions_mE225000D69C950CDBF26EC557614384B3C76C6E4(__this, L_5, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:140>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:140>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_7 = ___0_cmd;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_8 = ___1_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = ___2_argsBuffer;
 		ComputeRayTracingShader_DispatchIndirect_m698CCE56012C97888AC7182EA6AE464777C22020(__this, L_7, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:141>
 		return;
 	}
 }
-// Method Definition Index: 73701
+// Method Definition Index: 73182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIndirectDispatchDimensions_mE225000D69C950CDBF26EC557614384B3C76C6E4 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_argsBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2016,7 +2016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIndirectDispa
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:145>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = __this->___m_Shader;
 		int32_t L_2 = __this->___m_ComputeIndirectDispatchDimsKernelIndex;
@@ -2025,7 +2025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIndirectDispa
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_4 = ___1_argsBuffer;
 		NullCheck(L_0);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_0, L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:146>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_5 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_6 = __this->___m_Shader;
 		int32_t L_7 = __this->___m_ComputeIndirectDispatchDimsKernelIndex;
@@ -2033,17 +2033,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_SetIndirectDispa
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = __this->___m_DispatchBuffer;
 		NullCheck(L_5);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_5, L_6, L_7, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:147>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_10 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_11 = __this->___m_Shader;
 		int32_t L_12 = __this->___m_ComputeIndirectDispatchDimsKernelIndex;
 		NullCheck(L_10);
 		CommandBuffer_DispatchCompute_mF9F5605B77F0480FD4B8C3BCAEC2FC59A24E31A2(L_10, L_11, L_12, 1, 1, 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:148>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:148>
 		return;
 	}
 }
-// Method Definition Index: 73702
+// Method Definition Index: 73183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_DispatchIndirect_m698CCE56012C97888AC7182EA6AE464777C22020 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_argsBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2053,7 +2053,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_DispatchIndirect
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:152>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:152>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = __this->___m_Shader;
 		int32_t L_2 = __this->___m_KernelIndex;
@@ -2062,7 +2062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_DispatchIndirect
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_4 = ___1_scratchBuffer;
 		NullCheck(L_0);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_0, L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:153>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_5 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_6 = __this->___m_Shader;
 		int32_t L_7 = __this->___m_KernelIndex;
@@ -2070,29 +2070,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeRayTracingShader_DispatchIndirect
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = ___2_argsBuffer;
 		NullCheck(L_5);
 		CommandBuffer_SetComputeBufferParam_mF358CEC3E841ACFA0ECA0D9495B8287A842F20CA(L_5, L_6, L_7, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:154>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_10 = ___0_cmd;
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_11 = __this->___m_Shader;
 		int32_t L_12 = __this->___m_KernelIndex;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_13 = __this->___m_DispatchBuffer;
 		NullCheck(L_10);
 		CommandBuffer_DispatchCompute_m3241F768F59AD8D97A164921E87CE855664821AB(L_10, L_11, L_12, L_13, 0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:155>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:155>
 		return;
 	}
 }
-// Method Definition Index: 73703
+// Method Definition Index: 73184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t ComputeRayTracingShader_GetTraceScratchBufferRequiredSizeInBytes_m9BB45E11B6E313982A29828E6E5E4BC905DE37B7 (ComputeRayTracingShader_tA11AAA69825A7FF6807AED00024AED74E47C0B47* __this, uint32_t ___0_width, uint32_t ___1_height, uint32_t ___2_depth, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
 	uint64_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:159>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:159>
 		uint32_t L_0 = ___0_width;
 		uint32_t L_1 = ___1_height;
 		uint32_t L_2 = ___2_depth;
 		V_0 = ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_multiply((int32_t)L_0, (int32_t)L_1)), (int32_t)L_2));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:160>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:160>
 		uint32_t L_3 = V_0;
 		uint64_t L_4;
 		L_4 = RadeonRaysAPI_GetTraceMemoryRequirements_mA85A37783DF178A3EFF3E541C85521FF796178B1(L_3, NULL);
@@ -2102,7 +2102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t ComputeRayTracingShader_GetTraceScra
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Compute/ComputeRayTracingShader.cs:161>
 		uint64_t L_5 = V_1;
 		return L_5;
 	}
@@ -2115,16 +2115,16 @@ IL_0013:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73704
+// Method Definition Index: 73185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:8>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_0 = __this->___U3CaccelStructU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73705
+// Method Definition Index: 73186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct__ctor_m613ED437C5CD8951216805B7864F3613B2A11DD6 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* ___0_options, ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* ___1_counter, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2140,65 +2140,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct__ctor_m613
 	Settings_t635C231FDA8D35EBE9568F993ED1442F0E145D94 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:14>
 		Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710* L_0 = (Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710*)il2cpp_codegen_object_new(Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mB2AF39366CCF9A9E898D6D5400BEDF4F6E1BB646(L_0, Dictionary_2__ctor_mB2AF39366CCF9A9E898D6D5400BEDF4F6E1BB646_RuntimeMethod_var);
 		__this->___m_Meshes = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Meshes), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:18>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_1 = (HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2*)il2cpp_codegen_object_new(HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m90EA29D74B137C5317CDC485AA1D799F0B6726FF(L_1, HashSet_1__ctor_m90EA29D74B137C5317CDC485AA1D799F0B6726FF_RuntimeMethod_var);
 		__this->___m_InstanceHandles = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InstanceHandles), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:21>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:23>
 		AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* L_2 = ___0_options;
 		NullCheck(L_2);
 		int32_t L_3 = L_2->___buildFlags;
 		__this->___m_BuildFlags = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:25>
 		Settings__ctor_m34CC2712EE46484FD5D6A2EFE9FCD7EA4B6BD2C1((&V_0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:26>
 		(&V_0)->___rayTracingModeMask = ((int32_t)30);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:27>
 		(&V_0)->___managementMode = 0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:28>
 		Settings_set_enableCompaction_m1AB48D9BC0D0785988A3BED6C9BCC5932C53D6EC_inline((&V_0), (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:29>
 		(&V_0)->___layerMask = ((int32_t)255);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:30>
 		int32_t L_4 = __this->___m_BuildFlags;
 		Settings_set_buildFlagsStaticGeometries_m27C81507599C81DDF01CADE529B58C97550A3058_inline((&V_0), L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:32>
 		Settings_t635C231FDA8D35EBE9568F993ED1442F0E145D94 L_5 = V_0;
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_6 = (RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D*)il2cpp_codegen_object_new(RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D_il2cpp_TypeInfo_var);
 		RayTracingAccelerationStructure__ctor_m676837F32FB5475B87D663B0034E402332F35098(L_6, L_5, NULL);
 		__this->___U3CaccelStructU3Ek__BackingField = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CaccelStructU3Ek__BackingField), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:34>
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_7 = ___1_counter;
 		__this->___m_Counter = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Counter), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:35>
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_8 = __this->___m_Counter;
 		NullCheck(L_8);
 		ReferenceCounter_Inc_m9A5D2006967F9C9F9F09AD15CA76095675C005F3(L_8, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 73706
+// Method Definition Index: 73187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_Dispose_m6FB132038DEDBDC5991DC22D5C93470FC449E7AA (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, const RuntimeMethod* method) 
 {
 	RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* G_B2_0 = NULL;
 	RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* G_B1_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:40>
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_0 = __this->___m_Counter;
 		NullCheck(L_0);
 		ReferenceCounter_Dec_mF7B26E4B8232FADCFE3FBEC489F86A0F9F0FF824(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:41>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_1;
 		L_1 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_2 = L_1;
@@ -2221,11 +2221,11 @@ IL_0019:
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:42>
 		return;
 	}
 }
-// Method Definition Index: 73707
+// Method Definition Index: 73188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HardwareRayTracingAccelStruct_AddInstance_mE0FCF9DAF826771BF3E779817677F1652EACEF9B (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 ___0_meshInstance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2251,18 +2251,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HardwareRayTracingAccelStruct_AddInst
 	int32_t G_B3_0 = 0;
 	RayTracingMeshInstanceConfig_tC10D5EC6B65BDC4DA08105BE67AE398B01F50C87* G_B3_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:46>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_0 = ___0_meshInstance;
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_1 = L_0.___mesh;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteral1B78E25148F0D9AF7885E8B9B3428BB38AB5ACC4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:47>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_2 = ___0_meshInstance;
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_3 = L_2.___mesh;
 		NullCheck(L_3);
 		bool L_4;
 		L_4 = Mesh_HasVertexAttribute_m6FA9574E4DEE19158535F93281791AD6FB550595(L_3, 0, NULL);
 		Utils_CheckArg_m0FA10DAE9DB5DFBB35CDBFF2B915FFED4B2FAC1A(L_4, _stringLiteral45BC41FF05125ADA2169960E77FB487AA113C1B2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:48>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_5 = ___0_meshInstance;
 		int32_t L_6 = L_5.___subMeshIndex;
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_7 = ___0_meshInstance;
@@ -2271,25 +2271,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HardwareRayTracingAccelStruct_AddInst
 		int32_t L_9;
 		L_9 = Mesh_get_subMeshCount_mC0141293D0F339D8D721CCA2612B32E6FD7E3F8B(L_8, NULL);
 		Utils_CheckArgRange_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mEA164A56C1607CE79F5B83ABB0B2AD06C545CA1F(L_6, 0, L_9, _stringLiteralE99EF9AC1A873527B97EAAA098877827F196421D, Utils_CheckArgRange_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mEA164A56C1607CE79F5B83ABB0B2AD06C545CA1F_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:50>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_10 = ___0_meshInstance;
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_11 = L_10.___mesh;
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_12 = ___0_meshInstance;
 		int32_t L_13 = L_12.___subMeshIndex;
 		RayTracingMeshInstanceConfig__ctor_m3E459467A636D2E81EE6F0911DB08E80201B1A7E((&V_0), L_11, L_13, (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:51>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_14 = ___0_meshInstance;
 		uint32_t L_15 = L_14.___mask;
 		(&V_0)->___mask = L_15;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:52>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_16 = ___0_meshInstance;
 		bool L_17 = L_16.___enableTriangleCulling;
 		(&V_0)->___enableTriangleCulling = L_17;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:53>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_18 = ___0_meshInstance;
 		bool L_19 = L_18.___frontTriangleCounterClockwise;
 		(&V_0)->___frontTriangleCounterClockwise = L_19;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:54>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_20 = ___0_meshInstance;
 		bool L_21 = L_20.___opaqueGeometry;
 		if (L_21)
@@ -2314,7 +2314,7 @@ IL_008e:
 IL_008f:
 	{
 		G_B3_1->___subMeshFlags = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:55>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_22;
 		L_22 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_23 = ___0_meshInstance;
@@ -2327,7 +2327,7 @@ IL_008f:
 		int32_t L_28;
 		L_28 = RayTracingAccelerationStructure_AddInstance_m9D595FDDA764AA6E991FB49A5086DC404F4E0FE9(L_22, (&V_0), L_24, L_25, L_27, NULL);
 		V_1 = L_28;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:58>
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_29 = ___0_meshInstance;
 		uint32_t L_30 = L_29.___instanceID;
 		V_3 = (bool)((((int32_t)L_30) == ((int32_t)(-1)))? 1 : 0);
@@ -2338,7 +2338,7 @@ IL_008f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:59>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_32;
 		L_32 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		int32_t L_33 = V_1;
@@ -2349,20 +2349,20 @@ IL_008f:
 
 IL_00d2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:61>
 		Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710* L_35 = __this->___m_Meshes;
 		int32_t L_36 = V_1;
 		MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73 L_37 = ___0_meshInstance;
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_38 = L_37.___mesh;
 		NullCheck(L_35);
 		Dictionary_2_Add_m95F3B444BCCD32EF7B74E1D23DDFDE5AC25B3CEF(L_35, L_36, L_38, Dictionary_2_Add_m95F3B444BCCD32EF7B74E1D23DDFDE5AC25B3CEF_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:64>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_39 = __this->___m_InstanceHandles;
 		int32_t L_40 = V_1;
 		NullCheck(L_39);
 		bool L_41;
 		L_41 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_39, L_40, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:67>
 		int32_t L_42 = V_1;
 		V_4 = L_42;
 		goto IL_00f7;
@@ -2370,12 +2370,12 @@ IL_00d2:
 
 IL_00f7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:68>
 		int32_t L_43 = V_4;
 		return L_43;
 	}
 }
-// Method Definition Index: 73708
+// Method Definition Index: 73189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_RemoveInstance_mE5DF5B0417E759CD5B2FCBBC28658C3426E38972 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, int32_t ___0_instanceHandle, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2387,7 +2387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_RemoveInst
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:73>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_0 = __this->___m_InstanceHandles;
 		int32_t L_1 = ___0_instanceHandle;
 		NullCheck(L_0);
@@ -2401,7 +2401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_RemoveInst
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:74>
 		int32_t L_4 = ___0_instanceHandle;
 		int32_t L_5 = L_4;
 		RuntimeObject* L_6 = Box(il2cpp_defaults.int32_class, &L_5);
@@ -2414,23 +2414,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_RemoveInst
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:77>
 		Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710* L_9 = __this->___m_Meshes;
 		int32_t L_10 = ___0_instanceHandle;
 		NullCheck(L_9);
 		bool L_11;
 		L_11 = Dictionary_2_Remove_mD4F721D02F35A2CCC78B8D5FD2962FF622CEA54F(L_9, L_10, Dictionary_2_Remove_mD4F721D02F35A2CCC78B8D5FD2962FF622CEA54F_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:78>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_12;
 		L_12 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		int32_t L_13 = ___0_instanceHandle;
 		NullCheck(L_12);
 		RayTracingAccelerationStructure_RemoveInstance_m9647951EB22EE8279F48986B3C5C15AE02995589(L_12, L_13, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:79>
 		return;
 	}
 }
-// Method Definition Index: 73709
+// Method Definition Index: 73190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_ClearInstances_m8045B3737D8571848EADDAC8328BCCC0BD318530 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2441,78 +2441,78 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_ClearInsta
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:84>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_0 = __this->___m_InstanceHandles;
 		NullCheck(L_0);
 		HashSet_1_Clear_m88C3BA6617F6667126635140414D44D76C42AE92(L_0, HashSet_1_Clear_m88C3BA6617F6667126635140414D44D76C42AE92_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:87>
 		Dictionary_2_t6D39865003E656D60A88B22671895E4EA1590710* L_1 = __this->___m_Meshes;
 		NullCheck(L_1);
 		Dictionary_2_Clear_m128E800DB0E185C5BB4ED5914C473C0C1E10F4FF(L_1, Dictionary_2_Clear_m128E800DB0E185C5BB4ED5914C473C0C1E10F4FF_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:88>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_2;
 		L_2 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		NullCheck(L_2);
 		RayTracingAccelerationStructure_ClearInstances_mA3203CC34502670D1E8BC2F12925ADB6F6D3E1E8(L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:89>
 		return;
 	}
 }
-// Method Definition Index: 73710
+// Method Definition Index: 73191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_UpdateInstanceTransform_m165ECCD5E1A275CCB1E7DDD71825C7C362D61572 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, int32_t ___0_instanceHandle, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___1_localToWorldMatrix, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:93>
 		int32_t L_0 = ___0_instanceHandle;
 		HardwareRayTracingAccelStruct_CheckInstanceHandleIsValid_m7C8D5787EDE1DF828252F0D905ED4F4DC68E419A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:95>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_1;
 		L_1 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		int32_t L_2 = ___0_instanceHandle;
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_3 = ___1_localToWorldMatrix;
 		NullCheck(L_1);
 		RayTracingAccelerationStructure_UpdateInstanceTransform_m0CD56480BFDED4E9421F57F418F296794DD99C47(L_1, L_2, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:96>
 		return;
 	}
 }
-// Method Definition Index: 73711
+// Method Definition Index: 73192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_UpdateInstanceID_m14BA46089072411405EA53F3827AEEF1EC08EF55 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, int32_t ___0_instanceHandle, uint32_t ___1_instanceID, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:100>
 		int32_t L_0 = ___0_instanceHandle;
 		HardwareRayTracingAccelStruct_CheckInstanceHandleIsValid_m7C8D5787EDE1DF828252F0D905ED4F4DC68E419A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:102>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_1;
 		L_1 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		int32_t L_2 = ___0_instanceHandle;
 		uint32_t L_3 = ___1_instanceID;
 		NullCheck(L_1);
 		RayTracingAccelerationStructure_UpdateInstanceID_m26724A0C2838AADFD42B302A20A2AD5EF94A61AC(L_1, L_2, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:103>
 		return;
 	}
 }
-// Method Definition Index: 73712
+// Method Definition Index: 73193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_UpdateInstanceMask_mF37F0AB5CA040D8F7FD8C5599532D4B2441FF1EE (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, int32_t ___0_instanceHandle, uint32_t ___1_mask, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:107>
 		int32_t L_0 = ___0_instanceHandle;
 		HardwareRayTracingAccelStruct_CheckInstanceHandleIsValid_m7C8D5787EDE1DF828252F0D905ED4F4DC68E419A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:109>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_1;
 		L_1 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		int32_t L_2 = ___0_instanceHandle;
 		uint32_t L_3 = ___1_mask;
 		NullCheck(L_1);
 		RayTracingAccelerationStructure_UpdateInstanceMask_m870BE8BE00392D0B5FC866C599E122F0F221F9A0(L_1, L_2, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:110>
 		return;
 	}
 }
-// Method Definition Index: 73713
+// Method Definition Index: 73194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_Build_mD3B92F3AD271BC9059A0D0AE6C28155A9A529596 (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2526,14 +2526,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_Build_mD3B
 	BuildSettings_tB970A34CAC0B7D0539FFCA20FA7F1727CDAC2A02 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:114>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:116>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:117>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:118>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:119>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:120>
 		BuildSettings__ctor_mF508147FAB0F2FF3AF2FE69214A86F4858517485((&V_1), NULL);
 		int32_t L_1 = __this->___m_BuildFlags;
 		BuildSettings_set_buildFlags_mE83AE894871667EB2BBD1B68160B0292D518CC87_inline((&V_1), L_1, NULL);
@@ -2542,35 +2542,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_Build_mD3B
 		BuildSettings_set_relativeOrigin_mC231E6EE2CF2776437A27C9463AFF52F9F0C39A5_inline((&V_1), L_2, NULL);
 		BuildSettings_tB970A34CAC0B7D0539FFCA20FA7F1727CDAC2A02 L_3 = V_1;
 		V_0 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:121>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:121>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_4 = ___0_cmd;
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_5;
 		L_5 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(__this, NULL);
 		BuildSettings_tB970A34CAC0B7D0539FFCA20FA7F1727CDAC2A02 L_6 = V_0;
 		NullCheck(L_4);
 		CommandBuffer_BuildRayTracingAccelerationStructure_m6DE6BDB161FDF6272D80F46562169E09AA7DA938(L_4, L_5, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:122>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:122>
 		return;
 	}
 }
-// Method Definition Index: 73714
+// Method Definition Index: 73195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t HardwareRayTracingAccelStruct_GetBuildScratchBufferRequiredSizeInBytes_mAF6E0B7FF6312E368DD59379C03D39FE6C92C96D (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, const RuntimeMethod* method) 
 {
 	uint64_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:128>
 		V_0 = ((int64_t)0);
 		goto IL_0006;
 	}
 
 IL_0006:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:129>
 		uint64_t L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 73715
+// Method Definition Index: 73196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_CheckInstanceHandleIsValid_m7C8D5787EDE1DF828252F0D905ED4F4DC68E419A (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, int32_t ___0_instanceHandle, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2581,7 +2581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_CheckInsta
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:135>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_0 = __this->___m_InstanceHandles;
 		int32_t L_1 = ___0_instanceHandle;
 		NullCheck(L_0);
@@ -2595,7 +2595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_CheckInsta
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:136>
 		int32_t L_4 = ___0_instanceHandle;
 		int32_t L_5 = L_4;
 		RuntimeObject* L_6 = Box(il2cpp_defaults.int32_class, &L_5);
@@ -2608,7 +2608,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingAccelStruct_CheckInsta
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:138>
 		return;
 	}
 }
@@ -2620,21 +2620,21 @@ IL_002f:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73716
+// Method Definition Index: 73197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingBackend__ctor_m2D1F6646545D009A5705B331183E587E87C715D8 (HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99* __this, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___0_resources, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:5>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:7>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_0 = ___0_resources;
 		__this->___m_Resources = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Resources), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:8>
 		return;
 	}
 }
-// Method Definition Index: 73717
+// Method Definition Index: 73198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_CreateRayTracingShader_mFDA1EA02462EACBF9F36BC020A6E92C84ACBD0E5 (HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99* __this, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_shader, String_t* ___1_kernelName, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_dispatchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2647,11 +2647,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_Crea
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:12>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = ___0_shader;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D((bool)((!(((RuntimeObject*)(RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A*)((RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A*)IsInstSealed((RuntimeObject*)L_0, RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:13>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = ___0_shader;
 		String_t* L_2 = ___1_kernelName;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_3 = ___2_dispatchBuffer;
@@ -2663,12 +2663,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_Crea
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:14>
 		RuntimeObject* L_5 = V_0;
 		return L_5;
 	}
 }
-// Method Definition Index: 73718
+// Method Definition Index: 73199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_CreateAccelerationStructure_m9BC501A5C6E52A08BF0C7AFA3B8B2BB6C9F4F044 (HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99* __this, AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* ___0_options, ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* ___1_counter, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2679,7 +2679,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_Crea
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:18>
 		AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* L_0 = ___0_options;
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_1 = ___1_counter;
 		HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* L_2 = (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E*)il2cpp_codegen_object_new(HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E_il2cpp_TypeInfo_var);
@@ -2690,24 +2690,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HardwareRayTracingBackend_Crea
 
 IL_000b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:19>
 		RuntimeObject* L_3 = V_0;
 		return L_3;
 	}
 }
-// Method Definition Index: 73719
+// Method Definition Index: 73200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t HardwareRayTracingBackend_GetRequiredTraceScratchBufferSizeInBytes_mEE05FCC58980849E300CC96DEEA0F926527638C0 (HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99* __this, uint32_t ___0_width, uint32_t ___1_height, uint32_t ___2_depth, const RuntimeMethod* method) 
 {
 	uint64_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:23>
 		V_0 = ((int64_t)0);
 		goto IL_0006;
 	}
 
 IL_0006:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingBackend.cs:24>
 		uint64_t L_0 = V_0;
 		return L_0;
 	}
@@ -2720,31 +2720,31 @@ IL_0006:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73720
+// Method Definition Index: 73201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader__ctor_m7FEE7B0B18A532403FDB77E6EDCA9F7808B86BFE (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* ___0_shader, String_t* ___1_dispatchFuncName, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_unused, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:11>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:13>
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_0 = ___0_shader;
 		__this->___m_Shader = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Shader), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:14>
 		String_t* L_1 = ___1_dispatchFuncName;
 		__this->___m_ShaderDispatchFuncName = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ShaderDispatchFuncName), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 73721
+// Method Definition Index: 73202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B HardwareRayTracingShader_GetThreadGroupSizes_mAF3A08BBDE365780DDE99CF61BD5CCA229564887 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, const RuntimeMethod* method) 
 {
 	uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:19>
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		uint3__ctor_mEFEA14BBA36F53111474B0C3C3B729061F1ACCAF_inline((&L_0), 1, 1, 1, NULL);
@@ -2754,12 +2754,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F
 
 IL_000c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:20>
 		uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 73722
+// Method Definition Index: 73203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetAccelerationStructure_mEAB0BDC2B187BC0918630311B10BC3DCC540C1A1 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, String_t* ___1_name, RuntimeObject* ___2_accelStruct, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2774,25 +2774,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetAcceleration
 	}
 	HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:24>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:25>
 		RuntimeObject* L_1 = ___2_accelStruct;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralDCA65620D178FD56AA026C591B31ABD25B1E26C5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:27>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_3 = __this->___m_Shader;
 		NullCheck(L_2);
 		CommandBuffer_SetRayTracingShaderPass_m448CC6ACDE24DEFD526856E1FAF9D24C2A59961A(L_2, L_3, _stringLiteral63D7F51F3542DBFD9AE1EF1E81F3A8721F082D47, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:29>
 		RuntimeObject* L_4 = ___2_accelStruct;
 		V_0 = ((HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E*)IsInstSealed((RuntimeObject*)L_4, HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:30>
 		HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D((bool)((!(((RuntimeObject*)(HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:32>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_6 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_7 = __this->___m_Shader;
 		String_t* L_8 = ___1_name;
@@ -2806,11 +2806,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetAcceleration
 		L_12 = HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline(L_11, NULL);
 		NullCheck(L_6);
 		CommandBuffer_SetRayTracingAccelerationStructure_m043BA04A1CF4332C151D4BA650B56F22B5900E4B(L_6, L_7, L_10, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:33>
 		return;
 	}
 }
-// Method Definition Index: 73723
+// Method Definition Index: 73204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetIntParam_m7ADAEC0E364C5655AD7DF4755078C055CC64305F (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, int32_t ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2820,21 +2820,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetIntParam_m7A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:37>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:39>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		int32_t L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetRayTracingIntParam_m5AA90C126E9788DB86FB8769A7FD6BA58B7EE07F(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:40>
 		return;
 	}
 }
-// Method Definition Index: 73724
+// Method Definition Index: 73205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetFloatParam_m418DEB646E2C8343379340811E19225CFA13A208 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, float ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2844,21 +2844,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetFloatParam_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:44>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:46>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		float L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetRayTracingFloatParam_m45AFEE6CCF59FD549194401CE847B789577C3ED4(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 73725
+// Method Definition Index: 73206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetVectorParam_mC478EB3AC7EDD521E96AF99821C2A1A175FC5817 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2868,21 +2868,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetVectorParam_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:51>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:53>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetRayTracingVectorParam_mAE5C84BF483FFD5DAFC6DFF83189EEA68784BFCA(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 73726
+// Method Definition Index: 73207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetMatrixParam_m9084F6509C47C11150D09F73D7D52E84CB62AB0D (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___2_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2892,21 +2892,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetMatrixParam_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:58>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:60>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_4 = ___2_val;
 		NullCheck(L_1);
 		CommandBuffer_SetRayTracingMatrixParam_m7BF730DBD7ED2E0CC5388D63AE28ADEC8B816CBE(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:61>
 		return;
 	}
 }
-// Method Definition Index: 73727
+// Method Definition Index: 73208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetTextureParam_mFCBCBFC1AAADAF3A42ADB38C8231AA3793788CD7 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B ___2_rt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2916,21 +2916,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetTextureParam
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:65>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:67>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		int32_t L_3 = ___1_nameID;
 		RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B L_4 = ___2_rt;
 		NullCheck(L_1);
 		CommandBuffer_SetRayTracingTextureParam_mCFB594E995E8045FAA912AE3328D075FFA88C5F5(L_1, L_2, L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:68>
 		return;
 	}
 }
-// Method Definition Index: 73728
+// Method Definition Index: 73209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetBufferParam_m0102E603034BEF9AB7C17CEC6AF8E22D4F809BDE (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_buffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2941,24 +2941,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetBufferParam_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:72>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:73>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:75>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_5 = ___2_buffer;
 		NullCheck(L_2);
 		CommandBuffer_SetRayTracingBufferParam_m3ED795935E77B9CAA07B605F5C8AAF0A14925A3B(L_2, L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 73729
+// Method Definition Index: 73210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetBufferParam_mC828343D3A17D1FC9DC63777FD66B68827C840EA (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* ___2_buffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2969,24 +2969,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetBufferParam_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:80>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:81>
 		ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:83>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
 		ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* L_5 = ___2_buffer;
 		NullCheck(L_2);
 		CommandBuffer_SetRayTracingBufferParam_mC5F42A1E3B02B34ED492A6CFD7204885180C13F1(L_2, L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:84>
 		return;
 	}
 }
-// Method Definition Index: 73730
+// Method Definition Index: 73211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBufferParam_m76037B5FBB32DAA4F74EF7F18AB2B5BA2D1E2DB8 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_buffer, int32_t ___3_offset, int32_t ___4_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2997,13 +2997,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBuff
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:88>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:89>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:91>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
@@ -3012,11 +3012,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBuff
 		int32_t L_7 = ___4_size;
 		NullCheck(L_2);
 		CommandBuffer_SetRayTracingConstantBufferParam_m915C105E1B32E394EA8650843F3A87363D289E3E(L_2, L_3, L_4, L_5, L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:92>
 		return;
 	}
 }
-// Method Definition Index: 73731
+// Method Definition Index: 73212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBufferParam_m9DFB25A62E2A9C2DEE615887DD642480247EB865 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, int32_t ___1_nameID, ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* ___2_buffer, int32_t ___3_offset, int32_t ___4_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3027,13 +3027,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBuff
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:96>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:97>
 		ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* L_1 = ___2_buffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC263EA29ADF3548CFEBC57B532EED28451A56C10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:99>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_2 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_3 = __this->___m_Shader;
 		int32_t L_4 = ___1_nameID;
@@ -3042,11 +3042,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_SetConstantBuff
 		int32_t L_7 = ___4_size;
 		NullCheck(L_2);
 		CommandBuffer_SetRayTracingConstantBufferParam_m4BBC84A4668411BBFECF85FB2939E261C2B3476E(L_2, L_3, L_4, L_5, L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:100>
 		return;
 	}
 }
-// Method Definition Index: 73732
+// Method Definition Index: 73213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m80E421A408EA311D9F14D42206DDD84178820CEF (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, uint32_t ___2_width, uint32_t ___3_height, uint32_t ___4_depth, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3056,10 +3056,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m80E42
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:104>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:106>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_1 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_2 = __this->___m_Shader;
 		String_t* L_3 = __this->___m_ShaderDispatchFuncName;
@@ -3068,11 +3068,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m80E42
 		uint32_t L_6 = ___4_depth;
 		NullCheck(L_1);
 		CommandBuffer_DispatchRays_mD3DD14548A854DA91FFA7E1F5AA927E74FF93310(L_1, L_2, L_3, L_4, L_5, L_6, (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:107>
 		return;
 	}
 }
-// Method Definition Index: 73733
+// Method Definition Index: 73214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m878588BABB6CEA62380765F92B32FBF7A8C0A3FF (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___0_cmd, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___1_scratchBuffer, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* ___2_argsBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3085,15 +3085,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m87858
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:111>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_0 = ___0_cmd;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:112>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = ___2_argsBuffer;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralAE2ABC590F17A0E6DAADCB14B4E7A06E6E54F6A6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:113>
 		V_0 = ((int32_t)272);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:114>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_2 = ___2_argsBuffer;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -3101,30 +3101,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HardwareRayTracingShader_Dispatch_m87858
 		int32_t L_4 = V_0;
 		int32_t L_5 = V_0;
 		Utils_CheckArg_m0FA10DAE9DB5DFBB35CDBFF2B915FFED4B2FAC1A((bool)((((int32_t)((int32_t)((int32_t)L_3&(int32_t)L_4))) == ((int32_t)L_5))? 1 : 0), _stringLiteral6FD64A606C5EAC9FA13604AD6D87CBDF920A1FC2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:116>
 		CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_6 = ___0_cmd;
 		RayTracingShader_t0CC904310653C677A0886882C057D5161E05580A* L_7 = __this->___m_Shader;
 		String_t* L_8 = __this->___m_ShaderDispatchFuncName;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = ___2_argsBuffer;
 		NullCheck(L_6);
 		CommandBuffer_DispatchRays_mF4211AFABE2FF528C3BA0BB75E521A2AC4807839(L_6, L_7, L_8, L_9, 0, (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:117>
 		return;
 	}
 }
-// Method Definition Index: 73734
+// Method Definition Index: 73215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t HardwareRayTracingShader_GetTraceScratchBufferRequiredSizeInBytes_m4885E2101C32A26F762913B305ABE0EA862442E8 (HardwareRayTracingShader_t52DF30BEB1E7F9A3414D6E559C368D64338F987F* __this, uint32_t ___0_width, uint32_t ___1_height, uint32_t ___2_depth, const RuntimeMethod* method) 
 {
 	uint64_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:120>
 		V_0 = ((int64_t)0);
 		goto IL_0006;
 	}
 
 IL_0006:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:121>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingShader.cs:121>
 		uint64_t L_0 = V_0;
 		return L_0;
 	}
@@ -3191,32 +3191,32 @@ IL2CPP_EXTERN_C void MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73_
 IL2CPP_EXTERN_C void MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73_marshal_com_cleanup(MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 73735
+// Method Definition Index: 73216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshInstanceDesc__ctor_mC1F2D78863A3D1EEBB915C475B07F96C8DA939B4 (MeshInstanceDesc_tB2FE46683FA05965417F454F188294A3269F5F73* __this, Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___0_mesh, int32_t ___1_subMeshIndex, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:68>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_0 = ___0_mesh;
 		__this->___mesh = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___mesh), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:69>
 		int32_t L_1 = ___1_subMeshIndex;
 		__this->___subMeshIndex = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:70>
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_2;
 		L_2 = Matrix4x4_get_identity_m6568A73831F3E2D587420D20FF423959D7D8AB56_inline(NULL);
 		__this->___localToWorldMatrix = L_2;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:71>
 		__this->___mask = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:72>
 		__this->___instanceID = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:73>
 		__this->___enableTriangleCulling = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:74>
 		__this->___frontTriangleCounterClockwise = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:75>
 		__this->___opaqueGeometry = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/IRayTracingAccelStruct.cs:76>
 		return;
 	}
 }
@@ -3243,7 +3243,7 @@ IL2CPP_EXTERN_C  void MeshInstanceDesc__ctor_mC1F2D78863A3D1EEBB915C475B07F96C8D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73761
+// Method Definition Index: 73242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_mC3C6736F88FD9B40C1055ADD7BF4309198632339 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, int32_t ___0_backend, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___1_resources, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3259,17 +3259,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_mC3C6736F88FD9B4
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:190>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:190>
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_0 = (ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C*)il2cpp_codegen_object_new(ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C_il2cpp_TypeInfo_var);
 		ReferenceCounter__ctor_mE28C990308A976CC6E48A670E57DBE0A095FB8EF(L_0, NULL);
 		__this->___m_AccelStructCounter = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AccelStructCounter), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:46>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:48>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_1 = ___1_resources;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteral28AF8F9CB43833F25C5D59AAA78580C73E8DBCD5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:50>
 		int32_t L_2 = ___0_backend;
 		bool L_3;
 		L_3 = RayTracingContext_IsBackendSupported_m031EE28D5E4F904D007ADF5269B88B73B1B20C56(L_2, NULL);
@@ -3281,7 +3281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_mC3C6736F88FD9B4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:51>
 		Il2CppFakeBox<int32_t> L_5(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RayTracingBackend_t6681724B7B6241B6D9B5F893882C764EC51DEE49_il2cpp_TypeInfo_var)), (&___0_backend));
 		String_t* L_6;
 		L_6 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_5), NULL);
@@ -3294,10 +3294,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_mC3C6736F88FD9B4
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:53>
 		int32_t L_9 = ___0_backend;
 		RayTracingContext_set_BackendType_mD76B3ECB08571547BDB0E8BE309E74430758AA3F_inline(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:54>
 		int32_t L_10 = ___0_backend;
 		V_1 = (bool)((((int32_t)L_10) == ((int32_t)0))? 1 : 0);
 		bool L_11 = V_1;
@@ -3307,7 +3307,7 @@ IL_0049:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:55>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_12 = ___1_resources;
 		HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99* L_13 = (HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99*)il2cpp_codegen_object_new(HardwareRayTracingBackend_t0857B59AE84A6B407563D88644196D4181477B99_il2cpp_TypeInfo_var);
 		HardwareRayTracingBackend__ctor_m2D1F6646545D009A5705B331183E587E87C715D8(L_13, L_12, NULL);
@@ -3318,7 +3318,7 @@ IL_0049:
 
 IL_0067:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:56>
 		int32_t L_14 = ___0_backend;
 		V_2 = (bool)((((int32_t)L_14) == ((int32_t)1))? 1 : 0);
 		bool L_15 = V_2;
@@ -3328,7 +3328,7 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:57>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_16 = ___1_resources;
 		ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903* L_17 = (ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903*)il2cpp_codegen_object_new(ComputeRayTracingBackend_t194DB41750FC0E0C171573F7FD10D255BE069903_il2cpp_TypeInfo_var);
 		ComputeRayTracingBackend__ctor_m46E4D9091113B7AF07AA79D62DF6B2F8532BDD3F(L_17, L_16, NULL);
@@ -3338,19 +3338,19 @@ IL_0067:
 
 IL_007b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:59>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_18 = ___1_resources;
 		RayTracingContext_set_Resources_m951513BE15192C3B78942EED37A62F2931297C50_inline(__this, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:60>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_19;
 		L_19 = RayTracingHelper_CreateDispatchIndirectBuffer_m6B7F3340F21AD8B73DB5CDD24F4281A0745EF3C7(NULL);
 		__this->___m_DispatchBuffer = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DispatchBuffer), (void*)L_19);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:61>
 		return;
 	}
 }
-// Method Definition Index: 73762
+// Method Definition Index: 73243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_m625A3777FD1ABAD52EF4F92FFD48A3AC0CF46CEA (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___0_resources, const RuntimeMethod* method) 
 {
 	RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* G_B2_0 = NULL;
@@ -3358,7 +3358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext__ctor_m625A3777FD1ABAD
 	int32_t G_B3_0 = 0;
 	RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* G_B3_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:68>
 		bool L_0;
 		L_0 = RayTracingContext_IsBackendSupported_m031EE28D5E4F904D007ADF5269B88B73B1B20C56(0, NULL);
 		if (L_0)
@@ -3384,11 +3384,11 @@ IL_000d:
 	{
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_1 = ___0_resources;
 		RayTracingContext__ctor_mC3C6736F88FD9B40C1055ADD7BF4309198632339(G_B3_1, G_B3_0, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:70>
 		return;
 	}
 }
-// Method Definition Index: 73763
+// Method Definition Index: 73244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_Dispose_m644D68CE0150834232997AB9967E759E4E8D3191 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3402,7 +3402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_Dispose_m644D68CE01508
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B4_0 = NULL;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:80>
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_0 = __this->___m_AccelStructCounter;
 		NullCheck(L_0);
 		uint64_t L_1 = L_0->___value;
@@ -3414,15 +3414,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_Dispose_m644D68CE01508
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:82>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:83>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralADB4741EA4122E6377D37E41EB4DB5B4113E9D7D, NULL);
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:85>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_3 = __this->___m_DispatchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_4 = L_3;
 		if (L_4)
@@ -3444,38 +3444,38 @@ IL_002d:
 
 IL_0033:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:86>
 		return;
 	}
 }
-// Method Definition Index: 73764
+// Method Definition Index: 73245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* RayTracingContext_get_Resources_mF71E401C9C4D04D104ACF4A77D250B36E1D3BD7D (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_0 = __this->___U3CResourcesU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73765
+// Method Definition Index: 73246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_set_Resources_m951513BE15192C3B78942EED37A62F2931297C50 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_0 = ___0_value;
 		__this->___U3CResourcesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CResourcesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73766
+// Method Definition Index: 73247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingContext_IsBackendSupported_m031EE28D5E4F904D007ADF5269B88B73B1B20C56 (int32_t ___0_backend, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:100>
 		int32_t L_0 = ___0_backend;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -3485,7 +3485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingContext_IsBackendSupported_m03
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:101>
 		bool L_2;
 		L_2 = SystemInfo_get_supportsRayTracing_m38231762A4F04F083B9421D01A29404C901B721E(NULL);
 		V_1 = L_2;
@@ -3494,7 +3494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingContext_IsBackendSupported_m03
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:102>
 		int32_t L_3 = ___0_backend;
 		V_2 = (bool)((((int32_t)L_3) == ((int32_t)1))? 1 : 0);
 		bool L_4 = V_2;
@@ -3504,7 +3504,7 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:103>
 		bool L_5;
 		L_5 = SystemInfo_get_supportsComputeShaders_m4A029D2F8FB9343E65E6F1C6F1C79DA41911F13A(NULL);
 		V_1 = L_5;
@@ -3513,19 +3513,19 @@ IL_0011:
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:105>
 		V_1 = (bool)0;
 		goto IL_0025;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:106>
 		bool L_6 = V_1;
 		return L_6;
 	}
 }
-// Method Definition Index: 73767
+// Method Definition Index: 73248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateRayTracingShader_m23B2CD527A90EA5900FF8D16E5BA857E74AA06E1 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_shader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3536,7 +3536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateRayTra
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:118>
 		RuntimeObject* L_0 = __this->___m_Backend;
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = ___0_shader;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_2 = __this->___m_DispatchBuffer;
@@ -3546,7 +3546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateRayTra
 		return L_3;
 	}
 }
-// Method Definition Index: 73768
+// Method Definition Index: 73249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_LoadRayTracingShaderFromAssetBundle_m5F69D7748597571B62D32120F446F0525510FF71 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, AssetBundle_tB38418819A49060CD738CB21541649340F082943* ___0_assetBundle, String_t* ___1_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3558,10 +3558,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_LoadRayTraci
 	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:147>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_0 = ___0_assetBundle;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralBAA0C1F5A71E49E4208B5082BE8F07981A1C1A01, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:149>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:149>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_1 = ___0_assetBundle;
 		String_t* L_2 = ___1_name;
 		int32_t L_3;
@@ -3572,7 +3572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_LoadRayTraci
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5;
 		L_5 = AssetBundle_LoadAsset_m021FE0B52DD660E54AE4C225D9AE66147902B8FE(L_1, L_2, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:150>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_0;
 		RuntimeObject* L_7;
 		L_7 = RayTracingContext_CreateRayTracingShader_m23B2CD527A90EA5900FF8D16E5BA857E74AA06E1(__this, L_6, NULL);
@@ -3582,12 +3582,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_LoadRayTraci
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:151>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:151>
 		RuntimeObject* L_8 = V_1;
 		return L_8;
 	}
 }
-// Method Definition Index: 73769
+// Method Definition Index: 73250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateAccelerationStructure_mC7D36C093D290F102FAF0F206A0691130E904A74 (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* ___0_options, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3600,10 +3600,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateAccele
 	RuntimeObject* V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:160>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:160>
 		AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* L_0 = ___0_options;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralCF7DF948FC4905FED1A56776B9DFCCB86C46912A, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:162>
 		RuntimeObject* L_1 = __this->___m_Backend;
 		AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* L_2 = ___0_options;
 		ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* L_3 = __this->___m_AccelStructCounter;
@@ -3611,7 +3611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateAccele
 		RuntimeObject* L_4;
 		L_4 = InterfaceFuncInvoker2< RuntimeObject*, AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8*, ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* >::Invoke(1, IRayTracingBackend_t1BC91A5F59EAEB89E083FCA18DD7D702AC4FE09D_il2cpp_TypeInfo_var, L_1, L_2, L_3);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:163>
 		RuntimeObject* L_5 = V_0;
 		V_1 = L_5;
 		goto IL_0024;
@@ -3619,12 +3619,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RayTracingContext_CreateAccele
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:164>
 		RuntimeObject* L_6 = V_1;
 		return L_6;
 	}
 }
-// Method Definition Index: 73770
+// Method Definition Index: 73251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t RayTracingContext_GetRequiredTraceScratchBufferSizeInBytes_m1342F02CDB64593E51506762ABFBBF000009901C (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, uint32_t ___0_width, uint32_t ___1_height, uint32_t ___2_depth, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3635,7 +3635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t RayTracingContext_GetRequiredTraceSc
 	}
 	uint64_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:175>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:175>
 		RuntimeObject* L_0 = __this->___m_Backend;
 		uint32_t L_1 = ___0_width;
 		uint32_t L_2 = ___1_height;
@@ -3649,33 +3649,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t RayTracingContext_GetRequiredTraceSc
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:176>
 		uint64_t L_5 = V_0;
 		return L_5;
 	}
 }
-// Method Definition Index: 73771
+// Method Definition Index: 73252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t RayTracingContext_GetScratchBufferStrideInBytes_mF0C9AE9AE45A85067B98293FBA8A3EF8CA5EDAA3 (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:182>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:182>
 		return 4;
 	}
 }
-// Method Definition Index: 73772
+// Method Definition Index: 73253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RayTracingContext_get_BackendType_m409AD888850BECA9CD60F4DAE3AC295961F3E82E (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
 		int32_t L_0 = __this->___U3CBackendTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73773
+// Method Definition Index: 73254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_set_BackendType_mD76B3ECB08571547BDB0E8BE309E74430758AA3F (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
 		int32_t L_0 = ___0_value;
 		__this->___U3CBackendTypeU3Ek__BackingField = L_0;
 		return;
@@ -3697,11 +3697,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingContext_set_BackendType_mD76B3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73774
+// Method Definition Index: 73255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccelerationStructureOptions__ctor_m3C5FF0A8FB1B9361277CEE3D8A50E0850AC20ED9 (AccelerationStructureOptions_t62404A77F410F289F5C5C9F80D4360966E5B40B8* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:229>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:229>
 		__this->___buildFlags = 0;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -3715,33 +3715,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccelerationStructureOptions__ctor_m3C5F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73775
+// Method Definition Index: 73256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceCounter_Inc_m9A5D2006967F9C9F9F09AD15CA76095675C005F3 (ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:246>
 		uint64_t L_0 = __this->___value;
 		__this->___value = ((int64_t)il2cpp_codegen_add((int64_t)L_0, ((int64_t)1)));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:246>
 		return;
 	}
 }
-// Method Definition Index: 73776
+// Method Definition Index: 73257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceCounter_Dec_mF7B26E4B8232FADCFE3FBEC489F86A0F9F0FF824 (ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:247>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:247>
 		uint64_t L_0 = __this->___value;
 		__this->___value = ((int64_t)il2cpp_codegen_subtract((int64_t)L_0, ((int64_t)1)));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:247>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:247>
 		return;
 	}
 }
-// Method Definition Index: 73777
+// Method Definition Index: 73258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceCounter__ctor_mE28C990308A976CC6E48A670E57DBE0A095FB8EF (ReferenceCounter_t4AB2EABD22AF71296CD91AB92C5C2021A8E3580C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:244>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:244>
 		__this->___value = ((int64_t)0);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -3755,7 +3755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferenceCounter__ctor_mE28C990308A976CC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73778
+// Method Definition Index: 73259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* RayTracingHelper_CreateDispatchIndirectBuffer_m6B7F3340F21AD8B73DB5CDD24F4281A0745EF3C7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3766,7 +3766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 	}
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:269>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:269>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_0 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
 		GraphicsBuffer__ctor_mBDE2A119B58AD582F79CFE8071F47001965D14F4(L_0, ((int32_t)276), 3, 4, NULL);
 		V_0 = L_0;
@@ -3775,12 +3775,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:270>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:270>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 73779
+// Method Definition Index: 73260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* RayTracingHelper_CreateScratchBufferForBuildAndDispatch_mEDF8EAEE17E27AED51B36406876BDA39C5DCE43F (RuntimeObject* ___0_accelStruct, RuntimeObject* ___1_shader, uint32_t ___2_dispatchWidth, uint32_t ___3_dispatchHeight, uint32_t ___4_dispatchDepth, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3798,13 +3798,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 	bool V_1 = false;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:285>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:285>
 		RuntimeObject* L_0 = ___0_accelStruct;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralDCA65620D178FD56AA026C591B31ABD25B1E26C5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:286>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:286>
 		RuntimeObject* L_1 = ___1_shader;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_1, _stringLiteralC7453D784A8909E62B8E93E94A5E22CA83D87811, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:288>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:288>
 		RuntimeObject* L_2 = ___0_accelStruct;
 		NullCheck(L_2);
 		uint64_t L_3;
@@ -3820,7 +3820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 		uint64_t L_9;
 		L_9 = Math_Max_m904B9911C775943500AA17842F6D3D45010EAB4A(L_3, L_8, NULL);
 		V_0 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:289>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:289>
 		uint64_t L_10 = V_0;
 		V_1 = (bool)((((int64_t)L_10) == ((int64_t)((int64_t)0)))? 1 : 0);
 		bool L_11 = V_1;
@@ -3830,14 +3830,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:290>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:290>
 		V_2 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)NULL;
 		goto IL_004c;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:292>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:292>
 		uint64_t L_12 = V_0;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_13 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
 		GraphicsBuffer__ctor_mBDE2A119B58AD582F79CFE8071F47001965D14F4(L_13, ((int32_t)16), ((int32_t)((int64_t)((uint64_t)(int64_t)L_12/(uint64_t)(int64_t)((int64_t)4)))), 4, NULL);
@@ -3847,12 +3847,12 @@ IL_003c:
 
 IL_004c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:293>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:293>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_14 = V_2;
 		return L_14;
 	}
 }
-// Method Definition Index: 73780
+// Method Definition Index: 73261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* RayTracingHelper_CreateScratchBufferForBuild_mDADFA19A8563B9C1BF33406C208E5AF56E276B2D (RuntimeObject* ___0_accelStruct, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3867,16 +3867,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 	bool V_1 = false;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:303>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:303>
 		RuntimeObject* L_0 = ___0_accelStruct;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralDCA65620D178FD56AA026C591B31ABD25B1E26C5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:305>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:305>
 		RuntimeObject* L_1 = ___0_accelStruct;
 		NullCheck(L_1);
 		uint64_t L_2;
 		L_2 = InterfaceFuncInvoker0< uint64_t >::Invoke(7, IRayTracingAccelStruct_t10845A226F97A00C5CBB72250C457544F8D59619_il2cpp_TypeInfo_var, L_1);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:306>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:306>
 		uint64_t L_3 = V_0;
 		V_1 = (bool)((((int64_t)L_3) == ((int64_t)((int64_t)0)))? 1 : 0);
 		bool L_4 = V_1;
@@ -3886,14 +3886,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:307>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:307>
 		V_2 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)NULL;
 		goto IL_0031;
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:309>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:309>
 		uint64_t L_5 = V_0;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_6 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
 		GraphicsBuffer__ctor_mBDE2A119B58AD582F79CFE8071F47001965D14F4(L_6, ((int32_t)16), ((int32_t)((int64_t)((uint64_t)(int64_t)L_5/(uint64_t)(int64_t)((int64_t)4)))), 4, NULL);
@@ -3903,12 +3903,12 @@ IL_0021:
 
 IL_0031:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:310>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:310>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_7 = V_2;
 		return L_7;
 	}
 }
-// Method Definition Index: 73781
+// Method Definition Index: 73262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* RayTracingHelper_CreateScratchBufferForTrace_mF8BE1D15176C11BA21553F701B2DA09B2C2DB3FD (RuntimeObject* ___0_shader, uint32_t ___1_dispatchWidth, uint32_t ___2_dispatchHeight, uint32_t ___3_dispatchDepth, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3923,10 +3923,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 	bool V_1 = false;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:322>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:322>
 		RuntimeObject* L_0 = ___0_shader;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralC7453D784A8909E62B8E93E94A5E22CA83D87811, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:324>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:324>
 		RuntimeObject* L_1 = ___0_shader;
 		uint32_t L_2 = ___1_dispatchWidth;
 		uint32_t L_3 = ___2_dispatchHeight;
@@ -3935,7 +3935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 		uint64_t L_5;
 		L_5 = InterfaceFuncInvoker3< uint64_t, uint32_t, uint32_t, uint32_t >::Invoke(12, IRayTracingShader_t8D61C34EF86BB78ED83FB2F6FE38B2716E252079_il2cpp_TypeInfo_var, L_1, L_2, L_3, L_4);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:325>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:325>
 		uint64_t L_6 = V_0;
 		V_1 = (bool)((((int64_t)L_6) == ((int64_t)((int64_t)0)))? 1 : 0);
 		bool L_7 = V_1;
@@ -3945,14 +3945,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:326>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:326>
 		V_2 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)NULL;
 		goto IL_0034;
 	}
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:328>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:328>
 		uint64_t L_8 = V_0;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
 		GraphicsBuffer__ctor_mBDE2A119B58AD582F79CFE8071F47001965D14F4(L_9, ((int32_t)16), ((int32_t)((int64_t)((uint64_t)(int64_t)L_8/(uint64_t)(int64_t)((int64_t)4)))), 4, NULL);
@@ -3962,12 +3962,12 @@ IL_0024:
 
 IL_0034:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:329>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:329>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_10 = V_2;
 		return L_10;
 	}
 }
-// Method Definition Index: 73782
+// Method Definition Index: 73263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForTrace_m1E81C00A594FA21D356D6346EFD984E8FAE992F9 (RuntimeObject* ___0_shader, uint32_t ___1_dispatchWidth, uint32_t ___2_dispatchHeight, uint32_t ___3_dispatchDepth, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** ___4_scratchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3987,10 +3987,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForT
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B10_0 = NULL;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B9_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:345>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:345>
 		RuntimeObject* L_0 = ___0_shader;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralC7453D784A8909E62B8E93E94A5E22CA83D87811, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:347>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:347>
 		RuntimeObject* L_1 = ___0_shader;
 		uint32_t L_2 = ___1_dispatchWidth;
 		uint32_t L_3 = ___2_dispatchHeight;
@@ -3999,7 +3999,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForT
 		uint64_t L_5;
 		L_5 = InterfaceFuncInvoker3< uint64_t, uint32_t, uint32_t, uint32_t >::Invoke(12, IRayTracingShader_t8D61C34EF86BB78ED83FB2F6FE38B2716E252079_il2cpp_TypeInfo_var, L_1, L_2, L_3, L_4);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:348>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:348>
 		uint64_t L_6 = V_0;
 		V_1 = (bool)((((int64_t)L_6) == ((int64_t)((int64_t)0)))? 1 : 0);
 		bool L_7 = V_1;
@@ -4009,13 +4009,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForT
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:349>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:349>
 		goto IL_0085;
 	}
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:351>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:351>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_8 = ___4_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_8);
 		V_2 = (bool)((!(((RuntimeObject*)(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)L_9) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -4026,7 +4026,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:352>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:352>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_11 = ___4_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_12 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_11);
 		NullCheck(L_12);
@@ -4037,7 +4037,7 @@ IL_0022:
 
 IL_0043:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:354>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:354>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_14 = ___4_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_15 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_14);
 		if (!L_15)
@@ -4076,7 +4076,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:356>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:356>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_24 = ___4_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_25 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_24);
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_26 = L_25;
@@ -4099,7 +4099,7 @@ IL_006e:
 
 IL_0074:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:357>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:357>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_27 = ___4_scratchBuffer;
 		uint64_t L_28 = V_0;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_29 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
@@ -4110,11 +4110,11 @@ IL_0074:
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:359>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:359>
 		return;
 	}
 }
-// Method Definition Index: 73783
+// Method Definition Index: 73264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForBuild_mE3A0D58C1131FF94CFE7D1E1B33C486B9E61838D (RuntimeObject* ___0_accelStruct, GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** ___1_scratchBuffer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4134,16 +4134,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForB
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B10_0 = NULL;
 	GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* G_B9_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:372>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:372>
 		RuntimeObject* L_0 = ___0_accelStruct;
 		Utils_CheckArgIsNotNull_m3B836834CA3675760C5FB218E22556B7DE09B793(L_0, _stringLiteralDCA65620D178FD56AA026C591B31ABD25B1E26C5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:374>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:374>
 		RuntimeObject* L_1 = ___0_accelStruct;
 		NullCheck(L_1);
 		uint64_t L_2;
 		L_2 = InterfaceFuncInvoker0< uint64_t >::Invoke(7, IRayTracingAccelStruct_t10845A226F97A00C5CBB72250C457544F8D59619_il2cpp_TypeInfo_var, L_1);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:375>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:375>
 		uint64_t L_3 = V_0;
 		V_1 = (bool)((((int64_t)L_3) == ((int64_t)((int64_t)0)))? 1 : 0);
 		bool L_4 = V_1;
@@ -4153,13 +4153,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingHelper_ResizeScratchBufferForB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:376>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:376>
 		goto IL_007b;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:378>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:378>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_5 = ___1_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_6 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_5);
 		V_2 = (bool)((!(((RuntimeObject*)(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)L_6) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -4170,7 +4170,7 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:379>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:379>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_8 = ___1_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_9 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_8);
 		NullCheck(L_9);
@@ -4181,7 +4181,7 @@ IL_001f:
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:381>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:381>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_11 = ___1_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_12 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_11);
 		if (!L_12)
@@ -4220,7 +4220,7 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:383>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:383>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_21 = ___1_scratchBuffer;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_22 = *((GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1**)L_21);
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_23 = L_22;
@@ -4243,7 +4243,7 @@ IL_0065:
 
 IL_006b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:384>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:384>
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1** L_24 = ___1_scratchBuffer;
 		uint64_t L_25 = V_0;
 		GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1* L_26 = (GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1*)il2cpp_codegen_object_new(GraphicsBuffer_t91FACD3CD78588C25C361C453D1A2FE055EC4AF1_il2cpp_TypeInfo_var);
@@ -4254,7 +4254,7 @@ IL_006b:
 
 IL_007b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:386>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:386>
 		return;
 	}
 }
@@ -4266,25 +4266,25 @@ IL_007b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73784
+// Method Definition Index: 73265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RayTracingRenderPipelineResources_get_version_mF6084A3FBBD4678825BE322C0D88DE9BC565655E (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:22>
 		int32_t L_0 = __this->___m_Version;
 		return L_0;
 	}
 }
-// Method Definition Index: 73785
+// Method Definition Index: 73266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_GeometryPoolKernels_m637907733B4E4183C7F69A7413A36CA481CD5194 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:54>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_GeometryPoolKernels;
 		return L_0;
 	}
 }
-// Method Definition Index: 73786
+// Method Definition Index: 73267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_GeometryPoolKernels_m0A6FEB565EF9BE718BF5C1E719C8DAF9B801937E (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4295,23 +4295,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Ge
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:55>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_GeometryPoolKernels);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral040A87EF1FE2B0E2C14301D88D4D9B7D84DC85BD, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73787
+// Method Definition Index: 73268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_CopyBuffer_m780B0B93FFFB768A3C9CFD4B74B6A8665FD19E44 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:60>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_CopyBuffer;
 		return L_0;
 	}
 }
-// Method Definition Index: 73788
+// Method Definition Index: 73269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_CopyBuffer_m9A6F64DEC8FD199518C17E6A8BE6D4EF68C76362 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4322,23 +4322,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Co
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:61>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_CopyBuffer);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral956F90084271B9792A106FC5EDB7E402F225F121, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73789
+// Method Definition Index: 73270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_CopyPositions_m3C746632696BD223AE5D72BD3BFB1631D85E067D (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:66>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_CopyPositions;
 		return L_0;
 	}
 }
-// Method Definition Index: 73790
+// Method Definition Index: 73271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_CopyPositions_mC56832609D54B88FE8BDFA44376FF8D16DDE2E54 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4349,23 +4349,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Co
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:67>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_CopyPositions);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteralD55EBD01658F16DFFBBD0E63B05B90ECEA514EF3, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73791
+// Method Definition Index: 73272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BitHistogram_mB09CCEB5BAE17EA5F409398A4A97CDC04E275F5A (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:72>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BitHistogram;
 		return L_0;
 	}
 }
-// Method Definition Index: 73792
+// Method Definition Index: 73273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_BitHistogram_m73C8795D062B043B241B4DAC7956004B25CBE784 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4376,23 +4376,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Bi
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:73>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_BitHistogram);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral883C5031BCDD0EB2C5778A5BA12960503BFBBEEF, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73793
+// Method Definition Index: 73274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BlockReducePart_m122881746CA9BB936372F04001F2E1DB175D6393 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:78>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BlockReducePart;
 		return L_0;
 	}
 }
-// Method Definition Index: 73794
+// Method Definition Index: 73275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_BlockReducePart_mAF3B4FFF426F929403F9F70D9F8ED6DF6CA6489E (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4403,23 +4403,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Bl
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:79>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_BlockReducePart);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral3E6814F1535C5EEC07F927D3A00D84AED7AC41F8, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73795
+// Method Definition Index: 73276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BlockScan_m69D8D65D5C20002878A448985BE257652EFA6BF1 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:84>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BlockScan;
 		return L_0;
 	}
 }
-// Method Definition Index: 73796
+// Method Definition Index: 73277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_BlockScan_m4A1E3AB6E62C16764BB796622EBFD345DCF293E4 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4430,23 +4430,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Bl
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:85>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_BlockScan);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteralA8C2A6441FDF699B14E457EFFB98BB16CAEA6807, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73797
+// Method Definition Index: 73278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BuildHlbvh_mFB9B0EA3FF7CE2F6813A125EB65F7DFF8A6DA538 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:90>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BuildHlbvh;
 		return L_0;
 	}
 }
-// Method Definition Index: 73798
+// Method Definition Index: 73279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_BuildHlbvh_m46BFF2C4AB8BF59FF652E8BFAD2A29E79B49FCF8 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4457,23 +4457,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Bu
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:91>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_BuildHlbvh);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral73119AEAF4F4933BB2177EC5E63A2382B9713CBA, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73799
+// Method Definition Index: 73280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_RestructureBvh_mF4FF4B5BE103690351CAA1CD5DC03222412D6E27 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:96>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_RestructureBvh;
 		return L_0;
 	}
 }
-// Method Definition Index: 73800
+// Method Definition Index: 73281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_RestructureBvh_mA9CE17465F0DA7D5F033D9281054F2CACFD60134 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4484,23 +4484,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Re
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:97>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_RestructureBvh);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteral5E05FD221647332AEE4C72997D3FC7046693C101, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73801
+// Method Definition Index: 73282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_Scatter_m823ED35060C9D79F20949434E2789F26C3750723 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:102>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_Scatter;
 		return L_0;
 	}
 }
-// Method Definition Index: 73802
+// Method Definition Index: 73283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Scatter_m82477E896CD2DBED9EBDF7E2A217641CDFC2CCCA (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4511,18 +4511,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources_set_Sc
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:103>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8** L_0 = (ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8**)(&__this->___m_Scatter);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1 = ___0_value;
 		RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536(__this, L_0, L_1, _stringLiteralE757C85C00896341F45E1ACFD7ECE69C116308AD, RenderPipelineGraphicsSettingsExtensions_SetValueAndNotify_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_mB626479C1AFB7962C3CCF8700B4021E92D0A0536_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 73803
+// Method Definition Index: 73284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources__ctor_m8AB44591885527718E692A717ADA8F241DDF8922 (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:18>
 		__this->___m_Version = 1;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -4536,187 +4536,187 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingRenderPipelineResources__ctor_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73804
+// Method Definition Index: 73285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_geometryPoolKernels_m266E7A8B48D3CC8F6E4CE3E0FAE3FB0CCEB022AF (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CgeometryPoolKernelsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73805
+// Method Definition Index: 73286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_geometryPoolKernels_m67E0FB50A70BCECBF5C03A5AFD6396C75F98C25E (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CgeometryPoolKernelsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CgeometryPoolKernelsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73806
+// Method Definition Index: 73287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_copyBuffer_m73AD0950FD765873ED8820390BFF769AE40B19DA (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CcopyBufferU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73807
+// Method Definition Index: 73288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_copyBuffer_m341862420B0404D83B3EC9D60A10D1483DE5E905 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CcopyBufferU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcopyBufferU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73808
+// Method Definition Index: 73289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_copyPositions_m44A53C639DEAE1D032EAB39EEB553731D536338B (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CcopyPositionsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73809
+// Method Definition Index: 73290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_copyPositions_m03BEC51E8AFAAF45AB7BE5A1C9CF10B105CD7958 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CcopyPositionsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcopyPositionsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73810
+// Method Definition Index: 73291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_bitHistogram_m9CCC85F00B2CF75367F3E5545E5BE29FEBB3C962 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CbitHistogramU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73811
+// Method Definition Index: 73292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_bitHistogram_m9BB5B08BEAA9D5DA6B871E8CC4C1067A81A9075E (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CbitHistogramU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbitHistogramU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73812
+// Method Definition Index: 73293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_blockReducePart_m3C489BF8656F175EABF1CC6692CADE908ABD96E5 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CblockReducePartU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73813
+// Method Definition Index: 73294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_blockReducePart_mB77E152AF3A817243580790F805ABD562D72B257 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CblockReducePartU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CblockReducePartU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73814
+// Method Definition Index: 73295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_blockScan_m1DCAAFA0C8F6213F0B8D11157BA10639B320FF5C (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CblockScanU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73815
+// Method Definition Index: 73296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_blockScan_m0BA0ECC6014260AB8B1A068F6D77648B491A8242 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CblockScanU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CblockScanU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73816
+// Method Definition Index: 73297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_buildHlbvh_m20E4226A647B99288EA4D9F3E4B88E9001CA4133 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CbuildHlbvhU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73817
+// Method Definition Index: 73298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_buildHlbvh_m582157D93911F3A15841C19C939943EB9AD2B3B1 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CbuildHlbvhU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbuildHlbvhU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73818
+// Method Definition Index: 73299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_restructureBvh_m0B3428F5982BD27CE50E59238361CF6868EE3DB5 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CrestructureBvhU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73819
+// Method Definition Index: 73300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_restructureBvh_m318AD8BB2EBC6FF6963E9D3743DF363BF635AA9F (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CrestructureBvhU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrestructureBvhU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73820
+// Method Definition Index: 73301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingResources_get_scatter_mC9A32AF4CDF3F9D6A7785C2C0EDD73CC87832E18 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___U3CscatterU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73821
+// Method Definition Index: 73302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_set_scatter_m1E36DC3FDCBF370993B3BE465EB393D1CCE03DB7 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CscatterU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CscatterU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73822
+// Method Definition Index: 73303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_LoadFromAssetBundle_m05E8CCB2997876929EACED357D52F31B8448602A (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, AssetBundle_tB38418819A49060CD738CB21541649340F082943* ___0_assetBundle, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4735,65 +4735,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources_LoadFromAssetBundle_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:158>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_0 = ___0_assetBundle;
 		NullCheck(L_0);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_1;
 		L_1 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_0, _stringLiteral9A713E0E1504D0E3E3E7CE9A189B861949430523, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_geometryPoolKernels_m67E0FB50A70BCECBF5C03A5AFD6396C75F98C25E_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:159>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:159>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_2 = ___0_assetBundle;
 		NullCheck(L_2);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_3;
 		L_3 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_2, _stringLiteral84933F529399A96A98F00532DA2780C9FE002762, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_copyBuffer_m341862420B0404D83B3EC9D60A10D1483DE5E905_inline(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:161>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_4 = ___0_assetBundle;
 		NullCheck(L_4);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_5;
 		L_5 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_4, _stringLiteral3146AD859C41A18BB1CCF577BDF0D316853420C8, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_copyPositions_m03BEC51E8AFAAF45AB7BE5A1C9CF10B105CD7958_inline(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:162>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_6 = ___0_assetBundle;
 		NullCheck(L_6);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_7;
 		L_7 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_6, _stringLiteralB7EFA29FDC2268CF23E381CC0A82B44910CB7EA9, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_bitHistogram_m9BB5B08BEAA9D5DA6B871E8CC4C1067A81A9075E_inline(__this, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:163>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_8 = ___0_assetBundle;
 		NullCheck(L_8);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_9;
 		L_9 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_8, _stringLiteralACBBDFB8AB483E7267002C5A1FE4873E08051365, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_blockReducePart_mB77E152AF3A817243580790F805ABD562D72B257_inline(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:164>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_10 = ___0_assetBundle;
 		NullCheck(L_10);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_11;
 		L_11 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_10, _stringLiteral619EF5BFAE6A3EC30237CE7C14E805047D49D1D1, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_blockScan_m0BA0ECC6014260AB8B1A068F6D77648B491A8242_inline(__this, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:165>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_12 = ___0_assetBundle;
 		NullCheck(L_12);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_13;
 		L_13 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_12, _stringLiteral11A9F692CCA80E7BB053C4D60EA90C11AB3433B0, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_buildHlbvh_m582157D93911F3A15841C19C939943EB9AD2B3B1_inline(__this, L_13, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:166>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:166>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_14 = ___0_assetBundle;
 		NullCheck(L_14);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_15;
 		L_15 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_14, _stringLiteral59512B4F5BC23DEBDF968990AFFCDBFE6E622711, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_restructureBvh_m318AD8BB2EBC6FF6963E9D3743DF363BF635AA9F_inline(__this, L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:167>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:167>
 		AssetBundle_tB38418819A49060CD738CB21541649340F082943* L_16 = ___0_assetBundle;
 		NullCheck(L_16);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_17;
 		L_17 = AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F(L_16, _stringLiteralC8E6AFAA3A8DC4C433DB81F2889D6F7DC365A789, AssetBundle_LoadAsset_TisComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8_m1992C816CE0AE60279EF64D138B2EAA4EAC1968F_RuntimeMethod_var);
 		RayTracingResources_set_scatter_m1E36DC3FDCBF370993B3BE465EB393D1CCE03DB7_inline(__this, L_17, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:168>
 		return;
 	}
 }
-// Method Definition Index: 73823
+// Method Definition Index: 73304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingResources_LoadFromRenderPipelineResources_mBA946B2593DC725345914C3CE1C1A86EEFF9EEC2 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4809,7 +4809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingResources_LoadFromRenderPipeli
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:180>
 		il2cpp_codegen_runtime_class_init_inline(GraphicsSettings_t01785CE5CB5C5105CB527619AF4D74BEF417EF1A_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = GraphicsSettings_TryGetRenderPipelineSettings_TisRayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A_m672B203872DB0D68FD178F6722CB9D5A0A075B35((&V_0), GraphicsSettings_TryGetRenderPipelineSettings_TisRayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A_m672B203872DB0D68FD178F6722CB9D5A0A075B35_RuntimeMethod_var);
@@ -4821,14 +4821,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RayTracingResources_LoadFromRenderPipeli
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:181>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:181>
 		V_2 = (bool)0;
 		goto IL_0131;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:183>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:183>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_2 = V_0;
 		NullCheck(L_2);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_3;
@@ -4838,7 +4838,7 @@ IL_0016:
 		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:184>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:184>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_5 = V_0;
 		NullCheck(L_5);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_6;
@@ -4846,7 +4846,7 @@ IL_0016:
 		bool L_7;
 		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:185>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:185>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_8 = V_0;
 		NullCheck(L_8);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_9;
@@ -4854,7 +4854,7 @@ IL_0016:
 		bool L_10;
 		L_10 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:186>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:186>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_11 = V_0;
 		NullCheck(L_11);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_12;
@@ -4862,7 +4862,7 @@ IL_0016:
 		bool L_13;
 		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_13, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:187>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_14 = V_0;
 		NullCheck(L_14);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_15;
@@ -4870,7 +4870,7 @@ IL_0016:
 		bool L_16;
 		L_16 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_16, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:188>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_17 = V_0;
 		NullCheck(L_17);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_18;
@@ -4878,7 +4878,7 @@ IL_0016:
 		bool L_19;
 		L_19 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_18, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:189>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_20 = V_0;
 		NullCheck(L_20);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_21;
@@ -4886,7 +4886,7 @@ IL_0016:
 		bool L_22;
 		L_22 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_22, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:190>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:190>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_23 = V_0;
 		NullCheck(L_23);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_24;
@@ -4894,7 +4894,7 @@ IL_0016:
 		bool L_25;
 		L_25 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_24, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_25, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:191>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:191>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_26 = V_0;
 		NullCheck(L_26);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_27;
@@ -4902,73 +4902,73 @@ IL_0016:
 		bool L_28;
 		L_28 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_27, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D(L_28, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:193>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:193>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_29 = V_0;
 		NullCheck(L_29);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_30;
 		L_30 = RayTracingRenderPipelineResources_get_GeometryPoolKernels_m637907733B4E4183C7F69A7413A36CA481CD5194_inline(L_29, NULL);
 		RayTracingResources_set_geometryPoolKernels_m67E0FB50A70BCECBF5C03A5AFD6396C75F98C25E_inline(__this, L_30, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:194>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:194>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_31 = V_0;
 		NullCheck(L_31);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_32;
 		L_32 = RayTracingRenderPipelineResources_get_CopyBuffer_m780B0B93FFFB768A3C9CFD4B74B6A8665FD19E44_inline(L_31, NULL);
 		RayTracingResources_set_copyBuffer_m341862420B0404D83B3EC9D60A10D1483DE5E905_inline(__this, L_32, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:196>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:196>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_33 = V_0;
 		NullCheck(L_33);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_34;
 		L_34 = RayTracingRenderPipelineResources_get_CopyPositions_m3C746632696BD223AE5D72BD3BFB1631D85E067D_inline(L_33, NULL);
 		RayTracingResources_set_copyPositions_m03BEC51E8AFAAF45AB7BE5A1C9CF10B105CD7958_inline(__this, L_34, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:197>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:197>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_35 = V_0;
 		NullCheck(L_35);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_36;
 		L_36 = RayTracingRenderPipelineResources_get_BitHistogram_mB09CCEB5BAE17EA5F409398A4A97CDC04E275F5A_inline(L_35, NULL);
 		RayTracingResources_set_bitHistogram_m9BB5B08BEAA9D5DA6B871E8CC4C1067A81A9075E_inline(__this, L_36, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:198>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_37 = V_0;
 		NullCheck(L_37);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_38;
 		L_38 = RayTracingRenderPipelineResources_get_BlockReducePart_m122881746CA9BB936372F04001F2E1DB175D6393_inline(L_37, NULL);
 		RayTracingResources_set_blockReducePart_mB77E152AF3A817243580790F805ABD562D72B257_inline(__this, L_38, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:199>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:199>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_39 = V_0;
 		NullCheck(L_39);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_40;
 		L_40 = RayTracingRenderPipelineResources_get_BlockScan_m69D8D65D5C20002878A448985BE257652EFA6BF1_inline(L_39, NULL);
 		RayTracingResources_set_blockScan_m0BA0ECC6014260AB8B1A068F6D77648B491A8242_inline(__this, L_40, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:200>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_41 = V_0;
 		NullCheck(L_41);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_42;
 		L_42 = RayTracingRenderPipelineResources_get_BuildHlbvh_mFB9B0EA3FF7CE2F6813A125EB65F7DFF8A6DA538_inline(L_41, NULL);
 		RayTracingResources_set_buildHlbvh_m582157D93911F3A15841C19C939943EB9AD2B3B1_inline(__this, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:201>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:201>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_43 = V_0;
 		NullCheck(L_43);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_44;
 		L_44 = RayTracingRenderPipelineResources_get_RestructureBvh_mF4FF4B5BE103690351CAA1CD5DC03222412D6E27_inline(L_43, NULL);
 		RayTracingResources_set_restructureBvh_m318AD8BB2EBC6FF6963E9D3743DF363BF635AA9F_inline(__this, L_44, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:202>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:202>
 		RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* L_45 = V_0;
 		NullCheck(L_45);
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_46;
 		L_46 = RayTracingRenderPipelineResources_get_Scatter_m823ED35060C9D79F20949434E2789F26C3750723_inline(L_45, NULL);
 		RayTracingResources_set_scatter_m1E36DC3FDCBF370993B3BE465EB393D1CCE03DB7_inline(__this, L_46, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:204>
 		V_2 = (bool)1;
 		goto IL_0131;
 	}
 
 IL_0131:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:205>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:205>
 		bool L_47 = V_2;
 		return L_47;
 	}
 }
-// Method Definition Index: 73824
+// Method Definition Index: 73305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources__ctor_mA41B35C84DE3ED2A0EAA97EBFD4BE547B3A0DD28 (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4984,7 +4984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RayTracingResources__ctor_mA41B35C84DE3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73825
+// Method Definition Index: 73306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SID__cctor_m1C72A600DBE54F2F29DC571DA15E94E79756129C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4997,15 +4997,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SID__cctor_m1C72A600DBE54F2F29DC571DA15E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/StringIDs.cs:6>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/StringIDs.cs:6>
 		int32_t L_0;
 		L_0 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralC130D09455C0AD4A5443686117B50174DB05A693, NULL);
 		((SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_StaticFields*)il2cpp_codegen_static_fields_for(SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_il2cpp_TypeInfo_var))->____UnifiedRT_Stack = L_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/StringIDs.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/StringIDs.cs:7>
 		int32_t L_1;
 		L_1 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteral02381CA58E316D0D25193A6B8594F0329D0D04D0, NULL);
 		((SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_StaticFields*)il2cpp_codegen_static_fields_for(SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_il2cpp_TypeInfo_var))->____UnifiedRT_DispatchDims = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/StringIDs.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/StringIDs.cs:8>
 		int32_t L_2;
 		L_2 = Shader_PropertyToID_mE98523D50F5656CAE89B30695C458253EB8956CA(_stringLiteralED22444D927BD529C5561CBE7B2E3D0F530C9A71, NULL);
 		((SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_StaticFields*)il2cpp_codegen_static_fields_for(SID_t2F94527E3487C76164F8E49AA6615E18163FAD76_il2cpp_TypeInfo_var))->____UnifiedRT_DispatchDimsInWorkgroups = L_2;
@@ -5028,7 +5028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SID__cctor_m1C72A600DBE54F2F29DC571DA15E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73826
+// Method Definition Index: 73307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnifiedRayTracingException__ctor_mC5124DD873D5658CD09E3B32E47BD6B3EFF22ED8 (UnifiedRayTracingException_t27D3075E97E07349098D57EA02E6067EE6F3B390* __this, String_t* ___0_message, int32_t ___1_errorCode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5038,31 +5038,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnifiedRayTracingException__ctor_mC5124D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:28>
 		String_t* L_0 = ___0_message;
 		il2cpp_codegen_runtime_class_init_inline(Exception_t_il2cpp_TypeInfo_var);
 		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:30>
 		int32_t L_1 = ___1_errorCode;
 		UnifiedRayTracingException_set_errorCode_mCEF3167E73557CDED8BCD486F5DB2B6D223043E1_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 73827
+// Method Definition Index: 73308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnifiedRayTracingException_get_errorCode_m00F445F7EB9721E36E1D6A2F923FECD6067002A3 (UnifiedRayTracingException_t27D3075E97E07349098D57EA02E6067EE6F3B390* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
 		int32_t L_0 = __this->___U3CerrorCodeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73828
+// Method Definition Index: 73309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnifiedRayTracingException_set_errorCode_mCEF3167E73557CDED8BCD486F5DB2B6D223043E1 (UnifiedRayTracingException_t27D3075E97E07349098D57EA02E6067EE6F3B390* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
 		int32_t L_0 = ___0_value;
 		__this->___U3CerrorCodeU3Ek__BackingField = L_0;
 		return;
@@ -5100,7 +5100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnifiedRayTracingException_set_errorCode
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73829
+// Method Definition Index: 73310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __JobReflectionRegistrationOutput__1874814860780562806_CreateJobReflectionData_mEAE9072E8892ABF35AD7881CF046DBEC27FF6AAC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5139,7 +5139,7 @@ IL_0016:
 		return;
 	}
 }
-// Method Definition Index: 73830
+// Method Definition Index: 73311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __JobReflectionRegistrationOutput__1874814860780562806_EarlyInit_m24841F62066A83EE470737503831C05F5B0C8F7B (const RuntimeMethod* method) 
 {
 	{
@@ -5150,7 +5150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __JobReflectionRegistrationOutput__18748
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 52156
+// Method Definition Index: 52445
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Settings_set_enableCompaction_m1AB48D9BC0D0785988A3BED6C9BCC5932C53D6EC_inline (Settings_t635C231FDA8D35EBE9568F993ED1442F0E145D94* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5159,7 +5159,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Settings_set_enableCompactio
 		return;
 	}
 }
-// Method Definition Index: 52154
+// Method Definition Index: 52443
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Settings_set_buildFlagsStaticGeometries_m27C81507599C81DDF01CADE529B58C97550A3058_inline (Settings_t635C231FDA8D35EBE9568F993ED1442F0E145D94* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5168,16 +5168,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Settings_set_buildFlagsStati
 		return;
 	}
 }
-// Method Definition Index: 73704
+// Method Definition Index: 73185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* HardwareRayTracingAccelStruct_get_accelStruct_m6BE10587906941FD822CA800A36BE3DF008E3500_inline (HardwareRayTracingAccelStruct_tA0222D6E6F3D30B7B6B3BE3B0D68E3D107BE459E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/Hardware/HardwareRayTracingAccelStruct.cs:8>
 		RayTracingAccelerationStructure_tA2CDD2FA1D6A5A8D4BBA504ECCBB0208A3C7919D* L_0 = __this->___U3CaccelStructU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 52151
+// Method Definition Index: 52440
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BuildSettings_set_buildFlags_mE83AE894871667EB2BBD1B68160B0292D518CC87_inline (BuildSettings_tB970A34CAC0B7D0539FFCA20FA7F1727CDAC2A02* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5186,7 +5186,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BuildSettings_set_buildFlags
 		return;
 	}
 }
-// Method Definition Index: 50352
+// Method Definition Index: 50640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5200,7 +5200,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 52152
+// Method Definition Index: 52441
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BuildSettings_set_relativeOrigin_mC231E6EE2CF2776437A27C9463AFF52F9F0C39A5_inline (BuildSettings_tB970A34CAC0B7D0539FFCA20FA7F1727CDAC2A02* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5209,7 +5209,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BuildSettings_set_relativeOr
 		return;
 	}
 }
-// Method Definition Index: 46775
+// Method Definition Index: 47061
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void uint3__ctor_mEFEA14BBA36F53111474B0C3C3B729061F1ACCAF_inline (uint3_tC1C1C817DB46ED2E6A6C7390716FDDD565917F7B* __this, uint32_t ___0_x, uint32_t ___1_y, uint32_t ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -5226,7 +5226,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void uint3__ctor_mEFEA14BBA36F531
 		return;
 	}
 }
-// Method Definition Index: 50306
+// Method Definition Index: 50594
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 Matrix4x4_get_identity_m6568A73831F3E2D587420D20FF423959D7D8AB56_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5240,221 +5240,221 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59
 		return L_0;
 	}
 }
-// Method Definition Index: 73773
+// Method Definition Index: 73254
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingContext_set_BackendType_mD76B3ECB08571547BDB0E8BE309E74430758AA3F_inline (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
 		int32_t L_0 = ___0_value;
 		__this->___U3CBackendTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 73765
+// Method Definition Index: 73246
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingContext_set_Resources_m951513BE15192C3B78942EED37A62F2931297C50_inline (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:91>
 		RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* L_0 = ___0_value;
 		__this->___U3CResourcesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CResourcesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73772
+// Method Definition Index: 73253
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t RayTracingContext_get_BackendType_m409AD888850BECA9CD60F4DAE3AC295961F3E82E_inline (RayTracingContext_tE1718B700E40616B50787F24C6FCFAD74684E7D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingContext.cs:187>
 		int32_t L_0 = __this->___U3CBackendTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 73805
+// Method Definition Index: 73286
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_geometryPoolKernels_m67E0FB50A70BCECBF5C03A5AFD6396C75F98C25E_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:112>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CgeometryPoolKernelsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CgeometryPoolKernelsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73807
+// Method Definition Index: 73288
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_copyBuffer_m341862420B0404D83B3EC9D60A10D1483DE5E905_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:113>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CcopyBufferU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcopyBufferU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73809
+// Method Definition Index: 73290
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_copyPositions_m03BEC51E8AFAAF45AB7BE5A1C9CF10B105CD7958_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:114>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CcopyPositionsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcopyPositionsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73811
+// Method Definition Index: 73292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_bitHistogram_m9BB5B08BEAA9D5DA6B871E8CC4C1067A81A9075E_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:115>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CbitHistogramU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbitHistogramU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73813
+// Method Definition Index: 73294
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_blockReducePart_mB77E152AF3A817243580790F805ABD562D72B257_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:116>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CblockReducePartU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CblockReducePartU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73815
+// Method Definition Index: 73296
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_blockScan_m0BA0ECC6014260AB8B1A068F6D77648B491A8242_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:117>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CblockScanU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CblockScanU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73817
+// Method Definition Index: 73298
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_buildHlbvh_m582157D93911F3A15841C19C939943EB9AD2B3B1_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:118>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CbuildHlbvhU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbuildHlbvhU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73819
+// Method Definition Index: 73300
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_restructureBvh_m318AD8BB2EBC6FF6963E9D3743DF363BF635AA9F_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:119>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CrestructureBvhU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrestructureBvhU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73821
+// Method Definition Index: 73302
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RayTracingResources_set_scatter_m1E36DC3FDCBF370993B3BE465EB393D1CCE03DB7_inline (RayTracingResources_t4F2C2153F93648342EFFD0B9DC4CB5166A9533F5* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:120>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = ___0_value;
 		__this->___U3CscatterU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CscatterU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 73785
+// Method Definition Index: 73266
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_GeometryPoolKernels_m637907733B4E4183C7F69A7413A36CA481CD5194_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:54>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_GeometryPoolKernels;
 		return L_0;
 	}
 }
-// Method Definition Index: 73787
+// Method Definition Index: 73268
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_CopyBuffer_m780B0B93FFFB768A3C9CFD4B74B6A8665FD19E44_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:60>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_CopyBuffer;
 		return L_0;
 	}
 }
-// Method Definition Index: 73789
+// Method Definition Index: 73270
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_CopyPositions_m3C746632696BD223AE5D72BD3BFB1631D85E067D_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:66>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_CopyPositions;
 		return L_0;
 	}
 }
-// Method Definition Index: 73791
+// Method Definition Index: 73272
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BitHistogram_mB09CCEB5BAE17EA5F409398A4A97CDC04E275F5A_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:72>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BitHistogram;
 		return L_0;
 	}
 }
-// Method Definition Index: 73793
+// Method Definition Index: 73274
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BlockReducePart_m122881746CA9BB936372F04001F2E1DB175D6393_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:78>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BlockReducePart;
 		return L_0;
 	}
 }
-// Method Definition Index: 73795
+// Method Definition Index: 73276
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BlockScan_m69D8D65D5C20002878A448985BE257652EFA6BF1_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:84>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BlockScan;
 		return L_0;
 	}
 }
-// Method Definition Index: 73797
+// Method Definition Index: 73278
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_BuildHlbvh_mFB9B0EA3FF7CE2F6813A125EB65F7DFF8A6DA538_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:90>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_BuildHlbvh;
 		return L_0;
 	}
 }
-// Method Definition Index: 73799
+// Method Definition Index: 73280
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_RestructureBvh_mF4FF4B5BE103690351CAA1CD5DC03222412D6E27_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:96>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_RestructureBvh;
 		return L_0;
 	}
 }
-// Method Definition Index: 73801
+// Method Definition Index: 73282
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* RayTracingRenderPipelineResources_get_Scatter_m823ED35060C9D79F20949434E2789F26C3750723_inline (RayTracingRenderPipelineResources_tA6E971DB933305AFF39E9A5092C74508E6C5459A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/RayTracingResources.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/RayTracingResources.cs:102>
 		ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* L_0 = __this->___m_Scatter;
 		return L_0;
 	}
 }
-// Method Definition Index: 73828
+// Method Definition Index: 73309
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UnifiedRayTracingException_set_errorCode_mCEF3167E73557CDED8BCD486F5DB2B6D223043E1_inline (UnifiedRayTracingException_t27D3075E97E07349098D57EA02E6067EE6F3B390* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@beca2a4be9a2/Runtime/UnifiedRayTracing/UnifiedRayTracingException.cs:36>
 		int32_t L_0 = ___0_value;
 		__this->___U3CerrorCodeU3Ek__BackingField = L_0;
 		return;

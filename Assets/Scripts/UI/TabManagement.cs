@@ -10,7 +10,9 @@ public class TabManagement : MonoBehaviour
         public Button button;
         public GameObject panel;
     }
-
+    [Header("Info Managers")]
+    [SerializeField] private InfoManager[] tabInfoManagers;
+    
     [Header("Tabs")]
     public Tab[] tabs;
 
@@ -96,6 +98,14 @@ public class TabManagement : MonoBehaviour
                 tabs[i].button.transition = Selectable.Transition.None;
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
+        }
+        if (index == 0 && !tutorialManager.TutorialActive)
+        {
+            tutorialManager.InfoManager.GoToChapter(tutorialManager.InfoManager.CurrentIndex);
+        }
+        if (index < tabInfoManagers.Length && tabInfoManagers[index] != null)
+        {
+            tabInfoManagers[index].GoToChapter(tabInfoManagers[index].CurrentIndex);
         }
     }
 
