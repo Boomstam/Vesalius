@@ -1099,9 +1099,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Bayou.csproj">
+      <Project>{8f6cda49-9643-8b56-d9bd-45087571064a}</Project>
+      <Name>Bayou</Name>
+    </ProjectReference>
     <ProjectReference Include="FishNet.Demos.csproj">
       <Project>{9acb97ae-064e-f36d-0bb6-42bbee63e07e}</Project>
       <Name>FishNet.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleWebTransport.csproj">
+      <Project>{92c85a7b-c515-ee30-62ec-d6c48230a755}</Project>
+      <Name>SimpleWebTransport</Name>
     </ProjectReference>
     <ProjectReference Include="FishNet.Codegen.Cecil.csproj">
       <Project>{bdc0a32f-e51b-05bd-bf70-840520ff78f8}</Project>
