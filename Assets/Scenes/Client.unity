@@ -971,6 +971,7 @@ MonoBehaviour:
   activeColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   inactiveColor: {r: 0.20784314, g: 0.20784314, b: 0.20784314, a: 0.92156863}
   tutorialManager: {fileID: 606116905}
+  contentImage: {fileID: 442898991}
 --- !u!1 &442898991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,7 +3005,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 52.35
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1

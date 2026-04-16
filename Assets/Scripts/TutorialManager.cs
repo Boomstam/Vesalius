@@ -27,11 +27,9 @@ public class TutorialManager : MonoBehaviour
 
     public bool TutorialActive = false;
 
-    private int _previousTab = 1;
+    private TabIndex _previousTab = TabIndex.Vesalius;
 
     private bool _pendingUnlock = false;
-
-    private const int TutorialTabIndex = 0;
 
     private void Update()
     {
@@ -60,7 +58,7 @@ public class TutorialManager : MonoBehaviour
 
     public void ShowTutorial()
     {
-        if (tabManagement.CurrentTab != TutorialTabIndex)
+        if (tabManagement.CurrentTab != TabIndex.Tutorial)
             _previousTab = tabManagement.CurrentTab;
 
         TutorialActive = true;
@@ -73,7 +71,7 @@ public class TutorialManager : MonoBehaviour
         tutorialActiveLabel.SetActive(true);
 
         tabManagement.LockTabZero();
-        tabManagement.ShowTab(TutorialTabIndex);
+        tabManagement.ShowTab(TabIndex.Tutorial);
         tabManagement.DisableAllTabsButTheFirst();
     }
 

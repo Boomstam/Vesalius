@@ -2,6 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+public enum TabIndex
+{
+    Tutorial = 0,
+    Vesalius = 1,
+    Film = 2,
+    Sounds = 3,
+}
+
 public class TabManagement : MonoBehaviour
 {
     [Serializable]
@@ -10,7 +18,7 @@ public class TabManagement : MonoBehaviour
         public Button button;
         public GameObject panel;
     }
-    [Header("Info Managers")]
+    [Header("Info Managers to notify per tab")]
     [SerializeField] private InfoManager[] tabInfoManagers;
     
     [Header("Tabs")]
@@ -23,15 +31,18 @@ public class TabManagement : MonoBehaviour
     [Header("Tutorial Manager")]
     public TutorialManager tutorialManager;
     
+    [Header("Content Image")]
+    public GameObject contentImage;
+    
     private const string PlayerPrefsKey = "TutorialShown";
     
-    public int CurrentTab => currentTab;
+    public TabIndex CurrentTab => currentTab;
 
-    private int currentTab = 1;
+    private TabIndex currentTab = TabIndex.Vesalius;
 
     // When the tutorial is active, tab 0's own onClick lambda must be suppressed.
     // Tab 0's button is the same GameObject as the info toggle button, so both
-    // TutorialManager's ToggleTutorial listener and this tab's ShowTab(0) lambda
+    // TutorialManager's ToggleTutorial listener and this tab's ShowTab(Tutorial) lambda
     // fire on every click. Without the lock, HideTutorial correctly switches away
     // from tab 0, but then the lambda immediately switches back to it.
     private bool _tabZeroLocked = false;
@@ -45,11 +56,11 @@ public class TabManagement : MonoBehaviour
             int index = i;
             tabs[i].button.onClick.AddListener(() =>
             {
-                if (index == 0 && _tabZeroLocked)
+                if (index == (int)TabIndex.Tutorial && _tabZeroLocked)
                 {
                     return;
                 }
-                ShowTab(index);
+                ShowTab((TabIndex)index);
             });
         }
 
@@ -62,16 +73,15 @@ public class TabManagement : MonoBehaviour
             
             tutorialManager.TutorialActive = true;
             
-            ShowTab(0);
+            ShowTab(TabIndex.Tutorial);
             
             tutorialManager.OnChapterChanged(0);
-
         }
         else
         {
             tutorialManager.TutorialActive = false;
 
-            ShowTab(1);
+            ShowTab(TabIndex.Vesalius);
         }
     }
 
@@ -85,21 +95,27 @@ public class TabManagement : MonoBehaviour
         _tabZeroLocked = false;
     }
 
-    public void ShowTab(int index)
+    public void ShowTab(TabIndex tab)
     {
-        currentTab = index;
+        currentTab = tab;
+        int index = (int)tab;
         
         for (int i = 0; i < tabs.Length; i++)
         {
             tabs[i].panel.SetActive(i == index);
             
-            if(i != 0) // Don't change the buttons for the first tab
+            if (i != (int)TabIndex.Tutorial) // Don't change the buttons for the first tab
             {
                 tabs[i].button.transition = Selectable.Transition.None;
                 tabs[i].button.GetComponent<Image>().color = (i == index) ? activeColor : inactiveColor;
             }
         }
-        if (index == 0 && !tutorialManager.TutorialActive)
+
+        if (tab == TabIndex.Tutorial || tab == TabIndex.Sounds)
+        {
+            contentImage.SetActive(false);
+        }
+        if (tab == TabIndex.Tutorial && !tutorialManager.TutorialActive)
         {
             tutorialManager.InfoManager.GoToChapter(tutorialManager.InfoManager.CurrentIndex);
         }
