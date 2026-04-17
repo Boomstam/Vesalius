@@ -49,15 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FishNet\Upgrading\UpgradeFromMirrorMenu.cs" />
+    <Compile Include="Assets\Scripts\Networking\MonitorLogging.cs" />
     <Compile Include="Assets\Scripts\Tabs\Info\InfoManager.cs" />
     <Compile Include="Assets\FishNet\Upgrading\MirrorUpgrade.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
     <Compile Include="Assets\Scripts\Tabs\ContentImageManager.cs" />
+    <Compile Include="Assets\Scripts\Networking\NetworkBootstrapper.cs" />
     <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
     <Compile Include="Assets\Scripts\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\UI\TabManagement.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <None Include="Assets\Resources\Localization\Vesalius.nl.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
