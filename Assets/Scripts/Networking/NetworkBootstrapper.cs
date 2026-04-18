@@ -13,6 +13,8 @@ public class NetworkBootstrapper : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("HELLOW MY LITTLE WORLD");
+        
         if (SceneLoader.BuildType == BuildType.Client)
         {
             Debug.Log("[FishNet] Client build — connecting to localhost:" + _port);
