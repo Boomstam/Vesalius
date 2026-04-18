@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1946559518948838845}
   - component: {fileID: 2654405813993365124}
   - component: {fileID: 9129886094207215673}
-  - component: {fileID: 7144834300103926512}
+  - component: {fileID: 894910122567815987}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756b5d374b94d204a9a961611a827163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
-  _monitorScene: Monitor
+  _serverScene: Server
+  _mainEditorScene: MainEditor
   _clientScene: Client
 --- !u!114 &10672258507524702
 MonoBehaviour:
@@ -64,6 +65,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkBootstrapper
   _port: 7777
+  _serverAddress: 178.104.196.127
+  _runLocally: 1
 --- !u!114 &1946559518948838845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e4a322dca349547989b14021da4e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FishNet.Runtime::FishNet.Managing.Transporting.TransportManager
-  Transport: {fileID: 7144834300103926512}
+  Transport: {fileID: 894910122567815987}
   _maximumClientPacketSize: 20480
   _intermediateLayer: {fileID: 0}
   _latencySimulator:
@@ -124,7 +127,7 @@ MonoBehaviour:
     _latency: 0
     _outOfOrder: 0
     _packetLoss: 0
---- !u!114 &7144834300103926512
+--- !u!114 &894910122567815987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,16 +136,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5264818105614189367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362dfd7e6009fb44c90beec3df0ad853, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f48f002b825cbd45a19bd96d90f9edb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Bayou::FishNet.Transporting.Bayou.Bayou
-  _useWss: 0
-  _sslConfiguration:
-    Enabled: 0
-    CertificatePath: 
-    CertificatePassword: 
-    SslProtocol: 0
-  _mtu: 1023
+  m_EditorClassIdentifier: FishNet.Runtime::FishNet.Transporting.Tugboat.Tugboat
+  _stopSocketsOnThread: 0
+  _dontRoute: 0
+  _reuseAddress: 0
+  _ipv4BindAddress: 
+  _enableIpv6: 1
+  _ipv6BindAddress: 
   _port: 7777
-  _maximumClients: 2000
+  _maximumClients: 4095
   _clientAddress: localhost

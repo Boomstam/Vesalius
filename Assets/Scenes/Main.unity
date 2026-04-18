@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4951316192584647340, guid: 15049febbaf832d49b476e3daded0a3e, type: 3}
+      propertyPath: _mainEditorScene
+      value: Monitor
+      objectReference: {fileID: 0}
     - target: {fileID: 5264818105614189367, guid: 15049febbaf832d49b476e3daded0a3e, type: 3}
       propertyPath: m_Name
       value: NetworkManager

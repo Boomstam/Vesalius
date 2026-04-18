@@ -40,11 +40,18 @@ public class MonitorLogger : NetworkBehaviour
     {
         if (!IsServerInitialized || !IsSpawned) return;
         RpcLogOnClients(_logMessage);
+        RpcLogOnServer(_logMessage);
     }
 
     [ObserversRpc]
     private void RpcLogOnClients(string message)
     {
-        Debug.Log("[MonitorLogger] RPC RECEIVED → " + message);
+        Debug.Log("[MonitorLogger] RPC RECEIVED ON CLIENT → " + message);
+    }
+    
+    [ServerRpc(RequireOwnership = false)]
+    private void RpcLogOnServer(string message)
+    {
+        Debug.Log("[MonitorLogger] RPC RECEIVED ON SERVER→ " + message);
     }
 }

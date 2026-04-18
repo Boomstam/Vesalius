@@ -2,30 +2,55 @@ using UnityEngine;
 using FishNet;
 
 /// <summary>
-/// Place on any GameObject in the Monitor scene.
-/// Reads BuildType from SceneLoader to decide whether to start as Server+Host or Client-only.
-/// Ensure SceneLoader runs before this script (set Script Execution Order if needed).
+/// Starts the correct FishNet role based on BuildType resolved by SceneLoader.
+/// Uses Tugboat (UDP) transport.
+///
+/// TODO: Replace the IP string with your domain once DNS is configured.
 /// </summary>
 public class NetworkBootstrapper : MonoBehaviour
 {
-    [Tooltip("Must match the port configured on your Bayou transport component.")]
+    [Tooltip("Must match the port on your Tugboat transport component.")]
     [SerializeField] private ushort _port = 7777;
+
+    [Tooltip("Public IP or domain of the dedicated server.")]
+    [SerializeField] private string _serverAddress = "178.104.196.127";
+
+    [Tooltip("When enabled, MainEditor acts as server+host and all clients connect to localhost. Useful for local testing without Hetzner.")]
+    [SerializeField] private bool _runLocally = false;
 
     private void Start()
     {
-        Debug.Log("HELLOW MY LITTLE WORLD");
-        
-        if (SceneLoader.BuildType == BuildType.Client)
+        if (_runLocally)
         {
-            Debug.Log("[FishNet] Client build — connecting to localhost:" + _port);
-            InstanceFinder.ClientManager.StartConnection("localhost", _port);
+            switch (SceneLoader.BuildType)
+            {
+                case BuildType.MainEditor:
+                    Debug.Log($"[NetworkBootstrapper] Local mode — starting Server + Host on port {_port}");
+                    InstanceFinder.ServerManager.StartConnection(_port);
+                    InstanceFinder.ClientManager.StartConnection("localhost", _port);
+                    break;
+
+                case BuildType.Server:
+                case BuildType.Client:
+                    Debug.Log($"[NetworkBootstrapper] Local mode — connecting to localhost:{_port}");
+                    InstanceFinder.ClientManager.StartConnection("localhost", _port);
+                    break;
+            }
+            return;
         }
-        else
+
+        switch (SceneLoader.BuildType)
         {
-            Debug.Log("[FishNet] Monitor build — starting Server + Host on port " + _port);
-            InstanceFinder.ServerManager.StartConnection(_port);
-            // Host: also connect a local client so the main editor is a full participant
-            InstanceFinder.ClientManager.StartConnection("localhost", _port);
+            case BuildType.Server:
+                Debug.Log($"[NetworkBootstrapper] Server build — starting server on port {_port}");
+                InstanceFinder.ServerManager.StartConnection(_port);
+                break;
+
+            case BuildType.MainEditor:
+            case BuildType.Client:
+                Debug.Log($"[NetworkBootstrapper] Client — connecting to {_serverAddress}:{_port}");
+                InstanceFinder.ClientManager.StartConnection(_serverAddress, _port);
+                break;
         }
     }
 }

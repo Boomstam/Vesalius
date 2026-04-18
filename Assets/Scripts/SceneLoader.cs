@@ -7,38 +7,41 @@ using ParrelSync;
 
 public enum BuildType
 {
-    Monitor,
+    Server,
+    MainEditor,
     Client
 }
 
 /// <summary>
-/// Detects the build type at startup and loads the appropriate additive scene.
-/// Place on any GameObject that is loaded early (e.g. the Monitor/bootstrap scene).
+/// Resolves the BuildType for this instance and additively loads the matching scene.
+/// Must run before NetworkBootstrapper (set Script Execution Order if needed).
 /// </summary>
 public class SceneLoader : MonoBehaviour
 {
-    [Tooltip("Scene to load additively when running as Monitor (server / host).")]
-    [SerializeField] private string _monitorScene = "Monitor";
+    [SerializeField] private string _serverScene     = "Server";
+    [SerializeField] private string _mainEditorScene = "Monitor";
+    [SerializeField] private string _clientScene     = "Client";
 
-    [Tooltip("Scene to load additively when running as Client (ParrelSync clone or client build).")]
-    [SerializeField] private string _clientScene = "Client";
-
-    /// <summary>
-    /// The build type resolved for this instance. Available from Awake onwards.
-    /// </summary>
+    /// <summary>Available from Awake onwards.</summary>
     public static BuildType BuildType { get; private set; }
 
     private void Awake()
     {
-        bool isClone = false;
-
 #if UNITY_EDITOR
-        isClone = ClonesManager.IsClone();
+        BuildType = ClonesManager.IsClone() ? BuildType.Client : BuildType.MainEditor;
+#elif UNITY_SERVER
+    BuildType = BuildType.Server;
+#else
+    BuildType = BuildType.Client;
 #endif
 
-        BuildType = isClone ? BuildType.Client : BuildType.Monitor;
+        if (BuildType == BuildType.Server)
+        {
+            Debug.Log("[SceneLoader] Server build — skipping additive scene load.");
+            return;
+        }
 
-        string sceneToLoad = BuildType == BuildType.Client ? _clientScene : _monitorScene;
+        string sceneToLoad = BuildType == BuildType.MainEditor ? _mainEditorScene : _clientScene;
 
         Debug.Log($"[SceneLoader] BuildType = {BuildType} — loading additive scene '{sceneToLoad}'");
         SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
