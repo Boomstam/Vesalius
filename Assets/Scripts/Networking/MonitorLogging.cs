@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using FishNet.Object;
+using TMPro;
+using System.Collections; // Required for Coroutines
 
 /// <summary>
 /// Attach this to a NetworkObject in the Monitor scene alongside a UI Button.
@@ -14,9 +16,19 @@ public class MonitorLogger : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
+        // Start the delayed initialization process
+        StartCoroutine(DelayedButtonSetup());
+    }
 
-        // Find the button in the Monitor scene at runtime — it won't exist on clients
-        _triggerButton = FindFirstObjectByType<Button>();
+    private IEnumerator DelayedButtonSetup()
+    {
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        Debug.Log("[MonitorLogger] 5 seconds elapsed. Initializing button listener...");
+
+        // Find the button in the Monitor scene at runtime
+        _triggerButton = GameObject.Find("Debug Button").GetComponent<Button>();
 
         if (_triggerButton != null)
         {
@@ -25,7 +37,7 @@ public class MonitorLogger : NetworkBehaviour
         }
         else
         {
-            Debug.LogWarning("[MonitorLogger] No Button found in scene.");
+            Debug.LogWarning("[MonitorLogger] No Button found in scene after delay.");
         }
     }
 
@@ -38,7 +50,8 @@ public class MonitorLogger : NetworkBehaviour
 
     private void OnButtonClicked()
     {
-        if (!IsServerInitialized || !IsSpawned) return;
+        // Safety check to ensure we are still server and object is spawned
+        if (!IsServerStarted || !IsSpawned) return;
         RpcLogOnClients(_logMessage);
     }
 
@@ -46,5 +59,12 @@ public class MonitorLogger : NetworkBehaviour
     private void RpcLogOnClients(string message)
     {
         Debug.Log("[MonitorLogger] RPC RECEIVED → " + message);
+        
+        GameObject debugObj = GameObject.Find("Debug Text");
+        if (debugObj != null)
+        {
+            TextMeshProUGUI comp = debugObj.GetComponent<TextMeshProUGUI>();
+            if (comp != null) comp.text = message;
+        }
     }
 }

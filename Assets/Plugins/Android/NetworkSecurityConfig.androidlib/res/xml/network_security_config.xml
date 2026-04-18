@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    File location in your Unity project:
+        Assets/Plugins/Android/NetworkSecurity.androidlib/res/xml/network_security_config.xml
+
+    Allows unencrypted WebSocket traffic (ws://) from the Android client to the
+    Monitor server's static LAN IP. Bayou uses plain ws:// by default; without
+    this file Android 9+ blocks the connection with CLEARTEXT_NOT_PERMITTED.
+
+    Only the specific server IP is whitelisted — all other traffic keeps Android's
+    default security policy (cleartext blocked).
+
+    !! Update the IP below to match your DHCP reservation !!
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.0.10</domain>
+        <domain includeSubdomains="false">192.168.0.11</domain>
+    </domain-config>
+</network-security-config>

@@ -51,7 +51,9 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -67,7 +69,9 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -142,7 +146,9 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -161,7 +167,10 @@
           },
           {
             "name": "Cubemap",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -180,7 +189,9 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -194,7 +205,9 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -226,14 +239,18 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Light",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -258,7 +275,9 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -272,33 +291,43 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -312,7 +341,9 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -320,7 +351,9 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -358,7 +391,9 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -372,7 +407,9 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -404,7 +441,9 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -430,7 +469,9 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -443,7 +484,9 @@
           },
           {
             "name": "SpriteRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -461,18 +504,14 @@
           },
           {
             "name": "Texture",
-            "scenes": [
-              "Assets/Scenes/Client.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Texture2D",
-            "scenes": [
-              "Assets/Scenes/Client.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -1013,26 +1052,46 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "CapsuleCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "CharacterController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Collider",
             "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "FixedJoint",
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Joint",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -1043,13 +1102,17 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "SphereCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Main.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1556,7 +1619,9 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1622,7 +1687,9 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1636,7 +1703,9 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/Client.unity"
+              "Assets/Scenes/Client.unity",
+              "Assets/Scenes/Main.unity",
+              "Assets/Scenes/Monitor.unity"
             ],
             "dependencyType": 0,
             "icon": null

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
   _monitorScene: Monitor
   _clientScene: Client
+  _mobileClientScene: Client
 --- !u!114 &10672258507524702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkBootstrapper
   _port: 7777
+  _serverAddress: 192.168.0.10
 --- !u!114 &1946559518948838845
 MonoBehaviour:
   m_ObjectHideFlags: 0
