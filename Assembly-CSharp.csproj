@@ -74,6 +74,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Graphics\Icons\Android AppIcons\android\values\ic_launcher_background.xml" />
+    <None Include="Assets\Network\Linux commands.txt" />
     <None Include="Assets\Fonts\Cormorant\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Graphics\Icons\iOS AppIcons\Assets.xcassets\AppIcon.appiconset\Contents.json" />

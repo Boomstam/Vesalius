@@ -8,7 +8,7 @@ using ParrelSync;
 public enum BuildType
 {
     Server,
-    MainEditor,
+    Monitor,
     Client
 }
 
@@ -19,7 +19,7 @@ public enum BuildType
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private string _serverScene     = "Server";
-    [SerializeField] private string _mainEditorScene = "Monitor";
+    [SerializeField] private string _monitorScene = "Monitor";
     [SerializeField] private string _clientScene     = "Client";
 
     /// <summary>Available from Awake onwards.</summary>
@@ -28,7 +28,7 @@ public class SceneLoader : MonoBehaviour
     private void Awake()
     {
 #if UNITY_EDITOR
-        BuildType = ClonesManager.IsClone() ? BuildType.Client : BuildType.MainEditor;
+        BuildType = ClonesManager.IsClone() ? BuildType.Client : BuildType.Monitor;
 #elif UNITY_SERVER
     BuildType = BuildType.Server;
 #else
@@ -41,7 +41,7 @@ public class SceneLoader : MonoBehaviour
             return;
         }
 
-        string sceneToLoad = BuildType == BuildType.MainEditor ? _mainEditorScene : _clientScene;
+        string sceneToLoad = BuildType == BuildType.Monitor ? _monitorScene : _clientScene;
 
         Debug.Log($"[SceneLoader] BuildType = {BuildType} — loading additive scene '{sceneToLoad}'");
         SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);

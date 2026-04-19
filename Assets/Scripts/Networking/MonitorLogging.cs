@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using FishNet.Object;
 
 /// <summary>
 /// Attach this to a NetworkObject in the Monitor scene alongside a UI Button.
+/// Only registers the button listener when running as MainEditor (Monitor build).
 /// </summary>
 public class MonitorLogger : NetworkBehaviour
 {
@@ -11,12 +13,21 @@ public class MonitorLogger : NetworkBehaviour
 
     private Button _triggerButton;
 
-    public override void OnStartServer()
+    private void Start()
     {
-        base.OnStartServer();
+        if (SceneLoader.BuildType != BuildType.Monitor)
+        {
+            Debug.Log("[MonitorLogger] Not a Monitor build — skipping button setup.");
+            return;
+        }
+        StartCoroutine(FindButtonAfterDelay());
+    }
 
-        // Find the button in the Monitor scene at runtime — it won't exist on clients
-        _triggerButton = FindFirstObjectByType<Button>();
+    private IEnumerator FindButtonAfterDelay()
+    {
+        yield return new WaitForSeconds(5);
+        
+        _triggerButton = GameObject.Find("Monitor Log Button").GetComponent<Button>();
 
         if (_triggerButton != null)
         {
@@ -32,13 +43,15 @@ public class MonitorLogger : NetworkBehaviour
     public override void OnStopServer()
     {
         base.OnStopServer();
+        
         if (_triggerButton != null)
             _triggerButton.onClick.RemoveListener(OnButtonClicked);
     }
 
     private void OnButtonClicked()
     {
-        if (!IsServerInitialized || !IsSpawned) return;
+        Debug.Log($"[MonitorLogger] Button clicked locally.");
+        
         RpcLogOnClients(_logMessage);
         RpcLogOnServer(_logMessage);
     }
@@ -48,10 +61,10 @@ public class MonitorLogger : NetworkBehaviour
     {
         Debug.Log("[MonitorLogger] RPC RECEIVED ON CLIENT → " + message);
     }
-    
+
     [ServerRpc(RequireOwnership = false)]
     private void RpcLogOnServer(string message)
     {
-        Debug.Log("[MonitorLogger] RPC RECEIVED ON SERVER→ " + message);
+        Debug.Log("[MonitorLogger] RPC RECEIVED ON SERVER → " + message);
     }
 }

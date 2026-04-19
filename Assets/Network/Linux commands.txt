@@ -1,0 +1,3 @@
+kill $(pidof Vesalius.x86_64)
+systemctl start gameserver
+cat /var/log/gameserver.log

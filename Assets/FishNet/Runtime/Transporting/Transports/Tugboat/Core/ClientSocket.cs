@@ -156,7 +156,9 @@ namespace FishNet.Transporting.Tugboat.Client
         /// Called when disconnected from the server.
         /// </summary>
         private void Listener_PeerDisconnectedEvent(NetPeer peer, DisconnectInfo disconnectInfo)
-        {
+        {    
+            Debug.Log($"[LiteNetLib] PeerDisconnected — Reason: {disconnectInfo.Reason}, AdditionalData: {disconnectInfo.AdditionalData?.AvailableBytes} bytes"); // ADD THIS
+
             StopConnection(disconnectInfo);
         }
 
