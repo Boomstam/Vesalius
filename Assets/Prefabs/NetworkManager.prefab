@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 1946559518948838845}
   - component: {fileID: 2654405813993365124}
   - component: {fileID: 9129886094207215673}
+  - component: {fileID: 8613654713334753093}
   - component: {fileID: 894910122567815987}
+  - component: {fileID: 552316480811616921}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -64,8 +66,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44aadabab193e7c4d853037b5e561993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkBootstrapper
-  _port: 7777
+  _tugboatPort: 7777
+  _bayouPort: 7778
   _serverAddress: 178.104.196.127
+  _bayouLocalAddress: ws://localhost
+  _bayouRemoteAddress: wss://ws.yourdomain.com
   _runLocally: 0
 --- !u!114 &1946559518948838845
 MonoBehaviour:
@@ -118,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e4a322dca349547989b14021da4e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FishNet.Runtime::FishNet.Managing.Transporting.TransportManager
-  Transport: {fileID: 894910122567815987}
+  Transport: {fileID: 8613654713334753093}
   _maximumClientPacketSize: 20480
   _intermediateLayer: {fileID: 0}
   _latencySimulator:
@@ -127,6 +132,22 @@ MonoBehaviour:
     _latency: 0
     _outOfOrder: 0
     _packetLoss: 0
+--- !u!114 &8613654713334753093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264818105614189367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314b449d3505bd24487ba69b61c2fda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FishNet.Runtime::FishNet.Transporting.Multipass.Multipass
+  GlobalServerActions: 1
+  _transports:
+  - {fileID: 894910122567815987}
+  - {fileID: 552316480811616921}
 --- !u!114 &894910122567815987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,4 +168,26 @@ MonoBehaviour:
   _ipv6BindAddress: 
   _port: 7777
   _maximumClients: 4095
+  _clientAddress: localhost
+--- !u!114 &552316480811616921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264818105614189367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362dfd7e6009fb44c90beec3df0ad853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Bayou::FishNet.Transporting.Bayou.Bayou
+  _useWss: 0
+  _sslConfiguration:
+    Enabled: 0
+    CertificatePath: 
+    CertificatePassword: 
+    SslProtocol: 0
+  _mtu: 1023
+  _port: 7778
+  _maximumClients: 2000
   _clientAddress: localhost
