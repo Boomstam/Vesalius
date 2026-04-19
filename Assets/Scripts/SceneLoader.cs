@@ -52,16 +52,18 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
-            // Main editor instance is always the Monitor (server + host locally)
             BuildType     = BuildType.Monitor;
             TransportType = TransportType.Tugboat;
         }
 #elif UNITY_SERVER
-        BuildType     = BuildType.Server;
-        TransportType = TransportType.Tugboat; // Server runs Multipass (both transports); this field is unused server-side
+    BuildType     = BuildType.Server;
+    TransportType = TransportType.Tugboat;
+#elif UNITY_WEBGL
+    BuildType     = BuildType.Client;
+    TransportType = TransportType.Bayou;
 #else
-        BuildType     = BuildType.Client;
-        TransportType = TransportType.Tugboat; // Native builds default to Tugboat; WebGL will set Bayou at Step 2
+    BuildType     = BuildType.Client;
+    TransportType = TransportType.Tugboat;
 #endif
 
         Debug.Log($"[SceneLoader] BuildType={BuildType}  TransportType={TransportType}");

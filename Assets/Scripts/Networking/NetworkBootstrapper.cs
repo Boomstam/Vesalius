@@ -6,7 +6,7 @@ using FishNet;
 using FishNet.Transporting;
 using FishNet.Transporting.Multipass;
 using FishNet.Transporting.Tugboat;
-// using FishNet.Transporting.Bayou; // Uncomment in Step 2
+using FishNet.Transporting.Bayou; // Step 2: Bayou activated
 
 /// <summary>
 /// Starts the correct FishNet role based on BuildType + TransportType resolved by SceneLoader.
@@ -15,15 +15,6 @@ using FishNet.Transporting.Tugboat;
 /// Monitor → same as server when running locally; otherwise connects as Tugboat client.
 /// Client  → selects Tugboat or Bayou via Multipass before connecting.
 ///
-/// Inspector setup required (Step 1):
-///   • Remove the standalone Tugboat component from NetworkManager.
-///   • Add a Multipass component.
-///   • Add Tugboat as a child of Multipass (or as a sibling — whichever Multipass requires).
-///   • Add Bayou as a second child (already present but unused until Step 2).
-///   • Set ports on each child transport in the inspector to match _tugboatPort / _bayouPort below,
-///     OR leave them at defaults and rely on the programmatic port helpers (see Step 2 TODO).
-///
-/// TODO (Step 2): Uncomment Bayou using directive and SetClientTransport<Bayou>() in SelectClientTransport().
 /// TODO (Step 4): Replace _bayouRemoteAddress with your actual wss:// domain.
 /// </summary>
 public class NetworkBootstrapper : MonoBehaviour
@@ -39,11 +30,11 @@ public class NetworkBootstrapper : MonoBehaviour
     [Tooltip("Public IP or domain of the dedicated server (used by Tugboat clients).")]
     [SerializeField] private string _serverAddress = "178.104.196.127";
 
-    [Tooltip("WebSocket URL for local Bayou testing (Step 2). Plain WS, no cert needed.")]
-    [SerializeField] private string _bayouLocalAddress = "ws://localhost";
+    [Tooltip("WebSocket URL for local Bayou testing. Plain WS, no cert needed.")]
+    [SerializeField] private string _bayouLocalAddress = "localhost";
 
     [Tooltip("WebSocket URL for production Bayou (Step 4). Caddy terminates TLS.")]
-    [SerializeField] private string _bayouRemoteAddress = "wss://ws.yourdomain.com"; // TODO: replace in Step 4
+    [SerializeField] private string _bayouRemoteAddress = "ws.yourdomain.com"; // TODO: replace in Step 4
 
     [Tooltip("When enabled, Monitor acts as server+host and all clients connect to localhost.")]
     [SerializeField] private bool _runLocally = false;
@@ -62,9 +53,7 @@ public class NetworkBootstrapper : MonoBehaviour
 
         if (SceneLoader.BuildType == BuildType.Server)
         {
-            LogPortAvailability(_tugboatPort, SocketType.Dgram,   ProtocolType.Udp, "Tugboat UDP");
-            // Bayou uses TCP/WS — UDP pre-flight does not apply to it.
-            // Add a TCP pre-flight here in Step 2 if desired.
+            LogPortAvailability(_tugboatPort, SocketType.Dgram, ProtocolType.Udp, "Tugboat UDP");
             LogTugboatSettings();
         }
 
@@ -76,15 +65,14 @@ public class NetworkBootstrapper : MonoBehaviour
             switch (SceneLoader.BuildType)
             {
                 case BuildType.Monitor:
-                    // Monitor is server + host locally. Multipass starts both child transports.
                     Debug.Log($"[NetworkBootstrapper] Local mode — starting Multipass server " +
                               $"(Tugboat:{_tugboatPort} / Bayou:{_bayouPort})");
                     InstanceFinder.ServerManager.StartConnection();
                     SelectClientTransport();
-                    InstanceFinder.ClientManager.StartConnection("localhost", _tugboatPort);
+                    ConnectClient("localhost");
                     break;
 
-                case BuildType.Server: // Shouldn't occur locally, but guard anyway
+                case BuildType.Server:
                 case BuildType.Client:
                     SelectClientTransport();
                     ConnectClient("localhost");
@@ -96,8 +84,6 @@ public class NetworkBootstrapper : MonoBehaviour
         switch (SceneLoader.BuildType)
         {
             case BuildType.Server:
-                // Multipass.StartConnection() starts all registered child transports.
-                // Each child transport uses the port configured on its own component in the inspector.
                 Debug.Log($"[NetworkBootstrapper] Server — starting Multipass " +
                           $"(Tugboat:{_tugboatPort} / Bayou:{_bayouPort})");
                 InstanceFinder.ServerManager.StartConnection();
@@ -136,17 +122,16 @@ public class NetworkBootstrapper : MonoBehaviour
                 break;
 
             case TransportType.Bayou:
-                // TODO Step 2: Uncomment the line below and remove the fallback warning.
-                // _multipass.SetClientTransport<Bayou>();
-                Debug.LogWarning("[NetworkBootstrapper] Bayou not yet wired — falling back to Tugboat. (Fix in Step 2)");
-                _multipass.SetClientTransport<Tugboat>();
+                _multipass.SetClientTransport<Bayou>();
+                Debug.Log("[NetworkBootstrapper] Client transport → Bayou");
                 break;
         }
     }
 
     /// <summary>
     /// Calls StartConnection with the correct address and port for the active transport.
-    /// Bayou expects a ws:// or wss:// URL; Tugboat expects a plain IP/hostname.
+    /// Tugboat expects a plain IP/hostname + port.
+    /// Bayou expects a ws:// or wss:// URL + port.
     /// </summary>
     private void ConnectClient(string tugboatHost)
     {
@@ -158,9 +143,6 @@ public class NetworkBootstrapper : MonoBehaviour
                 break;
 
             case TransportType.Bayou:
-                // Bayou takes a WebSocket URL. Port is embedded in the URL or defaults to 80/443.
-                // In Step 2 this will connect to _bayouLocalAddress; in Step 5 to _bayouRemoteAddress.
-                // For now this path is unreachable (Bayou falls back to Tugboat in SelectClientTransport).
                 string wsUrl = _runLocally ? _bayouLocalAddress : _bayouRemoteAddress;
                 Debug.Log($"[NetworkBootstrapper] Connecting via Bayou → {wsUrl}:{_bayouPort}");
                 InstanceFinder.ClientManager.StartConnection(wsUrl, _bayouPort);
@@ -226,7 +208,12 @@ public class NetworkBootstrapper : MonoBehaviour
     {
         Debug.Log($"[NetworkBootstrapper] Client state → {args.ConnectionState}");
         bool connected = args.ConnectionState == LocalConnectionState.Started;
+        
         GameObject overlay = GameObject.Find("Not Connected Overlay Image");
-        if (overlay != null) overlay.SetActive(connected);
+        if(overlay != null)
+        {
+            overlay.SetActive(connected);
+            Debug.Log("overlay active "  + connected);
+        }
     }
 }

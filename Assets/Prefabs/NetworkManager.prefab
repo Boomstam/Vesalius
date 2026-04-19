@@ -69,8 +69,8 @@ MonoBehaviour:
   _tugboatPort: 7777
   _bayouPort: 7778
   _serverAddress: 178.104.196.127
-  _bayouLocalAddress: ws://localhost
-  _bayouRemoteAddress: wss://ws.yourdomain.com
+  _bayouLocalAddress: localhost
+  _bayouRemoteAddress: ws.yourdomain.com
   _runLocally: 0
 --- !u!114 &1946559518948838845
 MonoBehaviour:
