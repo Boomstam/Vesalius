@@ -6,7 +6,7 @@ using FishNet;
 using FishNet.Transporting;
 using FishNet.Transporting.Multipass;
 using FishNet.Transporting.Tugboat;
-using FishNet.Transporting.Bayou; // Step 2: Bayou activated
+using FishNet.Transporting.Bayou;
 
 /// <summary>
 /// Starts the correct FishNet role based on BuildType + TransportType resolved by SceneLoader.
@@ -15,26 +15,30 @@ using FishNet.Transporting.Bayou; // Step 2: Bayou activated
 /// Monitor → same as server when running locally; otherwise connects as Tugboat client.
 /// Client  → selects Tugboat or Bayou via Multipass before connecting.
 ///
-/// TODO (Step 4): Replace _bayouRemoteAddress with your actual wss:// domain.
+/// Remote Bayou traffic hits Caddy on port 443 (WSS), which reverse-proxies to Bayou on localhost:7778 (plain WS).
+/// Local Bayou traffic connects directly to localhost:7778 (plain WS, no cert).
 /// </summary>
 public class NetworkBootstrapper : MonoBehaviour
 {
     [Header("Ports")]
-    [Tooltip("UDP port used by Tugboat. Must match the Tugboat child transport in Multipass.")]
+    [Tooltip("UDP port used by Tugboat.")]
     [SerializeField] private ushort _tugboatPort = 7777;
 
-    [Tooltip("TCP/WS port used by Bayou. Must match the Bayou child transport in Multipass.")]
+    [Tooltip("Plain WS port Bayou listens on internally. Caddy proxies to this.")]
     [SerializeField] private ushort _bayouPort = 7778;
+
+    [Tooltip("External WSS port clients use to reach Caddy. Caddy then forwards to _bayouPort.")]
+    [SerializeField] private ushort _bayouRemotePort = 443;
 
     [Header("Addresses")]
     [Tooltip("Public IP or domain of the dedicated server (used by Tugboat clients).")]
     [SerializeField] private string _serverAddress = "178.104.196.127";
 
-    [Tooltip("WebSocket URL for local Bayou testing. Plain WS, no cert needed.")]
+    [Tooltip("Hostname for local Bayou testing (plain WS, no cert).")]
     [SerializeField] private string _bayouLocalAddress = "localhost";
 
-    [Tooltip("WebSocket URL for production Bayou (Step 4). Caddy terminates TLS.")]
-    [SerializeField] private string _bayouRemoteAddress = "ws.yourdomain.com"; // TODO: replace in Step 4
+    [Tooltip("Hostname for production Bayou. Caddy terminates TLS here.")]
+    [SerializeField] private string _bayouRemoteAddress = "ws.studiotegenstem.com";
 
     [Tooltip("When enabled, Monitor acts as server+host and all clients connect to localhost.")]
     [SerializeField] private bool _runLocally = false;
@@ -48,8 +52,7 @@ public class NetworkBootstrapper : MonoBehaviour
 
         _multipass = InstanceFinder.NetworkManager.GetComponent<Multipass>();
         if (_multipass == null)
-            Debug.LogError("[NetworkBootstrapper] Multipass component not found on NetworkManager! " +
-                           "Add Multipass and configure Tugboat + Bayou as child transports.");
+            Debug.LogError("[NetworkBootstrapper] Multipass component not found on NetworkManager!");
 
         if (SceneLoader.BuildType == BuildType.Server)
         {
@@ -107,9 +110,6 @@ public class NetworkBootstrapper : MonoBehaviour
 
     // ── Transport selection ───────────────────────────────────────────────────
 
-    /// <summary>
-    /// Points Multipass at the correct child transport before StartConnection is called.
-    /// </summary>
     private void SelectClientTransport()
     {
         if (_multipass == null) return;
@@ -122,17 +122,23 @@ public class NetworkBootstrapper : MonoBehaviour
                 break;
 
             case TransportType.Bayou:
+                bool useWss = !_runLocally;
+                var bayou = InstanceFinder.NetworkManager.GetComponentInChildren<Bayou>(true);
+                if (bayou != null)
+                {
+                    bayou.SetUseWSS(useWss);
+                    Debug.Log($"[NetworkBootstrapper] Bayou WSS → {useWss}");
+                }
+                else
+                {
+                    Debug.LogError("[NetworkBootstrapper] Bayou component not found in children of NetworkManager!");
+                }
                 _multipass.SetClientTransport<Bayou>();
                 Debug.Log("[NetworkBootstrapper] Client transport → Bayou");
                 break;
         }
     }
 
-    /// <summary>
-    /// Calls StartConnection with the correct address and port for the active transport.
-    /// Tugboat expects a plain IP/hostname + port.
-    /// Bayou expects a ws:// or wss:// URL + port.
-    /// </summary>
     private void ConnectClient(string tugboatHost)
     {
         switch (SceneLoader.TransportType)
@@ -143,9 +149,10 @@ public class NetworkBootstrapper : MonoBehaviour
                 break;
 
             case TransportType.Bayou:
-                string wsUrl = _runLocally ? _bayouLocalAddress : _bayouRemoteAddress;
-                Debug.Log($"[NetworkBootstrapper] Connecting via Bayou → {wsUrl}:{_bayouPort}");
-                InstanceFinder.ClientManager.StartConnection(wsUrl, _bayouPort);
+                string host = _runLocally ? _bayouLocalAddress : _bayouRemoteAddress;
+                ushort port = _runLocally ? _bayouPort : _bayouRemotePort;
+                Debug.Log($"[NetworkBootstrapper] Connecting via Bayou → {host}:{port}  WSS={!_runLocally}");
+                InstanceFinder.ClientManager.StartConnection(host, port);
                 break;
         }
     }
@@ -208,12 +215,12 @@ public class NetworkBootstrapper : MonoBehaviour
     {
         Debug.Log($"[NetworkBootstrapper] Client state → {args.ConnectionState}");
         bool connected = args.ConnectionState == LocalConnectionState.Started;
-        
+
         GameObject overlay = GameObject.Find("Not Connected Overlay Image");
-        if(overlay != null)
+        if (overlay != null)
         {
             overlay.SetActive(connected);
-            Debug.Log("overlay active "  + connected);
+            Debug.Log("overlay active " + connected);
         }
     }
 }

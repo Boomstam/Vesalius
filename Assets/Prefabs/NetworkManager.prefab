@@ -70,7 +70,7 @@ MonoBehaviour:
   _bayouPort: 7778
   _serverAddress: 178.104.196.127
   _bayouLocalAddress: localhost
-  _bayouRemoteAddress: ws.yourdomain.com
+  _bayouRemoteAddress: ws.studiotegenstem.com
   _runLocally: 0
 --- !u!114 &1946559518948838845
 MonoBehaviour:
