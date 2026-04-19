@@ -34,17 +34,17 @@ static Il2CppMethodPointer s_methodPointers[11] =
 };
 static const int32_t s_InvokerIndices[11] = 
 {
-	18857,
-	13812,
-	14030,
-	13812,
-	18395,
-	13812,
-	18857,
-	18607,
-	18607,
-	18607,
-	3126,
+	19041,
+	13967,
+	14187,
+	13967,
+	18573,
+	13967,
+	19041,
+	18787,
+	18787,
+	18787,
+	3211,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_FishNet_CodeAnalysis_CodeGenModule;
 const Il2CppCodeGenModule g_FishNet_CodeAnalysis_CodeGenModule = 

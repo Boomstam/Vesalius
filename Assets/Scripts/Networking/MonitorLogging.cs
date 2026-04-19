@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using FishNet.Object;
+using TMPro;
 
 /// <summary>
 /// Attach this to a NetworkObject in the Monitor scene alongside a UI Button.
@@ -9,7 +10,7 @@ using FishNet.Object;
 /// </summary>
 public class MonitorLogger : NetworkBehaviour
 {
-    [SerializeField] private string _logMessage = "Button pressed on Monitor!";
+    [SerializeField] private string _logMessage;
 
     private Button _triggerButton;
 
@@ -60,11 +61,18 @@ public class MonitorLogger : NetworkBehaviour
     private void RpcLogOnClients(string message)
     {
         Debug.Log("[MonitorLogger] RPC RECEIVED ON CLIENT → " + message);
+        
+        GameObject notConnectedOverlayImage = GameObject.Find("Debug Text");
+
+        if (notConnectedOverlayImage != null)
+            notConnectedOverlayImage.GetComponent<TextMeshProUGUI>().text  = message;
     }
 
     [ServerRpc(RequireOwnership = false)]
     private void RpcLogOnServer(string message)
     {
         Debug.Log("[MonitorLogger] RPC RECEIVED ON SERVER → " + message);
+        
+        RpcLogOnClients("THIS MESSAGE IS A ROUND TRIP FROM THE SERVER!");
     }
 }

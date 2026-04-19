@@ -176,5 +176,12 @@ public class NetworkBootstrapper : MonoBehaviour
     private void OnClientConnectionState(ClientConnectionStateArgs args)
     {
         Debug.Log($"[NetworkBootstrapper] Client connection state → {args.ConnectionState}");
+        
+        bool connected = (args.ConnectionState == LocalConnectionState.Started);
+
+        GameObject notConnectedOverlayImage = GameObject.Find("Not Connected Overlay Image");
+        
+        if(notConnectedOverlayImage != null)
+            notConnectedOverlayImage. SetActive(connected);
     }
 }

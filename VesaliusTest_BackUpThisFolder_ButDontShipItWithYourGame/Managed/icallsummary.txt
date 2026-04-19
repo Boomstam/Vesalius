@@ -510,6 +510,7 @@ UnityEngine.Component::BroadcastMessage_Injected
 UnityEngine.Component::GetComponentFastPath_Injected
 UnityEngine.Component::GetComponentsForListInternal_Injected
 UnityEngine.Component::SendMessage_Injected
+UnityEngine.Component::get_transformHandle_Injected
 UnityEngine.ComputeBuffer::IsValidBuffer_Injected
 UnityEngine.ComputeBuffer::get_count_Injected
 UnityEngine.ComputeBuffer::get_stride_Injected
@@ -641,6 +642,7 @@ UnityEngine.GameObject::get_activeInHierarchy_Injected
 UnityEngine.GameObject::get_activeSelf_Injected
 UnityEngine.GameObject::get_isStatic_Injected
 UnityEngine.GameObject::get_layer_Injected
+UnityEngine.GameObject::Find_Injected
 UnityEngine.GameObject::GetComponentInChildren_Injected
 UnityEngine.GameObject::GetComponentInParent_Injected
 UnityEngine.GameObject::GetComponent_Injected
@@ -656,6 +658,7 @@ UnityEngine.GameObject::TryGetComponentFastPath_Injected
 UnityEngine.GameObject::get_scene_Injected
 UnityEngine.GameObject::get_tag_Injected
 UnityEngine.GameObject::set_layer_Injected
+UnityEngine.GameObject::set_tag_Injected
 UnityEngine.GeometryUtility::Internal_TestPlanesAABB_Injected
 UnityEngine.GeometryUtility::Internal_ExtractPlanes_Injected
 UnityEngine.Gizmos::DrawIcon_Injected
@@ -1164,6 +1167,7 @@ UnityEngine.PlayerPrefs::Save
 UnityEngine.PolygonCollider2D::set_points_Injected
 UnityEngine.Profiling.Profiler::GetRuntimeMemorySizeLong_Injected
 UnityEngine.Profiling.Profiler::BeginSampleImpl_Injected
+UnityEngine.Profiling.Profiler::BeginThreadProfilingInternal_Injected
 UnityEngine.Profiling.Profiler::EndSample
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_billboardsFaceCameraPosition
