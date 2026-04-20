@@ -1461,7 +1461,7 @@ GameObject:
   - component: {fileID: 198929958}
   - component: {fileID: 198929957}
   m_Layer: 0
-  m_Name: Not Connected Icon
+  m_Name: Connected Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4594,6 +4594,8 @@ MonoBehaviour:
   - {fileID: 101948866}
   part0ContentInfoManager: {fileID: 760369691}
   infoToggleButton: {fileID: 1984027640}
+  languageButton: {fileID: 596109234}
+  connectedImage: {fileID: 198929957}
   contentImage: {fileID: 442898991}
   infoButtonHighlightColor: {r: 0.87058824, g: 0.87058824, b: 0.87058824, a: 0.87058824}
   partToTest: 0

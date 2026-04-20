@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Replaces TabManagement. Owns the two-view (Content / Info) model for all 11 parts.
+/// Owns the two-view (Content / Info) model for all 11 parts.
 /// Part switches are server-driven (call SetPart from a network handler).
 /// The Information Icon button toggles between Content and Info within the current part.
 /// </summary>
@@ -23,6 +23,8 @@ public class ViewManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Button infoToggleButton;
+    [SerializeField] private Button languageButton;
+    [SerializeField] private Image connectedImage;
     [SerializeField] private GameObject contentImage;
     [SerializeField] private Color infoButtonHighlightColor = Color.white;
     
@@ -114,6 +116,7 @@ public class ViewManager : MonoBehaviour
     /// Tints the info toggle button white (editor-defined color) when we're on
     /// the Content view of any part other than part 0.
     /// Resets to normal color otherwise.
+    /// Hides the language button and connected image in that same case.
     /// </summary>
     private void RefreshInfoButtonColor()
     {
@@ -121,6 +124,12 @@ public class ViewManager : MonoBehaviour
 
         bool useHighlight = _currentView == View.Content && _currentPart != 0;
         infoToggleButton.image.color = useHighlight ? infoButtonHighlightColor : _defaultButtonColor;
+
+        if (languageButton != null)
+            languageButton.gameObject.SetActive(!useHighlight);
+
+        if (connectedImage != null)
+            connectedImage.gameObject.SetActive(!useHighlight);
     }
 
     /// <summary>
