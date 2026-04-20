@@ -48,6 +48,7 @@
     <Analyzer Include="C:\Users\Gebruiker\Documents\Unity\Vesalius\Assets\FishNet\Runtime\Plugins\CodeAnalysis\FishNet.CodeAnalysis.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI\Editor\SceneOverhaulTool.cs" />
     <Compile Include="Assets\Scripts\UI\Editor\FitToParent.cs" />
     <Compile Include="Assets\Scripts\UI\Editor\ScreenshotTool.cs" />
     <Reference Include="UnityEngine">

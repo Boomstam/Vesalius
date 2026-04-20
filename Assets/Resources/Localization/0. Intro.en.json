@@ -1,0 +1,37 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Intro",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "intro_vesalius_quote",
+      "title": "Intro",
+      "content": "\"I am not accustomed to trusting books alone, but rather to placing my faith in the work of my own hands.\" — Andreas Vesalius"
+    },
+    {
+      "type": "chapter",
+      "key": "intro_humanist_tradition",
+      "title": "Intro",
+      "content": "Formed in the humanist tradition of the three languages, Andreas Vesalius moved through a Europe of shifting languages—writing in Latin, reading Greek, and speaking the everyday language of his native Low Countries, while absorbing the rhythms of Italy and France along the way. Knowledge did not stay still—it travelled, translated, and changed, much like the body he set out to understand. Even acknowledging knowledge transmitted through Arabic scholars—particularly Rhazes—was, at the time, no small step."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_rhazes_vesalius",
+      "title": "Intro",
+      "content": "Between Rhazes and Vesalius, knowledge crosses languages before it crosses bodies. Rhazes observes. Vesalius dissects. Between them, knowledge learns to see."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_it_took_hold",
+      "title": "Intro",
+      "content": "It took hold."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_bridge_cultures",
+      "title": "Intro",
+      "content": "Across cultures, a bridge forms—not just carrying knowledge forward, but reshaping it. In that movement, something else appears: a curiosity that won't settle, a drive to question, to test, to reimagine. This is where innovation begins—not by breaking from the past, but by carrying it forward and making it new."
+    }
+  ]
+}

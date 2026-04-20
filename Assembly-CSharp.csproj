@@ -49,12 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FishNet\Upgrading\UpgradeFromMirrorMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\SoundSlotManager.cs" />
     <Compile Include="Assets\Scripts\Networking\MonitorLogging.cs" />
     <Compile Include="Assets\Scripts\Tabs\Info\InfoManager.cs" />
     <Compile Include="Assets\FishNet\Upgrading\MirrorUpgrade.cs" />
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
     <Compile Include="Assets\Scripts\Tabs\ContentImageManager.cs" />
+    <Compile Include="Assets\Scripts\UI\ViewManager.cs" />
     <Compile Include="Assets\Scripts\Networking\NetworkBootstrapper.cs" />
     <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
@@ -64,6 +66,7 @@
     <None Include="Assets\Resources\Localization\Vesalius.nl.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Resources\Localization\9. Book VI_ The Senses.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\Resources\Localization\UI.default.json" />
     <None Include="Assets\Resources\Localization\Tutorial.en.json" />
@@ -72,13 +75,18 @@
     <None Include="Assets\FishNet\LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Resources\Localization\6. Book IV_ The Nerves.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Graphics\Icons\Android AppIcons\android\values\ic_launcher_background.xml" />
     <None Include="Assets\Network\Linux commands.txt" />
     <None Include="Assets\Fonts\Cormorant\README.txt" />
+    <None Include="Assets\Resources\Localization\0. Intro.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Graphics\Icons\iOS AppIcons\Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <None Include="Assets\FishNet\package.json" />
+    <None Include="Assets\Resources\Localization\7. Book V_ The Bones and Cartilages.en.json" />
+    <None Include="Assets\Resources\Localization\10. Book VII_ The Heart.en.json" />
+    <None Include="Assets\Resources\Localization\8. Book VI_ The Brain.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -88,12 +96,17 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Resources\Localization\5. The Words of Vesalius.en.json" />
     <None Include="Assets\Graphics\Icons\Android AppIcons\android\mipmap-anydpi-v26\ic_launcher.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Resources\Localization\4. Book II_ The Ligaments and Muscles.en.json" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Resources\Localization\2. Book III_ The Veins and Arteries.en.json" />
     <None Include="Assets\Resources\Localization\Film.en.json" />
+    <None Include="Assets\Resources\Localization\1. Book I_ The Organs of Nutrition.en.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Resources\Localization\3. Book I_ The Organs of Generation.en.json" />
     <None Include="Assets\Graphics\Icons\Android AppIcons\android\mipmap-anydpi-v26\ic_launcher_round.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Resources\Localization\Film.nl.json" />

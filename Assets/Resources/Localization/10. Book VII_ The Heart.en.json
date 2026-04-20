@@ -1,0 +1,25 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookVII_Heart",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "heart_spanish_quote",
+      "title": "Book VII: The Heart",
+      "content": "\"El corazón marca el ritmo de la vida.\"\n(The heart sets the rhythm of life.)"
+    },
+    {
+      "type": "chapter",
+      "key": "heart_two_worlds",
+      "title": "Book VII: The Heart",
+      "content": "The heart sits between two worlds. Still a centre of life and vitality, yet increasingly described as a muscular organ—structured, connected, and visible."
+    },
+    {
+      "type": "chapter",
+      "key": "heart_abstract_source",
+      "title": "Book VII: The Heart",
+      "content": "What was once an abstract source of life becomes something that can be seen, handled, and examined."
+    }
+  ]
+}

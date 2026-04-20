@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookVI_Senses",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "senses_greek_quote",
+      "title": "Book VI: The Senses",
+      "content": "\"Αἱ αἰσθήσεις μάρτυρες τῆς ἀληθείας εἰσίν.\"\n(The senses are witnesses of the truth.)"
+    },
+    {
+      "type": "chapter",
+      "key": "senses_perception_enters",
+      "title": "Book VI: The Senses",
+      "content": "Perception enters the body. Sight, hearing, smell, taste, and touch are traced through sense organs and nerves, linking the external world to the brain."
+    },
+    {
+      "type": "chapter",
+      "key": "senses_perception_path",
+      "title": "Book VI: The Senses",
+      "content": "Perception follows a path—from sense organs, through nerves, to the brain."
+    },
+    {
+      "type": "chapter",
+      "key": "senses_unseen",
+      "title": "Book VI: The Senses",
+      "content": "What was once unseen becomes something that can be followed, examined, and questioned."
+    }
+  ]
+}

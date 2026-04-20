@@ -45,12 +45,28 @@ public class InfoManager : MonoBehaviour
     // Fired whenever the displayed chapter changes. Payload: new index.
     public event Action<int> OnChapterChanged;
 
-    public int CurrentIndex => _currentIndex;
-    public int ChapterCount => chapters?.Length ?? 0;
+    public int CurrentIndex  => _currentIndex;
+    public int ChapterCount  => chapters?.Length ?? 0;
 
-    private int _currentIndex;
+    /// <summary>
+    /// Returns the JSON "type" string for the slot at <paramref name="index"/>
+    /// ("chapter", "image", "sounds", …).
+    /// Returns an empty string if the index is out of range or types not loaded.
+    /// </summary>
+    public string GetSlotType(int index)
+    {
+        if (_slotTypes == null || index < 0 || index >= _slotTypes.Length)
+            return string.Empty;
+
+        return _slotTypes[index];
+    }
+
+    private int           _currentIndex;
     private ChapterData[] _defaultChapters;
-    private string _localizedResourceBasePath;
+    private string[]      _slotTypes;            // parallel to chapters[], set in LoadChapterTextFromJson
+    private string        _localizedResourceBasePath;
+
+    // -------------------------------------------------------------------------
 
     private void Awake()
     {
@@ -66,14 +82,10 @@ public class InfoManager : MonoBehaviour
         nextInfoButton.onClick.AddListener(OnNext);
 
         if (LanguageManager.Instance != null)
-        {
             LanguageManager.Instance.LanguageChanged += OnLanguageChanged;
-        }
 
         if (ChapterCount > 0)
-        {
             DisplayChapter(_currentIndex);
-        }
     }
 
     private void OnDestroy()
@@ -82,31 +94,22 @@ public class InfoManager : MonoBehaviour
         nextInfoButton.onClick.RemoveListener(OnNext);
 
         if (LanguageManager.Instance != null)
-        {
             LanguageManager.Instance.LanguageChanged -= OnLanguageChanged;
-        }
     }
 
-    // Resets to chapter 0 without firing the event, used by TutorialManager
-    // on show so animators don't double-fire with the subsequent GoToChapter(0).
+    // -------------------------------------------------------------------------
+
+    // Resets to chapter 0 without firing the event.
     public void ResetToStart()
     {
-        if (ChapterCount == 0)
-        {
-            return;
-        }
-
+        if (ChapterCount == 0) return;
         _currentIndex = 0;
         DisplayChapter(_currentIndex);
-        // Intentionally no event, TutorialManager calls GoToChapter(0) right after.
     }
 
     public void GoToChapter(int index)
     {
-        if (ChapterCount == 0)
-        {
-            return;
-        }
+        if (ChapterCount == 0) return;
 
         index = Mathf.Clamp(index, 0, ChapterCount - 1);
         _currentIndex = index;
@@ -114,13 +117,11 @@ public class InfoManager : MonoBehaviour
         OnChapterChanged?.Invoke(_currentIndex);
     }
 
+    // -------------------------------------------------------------------------
+
     private void OnPrevious()
     {
-        if (ChapterCount == 0)
-        {
-            return;
-        }
-
+        if (ChapterCount == 0) return;
         _currentIndex = (_currentIndex - 1 + ChapterCount) % ChapterCount;
         DisplayChapter(_currentIndex);
         OnChapterChanged?.Invoke(_currentIndex);
@@ -128,11 +129,7 @@ public class InfoManager : MonoBehaviour
 
     private void OnNext()
     {
-        if (ChapterCount == 0)
-        {
-            return;
-        }
-
+        if (ChapterCount == 0) return;
         _currentIndex = (_currentIndex + 1) % ChapterCount;
         DisplayChapter(_currentIndex);
         OnChapterChanged?.Invoke(_currentIndex);
@@ -140,10 +137,12 @@ public class InfoManager : MonoBehaviour
 
     private void DisplayChapter(int index)
     {
-        infoTitleText.text = chapters[index].title;
-        infoContentText.text = chapters[index].content;
-        infoBackground.sprite = chapters[index].backgroundImage;
+        infoTitleText.text      = chapters[index].title;
+        infoContentText.text    = chapters[index].content;
+        infoBackground.sprite   = chapters[index].backgroundImage;
     }
+
+    // -------------------------------------------------------------------------
 
     private void LoadChapterTextFromJson()
     {
@@ -166,8 +165,8 @@ public class InfoManager : MonoBehaviour
             return;
         }
 
-        // Build full slot list from JSON: chapters get merged text, images become blank placeholders.
-        var result = new List<ChapterData>();
+        var result     = new List<ChapterData>();
+        var slotTypes  = new List<string>();
         int chapterIndex = 0;
 
         foreach (LocalizedEntry entry in localizedData.entries)
@@ -184,27 +183,33 @@ public class InfoManager : MonoBehaviour
                 if (!string.IsNullOrWhiteSpace(entry.content)) chapter.content = entry.content;
 
                 result.Add(chapter);
+                slotTypes.Add("chapter");
                 chapterIndex++;
             }
             else if (string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
             {
-                // Blank placeholder — title will be set by DisplayChapter via the image entry's title,
-                // but we still need a slot so indices stay in sync with ContentImageManager.
+                // Blank placeholder — slot index stays in sync with ContentImageManager.
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
+                slotTypes.Add("image");
             }
+            else if (string.Equals(entry.type, "sounds", StringComparison.OrdinalIgnoreCase))
+            {
+                // Blank placeholder — SoundsSlotManager will show the sounds panel for this slot.
+                result.Add(new ChapterData { title = entry.title ?? string.Empty });
+                slotTypes.Add("sounds");
+            }
+            // Unknown types are silently ignored — forward-compatible.
         }
 
-        chapters = result.ToArray();
+        chapters   = result.ToArray();
+        _slotTypes = slotTypes.ToArray();
     }
 
     private void LoadChapterTextForCurrentLanguage()
     {
         LoadChapterTextFromJson();
 
-        if (ChapterCount == 0)
-        {
-            return;
-        }
+        if (ChapterCount == 0) return;
 
         _currentIndex = Mathf.Clamp(_currentIndex, 0, ChapterCount - 1);
         DisplayChapter(_currentIndex);
@@ -215,15 +220,15 @@ public class InfoManager : MonoBehaviour
         LoadChapterTextForCurrentLanguage();
     }
 
+    // -------------------------------------------------------------------------
+
     private string ResolveLocalizedResourcePath()
     {
         if (!string.IsNullOrWhiteSpace(_localizedResourceBasePath))
         {
             string preferredPath = $"{_localizedResourceBasePath}.{LanguageManager.CurrentLanguageCode}";
             if (Resources.Load<TextAsset>(preferredPath) != null)
-            {
                 return preferredPath;
-            }
         }
 
         return chaptersJsonResourcePath;
@@ -232,19 +237,15 @@ public class InfoManager : MonoBehaviour
     private static string ExtractLocalizedResourceBasePath(string resourcePath)
     {
         if (string.IsNullOrWhiteSpace(resourcePath))
-        {
             return resourcePath;
-        }
 
         int separatorIndex = resourcePath.LastIndexOf('.');
         if (separatorIndex < 0 || separatorIndex >= resourcePath.Length - 1)
-        {
             return resourcePath;
-        }
 
         string suffix = resourcePath.Substring(separatorIndex + 1);
-        if (suffix.Equals("en", StringComparison.OrdinalIgnoreCase) ||
-            suffix.Equals("nl", StringComparison.OrdinalIgnoreCase) ||
+        if (suffix.Equals("en",      StringComparison.OrdinalIgnoreCase) ||
+            suffix.Equals("nl",      StringComparison.OrdinalIgnoreCase) ||
             suffix.Equals("default", StringComparison.OrdinalIgnoreCase))
         {
             return resourcePath.Substring(0, separatorIndex);
@@ -255,11 +256,7 @@ public class InfoManager : MonoBehaviour
 
     private static ChapterData[] CloneChapters(ChapterData[] source)
     {
-        if (source == null)
-        {
-            return Array.Empty<ChapterData>();
-        }
-
+        if (source == null) return Array.Empty<ChapterData>();
         ChapterData[] clone = new ChapterData[source.Length];
         Array.Copy(source, clone, source.Length);
         return clone;

@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookIII_VeinsArteries",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "veins_sanguis_quote",
+      "title": "Book III: The Veins and Arteries",
+      "content": "\"Sanguis per vasa fluit, vitam ubique ferens.\"\n(Blood flows through the vessels, carrying life everywhere.)"
+    },
+    {
+      "type": "chapter",
+      "key": "veins_body_opens",
+      "title": "Book III: The Veins and Arteries",
+      "content": "The body opens into pathways. Veins and arteries appear as organised routes—distinct, yet part of a connected network that runs throughout the body."
+    },
+    {
+      "type": "chapter",
+      "key": "veins_galen_harvey",
+      "title": "Book III: The Veins and Arteries",
+      "content": "Vesalius still follows Galen, where blood is believed to be produced in the liver, but shares Rhazes' focus on careful observation. In doing so, he prepares the ground for William Harvey, who will later describe the circulation—and whose work can be captured in a single image:"
+    },
+    {
+      "type": "chapter",
+      "key": "veins_pulse_quote",
+      "title": "Book III: The Veins and Arteries",
+      "content": "\"The pulse of the artery is the voice of the heart.\""
+    }
+  ]
+}

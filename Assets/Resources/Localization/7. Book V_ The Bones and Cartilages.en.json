@@ -1,0 +1,37 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookV_Bones",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "bones_dat_gaet",
+      "title": "Book V: The Bones and Cartilages",
+      "content": "\"Dat gaet mi in die beene.\"\n(It took hold of me.)"
+    },
+    {
+      "type": "chapter",
+      "key": "bones_structure",
+      "title": "Book V: The Bones and Cartilages",
+      "content": "Before movement, before sensation, there is structure. The skeleton is no longer symbolic. It becomes measured, proportioned and exact."
+    },
+    {
+      "type": "chapter",
+      "key": "bones_form",
+      "title": "Book V: The Bones and Cartilages",
+      "content": "Bones give the body its form—its limits, its proportions, its weight. Cartilage allows flexibility, making movement possible."
+    },
+    {
+      "type": "chapter",
+      "key": "bones_child",
+      "title": "Book V: The Bones and Cartilages",
+      "content": "For Vesalius, this begins not in books, but whilst playing outside as a child—bones found, handled, turned over in the hand. In that moment, something takes hold. Not an idea, but a question."
+    },
+    {
+      "type": "chapter",
+      "key": "bones_fascination",
+      "title": "Book V: The Bones and Cartilages",
+      "content": "What begins as fascination becomes inquiry—something that must be understood."
+    }
+  ]
+}

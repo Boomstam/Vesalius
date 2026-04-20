@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookVI_Brain",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "brain_german_quote",
+      "title": "Book VI: The Brain",
+      "content": "„Der Körper ist das Instrument des Geistes."\n(The body is the instrument of the mind.)"
+    },
+    {
+      "type": "chapter",
+      "key": "brain_focus_inward",
+      "title": "Book VI: The Brain",
+      "content": "The focus moves inward. The brain is described in structure, and the cranial nerves traced outward into the body."
+    },
+    {
+      "type": "chapter",
+      "key": "brain_earlier_thinkers",
+      "title": "Book VI: The Brain",
+      "content": "Where earlier thinkers placed mental faculties within unseen spaces, Vesalius holds back. He describes what he sees—and avoids claiming more than he can observe."
+    },
+    {
+      "type": "chapter",
+      "key": "brain_understood",
+      "title": "Book VI: The Brain",
+      "content": "The brain becomes something to be understood, not assumed."
+    }
+  ]
+}
