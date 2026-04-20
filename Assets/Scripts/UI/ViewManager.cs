@@ -23,7 +23,8 @@ public class ViewManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Button infoToggleButton;
-
+    [SerializeField] private GameObject contentImage;
+    
     public int  CurrentPart => _currentPart;
     public View CurrentView => _currentView;
 
@@ -64,6 +65,8 @@ public class ViewManager : MonoBehaviour
     /// </summary>
     public void SetPart(int part)
     {
+        contentImage.SetActive(false);
+        
         _currentPart = Mathf.Clamp(part, 0, contentViews.Length - 1);
         _currentView = View.Content;
         ApplyCurrentView();

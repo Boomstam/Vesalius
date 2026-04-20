@@ -3492,6 +3492,7 @@ MonoBehaviour:
   - {fileID: 101948866}
   part0ContentInfoManager: {fileID: 760369691}
   infoToggleButton: {fileID: 1984027640}
+  contentImage: {fileID: 442898991}
   partToTest: 0
   testPart: 0
 --- !u!1 &738763781
