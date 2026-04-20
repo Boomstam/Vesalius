@@ -12,10 +12,11 @@ public class ImageFader : MonoBehaviour
     public float fadeVal;
 
     private Sprite[] _originalSprites;
+    private Image[]  _activeImages;
     private bool _lastAlternateMode;
     private float _lastFadeVal;
 
-    private int CurrentNumImages => images?.Length ?? 0;
+    private int CurrentNumImages => _activeImages?.Length ?? 0;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class ImageFader : MonoBehaviour
     private void Start()
     {
         InitImageArray(ref images);
+        _activeImages = images;
         _lastAlternateMode = alternateMode;
     }
 
@@ -67,7 +69,7 @@ public class ImageFader : MonoBehaviour
 
         for (int i = 0; i < CurrentNumImages; i++)
         {
-            Image image = images[i];
+            Image image = _activeImages[i];
 
             float alpha = 0;
 
@@ -101,12 +103,16 @@ public class ImageFader : MonoBehaviour
         {
             if (i >= source.Length)
             {
-                Debug.LogWarning($"ImageFader: alternateImages is shorter than images (missing index {i}).");
+                // This image is outside the active set — hide it
+                Color c = images[i].color;
+                images[i].color = new Color(c.r, c.g, c.b, 0f);
                 break;
             }
 
             images[i].sprite = source[i];
         }
+
+        _activeImages = useAlternate ? images.Take(source.Length).ToArray() : images;
     }
 
     private void InitImageArray(ref Image[] imageArray)
