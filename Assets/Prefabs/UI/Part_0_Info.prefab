@@ -511,6 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9194154911263586215}
   - component: {fileID: 2078155791008700353}
+  - component: {fileID: 4442976498049056164}
   m_Layer: 0
   m_Name: Part_0_Info
   m_TagString: Untagged
@@ -559,6 +560,23 @@ MonoBehaviour:
   infoBackground: {fileID: 583063330684629535}
   chaptersJsonResourcePath: Localization/0. Intro.en
   chapters: []
+--- !u!114 &4442976498049056164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814666106932998189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa67ea0285966684ba942716be228394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ContentImageManager
+  infoManager: {fileID: 2078155791008700353}
+  displayImage: {fileID: 0}
+  imageTitleText: {fileID: 3346997603328522025}
+  imageAssets: []
+  chaptersJsonResourcePath: 
 --- !u!1 &5819143749608406936
 GameObject:
   m_ObjectHideFlags: 0

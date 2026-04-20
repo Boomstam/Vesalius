@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/8. Book VI_ The Brain.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_8_Info
@@ -1015,6 +1019,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/10. Book VII_ The Heart.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_10_Info
@@ -1829,6 +1837,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/3. Book I_ The Organs of Generation.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_3_Info
@@ -3289,11 +3301,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726349809}
+  - component: {fileID: 726349811}
+  - component: {fileID: 726349810}
   - component: {fileID: 726349808}
   - component: {fileID: 726349807}
   - component: {fileID: 726349806}
-  - component: {fileID: 726349810}
-  - component: {fileID: 726349811}
   m_Layer: 0
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -3563,7 +3575,6 @@ MonoBehaviour:
   imageTitleText: {fileID: 1612118608}
   imageAssets:
   - {fileID: 21300000, guid: 45cf3f72bd2663347aa5a692b9b0eff7, type: 3}
-  chaptersJsonResourcePath: Localization/Film.en
 --- !u!1 &739600759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4208,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/4. Book II_ The Ligaments and Muscles.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: 'Part_4_Info '
@@ -4773,6 +4788,18 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/5. The Words of Vesalius.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: imageAssets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: 'imageAssets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 45cf3f72bd2663347aa5a692b9b0eff7, type: 3}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_5_Info
@@ -5243,6 +5270,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/1. Book I_ The Organs of Nutrition.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_1_Info
@@ -5369,6 +5400,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/6. Book IV_ The Nerves.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_6_Info
@@ -6307,6 +6342,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/9. Book VI_ The Senses.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_9_Info
@@ -7048,6 +7087,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/2. Book III_ The Veins and Arteries.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_2_Info
@@ -7484,6 +7527,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/7. Book V_ The Bones and Cartilages.en
       objectReference: {fileID: 0}
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_7_Info
@@ -9232,6 +9279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 861213433}
     m_Modifications:
+    - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: displayImage
+      value: 
+      objectReference: {fileID: 442898993}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
       value: Part_0_Info
@@ -9723,7 +9774,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 680d31d63ed4e674fbf4bfba0369df4e, type: 3}
   - {fileID: 21300000, guid: 557655a37cdf08f4a8e3e689cfffe128, type: 3}
   - {fileID: 21300000, guid: b27b995223fd38942b4f6349703db7df, type: 3}
-  chaptersJsonResourcePath: Localization/Vesalius.en
 --- !u!222 &8811805297288754264
 CanvasRenderer:
   m_ObjectHideFlags: 0

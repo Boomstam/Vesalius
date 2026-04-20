@@ -39,7 +39,7 @@ public class InfoManager : MonoBehaviour
     [SerializeField] private Image infoBackground;
 
     [Header("Chapters")]
-    [SerializeField] private string chaptersJsonResourcePath;
+    public string chaptersJsonResourcePath;
     [SerializeField] private ChapterData[] chapters;
 
     // Fired whenever the displayed chapter changes. Payload: new index.

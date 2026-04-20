@@ -16,8 +16,7 @@ public class ContentImageManager : MonoBehaviour
     [Header("Assets")]
     [SerializeField] private Sprite[] imageAssets;
 
-    [Header("Resource Path")]
-    [SerializeField] private string chaptersJsonResourcePath;
+    private string chaptersJsonResourcePath;
 
     // -------------------------------------------------------------------------
 
@@ -48,6 +47,11 @@ public class ContentImageManager : MonoBehaviour
     private string _localizedResourceBasePath;
 
     // -------------------------------------------------------------------------
+
+    private void Awake()
+    {
+        chaptersJsonResourcePath = infoManager.chaptersJsonResourcePath;
+    }
 
     private void Start()
     {
