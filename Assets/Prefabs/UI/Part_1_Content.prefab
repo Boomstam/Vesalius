@@ -281,6 +281,8 @@ MonoBehaviour:
   - {fileID: 7113006172485313321}
   - {fileID: 7471757358728341684}
   - {fileID: 5376669655084414793}
+  alternateImages: []
+  alternateMode: 0
   fadeVal: 0
 --- !u!1 &7923679228105267135
 GameObject:

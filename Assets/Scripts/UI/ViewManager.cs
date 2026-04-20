@@ -71,6 +71,23 @@ public class ViewManager : MonoBehaviour
     // -------------------------------------------------------------------------
 
     /// <summary>
+    /// Called by the server/network layer to set completeAnatomyMode on all
+    /// ImageFader components in the content views of parts 1-10.
+    /// Part 0 is intentionally excluded (it has no ImageFader).
+    /// </summary>
+    public void SetCompleteAnatomyMode(bool enabled)
+    {
+        for (int i = 1; i < contentViews.Length; i++)
+        {
+            if (contentViews[i] == null) continue;
+
+            ImageFader fader = contentViews[i].GetComponent<ImageFader>();
+            if (fader != null)
+                fader.alternateMode = enabled;
+        }
+    }
+
+    /// <summary>
     /// Called by the server/network layer to advance to a part.
     /// Always lands on Content view.
     /// </summary>
