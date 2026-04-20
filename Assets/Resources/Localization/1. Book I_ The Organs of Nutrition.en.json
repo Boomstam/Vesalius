@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookI_Nutrition",
   "entries": [
     {
+    "type": "image",
+    "key": "5. Digestion",
+    "title": "Book I: The Organs of Nutrition"
+    },
+    {
       "type": "chapter",
       "key": "nutrition_fain_le_semont",
       "title": "Book I: The Organs of Nutrition",

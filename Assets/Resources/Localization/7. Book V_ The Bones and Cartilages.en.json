@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookV_Bones",
   "entries": [
     {
+      "type": "image",
+      "key": "1. Bones",
+      "title": "Book V: The Bones and Cartilages"
+    },
+    {
       "type": "chapter",
       "key": "bones_dat_gaet",
       "title": "Book V: The Bones and Cartilages",

@@ -4,6 +4,16 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookI_Generation",
   "entries": [
     {
+      "type": "image",
+      "key": "8.1 Organs of Generation Male",
+      "title": "Book I: The Organs of Generation"
+    },
+    {
+      "type": "image",
+      "key": "8.2 Organs of Generation Female",
+      "title": "Book I: The Organs of Generation"
+    },
+    {
       "type": "chapter",
       "key": "generation_ex_ovo",
       "title": "Book I: The Organs of Generation",

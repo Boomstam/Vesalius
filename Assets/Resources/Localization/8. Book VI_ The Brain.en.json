@@ -4,10 +4,15 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookVI_Brain",
   "entries": [
     {
+      "type": "image",
+      "key": "7. Brain",
+      "title": "Book VI: The Brain"
+    },
+    {
       "type": "chapter",
       "key": "brain_german_quote",
       "title": "Book VI: The Brain",
-      "content": "„Der Körper ist das Instrument des Geistes."\n(The body is the instrument of the mind.)"
+      "content": "\"Der Körper ist das Instrument des Geistes.\"\n(The body is the instrument of the mind.)"
     },
     {
       "type": "chapter",

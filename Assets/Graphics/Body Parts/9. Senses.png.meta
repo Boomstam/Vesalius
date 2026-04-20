@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cbd0902c3abcfce46a1ad2af468c708c
+guid: 9a85053508ae20d47a380a6a58813e4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7098205099331098654
-    second: 8.2 Organs of Generation Female_0
+      213: -1180060652719332085
+    second: 9. Senses_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 8.2 Organs of Generation Female_0
+      name: 9. Senses_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2672
-        height: 3433
+        width: 760
+        height: 1330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e181f701ee3e18260800000000000000
-      internalID: 7098205099331098654
+      spriteID: b05af3da6159f9fe0800000000000000
+      internalID: -1180060652719332085
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      8.2 Organs of Generation Female_0: 7098205099331098654
+      9. Senses_0: -1180060652719332085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

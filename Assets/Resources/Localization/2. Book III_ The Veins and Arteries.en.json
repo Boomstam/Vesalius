@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookIII_VeinsArteries",
   "entries": [
     {
+      "type": "image",
+      "key": "3. Arteries",
+      "title": "Book III: The Veins and Arteries"
+    },
+    {
       "type": "chapter",
       "key": "veins_sanguis_quote",
       "title": "Book III: The Veins and Arteries",

@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookII_Muscles",
   "entries": [
     {
+      "type": "image",
+      "key": "2. Muscles",
+      "title": "Book II: The Ligaments and Muscles"
+    },
+    {
       "type": "chapter",
       "key": "muscles_il_movimento",
       "title": "Book II: The Ligaments and Muscles",

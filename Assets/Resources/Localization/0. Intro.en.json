@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/Intro",
   "entries": [
     {
+      "type": "image",
+      "key": "0. General",
+      "title": "De Humanis Corporis Fabrica"
+    },
+    {
       "type": "chapter",
       "key": "intro_vesalius_quote",
       "title": "Intro",

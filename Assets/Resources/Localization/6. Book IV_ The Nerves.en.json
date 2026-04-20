@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookIV_Nerves",
   "entries": [
     {
+      "type": "image",
+      "key": "4. Nerves",
+      "title": "Book IV: The Nerves"
+    },
+    {
       "type": "chapter",
       "key": "nerves_greek_quote",
       "title": "Book IV: The Nerves",

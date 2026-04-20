@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookVII_Heart",
   "entries": [
     {
+      "type": "image",
+      "key": "6. Heart",
+      "title": "Book VII: The Heart"
+    },
+    {
       "type": "chapter",
       "key": "heart_spanish_quote",
       "title": "Book VII: The Heart",

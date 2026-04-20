@@ -4,6 +4,11 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookVI_Senses",
   "entries": [
     {
+      "type": "image",
+      "key": "9. Senses",
+      "title": "Book VI: The Senses"
+    },
+    {
       "type": "chapter",
       "key": "senses_greek_quote",
       "title": "Book VI: The Senses",
