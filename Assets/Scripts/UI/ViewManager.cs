@@ -24,12 +24,14 @@ public class ViewManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private Button infoToggleButton;
     [SerializeField] private GameObject contentImage;
+    [SerializeField] private Color infoButtonHighlightColor = Color.white;
     
     public int  CurrentPart => _currentPart;
     public View CurrentView => _currentView;
 
     private int  _currentPart = -1;
     private View _currentView = View.Content;
+    private Color _defaultButtonColor;
 
     // -------------------------------------------------------------------------
 
@@ -46,8 +48,15 @@ public class ViewManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (infoToggleButton != null)
+            _defaultButtonColor = infoToggleButton.image.color;
+    }
+
     private void Start()
     {
+        contentImage.SetActive(false);
         infoToggleButton.onClick.AddListener(ToggleView);
         SetPart(0);
     }
@@ -77,6 +86,7 @@ public class ViewManager : MonoBehaviour
     /// </summary>
     public void ToggleView()
     {
+        contentImage.SetActive(false);
         _currentView = (_currentView == View.Content) ? View.Info : View.Content;
         ApplyCurrentView();
     }
@@ -97,6 +107,20 @@ public class ViewManager : MonoBehaviour
         }
 
         RefreshActiveInfoManager();
+        RefreshInfoButtonColor();
+    }
+
+    /// <summary>
+    /// Tints the info toggle button white (editor-defined color) when we're on
+    /// the Content view of any part other than part 0.
+    /// Resets to normal color otherwise.
+    /// </summary>
+    private void RefreshInfoButtonColor()
+    {
+        if (infoToggleButton == null) return;
+
+        bool useHighlight = _currentView == View.Content && _currentPart != 0;
+        infoToggleButton.image.color = useHighlight ? infoButtonHighlightColor : _defaultButtonColor;
     }
 
     /// <summary>
