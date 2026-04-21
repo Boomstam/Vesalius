@@ -10,9 +10,11 @@ public class NetworkedMonitor : NetworkBehaviour
     private ViewManager    _viewManager;
     private TMP_InputField _partInputField;
     private Toggle         _completeAnatomyModeToggle;
+    private Toggle         _slidersToggle;                          // ← new
 
     private readonly SyncVar<int>  _currentPart          = new SyncVar<int>(-1);
     private readonly SyncVar<bool> _completeAnatomyMode  = new SyncVar<bool>(false);
+    private readonly SyncVar<bool> _slidersEnabled       = new SyncVar<bool>(false); // ← new
 
     // ── FishNet callbacks ─────────────────────────────────────────────────────
 
@@ -22,11 +24,13 @@ public class NetworkedMonitor : NetworkBehaviour
 
         _currentPart.OnChange         += OnCurrentPartChanged;
         _completeAnatomyMode.OnChange += OnCompleteAnatomyModeChanged;
+        _slidersEnabled.OnChange      += OnSlidersEnabledChanged;   // ← new
 
         if (SceneLoader.BuildType == BuildType.Monitor)
         {
             StartCoroutine(FindAndSubscribeInputFieldCoroutine());
             StartCoroutine(FindAndSubscribeToggleCoroutine());
+            StartCoroutine(FindAndSubscribeSlidersToggleCoroutine()); // ← new
         }
         else
             StartCoroutine(FindViewManagerCoroutine());
@@ -38,9 +42,11 @@ public class NetworkedMonitor : NetworkBehaviour
 
         _currentPart.OnChange         -= OnCurrentPartChanged;
         _completeAnatomyMode.OnChange -= OnCompleteAnatomyModeChanged;
+        _slidersEnabled.OnChange      -= OnSlidersEnabledChanged;   // ← new
 
         UnsubscribeInputField();
         UnsubscribeToggle();
+        UnsubscribeSlidersToggle();                                  // ← new
     }
 
     // ── Find coroutines ───────────────────────────────────────────────────────
@@ -141,7 +147,48 @@ public class NetworkedMonitor : NetworkBehaviour
         }
     }
 
-    // ── Input handler ─────────────────────────────────────────────────────────
+    // ── Sliders Toggle find / unsubscribe ─────────────────────────────────────
+
+    private IEnumerator FindAndSubscribeSlidersToggleCoroutine()
+    {
+        Debug.Log("[NetworkedMonitor] Searching for 'Sliders Toggle'…");
+
+        while (true)
+        {
+            GameObject go = GameObject.Find("Sliders Toggle");
+            if (go != null)
+            {
+                _slidersToggle = go.GetComponent<Toggle>();
+                if (_slidersToggle != null)
+                {
+                    _slidersToggle.onValueChanged.AddListener(OnSlidersToggleChanged);
+                    Debug.Log("[NetworkedMonitor] Subscribed to 'Sliders Toggle'.");
+                    yield break;
+                }
+                else
+                {
+                    Debug.LogWarning("[NetworkedMonitor] 'Sliders Toggle' found but has no Toggle component. Retrying in 1 s…");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[NetworkedMonitor] 'Sliders Toggle' not found. Retrying in 1 s…");
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    private void UnsubscribeSlidersToggle()
+    {
+        if (_slidersToggle != null)
+        {
+            _slidersToggle.onValueChanged.RemoveListener(OnSlidersToggleChanged);
+            _slidersToggle = null;
+        }
+    }
+
+    // ── Input handlers ────────────────────────────────────────────────────────
 
     private void OnPartInputChanged(string value)
     {
@@ -156,6 +203,12 @@ public class NetworkedMonitor : NetworkBehaviour
     {
         Debug.Log($"[NetworkedMonitor] Monitor requesting completeAnatomyMode {enabled}.");
         RequestSetCompleteAnatomyModeServerRpc(enabled);
+    }
+
+    private void OnSlidersToggleChanged(bool enabled)
+    {
+        Debug.Log($"[NetworkedMonitor] Monitor requesting slidersEnabled {enabled}.");
+        RequestSetSlidersEnabledServerRpc(enabled);
     }
 
     // ── RPC ───────────────────────────────────────────────────────────────────
@@ -174,7 +227,14 @@ public class NetworkedMonitor : NetworkBehaviour
         _completeAnatomyMode.Value = enabled;
     }
 
-    // ── SyncVar callback ──────────────────────────────────────────────────────
+    [ServerRpc(RequireOwnership = false)]
+    private void RequestSetSlidersEnabledServerRpc(bool enabled)
+    {
+        Debug.Log($"[NetworkedMonitor] Server setting _slidersEnabled to {enabled}.");
+        _slidersEnabled.Value = enabled;
+    }
+
+    // ── SyncVar callbacks ─────────────────────────────────────────────────────
 
     private void OnCurrentPartChanged(int prev, int next, bool asServer)
     {
@@ -194,6 +254,25 @@ public class NetworkedMonitor : NetworkBehaviour
             _viewManager.SetCompleteAnatomyMode(next);
         else if (SceneLoader.BuildType != BuildType.Monitor)
             Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — completeAnatomyMode change dropped.");
+    }
+
+    private void OnSlidersEnabledChanged(bool prev, bool next, bool asServer)
+    {
+        Debug.Log($"[NetworkedMonitor] SlidersEnabled changed {prev} → {next} (asServer={asServer}).");
+
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        GameObject sliders = GameObject.Find("Sliders");
+        if (sliders != null)
+        {
+            sliders.SetActive(next);
+            Debug.Log($"[NetworkedMonitor] 'Sliders' GameObject set active → {next}.");
+        }
+        else
+        {
+            Debug.LogWarning("[NetworkedMonitor] 'Sliders' GameObject not found in scene.");
+        }
     }
 
     // Leave these here for last minute changes
