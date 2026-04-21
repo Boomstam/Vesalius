@@ -1,37 +1,43 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 
+/// <summary>
+/// Networked state authority for the monitor.
+/// Syncs current part number to all clients (drives ViewManager).
+/// Syncs three audio mode booleans; callbacks on clients drive AudioManager.
+/// Master volume and fade commands are fire-and-forget ObserversRpcs.
+/// </summary>
 public class NetworkedMonitor : NetworkBehaviour
 {
+    // ── Part Number ────────────────────────────────────────────────────────────
+
     private ViewManager    _viewManager;
     private TMP_InputField _partInputField;
-    private Toggle         _completeAnatomyModeToggle;
-    private Toggle         _slidersToggle;                          // ← new
 
-    private readonly SyncVar<int>  _currentPart          = new SyncVar<int>(-1);
-    private readonly SyncVar<bool> _completeAnatomyMode  = new SyncVar<bool>(false);
-    private readonly SyncVar<bool> _slidersEnabled       = new SyncVar<bool>(false); // ← new
+    private readonly SyncVar<int> _currentPart = new SyncVar<int>(-1);
 
-    // ── FishNet callbacks ─────────────────────────────────────────────────────
+    // ── Audio State ────────────────────────────────────────────────────────────
+
+    private readonly SyncVar<bool> _shouldPlayOrgansOfNutrition  = new SyncVar<bool>(false);
+    private readonly SyncVar<bool> _shouldPlayOrgansOfGeneration = new SyncVar<bool>(false);
+    private readonly SyncVar<bool> _shouldPlayHeart              = new SyncVar<bool>(false);
+
+    // ── FishNet Lifecycle ──────────────────────────────────────────────────────
 
     public override void OnStartClient()
     {
         base.OnStartClient();
 
-        _currentPart.OnChange         += OnCurrentPartChanged;
-        _completeAnatomyMode.OnChange += OnCompleteAnatomyModeChanged;
-        _slidersEnabled.OnChange      += OnSlidersEnabledChanged;   // ← new
+        _currentPart.OnChange               += OnCurrentPartChanged;
+        _shouldPlayOrgansOfNutrition.OnChange  += OnShouldPlayOrgansOfNutritionChanged;
+        _shouldPlayOrgansOfGeneration.OnChange += OnShouldPlayOrgansOfGenerationChanged;
+        _shouldPlayHeart.OnChange             += OnShouldPlayHeartChanged;
 
         if (SceneLoader.BuildType == BuildType.Monitor)
-        {
             StartCoroutine(FindAndSubscribeInputFieldCoroutine());
-            StartCoroutine(FindAndSubscribeToggleCoroutine());
-            StartCoroutine(FindAndSubscribeSlidersToggleCoroutine()); // ← new
-        }
         else
             StartCoroutine(FindViewManagerCoroutine());
     }
@@ -40,21 +46,142 @@ public class NetworkedMonitor : NetworkBehaviour
     {
         base.OnStopClient();
 
-        _currentPart.OnChange         -= OnCurrentPartChanged;
-        _completeAnatomyMode.OnChange -= OnCompleteAnatomyModeChanged;
-        _slidersEnabled.OnChange      -= OnSlidersEnabledChanged;   // ← new
+        _currentPart.OnChange               -= OnCurrentPartChanged;
+        _shouldPlayOrgansOfNutrition.OnChange  -= OnShouldPlayOrgansOfNutritionChanged;
+        _shouldPlayOrgansOfGeneration.OnChange -= OnShouldPlayOrgansOfGenerationChanged;
+        _shouldPlayHeart.OnChange             -= OnShouldPlayHeartChanged;
 
         UnsubscribeInputField();
-        UnsubscribeToggle();
-        UnsubscribeSlidersToggle();                                  // ← new
     }
 
-    // ── Find coroutines ───────────────────────────────────────────────────────
+    // ── Audio RPCs — Toggles ───────────────────────────────────────────────────
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetShouldPlayOrgansOfNutrition(bool value)
+    {
+        _shouldPlayOrgansOfNutrition.Value = value;
+    }
+
+    private void OnShouldPlayOrgansOfNutritionChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+
+        if (next) Instances.AudioManager.PlayOrgansOfNutrition();
+        else      Instances.AudioManager.StopOrgansOfNutrition();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetShouldPlayOrgansOfGeneration(bool value)
+    {
+        _shouldPlayOrgansOfGeneration.Value = value;
+    }
+
+    private void OnShouldPlayOrgansOfGenerationChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+
+        if (next) Instances.AudioManager.PlayOrgansOfGeneration();
+        else      Instances.AudioManager.StopOrgansOfGeneration();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetShouldPlayHeart(bool value)
+    {
+        _shouldPlayHeart.Value = value;
+    }
+
+    private void OnShouldPlayHeartChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+
+        if (next) Instances.AudioManager.PlayHeart();
+        else      Instances.AudioManager.StopHeart();
+    }
+
+    // ── Audio RPCs — Master Volume ─────────────────────────────────────────────
+
+    /// <summary>Drives real-time master volume on all clients from the monitor slider.</summary>
+    [ServerRpc(RequireOwnership = false)]
+    public void SetMasterVolume(float value) => RpcSetMasterVolume(value);
+
+    [ObserversRpc]
+    private void RpcSetMasterVolume(float value)
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+        Instances.AudioManager.SetMasterVolume(value);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerMasterFadeIn() => RpcTriggerMasterFadeIn();
+
+    [ObserversRpc]
+    private void RpcTriggerMasterFadeIn()
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+        Instances.AudioManager.FadeIn();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerMasterFadeOut() => RpcTriggerMasterFadeOut();
+
+    [ObserversRpc]
+    private void RpcTriggerMasterFadeOut()
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+        Instances.AudioManager.FadeOut();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerMasterMute() => RpcTriggerMasterMute();
+
+    [ObserversRpc]
+    private void RpcTriggerMasterMute()
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+        Instances.AudioManager.MuteImmediate();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerMasterReset() => RpcTriggerMasterReset();
+
+    [ObserversRpc]
+    private void RpcTriggerMasterReset()
+    {
+        if (SceneLoader.BuildType != BuildType.Client) return;
+        Instances.AudioManager.ResetImmediate();
+    }
+
+    // ── Part Number ────────────────────────────────────────────────────────────
+
+    private void OnPartInputChanged(string value)
+    {
+        if (!int.TryParse(value, out int part)) return;
+        Debug.Log($"[NetworkedMonitor] Monitor requesting part {part}.");
+        RequestSetPartServerRpc(part);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void RequestSetPartServerRpc(int part)
+    {
+        Debug.Log($"[NetworkedMonitor] Server setting _currentPart to {part}.");
+        _currentPart.Value = part;
+    }
+
+    private void OnCurrentPartChanged(int prev, int next, bool asServer)
+    {
+        Debug.Log($"[NetworkedMonitor] Part changed {prev} → {next} (asServer={asServer}).");
+
+        if (_viewManager != null)
+            _viewManager.SetPart(next);
+        else if (SceneLoader.BuildType != BuildType.Monitor)
+            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — part change dropped.");
+    }
+
+    // ── Find Coroutines ────────────────────────────────────────────────────────
 
     private IEnumerator FindViewManagerCoroutine()
     {
         Debug.Log("[NetworkedMonitor] Searching for ViewManager…");
-
         while (true)
         {
             _viewManager = FindObjectOfType<ViewManager>();
@@ -63,7 +190,6 @@ public class NetworkedMonitor : NetworkBehaviour
                 Debug.Log("[NetworkedMonitor] ViewManager found.");
                 yield break;
             }
-
             Debug.LogWarning("[NetworkedMonitor] ViewManager not found. Retrying in 1 s…");
             yield return new WaitForSeconds(1f);
         }
@@ -72,7 +198,6 @@ public class NetworkedMonitor : NetworkBehaviour
     private IEnumerator FindAndSubscribeInputFieldCoroutine()
     {
         Debug.Log("[NetworkedMonitor] Searching for 'Part Number' input field…");
-
         while (true)
         {
             GameObject go = GameObject.Find("Part Number");
@@ -85,206 +210,16 @@ public class NetworkedMonitor : NetworkBehaviour
                     Debug.Log("[NetworkedMonitor] Subscribed to 'Part Number' input field.");
                     yield break;
                 }
-                else
-                {
-                    Debug.LogWarning("[NetworkedMonitor] 'Part Number' found but has no TMP_InputField. Retrying in 1 s…");
-                }
             }
-            else
-            {
-                Debug.LogWarning("[NetworkedMonitor] 'Part Number' not found. Retrying in 1 s…");
-            }
-
+            Debug.LogWarning("[NetworkedMonitor] 'Part Number' input field not found. Retrying in 1 s…");
             yield return new WaitForSeconds(1f);
         }
     }
 
     private void UnsubscribeInputField()
     {
-        if (_partInputField != null)
-        {
-            _partInputField.onValueChanged.RemoveListener(OnPartInputChanged);
-            _partInputField = null;
-        }
-    }
-
-    private IEnumerator FindAndSubscribeToggleCoroutine()
-    {
-        Debug.Log("[NetworkedMonitor] Searching for 'Complete Anatomy Mode Toggle'…");
-
-        while (true)
-        {
-            GameObject go = GameObject.Find("Complete Anatomy Mode Toggle");
-            if (go != null)
-            {
-                _completeAnatomyModeToggle = go.GetComponent<Toggle>();
-                if (_completeAnatomyModeToggle != null)
-                {
-                    _completeAnatomyModeToggle.onValueChanged.AddListener(OnCompleteAnatomyModeToggleChanged);
-                    Debug.Log("[NetworkedMonitor] Subscribed to 'Complete Anatomy Mode Toggle'.");
-                    yield break;
-                }
-                else
-                {
-                    Debug.LogWarning("[NetworkedMonitor] 'Complete Anatomy Mode Toggle' found but has no Toggle component. Retrying in 1 s…");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("[NetworkedMonitor] 'Complete Anatomy Mode Toggle' not found. Retrying in 1 s…");
-            }
-
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    private void UnsubscribeToggle()
-    {
-        if (_completeAnatomyModeToggle != null)
-        {
-            _completeAnatomyModeToggle.onValueChanged.RemoveListener(OnCompleteAnatomyModeToggleChanged);
-            _completeAnatomyModeToggle = null;
-        }
-    }
-
-    // ── Sliders Toggle find / unsubscribe ─────────────────────────────────────
-
-    private IEnumerator FindAndSubscribeSlidersToggleCoroutine()
-    {
-        Debug.Log("[NetworkedMonitor] Searching for 'Sliders Toggle'…");
-
-        while (true)
-        {
-            GameObject go = GameObject.Find("Sliders Toggle");
-            if (go != null)
-            {
-                _slidersToggle = go.GetComponent<Toggle>();
-                if (_slidersToggle != null)
-                {
-                    _slidersToggle.onValueChanged.AddListener(OnSlidersToggleChanged);
-                    Debug.Log("[NetworkedMonitor] Subscribed to 'Sliders Toggle'.");
-                    yield break;
-                }
-                else
-                {
-                    Debug.LogWarning("[NetworkedMonitor] 'Sliders Toggle' found but has no Toggle component. Retrying in 1 s…");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("[NetworkedMonitor] 'Sliders Toggle' not found. Retrying in 1 s…");
-            }
-
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    private void UnsubscribeSlidersToggle()
-    {
-        if (_slidersToggle != null)
-        {
-            _slidersToggle.onValueChanged.RemoveListener(OnSlidersToggleChanged);
-            _slidersToggle = null;
-        }
-    }
-
-    // ── Input handlers ────────────────────────────────────────────────────────
-
-    private void OnPartInputChanged(string value)
-    {
-        if (!int.TryParse(value, out int part))
-            return;
-
-        Debug.Log($"[NetworkedMonitor] Monitor requesting part {part}.");
-        RequestSetPartServerRpc(part);
-    }
-
-    private void OnCompleteAnatomyModeToggleChanged(bool enabled)
-    {
-        Debug.Log($"[NetworkedMonitor] Monitor requesting completeAnatomyMode {enabled}.");
-        RequestSetCompleteAnatomyModeServerRpc(enabled);
-    }
-
-    private void OnSlidersToggleChanged(bool enabled)
-    {
-        Debug.Log($"[NetworkedMonitor] Monitor requesting slidersEnabled {enabled}.");
-        RequestSetSlidersEnabledServerRpc(enabled);
-    }
-
-    // ── RPC ───────────────────────────────────────────────────────────────────
-
-    [ServerRpc(RequireOwnership = false)]
-    private void RequestSetPartServerRpc(int part)
-    {
-        Debug.Log($"[NetworkedMonitor] Server setting _currentPart to {part}.");
-        _currentPart.Value = part;
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void RequestSetCompleteAnatomyModeServerRpc(bool enabled)
-    {
-        Debug.Log($"[NetworkedMonitor] Server setting _completeAnatomyMode to {enabled}.");
-        _completeAnatomyMode.Value = enabled;
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    private void RequestSetSlidersEnabledServerRpc(bool enabled)
-    {
-        Debug.Log($"[NetworkedMonitor] Server setting _slidersEnabled to {enabled}.");
-        _slidersEnabled.Value = enabled;
-    }
-
-    // ── SyncVar callbacks ─────────────────────────────────────────────────────
-
-    private void OnCurrentPartChanged(int prev, int next, bool asServer)
-    {
-        Debug.Log($"[NetworkedMonitor] Part changed {prev} → {next} (asServer={asServer}).");
-
-        if (_viewManager != null)
-            _viewManager.SetPart(next);
-        else if (SceneLoader.BuildType != BuildType.Monitor)
-            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — part change dropped.");
-    }
-
-    private void OnCompleteAnatomyModeChanged(bool prev, bool next, bool asServer)
-    {
-        Debug.Log($"[NetworkedMonitor] CompleteAnatomyMode changed {prev} → {next} (asServer={asServer}).");
-
-        if (_viewManager != null)
-            _viewManager.SetCompleteAnatomyMode(next);
-        else if (SceneLoader.BuildType != BuildType.Monitor)
-            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — completeAnatomyMode change dropped.");
-    }
-
-    private void OnSlidersEnabledChanged(bool prev, bool next, bool asServer)
-    {
-        Debug.Log($"[NetworkedMonitor] SlidersEnabled changed {prev} → {next} (asServer={asServer}).");
-
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        GameObject sliders = GameObject.Find("Sliders");
-        if (sliders != null)
-        {
-            sliders.SetActive(next);
-            Debug.Log($"[NetworkedMonitor] 'Sliders' GameObject set active → {next}.");
-        }
-        else
-        {
-            Debug.LogWarning("[NetworkedMonitor] 'Sliders' GameObject not found in scene.");
-        }
-    }
-
-    // Leave these here for last minute changes
-    [ServerRpc(RequireOwnership = false)]
-    private void BackupServerRPC(string data)
-    {
-        BackupClientRPC(data);
-    }
-
-    [ObserversRpc]
-    private void BackupClientRPC(string data)
-    {
-        
+        if (_partInputField == null) return;
+        _partInputField.onValueChanged.RemoveListener(OnPartInputChanged);
+        _partInputField = null;
     }
 }
