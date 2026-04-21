@@ -195,4 +195,17 @@ public class NetworkedMonitor : NetworkBehaviour
         else if (SceneLoader.BuildType != BuildType.Monitor)
             Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — completeAnatomyMode change dropped.");
     }
+
+    // Leave these here for last minute changes
+    [ServerRpc(RequireOwnership = false)]
+    private void BackupServerRPC(string data)
+    {
+        BackupClientRPC(data);
+    }
+
+    [ObserversRpc]
+    private void BackupClientRPC(string data)
+    {
+        
+    }
 }
