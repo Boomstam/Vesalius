@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Testing\VibrateTest.cs" />
     <Compile Include="Assets\Scripts\UI\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageColorAnimator.cs" />
+    <Compile Include="Assets\Scripts\Common\MonoBehaviourExtensions.cs" />
     <Compile Include="Assets\Scripts\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\UI\TabManagement.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
