@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\UI\ImageFader.cs" />
     <Compile Include="Assets\Scripts\Tabs\ContentImageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ViewManager.cs" />
+    <Compile Include="Assets\Scripts\Audio\GlobalAudioSliderOverlay.cs" />
     <Compile Include="Assets\Scripts\UI\TestImageBuild.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Audio\Instances.cs" />

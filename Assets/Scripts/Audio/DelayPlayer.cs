@@ -36,6 +36,10 @@ public class DelayPlayer : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float feedback  = 0.85f;
     [Tooltip("Time in seconds between echo repeats. Can be set at runtime via SetDelayTime().")]
     [SerializeField] private float delayTime = 1f;
+    [Tooltip("Minimum delay time exposed through the UI slider.")]
+    [SerializeField] private float minDelayTime = 0.2f;
+    [Tooltip("Maximum delay time exposed through the UI slider.")]
+    [SerializeField] private float maxDelayTime = 1.8f;
 
     // ── Private State ──────────────────────────────────────────────────────────
 
@@ -89,6 +93,13 @@ public class DelayPlayer : MonoBehaviour
     public void SetDelayTime(float value)
     {
         delayTime = Mathf.Max(0.05f, value);
+    }
+
+    /// <summary>Maps a 0-1 UI slider to the configured delay-time range.</summary>
+    public void SetDelayTimeNormalized(float normalizedValue)
+    {
+        float clampedValue = Mathf.Clamp01(normalizedValue);
+        SetDelayTime(Mathf.Lerp(minDelayTime, maxDelayTime, clampedValue));
     }
 
     /// <summary>
