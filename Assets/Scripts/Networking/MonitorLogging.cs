@@ -11,6 +11,8 @@ using TMPro;
 public class MonitorLogger : NetworkBehaviour
 {
     [SerializeField] private string _logMessage;
+    [SerializeField] private string _buttonObjectName = "Monitor Log Button";
+    [SerializeField] private Button _buttonOverride;
 
     private Button _triggerButton;
 
@@ -27,8 +29,8 @@ public class MonitorLogger : NetworkBehaviour
     private IEnumerator FindButtonAfterDelay()
     {
         yield return new WaitForSeconds(5);
-        
-        _triggerButton = GameObject.Find("Monitor Log Button").GetComponent<Button>();
+
+        _triggerButton = ResolveTriggerButton();
 
         if (_triggerButton != null)
         {
@@ -39,6 +41,28 @@ public class MonitorLogger : NetworkBehaviour
         {
             Debug.LogWarning("[MonitorLogger] No Button found in scene.");
         }
+    }
+
+    private Button ResolveTriggerButton()
+    {
+        if (_buttonOverride != null)
+            return _buttonOverride;
+
+        if (string.IsNullOrWhiteSpace(_buttonObjectName))
+            return null;
+
+        GameObject buttonObject = GameObject.Find(_buttonObjectName);
+        if (buttonObject == null)
+        {
+            Debug.LogWarning($"[MonitorLogger] Button '{_buttonObjectName}' not found in scene.");
+            return null;
+        }
+
+        Button button = buttonObject.GetComponent<Button>();
+        if (button == null)
+            Debug.LogWarning($"[MonitorLogger] GameObject '{_buttonObjectName}' has no Button component.");
+
+        return button;
     }
 
     public override void OnStopServer()
