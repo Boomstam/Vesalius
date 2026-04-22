@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using FishNet.Object;
@@ -7,36 +7,51 @@ using FishNet.Object.Synchronizing;
 /// <summary>
 /// Networked state authority for the monitor.
 /// Syncs current part number to all clients (drives ViewManager).
-/// Syncs three audio mode booleans; callbacks on clients drive AudioManager.
-/// Master volume and fade commands are fire-and-forget ObserversRpcs.
+/// Syncs audio mode booleans; callbacks on clients drive AudioManager.
+/// Syncs color overlay state; callbacks on clients drive ColorOverlay.
+/// Master volume, audio fades, and color overlay fades are fire-and-forget ObserversRpcs.
 /// </summary>
 public class NetworkedMonitor : NetworkBehaviour
 {
-    // ── Part Number ────────────────────────────────────────────────────────────
-
-    private ViewManager    _viewManager;
+    private ViewManager _viewManager;
     private TMP_InputField _partInputField;
 
     private readonly SyncVar<int> _currentPart = new SyncVar<int>(-1);
     private readonly SyncVar<bool> _completeAnatomyMode = new SyncVar<bool>(false);
 
-    // ── Audio State ────────────────────────────────────────────────────────────
-
-    private readonly SyncVar<bool> _shouldPlayOrgansOfNutrition  = new SyncVar<bool>(false);
+    private readonly SyncVar<bool> _shouldPlayOrgansOfNutrition = new SyncVar<bool>(false);
     private readonly SyncVar<bool> _shouldPlayOrgansOfGeneration = new SyncVar<bool>(false);
-    private readonly SyncVar<bool> _shouldPlayHeart              = new SyncVar<bool>(false);
+    private readonly SyncVar<bool> _shouldPlayHeart = new SyncVar<bool>(false);
 
-    // ── FishNet Lifecycle ──────────────────────────────────────────────────────
+    [Header("Heartbeat Config")]
+    [Tooltip("Color at the trough of each heartbeat cycle (rest state).")]
+    [SerializeField] private Color _heartbeatStartColor = new Color(0f, 0f, 0f, 0f);
+    [Tooltip("Color at the peak of each heartbeat pulse.")]
+    [SerializeField] private Color _heartbeatEndColor = new Color(0.8f, 0f, 0f, 1f);
+    [Tooltip("Duration of one full heartbeat cycle in seconds.")]
+    [SerializeField] private float _heartbeatBeatTime = 0.8f;
+
+    private readonly SyncVar<bool> _masterOpacityActive = new SyncVar<bool>(false);
+    private readonly SyncVar<float> _masterOpacityValue = new SyncVar<float>(1f);
+    private readonly SyncVar<bool> _heartbeatActive = new SyncVar<bool>(false);
+    private readonly SyncVar<Color> _heartbeatStartColorSync = new SyncVar<Color>();
+    private readonly SyncVar<Color> _heartbeatEndColorSync = new SyncVar<Color>();
+    private readonly SyncVar<float> _heartbeatBeatTimeSync = new SyncVar<float>(0.8f);
 
     public override void OnStartClient()
     {
         base.OnStartClient();
 
-        _currentPart.OnChange               += OnCurrentPartChanged;
-        _completeAnatomyMode.OnChange       += OnCompleteAnatomyModeChanged;
-        _shouldPlayOrgansOfNutrition.OnChange  += OnShouldPlayOrgansOfNutritionChanged;
+        _currentPart.OnChange += OnCurrentPartChanged;
+        _completeAnatomyMode.OnChange += OnCompleteAnatomyModeChanged;
+
+        _shouldPlayOrgansOfNutrition.OnChange += OnShouldPlayOrgansOfNutritionChanged;
         _shouldPlayOrgansOfGeneration.OnChange += OnShouldPlayOrgansOfGenerationChanged;
-        _shouldPlayHeart.OnChange             += OnShouldPlayHeartChanged;
+        _shouldPlayHeart.OnChange += OnShouldPlayHeartChanged;
+
+        _masterOpacityActive.OnChange += OnMasterOpacityActiveChanged;
+        _masterOpacityValue.OnChange += OnMasterOpacityValueChanged;
+        _heartbeatActive.OnChange += OnHeartbeatActiveChanged;
 
         if (SceneLoader.BuildType == BuildType.Monitor)
             StartCoroutine(FindAndSubscribeInputFieldCoroutine());
@@ -48,16 +63,19 @@ public class NetworkedMonitor : NetworkBehaviour
     {
         base.OnStopClient();
 
-        _currentPart.OnChange               -= OnCurrentPartChanged;
-        _completeAnatomyMode.OnChange       -= OnCompleteAnatomyModeChanged;
-        _shouldPlayOrgansOfNutrition.OnChange  -= OnShouldPlayOrgansOfNutritionChanged;
+        _currentPart.OnChange -= OnCurrentPartChanged;
+        _completeAnatomyMode.OnChange -= OnCompleteAnatomyModeChanged;
+
+        _shouldPlayOrgansOfNutrition.OnChange -= OnShouldPlayOrgansOfNutritionChanged;
         _shouldPlayOrgansOfGeneration.OnChange -= OnShouldPlayOrgansOfGenerationChanged;
-        _shouldPlayHeart.OnChange             -= OnShouldPlayHeartChanged;
+        _shouldPlayHeart.OnChange -= OnShouldPlayHeartChanged;
+
+        _masterOpacityActive.OnChange -= OnMasterOpacityActiveChanged;
+        _masterOpacityValue.OnChange -= OnMasterOpacityValueChanged;
+        _heartbeatActive.OnChange -= OnHeartbeatActiveChanged;
 
         UnsubscribeInputField();
     }
-
-    // ── Audio RPCs — Toggles ───────────────────────────────────────────────────
 
     [ServerRpc(RequireOwnership = false)]
     public void SetShouldPlayOrgansOfNutrition(bool value)
@@ -70,7 +88,7 @@ public class NetworkedMonitor : NetworkBehaviour
         if (SceneLoader.BuildType != BuildType.Client) return;
 
         if (next) Instances.AudioManager.PlayOrgansOfNutrition();
-        else      Instances.AudioManager.StopOrgansOfNutrition();
+        else Instances.AudioManager.StopOrgansOfNutrition();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -84,7 +102,7 @@ public class NetworkedMonitor : NetworkBehaviour
         if (SceneLoader.BuildType != BuildType.Client) return;
 
         if (next) Instances.AudioManager.PlayOrgansOfGeneration();
-        else      Instances.AudioManager.StopOrgansOfGeneration();
+        else Instances.AudioManager.StopOrgansOfGeneration();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -98,12 +116,9 @@ public class NetworkedMonitor : NetworkBehaviour
         if (SceneLoader.BuildType != BuildType.Client) return;
 
         if (next) Instances.AudioManager.PlayHeart();
-        else      Instances.AudioManager.StopHeart();
+        else Instances.AudioManager.StopHeart();
     }
 
-    // ── Audio RPCs — Master Volume ─────────────────────────────────────────────
-
-    /// <summary>Drives real-time master volume on all clients from the monitor slider.</summary>
     [ServerRpc(RequireOwnership = false)]
     public void SetMasterVolume(float value) => RpcSetMasterVolume(value);
 
@@ -154,7 +169,85 @@ public class NetworkedMonitor : NetworkBehaviour
         Instances.AudioManager.ResetImmediate();
     }
 
-    // ── Part Number ────────────────────────────────────────────────────────────
+    [ServerRpc(RequireOwnership = false)]
+    public void SetColorMasterOpacityActive(bool value)
+    {
+        _masterOpacityActive.Value = value;
+    }
+
+    private void OnMasterOpacityActiveChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null) return;
+        Instances.ColorOverlay.SetMasterOpacityActive(next);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetColorMasterOpacity(float value)
+    {
+        _masterOpacityValue.Value = Mathf.Clamp01(value);
+    }
+
+    private void OnMasterOpacityValueChanged(float prev, float next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null) return;
+        Instances.ColorOverlay.SetMasterOpacity(next);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerColorFadeIn() => RpcTriggerColorFadeIn();
+
+    [ObserversRpc]
+    private void RpcTriggerColorFadeIn()
+    {
+        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null) return;
+        Instances.ColorOverlay.TriggerMasterFadeIn();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerColorFadeOut() => RpcTriggerColorFadeOut();
+
+    [ObserversRpc]
+    private void RpcTriggerColorFadeOut()
+    {
+        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null) return;
+        Instances.ColorOverlay.TriggerMasterFadeOut();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerColorCutToBlack()
+    {
+        _masterOpacityValue.Value = 0f;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetHeartbeatActive(bool value)
+    {
+        if (value)
+        {
+            _heartbeatStartColorSync.Value = _heartbeatStartColor;
+            _heartbeatEndColorSync.Value = _heartbeatEndColor;
+            _heartbeatBeatTimeSync.Value = _heartbeatBeatTime;
+        }
+
+        _heartbeatActive.Value = value;
+    }
+
+    private void OnHeartbeatActiveChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null) return;
+
+        if (next)
+        {
+            Instances.ColorOverlay.StartHeartbeat(
+                _heartbeatStartColorSync.Value,
+                _heartbeatEndColorSync.Value,
+                _heartbeatBeatTimeSync.Value);
+        }
+        else
+        {
+            Instances.ColorOverlay.StopHeartbeat();
+        }
+    }
 
     private void OnPartInputChanged(string value)
     {
@@ -172,15 +265,13 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnCurrentPartChanged(int prev, int next, bool asServer)
     {
-        Debug.Log($"[NetworkedMonitor] Part changed {prev} → {next} (asServer={asServer}).");
+        Debug.Log($"[NetworkedMonitor] Part changed {prev} -> {next} (asServer={asServer}).");
 
         if (_viewManager != null)
             _viewManager.SetPart(next);
         else if (SceneLoader.BuildType != BuildType.Monitor)
-            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — part change dropped.");
+            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved - part change dropped.");
     }
-
-    // ── Complete Anatomy ───────────────────────────────────────────────────────
 
     [ServerRpc(RequireOwnership = false)]
     public void SetCompleteAnatomyMode(bool value)
@@ -204,11 +295,9 @@ public class NetworkedMonitor : NetworkBehaviour
             Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved - complete anatomy change dropped.");
     }
 
-    // ── Find Coroutines ────────────────────────────────────────────────────────
-
     private IEnumerator FindViewManagerCoroutine()
     {
-        Debug.Log("[NetworkedMonitor] Searching for ViewManager…");
+        Debug.Log("[NetworkedMonitor] Searching for ViewManager...");
         while (true)
         {
             _viewManager = FindObjectOfType<ViewManager>();
@@ -218,14 +307,15 @@ public class NetworkedMonitor : NetworkBehaviour
                 _viewManager.SetCompleteAnatomyMode(_completeAnatomyMode.Value);
                 yield break;
             }
-            Debug.LogWarning("[NetworkedMonitor] ViewManager not found. Retrying in 1 s…");
+
+            Debug.LogWarning("[NetworkedMonitor] ViewManager not found. Retrying in 1 s...");
             yield return new WaitForSeconds(1f);
         }
     }
 
     private IEnumerator FindAndSubscribeInputFieldCoroutine()
     {
-        Debug.Log("[NetworkedMonitor] Searching for 'Part Number' input field…");
+        Debug.Log("[NetworkedMonitor] Searching for 'Part Number' input field...");
         while (true)
         {
             GameObject go = GameObject.Find("Part Number");
@@ -239,7 +329,8 @@ public class NetworkedMonitor : NetworkBehaviour
                     yield break;
                 }
             }
-            Debug.LogWarning("[NetworkedMonitor] 'Part Number' input field not found. Retrying in 1 s…");
+
+            Debug.LogWarning("[NetworkedMonitor] 'Part Number' input field not found. Retrying in 1 s...");
             yield return new WaitForSeconds(1f);
         }
     }

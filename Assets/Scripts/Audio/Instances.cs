@@ -10,6 +10,8 @@ public static class Instances
     private static AudioManager    _audioManager;
     private static NetworkedMonitor _networkedMonitor;
 
+    public static ColorOverlay ColorOverlay { get; set; }
+
     public static AudioManager AudioManager
     {
         get
