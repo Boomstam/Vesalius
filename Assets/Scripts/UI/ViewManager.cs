@@ -81,8 +81,8 @@ public class ViewManager : MonoBehaviour
         {
             if (contentViews[i] == null) continue;
 
-            ImageFader fader = contentViews[i].GetComponent<ImageFader>();
-            if (fader != null)
+            ImageFader[] faders = contentViews[i].GetComponentsInChildren<ImageFader>(true);
+            foreach (ImageFader fader in faders)
                 fader.alternateMode = enabled;
         }
     }

@@ -18,6 +18,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private TMP_InputField _partInputField;
 
     private readonly SyncVar<int> _currentPart = new SyncVar<int>(-1);
+    private readonly SyncVar<bool> _completeAnatomyMode = new SyncVar<bool>(false);
 
     // ── Audio State ────────────────────────────────────────────────────────────
 
@@ -32,6 +33,7 @@ public class NetworkedMonitor : NetworkBehaviour
         base.OnStartClient();
 
         _currentPart.OnChange               += OnCurrentPartChanged;
+        _completeAnatomyMode.OnChange       += OnCompleteAnatomyModeChanged;
         _shouldPlayOrgansOfNutrition.OnChange  += OnShouldPlayOrgansOfNutritionChanged;
         _shouldPlayOrgansOfGeneration.OnChange += OnShouldPlayOrgansOfGenerationChanged;
         _shouldPlayHeart.OnChange             += OnShouldPlayHeartChanged;
@@ -47,6 +49,7 @@ public class NetworkedMonitor : NetworkBehaviour
         base.OnStopClient();
 
         _currentPart.OnChange               -= OnCurrentPartChanged;
+        _completeAnatomyMode.OnChange       -= OnCompleteAnatomyModeChanged;
         _shouldPlayOrgansOfNutrition.OnChange  -= OnShouldPlayOrgansOfNutritionChanged;
         _shouldPlayOrgansOfGeneration.OnChange -= OnShouldPlayOrgansOfGenerationChanged;
         _shouldPlayHeart.OnChange             -= OnShouldPlayHeartChanged;
@@ -177,6 +180,30 @@ public class NetworkedMonitor : NetworkBehaviour
             Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved — part change dropped.");
     }
 
+    // ── Complete Anatomy ───────────────────────────────────────────────────────
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetCompleteAnatomyMode(bool value)
+    {
+        _completeAnatomyMode.Value = value;
+    }
+
+    private void OnCompleteAnatomyModeChanged(bool prev, bool next, bool asServer)
+    {
+        Debug.Log($"[NetworkedMonitor] Complete Anatomy changed {prev} -> {next} (asServer={asServer}).");
+        ApplyCompleteAnatomyMode(next);
+    }
+
+    private void ApplyCompleteAnatomyMode(bool enabled)
+    {
+        if (SceneLoader.BuildType == BuildType.Monitor) return;
+
+        if (_viewManager != null)
+            _viewManager.SetCompleteAnatomyMode(enabled);
+        else
+            Debug.LogWarning("[NetworkedMonitor] ViewManager not yet resolved - complete anatomy change dropped.");
+    }
+
     // ── Find Coroutines ────────────────────────────────────────────────────────
 
     private IEnumerator FindViewManagerCoroutine()
@@ -188,6 +215,7 @@ public class NetworkedMonitor : NetworkBehaviour
             if (_viewManager != null)
             {
                 Debug.Log("[NetworkedMonitor] ViewManager found.");
+                _viewManager.SetCompleteAnatomyMode(_completeAnatomyMode.Value);
                 yield break;
             }
             Debug.LogWarning("[NetworkedMonitor] ViewManager not found. Retrying in 1 s…");

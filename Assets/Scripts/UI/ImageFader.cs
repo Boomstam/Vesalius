@@ -6,6 +6,7 @@ public class ImageFader : MonoBehaviour
 {
     public Image[] images;
     public Sprite[] alternateImages;
+    public Slider fadeSlider;
 
     public bool alternateMode;
 
@@ -13,6 +14,8 @@ public class ImageFader : MonoBehaviour
 
     private Sprite[] _originalSprites;
     private Image[]  _activeImages;
+    private Slider _runtimeBoundSlider;
+    private bool _initialized;
     private bool _lastAlternateMode;
     private float _lastFadeVal;
 
@@ -20,26 +23,34 @@ public class ImageFader : MonoBehaviour
 
     private void Awake()
     {
-        if (images != null)
-            _originalSprites = images.Select(img => img.sprite).ToArray();
+        EnsureInitialized();
     }
 
     private void Start()
     {
-        InitImageArray(ref images);
-        _activeImages = images;
-        _lastAlternateMode = alternateMode;
+        BindSlider();
+        SetFadeVal(fadeSlider != null ? fadeSlider.value : fadeVal);
+    }
+
+    private void OnEnable()
+    {
+        EnsureInitialized();
+        BindSlider();
+        SyncAlternateMode();
+        SetFadeVal(fadeSlider != null ? fadeSlider.value : fadeVal);
+    }
+
+    private void OnDisable()
+    {
+        if (_runtimeBoundSlider == null) return;
+
+        _runtimeBoundSlider.onValueChanged.RemoveListener(SetFadeVal);
+        _runtimeBoundSlider = null;
     }
 
     private void Update()
     {
-        bool modeChanged = _lastAlternateMode != alternateMode;
-
-        if (modeChanged)
-        {
-            _lastAlternateMode = alternateMode;
-            SwapSprites(alternateMode);
-        }
+        bool modeChanged = SyncAlternateMode();
 
         if (modeChanged || !Mathf.Approximately(_lastFadeVal, fadeVal))
         {
@@ -50,6 +61,11 @@ public class ImageFader : MonoBehaviour
 
     public void SetFadeVal(float fadeVal)
     {
+        EnsureInitialized();
+
+        this.fadeVal = Mathf.Clamp01(fadeVal);
+        _lastFadeVal = this.fadeVal;
+
         if (CurrentNumImages == 0)
         {
             Debug.LogWarning("No images in active set, can't fade");
@@ -63,8 +79,11 @@ public class ImageFader : MonoBehaviour
 
         float percentagePerSource = 1f / (float)(CurrentNumImages - 1);
 
-        int startSample = Mathf.FloorToInt(fadeVal / percentagePerSource);
-        float remainder = fadeVal - (percentagePerSource * startSample);
+        int startSample = Mathf.FloorToInt(this.fadeVal / percentagePerSource);
+        if (startSample >= CurrentNumImages - 1)
+            startSample = CurrentNumImages - 2;
+
+        float remainder = this.fadeVal - (percentagePerSource * startSample);
         float remainderPercentage = remainder / percentagePerSource;
 
         for (int i = 0; i < CurrentNumImages; i++)
@@ -85,13 +104,17 @@ public class ImageFader : MonoBehaviour
 
     private void SwapSprites(bool useAlternate)
     {
+        EnsureInitialized();
+
         if (_originalSprites == null)
         {
             Debug.LogWarning("ImageFader: cache was empty on SwapSprites, caching now.");
             _originalSprites = images.Select(img => img.sprite).ToArray();
         }
 
-        Sprite[] source = useAlternate ? alternateImages : _originalSprites;
+        Sprite[] source = useAlternate && alternateImages != null && alternateImages.Length > 0
+            ? alternateImages
+            : _originalSprites;
 
         if (source == null)
         {
@@ -99,20 +122,22 @@ public class ImageFader : MonoBehaviour
             return;
         }
 
+        int activeCount = Mathf.Min(images.Length, source.Length);
+
         for (int i = 0; i < images.Length; i++)
         {
-            if (i >= source.Length)
+            if (i >= activeCount)
             {
                 // This image is outside the active set — hide it
                 Color c = images[i].color;
                 images[i].color = new Color(c.r, c.g, c.b, 0f);
-                break;
+                continue;
             }
 
             images[i].sprite = source[i];
         }
 
-        _activeImages = useAlternate ? images.Take(source.Length).ToArray() : images;
+        _activeImages = images.Take(activeCount).ToArray();
     }
 
     private void InitImageArray(ref Image[] imageArray)
@@ -125,5 +150,67 @@ public class ImageFader : MonoBehaviour
             imageArray[2].gameObject.SetActive(false);
             imageArray = imageArray.Take(2).ToArray();
         }
+    }
+
+    private void EnsureInitialized()
+    {
+        if (_initialized) return;
+
+        InitImageArray(ref images);
+
+        if (images != null)
+        {
+            _originalSprites = images.Select(img => img.sprite).ToArray();
+            _activeImages = images;
+        }
+
+        _initialized = true;
+
+        if (alternateMode)
+            SwapSprites(true);
+
+        _lastAlternateMode = alternateMode;
+    }
+
+    private bool SyncAlternateMode()
+    {
+        if (_lastAlternateMode == alternateMode)
+            return false;
+
+        _lastAlternateMode = alternateMode;
+        SwapSprites(alternateMode);
+        return true;
+    }
+
+    private void BindSlider()
+    {
+        if (fadeSlider == null)
+            fadeSlider = GetComponentInChildren<Slider>(true);
+
+        if (fadeSlider == null ||
+            _runtimeBoundSlider == fadeSlider ||
+            HasPersistentSetFadeValBinding(fadeSlider))
+        {
+            return;
+        }
+
+        fadeSlider.onValueChanged.AddListener(SetFadeVal);
+        _runtimeBoundSlider = fadeSlider;
+    }
+
+    private bool HasPersistentSetFadeValBinding(Slider slider)
+    {
+        int eventCount = slider.onValueChanged.GetPersistentEventCount();
+
+        for (int i = 0; i < eventCount; i++)
+        {
+            if (slider.onValueChanged.GetPersistentTarget(i) == this &&
+                slider.onValueChanged.GetPersistentMethodName(i) == nameof(SetFadeVal))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
