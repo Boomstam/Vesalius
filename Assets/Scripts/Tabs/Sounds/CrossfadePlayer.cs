@@ -91,6 +91,12 @@ public class CrossfadePlayer : MonoBehaviour
 
     private void OnSliderChanged(float t)
     {
+        if (lowMixerGroup == null || highMixerGroup == null)
+        {
+            Debug.LogWarning($"[CrossfadePlayer] {name}: Mixer group reference is missing.");
+            return;
+        }
+
         // t=0 → full low, t=1 → full high
         // Using log scale to match human hearing, clamped to avoid -inf dB
         const float minVol = 0.0001f;

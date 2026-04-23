@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class ColorOverlay : MonoBehaviour
 {
+    [Header("Registration")]
+    [SerializeField] private bool registerAsSharedInstance = true;
+
     [Header("Color Cycling")]
     [SerializeField] private Image overlayImage;
     [SerializeField] private float fadeTime = 2f;
@@ -38,6 +41,12 @@ public class ColorOverlay : MonoBehaviour
     private float heartbeatBeatTime;
     private float heartbeatCycleStart;
 
+    public bool RegisterAsSharedInstance
+    {
+        get => registerAsSharedInstance;
+        set => registerAsSharedInstance = value;
+    }
+
     private void Awake()
     {
         if (overlayImage == null)
@@ -52,12 +61,13 @@ public class ColorOverlay : MonoBehaviour
         if (heartbeatCurve == null || heartbeatCurve.length == 0)
             heartbeatCurve = BuildDefaultHeartbeatCurve();
 
-        Instances.ColorOverlay = this;
+        if (registerAsSharedInstance)
+            Instances.ColorOverlay = this;
     }
 
     private void OnDestroy()
     {
-        if (Instances.ColorOverlay == this)
+        if (registerAsSharedInstance && Instances.ColorOverlay == this)
             Instances.ColorOverlay = null;
     }
 

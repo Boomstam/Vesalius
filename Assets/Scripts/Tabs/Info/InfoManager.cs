@@ -42,17 +42,16 @@ public class InfoManager : MonoBehaviour
     public string chaptersJsonResourcePath;
     [SerializeField] private ChapterData[] chapters;
 
-    // Fired whenever the displayed chapter changes. Payload: new index.
     public event Action<int> OnChapterChanged;
 
-    public int CurrentIndex  => _currentIndex;
-    public int ChapterCount  => chapters?.Length ?? 0;
+    public int CurrentIndex => _currentIndex;
+    public int ChapterCount => chapters?.Length ?? 0;
+    public TextMeshProUGUI InfoTitleText => infoTitleText;
+    public TextMeshProUGUI InfoContentText => infoContentText;
+    public Button PreviousInfoButton => previousInfoButton;
+    public Button NextInfoButton => nextInfoButton;
+    public Image InfoBackground => infoBackground;
 
-    /// <summary>
-    /// Returns the JSON "type" string for the slot at <paramref name="index"/>
-    /// ("chapter", "image", "sounds", …).
-    /// Returns an empty string if the index is out of range or types not loaded.
-    /// </summary>
     public string GetSlotType(int index)
     {
         if (_slotTypes == null || index < 0 || index >= _slotTypes.Length)
@@ -61,12 +60,11 @@ public class InfoManager : MonoBehaviour
         return _slotTypes[index];
     }
 
-    private int           _currentIndex;
+    private int _currentIndex;
     private ChapterData[] _defaultChapters;
-    private string[]      _slotTypes;            // parallel to chapters[], set in LoadChapterTextFromJson
-    private string        _localizedResourceBasePath;
-
-    // -------------------------------------------------------------------------
+    private string[] _slotTypes;
+    private string _localizedResourceBasePath;
+    private string _displayTitleOverride;
 
     private void Awake()
     {
@@ -97,9 +95,6 @@ public class InfoManager : MonoBehaviour
             LanguageManager.Instance.LanguageChanged -= OnLanguageChanged;
     }
 
-    // -------------------------------------------------------------------------
-
-    // Resets to chapter 0 without firing the event.
     public void ResetToStart()
     {
         if (ChapterCount == 0) return;
@@ -117,7 +112,13 @@ public class InfoManager : MonoBehaviour
         OnChapterChanged?.Invoke(_currentIndex);
     }
 
-    // -------------------------------------------------------------------------
+    public void SetDisplayedTitleOverride(string title)
+    {
+        _displayTitleOverride = title;
+
+        if (ChapterCount > 0)
+            DisplayChapter(_currentIndex);
+    }
 
     private void OnPrevious()
     {
@@ -137,12 +138,12 @@ public class InfoManager : MonoBehaviour
 
     private void DisplayChapter(int index)
     {
-        infoTitleText.text      = chapters[index].title;
-        infoContentText.text    = chapters[index].content;
-        infoBackground.sprite   = chapters[index].backgroundImage;
+        infoTitleText.text = string.IsNullOrWhiteSpace(_displayTitleOverride)
+            ? chapters[index].title
+            : _displayTitleOverride;
+        infoContentText.text = chapters[index].content;
+        infoBackground.sprite = chapters[index].backgroundImage;
     }
-
-    // -------------------------------------------------------------------------
 
     private void LoadChapterTextFromJson()
     {
@@ -165,8 +166,8 @@ public class InfoManager : MonoBehaviour
             return;
         }
 
-        var result     = new List<ChapterData>();
-        var slotTypes  = new List<string>();
+        var result = new List<ChapterData>();
+        var slotTypes = new List<string>();
         int chapterIndex = 0;
 
         foreach (LocalizedEntry entry in localizedData.entries)
@@ -179,8 +180,10 @@ public class InfoManager : MonoBehaviour
                     ? chapters[chapterIndex]
                     : new ChapterData();
 
-                if (!string.IsNullOrWhiteSpace(entry.title))   chapter.title   = entry.title;
-                if (!string.IsNullOrWhiteSpace(entry.content)) chapter.content = entry.content;
+                if (!string.IsNullOrWhiteSpace(entry.title))
+                    chapter.title = entry.title;
+                if (!string.IsNullOrWhiteSpace(entry.content))
+                    chapter.content = entry.content;
 
                 result.Add(chapter);
                 slotTypes.Add("chapter");
@@ -188,20 +191,22 @@ public class InfoManager : MonoBehaviour
             }
             else if (string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
             {
-                // Blank placeholder — slot index stays in sync with ContentImageManager.
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
                 slotTypes.Add("image");
             }
+            else if (string.Equals(entry.type, "sound", StringComparison.OrdinalIgnoreCase))
+            {
+                result.Add(new ChapterData { title = entry.title ?? string.Empty });
+                slotTypes.Add("sound");
+            }
             else if (string.Equals(entry.type, "sounds", StringComparison.OrdinalIgnoreCase))
             {
-                // Blank placeholder — SoundsSlotManager will show the sounds panel for this slot.
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
                 slotTypes.Add("sounds");
             }
-            // Unknown types are silently ignored — forward-compatible.
         }
 
-        chapters   = result.ToArray();
+        chapters = result.ToArray();
         _slotTypes = slotTypes.ToArray();
     }
 
@@ -219,8 +224,6 @@ public class InfoManager : MonoBehaviour
     {
         LoadChapterTextForCurrentLanguage();
     }
-
-    // -------------------------------------------------------------------------
 
     private string ResolveLocalizedResourcePath()
     {
@@ -244,8 +247,8 @@ public class InfoManager : MonoBehaviour
             return resourcePath;
 
         string suffix = resourcePath.Substring(separatorIndex + 1);
-        if (suffix.Equals("en",      StringComparison.OrdinalIgnoreCase) ||
-            suffix.Equals("nl",      StringComparison.OrdinalIgnoreCase) ||
+        if (suffix.Equals("en", StringComparison.OrdinalIgnoreCase) ||
+            suffix.Equals("nl", StringComparison.OrdinalIgnoreCase) ||
             suffix.Equals("default", StringComparison.OrdinalIgnoreCase))
         {
             return resourcePath.Substring(0, separatorIndex);
