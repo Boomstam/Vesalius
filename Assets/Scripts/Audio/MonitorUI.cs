@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +6,10 @@ using UnityEngine.UI;
 /// <summary>
 /// Monitor-side UI. Communicates exclusively through NetworkedMonitor —
 /// never touches AudioManager directly (AudioManager lives on the client).
+///
+/// Waits for NetworkedMonitor to be available, then mirrors current server
+/// SyncVar state into all controls before wiring listeners, so a late-connecting
+/// Monitor sees the correct UI state immediately.
 ///
 /// Required UI elements (wire in Inspector):
 ///   Master section:  masterVolumeSlider, fadeInButton, fadeOutButton,
@@ -33,7 +38,64 @@ public class MonitorUI : MonoBehaviour
     private void Start()
     {
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
+        StartCoroutine(InitAfterNetworkedMonitorCoroutine());
+    }
 
+    private void OnDestroy()
+    {
+        if (masterVolumeSlider != null) masterVolumeSlider.onValueChanged.RemoveListener(OnMasterVolumeChanged);
+        if (fadeInButton != null)       fadeInButton.onClick.RemoveListener(OnFadeInClicked);
+        if (fadeOutButton != null)      fadeOutButton.onClick.RemoveListener(OnFadeOutClicked);
+        if (muteButton != null)         muteButton.onClick.RemoveListener(OnMuteClicked);
+        if (resetButton != null)        resetButton.onClick.RemoveListener(OnResetClicked);
+
+        if (organsOfNutritionToggle != null)  organsOfNutritionToggle.onValueChanged.RemoveListener(OnOrgansOfNutritionToggled);
+        if (organsOfGenerationToggle != null) organsOfGenerationToggle.onValueChanged.RemoveListener(OnOrgansOfGenerationToggled);
+        if (heartToggle != null)              heartToggle.onValueChanged.RemoveListener(OnHeartToggled);
+        if (completeAnatomyToggle != null)    completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
+    }
+
+    // ── Initialisation ─────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Waits until Instances.NetworkedMonitor is available (the NetworkObject must
+    /// be spawned before we can read SyncVar values), then syncs all controls to the
+    /// current server state and wires the change listeners.
+    /// </summary>
+    private IEnumerator InitAfterNetworkedMonitorCoroutine()
+    {
+        while (Instances.NetworkedMonitor == null)
+            yield return new WaitForSeconds(0.5f);
+
+        Debug.Log("[MonitorUI] NetworkedMonitor found — syncing UI state.");
+        SyncStateFromServer(Instances.NetworkedMonitor);
+        WireListeners();
+    }
+
+    /// <summary>
+    /// Pushes current SyncVar values into controls without notifying listeners,
+    /// so the UI reflects server state without sending redundant RPCs.
+    /// </summary>
+    private void SyncStateFromServer(NetworkedMonitor nm)
+    {
+        if (organsOfNutritionToggle != null)
+            organsOfNutritionToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfNutrition);
+
+        if (organsOfGenerationToggle != null)
+            organsOfGenerationToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfGeneration);
+
+        if (heartToggle != null)
+            heartToggle.SetIsOnWithoutNotify(nm.ShouldPlayHeart);
+
+        if (completeAnatomyToggle != null)
+            completeAnatomyToggle.SetIsOnWithoutNotify(nm.CompleteAnatomyMode);
+
+        // Master volume slider: server doesn't track a SyncVar for this (it's fire-and-forget),
+        // so we leave the slider at its default Inspector value rather than guessing.
+    }
+
+    private void WireListeners()
+    {
         masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
 
         fadeInButton.onClick.AddListener(OnFadeInClicked);
@@ -82,6 +144,8 @@ public class MonitorUI : MonoBehaviour
     {
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
     }
+
+    // ── Complete Anatomy Toggle ────────────────────────────────────────────────
 
     private Toggle ResolveCompleteAnatomyToggle()
     {

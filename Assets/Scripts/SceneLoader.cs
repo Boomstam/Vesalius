@@ -46,9 +46,23 @@ public class SceneLoader : MonoBehaviour
 #if UNITY_EDITOR
         if (ClonesManager.IsClone())
         {
-            int.TryParse(ClonesManager.GetArgument(), out int cloneIndex);
-            BuildType     = BuildType.Client;
-            TransportType = (cloneIndex % 2 == 0) ? TransportType.Tugboat : TransportType.Bayou;
+            string argument = ClonesManager.GetArgument();
+            if (argument == "Monitor")
+            {
+                BuildType     = BuildType.Monitor;
+                TransportType = TransportType.Tugboat;
+            }
+            else if (argument == "Server")
+            {
+                BuildType     = BuildType.Server;
+                TransportType = TransportType.Tugboat;
+            }
+            else
+            {
+                int.TryParse(argument, out int cloneIndex);
+                BuildType     = BuildType.Client;
+                TransportType = (cloneIndex % 2 == 0) ? TransportType.Tugboat : TransportType.Bayou;
+            }
         }
         else
         {

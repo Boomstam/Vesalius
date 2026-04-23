@@ -18,8 +18,10 @@ public class ImageFader : MonoBehaviour
     private bool _initialized;
     private bool _lastAlternateMode;
     private float _lastFadeVal;
+    private bool _overlayDriven;
 
     private int CurrentNumImages => _activeImages?.Length ?? 0;
+    public float CurrentFadeValue => fadeVal;
 
     private void Awake()
     {
@@ -29,7 +31,8 @@ public class ImageFader : MonoBehaviour
     private void Start()
     {
         BindSlider();
-        SetFadeVal(fadeSlider != null ? fadeSlider.value : fadeVal);
+        SyncWithOverlayIfActive();
+        SetFadeVal(GetPreferredFadeValue());
     }
 
     private void OnEnable()
@@ -37,7 +40,8 @@ public class ImageFader : MonoBehaviour
         EnsureInitialized();
         BindSlider();
         SyncAlternateMode();
-        SetFadeVal(fadeSlider != null ? fadeSlider.value : fadeVal);
+        SyncWithOverlayIfActive();
+        SetFadeVal(GetPreferredFadeValue());
     }
 
     private void OnDisable()
@@ -152,6 +156,21 @@ public class ImageFader : MonoBehaviour
         }
     }
 
+    public void SetOverlayDriven(bool isDriven)
+    {
+        _overlayDriven = isDriven;
+
+        if (fadeSlider != null)
+            fadeSlider.interactable = !isDriven;
+    }
+
+    public void ApplyOverlayDrivenValue(float value)
+    {
+        float clampedValue = Mathf.Clamp01(value);
+        SetHiddenSliderValue(clampedValue);
+        SetFadeVal(clampedValue);
+    }
+
     private void EnsureInitialized()
     {
         if (_initialized) return;
@@ -196,6 +215,43 @@ public class ImageFader : MonoBehaviour
 
         fadeSlider.onValueChanged.AddListener(SetFadeVal);
         _runtimeBoundSlider = fadeSlider;
+    }
+
+    private void SyncWithOverlayIfActive()
+    {
+        if (GlobalAudioSliderOverlay.Instance == null)
+            return;
+
+        if (GlobalAudioSliderOverlay.Instance.TryGetImageFaderDriveState(out bool isDriven, out float drivenValue))
+        {
+            SetOverlayDriven(isDriven);
+
+            if (isDriven)
+                SetHiddenSliderValue(drivenValue);
+        }
+    }
+
+    private float GetPreferredFadeValue()
+    {
+        if (_overlayDriven &&
+            GlobalAudioSliderOverlay.Instance != null &&
+            GlobalAudioSliderOverlay.Instance.TryGetImageFaderDriveState(out _, out float drivenValue))
+        {
+            return drivenValue;
+        }
+
+        if (fadeSlider != null)
+            return fadeSlider.value;
+
+        return fadeVal;
+    }
+
+    private void SetHiddenSliderValue(float value)
+    {
+        if (fadeSlider == null)
+            return;
+
+        fadeSlider.SetValueWithoutNotify(value);
     }
 
     private bool HasPersistentSetFadeValBinding(Slider slider)

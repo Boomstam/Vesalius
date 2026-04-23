@@ -37,30 +37,47 @@ public class MonitorColorOverlayUI : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
         }
 
-        Debug.Log("[MonitorColorOverlayUI] NetworkedMonitor found - wiring controls.");
+        Debug.Log("[MonitorColorOverlayUI] NetworkedMonitor found — syncing UI state.");
+        SyncStateFromServer(networkedMonitor);
         WireListeners();
         SetAllInteractable(true);
         RefreshOpacityControls(masterOpacityToggle != null && masterOpacityToggle.isOn);
+    }
+
+    /// <summary>
+    /// Mirrors current SyncVar values into controls without triggering listeners,
+    /// so the UI reflects live server state on connect without sending redundant RPCs.
+    /// </summary>
+    private void SyncStateFromServer(NetworkedMonitor nm)
+    {
+        if (masterOpacityToggle != null)
+            masterOpacityToggle.SetIsOnWithoutNotify(nm.MasterOpacityActive);
+
+        if (masterOpacitySlider != null)
+            masterOpacitySlider.SetValueWithoutNotify(nm.MasterOpacityValue);
+
+        if (heartbeatToggle != null)
+            heartbeatToggle.SetIsOnWithoutNotify(nm.HeartbeatActive);
     }
 
     private void WireListeners()
     {
         if (masterOpacityToggle != null) masterOpacityToggle.onValueChanged.AddListener(OnMasterOpacityToggleChanged);
         if (masterOpacitySlider != null) masterOpacitySlider.onValueChanged.AddListener(OnMasterOpacitySliderChanged);
-        if (fadeInButton != null) fadeInButton.onClick.AddListener(OnFadeInClicked);
-        if (fadeOutButton != null) fadeOutButton.onClick.AddListener(OnFadeOutClicked);
-        if (cutToBlackButton != null) cutToBlackButton.onClick.AddListener(OnCutToBlackClicked);
-        if (heartbeatToggle != null) heartbeatToggle.onValueChanged.AddListener(OnHeartbeatToggleChanged);
+        if (fadeInButton != null)        fadeInButton.onClick.AddListener(OnFadeInClicked);
+        if (fadeOutButton != null)       fadeOutButton.onClick.AddListener(OnFadeOutClicked);
+        if (cutToBlackButton != null)    cutToBlackButton.onClick.AddListener(OnCutToBlackClicked);
+        if (heartbeatToggle != null)     heartbeatToggle.onValueChanged.AddListener(OnHeartbeatToggleChanged);
     }
 
     private void OnDestroy()
     {
         if (masterOpacityToggle != null) masterOpacityToggle.onValueChanged.RemoveListener(OnMasterOpacityToggleChanged);
         if (masterOpacitySlider != null) masterOpacitySlider.onValueChanged.RemoveListener(OnMasterOpacitySliderChanged);
-        if (fadeInButton != null) fadeInButton.onClick.RemoveListener(OnFadeInClicked);
-        if (fadeOutButton != null) fadeOutButton.onClick.RemoveListener(OnFadeOutClicked);
-        if (cutToBlackButton != null) cutToBlackButton.onClick.RemoveListener(OnCutToBlackClicked);
-        if (heartbeatToggle != null) heartbeatToggle.onValueChanged.RemoveListener(OnHeartbeatToggleChanged);
+        if (fadeInButton != null)        fadeInButton.onClick.RemoveListener(OnFadeInClicked);
+        if (fadeOutButton != null)       fadeOutButton.onClick.RemoveListener(OnFadeOutClicked);
+        if (cutToBlackButton != null)    cutToBlackButton.onClick.RemoveListener(OnCutToBlackClicked);
+        if (heartbeatToggle != null)     heartbeatToggle.onValueChanged.RemoveListener(OnHeartbeatToggleChanged);
     }
 
     private void OnMasterOpacityToggleChanged(bool value)
@@ -106,15 +123,15 @@ public class MonitorColorOverlayUI : MonoBehaviour
     private void RefreshOpacityControls(bool masterActive)
     {
         if (masterOpacitySlider != null) masterOpacitySlider.interactable = masterActive;
-        if (fadeInButton != null) fadeInButton.interactable = masterActive;
-        if (fadeOutButton != null) fadeOutButton.interactable = masterActive;
-        if (cutToBlackButton != null) cutToBlackButton.interactable = masterActive;
+        if (fadeInButton != null)        fadeInButton.interactable = masterActive;
+        if (fadeOutButton != null)       fadeOutButton.interactable = masterActive;
+        if (cutToBlackButton != null)    cutToBlackButton.interactable = masterActive;
     }
 
     private void SetAllInteractable(bool value)
     {
         if (masterOpacityToggle != null) masterOpacityToggle.interactable = value;
-        if (heartbeatToggle != null) heartbeatToggle.interactable = value;
+        if (heartbeatToggle != null)     heartbeatToggle.interactable = value;
         RefreshOpacityControls(value && masterOpacityToggle != null && masterOpacityToggle.isOn);
     }
 }

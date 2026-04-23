@@ -38,6 +38,16 @@ public class NetworkedMonitor : NetworkBehaviour
     private readonly SyncVar<Color> _heartbeatEndColorSync = new SyncVar<Color>();
     private readonly SyncVar<float> _heartbeatBeatTimeSync = new SyncVar<float>(0.8f);
 
+    // ── Public state accessors (for Monitor UI sync-on-connect) ───────────────
+
+    public bool CompleteAnatomyMode         => _completeAnatomyMode.Value;
+    public bool ShouldPlayOrgansOfNutrition => _shouldPlayOrgansOfNutrition.Value;
+    public bool ShouldPlayOrgansOfGeneration => _shouldPlayOrgansOfGeneration.Value;
+    public bool ShouldPlayHeart             => _shouldPlayHeart.Value;
+    public bool MasterOpacityActive         => _masterOpacityActive.Value;
+    public float MasterOpacityValue         => _masterOpacityValue.Value;
+    public bool HeartbeatActive             => _heartbeatActive.Value;
+
     public override void OnStartClient()
     {
         base.OnStartClient();

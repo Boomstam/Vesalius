@@ -11,6 +11,8 @@ using UnityEngine.UI;
 /// </summary>
 public class GlobalAudioSliderOverlay : MonoBehaviour
 {
+    public static GlobalAudioSliderOverlay Instance { get; private set; }
+
     [Header("Dual Slider Overlay")]
     [SerializeField] private Slider dualPrimarySlider;
     [SerializeField] private Slider dualSecondarySlider;
@@ -28,6 +30,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private AudioManager.AudioOverlayKind currentKind = AudioManager.AudioOverlayKind.None;
     private bool suppressCallbacks;
     private bool subscribed;
+    private bool syncingFromImageFader;
 
     private static readonly Vector2 DualLeftMin = new(0.15f, 0.23f);
     private static readonly Vector2 DualLeftMax = new(0.45f, 0.80f);
@@ -51,6 +54,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         EnsureOverlayStructure();
         audioManager = FindAnyObjectByType<AudioManager>();
         HideAll();
@@ -66,6 +70,13 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private void OnDisable()
     {
         RemoveSubscriptions();
+        UpdateImageFaderBinding();
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
     }
 
     private void EnsureSubscriptions()
@@ -259,6 +270,18 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void ApplyOverlayState(AudioManager.AudioOverlayState state)
     {
+        AudioManager.AudioOverlayKind previousKind = currentKind;
+
+        if (!syncingFromImageFader && ShouldSyncFromImageFader(previousKind, state.Kind))
+        {
+            syncingFromImageFader = true;
+            SyncAudioStateFromImageFader(state.Kind);
+            syncingFromImageFader = false;
+
+            if (audioManager != null)
+                state = audioManager.CurrentOverlayState;
+        }
+
         currentKind = state.Kind;
         suppressCallbacks = true;
 
@@ -287,6 +310,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         }
 
         suppressCallbacks = false;
+        UpdateImageFaderBinding();
     }
 
     private void HideAll()
@@ -330,4 +354,96 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         component.gameObject.SetActive(isActive);
     }
 
+    public bool TryGetImageFaderDriveState(out bool isDriven, out float value)
+    {
+        isDriven = IsDrivingKind(currentKind);
+        value = GetDrivenImageFadeValue();
+        return true;
+    }
+
+    private bool ShouldSyncFromImageFader(AudioManager.AudioOverlayKind previousKind, AudioManager.AudioOverlayKind nextKind)
+    {
+        return previousKind != nextKind && IsDrivingKind(nextKind);
+    }
+
+    private void SyncAudioStateFromImageFader(AudioManager.AudioOverlayKind overlayKind)
+    {
+        ImageFader activeFader = GetActiveImageFader();
+        if (activeFader == null || audioManager == null)
+            return;
+
+        float currentImageFade = activeFader.CurrentFadeValue;
+
+        switch (overlayKind)
+        {
+            case AudioManager.AudioOverlayKind.NutritionSingle:
+                audioManager.SetOrgansOfNutritionFade(currentImageFade);
+                break;
+            case AudioManager.AudioOverlayKind.GenerationSingle:
+                audioManager.SetOrgansOfGenerationFade(currentImageFade);
+                break;
+            case AudioManager.AudioOverlayKind.HeartDual:
+                float halfValue = currentImageFade * 0.5f;
+                audioManager.SetHeartBandFade(halfValue);
+                audioManager.SetHeartDelay(halfValue);
+                break;
+        }
+    }
+
+    private void UpdateImageFaderBinding()
+    {
+        bool isDriven = IsDrivingKind(currentKind) && isActiveAndEnabled;
+        float drivenValue = GetDrivenImageFadeValue();
+
+        foreach (ImageFader fader in EnumerateSceneImageFaders())
+        {
+            if (!fader.gameObject.activeInHierarchy)
+                continue;
+
+            fader.SetOverlayDriven(isDriven);
+
+            if (isDriven)
+                fader.ApplyOverlayDrivenValue(drivenValue);
+        }
+    }
+
+    private float GetDrivenImageFadeValue()
+    {
+        return currentKind switch
+        {
+            AudioManager.AudioOverlayKind.NutritionSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.GenerationSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.HeartDual => GetDualAverageValue(),
+            _ => 0f,
+        };
+    }
+
+    private float GetDualAverageValue()
+    {
+        if (dualPrimarySlider == null || dualSecondarySlider == null)
+            return 0f;
+
+        return (dualPrimarySlider.value + dualSecondarySlider.value) * 0.5f;
+    }
+
+    private bool IsDrivingKind(AudioManager.AudioOverlayKind kind)
+    {
+        return kind == AudioManager.AudioOverlayKind.NutritionSingle
+            || kind == AudioManager.AudioOverlayKind.GenerationSingle
+            || kind == AudioManager.AudioOverlayKind.HeartDual;
+    }
+
+    private ImageFader GetActiveImageFader()
+    {
+        return EnumerateSceneImageFaders().FirstOrDefault(fader => fader.gameObject.activeInHierarchy);
+    }
+
+    private IEnumerable<ImageFader> EnumerateSceneImageFaders()
+    {
+        return Resources.FindObjectsOfTypeAll<ImageFader>()
+            .Where(fader =>
+                fader != null &&
+                fader.gameObject.scene.IsValid() &&
+                (fader.hideFlags & HideFlags.HideAndDontSave) == 0);
+    }
 }
