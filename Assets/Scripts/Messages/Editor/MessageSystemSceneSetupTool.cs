@@ -164,8 +164,9 @@ public static class MessageSystemSceneSetupTool
         dividerImage.color = new Color(0.4f, 0.4f, 0.4f, 1f);
         dividerImage.raycastTarget = false;
 
-        Button resetDeck = CreateButton(panel.transform, "ResetDeckButton", "Reset Deck", new Vector2(-120f, -230f), new Vector2(210f, 80f), new Color(0.267f, 0.267f, 0.267f, 1f));
-        Button hardCut = CreateButton(panel.transform, "HardCutButton", "Hard Cut", new Vector2(120f, -230f), new Vector2(210f, 80f), new Color(0.545f, 0.102f, 0.102f, 1f));
+        Button groupMessage = CreateButton(panel.transform, "Go To Your Color Button", "Go To Your Color", new Vector2(0f, -185f), new Vector2(440f, 56f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button resetDeck = CreateButton(panel.transform, "ResetDeckButton", "Reset Deck", new Vector2(-120f, -265f), new Vector2(210f, 80f), new Color(0.267f, 0.267f, 0.267f, 1f));
+        Button hardCut = CreateButton(panel.transform, "HardCutButton", "Hard Cut", new Vector2(120f, -265f), new Vector2(210f, 80f), new Color(0.545f, 0.102f, 0.102f, 1f));
 
         MonitorMessagePanel monitorPanel = EnsureComponent<MonitorMessagePanel>(panel);
         SerializedObject serializedPanel = new SerializedObject(monitorPanel);
@@ -177,6 +178,7 @@ public static class MessageSystemSceneSetupTool
         serializedPanel.FindProperty("_waterStationButton").objectReferenceValue = waterStation;
         serializedPanel.FindProperty("_resetDeckButton").objectReferenceValue = resetDeck;
         serializedPanel.FindProperty("_hardCutButton").objectReferenceValue = hardCut;
+        serializedPanel.FindProperty("_groupMessageButton").objectReferenceValue = groupMessage;
         serializedPanel.ApplyModifiedPropertiesWithoutUndo();
 
         SaveActiveScene();

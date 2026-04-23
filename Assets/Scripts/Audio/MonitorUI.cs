@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -14,28 +13,6 @@ using UnityEngine.UI;
 /// </summary>
 public class MonitorUI : MonoBehaviour
 {
-    private static readonly Vector2 IntroToggleMin = new(0.525f, 0.79f);
-    private static readonly Vector2 IntroToggleMax = new(0.555f, 0.845f);
-    private static readonly Vector2 PingPongToggleMin = new(0.645f, 0.79f);
-    private static readonly Vector2 PingPongToggleMax = new(0.675f, 0.845f);
-    private static readonly Vector2 GenerationToggleMin = new(0.765f, 0.79f);
-    private static readonly Vector2 GenerationToggleMax = new(0.795f, 0.845f);
-    private static readonly Vector2 HeartToggleMin = new(0.885f, 0.79f);
-    private static readonly Vector2 HeartToggleMax = new(0.915f, 0.845f);
-    private static readonly Vector2 GroupColorToggleMin = new(0.645f, 0.69f);
-    private static readonly Vector2 GroupColorToggleMax = new(0.675f, 0.745f);
-
-    private static readonly Vector2 IntroLabelMin = new(0.47f, 0.855f);
-    private static readonly Vector2 IntroLabelMax = new(0.61f, 0.915f);
-    private static readonly Vector2 PingPongLabelMin = new(0.59f, 0.855f);
-    private static readonly Vector2 PingPongLabelMax = new(0.73f, 0.915f);
-    private static readonly Vector2 GenerationLabelMin = new(0.71f, 0.855f);
-    private static readonly Vector2 GenerationLabelMax = new(0.87f, 0.915f);
-    private static readonly Vector2 HeartLabelMin = new(0.83f, 0.855f);
-    private static readonly Vector2 HeartLabelMax = new(0.97f, 0.915f);
-    private static readonly Vector2 GroupColorLabelMin = new(0.56f, 0.755f);
-    private static readonly Vector2 GroupColorLabelMax = new(0.76f, 0.815f);
-
     [Header("Master Volume")]
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Button fadeInButton;
@@ -63,7 +40,7 @@ public class MonitorUI : MonoBehaviour
 
     private void Start()
     {
-        EnsureAudioToggleLayout();
+        ResolveAudioControls();
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
     }
 
@@ -101,7 +78,7 @@ public class MonitorUI : MonoBehaviour
 
         initialised = true;
 
-        EnsureAudioToggleLayout();
+        ResolveAudioControls();
 
         if (completeAnatomyToggle == null)
             completeAnatomyToggle = ResolveCompleteAnatomyToggle();
@@ -214,14 +191,16 @@ public class MonitorUI : MonoBehaviour
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
     }
 
-    private void EnsureAudioToggleLayout()
+    private void ResolveAudioControls()
     {
         introToggle = ResolveToggle(introToggle, "Intro Toggle", "Organs Of Nutrition Toggle");
+        pingPongToggle = ResolveToggle(pingPongToggle, "Ping Pong Toggle");
         organsOfGenerationToggle = ResolveToggle(organsOfGenerationToggle, "Organs Of Generation Toggle");
         heartToggle = ResolveToggle(heartToggle, "Heart Toggle");
         groupColorToggle = ResolveToggle(groupColorToggle, "Group Color Toggle");
 
         introLabel = ResolveLabel(introLabel, "Intro Label", "Organs Of Nutrition Label");
+        pingPongLabel = ResolveLabel(pingPongLabel, "Ping Pong Label");
         organsOfGenerationLabel = ResolveLabel(organsOfGenerationLabel, "Organs Of Generation Label");
         heartLabel = ResolveLabel(heartLabel, "Heart Label");
         groupColorLabel = ResolveLabel(groupColorLabel, "Group Color Label");
@@ -233,12 +212,6 @@ public class MonitorUI : MonoBehaviour
             RenameObject(introLabel.gameObject, "Intro Label");
             introLabel.text = "Intro";
         }
-
-        if (pingPongToggle == null && introToggle != null)
-            pingPongToggle = DuplicateToggle(introToggle, "Ping Pong Toggle");
-
-        if (pingPongLabel == null && introLabel != null)
-            pingPongLabel = DuplicateLabel(introLabel, "Ping Pong Label", "Ping Pong");
 
         if (pingPongToggle != null)
         {
@@ -252,12 +225,6 @@ public class MonitorUI : MonoBehaviour
             pingPongLabel.text = "Ping Pong";
         }
 
-        if (groupColorToggle == null && pingPongToggle != null)
-            groupColorToggle = DuplicateToggle(pingPongToggle, "Group Color Toggle");
-
-        if (groupColorLabel == null && pingPongLabel != null)
-            groupColorLabel = DuplicateLabel(pingPongLabel, "Group Color Label", "Group Color");
-
         if (groupColorToggle != null)
         {
             RenameObject(groupColorToggle.gameObject, "Group Color Toggle");
@@ -267,10 +234,8 @@ public class MonitorUI : MonoBehaviour
         if (groupColorLabel != null)
         {
             RenameObject(groupColorLabel.gameObject, "Group Color Label");
-            groupColorLabel.text = "Group Color";
+            groupColorLabel.text = "Go To Your Color";
         }
-
-        ApplyAudioToggleLayout();
     }
 
     private Toggle ResolveToggle(Toggle current, params string[] objectNames)
@@ -303,50 +268,6 @@ public class MonitorUI : MonoBehaviour
         return null;
     }
 
-    private Toggle DuplicateToggle(Toggle template, string objectName)
-    {
-        Toggle duplicate = Instantiate(template, template.transform.parent);
-        duplicate.SetIsOnWithoutNotify(false);
-        duplicate.onValueChanged.RemoveAllListeners();
-        RenameObject(duplicate.gameObject, objectName);
-        return duplicate;
-    }
-
-    private Text DuplicateLabel(Text template, string objectName, string text)
-    {
-        Text duplicate = Instantiate(template, template.transform.parent);
-        duplicate.text = text;
-        RenameObject(duplicate.gameObject, objectName);
-        return duplicate;
-    }
-
-    private void ApplyAudioToggleLayout()
-    {
-        SetAnchors(introToggle, IntroToggleMin, IntroToggleMax);
-        SetAnchors(pingPongToggle, PingPongToggleMin, PingPongToggleMax);
-        SetAnchors(organsOfGenerationToggle, GenerationToggleMin, GenerationToggleMax);
-        SetAnchors(heartToggle, HeartToggleMin, HeartToggleMax);
-        SetAnchors(groupColorToggle, GroupColorToggleMin, GroupColorToggleMax);
-
-        SetAnchors(introLabel, IntroLabelMin, IntroLabelMax);
-        SetAnchors(pingPongLabel, PingPongLabelMin, PingPongLabelMax);
-        SetAnchors(organsOfGenerationLabel, GenerationLabelMin, GenerationLabelMax);
-        SetAnchors(heartLabel, HeartLabelMin, HeartLabelMax);
-        SetAnchors(groupColorLabel, GroupColorLabelMin, GroupColorLabelMax);
-    }
-
-    private void SetAnchors(Component component, Vector2 anchorMin, Vector2 anchorMax)
-    {
-        if (component == null || component.transform is not RectTransform rectTransform)
-            return;
-
-        rectTransform.anchorMin = anchorMin;
-        rectTransform.anchorMax = anchorMax;
-        rectTransform.offsetMin = Vector2.zero;
-        rectTransform.offsetMax = Vector2.zero;
-        rectTransform.anchoredPosition = Vector2.zero;
-    }
-
     private void RenameObject(GameObject gameObject, string objectName)
     {
         if (gameObject != null)
@@ -362,87 +283,6 @@ public class MonitorUI : MonoBehaviour
         if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
             return existingToggle;
 
-        return CreateCompleteAnatomyToggle();
-    }
-
-    private Toggle CreateCompleteAnatomyToggle()
-    {
-        GameObject partNumber = GameObject.Find("Part Number");
-        if (partNumber == null || !partNumber.TryGetComponent(out RectTransform partNumberRect))
-            return null;
-
-        Transform parent = partNumberRect.parent;
-        GameObject root = new GameObject("Complete Anatomy", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Toggle));
-        root.layer = partNumber.layer;
-        root.transform.SetParent(parent, false);
-
-        RectTransform rect = root.GetComponent<RectTransform>();
-        rect.anchorMin = partNumberRect.anchorMin;
-        rect.anchorMax = partNumberRect.anchorMax;
-        rect.pivot = partNumberRect.pivot;
-        rect.sizeDelta = new Vector2(partNumberRect.sizeDelta.x, 56f);
-        rect.anchoredPosition = partNumberRect.anchoredPosition + new Vector2(0f, 150f);
-
-        Image background = root.GetComponent<Image>();
-        background.color = new Color(0.18f, 0.22f, 0.26f, 1f);
-
-        Toggle toggle = root.GetComponent<Toggle>();
-        toggle.targetGraphic = background;
-        toggle.isOn = false;
-
-        Image checkBackground = CreateImageChild(root.transform, "Check Background", new Color(0.08f, 0.1f, 0.12f, 1f));
-        RectTransform checkBackgroundRect = checkBackground.rectTransform;
-        checkBackgroundRect.anchorMin = new Vector2(0f, 0.5f);
-        checkBackgroundRect.anchorMax = new Vector2(0f, 0.5f);
-        checkBackgroundRect.pivot = new Vector2(0.5f, 0.5f);
-        checkBackgroundRect.sizeDelta = new Vector2(36f, 36f);
-        checkBackgroundRect.anchoredPosition = new Vector2(32f, 0f);
-
-        Image checkmark = CreateImageChild(checkBackground.transform, "Checkmark", new Color(0.75f, 0.92f, 1f, 1f));
-        RectTransform checkmarkRect = checkmark.rectTransform;
-        checkmarkRect.anchorMin = new Vector2(0.5f, 0.5f);
-        checkmarkRect.anchorMax = new Vector2(0.5f, 0.5f);
-        checkmarkRect.pivot = new Vector2(0.5f, 0.5f);
-        checkmarkRect.sizeDelta = new Vector2(20f, 20f);
-        checkmarkRect.anchoredPosition = Vector2.zero;
-        toggle.graphic = checkmark;
-        toggle.SetIsOnWithoutNotify(false);
-        checkmark.enabled = false;
-
-        TextMeshProUGUI label = CreateLabelChild(root.transform);
-        label.text = "Complete Anatomy";
-
-        return toggle;
-    }
-
-    private Image CreateImageChild(Transform parent, string name, Color color)
-    {
-        GameObject child = new GameObject(name, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
-        child.layer = parent.gameObject.layer;
-        child.transform.SetParent(parent, false);
-
-        Image image = child.GetComponent<Image>();
-        image.color = color;
-        return image;
-    }
-
-    private TextMeshProUGUI CreateLabelChild(Transform parent)
-    {
-        GameObject child = new GameObject("Label", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
-        child.layer = parent.gameObject.layer;
-        child.transform.SetParent(parent, false);
-
-        RectTransform rect = child.GetComponent<RectTransform>();
-        rect.anchorMin = Vector2.zero;
-        rect.anchorMax = Vector2.one;
-        rect.offsetMin = new Vector2(64f, 0f);
-        rect.offsetMax = new Vector2(-16f, 0f);
-
-        TextMeshProUGUI label = child.GetComponent<TextMeshProUGUI>();
-        label.color = Color.white;
-        label.fontSize = 30f;
-        label.alignment = TextAlignmentOptions.MidlineLeft;
-        label.raycastTarget = false;
-        return label;
+        return null;
     }
 }

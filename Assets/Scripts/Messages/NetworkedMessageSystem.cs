@@ -170,7 +170,7 @@ public class NetworkedMessageSystem : NetworkBehaviour
             _messageOverlay = FindObjectOfType<MessageOverlay>();
 
         if (_messageOverlay != null)
-            _messageOverlay.ShowMessage("Group with your color", duration, showBackdrop: false);
+            _messageOverlay.ShowMessage("Go to your color", duration, showBackdrop: false);
         else
             Debug.LogWarning("[NetworkedMessageSystem] MessageOverlay not found on client.");
     }

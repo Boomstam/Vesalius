@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -47,7 +46,7 @@ public class MonitorMessagePanel : MonoBehaviour
 
     private IEnumerator FindAndWireCoroutine()
     {
-        EnsureGroupMessageButton();
+        ResolveSceneButtons();
 
         while (_nms == null || _networkedMonitor == null)
         {
@@ -109,46 +108,23 @@ public class MonitorMessagePanel : MonoBehaviour
             button.onClick.RemoveListener(action);
     }
 
-    private void EnsureGroupMessageButton()
+    private void ResolveSceneButtons()
     {
-        if (_groupMessageButton != null)
-            return;
+        _groupMessageButton = ResolveButton(_groupMessageButton, "Go To Your Color Button", "Group Message Button");
+    }
 
-        GameObject existing = GameObject.Find("Group Message Button");
-        if (existing != null && existing.TryGetComponent(out Button existingButton))
+    private static Button ResolveButton(Button current, params string[] objectNames)
+    {
+        if (current != null)
+            return current;
+
+        foreach (string objectName in objectNames)
         {
-            _groupMessageButton = existingButton;
-            return;
+            GameObject existing = GameObject.Find(objectName);
+            if (existing != null && existing.TryGetComponent(out Button button))
+                return button;
         }
 
-        Button template = _resetDeckButton != null ? _resetDeckButton : _hardCutButton;
-        if (template == null)
-            return;
-
-        _groupMessageButton = Instantiate(template, template.transform.parent);
-        _groupMessageButton.name = "Group Message Button";
-
-        if (_groupMessageButton.transform is RectTransform groupRect)
-        {
-            groupRect.anchorMin = new Vector2(0.5f, 0.5f);
-            groupRect.anchorMax = new Vector2(0.5f, 0.5f);
-            groupRect.pivot = new Vector2(0.5f, 0.5f);
-            groupRect.sizeDelta = new Vector2(440f, 56f);
-            groupRect.anchoredPosition = new Vector2(0f, -200f);
-        }
-
-        if (_resetDeckButton != null && _resetDeckButton.transform is RectTransform resetRect)
-            resetRect.anchoredPosition = new Vector2(-120f, -285f);
-
-        if (_hardCutButton != null && _hardCutButton.transform is RectTransform hardCutRect)
-            hardCutRect.anchoredPosition = new Vector2(120f, -285f);
-
-        Text text = _groupMessageButton.GetComponentInChildren<Text>(true);
-        if (text != null)
-            text.text = "Group With Your Color";
-
-        TMP_Text tmpText = _groupMessageButton.GetComponentInChildren<TMP_Text>(true);
-        if (tmpText != null)
-            tmpText.text = "Group With Your Color";
+        return null;
     }
 }
