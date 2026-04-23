@@ -296,7 +296,7 @@ AudioMixerController:
   - guid: 3b8ff0749ae016a4ba5ca431274b4e4e
     name: High
   - guid: a38fc28bf89ff7d419d3918f30b23d1e
-    name: High1
+    name: High 1
   - guid: f1755b0ac53a6f34a814143449d23450
     name: Low
   - guid: 4ddfcec49e3297446944d69dd189db55

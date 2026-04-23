@@ -10,6 +10,10 @@ using FishNet.Object.Synchronizing;
 /// Syncs audio mode booleans; callbacks on clients drive AudioManager.
 /// Syncs color overlay state; callbacks on clients drive ColorOverlay.
 /// Master volume, audio fades, and color overlay fades are fire-and-forget ObserversRpcs.
+///
+/// On Monitor builds, OnStartClient() calls Instances.MonitorUI?.Init(this) directly
+/// so the UI is synced and wired the moment the NetworkObject is ready —
+/// no polling coroutine required.
 /// </summary>
 public class NetworkedMonitor : NetworkBehaviour
 {
@@ -38,15 +42,15 @@ public class NetworkedMonitor : NetworkBehaviour
     private readonly SyncVar<Color> _heartbeatEndColorSync = new SyncVar<Color>();
     private readonly SyncVar<float> _heartbeatBeatTimeSync = new SyncVar<float>(0.8f);
 
-    // ── Public state accessors (for Monitor UI sync-on-connect) ───────────────
+    // ── Public state accessors (for MonitorUI sync-on-connect) ────────────────
 
-    public bool CompleteAnatomyMode         => _completeAnatomyMode.Value;
-    public bool ShouldPlayOrgansOfNutrition => _shouldPlayOrgansOfNutrition.Value;
+    public bool CompleteAnatomyMode          => _completeAnatomyMode.Value;
+    public bool ShouldPlayOrgansOfNutrition  => _shouldPlayOrgansOfNutrition.Value;
     public bool ShouldPlayOrgansOfGeneration => _shouldPlayOrgansOfGeneration.Value;
-    public bool ShouldPlayHeart             => _shouldPlayHeart.Value;
-    public bool MasterOpacityActive         => _masterOpacityActive.Value;
-    public float MasterOpacityValue         => _masterOpacityValue.Value;
-    public bool HeartbeatActive             => _heartbeatActive.Value;
+    public bool ShouldPlayHeart              => _shouldPlayHeart.Value;
+    public bool MasterOpacityActive          => _masterOpacityActive.Value;
+    public float MasterOpacityValue          => _masterOpacityValue.Value;
+    public bool HeartbeatActive              => _heartbeatActive.Value;
 
     public override void OnStartClient()
     {
@@ -64,9 +68,20 @@ public class NetworkedMonitor : NetworkBehaviour
         _heartbeatActive.OnChange += OnHeartbeatActiveChanged;
 
         if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            // Initialise the UI directly — SyncVar values are valid at this point.
+            MonitorUI monitorUI = Instances.MonitorUI;
+            Debug.Log($"[NetworkedMonitor] OnStartClient (Monitor build) — MonitorUI found: {monitorUI != null}");
+            if (monitorUI != null)
+                monitorUI.Init(this);
+            else
+                Debug.LogWarning("[NetworkedMonitor] MonitorUI not found in scene — UI will not be initialised.");
             StartCoroutine(FindAndSubscribeInputFieldCoroutine());
+        }
         else
+        {
             StartCoroutine(FindViewManagerCoroutine());
+        }
     }
 
     public override void OnStopClient()

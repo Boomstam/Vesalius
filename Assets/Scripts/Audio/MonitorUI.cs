@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,9 +6,10 @@ using UnityEngine.UI;
 /// Monitor-side UI. Communicates exclusively through NetworkedMonitor —
 /// never touches AudioManager directly (AudioManager lives on the client).
 ///
-/// Waits for NetworkedMonitor to be available, then mirrors current server
-/// SyncVar state into all controls before wiring listeners, so a late-connecting
-/// Monitor sees the correct UI state immediately.
+/// Initialisation is driven by NetworkedMonitor.OnStartClient(), which calls
+/// Init() once the NetworkObject is fully spawned and SyncVar values are valid.
+/// This guarantees a late-connecting Monitor sees the correct UI state immediately
+/// without polling via a coroutine.
 ///
 /// Required UI elements (wire in Inspector):
 ///   Master section:  masterVolumeSlider, fadeInButton, fadeOutButton,
@@ -33,12 +33,15 @@ public class MonitorUI : MonoBehaviour
     [Header("View Toggles")]
     [SerializeField] private Toggle completeAnatomyToggle;
 
+    private bool _initialised;
+
     // ── Unity Lifecycle ────────────────────────────────────────────────────────
 
     private void Start()
     {
+        Debug.Log("[MonitorUI] Start() called.");
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
-        StartCoroutine(InitAfterNetworkedMonitorCoroutine());
+        Debug.Log($"[MonitorUI] After Start(), completeAnatomyToggle={(completeAnatomyToggle != null ? completeAnatomyToggle.name : "NULL")}");
     }
 
     private void OnDestroy()
@@ -58,17 +61,38 @@ public class MonitorUI : MonoBehaviour
     // ── Initialisation ─────────────────────────────────────────────────────────
 
     /// <summary>
-    /// Waits until Instances.NetworkedMonitor is available (the NetworkObject must
-    /// be spawned before we can read SyncVar values), then syncs all controls to the
-    /// current server state and wires the change listeners.
+    /// Called by NetworkedMonitor.OnStartClient() once the NetworkObject is spawned
+    /// and SyncVar values are authoritative. Syncs all controls to current server
+    /// state, then wires change listeners.
+    /// Safe to call more than once — subsequent calls are ignored.
     /// </summary>
-    private IEnumerator InitAfterNetworkedMonitorCoroutine()
+    public void Init(NetworkedMonitor nm)
     {
-        while (Instances.NetworkedMonitor == null)
-            yield return new WaitForSeconds(0.5f);
+        Debug.Log($"[MonitorUI] Init() called. Already initialised: {_initialised}");
 
-        Debug.Log("[MonitorUI] NetworkedMonitor found — syncing UI state.");
-        SyncStateFromServer(Instances.NetworkedMonitor);
+        if (_initialised) return;
+        _initialised = true;
+
+        // completeAnatomyToggle may not be resolved yet if OnStartClient fires
+        // before Start() on this MonoBehaviour (edge case on the same frame).
+        if (completeAnatomyToggle == null)
+        {
+            Debug.Log("[MonitorUI] completeAnatomyToggle was null at Init() — resolving now.");
+            completeAnatomyToggle = ResolveCompleteAnatomyToggle();
+        }
+
+        Debug.Log($"[MonitorUI] References check —" +
+            $"\n  masterVolumeSlider={masterVolumeSlider != null}" +
+            $"\n  fadeInButton={fadeInButton != null}" +
+            $"\n  fadeOutButton={fadeOutButton != null}" +
+            $"\n  muteButton={muteButton != null}" +
+            $"\n  resetButton={resetButton != null}" +
+            $"\n  organsOfNutritionToggle={organsOfNutritionToggle != null}" +
+            $"\n  organsOfGenerationToggle={organsOfGenerationToggle != null}" +
+            $"\n  heartToggle={heartToggle != null}" +
+            $"\n  completeAnatomyToggle={completeAnatomyToggle != null}");
+
+        SyncStateFromServer(nm);
         WireListeners();
     }
 
@@ -78,17 +102,31 @@ public class MonitorUI : MonoBehaviour
     /// </summary>
     private void SyncStateFromServer(NetworkedMonitor nm)
     {
+        Debug.Log($"[MonitorUI] SyncStateFromServer —" +
+            $"\n  ShouldPlayOrgansOfNutrition={nm.ShouldPlayOrgansOfNutrition}" +
+            $"\n  ShouldPlayOrgansOfGeneration={nm.ShouldPlayOrgansOfGeneration}" +
+            $"\n  ShouldPlayHeart={nm.ShouldPlayHeart}" +
+            $"\n  CompleteAnatomyMode={nm.CompleteAnatomyMode}");
+
         if (organsOfNutritionToggle != null)
             organsOfNutritionToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfNutrition);
+        else
+            Debug.LogWarning("[MonitorUI] organsOfNutritionToggle is null — skipping sync.");
 
         if (organsOfGenerationToggle != null)
             organsOfGenerationToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfGeneration);
+        else
+            Debug.LogWarning("[MonitorUI] organsOfGenerationToggle is null — skipping sync.");
 
         if (heartToggle != null)
             heartToggle.SetIsOnWithoutNotify(nm.ShouldPlayHeart);
+        else
+            Debug.LogWarning("[MonitorUI] heartToggle is null — skipping sync.");
 
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.SetIsOnWithoutNotify(nm.CompleteAnatomyMode);
+        else
+            Debug.LogWarning("[MonitorUI] completeAnatomyToggle is null — skipping sync.");
 
         // Master volume slider: server doesn't track a SyncVar for this (it's fire-and-forget),
         // so we leave the slider at its default Inspector value rather than guessing.
@@ -96,6 +134,8 @@ public class MonitorUI : MonoBehaviour
 
     private void WireListeners()
     {
+        Debug.Log("[MonitorUI] WireListeners() — wiring all UI callbacks.");
+
         masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
 
         fadeInButton.onClick.AddListener(OnFadeInClicked);
@@ -109,39 +149,67 @@ public class MonitorUI : MonoBehaviour
 
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.AddListener(OnCompleteAnatomyToggled);
+        else
+            Debug.LogWarning("[MonitorUI] completeAnatomyToggle is null — its listener was not wired.");
+
+        Debug.Log("[MonitorUI] WireListeners() complete.");
     }
 
     // ── Master Volume ──────────────────────────────────────────────────────────
 
     private void OnMasterVolumeChanged(float value)
     {
+        Debug.Log($"[MonitorUI] OnMasterVolumeChanged({value})");
         Instances.NetworkedMonitor.SetMasterVolume(value);
     }
 
-    private void OnFadeInClicked()  => Instances.NetworkedMonitor.TriggerMasterFadeIn();
-    private void OnFadeOutClicked() => Instances.NetworkedMonitor.TriggerMasterFadeOut();
-    private void OnMuteClicked()    => Instances.NetworkedMonitor.TriggerMasterMute();
-    private void OnResetClicked()   => Instances.NetworkedMonitor.TriggerMasterReset();
+    private void OnFadeInClicked()
+    {
+        Debug.Log("[MonitorUI] OnFadeInClicked()");
+        Instances.NetworkedMonitor.TriggerMasterFadeIn();
+    }
+
+    private void OnFadeOutClicked()
+    {
+        Debug.Log("[MonitorUI] OnFadeOutClicked()");
+        Instances.NetworkedMonitor.TriggerMasterFadeOut();
+    }
+
+    private void OnMuteClicked()
+    {
+        Debug.Log("[MonitorUI] OnMuteClicked()");
+        Instances.NetworkedMonitor.TriggerMasterMute();
+    }
+
+    private void OnResetClicked()
+    {
+        Debug.Log("[MonitorUI] OnResetClicked()");
+        Instances.NetworkedMonitor.TriggerMasterReset();
+    }
 
     // ── Audio Mode Toggles ─────────────────────────────────────────────────────
 
     private void OnOrgansOfNutritionToggled(bool value)
     {
+        Debug.Log($"[MonitorUI] OnOrgansOfNutritionToggled({value})");
         Instances.NetworkedMonitor.SetShouldPlayOrgansOfNutrition(value);
     }
 
     private void OnOrgansOfGenerationToggled(bool value)
     {
+        Debug.Log($"[MonitorUI] OnOrgansOfGenerationToggled({value})");
         Instances.NetworkedMonitor.SetShouldPlayOrgansOfGeneration(value);
     }
 
     private void OnHeartToggled(bool value)
     {
+        Debug.Log($"[MonitorUI] OnHeartToggled({value})");
         Instances.NetworkedMonitor.SetShouldPlayHeart(value);
     }
 
     private void OnCompleteAnatomyToggled(bool value)
     {
+        Debug.Log($"[MonitorUI] OnCompleteAnatomyToggled({value})");
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
     }
 
@@ -150,12 +218,19 @@ public class MonitorUI : MonoBehaviour
     private Toggle ResolveCompleteAnatomyToggle()
     {
         if (completeAnatomyToggle != null)
+        {
+            Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — already assigned in Inspector.");
             return completeAnatomyToggle;
+        }
 
         GameObject existing = GameObject.Find("Complete Anatomy");
         if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
+        {
+            Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — found existing 'Complete Anatomy' GameObject.");
             return existingToggle;
+        }
 
+        Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — no existing toggle found, creating new one.");
         return CreateCompleteAnatomyToggle();
     }
 
@@ -209,6 +284,7 @@ public class MonitorUI : MonoBehaviour
         TextMeshProUGUI label = CreateLabelChild(root.transform);
         label.text = "Complete Anatomy";
 
+        Debug.Log("[MonitorUI] CreateCompleteAnatomyToggle — toggle created successfully.");
         return toggle;
     }
 

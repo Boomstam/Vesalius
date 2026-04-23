@@ -7,8 +7,9 @@ using UnityEngine;
 /// </summary>
 public static class Instances
 {
-    private static AudioManager    _audioManager;
+    private static AudioManager     _audioManager;
     private static NetworkedMonitor _networkedMonitor;
+    private static MonitorUI        _monitorUI;
 
     public static ColorOverlay ColorOverlay { get; set; }
 
@@ -37,6 +38,20 @@ public static class Instances
                 throw new System.Exception("[Instances] NetworkedMonitor not found in scene.");
 
             return _networkedMonitor;
+        }
+    }
+
+    /// <summary>
+    /// Returns null rather than throwing — MonitorUI only exists in Monitor builds.
+    /// </summary>
+    public static MonitorUI MonitorUI
+    {
+        get
+        {
+            if (_monitorUI == null)
+                _monitorUI = Object.FindObjectOfType<MonitorUI>();
+
+            return _monitorUI;
         }
     }
 }

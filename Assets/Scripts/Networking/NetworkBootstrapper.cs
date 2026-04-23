@@ -87,19 +87,39 @@ public class NetworkBootstrapper : MonoBehaviour
         InstanceFinder.ServerManager.OnServerConnectionState += OnServerConnectionState;
         InstanceFinder.ClientManager.OnClientConnectionState += OnClientConnectionState;
 
+        // In the editor, ParrelSync clones should never start a server —
+        // they are pure clients connecting to the main editor's server.
+#if UNITY_EDITOR
+        bool isClone = ParrelSync.ClonesManager.IsClone();
+#else
+        bool isClone = false;
+#endif
+
         if (_runLocally)
         {
             switch (SceneLoader.BuildType)
             {
                 case BuildType.Monitor:
-                    Debug.Log($"[NetworkBootstrapper] Local mode — starting Multipass server " +
-                              $"(Tugboat:{_tugboatPort} / Bayou:{_bayouPort})");
-                    InstanceFinder.ServerManager.StartConnection();
+                    if (!isClone)
+                    {
+                        Debug.Log($"[NetworkBootstrapper] Local mode — starting Multipass server " +
+                                  $"(Tugboat:{_tugboatPort} / Bayou:{_bayouPort})");
+                        InstanceFinder.ServerManager.StartConnection();
+                    }
+                    else
+                    {
+                        Debug.Log("[NetworkBootstrapper] Local mode — Monitor clone, skipping server start.");
+                    }
                     SelectClientTransport();
                     ConnectClient("localhost");
                     break;
 
-                case BuildType.Server:
+                case BuildType.Server:                         // ← split this out
+                    Debug.Log($"[NetworkBootstrapper] Local mode — Server clone starting Multipass " +
+                              $"(Tugboat:{_tugboatPort} / Bayou:{_bayouPort})");
+                    InstanceFinder.ServerManager.StartConnection();
+                    break;                                     // ← no client connection
+
                 case BuildType.Client:
                     SelectClientTransport();
                     ConnectClient("localhost");
