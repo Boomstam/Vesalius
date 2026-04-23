@@ -104,7 +104,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void RemoveSubscriptions()
     {
-        if (!subscribed) return;
+        if (!subscribed)
+            return;
 
         if (dualPrimarySlider != null)
             dualPrimarySlider.onValueChanged.RemoveListener(OnDualPrimarySliderChanged);
@@ -222,7 +223,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void SetAnchoredRect(RectTransform rectTransform, Vector2 anchorMin, Vector2 anchorMax)
     {
-        if (rectTransform == null) return;
+        if (rectTransform == null)
+            return;
 
         rectTransform.anchorMin = anchorMin;
         rectTransform.anchorMax = anchorMax;
@@ -233,13 +235,16 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void SetAnchoredRectIfValid(TMP_Text label, Vector2 anchorMin, Vector2 anchorMax)
     {
-        if (label == null) return;
+        if (label == null)
+            return;
+
         SetAnchoredRect((RectTransform)label.transform, anchorMin, anchorMax);
     }
 
     private void OnDualPrimarySliderChanged(float value)
     {
-        if (suppressCallbacks || audioManager == null) return;
+        if (suppressCallbacks || audioManager == null)
+            return;
 
         if (currentKind == AudioManager.AudioOverlayKind.HeartDual)
             audioManager.SetHeartBandFade(value);
@@ -247,7 +252,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void OnDualSecondarySliderChanged(float value)
     {
-        if (suppressCallbacks || audioManager == null) return;
+        if (suppressCallbacks || audioManager == null)
+            return;
 
         if (currentKind == AudioManager.AudioOverlayKind.HeartDual)
             audioManager.SetHeartDelay(value);
@@ -255,12 +261,16 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void OnSingleSliderChanged(float value)
     {
-        if (suppressCallbacks || audioManager == null) return;
+        if (suppressCallbacks || audioManager == null)
+            return;
 
         switch (currentKind)
         {
-            case AudioManager.AudioOverlayKind.NutritionSingle:
-                audioManager.SetOrgansOfNutritionFade(value);
+            case AudioManager.AudioOverlayKind.IntroSingle:
+                audioManager.SetIntroFade(value);
+                break;
+            case AudioManager.AudioOverlayKind.PingPongSingle:
+                audioManager.SetPingPongFade(value);
                 break;
             case AudioManager.AudioOverlayKind.GenerationSingle:
                 audioManager.SetOrgansOfGenerationFade(value);
@@ -286,7 +296,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         suppressCallbacks = true;
 
         bool showDual = state.Kind == AudioManager.AudioOverlayKind.HeartDual;
-        bool showSingle = state.Kind == AudioManager.AudioOverlayKind.NutritionSingle
+        bool showSingle = state.Kind == AudioManager.AudioOverlayKind.IntroSingle
+                       || state.Kind == AudioManager.AudioOverlayKind.PingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle;
 
         SetDualOverlayActive(showDual);
@@ -338,19 +349,25 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void SetSliderValue(Slider slider, float value)
     {
-        if (slider == null) return;
+        if (slider == null)
+            return;
+
         slider.SetValueWithoutNotify(value);
     }
 
     private void SetLabelText(TMP_Text label, string text)
     {
-        if (label == null) return;
+        if (label == null)
+            return;
+
         label.text = text;
     }
 
     private void SetComponentGameObjectActive(Component component, bool isActive)
     {
-        if (component == null) return;
+        if (component == null)
+            return;
+
         component.gameObject.SetActive(isActive);
     }
 
@@ -376,8 +393,11 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
         switch (overlayKind)
         {
-            case AudioManager.AudioOverlayKind.NutritionSingle:
-                audioManager.SetOrgansOfNutritionFade(currentImageFade);
+            case AudioManager.AudioOverlayKind.IntroSingle:
+                audioManager.SetIntroFade(currentImageFade);
+                break;
+            case AudioManager.AudioOverlayKind.PingPongSingle:
+                audioManager.SetPingPongFade(currentImageFade);
                 break;
             case AudioManager.AudioOverlayKind.GenerationSingle:
                 audioManager.SetOrgansOfGenerationFade(currentImageFade);
@@ -411,7 +431,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     {
         return currentKind switch
         {
-            AudioManager.AudioOverlayKind.NutritionSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.IntroSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.PingPongSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.GenerationSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.HeartDual => GetDualAverageValue(),
             _ => 0f,
@@ -428,7 +449,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private bool IsDrivingKind(AudioManager.AudioOverlayKind kind)
     {
-        return kind == AudioManager.AudioOverlayKind.NutritionSingle
+        return kind == AudioManager.AudioOverlayKind.IntroSingle
+            || kind == AudioManager.AudioOverlayKind.PingPongSingle
             || kind == AudioManager.AudioOverlayKind.GenerationSingle
             || kind == AudioManager.AudioOverlayKind.HeartDual;
     }

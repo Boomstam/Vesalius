@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// Central audio orchestrator. Owns references to all sound players and
 /// exposes a clean API for play/stop and master volume control.
-/// Lives on the Client build. NetworkedMonitor drives it via its SyncVar callbacks.
+/// Lives on the Client build. NetworkedMonitor drives it via SyncVar callbacks.
 /// Tutorial is driven directly by client UI.
 /// </summary>
 public class AudioManager : MonoBehaviour
@@ -14,7 +15,8 @@ public class AudioManager : MonoBehaviour
     public enum AudioOverlayKind
     {
         None,
-        NutritionSingle,
+        IntroSingle,
+        PingPongSingle,
         GenerationSingle,
         HeartDual,
         TutorialDual,
@@ -51,7 +53,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sound Players")]
     [SerializeField] private DoubleFader tutorialFader;
-    [SerializeField] private DoubleFader organsOfNutritionFader;
+    [FormerlySerializedAs("organsOfNutritionFader")]
+    [SerializeField] private DoubleFader introFader;
+    [SerializeField] private DoubleFader pingPongFader;
     [SerializeField] private CirclePlayer organsOfGenerationPlayer;
     [SerializeField] private DelayPlayer heartPlayer;
 
@@ -67,11 +71,13 @@ public class AudioManager : MonoBehaviour
     private Coroutine masterFadeRoutine;
 
     private bool tutorialActive;
-    private bool organsOfNutritionActive;
+    private bool introActive;
+    private bool pingPongActive;
     private bool organsOfGenerationActive;
     private bool heartActive;
 
-    private float nutritionFadeValue = 0.5f;
+    private float introFadeValue = 0.5f;
+    private float pingPongFadeValue = 0.5f;
     private float generationFadeValue = 0.5f;
     private float heartBandFadeValue = 0.5f;
     private float heartDelayValue = 0.5f;
@@ -82,15 +88,24 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        tutorialFader.SetBandFade(0.5f);
-        organsOfNutritionFader.SetBandFade(nutritionFadeValue);
-        organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
-        heartPlayer.SetBandFade(heartBandFadeValue);
-        heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        if (tutorialFader != null)
+            tutorialFader.SetBandFade(0.5f);
+        if (introFader != null)
+            introFader.SetBandFade(introFadeValue);
+        if (pingPongFader != null)
+            pingPongFader.SetBandFade(pingPongFadeValue);
+        if (organsOfGenerationPlayer != null)
+            organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
+        if (heartPlayer != null)
+        {
+            heartPlayer.SetBandFade(heartBandFadeValue);
+            heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        }
     }
 
     public void PlayTutorial()
     {
+        StopAllSilent();
         tutorialActive = true;
         tutorialFader.Play();
         NotifyOverlayStateChanged();
@@ -103,23 +118,41 @@ public class AudioManager : MonoBehaviour
         NotifyOverlayStateChanged();
     }
 
-    public void PlayOrgansOfNutrition()
+    public void PlayIntro()
     {
-        organsOfNutritionActive = true;
-        organsOfNutritionFader.Play();
-        organsOfNutritionFader.SetBandFade(nutritionFadeValue);
+        StopAllSilent();
+        introActive = true;
+        introFader.Play();
+        introFader.SetBandFade(introFadeValue);
         NotifyOverlayStateChanged();
     }
 
-    public void StopOrgansOfNutrition()
+    public void StopIntro()
     {
-        organsOfNutritionActive = false;
-        organsOfNutritionFader.Stop();
+        introActive = false;
+        introFader.Stop();
+        NotifyOverlayStateChanged();
+    }
+
+    public void PlayPingPong()
+    {
+        StopAllSilent();
+        pingPongActive = true;
+        pingPongFader.Play();
+        pingPongFader.SetBandFade(pingPongFadeValue);
+        NotifyOverlayStateChanged();
+    }
+
+    public void StopPingPong()
+    {
+        pingPongActive = false;
+        pingPongFader.Stop();
         NotifyOverlayStateChanged();
     }
 
     public void PlayOrgansOfGeneration()
     {
+        StopAllSilent();
         organsOfGenerationActive = true;
         organsOfGenerationPlayer.StartPlayback();
         organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
@@ -135,6 +168,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayHeart()
     {
+        StopAllSilent();
         heartActive = true;
         heartPlayer.StartPlayback();
         heartPlayer.SetBandFade(heartBandFadeValue);
@@ -151,74 +185,92 @@ public class AudioManager : MonoBehaviour
 
     public void StopAll()
     {
-        tutorialActive = false;
-        organsOfNutritionActive = false;
-        organsOfGenerationActive = false;
-        heartActive = false;
-
-        tutorialFader.Stop();
-        organsOfNutritionFader.Stop();
-        organsOfGenerationPlayer.StopPlayback();
-        heartPlayer.StopAllPlaybackAndRemoveSources();
-
+        StopAllSilent();
         NotifyOverlayStateChanged();
     }
 
-    public void SetOrgansOfNutritionFade(float value)
+    private void StopAllSilent()
     {
-        nutritionFadeValue = Mathf.Clamp01(value);
-        organsOfNutritionFader.SetBandFade(nutritionFadeValue);
+        tutorialActive = false;
+        introActive = false;
+        pingPongActive = false;
+        organsOfGenerationActive = false;
+        heartActive = false;
+
+        if (tutorialFader != null)
+            tutorialFader.Stop();
+        if (introFader != null)
+            introFader.Stop();
+        if (pingPongFader != null)
+            pingPongFader.Stop();
+        if (organsOfGenerationPlayer != null)
+            organsOfGenerationPlayer.StopPlayback();
+        if (heartPlayer != null)
+            heartPlayer.StopAllPlaybackAndRemoveSources();
+    }
+
+    public void SetIntroFade(float value)
+    {
+        introFadeValue = Mathf.Clamp01(value);
+        if (introFader != null)
+            introFader.SetBandFade(introFadeValue);
+        NotifyOverlayStateChanged();
+    }
+
+    public void SetPingPongFade(float value)
+    {
+        pingPongFadeValue = Mathf.Clamp01(value);
+        if (pingPongFader != null)
+            pingPongFader.SetBandFade(pingPongFadeValue);
         NotifyOverlayStateChanged();
     }
 
     public void SetOrgansOfGenerationFade(float value)
     {
         generationFadeValue = Mathf.Clamp01(value);
-        organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
+        if (organsOfGenerationPlayer != null)
+            organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
         NotifyOverlayStateChanged();
     }
 
     public void SetHeartBandFade(float value)
     {
         heartBandFadeValue = Mathf.Clamp01(value);
-        heartPlayer.SetBandFade(heartBandFadeValue);
+        if (heartPlayer != null)
+            heartPlayer.SetBandFade(heartBandFadeValue);
         NotifyOverlayStateChanged();
     }
 
     public void SetHeartDelay(float normalizedValue)
     {
         heartDelayValue = Mathf.Clamp01(normalizedValue);
-        heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        if (heartPlayer != null)
+            heartPlayer.SetDelayTimeNormalized(heartDelayValue);
         NotifyOverlayStateChanged();
     }
 
-    /// <summary>Directly sets master volume. Intended for real-time slider control.</summary>
     public void SetMasterVolume(float volume)
     {
         StopMasterFade();
         ApplyMasterVolume(volume);
     }
 
-    /// <summary>Animates master volume from current level to 1 over fadeInTime.</summary>
     public void FadeIn()
     {
         StartMasterFade(true);
     }
 
-    /// <summary>Animates master volume from current level to silence over fadeOutTime.</summary>
     public void FadeOut()
     {
         StartMasterFade(false);
     }
 
-    /// <summary>Immediately silences master without affecting the running fade coroutine.</summary>
     public void MuteImmediate()
     {
         StopMasterFade();
         ApplyMasterVolume(MinVolume);
     }
 
-    /// <summary>Immediately restores master to full volume.</summary>
     public void ResetImmediate()
     {
         StopMasterFade();
@@ -233,7 +285,9 @@ public class AudioManager : MonoBehaviour
 
     private void StopMasterFade()
     {
-        if (masterFadeRoutine == null) return;
+        if (masterFadeRoutine == null)
+            return;
+
         StopCoroutine(masterFadeRoutine);
         masterFadeRoutine = null;
     }
@@ -290,11 +344,23 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
-        if (organsOfNutritionActive)
+        if (introActive)
         {
             return new AudioOverlayState(
-                AudioOverlayKind.NutritionSingle,
-                nutritionFadeValue,
+                AudioOverlayKind.IntroSingle,
+                introFadeValue,
+                0f,
+                "LOW",
+                "HIGH",
+                string.Empty,
+                string.Empty);
+        }
+
+        if (pingPongActive)
+        {
+            return new AudioOverlayState(
+                AudioOverlayKind.PingPongSingle,
+                pingPongFadeValue,
                 0f,
                 "LOW",
                 "HIGH",

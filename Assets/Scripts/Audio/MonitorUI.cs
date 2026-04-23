@@ -1,23 +1,37 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>
-/// Monitor-side UI. Communicates exclusively through NetworkedMonitor —
+/// Monitor-side UI. Communicates exclusively through NetworkedMonitor -
 /// never touches AudioManager directly (AudioManager lives on the client).
 ///
 /// Initialisation is driven by NetworkedMonitor.OnStartClient(), which calls
 /// Init() once the NetworkObject is fully spawned and SyncVar values are valid.
-/// This guarantees a late-connecting Monitor sees the correct UI state immediately
+/// This guarantees a late-connecting monitor sees the correct UI state immediately
 /// without polling via a coroutine.
-///
-/// Required UI elements (wire in Inspector):
-///   Master section:  masterVolumeSlider, fadeInButton, fadeOutButton,
-///                    muteButton, resetButton
-///   Audio toggles:   organsOfNutritionToggle, organsOfGenerationToggle, heartToggle
 /// </summary>
 public class MonitorUI : MonoBehaviour
 {
+    private static readonly Vector2 IntroToggleMin = new(0.525f, 0.79f);
+    private static readonly Vector2 IntroToggleMax = new(0.555f, 0.845f);
+    private static readonly Vector2 PingPongToggleMin = new(0.645f, 0.79f);
+    private static readonly Vector2 PingPongToggleMax = new(0.675f, 0.845f);
+    private static readonly Vector2 GenerationToggleMin = new(0.765f, 0.79f);
+    private static readonly Vector2 GenerationToggleMax = new(0.795f, 0.845f);
+    private static readonly Vector2 HeartToggleMin = new(0.885f, 0.79f);
+    private static readonly Vector2 HeartToggleMax = new(0.915f, 0.845f);
+
+    private static readonly Vector2 IntroLabelMin = new(0.47f, 0.855f);
+    private static readonly Vector2 IntroLabelMax = new(0.61f, 0.915f);
+    private static readonly Vector2 PingPongLabelMin = new(0.59f, 0.855f);
+    private static readonly Vector2 PingPongLabelMax = new(0.73f, 0.915f);
+    private static readonly Vector2 GenerationLabelMin = new(0.71f, 0.855f);
+    private static readonly Vector2 GenerationLabelMax = new(0.87f, 0.915f);
+    private static readonly Vector2 HeartLabelMin = new(0.83f, 0.855f);
+    private static readonly Vector2 HeartLabelMax = new(0.97f, 0.915f);
+
     [Header("Master Volume")]
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Button fadeInButton;
@@ -26,211 +40,288 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Button resetButton;
 
     [Header("Audio Mode Toggles")]
-    [SerializeField] private Toggle organsOfNutritionToggle;
+    [FormerlySerializedAs("organsOfNutritionToggle")]
+    [SerializeField] private Toggle introToggle;
+    [SerializeField] private Toggle pingPongToggle;
     [SerializeField] private Toggle organsOfGenerationToggle;
     [SerializeField] private Toggle heartToggle;
 
     [Header("View Toggles")]
     [SerializeField] private Toggle completeAnatomyToggle;
 
-    private bool _initialised;
-
-    // ── Unity Lifecycle ────────────────────────────────────────────────────────
+    private bool initialised;
+    private Text introLabel;
+    private Text pingPongLabel;
+    private Text organsOfGenerationLabel;
+    private Text heartLabel;
 
     private void Start()
     {
-        Debug.Log("[MonitorUI] Start() called.");
+        EnsureAudioToggleLayout();
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
-        Debug.Log($"[MonitorUI] After Start(), completeAnatomyToggle={(completeAnatomyToggle != null ? completeAnatomyToggle.name : "NULL")}");
     }
 
     private void OnDestroy()
     {
-        if (masterVolumeSlider != null) masterVolumeSlider.onValueChanged.RemoveListener(OnMasterVolumeChanged);
-        if (fadeInButton != null)       fadeInButton.onClick.RemoveListener(OnFadeInClicked);
-        if (fadeOutButton != null)      fadeOutButton.onClick.RemoveListener(OnFadeOutClicked);
-        if (muteButton != null)         muteButton.onClick.RemoveListener(OnMuteClicked);
-        if (resetButton != null)        resetButton.onClick.RemoveListener(OnResetClicked);
+        if (masterVolumeSlider != null)
+            masterVolumeSlider.onValueChanged.RemoveListener(OnMasterVolumeChanged);
+        if (fadeInButton != null)
+            fadeInButton.onClick.RemoveListener(OnFadeInClicked);
+        if (fadeOutButton != null)
+            fadeOutButton.onClick.RemoveListener(OnFadeOutClicked);
+        if (muteButton != null)
+            muteButton.onClick.RemoveListener(OnMuteClicked);
+        if (resetButton != null)
+            resetButton.onClick.RemoveListener(OnResetClicked);
 
-        if (organsOfNutritionToggle != null)  organsOfNutritionToggle.onValueChanged.RemoveListener(OnOrgansOfNutritionToggled);
-        if (organsOfGenerationToggle != null) organsOfGenerationToggle.onValueChanged.RemoveListener(OnOrgansOfGenerationToggled);
-        if (heartToggle != null)              heartToggle.onValueChanged.RemoveListener(OnHeartToggled);
-        if (completeAnatomyToggle != null)    completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
+        if (introToggle != null)
+            introToggle.onValueChanged.RemoveListener(OnIntroToggled);
+        if (pingPongToggle != null)
+            pingPongToggle.onValueChanged.RemoveListener(OnPingPongToggled);
+        if (organsOfGenerationToggle != null)
+            organsOfGenerationToggle.onValueChanged.RemoveListener(OnOrgansOfGenerationToggled);
+        if (heartToggle != null)
+            heartToggle.onValueChanged.RemoveListener(OnHeartToggled);
+        if (completeAnatomyToggle != null)
+            completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
     }
 
-    // ── Initialisation ─────────────────────────────────────────────────────────
-
-    /// <summary>
-    /// Called by NetworkedMonitor.OnStartClient() once the NetworkObject is spawned
-    /// and SyncVar values are authoritative. Syncs all controls to current server
-    /// state, then wires change listeners.
-    /// Safe to call more than once — subsequent calls are ignored.
-    /// </summary>
     public void Init(NetworkedMonitor nm)
     {
-        Debug.Log($"[MonitorUI] Init() called. Already initialised: {_initialised}");
+        if (initialised)
+            return;
 
-        if (_initialised) return;
-        _initialised = true;
+        initialised = true;
 
-        // completeAnatomyToggle may not be resolved yet if OnStartClient fires
-        // before Start() on this MonoBehaviour (edge case on the same frame).
+        EnsureAudioToggleLayout();
+
         if (completeAnatomyToggle == null)
-        {
-            Debug.Log("[MonitorUI] completeAnatomyToggle was null at Init() — resolving now.");
             completeAnatomyToggle = ResolveCompleteAnatomyToggle();
-        }
-
-        Debug.Log($"[MonitorUI] References check —" +
-            $"\n  masterVolumeSlider={masterVolumeSlider != null}" +
-            $"\n  fadeInButton={fadeInButton != null}" +
-            $"\n  fadeOutButton={fadeOutButton != null}" +
-            $"\n  muteButton={muteButton != null}" +
-            $"\n  resetButton={resetButton != null}" +
-            $"\n  organsOfNutritionToggle={organsOfNutritionToggle != null}" +
-            $"\n  organsOfGenerationToggle={organsOfGenerationToggle != null}" +
-            $"\n  heartToggle={heartToggle != null}" +
-            $"\n  completeAnatomyToggle={completeAnatomyToggle != null}");
 
         SyncStateFromServer(nm);
         WireListeners();
     }
 
-    /// <summary>
-    /// Pushes current SyncVar values into controls without notifying listeners,
-    /// so the UI reflects server state without sending redundant RPCs.
-    /// </summary>
     private void SyncStateFromServer(NetworkedMonitor nm)
     {
-        Debug.Log($"[MonitorUI] SyncStateFromServer —" +
-            $"\n  ShouldPlayOrgansOfNutrition={nm.ShouldPlayOrgansOfNutrition}" +
-            $"\n  ShouldPlayOrgansOfGeneration={nm.ShouldPlayOrgansOfGeneration}" +
-            $"\n  ShouldPlayHeart={nm.ShouldPlayHeart}" +
-            $"\n  CompleteAnatomyMode={nm.CompleteAnatomyMode}");
+        if (introToggle != null)
+            introToggle.SetIsOnWithoutNotify(nm.ShouldPlayIntro);
 
-        if (organsOfNutritionToggle != null)
-            organsOfNutritionToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfNutrition);
-        else
-            Debug.LogWarning("[MonitorUI] organsOfNutritionToggle is null — skipping sync.");
+        if (pingPongToggle != null)
+            pingPongToggle.SetIsOnWithoutNotify(nm.ShouldPlayPingPong);
 
         if (organsOfGenerationToggle != null)
             organsOfGenerationToggle.SetIsOnWithoutNotify(nm.ShouldPlayOrgansOfGeneration);
-        else
-            Debug.LogWarning("[MonitorUI] organsOfGenerationToggle is null — skipping sync.");
 
         if (heartToggle != null)
             heartToggle.SetIsOnWithoutNotify(nm.ShouldPlayHeart);
-        else
-            Debug.LogWarning("[MonitorUI] heartToggle is null — skipping sync.");
 
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.SetIsOnWithoutNotify(nm.CompleteAnatomyMode);
-        else
-            Debug.LogWarning("[MonitorUI] completeAnatomyToggle is null — skipping sync.");
-
-        // Master volume slider: server doesn't track a SyncVar for this (it's fire-and-forget),
-        // so we leave the slider at its default Inspector value rather than guessing.
     }
 
     private void WireListeners()
     {
-        Debug.Log("[MonitorUI] WireListeners() — wiring all UI callbacks.");
+        if (masterVolumeSlider != null)
+            masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
 
-        masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
+        if (fadeInButton != null)
+            fadeInButton.onClick.AddListener(OnFadeInClicked);
+        if (fadeOutButton != null)
+            fadeOutButton.onClick.AddListener(OnFadeOutClicked);
+        if (muteButton != null)
+            muteButton.onClick.AddListener(OnMuteClicked);
+        if (resetButton != null)
+            resetButton.onClick.AddListener(OnResetClicked);
 
-        fadeInButton.onClick.AddListener(OnFadeInClicked);
-        fadeOutButton.onClick.AddListener(OnFadeOutClicked);
-        muteButton.onClick.AddListener(OnMuteClicked);
-        resetButton.onClick.AddListener(OnResetClicked);
-
-        organsOfNutritionToggle.onValueChanged.AddListener(OnOrgansOfNutritionToggled);
-        organsOfGenerationToggle.onValueChanged.AddListener(OnOrgansOfGenerationToggled);
-        heartToggle.onValueChanged.AddListener(OnHeartToggled);
-
+        if (introToggle != null)
+            introToggle.onValueChanged.AddListener(OnIntroToggled);
+        if (pingPongToggle != null)
+            pingPongToggle.onValueChanged.AddListener(OnPingPongToggled);
+        if (organsOfGenerationToggle != null)
+            organsOfGenerationToggle.onValueChanged.AddListener(OnOrgansOfGenerationToggled);
+        if (heartToggle != null)
+            heartToggle.onValueChanged.AddListener(OnHeartToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.AddListener(OnCompleteAnatomyToggled);
-        else
-            Debug.LogWarning("[MonitorUI] completeAnatomyToggle is null — its listener was not wired.");
-
-        Debug.Log("[MonitorUI] WireListeners() complete.");
     }
-
-    // ── Master Volume ──────────────────────────────────────────────────────────
 
     private void OnMasterVolumeChanged(float value)
     {
-        Debug.Log($"[MonitorUI] OnMasterVolumeChanged({value})");
         Instances.NetworkedMonitor.SetMasterVolume(value);
     }
 
     private void OnFadeInClicked()
     {
-        Debug.Log("[MonitorUI] OnFadeInClicked()");
         Instances.NetworkedMonitor.TriggerMasterFadeIn();
     }
 
     private void OnFadeOutClicked()
     {
-        Debug.Log("[MonitorUI] OnFadeOutClicked()");
         Instances.NetworkedMonitor.TriggerMasterFadeOut();
     }
 
     private void OnMuteClicked()
     {
-        Debug.Log("[MonitorUI] OnMuteClicked()");
         Instances.NetworkedMonitor.TriggerMasterMute();
     }
 
     private void OnResetClicked()
     {
-        Debug.Log("[MonitorUI] OnResetClicked()");
         Instances.NetworkedMonitor.TriggerMasterReset();
     }
 
-    // ── Audio Mode Toggles ─────────────────────────────────────────────────────
-
-    private void OnOrgansOfNutritionToggled(bool value)
+    private void OnIntroToggled(bool value)
     {
-        Debug.Log($"[MonitorUI] OnOrgansOfNutritionToggled({value})");
-        Instances.NetworkedMonitor.SetShouldPlayOrgansOfNutrition(value);
+        Instances.NetworkedMonitor.SetShouldPlayIntro(value);
+    }
+
+    private void OnPingPongToggled(bool value)
+    {
+        Instances.NetworkedMonitor.SetShouldPlayPingPong(value);
     }
 
     private void OnOrgansOfGenerationToggled(bool value)
     {
-        Debug.Log($"[MonitorUI] OnOrgansOfGenerationToggled({value})");
         Instances.NetworkedMonitor.SetShouldPlayOrgansOfGeneration(value);
     }
 
     private void OnHeartToggled(bool value)
     {
-        Debug.Log($"[MonitorUI] OnHeartToggled({value})");
         Instances.NetworkedMonitor.SetShouldPlayHeart(value);
     }
 
     private void OnCompleteAnatomyToggled(bool value)
     {
-        Debug.Log($"[MonitorUI] OnCompleteAnatomyToggled({value})");
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
     }
 
-    // ── Complete Anatomy Toggle ────────────────────────────────────────────────
+    private void EnsureAudioToggleLayout()
+    {
+        introToggle = ResolveToggle(introToggle, "Intro Toggle", "Organs Of Nutrition Toggle");
+        organsOfGenerationToggle = ResolveToggle(organsOfGenerationToggle, "Organs Of Generation Toggle");
+        heartToggle = ResolveToggle(heartToggle, "Heart Toggle");
+
+        introLabel = ResolveLabel(introLabel, "Intro Label", "Organs Of Nutrition Label");
+        organsOfGenerationLabel = ResolveLabel(organsOfGenerationLabel, "Organs Of Generation Label");
+        heartLabel = ResolveLabel(heartLabel, "Heart Label");
+
+        if (introToggle != null)
+            RenameObject(introToggle.gameObject, "Intro Toggle");
+        if (introLabel != null)
+        {
+            RenameObject(introLabel.gameObject, "Intro Label");
+            introLabel.text = "Intro";
+        }
+
+        if (pingPongToggle == null && introToggle != null)
+            pingPongToggle = DuplicateToggle(introToggle, "Ping Pong Toggle");
+
+        if (pingPongLabel == null && introLabel != null)
+            pingPongLabel = DuplicateLabel(introLabel, "Ping Pong Label", "Ping Pong");
+
+        if (pingPongToggle != null)
+        {
+            RenameObject(pingPongToggle.gameObject, "Ping Pong Toggle");
+            pingPongToggle.SetIsOnWithoutNotify(false);
+        }
+
+        if (pingPongLabel != null)
+        {
+            RenameObject(pingPongLabel.gameObject, "Ping Pong Label");
+            pingPongLabel.text = "Ping Pong";
+        }
+
+        ApplyAudioToggleLayout();
+    }
+
+    private Toggle ResolveToggle(Toggle current, params string[] objectNames)
+    {
+        if (current != null)
+            return current;
+
+        foreach (string objectName in objectNames)
+        {
+            GameObject existing = GameObject.Find(objectName);
+            if (existing != null && existing.TryGetComponent(out Toggle toggle))
+                return toggle;
+        }
+
+        return null;
+    }
+
+    private Text ResolveLabel(Text current, params string[] objectNames)
+    {
+        if (current != null)
+            return current;
+
+        foreach (string objectName in objectNames)
+        {
+            GameObject existing = GameObject.Find(objectName);
+            if (existing != null && existing.TryGetComponent(out Text label))
+                return label;
+        }
+
+        return null;
+    }
+
+    private Toggle DuplicateToggle(Toggle template, string objectName)
+    {
+        Toggle duplicate = Instantiate(template, template.transform.parent);
+        duplicate.SetIsOnWithoutNotify(false);
+        duplicate.onValueChanged.RemoveAllListeners();
+        RenameObject(duplicate.gameObject, objectName);
+        return duplicate;
+    }
+
+    private Text DuplicateLabel(Text template, string objectName, string text)
+    {
+        Text duplicate = Instantiate(template, template.transform.parent);
+        duplicate.text = text;
+        RenameObject(duplicate.gameObject, objectName);
+        return duplicate;
+    }
+
+    private void ApplyAudioToggleLayout()
+    {
+        SetAnchors(introToggle, IntroToggleMin, IntroToggleMax);
+        SetAnchors(pingPongToggle, PingPongToggleMin, PingPongToggleMax);
+        SetAnchors(organsOfGenerationToggle, GenerationToggleMin, GenerationToggleMax);
+        SetAnchors(heartToggle, HeartToggleMin, HeartToggleMax);
+
+        SetAnchors(introLabel, IntroLabelMin, IntroLabelMax);
+        SetAnchors(pingPongLabel, PingPongLabelMin, PingPongLabelMax);
+        SetAnchors(organsOfGenerationLabel, GenerationLabelMin, GenerationLabelMax);
+        SetAnchors(heartLabel, HeartLabelMin, HeartLabelMax);
+    }
+
+    private void SetAnchors(Component component, Vector2 anchorMin, Vector2 anchorMax)
+    {
+        if (component == null || component.transform is not RectTransform rectTransform)
+            return;
+
+        rectTransform.anchorMin = anchorMin;
+        rectTransform.anchorMax = anchorMax;
+        rectTransform.offsetMin = Vector2.zero;
+        rectTransform.offsetMax = Vector2.zero;
+        rectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    private void RenameObject(GameObject gameObject, string objectName)
+    {
+        if (gameObject != null)
+            gameObject.name = objectName;
+    }
 
     private Toggle ResolveCompleteAnatomyToggle()
     {
         if (completeAnatomyToggle != null)
-        {
-            Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — already assigned in Inspector.");
             return completeAnatomyToggle;
-        }
 
         GameObject existing = GameObject.Find("Complete Anatomy");
         if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
-        {
-            Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — found existing 'Complete Anatomy' GameObject.");
             return existingToggle;
-        }
 
-        Debug.Log("[MonitorUI] ResolveCompleteAnatomyToggle — no existing toggle found, creating new one.");
         return CreateCompleteAnatomyToggle();
     }
 
@@ -238,10 +329,7 @@ public class MonitorUI : MonoBehaviour
     {
         GameObject partNumber = GameObject.Find("Part Number");
         if (partNumber == null || !partNumber.TryGetComponent(out RectTransform partNumberRect))
-        {
-            Debug.LogWarning("[MonitorUI] Could not create Complete Anatomy toggle because Part Number was not found.");
             return null;
-        }
 
         Transform parent = partNumberRect.parent;
         GameObject root = new GameObject("Complete Anatomy", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Toggle));
@@ -284,7 +372,6 @@ public class MonitorUI : MonoBehaviour
         TextMeshProUGUI label = CreateLabelChild(root.transform);
         label.text = "Complete Anatomy";
 
-        Debug.Log("[MonitorUI] CreateCompleteAnatomyToggle — toggle created successfully.");
         return toggle;
     }
 
