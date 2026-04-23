@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   tutorialFader: {fileID: 312531466}
-  introFader: {fileID: 980534591}
+  introPlayer: {fileID: 980534592}
   pingPongFader: {fileID: 2087654302}
   organsOfGenerationPlayer: {fileID: 974394320}
   heartPlayer: {fileID: 1994772341}
@@ -5293,6 +5293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980534590}
   - component: {fileID: 980534591}
+  - component: {fileID: 980534592}
   m_Layer: 0
   m_Name: IntroFader
   m_TagString: Untagged
@@ -5360,6 +5361,25 @@ MonoBehaviour:
   onClipTypeSelected:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &980534592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980534589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d61cd120fef02946868a343763e5b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntervalPlayer
+  fader: {fileID: 980534591}
+  initialSilenceMinSeconds: 1
+  initialSilenceMaxSeconds: 20
+  playMinSeconds: 5
+  playMaxSeconds: 10
+  silenceMinSeconds: 10
+  silenceMaxSeconds: 20
 --- !u!1 &989504222
 GameObject:
   m_ObjectHideFlags: 0

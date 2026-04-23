@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Tabs\Info\InfoManager.cs" />
     <Compile Include="Assets\Scripts\Messages\MonitorMessagePanel.cs" />
     <Compile Include="Assets\Scripts\Networking\NetworkedMonitor.cs" />
+    <Compile Include="Assets\Scripts\Audio\IntervalPlayer.cs" />
     <Compile Include="Assets\Scripts\UI\MonitorColorOverlayUI.cs" />
     <Compile Include="Assets\Scripts\Audio\ColorOverlay.cs" />
     <Compile Include="Assets\FishNet\Upgrading\MirrorUpgrade.cs" />

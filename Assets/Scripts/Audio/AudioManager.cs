@@ -53,8 +53,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sound Players")]
     [SerializeField] private DoubleFader tutorialFader;
+    [FormerlySerializedAs("introFader")]
     [FormerlySerializedAs("organsOfNutritionFader")]
-    [SerializeField] private DoubleFader introFader;
+    [SerializeField] private IntervalPlayer introPlayer;
     [SerializeField] private DoubleFader pingPongFader;
     [SerializeField] private CirclePlayer organsOfGenerationPlayer;
     [SerializeField] private DelayPlayer heartPlayer;
@@ -90,8 +91,8 @@ public class AudioManager : MonoBehaviour
     {
         if (tutorialFader != null)
             tutorialFader.SetBandFade(0.5f);
-        if (introFader != null)
-            introFader.SetBandFade(introFadeValue);
+        if (introPlayer != null)
+            introPlayer.SetBandFade(introFadeValue);
         if (pingPongFader != null)
             pingPongFader.SetBandFade(pingPongFadeValue);
         if (organsOfGenerationPlayer != null)
@@ -122,15 +123,19 @@ public class AudioManager : MonoBehaviour
     {
         StopAllSilent();
         introActive = true;
-        introFader.Play();
-        introFader.SetBandFade(introFadeValue);
+        if (introPlayer != null)
+        {
+            introPlayer.Play();
+            introPlayer.SetBandFade(introFadeValue);
+        }
         NotifyOverlayStateChanged();
     }
 
     public void StopIntro()
     {
         introActive = false;
-        introFader.Stop();
+        if (introPlayer != null)
+            introPlayer.Stop();
         NotifyOverlayStateChanged();
     }
 
@@ -199,8 +204,8 @@ public class AudioManager : MonoBehaviour
 
         if (tutorialFader != null)
             tutorialFader.Stop();
-        if (introFader != null)
-            introFader.Stop();
+        if (introPlayer != null)
+            introPlayer.Stop();
         if (pingPongFader != null)
             pingPongFader.Stop();
         if (organsOfGenerationPlayer != null)
@@ -212,8 +217,8 @@ public class AudioManager : MonoBehaviour
     public void SetIntroFade(float value)
     {
         introFadeValue = Mathf.Clamp01(value);
-        if (introFader != null)
-            introFader.SetBandFade(introFadeValue);
+        if (introPlayer != null)
+            introPlayer.SetBandFade(introFadeValue);
         NotifyOverlayStateChanged();
     }
 
