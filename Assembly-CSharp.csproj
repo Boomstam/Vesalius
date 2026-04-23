@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\Audio\DoubleFader.cs" />
     <Compile Include="Assets\Scripts\Audio\DelayPlayer.cs" />
     <Compile Include="Assets\Scripts\Audio\MonitorUI.cs" />
+    <Compile Include="Assets\Scripts\Audio\GroupColorOverlay.cs" />
     <Compile Include="Assets\FishNet\Upgrading\UpgradeFromMirrorMenu.cs" />
     <Compile Include="Assets\Scripts\UI\SoundSlotManager.cs" />
     <Compile Include="Assets\Scripts\Networking\MonitorLogging.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Assets\Scripts\Tabs\Sounds\CrossfadePlayer.cs" />
     <Compile Include="Assets\Scripts\UI\TextColorAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\ImageFader.cs" />
+    <Compile Include="Assets\Scripts\Audio\GroupPingPongPlayer.cs" />
     <Compile Include="Assets\Scripts\Tabs\ContentImageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ViewManager.cs" />
     <Compile Include="Assets\Scripts\Audio\GlobalAudioSliderOverlay.cs" />

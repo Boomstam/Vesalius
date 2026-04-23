@@ -12,6 +12,7 @@ public static class Instances
     private static MonitorUI        _monitorUI;
 
     public static ColorOverlay ColorOverlay { get; set; }
+    public static GroupColorOverlay GroupColorOverlay { get; set; }
 
     public static AudioManager AudioManager
     {

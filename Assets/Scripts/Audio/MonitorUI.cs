@@ -22,6 +22,8 @@ public class MonitorUI : MonoBehaviour
     private static readonly Vector2 GenerationToggleMax = new(0.795f, 0.845f);
     private static readonly Vector2 HeartToggleMin = new(0.885f, 0.79f);
     private static readonly Vector2 HeartToggleMax = new(0.915f, 0.845f);
+    private static readonly Vector2 GroupColorToggleMin = new(0.645f, 0.69f);
+    private static readonly Vector2 GroupColorToggleMax = new(0.675f, 0.745f);
 
     private static readonly Vector2 IntroLabelMin = new(0.47f, 0.855f);
     private static readonly Vector2 IntroLabelMax = new(0.61f, 0.915f);
@@ -31,6 +33,8 @@ public class MonitorUI : MonoBehaviour
     private static readonly Vector2 GenerationLabelMax = new(0.87f, 0.915f);
     private static readonly Vector2 HeartLabelMin = new(0.83f, 0.855f);
     private static readonly Vector2 HeartLabelMax = new(0.97f, 0.915f);
+    private static readonly Vector2 GroupColorLabelMin = new(0.56f, 0.755f);
+    private static readonly Vector2 GroupColorLabelMax = new(0.76f, 0.815f);
 
     [Header("Master Volume")]
     [SerializeField] private Slider masterVolumeSlider;
@@ -45,6 +49,7 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Toggle pingPongToggle;
     [SerializeField] private Toggle organsOfGenerationToggle;
     [SerializeField] private Toggle heartToggle;
+    [SerializeField] private Toggle groupColorToggle;
 
     [Header("View Toggles")]
     [SerializeField] private Toggle completeAnatomyToggle;
@@ -54,6 +59,7 @@ public class MonitorUI : MonoBehaviour
     private Text pingPongLabel;
     private Text organsOfGenerationLabel;
     private Text heartLabel;
+    private Text groupColorLabel;
 
     private void Start()
     {
@@ -82,6 +88,8 @@ public class MonitorUI : MonoBehaviour
             organsOfGenerationToggle.onValueChanged.RemoveListener(OnOrgansOfGenerationToggled);
         if (heartToggle != null)
             heartToggle.onValueChanged.RemoveListener(OnHeartToggled);
+        if (groupColorToggle != null)
+            groupColorToggle.onValueChanged.RemoveListener(OnGroupColorToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
     }
@@ -116,6 +124,9 @@ public class MonitorUI : MonoBehaviour
         if (heartToggle != null)
             heartToggle.SetIsOnWithoutNotify(nm.ShouldPlayHeart);
 
+        if (groupColorToggle != null)
+            groupColorToggle.SetIsOnWithoutNotify(nm.GroupColorModeActive);
+
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.SetIsOnWithoutNotify(nm.CompleteAnatomyMode);
     }
@@ -142,6 +153,8 @@ public class MonitorUI : MonoBehaviour
             organsOfGenerationToggle.onValueChanged.AddListener(OnOrgansOfGenerationToggled);
         if (heartToggle != null)
             heartToggle.onValueChanged.AddListener(OnHeartToggled);
+        if (groupColorToggle != null)
+            groupColorToggle.onValueChanged.AddListener(OnGroupColorToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.AddListener(OnCompleteAnatomyToggled);
     }
@@ -191,6 +204,11 @@ public class MonitorUI : MonoBehaviour
         Instances.NetworkedMonitor.SetShouldPlayHeart(value);
     }
 
+    private void OnGroupColorToggled(bool value)
+    {
+        Instances.NetworkedMonitor.SetGroupColorModeActive(value);
+    }
+
     private void OnCompleteAnatomyToggled(bool value)
     {
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
@@ -201,10 +219,12 @@ public class MonitorUI : MonoBehaviour
         introToggle = ResolveToggle(introToggle, "Intro Toggle", "Organs Of Nutrition Toggle");
         organsOfGenerationToggle = ResolveToggle(organsOfGenerationToggle, "Organs Of Generation Toggle");
         heartToggle = ResolveToggle(heartToggle, "Heart Toggle");
+        groupColorToggle = ResolveToggle(groupColorToggle, "Group Color Toggle");
 
         introLabel = ResolveLabel(introLabel, "Intro Label", "Organs Of Nutrition Label");
         organsOfGenerationLabel = ResolveLabel(organsOfGenerationLabel, "Organs Of Generation Label");
         heartLabel = ResolveLabel(heartLabel, "Heart Label");
+        groupColorLabel = ResolveLabel(groupColorLabel, "Group Color Label");
 
         if (introToggle != null)
             RenameObject(introToggle.gameObject, "Intro Toggle");
@@ -230,6 +250,24 @@ public class MonitorUI : MonoBehaviour
         {
             RenameObject(pingPongLabel.gameObject, "Ping Pong Label");
             pingPongLabel.text = "Ping Pong";
+        }
+
+        if (groupColorToggle == null && pingPongToggle != null)
+            groupColorToggle = DuplicateToggle(pingPongToggle, "Group Color Toggle");
+
+        if (groupColorLabel == null && pingPongLabel != null)
+            groupColorLabel = DuplicateLabel(pingPongLabel, "Group Color Label", "Group Color");
+
+        if (groupColorToggle != null)
+        {
+            RenameObject(groupColorToggle.gameObject, "Group Color Toggle");
+            groupColorToggle.SetIsOnWithoutNotify(false);
+        }
+
+        if (groupColorLabel != null)
+        {
+            RenameObject(groupColorLabel.gameObject, "Group Color Label");
+            groupColorLabel.text = "Group Color";
         }
 
         ApplyAudioToggleLayout();
@@ -288,11 +326,13 @@ public class MonitorUI : MonoBehaviour
         SetAnchors(pingPongToggle, PingPongToggleMin, PingPongToggleMax);
         SetAnchors(organsOfGenerationToggle, GenerationToggleMin, GenerationToggleMax);
         SetAnchors(heartToggle, HeartToggleMin, HeartToggleMax);
+        SetAnchors(groupColorToggle, GroupColorToggleMin, GroupColorToggleMax);
 
         SetAnchors(introLabel, IntroLabelMin, IntroLabelMax);
         SetAnchors(pingPongLabel, PingPongLabelMin, PingPongLabelMax);
         SetAnchors(organsOfGenerationLabel, GenerationLabelMin, GenerationLabelMax);
         SetAnchors(heartLabel, HeartLabelMin, HeartLabelMax);
+        SetAnchors(groupColorLabel, GroupColorLabelMin, GroupColorLabelMax);
     }
 
     private void SetAnchors(Component component, Vector2 anchorMin, Vector2 anchorMax)

@@ -1,5 +1,7 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 /// <summary>
@@ -18,16 +20,19 @@ public class MonitorMessagePanel : MonoBehaviour
     [Header("Control Buttons")]
     [SerializeField] private Button _resetDeckButton;
     [SerializeField] private Button _hardCutButton;
+    [SerializeField] private Button _groupMessageButton;
 
     private NetworkedMessageSystem _nms;
-    private UnityEngine.Events.UnityAction _sendChimes;
-    private UnityEngine.Events.UnityAction _sendAnvil;
-    private UnityEngine.Events.UnityAction _sendWaterphone;
-    private UnityEngine.Events.UnityAction _sendCrotales;
-    private UnityEngine.Events.UnityAction _sendCymbal;
-    private UnityEngine.Events.UnityAction _sendWaterStation;
-    private UnityEngine.Events.UnityAction _resetDeck;
-    private UnityEngine.Events.UnityAction _hardCut;
+    private NetworkedMonitor _networkedMonitor;
+    private UnityAction _sendChimes;
+    private UnityAction _sendAnvil;
+    private UnityAction _sendWaterphone;
+    private UnityAction _sendCrotales;
+    private UnityAction _sendCymbal;
+    private UnityAction _sendWaterStation;
+    private UnityAction _resetDeck;
+    private UnityAction _hardCut;
+    private UnityAction _groupMessage;
 
     private void Start()
     {
@@ -42,11 +47,17 @@ public class MonitorMessagePanel : MonoBehaviour
 
     private IEnumerator FindAndWireCoroutine()
     {
-        while (_nms == null)
-        {
-            _nms = FindObjectOfType<NetworkedMessageSystem>();
+        EnsureGroupMessageButton();
 
+        while (_nms == null || _networkedMonitor == null)
+        {
             if (_nms == null)
+                _nms = FindObjectOfType<NetworkedMessageSystem>();
+
+            if (_networkedMonitor == null)
+                _networkedMonitor = FindObjectOfType<NetworkedMonitor>();
+
+            if (_nms == null || _networkedMonitor == null)
                 yield return new WaitForSeconds(0.5f);
         }
 
@@ -60,6 +71,7 @@ public class MonitorMessagePanel : MonoBehaviour
         _sendWaterStation = () => _nms.SendMessageToTargets("water station");
         _resetDeck = () => _nms.ResetDeck();
         _hardCut = () => _nms.HardCutAll();
+        _groupMessage = () => _networkedMonitor.TriggerGroupMessageMode();
 
         AddListener(_chimesButton, _sendChimes);
         AddListener(_anvilButton, _sendAnvil);
@@ -69,9 +81,10 @@ public class MonitorMessagePanel : MonoBehaviour
         AddListener(_waterStationButton, _sendWaterStation);
         AddListener(_resetDeckButton, _resetDeck);
         AddListener(_hardCutButton, _hardCut);
+        AddListener(_groupMessageButton, _groupMessage);
     }
 
-    private static void AddListener(Button button, UnityEngine.Events.UnityAction action)
+    private static void AddListener(Button button, UnityAction action)
     {
         if (button != null)
             button.onClick.AddListener(action);
@@ -87,11 +100,55 @@ public class MonitorMessagePanel : MonoBehaviour
         RemoveListener(_waterStationButton, _sendWaterStation);
         RemoveListener(_resetDeckButton, _resetDeck);
         RemoveListener(_hardCutButton, _hardCut);
+        RemoveListener(_groupMessageButton, _groupMessage);
     }
 
-    private static void RemoveListener(Button button, UnityEngine.Events.UnityAction action)
+    private static void RemoveListener(Button button, UnityAction action)
     {
         if (button != null && action != null)
             button.onClick.RemoveListener(action);
+    }
+
+    private void EnsureGroupMessageButton()
+    {
+        if (_groupMessageButton != null)
+            return;
+
+        GameObject existing = GameObject.Find("Group Message Button");
+        if (existing != null && existing.TryGetComponent(out Button existingButton))
+        {
+            _groupMessageButton = existingButton;
+            return;
+        }
+
+        Button template = _resetDeckButton != null ? _resetDeckButton : _hardCutButton;
+        if (template == null)
+            return;
+
+        _groupMessageButton = Instantiate(template, template.transform.parent);
+        _groupMessageButton.name = "Group Message Button";
+
+        if (_groupMessageButton.transform is RectTransform groupRect)
+        {
+            groupRect.anchorMin = new Vector2(0.5f, 0.5f);
+            groupRect.anchorMax = new Vector2(0.5f, 0.5f);
+            groupRect.pivot = new Vector2(0.5f, 0.5f);
+            groupRect.sizeDelta = new Vector2(440f, 56f);
+            groupRect.anchoredPosition = new Vector2(0f, -200f);
+        }
+
+        if (_resetDeckButton != null && _resetDeckButton.transform is RectTransform resetRect)
+            resetRect.anchoredPosition = new Vector2(-120f, -285f);
+
+        if (_hardCutButton != null && _hardCutButton.transform is RectTransform hardCutRect)
+            hardCutRect.anchoredPosition = new Vector2(120f, -285f);
+
+        Text text = _groupMessageButton.GetComponentInChildren<Text>(true);
+        if (text != null)
+            text.text = "Group With Your Color";
+
+        TMP_Text tmpText = _groupMessageButton.GetComponentInChildren<TMP_Text>(true);
+        if (tmpText != null)
+            tmpText.text = "Group With Your Color";
     }
 }

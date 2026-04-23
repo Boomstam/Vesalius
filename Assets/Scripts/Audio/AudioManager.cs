@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
         None,
         IntroSingle,
         PingPongSingle,
+        GroupPingPongSingle,
         GenerationSingle,
         HeartDual,
         TutorialDual,
@@ -57,6 +58,7 @@ public class AudioManager : MonoBehaviour
     [FormerlySerializedAs("organsOfNutritionFader")]
     [SerializeField] private IntervalPlayer introPlayer;
     [SerializeField] private DoubleFader pingPongFader;
+    [SerializeField] private GroupPingPongPlayer groupPingPongPlayer;
     [SerializeField] private CirclePlayer organsOfGenerationPlayer;
     [SerializeField] private DelayPlayer heartPlayer;
 
@@ -74,6 +76,7 @@ public class AudioManager : MonoBehaviour
     private bool tutorialActive;
     private bool introActive;
     private bool pingPongActive;
+    private bool groupPingPongActive;
     private bool organsOfGenerationActive;
     private bool heartActive;
 
@@ -91,12 +94,18 @@ public class AudioManager : MonoBehaviour
     {
         if (tutorialFader != null)
             tutorialFader.SetBandFade(0.5f);
+
         if (introPlayer != null)
             introPlayer.SetBandFade(introFadeValue);
+
         if (pingPongFader != null)
             pingPongFader.SetBandFade(pingPongFadeValue);
+
+        EnsureGroupPingPongPlayer();
+
         if (organsOfGenerationPlayer != null)
             organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
+
         if (heartPlayer != null)
         {
             heartPlayer.SetBandFade(heartBandFadeValue);
@@ -128,6 +137,7 @@ public class AudioManager : MonoBehaviour
             introPlayer.Play();
             introPlayer.SetBandFade(introFadeValue);
         }
+
         NotifyOverlayStateChanged();
     }
 
@@ -136,6 +146,7 @@ public class AudioManager : MonoBehaviour
         introActive = false;
         if (introPlayer != null)
             introPlayer.Stop();
+
         NotifyOverlayStateChanged();
     }
 
@@ -152,6 +163,31 @@ public class AudioManager : MonoBehaviour
     {
         pingPongActive = false;
         pingPongFader.Stop();
+        NotifyOverlayStateChanged();
+    }
+
+    public void PlayGroupPingPong(int groupIndex)
+    {
+        StopAllSilent();
+        groupPingPongActive = true;
+
+        EnsureGroupPingPongPlayer();
+        if (pingPongFader != null)
+            pingPongFader.SetBandFade(pingPongFadeValue);
+
+        if (groupPingPongPlayer != null)
+            groupPingPongPlayer.Play(groupIndex);
+
+        NotifyOverlayStateChanged();
+    }
+
+    public void StopGroupPingPong()
+    {
+        groupPingPongActive = false;
+
+        if (groupPingPongPlayer != null)
+            groupPingPongPlayer.Stop();
+
         NotifyOverlayStateChanged();
     }
 
@@ -199,6 +235,7 @@ public class AudioManager : MonoBehaviour
         tutorialActive = false;
         introActive = false;
         pingPongActive = false;
+        groupPingPongActive = false;
         organsOfGenerationActive = false;
         heartActive = false;
 
@@ -208,6 +245,8 @@ public class AudioManager : MonoBehaviour
             introPlayer.Stop();
         if (pingPongFader != null)
             pingPongFader.Stop();
+        if (groupPingPongPlayer != null)
+            groupPingPongPlayer.Stop();
         if (organsOfGenerationPlayer != null)
             organsOfGenerationPlayer.StopPlayback();
         if (heartPlayer != null)
@@ -361,6 +400,18 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
+        if (groupPingPongActive)
+        {
+            return new AudioOverlayState(
+                AudioOverlayKind.GroupPingPongSingle,
+                pingPongFadeValue,
+                0f,
+                "LOW",
+                "HIGH",
+                string.Empty,
+                string.Empty);
+        }
+
         if (pingPongActive)
         {
             return new AudioOverlayState(
@@ -398,5 +449,19 @@ public class AudioManager : MonoBehaviour
     private void NotifyOverlayStateChanged()
     {
         OverlayStateChanged?.Invoke(CurrentOverlayState);
+    }
+
+    private void EnsureGroupPingPongPlayer()
+    {
+        if (pingPongFader == null)
+            return;
+
+        if (groupPingPongPlayer == null)
+            groupPingPongPlayer = GetComponent<GroupPingPongPlayer>();
+
+        if (groupPingPongPlayer == null)
+            groupPingPongPlayer = gameObject.AddComponent<GroupPingPongPlayer>();
+
+        groupPingPongPlayer.SetFader(pingPongFader);
     }
 }

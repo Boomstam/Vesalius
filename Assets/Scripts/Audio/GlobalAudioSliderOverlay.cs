@@ -270,6 +270,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
                 audioManager.SetIntroFade(value);
                 break;
             case AudioManager.AudioOverlayKind.PingPongSingle:
+            case AudioManager.AudioOverlayKind.GroupPingPongSingle:
                 audioManager.SetPingPongFade(value);
                 break;
             case AudioManager.AudioOverlayKind.GenerationSingle:
@@ -297,6 +298,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
         bool showDual = state.Kind == AudioManager.AudioOverlayKind.HeartDual;
         bool showSingle = state.Kind == AudioManager.AudioOverlayKind.IntroSingle
+                       || state.Kind == AudioManager.AudioOverlayKind.GroupPingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.PingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle;
 
@@ -397,6 +399,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
                 audioManager.SetIntroFade(currentImageFade);
                 break;
             case AudioManager.AudioOverlayKind.PingPongSingle:
+            case AudioManager.AudioOverlayKind.GroupPingPongSingle:
                 audioManager.SetPingPongFade(currentImageFade);
                 break;
             case AudioManager.AudioOverlayKind.GenerationSingle:
@@ -433,6 +436,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         {
             AudioManager.AudioOverlayKind.IntroSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.PingPongSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.GroupPingPongSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.GenerationSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.HeartDual => GetDualAverageValue(),
             _ => 0f,
@@ -451,6 +455,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     {
         return kind == AudioManager.AudioOverlayKind.IntroSingle
             || kind == AudioManager.AudioOverlayKind.PingPongSingle
+            || kind == AudioManager.AudioOverlayKind.GroupPingPongSingle
             || kind == AudioManager.AudioOverlayKind.GenerationSingle
             || kind == AudioManager.AudioOverlayKind.HeartDual;
     }

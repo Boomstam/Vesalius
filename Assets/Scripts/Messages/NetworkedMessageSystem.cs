@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FishNet;
@@ -21,9 +22,15 @@ public class NetworkedMessageSystem : NetworkBehaviour
     [SerializeField] private float _messageDuration = 60f;
 
     private readonly Dictionary<NetworkConnection, string> _connectedClients = new();
+    private readonly Dictionary<string, NetworkConnection> _connectionsByUniqueId = new();
     private readonly List<NetworkConnection> _deckRemaining = new();
 
     private MessageOverlay _messageOverlay;
+
+    /// <summary>
+    /// Fired on the server whenever a client registers or reconnects.
+    /// </summary>
+    public event Action<NetworkConnection, string> ClientRegistered;
 
     public override void OnStartServer()
     {
@@ -43,6 +50,7 @@ public class NetworkedMessageSystem : NetworkBehaviour
             InstanceFinder.ServerManager.OnRemoteConnectionState -= OnRemoteConnectionState;
 
         _connectedClients.Clear();
+        _connectionsByUniqueId.Clear();
         _deckRemaining.Clear();
     }
 
@@ -59,36 +67,53 @@ public class NetworkedMessageSystem : NetworkBehaviour
         if (args.ConnectionState != RemoteConnectionState.Stopped)
             return;
 
-        if (!_connectedClients.ContainsKey(conn))
+        if (!_connectedClients.TryGetValue(conn, out string uniqueId))
             return;
 
-        Debug.Log($"[NetworkedMessageSystem] Client '{_connectedClients[conn]}' disconnected.");
+        Debug.Log($"[NetworkedMessageSystem] Client '{uniqueId}' disconnected.");
         _connectedClients.Remove(conn);
         _deckRemaining.Remove(conn);
+
+        if (_connectionsByUniqueId.TryGetValue(uniqueId, out NetworkConnection mappedConn) && mappedConn == conn)
+            _connectionsByUniqueId.Remove(uniqueId);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void RegisterClient(string uniqueId, NetworkConnection sender = null)
     {
-        if (sender == null)
+        if (sender == null || string.IsNullOrWhiteSpace(uniqueId))
             return;
 
+        if (_connectionsByUniqueId.TryGetValue(uniqueId, out NetworkConnection previousConn) && previousConn != sender)
+        {
+            _connectedClients.Remove(previousConn);
+            _deckRemaining.Remove(previousConn);
+        }
+
         _connectedClients[sender] = uniqueId;
+        _connectionsByUniqueId[uniqueId] = sender;
 
         if (!_deckRemaining.Contains(sender))
             _deckRemaining.Add(sender);
 
         Debug.Log($"[NetworkedMessageSystem] Registered '{uniqueId}' (conn {sender.ClientId}). Total: {_connectedClients.Count} Deck: {_deckRemaining.Count}");
+        ClientRegistered?.Invoke(sender, uniqueId);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void SendMessageToTargets(string word)
     {
-        var targets = PickTargets(_targetsPerMessage);
+        List<NetworkConnection> targets = PickTargets(_targetsPerMessage);
         Debug.Log($"[NetworkedMessageSystem] '{word}' -> {targets.Count} client(s).");
 
         foreach (NetworkConnection conn in targets)
             RpcReceiveMessage(conn, word, _messageDuration);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerGroupMessage()
+    {
+        BroadcastGroupMessage();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -107,6 +132,22 @@ public class NetworkedMessageSystem : NetworkBehaviour
         RpcHardCut();
     }
 
+    public IReadOnlyCollection<NetworkConnection> GetAllConnections()
+    {
+        return _connectedClients.Keys;
+    }
+
+    public bool TryGetUniqueId(NetworkConnection connection, out string uniqueId)
+    {
+        return _connectedClients.TryGetValue(connection, out uniqueId);
+    }
+
+    public void BroadcastGroupMessage()
+    {
+        Debug.Log("[NetworkedMessageSystem] Broadcasting group message to all clients.");
+        RpcReceiveGroupMessage(_messageDuration);
+    }
+
     [TargetRpc]
     private void RpcReceiveMessage(NetworkConnection conn, string word, float duration)
     {
@@ -115,6 +156,21 @@ public class NetworkedMessageSystem : NetworkBehaviour
 
         if (_messageOverlay != null)
             _messageOverlay.ShowMessage(word, duration);
+        else
+            Debug.LogWarning("[NetworkedMessageSystem] MessageOverlay not found on client.");
+    }
+
+    [ObserversRpc]
+    private void RpcReceiveGroupMessage(float duration)
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        if (_messageOverlay == null)
+            _messageOverlay = FindObjectOfType<MessageOverlay>();
+
+        if (_messageOverlay != null)
+            _messageOverlay.ShowMessage("Group with your color", duration, showBackdrop: false);
         else
             Debug.LogWarning("[NetworkedMessageSystem] MessageOverlay not found on client.");
     }
@@ -133,12 +189,12 @@ public class NetworkedMessageSystem : NetworkBehaviour
 
     private List<NetworkConnection> PickTargets(int count)
     {
-        var connected = new List<NetworkConnection>(_connectedClients.Keys);
+        List<NetworkConnection> connected = new(_connectedClients.Keys);
         if (connected.Count == 0)
             return new List<NetworkConnection>();
 
         int needed = Mathf.Min(Mathf.Max(0, count), connected.Count);
-        var selected = new List<NetworkConnection>();
+        List<NetworkConnection> selected = new();
 
         while (selected.Count < needed)
         {
@@ -165,7 +221,7 @@ public class NetworkedMessageSystem : NetworkBehaviour
     {
         for (int i = list.Count - 1; i > 0; i--)
         {
-            int j = Random.Range(0, i + 1);
+            int j = UnityEngine.Random.Range(0, i + 1);
             (list[i], list[j]) = (list[j], list[i]);
         }
     }

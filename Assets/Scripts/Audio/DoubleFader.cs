@@ -18,7 +18,7 @@ public class DoubleFader : MonoBehaviour
     [Header("Mixer Groups")]
     [SerializeField] private AudioMixerGroup lowMixerGroup;
     [SerializeField] private AudioMixerGroup highMixerGroup;
-    [SerializeField] private string lowMixerParam  = "Low";
+    [SerializeField] private string lowMixerParam = "Low";
     [SerializeField] private string highMixerParam = "High";
 
     [Header("Clips")]
@@ -35,8 +35,6 @@ public class DoubleFader : MonoBehaviour
 
     private const float MinVolume = 0.01f;
 
-    // ── Public API ─────────────────────────────────────────────────────────────
-
     public void Play()
     {
         if (lowClips.Length == 0 || highClips.Length == 0)
@@ -47,14 +45,16 @@ public class DoubleFader : MonoBehaviour
 
         int type = Random.Range(0, lowClips.Length);
 
-        lowSource.outputAudioMixerGroup  = lowMixerGroup;
+        lowSource.outputAudioMixerGroup = lowMixerGroup;
         highSource.outputAudioMixerGroup = highMixerGroup;
 
-        lowSource.clip  = lowClips[type];
+        lowSource.clip = lowClips[type];
         highSource.clip = highClips[type];
 
-        lowSource.loop  = true;
+        lowSource.loop = true;
         highSource.loop = true;
+        lowSource.volume = 1f;
+        highSource.volume = 1f;
 
         lowSource.Play();
         highSource.Play();
@@ -75,10 +75,25 @@ public class DoubleFader : MonoBehaviour
     /// </summary>
     public void SetBandFade(float fadeVal)
     {
-        float lowVolume  = Mathf.Clamp(1f - fadeVal, MinVolume, 1f);
-        float highVolume = Mathf.Clamp(fadeVal,       MinVolume, 1f);
+        float lowVolume = Mathf.Clamp(1f - fadeVal, MinVolume, 1f);
+        float highVolume = Mathf.Clamp(fadeVal, MinVolume, 1f);
 
-        lowMixerGroup.audioMixer.SetFloat(lowMixerParam,  Mathf.Log(lowVolume)  * 20f);
+        lowMixerGroup.audioMixer.SetFloat(lowMixerParam, Mathf.Log(lowVolume) * 20f);
         highMixerGroup.audioMixer.SetFloat(highMixerParam, Mathf.Log(highVolume) * 20f);
+    }
+
+    /// <summary>
+    /// Applies an overall volume envelope independently from the low/high band fade.
+    /// Used by the grouped ping pong cycle for its 10s fade in/out.
+    /// </summary>
+    public void SetGroupVolume(float volume)
+    {
+        float clamped = Mathf.Clamp01(volume);
+
+        if (lowSource != null)
+            lowSource.volume = clamped;
+
+        if (highSource != null)
+            highSource.volume = clamped;
     }
 }

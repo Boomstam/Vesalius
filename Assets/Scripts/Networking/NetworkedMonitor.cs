@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using FishNet.Connection;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using TMPro;
@@ -13,6 +15,9 @@ using UnityEngine;
 /// </summary>
 public class NetworkedMonitor : NetworkBehaviour
 {
+    private const int GroupA = 0;
+    private const int GroupB = 1;
+
     private enum AudioMode
     {
         None,
@@ -41,12 +46,23 @@ public class NetworkedMonitor : NetworkBehaviour
     [Tooltip("Duration of one full heartbeat cycle in seconds.")]
     [SerializeField] private float heartbeatBeatTime = 0.8f;
 
+    [Header("Group Color Mode")]
+    [Tooltip("Exactly two colors: index 0 is Group A, index 1 is Group B.")]
+    [SerializeField] private Color[] groupColors = { new(0.93f, 0.26f, 0.24f, 1f), new(0.13f, 0.59f, 0.95f, 1f) };
+
     private readonly SyncVar<bool> masterOpacityActive = new(false);
     private readonly SyncVar<float> masterOpacityValue = new(1f);
     private readonly SyncVar<bool> heartbeatActive = new(false);
     private readonly SyncVar<Color> heartbeatStartColorSync = new();
     private readonly SyncVar<Color> heartbeatEndColorSync = new();
     private readonly SyncVar<float> heartbeatBeatTimeSync = new(0.8f);
+    private readonly SyncVar<bool> groupColorModeActive = new(false);
+
+    private readonly Dictionary<string, int> groupAssignmentsByUniqueId = new();
+
+    private NetworkedMessageSystem networkedMessageSystem;
+    private int myGroupIndex = -1;
+    private Color myGroupColor = Color.clear;
 
     public bool CompleteAnatomyMode => completeAnatomyMode.Value;
     public bool ShouldPlayIntro => shouldPlayIntro.Value;
@@ -56,6 +72,13 @@ public class NetworkedMonitor : NetworkBehaviour
     public bool MasterOpacityActive => masterOpacityActive.Value;
     public float MasterOpacityValue => masterOpacityValue.Value;
     public bool HeartbeatActive => heartbeatActive.Value;
+    public bool GroupColorModeActive => groupColorModeActive.Value;
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+        StartCoroutine(FindMessageSystemCoroutine());
+    }
 
     public override void OnStartClient()
     {
@@ -72,6 +95,7 @@ public class NetworkedMonitor : NetworkBehaviour
         masterOpacityActive.OnChange += OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange += OnMasterOpacityValueChanged;
         heartbeatActive.OnChange += OnHeartbeatActiveChanged;
+        groupColorModeActive.OnChange += OnGroupColorModeActiveChanged;
 
         if (SceneLoader.BuildType == BuildType.Monitor)
         {
@@ -83,7 +107,9 @@ public class NetworkedMonitor : NetworkBehaviour
         }
         else
         {
+            GroupColorOverlay.EnsureExistsInScene();
             StartCoroutine(FindViewManagerCoroutine());
+            ApplyGroupColorVisibility(groupColorModeActive.Value);
         }
     }
 
@@ -102,8 +128,19 @@ public class NetworkedMonitor : NetworkBehaviour
         masterOpacityActive.OnChange -= OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange -= OnMasterOpacityValueChanged;
         heartbeatActive.OnChange -= OnHeartbeatActiveChanged;
+        groupColorModeActive.OnChange -= OnGroupColorModeActiveChanged;
 
         UnsubscribeInputField();
+    }
+
+    public override void OnStopServer()
+    {
+        base.OnStopServer();
+
+        if (networkedMessageSystem != null)
+            networkedMessageSystem.ClientRegistered -= OnClientRegistered;
+
+        groupAssignmentsByUniqueId.Clear();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -141,9 +178,17 @@ public class NetworkedMonitor : NetworkBehaviour
             return;
 
         if (next)
-            Instances.AudioManager.PlayPingPong();
+        {
+            if (HasLocalGroupAssignment())
+                Instances.AudioManager.PlayGroupPingPong(myGroupIndex);
+            else
+                Instances.AudioManager.PlayPingPong();
+        }
         else
+        {
             Instances.AudioManager.StopPingPong();
+            Instances.AudioManager.StopGroupPingPong();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -275,6 +320,34 @@ public class NetworkedMonitor : NetworkBehaviour
         masterOpacityActive.Value = value;
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void SetGroupColorModeActive(bool value)
+    {
+        if (value)
+        {
+            ReassignGroupsForCurrentConnections();
+            groupColorModeActive.Value = true;
+            PushAssignmentsToCurrentConnections();
+            return;
+        }
+
+        groupColorModeActive.Value = false;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void TriggerGroupMessageMode()
+    {
+        if (groupAssignmentsByUniqueId.Count == 0)
+            ReassignGroupsForCurrentConnections();
+        else
+            EnsureAssignmentsForCurrentConnections();
+
+        if (networkedMessageSystem == null)
+            networkedMessageSystem = FindObjectOfType<NetworkedMessageSystem>();
+
+        networkedMessageSystem?.BroadcastGroupMessage();
+    }
+
     private void OnMasterOpacityActiveChanged(bool prev, bool next, bool asServer)
     {
         if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null)
@@ -364,6 +437,14 @@ public class NetworkedMonitor : NetworkBehaviour
         }
     }
 
+    private void OnGroupColorModeActiveChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        ApplyGroupColorVisibility(next);
+    }
+
     private void OnPartInputChanged(string value)
     {
         if (!int.TryParse(value, out int part))
@@ -445,5 +526,175 @@ public class NetworkedMonitor : NetworkBehaviour
 
         partInputField.onValueChanged.RemoveListener(OnPartInputChanged);
         partInputField = null;
+    }
+
+    private IEnumerator FindMessageSystemCoroutine()
+    {
+        while (networkedMessageSystem == null)
+        {
+            networkedMessageSystem = FindObjectOfType<NetworkedMessageSystem>();
+            if (networkedMessageSystem == null)
+            {
+                yield return new WaitForSeconds(0.5f);
+                continue;
+            }
+        }
+
+        networkedMessageSystem.ClientRegistered -= OnClientRegistered;
+        networkedMessageSystem.ClientRegistered += OnClientRegistered;
+    }
+
+    private void OnClientRegistered(NetworkConnection connection, string uniqueId)
+    {
+        if (string.IsNullOrWhiteSpace(uniqueId))
+            return;
+
+        if (!groupAssignmentsByUniqueId.TryGetValue(uniqueId, out int groupIndex))
+        {
+            if (groupAssignmentsByUniqueId.Count == 0)
+                return;
+
+            groupIndex = GetSmallerActiveGroupIndex();
+            groupAssignmentsByUniqueId[uniqueId] = groupIndex;
+        }
+
+        SendGroupAssignment(connection, groupIndex);
+    }
+
+    private void ReassignGroupsForCurrentConnections()
+    {
+        if (networkedMessageSystem == null)
+            networkedMessageSystem = FindObjectOfType<NetworkedMessageSystem>();
+
+        if (networkedMessageSystem == null)
+            return;
+
+        List<(NetworkConnection connection, string uniqueId)> connectedClients = GetConnectedClients();
+        Shuffle(connectedClients);
+
+        groupAssignmentsByUniqueId.Clear();
+
+        int firstGroupSize = connectedClients.Count / 2;
+        for (int i = 0; i < connectedClients.Count; i++)
+        {
+            int groupIndex = i < firstGroupSize ? GroupA : GroupB;
+            groupAssignmentsByUniqueId[connectedClients[i].uniqueId] = groupIndex;
+        }
+    }
+
+    private void EnsureAssignmentsForCurrentConnections()
+    {
+        if (networkedMessageSystem == null)
+            networkedMessageSystem = FindObjectOfType<NetworkedMessageSystem>();
+
+        if (networkedMessageSystem == null)
+            return;
+
+        foreach ((NetworkConnection _, string uniqueId) in GetConnectedClients())
+        {
+            if (!groupAssignmentsByUniqueId.ContainsKey(uniqueId))
+                groupAssignmentsByUniqueId[uniqueId] = GetSmallerActiveGroupIndex();
+        }
+
+        PushAssignmentsToCurrentConnections();
+    }
+
+    private void PushAssignmentsToCurrentConnections()
+    {
+        foreach ((NetworkConnection connection, string uniqueId) in GetConnectedClients())
+        {
+            if (groupAssignmentsByUniqueId.TryGetValue(uniqueId, out int groupIndex))
+                SendGroupAssignment(connection, groupIndex);
+        }
+    }
+
+    private List<(NetworkConnection connection, string uniqueId)> GetConnectedClients()
+    {
+        List<(NetworkConnection connection, string uniqueId)> connectedClients = new();
+        if (networkedMessageSystem == null)
+            return connectedClients;
+
+        foreach (NetworkConnection connection in networkedMessageSystem.GetAllConnections())
+        {
+            if (networkedMessageSystem.TryGetUniqueId(connection, out string uniqueId) && !string.IsNullOrWhiteSpace(uniqueId))
+                connectedClients.Add((connection, uniqueId));
+        }
+
+        return connectedClients;
+    }
+
+    private int GetSmallerActiveGroupIndex()
+    {
+        int groupACount = 0;
+        int groupBCount = 0;
+
+        foreach ((NetworkConnection _, string uniqueId) in GetConnectedClients())
+        {
+            if (!groupAssignmentsByUniqueId.TryGetValue(uniqueId, out int groupIndex))
+                continue;
+
+            if (groupIndex == GroupA)
+                groupACount++;
+            else
+                groupBCount++;
+        }
+
+        return groupACount <= groupBCount ? GroupA : GroupB;
+    }
+
+    private void SendGroupAssignment(NetworkConnection connection, int groupIndex)
+    {
+        RpcReceiveGroupAssignment(connection, groupIndex, ResolveGroupColor(groupIndex));
+    }
+
+    [TargetRpc]
+    private void RpcReceiveGroupAssignment(NetworkConnection connection, int groupIndex, Color color)
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        myGroupIndex = groupIndex;
+        myGroupColor = color;
+        ApplyGroupColorVisibility(groupColorModeActive.Value);
+
+        if (shouldPlayPingPong.Value)
+        {
+            Instances.AudioManager.StopPingPong();
+            Instances.AudioManager.PlayGroupPingPong(myGroupIndex);
+        }
+    }
+
+    private void ApplyGroupColorVisibility(bool visible)
+    {
+        GroupColorOverlay overlay = GroupColorOverlay.EnsureExistsInScene();
+        if (overlay == null)
+            return;
+
+        if (visible && HasLocalGroupAssignment())
+            overlay.Show(myGroupColor);
+        else
+            overlay.Hide();
+    }
+
+    private bool HasLocalGroupAssignment()
+    {
+        return myGroupIndex == GroupA || myGroupIndex == GroupB;
+    }
+
+    private Color ResolveGroupColor(int groupIndex)
+    {
+        if (groupColors == null || groupColors.Length < 2)
+            return groupIndex == GroupA ? Color.red : Color.blue;
+
+        return groupColors[groupIndex == GroupA ? GroupA : GroupB];
+    }
+
+    private static void Shuffle<T>(List<T> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (list[i], list[j]) = (list[j], list[i]);
+        }
     }
 }
