@@ -540,9 +540,9 @@ public class AudioManager : MonoBehaviour
     {
         while (vibrationActive)
         {
-            if (Application.isMobilePlatform)
-                Handheld.Vibrate();
-
+#if UNITY_ANDROID || UNITY_IOS
+            Handheld.Vibrate();
+#endif
             yield return new WaitForSecondsRealtime(GetVibrationIntervalSeconds());
         }
 

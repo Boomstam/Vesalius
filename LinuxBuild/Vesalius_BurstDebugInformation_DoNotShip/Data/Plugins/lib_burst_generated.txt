@@ -10,7 +10,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
@@ -54,7 +53,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
@@ -98,7 +96,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
@@ -216,7 +213,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
@@ -336,7 +332,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
@@ -358,7 +353,6 @@ Library: C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\BurstOutput\Data\Plugi
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Temp\Burst
---debug=Full
 --enable-frame-info-registration
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=C:\Users\Gebruiker\Documents\Unity\Vesalius\Library\Burst
