@@ -12,6 +12,9 @@ using UnityEngine.Serialization;
 /// </summary>
 public class AudioManager : MonoBehaviour
 {
+    private const float DefaultNormalizedValue = 0.5f;
+    private const float DefaultMasterVolume = 1f;
+
     public enum AudioOverlayKind
     {
         None,
@@ -84,16 +87,16 @@ public class AudioManager : MonoBehaviour
     private bool vibrationActive;
     private bool heartActive;
 
-    private float introFadeValue = 0.5f;
-    private float pingPongFadeValue = 0.5f;
-    private float generationFadeValue = 0.5f;
-    private float vibrationIntervalValue = 0.5f;
-    private float heartBandFadeValue = 0.5f;
-    private float heartDelayValue = 0.5f;
-    private float tutorialFadeValue = 0.5f;
+    private float introFadeValue = DefaultNormalizedValue;
+    private float pingPongFadeValue = DefaultNormalizedValue;
+    private float generationFadeValue = DefaultNormalizedValue;
+    private float vibrationIntervalValue = DefaultNormalizedValue;
+    private float heartBandFadeValue = DefaultNormalizedValue;
+    private float heartDelayValue = DefaultNormalizedValue;
+    private float tutorialFadeValue = DefaultNormalizedValue;
 
     private Coroutine vibrationRoutine;
-    private float currentMasterVolume = 1f;
+    private float currentMasterVolume = DefaultMasterVolume;
     private AudioOverlayKind lastNotifiedOverlayKind = AudioOverlayKind.None;
     private bool overlayStateInitialized;
 
@@ -415,7 +418,42 @@ public class AudioManager : MonoBehaviour
     public void ResetImmediate()
     {
         StopMasterFade();
-        ApplyMasterVolume(1f);
+        ApplyMasterVolume(DefaultMasterVolume);
+    }
+
+    public void ResetForConcert()
+    {
+        StopAllSilent();
+        StopMasterFade();
+
+        introFadeValue = DefaultNormalizedValue;
+        pingPongFadeValue = DefaultNormalizedValue;
+        generationFadeValue = DefaultNormalizedValue;
+        vibrationIntervalValue = DefaultNormalizedValue;
+        heartBandFadeValue = DefaultNormalizedValue;
+        heartDelayValue = DefaultNormalizedValue;
+        tutorialFadeValue = DefaultNormalizedValue;
+
+        if (tutorialFader != null)
+            tutorialFader.SetBandFade(tutorialFadeValue);
+
+        if (introPlayer != null)
+            introPlayer.SetBandFade(introFadeValue);
+
+        if (pingPongFader != null)
+            pingPongFader.SetBandFade(pingPongFadeValue);
+
+        if (organsOfGenerationPlayer != null)
+            organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
+
+        if (heartPlayer != null)
+        {
+            heartPlayer.SetBandFade(heartBandFadeValue);
+            heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        }
+
+        ApplyMasterVolume(DefaultMasterVolume);
+        NotifyOverlayStateChanged();
     }
 
     private void StartMasterFade(bool fadeIn)

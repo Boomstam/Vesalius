@@ -17,6 +17,7 @@ public class NetworkedMonitor : NetworkBehaviour
 {
     private const int GroupA = 0;
     private const int GroupB = 1;
+    private const int UnassignedGroup = -1;
     private const int MinimumPartNumber = 0;
     private const int MaximumPartNumber = 10;
     private const int TutorialPartNumber = 0;
@@ -72,8 +73,12 @@ public class NetworkedMonitor : NetworkBehaviour
     [Header("Heart Stagger")]
     [SerializeField] private HeartStaggerController heartStaggerController;
 
+    [Header("Concert Reset")]
+    [SerializeField] private int concertReadyPartNumber = TutorialPartNumber;
+    [SerializeField] private bool concertReadyParticipationMode = false;
+
     private NetworkedMessageSystem networkedMessageSystem;
-    private int myGroupIndex = -1;
+    private int myGroupIndex = UnassignedGroup;
     private Color myGroupColor = Color.clear;
 
     public bool CompleteAnatomyMode => completeAnatomyMode.Value;
@@ -177,6 +182,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayIntroChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetIntroState(next);
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -197,6 +208,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayPingPongChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetPingPongState(next);
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -225,6 +242,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayOrgansOfGenerationChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetOrgansOfGenerationState(next);
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -245,6 +268,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayHeartChanged(bool prev, bool next, bool asServer)
     {
+        if (!asServer && SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetHeartState(next);
+            return;
+        }
+
         if (asServer)
         {
             if (next)
@@ -275,6 +304,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayVibrationChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetVibrationState(next);
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -369,6 +404,12 @@ public class NetworkedMonitor : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    public void ResetAllForConcert()
+    {
+        ApplyConcertReset();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
     public void SetColorMasterOpacityActive(bool value)
     {
         masterOpacityActive.Value = value;
@@ -386,6 +427,7 @@ public class NetworkedMonitor : NetworkBehaviour
         }
 
         groupColorModeActive.Value = false;
+        ClearGroupAssignments();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -404,6 +446,8 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnMasterOpacityActiveChanged(bool prev, bool next, bool asServer)
     {
+        SyncMonitorColorOverlayUi();
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -418,6 +462,8 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnMasterOpacityValueChanged(float prev, float next, bool asServer)
     {
+        SyncMonitorColorOverlayUi();
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -475,6 +521,8 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnHeartbeatActiveChanged(bool prev, bool next, bool asServer)
     {
+        SyncMonitorColorOverlayUi();
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -483,6 +531,12 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnGroupColorModeActiveChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+        {
+            Instances.MonitorUI?.SetGroupColorState(next);
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
@@ -542,6 +596,9 @@ public class NetworkedMonitor : NetworkBehaviour
         if (partInputField != null)
             partInputField.SetTextWithoutNotify(ClampPart(next).ToString());
 
+        if (SceneLoader.BuildType == BuildType.Monitor)
+            Instances.MonitorUI?.SetCurrentPartState(next);
+
         if (viewManager != null)
             viewManager.SetPart(next);
     }
@@ -554,6 +611,9 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnParticipationModeChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+            Instances.MonitorUI?.SetParticipationModeState(next);
+
         ApplyParticipationMode(next);
     }
 
@@ -786,6 +846,26 @@ public class NetworkedMonitor : NetworkBehaviour
         }
     }
 
+    [ObserversRpc]
+    private void RpcClearGroupAssignments()
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        ClearLocalGroupAssignment();
+    }
+
+    [ObserversRpc]
+    private void RpcResetClientsForConcert()
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        ClearLocalGroupAssignment();
+        MessageOverlay.Instance?.HideMessage();
+        Instances.AudioManager.ResetForConcert();
+    }
+
     private void ApplyGroupColorVisibility(bool visible)
     {
         GroupColorOverlay overlay = GroupColorOverlay.EnsureExistsInScene();
@@ -832,6 +912,58 @@ public class NetworkedMonitor : NetworkBehaviour
     {
         if (heartStaggerController == null)
             heartStaggerController = GetComponent<HeartStaggerController>();
+    }
+
+    private void ApplyConcertReset()
+    {
+        int resetPart = ClampPart(concertReadyPartNumber);
+
+        heartStaggerController?.CancelAll();
+        SetExclusiveAudioMode(AudioMode.None);
+
+        currentPart.Value = resetPart;
+        participationMode.Value = concertReadyParticipationMode;
+        completeAnatomyMode.Value = ShouldAutoEnableCompleteAnatomy(resetPart);
+
+        masterOpacityActive.Value = false;
+        masterOpacityValue.Value = 1f;
+        heartbeatActive.Value = false;
+        heartbeatStartColorSync.Value = heartbeatStartColor;
+        heartbeatEndColorSync.Value = heartbeatEndColor;
+        heartbeatBeatTimeSync.Value = GetRandomHeartbeatBeatTime();
+
+        groupColorModeActive.Value = false;
+        ClearGroupAssignments();
+
+        if (networkedMessageSystem == null)
+            networkedMessageSystem = FindObjectOfType<NetworkedMessageSystem>();
+
+        networkedMessageSystem?.ResetDeckServer();
+        networkedMessageSystem?.HardCutAllServer();
+
+        RpcResetClientsForConcert();
+    }
+
+    private void ClearGroupAssignments()
+    {
+        groupAssignmentsByUniqueId.Clear();
+        RpcClearGroupAssignments();
+    }
+
+    private void ClearLocalGroupAssignment()
+    {
+        myGroupIndex = UnassignedGroup;
+        myGroupColor = Color.clear;
+        ApplyGroupColorVisibility(false);
+    }
+
+    private void SyncMonitorColorOverlayUi()
+    {
+        if (SceneLoader.BuildType != BuildType.Monitor)
+            return;
+
+        MonitorColorOverlayUI overlayUi = FindObjectOfType<MonitorColorOverlayUI>();
+        overlayUi?.SetState(masterOpacityActive.Value, masterOpacityValue.Value, heartbeatActive.Value);
     }
 
     private void ApplyColorOverlayState()

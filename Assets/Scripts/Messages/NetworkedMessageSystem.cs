@@ -131,6 +131,14 @@ public class NetworkedMessageSystem : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ResetDeck()
     {
+        ResetDeckServer();
+    }
+
+    public void ResetDeckServer()
+    {
+        if (!IsServerInitialized)
+            return;
+
         _deckRemaining.Clear();
         _deckRemaining.AddRange(_connectedClients.Keys);
         Shuffle(_deckRemaining);
@@ -141,6 +149,14 @@ public class NetworkedMessageSystem : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void HardCutAll()
     {
+        HardCutAllServer();
+    }
+
+    public void HardCutAllServer()
+    {
+        if (!IsServerInitialized)
+            return;
+
         RpcHardCut();
     }
 

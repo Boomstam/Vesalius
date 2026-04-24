@@ -50,14 +50,21 @@ public class MonitorColorOverlayUI : MonoBehaviour
     /// </summary>
     private void SyncStateFromServer(NetworkedMonitor nm)
     {
+        SetState(nm.MasterOpacityActive, nm.MasterOpacityValue, nm.HeartbeatActive);
+    }
+
+    public void SetState(bool masterOpacityEnabled, float masterOpacity, bool heartbeatEnabled)
+    {
         if (masterOpacityToggle != null)
-            masterOpacityToggle.SetIsOnWithoutNotify(nm.MasterOpacityActive);
+            masterOpacityToggle.SetIsOnWithoutNotify(masterOpacityEnabled);
 
         if (masterOpacitySlider != null)
-            masterOpacitySlider.SetValueWithoutNotify(nm.MasterOpacityValue);
+            masterOpacitySlider.SetValueWithoutNotify(masterOpacity);
 
         if (heartbeatToggle != null)
-            heartbeatToggle.SetIsOnWithoutNotify(nm.HeartbeatActive);
+            heartbeatToggle.SetIsOnWithoutNotify(heartbeatEnabled);
+
+        RefreshOpacityControls(masterOpacityEnabled);
     }
 
     private void WireListeners()

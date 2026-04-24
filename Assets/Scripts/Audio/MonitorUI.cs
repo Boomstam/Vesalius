@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Monitor-side UI. Communicates exclusively through NetworkedMonitor -
@@ -13,12 +14,21 @@ using UnityEngine.UI;
 /// </summary>
 public class MonitorUI : MonoBehaviour
 {
+    private const string ResetAllButtonObjectName = "Reset All Button";
+    private const string ResetAllButtonLabel = "Reset All";
+    private const string PartShortNameObjectName = "Part Short Name";
+    private static readonly Color ResetAllButtonColor = new(0.8f, 0.17f, 0.17f, 1f);
+    private static readonly Color ResetAllButtonHighlightColor = new(0.9f, 0.3f, 0.3f, 1f);
+    private static readonly Color ResetAllButtonPressedColor = new(0.62f, 0.1f, 0.1f, 1f);
+    private static readonly Vector2 ResetAllButtonOffset = new(250f, 0f);
+
     [Header("Master Volume")]
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Button fadeInButton;
     [SerializeField] private Button fadeOutButton;
     [SerializeField] private Button muteButton;
     [SerializeField] private Button resetButton;
+    [SerializeField] private Button resetAllButton;
 
     [Header("Audio Mode Toggles")]
     [FormerlySerializedAs("organsOfNutritionToggle")]
@@ -37,6 +47,23 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Button decrementPartButton;
     [SerializeField] private Button incrementPartButton;
 
+    [Header("Part Display")]
+    [SerializeField] private TMP_Text partShortNameText;
+    [SerializeField] private string[] partShortNames =
+    {
+        "Tutorial",
+        "Nutrition",
+        "Veins",
+        "Generation",
+        "Muscles",
+        "Words",
+        "Nerves",
+        "Bones",
+        "Brain",
+        "Senses",
+        "Heart",
+    };
+
     private bool initialised;
     private Text introLabel;
     private Text pingPongLabel;
@@ -47,9 +74,12 @@ public class MonitorUI : MonoBehaviour
 
     private void Start()
     {
+        resetButton = ResolveButton(resetButton, "Reset Button");
+        resetAllButton = ResolveButton(resetAllButton, ResetAllButtonObjectName);
         ResolveAudioControls();
         participationToggle = ResolveParticipationToggle();
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
+        EnsureRuntimeUi();
     }
 
     private void OnDestroy()
@@ -64,6 +94,8 @@ public class MonitorUI : MonoBehaviour
             muteButton.onClick.RemoveListener(OnMuteClicked);
         if (resetButton != null)
             resetButton.onClick.RemoveListener(OnResetClicked);
+        if (resetAllButton != null)
+            resetAllButton.onClick.RemoveListener(OnResetAllClicked);
 
         if (introToggle != null)
             introToggle.onValueChanged.RemoveListener(OnIntroToggled);
@@ -102,13 +134,21 @@ public class MonitorUI : MonoBehaviour
         if (completeAnatomyToggle == null)
             completeAnatomyToggle = ResolveCompleteAnatomyToggle();
 
+        if (resetButton == null)
+            resetButton = ResolveButton(resetButton, "Reset Button");
+
+        if (resetAllButton == null)
+            resetAllButton = ResolveButton(resetAllButton, ResetAllButtonObjectName);
+
         if (decrementPartButton == null)
             decrementPartButton = ResolveButton(decrementPartButton, "Part Number Decrement Button");
 
         if (incrementPartButton == null)
             incrementPartButton = ResolveButton(incrementPartButton, "Part Number Increment Button");
 
+        EnsureRuntimeUi();
         SyncStateFromServer(nm);
+        SetCurrentPartState(nm.CurrentPart);
         WireListeners();
     }
 
@@ -152,6 +192,8 @@ public class MonitorUI : MonoBehaviour
             muteButton.onClick.AddListener(OnMuteClicked);
         if (resetButton != null)
             resetButton.onClick.AddListener(OnResetClicked);
+        if (resetAllButton != null)
+            resetAllButton.onClick.AddListener(OnResetAllClicked);
 
         if (introToggle != null)
             introToggle.onValueChanged.AddListener(OnIntroToggled);
@@ -198,6 +240,12 @@ public class MonitorUI : MonoBehaviour
     private void OnResetClicked()
     {
         Instances.NetworkedMonitor.TriggerMasterReset();
+    }
+
+    private void OnResetAllClicked()
+    {
+        SetMasterVolumeSliderValue(1f);
+        Instances.NetworkedMonitor.ResetAllForConcert();
     }
 
     private void OnIntroToggled(bool value)
@@ -254,6 +302,56 @@ public class MonitorUI : MonoBehaviour
     {
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetIntroState(bool value)
+    {
+        if (introToggle != null)
+            introToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetPingPongState(bool value)
+    {
+        if (pingPongToggle != null)
+            pingPongToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetOrgansOfGenerationState(bool value)
+    {
+        if (organsOfGenerationToggle != null)
+            organsOfGenerationToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetHeartState(bool value)
+    {
+        if (heartToggle != null)
+            heartToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetVibrationState(bool value)
+    {
+        if (vibrationToggle != null)
+            vibrationToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetGroupColorState(bool value)
+    {
+        if (groupColorToggle != null)
+            groupColorToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetParticipationModeState(bool value)
+    {
+        if (participationToggle != null)
+            participationToggle.SetIsOnWithoutNotify(value);
+    }
+
+    public void SetCurrentPartState(int part)
+    {
+        EnsureRuntimeUi();
+
+        if (partShortNameText != null)
+            partShortNameText.text = ResolvePartShortName(part);
     }
 
     private void ResolveAudioControls()
@@ -315,6 +413,158 @@ public class MonitorUI : MonoBehaviour
             RenameObject(vibrationLabel.gameObject, "Vibration Label");
             vibrationLabel.text = "Vibrations";
         }
+    }
+
+    private void EnsureRuntimeUi()
+    {
+        EnsureResetAllButton();
+        EnsurePartShortNameText();
+    }
+
+    private void EnsureResetAllButton()
+    {
+        if (resetButton == null)
+            resetButton = ResolveButton(resetButton, "Reset Button");
+
+        if (resetAllButton == null)
+            resetAllButton = ResolveButton(resetAllButton, ResetAllButtonObjectName);
+
+        if (resetAllButton == null)
+            resetAllButton = CreateResetAllButton();
+
+        if (resetAllButton == null)
+            return;
+
+        if (resetAllButton.targetGraphic is Graphic graphic)
+            graphic.color = ResetAllButtonColor;
+
+        ColorBlock colors = resetAllButton.colors;
+        colors.normalColor = ResetAllButtonColor;
+        colors.highlightedColor = ResetAllButtonHighlightColor;
+        colors.pressedColor = ResetAllButtonPressedColor;
+        colors.selectedColor = ResetAllButtonHighlightColor;
+        resetAllButton.colors = colors;
+
+        TMP_Text tmpText = resetAllButton.GetComponentInChildren<TMP_Text>(true);
+        if (tmpText != null)
+        {
+            tmpText.text = ResetAllButtonLabel;
+            tmpText.color = Color.white;
+            return;
+        }
+
+        Text text = resetAllButton.GetComponentInChildren<Text>(true);
+        if (text != null)
+        {
+            text.text = ResetAllButtonLabel;
+            text.color = Color.white;
+        }
+    }
+
+    private Button CreateResetAllButton()
+    {
+        if (resetButton == null)
+            return null;
+
+        GameObject buttonObject = Instantiate(resetButton.gameObject, resetButton.transform.parent);
+        buttonObject.name = ResetAllButtonObjectName;
+        buttonObject.transform.SetSiblingIndex(resetButton.transform.GetSiblingIndex() + 1);
+
+        RectTransform sourceRect = resetButton.GetComponent<RectTransform>();
+        RectTransform buttonRect = buttonObject.GetComponent<RectTransform>();
+        if (sourceRect != null && buttonRect != null)
+            buttonRect.anchoredPosition = sourceRect.anchoredPosition + ResetAllButtonOffset;
+
+        return buttonObject.GetComponent<Button>();
+    }
+
+    private void EnsurePartShortNameText()
+    {
+        if (partShortNameText != null)
+            return;
+
+        GameObject existing = GameObject.Find(PartShortNameObjectName);
+        if (existing != null && existing.TryGetComponent(out TMP_Text existingText))
+        {
+            partShortNameText = existingText;
+            return;
+        }
+
+        GameObject partNumberObject = GameObject.Find("Part Number");
+        if (partNumberObject == null)
+            return;
+
+        RectTransform partNumberRect = partNumberObject.GetComponent<RectTransform>();
+        RectTransform parentRect = partNumberRect != null ? partNumberRect.parent as RectTransform : null;
+        if (partNumberRect == null || parentRect == null)
+            return;
+
+        GameObject labelObject = new(PartShortNameObjectName, typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+        labelObject.transform.SetParent(parentRect, false);
+
+        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+        labelRect.anchorMin = partNumberRect.anchorMin;
+        labelRect.anchorMax = partNumberRect.anchorMax;
+        labelRect.pivot = new Vector2(0f, 0.5f);
+        labelRect.anchoredPosition = partNumberRect.anchoredPosition + new Vector2(105f, 0f);
+        labelRect.sizeDelta = new Vector2(230f, Mathf.Max(48f, partNumberRect.rect.height));
+
+        partShortNameText = labelObject.GetComponent<TMP_Text>();
+        ConfigurePartShortNameTextStyle(partShortNameText);
+    }
+
+    private void ConfigurePartShortNameTextStyle(TMP_Text target)
+    {
+        if (target == null)
+            return;
+
+        TMP_Text styleSource = null;
+        GameObject titleObject = GameObject.Find("Part Number Title");
+        if (titleObject != null)
+            styleSource = titleObject.GetComponent<TMP_Text>();
+
+        if (styleSource != null)
+        {
+            target.font = styleSource.font;
+            target.fontSharedMaterial = styleSource.fontSharedMaterial;
+            target.color = styleSource.color;
+            target.fontSize = styleSource.fontSize;
+        }
+        else
+        {
+            target.color = Color.white;
+            target.fontSize = 36f;
+        }
+
+        target.enableAutoSizing = true;
+        target.fontSizeMin = 20f;
+        target.fontSizeMax = Mathf.Max(target.fontSize, 36f);
+        target.alignment = TextAlignmentOptions.Left;
+        target.text = ResolvePartShortName(0);
+        target.raycastTarget = false;
+    }
+
+    private void SetMasterVolumeSliderValue(float value)
+    {
+        if (masterVolumeSlider != null)
+            masterVolumeSlider.SetValueWithoutNotify(value);
+    }
+
+    private string ResolvePartShortName(int part)
+    {
+        if (partShortNames != null &&
+            partShortNames.Length > 0)
+        {
+            int index = Mathf.Clamp(part, 0, partShortNames.Length - 1);
+            if (index >= 0 &&
+                index < partShortNames.Length &&
+                !string.IsNullOrWhiteSpace(partShortNames[index]))
+            {
+                return partShortNames[index];
+            }
+        }
+
+        return $"Part {Mathf.Max(0, part)}";
     }
 
     private Toggle ResolveToggle(Toggle current, params string[] objectNames)
