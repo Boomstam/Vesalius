@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a085278721688c34ba50ec658cd076e0, type: 3}
     - target: {fileID: 7731956247691561695, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
       propertyPath: m_Name
-      value: Part_8_Content
+      value: Part_9_Content
       objectReference: {fileID: 0}
     - target: {fileID: 7731956247691561695, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
       propertyPath: m_IsActive
@@ -860,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b27b995223fd38942b4f6349703db7df, type: 3}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
-      value: Part_8_Info
+      value: Part_9_Info
       objectReference: {fileID: 0}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_IsActive
@@ -3098,7 +3098,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a705496333e261547b8d7bc7d55c9204, type: 3}
     - target: {fileID: 7731956247691561695, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
       propertyPath: m_Name
-      value: Part_9_Content
+      value: Part_8_Content
       objectReference: {fileID: 0}
     - target: {fileID: 7731956247691561695, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
       propertyPath: m_IsActive
@@ -4478,8 +4478,8 @@ MonoBehaviour:
   - {fileID: 653396676}
   - {fileID: 1455658944}
   - {fileID: 1487449992}
-  - {fileID: 15905739}
   - {fileID: 520404706}
+  - {fileID: 15905739}
   - {fileID: 373455572}
   infoViews:
   - {fileID: 139432585}
@@ -4490,8 +4490,8 @@ MonoBehaviour:
   - {fileID: 1002133167}
   - {fileID: 1136265470}
   - {fileID: 1650589335}
-  - {fileID: 90430816}
   - {fileID: 1414976754}
+  - {fileID: 90430816}
   - {fileID: 101948867}
   infoManagers:
   - {fileID: 139432587}
@@ -4502,8 +4502,8 @@ MonoBehaviour:
   - {fileID: 1002133166}
   - {fileID: 1136265469}
   - {fileID: 1650589334}
-  - {fileID: 90430815}
   - {fileID: 1414976753}
+  - {fileID: 90430815}
   - {fileID: 101948866}
   part0ContentInfoManager: {fileID: 760369691}
   infoToggleButton: {fileID: 1984027640}
@@ -8115,7 +8115,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 9a85053508ae20d47a380a6a58813e4b, type: 3}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_Name
-      value: Part_9_Info
+      value: Part_8_Info
       objectReference: {fileID: 0}
     - target: {fileID: 4814666106932998189, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: m_IsActive

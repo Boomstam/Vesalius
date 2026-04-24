@@ -40,8 +40,8 @@ public static class SceneOverhaulTool
         "WordsOfVesalius",
         "BookIV_Nerves",
         "BookV_BonesCartilages",
-        "BookVI_Brain",
         "BookVI_Senses",
+        "BookVI_Brain",
         "BookVII_Heart",
     };
 
@@ -57,8 +57,8 @@ public static class SceneOverhaulTool
         false, // 5  Words of Vesalius
         true,  // 6  Nerves
         true,  // 7  Bones/Cartilages
-        true,  // 8  Brain
-        true,  // 9  Senses
+        true,  // 8  Senses
+        true,  // 9  Brain
         true,  // 10 Heart
     };
 
