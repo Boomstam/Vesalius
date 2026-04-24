@@ -211,16 +211,43 @@ public class AudioManager : MonoBehaviour
     {
         StopAllSilent();
         heartActive = true;
-        heartPlayer.StartPlayback();
-        heartPlayer.SetBandFade(heartBandFadeValue);
-        heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        if (heartPlayer != null)
+        {
+            heartPlayer.StartPlayback();
+            heartPlayer.SetBandFade(heartBandFadeValue);
+            heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        }
+        NotifyOverlayStateChanged();
+    }
+
+    public void EnableHeartMode()
+    {
+        heartActive = true;
+
+        if (heartPlayer != null)
+        {
+            heartPlayer.SetBandFade(heartBandFadeValue);
+            heartPlayer.SetDelayTimeNormalized(heartDelayValue);
+        }
+
+        NotifyOverlayStateChanged();
+    }
+
+    public void StopHeartPlayback()
+    {
+        if (heartPlayer != null)
+            heartPlayer.StopAllPlaybackAndRemoveSources();
+
         NotifyOverlayStateChanged();
     }
 
     public void StopHeart()
     {
         heartActive = false;
-        heartPlayer.StopAllPlaybackAndRemoveSources();
+
+        if (heartPlayer != null)
+            heartPlayer.StopAllPlaybackAndRemoveSources();
+
         NotifyOverlayStateChanged();
     }
 

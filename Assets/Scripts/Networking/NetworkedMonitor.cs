@@ -60,6 +60,9 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private readonly Dictionary<string, int> groupAssignmentsByUniqueId = new();
 
+    [Header("Heart Stagger")]
+    [SerializeField] private HeartStaggerController heartStaggerController;
+
     private NetworkedMessageSystem networkedMessageSystem;
     private int myGroupIndex = -1;
     private Color myGroupColor = Color.clear;
@@ -77,12 +80,15 @@ public class NetworkedMonitor : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
+        EnsureHeartStaggerController();
         StartCoroutine(FindMessageSystemCoroutine());
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
+
+        EnsureHeartStaggerController();
 
         currentPart.OnChange += OnCurrentPartChanged;
         completeAnatomyMode.OnChange += OnCompleteAnatomyModeChanged;
@@ -222,11 +228,21 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnShouldPlayHeartChanged(bool prev, bool next, bool asServer)
     {
+        if (asServer)
+        {
+            if (next)
+                heartStaggerController?.TriggerStagger(networkedMessageSystem);
+            else
+                heartStaggerController?.CancelAll();
+
+            return;
+        }
+
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
         if (next)
-            Instances.AudioManager.PlayHeart();
+            Instances.AudioManager.EnableHeartMode();
         else
             Instances.AudioManager.StopHeart();
     }
@@ -696,5 +712,11 @@ public class NetworkedMonitor : NetworkBehaviour
             int j = Random.Range(0, i + 1);
             (list[i], list[j]) = (list[j], list[i]);
         }
+    }
+
+    private void EnsureHeartStaggerController()
+    {
+        if (heartStaggerController == null)
+            heartStaggerController = GetComponent<HeartStaggerController>();
     }
 }

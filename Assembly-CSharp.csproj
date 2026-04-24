@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audio\DoubleFader.cs" />
     <Compile Include="Assets\Scripts\Audio\DelayPlayer.cs" />
+    <Compile Include="Assets\Scripts\Networking\HeartStaggerController.cs" />
     <Compile Include="Assets\Scripts\Audio\MonitorUI.cs" />
     <Compile Include="Assets\Scripts\Audio\GroupColorOverlay.cs" />
     <Compile Include="Assets\FishNet\Upgrading\UpgradeFromMirrorMenu.cs" />
