@@ -55,6 +55,20 @@ public class DelayPlayer : MonoBehaviour
 
     private readonly List<AudioSource> createdSources = new List<AudioSource>();
 
+    public bool HasAudiblePlayback
+    {
+        get
+        {
+            foreach (AudioSource source in createdSources)
+            {
+                if (source != null && source.isPlaying && source.volume > 0.001f)
+                    return true;
+            }
+
+            return false;
+        }
+    }
+
     // ── Public API ─────────────────────────────────────────────────────────────
 
     public void StartPlayback()

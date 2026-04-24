@@ -71,6 +71,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float fadeOutTime = 2f;
 
     private const float MinVolume = 0.01f;
+    private const float IntroOverlayAudibilityThreshold = 0.1f;
+    private const float HeartOverlayAudibilityThreshold = 0.5f;
 
     private Coroutine masterFadeRoutine;
 
@@ -91,6 +93,9 @@ public class AudioManager : MonoBehaviour
     private float tutorialFadeValue = 0.5f;
 
     private Coroutine vibrationRoutine;
+    private float currentMasterVolume = 1f;
+    private AudioOverlayKind lastNotifiedOverlayKind = AudioOverlayKind.None;
+    private bool overlayStateInitialized;
 
     private const float MinVibrationIntervalSeconds = 0.6f;
     private const float MaxVibrationIntervalSeconds = 4f;
@@ -120,6 +125,13 @@ public class AudioManager : MonoBehaviour
             heartPlayer.SetBandFade(heartBandFadeValue);
             heartPlayer.SetDelayTimeNormalized(heartDelayValue);
         }
+    }
+
+    private void Update()
+    {
+        AudioOverlayKind overlayKind = BuildOverlayState().Kind;
+        if (!overlayStateInitialized || overlayKind != lastNotifiedOverlayKind)
+            NotifyOverlayStateChanged();
     }
 
     public void PlayTutorial()
@@ -430,8 +442,8 @@ public class AudioManager : MonoBehaviour
 
     private void ApplyMasterVolume(float volume)
     {
-        volume = Mathf.Clamp(volume, MinVolume, 1f);
-        masterMixerGroup.audioMixer.SetFloat("Master", Mathf.Log(volume) * 20f);
+        currentMasterVolume = Mathf.Clamp(volume, MinVolume, 1f);
+        masterMixerGroup.audioMixer.SetFloat("Master", Mathf.Log(currentMasterVolume) * 20f);
     }
 
     private AudioOverlayState BuildOverlayState()
@@ -448,7 +460,7 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
-        if (heartActive)
+        if (heartActive && IsHeartOverlayAudible())
         {
             return new AudioOverlayState(
                 AudioOverlayKind.HeartDual,
@@ -472,7 +484,7 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
-        if (introActive)
+        if (introActive && IsIntroOverlayAudible())
         {
             return new AudioOverlayState(
                 AudioOverlayKind.IntroSingle,
@@ -532,7 +544,10 @@ public class AudioManager : MonoBehaviour
 
     private void NotifyOverlayStateChanged()
     {
-        OverlayStateChanged?.Invoke(CurrentOverlayState);
+        AudioOverlayState state = CurrentOverlayState;
+        lastNotifiedOverlayKind = state.Kind;
+        overlayStateInitialized = true;
+        OverlayStateChanged?.Invoke(state);
     }
 
     private void StartVibrationLoop()
@@ -580,5 +595,19 @@ public class AudioManager : MonoBehaviour
             groupPingPongPlayer = gameObject.AddComponent<GroupPingPongPlayer>();
 
         groupPingPongPlayer.SetFader(pingPongFader);
+    }
+
+    private bool IsIntroOverlayAudible()
+    {
+        return introPlayer != null
+            && introPlayer.IsCurrentlyPlaying
+            && currentMasterVolume > IntroOverlayAudibilityThreshold;
+    }
+
+    private bool IsHeartOverlayAudible()
+    {
+        return heartPlayer != null
+            && heartPlayer.HasAudiblePlayback
+            && currentMasterVolume >= HeartOverlayAudibilityThreshold;
     }
 }

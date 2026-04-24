@@ -35,6 +35,10 @@ public class DoubleFader : MonoBehaviour
 
     private const float MinVolume = 0.01f;
 
+    public bool IsPlaying =>
+        (lowSource != null && lowSource.isPlaying)
+        || (highSource != null && highSource.isPlaying);
+
     public void Play()
     {
         if (lowClips.Length == 0 || highClips.Length == 0)

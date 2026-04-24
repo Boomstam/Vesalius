@@ -24,11 +24,13 @@ public class IntervalPlayer : MonoBehaviour
 
     [Header("Silence Interval")]
     [Min(0f)]
-    [SerializeField] private float silenceMinSeconds = 10f;
+    [SerializeField] private float silenceMinSeconds = 5f;
     [Min(0f)]
-    [SerializeField] private float silenceMaxSeconds = 20f;
+    [SerializeField] private float silenceMaxSeconds = 10f;
 
     private Coroutine intervalRoutine;
+
+    public bool IsCurrentlyPlaying => fader != null && fader.IsPlaying;
 
     public void Play()
     {
