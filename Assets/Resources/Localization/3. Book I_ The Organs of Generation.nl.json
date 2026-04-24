@@ -1,0 +1,41 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookI_Generation",
+  "entries": [
+    {
+      "type": "image",
+      "key": "8.1 Organs of Generation Male",
+      "title": "Book I: The Organs of Generation"
+    },
+    {
+      "type": "image",
+      "key": "8.2 Organs of Generation Female",
+      "title": "Book I: The Organs of Generation"
+    },
+    {
+      "type": "chapter",
+      "key": "generation_ex_ovo",
+      "title": "Book I: The Organs of Generation",
+      "content": "\"Ex ovo omnia.\"\n(Everything comes from the egg.)"
+    },
+    {
+      "type": "chapter",
+      "key": "generation_origins_life",
+      "title": "Book I: The Organs of Generation",
+      "content": "The focus turns to the origins of life. The male and female reproductive systems are set out in structure: the uterus as a single organ, the testes and their vessels traced, the anatomy of the penis described with clarity."
+    },
+    {
+      "type": "chapter",
+      "key": "generation_uneven_account",
+      "title": "Book I: The Organs of Generation",
+      "content": "Yet this account is uneven. His descriptions of female anatomy contain notable inaccuracies—reflecting limited access to female bodies, and the social and cultural limits of his time."
+    },
+    {
+      "type": "chapter",
+      "key": "generation_what_is_shown",
+      "title": "Book I: The Organs of Generation",
+      "content": "What is shown shapes what is known."
+    }
+  ]
+}

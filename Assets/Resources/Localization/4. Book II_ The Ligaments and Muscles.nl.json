@@ -1,0 +1,36 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookII_Muscles",
+  "entries": [
+    {
+      "type": "image",
+      "key": "2. Muscles",
+      "title": "Book II: The Ligaments and Muscles"
+    },
+    {
+      "type": "chapter",
+      "key": "muscles_il_movimento",
+      "title": "Book II: The Ligaments and Muscles",
+      "content": "\"Il movimento è armonia di forze.\"\n(Movement is the harmony of forces.)"
+    },
+    {
+      "type": "chapter",
+      "key": "muscles_stillness_motion",
+      "title": "Book II: The Ligaments and Muscles",
+      "content": "Stillness gives way to motion. Muscles and ligaments are no longer confused—muscles act, ligaments stabilise."
+    },
+    {
+      "type": "chapter",
+      "key": "muscles_coordination",
+      "title": "Book II: The Ligaments and Muscles",
+      "content": "Movement depends on coordination and balance between opposing actions—forces working together rather than alone."
+    },
+    {
+      "type": "chapter",
+      "key": "muscles_vesalius_quote",
+      "title": "Book II: The Ligaments and Muscles",
+      "content": "\"I am not so much concerned with the muscles as with the movements they produce.\" — Andreas Vesalius"
+    }
+  ]
+}

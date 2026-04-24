@@ -1,0 +1,36 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookI_Nutrition",
+  "entries": [
+    {
+    "type": "image",
+    "key": "5. Digestion",
+    "title": "Book I: The Organs of Nutrition"
+    },
+    {
+      "type": "chapter",
+      "key": "nutrition_fain_le_semont",
+      "title": "Book I: The Organs of Nutrition",
+      "content": "\"Fain le semont et point.\"\n(Hunger urges and drives him on.)"
+    },
+    {
+      "type": "chapter",
+      "key": "nutrition_food_enters",
+      "title": "Book I: The Organs of Nutrition",
+      "content": "Food enters, passes, is broken down—the stomach, liver, and intestines are not just body parts, but stages in a vital transformation."
+    },
+    {
+      "type": "chapter",
+      "key": "nutrition_galen",
+      "title": "Book I: The Organs of Nutrition",
+      "content": "Much of this still follows Galen, where blood is believed to be formed in the liver. Vesalius does not overturn this, but he looks closely—and in doing so, begins to unsettle it."
+    },
+    {
+      "type": "chapter",
+      "key": "nutrition_rhazes",
+      "title": "Book I: The Organs of Nutrition",
+      "content": "Like Rhazes, who observed how nourishment shapes the living body, Vesalius brings this process into view."
+    }
+  ]
+}

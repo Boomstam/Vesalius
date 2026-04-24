@@ -1,0 +1,102 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Film",
+  "entries": [
+    {
+      "type": "chapter",
+      "key": "the_child_of_hell_street",
+      "title": "The Child of \"Hell Street\"",
+      "content": "Born in Brussels in 1514 into a long line of court physicians, Andreas Vesalius grew up near the so-called \"Hell Street,\" close to the Galgenberg, the hill where executions took place.\n\nAs a young boy, he observed the bodies of the condemned, an experience that awakened both his fascination and his scientific curiosity."
+    },
+    {
+      "type": "chapter",
+      "key": "paris_and_the_discovery_of_al_razi",
+      "title": "Paris and the Discovery of al-Razi",
+      "content": "Between 1533 and 1536, he studied in Paris under Jacques Dubois. Eager to deepen his anatomical knowledge, he secretly exhumed bodies from the Cemetery of the Innocents.\n\nInfluenced by the writings of al-Razi (Rhazes), his first publication in 1537 was a paraphrase of the ninth book of al-Razi's work. This marked a decisive shift away from Galenic dogma toward direct observation."
+    },
+    {
+      "type": "chapter",
+      "key": "the_glory_of_venice_and_charles_v",
+      "title": "The Glory of Venice and Charles V",
+      "content": "Vesalius quickly gained fame in Venice and Padua. At just 23, he became a professor at the University of Padua. In 1543, he published De humani corporis fabrica, a groundbreaking anatomical treatise.\n\nHe later served Emperor Charles V and married Anne Witekind in Brussels in 1544."
+    },
+    {
+      "type": "chapter",
+      "key": "the_inquisition_and_the_end_in_zante",
+      "title": "The Inquisition and the end in Zante",
+      "content": "Although protected by Emperor Philip II, his dissections provoked criticism from the Church and from traditional physicians.\n\nAccused before the Inquisition in Spain, he departed for Jerusalem in 1564. On his return journey, exhausted and ill, he died on the Greek island of Zante (Zakynthos) in October 1564."
+    },
+    {
+      "type": "image",
+      "key": "The Words of Vesalius",
+      "title": "Humani Corporis Ossium"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_taqsim",
+      "title": "Inspiration",
+      "content": "Taqsîm on the oud\n\nAndalusian Arabic music — Ibn Arabi Ensemble (borrowed and transformed)"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_verdelot",
+      "title": "Inspiration",
+      "content": "Orlando furioso — \"Queste non son più lagrime\"\n\nVerdelot — La Compagnia del Madrigale (16th century, borrowed and transformed)"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_gesualdo",
+      "title": "Inspiration",
+      "content": "Pomo d'Oro set — Sacrarum cantionum'\n\nGesualdo (16th century, borrowed and transformed)"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_josquin",
+      "title": "Inspiration",
+      "content": "La Spagna — Carlos V\n\nJosquin des Prez — Jordi Savall (16th century, borrowed and transformed)"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_rumi",
+      "title": "Inspiration",
+      "content": "'I love you neither with my heart nor with my mind. The heart may stop, the mind may forget. I love you with my soul. The soul never stops, never forgets.'\n\nRumi"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_wharton",
+      "title": "Inspiration",
+      "content": "'Transit umbra, sed lux permanet.'\n\nEdith Wharton"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_homer_zante",
+      "title": "Inspiration",
+      "content": "'Zante, couverte de fleurs.'\n\nHomer"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_solis_occasus",
+      "title": "Inspiration",
+      "content": "'O quam pulchrus est solis occasus in mari.'\n\nHe watches the sun set over the sea and says: \"How beautiful is the setting of the sun upon the sea.\""
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_dum_loquor",
+      "title": "Inspiration",
+      "content": "'Dum loquor, hora fugit.'\n\nWhile I speak, time flies. — proverb"
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_vix_orimur",
+      "title": "Inspiration",
+      "content": "'Vix orimur et occidimus.'\n\nBarely do we appear, and already we disappear."
+    },
+    {
+      "type": "chapter",
+      "key": "inspiration_munde_vale",
+      "title": "Inspiration",
+      "content": "'Munde vale, nulla hic est constans patria; coelum per te, Christe, datur patria firma piis.'\n\nFarewell world, there is no permanent homeland here below; through you, Christ, a sure homeland is given to the pious. — inscription on Vesalius's tomb"
+    }
+  ]
+}

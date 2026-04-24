@@ -1,0 +1,48 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/Intro",
+  "entries": [
+    {
+      "type": "image",
+      "key": "0. General",
+      "title": "De Humanis Corporis Fabrica"
+    },
+    {
+      "type": "chapter",
+      "key": "intro_vesalius_quote",
+      "title": "Intro",
+      "content": "\"Ik ben het niet gewend om alleen op boeken te vertrouwen, ik leg mijn vertrouwen liever in het werk van mijn eigen handen.\" — Andreas Vesalius"
+    },
+    {
+      "type": "chapter",
+      "key": "intro_humanist_tradition",
+      "title": "Intro",
+      "content": "Andreas Vesalius, gevormd in de humanistische traditie van de drie talen, bewoog zich door een Europa waarin talen voortdurend veranderden: hij schreef in het Latijn, las Grieks en sprak de omgangstaal van zijn geboortestreek, de Lage Landen, terwijl hij gaandeweg de ritmes van Italië en Frankrijk in zich opnam."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_travel",
+      "title": "Intro",
+      "content": "Kennis stond niet stil – ze verspreidde zich, werd vertaald en veranderde, net als het lichaam dat hij trachtte te doorgronden. Zelfs het erkennen van kennis die via Arabische geleerden – met name Rhazes – was doorgegeven, was in die tijd geen geringe stap."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_rhazes_vesalius",
+      "title": "Intro",
+      "content": "Tussen Rhazes en Vesalius overschrijdt kennis eerst taalgrenzen, voordat ze lichamen overschrijdt. Rhazes observeert. Vesalius ontleedt. Tussen hen in leert kennis te zien."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_it_took_hold",
+      "title": "Intro",
+      "content": "Het sloeg aan."
+    },
+    {
+      "type": "chapter",
+      "key": "intro_bridge_cultures",
+      "title": "Intro",
+      "content": "Tussen culturen ontstaat een brug – die niet alleen kennis doorgeeft, maar deze ook een nieuwe vorm geeft. In dat proces komt iets anders naar voren: een onverzadigbare nieuwsgierigheid, een drang om vragen te stellen, te toetsen en opnieuw vorm te geven. Hier begint innovatie – niet door te breken met het verleden, maar door het mee te nemen en er iets nieuws van te maken."
+    }
+  ]
+}

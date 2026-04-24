@@ -1,0 +1,30 @@
+{
+  "locale": "nl",
+  "sourceScene": "Assets/Scenes/Client.unity",
+  "sourceGameObjectPath": "MainCanvas/Content/BookIV_Nerves",
+  "entries": [
+    {
+      "type": "image",
+      "key": "4. Nerves",
+      "title": "Book IV: The Nerves"
+    },
+    {
+      "type": "chapter",
+      "key": "nerves_greek_quote",
+      "title": "Book IV: The Nerves",
+      "content": "\"Τὰ νεῦρα ὁδοὶ τῶν τοῦ σώματος σημάτων.\"\n(The nerves are the pathways through which the body's signals travel.)"
+    },
+    {
+      "type": "chapter",
+      "key": "nerves_network",
+      "title": "Book IV: The Nerves",
+      "content": "The body becomes a network. Nerves form unseen pathways linking movement, sensation, and coordination."
+    },
+    {
+      "type": "chapter",
+      "key": "nerves_directed",
+      "title": "Book IV: The Nerves",
+      "content": "The body is not only moved—it is directed. Signals pass, connect, and organise. The brain begins to emerge as a centre of control."
+    }
+  ]
+}
