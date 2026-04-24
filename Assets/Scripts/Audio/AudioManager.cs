@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
         PingPongSingle,
         GroupPingPongSingle,
         GenerationSingle,
+        VibrationSingle,
         HeartDual,
         TutorialDual,
     }
@@ -78,13 +79,20 @@ public class AudioManager : MonoBehaviour
     private bool pingPongActive;
     private bool groupPingPongActive;
     private bool organsOfGenerationActive;
+    private bool vibrationActive;
     private bool heartActive;
 
     private float introFadeValue = 0.5f;
     private float pingPongFadeValue = 0.5f;
     private float generationFadeValue = 0.5f;
+    private float vibrationIntervalValue = 0.5f;
     private float heartBandFadeValue = 0.5f;
     private float heartDelayValue = 0.5f;
+
+    private Coroutine vibrationRoutine;
+
+    private const float MinVibrationIntervalSeconds = 0.6f;
+    private const float MaxVibrationIntervalSeconds = 4f;
 
     public event Action<AudioOverlayState> OverlayStateChanged;
 
@@ -207,6 +215,21 @@ public class AudioManager : MonoBehaviour
         NotifyOverlayStateChanged();
     }
 
+    public void PlayVibrationMode()
+    {
+        StopAllSilent();
+        vibrationActive = true;
+        StartVibrationLoop();
+        NotifyOverlayStateChanged();
+    }
+
+    public void StopVibrationMode()
+    {
+        vibrationActive = false;
+        StopVibrationLoop();
+        NotifyOverlayStateChanged();
+    }
+
     public void PlayHeart()
     {
         StopAllSilent();
@@ -264,6 +287,7 @@ public class AudioManager : MonoBehaviour
         pingPongActive = false;
         groupPingPongActive = false;
         organsOfGenerationActive = false;
+        vibrationActive = false;
         heartActive = false;
 
         if (tutorialFader != null)
@@ -276,6 +300,7 @@ public class AudioManager : MonoBehaviour
             groupPingPongPlayer.Stop();
         if (organsOfGenerationPlayer != null)
             organsOfGenerationPlayer.StopPlayback();
+        StopVibrationLoop();
         if (heartPlayer != null)
             heartPlayer.StopAllPlaybackAndRemoveSources();
     }
@@ -301,6 +326,12 @@ public class AudioManager : MonoBehaviour
         generationFadeValue = Mathf.Clamp01(value);
         if (organsOfGenerationPlayer != null)
             organsOfGenerationPlayer.SetFadeValue(generationFadeValue);
+        NotifyOverlayStateChanged();
+    }
+
+    public void SetVibrationInterval(float normalizedValue)
+    {
+        vibrationIntervalValue = Mathf.Clamp01(normalizedValue);
         NotifyOverlayStateChanged();
     }
 
@@ -391,6 +422,18 @@ public class AudioManager : MonoBehaviour
 
     private AudioOverlayState BuildOverlayState()
     {
+        if (vibrationActive)
+        {
+            return new AudioOverlayState(
+                AudioOverlayKind.VibrationSingle,
+                vibrationIntervalValue,
+                0f,
+                "FAST",
+                "SLOW",
+                string.Empty,
+                string.Empty);
+        }
+
         if (heartActive)
         {
             return new AudioOverlayState(
@@ -476,6 +519,39 @@ public class AudioManager : MonoBehaviour
     private void NotifyOverlayStateChanged()
     {
         OverlayStateChanged?.Invoke(CurrentOverlayState);
+    }
+
+    private void StartVibrationLoop()
+    {
+        StopVibrationLoop();
+        vibrationRoutine = StartCoroutine(VibrationLoop());
+    }
+
+    private void StopVibrationLoop()
+    {
+        if (vibrationRoutine == null)
+            return;
+
+        StopCoroutine(vibrationRoutine);
+        vibrationRoutine = null;
+    }
+
+    private IEnumerator VibrationLoop()
+    {
+        while (vibrationActive)
+        {
+            if (Application.isMobilePlatform)
+                Handheld.Vibrate();
+
+            yield return new WaitForSecondsRealtime(GetVibrationIntervalSeconds());
+        }
+
+        vibrationRoutine = null;
+    }
+
+    private float GetVibrationIntervalSeconds()
+    {
+        return Mathf.Lerp(MinVibrationIntervalSeconds, MaxVibrationIntervalSeconds, vibrationIntervalValue);
     }
 
     private void EnsureGroupPingPongPlayer()

@@ -26,6 +26,7 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Toggle pingPongToggle;
     [SerializeField] private Toggle organsOfGenerationToggle;
     [SerializeField] private Toggle heartToggle;
+    [SerializeField] private Toggle vibrationToggle;
     [SerializeField] private Toggle groupColorToggle;
 
     [Header("View Toggles")]
@@ -36,6 +37,7 @@ public class MonitorUI : MonoBehaviour
     private Text pingPongLabel;
     private Text organsOfGenerationLabel;
     private Text heartLabel;
+    private Text vibrationLabel;
     private Text groupColorLabel;
 
     private void Start()
@@ -65,6 +67,8 @@ public class MonitorUI : MonoBehaviour
             organsOfGenerationToggle.onValueChanged.RemoveListener(OnOrgansOfGenerationToggled);
         if (heartToggle != null)
             heartToggle.onValueChanged.RemoveListener(OnHeartToggled);
+        if (vibrationToggle != null)
+            vibrationToggle.onValueChanged.RemoveListener(OnVibrationToggled);
         if (groupColorToggle != null)
             groupColorToggle.onValueChanged.RemoveListener(OnGroupColorToggled);
         if (completeAnatomyToggle != null)
@@ -101,6 +105,9 @@ public class MonitorUI : MonoBehaviour
         if (heartToggle != null)
             heartToggle.SetIsOnWithoutNotify(nm.ShouldPlayHeart);
 
+        if (vibrationToggle != null)
+            vibrationToggle.SetIsOnWithoutNotify(nm.ShouldPlayVibration);
+
         if (groupColorToggle != null)
             groupColorToggle.SetIsOnWithoutNotify(nm.GroupColorModeActive);
 
@@ -130,6 +137,8 @@ public class MonitorUI : MonoBehaviour
             organsOfGenerationToggle.onValueChanged.AddListener(OnOrgansOfGenerationToggled);
         if (heartToggle != null)
             heartToggle.onValueChanged.AddListener(OnHeartToggled);
+        if (vibrationToggle != null)
+            vibrationToggle.onValueChanged.AddListener(OnVibrationToggled);
         if (groupColorToggle != null)
             groupColorToggle.onValueChanged.AddListener(OnGroupColorToggled);
         if (completeAnatomyToggle != null)
@@ -181,6 +190,11 @@ public class MonitorUI : MonoBehaviour
         Instances.NetworkedMonitor.SetShouldPlayHeart(value);
     }
 
+    private void OnVibrationToggled(bool value)
+    {
+        Instances.NetworkedMonitor.SetShouldPlayVibration(value);
+    }
+
     private void OnGroupColorToggled(bool value)
     {
         Instances.NetworkedMonitor.SetGroupColorModeActive(value);
@@ -197,12 +211,14 @@ public class MonitorUI : MonoBehaviour
         pingPongToggle = ResolveToggle(pingPongToggle, "Ping Pong Toggle");
         organsOfGenerationToggle = ResolveToggle(organsOfGenerationToggle, "Organs Of Generation Toggle");
         heartToggle = ResolveToggle(heartToggle, "Heart Toggle");
+        vibrationToggle = ResolveToggle(vibrationToggle, "Vibration Toggle");
         groupColorToggle = ResolveToggle(groupColorToggle, "Group Color Toggle");
 
         introLabel = ResolveLabel(introLabel, "Intro Label", "Organs Of Nutrition Label");
         pingPongLabel = ResolveLabel(pingPongLabel, "Ping Pong Label");
         organsOfGenerationLabel = ResolveLabel(organsOfGenerationLabel, "Organs Of Generation Label");
         heartLabel = ResolveLabel(heartLabel, "Heart Label");
+        vibrationLabel = ResolveLabel(vibrationLabel, "Vibration Label");
         groupColorLabel = ResolveLabel(groupColorLabel, "Group Color Label");
 
         if (introToggle != null)
@@ -235,6 +251,18 @@ public class MonitorUI : MonoBehaviour
         {
             RenameObject(groupColorLabel.gameObject, "Group Color Label");
             groupColorLabel.text = "Go To Your Color";
+        }
+
+        if (vibrationToggle != null)
+        {
+            RenameObject(vibrationToggle.gameObject, "Vibration Toggle");
+            vibrationToggle.SetIsOnWithoutNotify(false);
+        }
+
+        if (vibrationLabel != null)
+        {
+            RenameObject(vibrationLabel.gameObject, "Vibration Label");
+            vibrationLabel.text = "Vibration";
         }
     }
 

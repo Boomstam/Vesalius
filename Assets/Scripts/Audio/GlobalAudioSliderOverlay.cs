@@ -276,6 +276,9 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
             case AudioManager.AudioOverlayKind.GenerationSingle:
                 audioManager.SetOrgansOfGenerationFade(value);
                 break;
+            case AudioManager.AudioOverlayKind.VibrationSingle:
+                audioManager.SetVibrationInterval(value);
+                break;
         }
     }
 
@@ -300,7 +303,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         bool showSingle = state.Kind == AudioManager.AudioOverlayKind.IntroSingle
                        || state.Kind == AudioManager.AudioOverlayKind.GroupPingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.PingPongSingle
-                       || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle;
+                       || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle
+                       || state.Kind == AudioManager.AudioOverlayKind.VibrationSingle;
 
         SetDualOverlayActive(showDual);
         SetSingleOverlayActive(showSingle);
@@ -405,6 +409,9 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
             case AudioManager.AudioOverlayKind.GenerationSingle:
                 audioManager.SetOrgansOfGenerationFade(currentImageFade);
                 break;
+            case AudioManager.AudioOverlayKind.VibrationSingle:
+                audioManager.SetVibrationInterval(currentImageFade);
+                break;
             case AudioManager.AudioOverlayKind.HeartDual:
                 float halfValue = currentImageFade * 0.5f;
                 audioManager.SetHeartBandFade(halfValue);
@@ -438,6 +445,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
             AudioManager.AudioOverlayKind.PingPongSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.GroupPingPongSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.GenerationSingle => singleSlider != null ? singleSlider.value : 0f,
+            AudioManager.AudioOverlayKind.VibrationSingle => singleSlider != null ? singleSlider.value : 0f,
             AudioManager.AudioOverlayKind.HeartDual => GetDualAverageValue(),
             _ => 0f,
         };
@@ -457,6 +465,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
             || kind == AudioManager.AudioOverlayKind.PingPongSingle
             || kind == AudioManager.AudioOverlayKind.GroupPingPongSingle
             || kind == AudioManager.AudioOverlayKind.GenerationSingle
+            || kind == AudioManager.AudioOverlayKind.VibrationSingle
             || kind == AudioManager.AudioOverlayKind.HeartDual;
     }
 

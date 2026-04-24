@@ -25,6 +25,7 @@ public class NetworkedMonitor : NetworkBehaviour
         PingPong,
         OrgansOfGeneration,
         Heart,
+        Vibration,
     }
 
     private ViewManager viewManager;
@@ -37,6 +38,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private readonly SyncVar<bool> shouldPlayPingPong = new(false);
     private readonly SyncVar<bool> shouldPlayOrgansOfGeneration = new(false);
     private readonly SyncVar<bool> shouldPlayHeart = new(false);
+    private readonly SyncVar<bool> shouldPlayVibration = new(false);
 
     [Header("Heartbeat Config")]
     [Tooltip("Color at the trough of each heartbeat cycle (rest state).")]
@@ -72,6 +74,7 @@ public class NetworkedMonitor : NetworkBehaviour
     public bool ShouldPlayPingPong => shouldPlayPingPong.Value;
     public bool ShouldPlayOrgansOfGeneration => shouldPlayOrgansOfGeneration.Value;
     public bool ShouldPlayHeart => shouldPlayHeart.Value;
+    public bool ShouldPlayVibration => shouldPlayVibration.Value;
     public bool MasterOpacityActive => masterOpacityActive.Value;
     public float MasterOpacityValue => masterOpacityValue.Value;
     public bool HeartbeatActive => heartbeatActive.Value;
@@ -97,6 +100,7 @@ public class NetworkedMonitor : NetworkBehaviour
         shouldPlayPingPong.OnChange += OnShouldPlayPingPongChanged;
         shouldPlayOrgansOfGeneration.OnChange += OnShouldPlayOrgansOfGenerationChanged;
         shouldPlayHeart.OnChange += OnShouldPlayHeartChanged;
+        shouldPlayVibration.OnChange += OnShouldPlayVibrationChanged;
 
         masterOpacityActive.OnChange += OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange += OnMasterOpacityValueChanged;
@@ -130,6 +134,7 @@ public class NetworkedMonitor : NetworkBehaviour
         shouldPlayPingPong.OnChange -= OnShouldPlayPingPongChanged;
         shouldPlayOrgansOfGeneration.OnChange -= OnShouldPlayOrgansOfGenerationChanged;
         shouldPlayHeart.OnChange -= OnShouldPlayHeartChanged;
+        shouldPlayVibration.OnChange -= OnShouldPlayVibrationChanged;
 
         masterOpacityActive.OnChange -= OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange -= OnMasterOpacityValueChanged;
@@ -247,12 +252,33 @@ public class NetworkedMonitor : NetworkBehaviour
             Instances.AudioManager.StopHeart();
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void SetShouldPlayVibration(bool value)
+    {
+        if (value)
+            SetExclusiveAudioMode(AudioMode.Vibration);
+        else
+            shouldPlayVibration.Value = false;
+    }
+
+    private void OnShouldPlayVibrationChanged(bool prev, bool next, bool asServer)
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        if (next)
+            Instances.AudioManager.PlayVibrationMode();
+        else
+            Instances.AudioManager.StopVibrationMode();
+    }
+
     private void SetExclusiveAudioMode(AudioMode mode)
     {
         shouldPlayIntro.Value = mode == AudioMode.Intro;
         shouldPlayPingPong.Value = mode == AudioMode.PingPong;
         shouldPlayOrgansOfGeneration.Value = mode == AudioMode.OrgansOfGeneration;
         shouldPlayHeart.Value = mode == AudioMode.Heart;
+        shouldPlayVibration.Value = mode == AudioMode.Vibration;
     }
 
     [ServerRpc(RequireOwnership = false)]
