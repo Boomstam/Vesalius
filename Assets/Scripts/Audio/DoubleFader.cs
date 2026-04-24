@@ -39,6 +39,10 @@ public class DoubleFader : MonoBehaviour
         (lowSource != null && lowSource.isPlaying)
         || (highSource != null && highSource.isPlaying);
 
+    public bool HasAudiblePlayback =>
+        (lowSource != null && lowSource.isPlaying && lowSource.volume > 0.001f)
+        || (highSource != null && highSource.isPlaying && highSource.volume > 0.001f);
+
     public void Play()
     {
         if (lowClips.Length == 0 || highClips.Length == 0)

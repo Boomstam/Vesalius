@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.35}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10942,9 +10942,6 @@ MonoBehaviour:
   delayLowMixer: {fileID: -5093134378516437442, guid: 0a316802b15da354097940bc3882233a, type: 2}
   delayMidMixer: {fileID: 8304372039020634045, guid: 0a316802b15da354097940bc3882233a, type: 2}
   delayHighMixer: {fileID: -278344151798794106, guid: 0a316802b15da354097940bc3882233a, type: 2}
-  delayIntervalLength: 6
-  minIntervalWait: 2.5
-  chanceOfPlaying: 0.8
   feedback: 0.82
   delayTime: 0.9
   minDelayTime: 0.2

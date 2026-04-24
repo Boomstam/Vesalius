@@ -547,7 +547,7 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
-        if (groupPingPongActive)
+        if (groupPingPongActive && IsPingPongOverlayAudible())
         {
             return new AudioOverlayState(
                 AudioOverlayKind.GroupPingPongSingle,
@@ -559,7 +559,7 @@ public class AudioManager : MonoBehaviour
                 string.Empty);
         }
 
-        if (pingPongActive)
+        if (pingPongActive && IsPingPongOverlayAudible())
         {
             return new AudioOverlayState(
                 AudioOverlayKind.PingPongSingle,
@@ -666,5 +666,12 @@ public class AudioManager : MonoBehaviour
         return heartPlayer != null
             && heartPlayer.HasAudiblePlayback
             && currentMasterVolume >= HeartOverlayAudibilityThreshold;
+    }
+
+    private bool IsPingPongOverlayAudible()
+    {
+        return pingPongFader != null
+            && pingPongFader.HasAudiblePlayback
+            && currentMasterVolume > IntroOverlayAudibilityThreshold;
     }
 }

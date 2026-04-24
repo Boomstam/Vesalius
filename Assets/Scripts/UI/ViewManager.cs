@@ -38,6 +38,7 @@ public class ViewManager : MonoBehaviour
     private Color _defaultButtonColor;
     private bool _isLockedToContent;
     private float _infoButtonFlashEndTime;
+    private NetworkedMonitor _networkedMonitor;
 
     // -------------------------------------------------------------------------
 
@@ -223,6 +224,9 @@ public class ViewManager : MonoBehaviour
 
     private bool IsBlockingOverlayActive()
     {
+        if (IsServerOverlayToggleActive())
+            return true;
+
         if (GlobalAudioSliderOverlay.Instance != null && GlobalAudioSliderOverlay.Instance.IsOverlayVisible)
             return true;
 
@@ -236,6 +240,24 @@ public class ViewManager : MonoBehaviour
             return true;
 
         return false;
+    }
+
+    private bool IsServerOverlayToggleActive()
+    {
+        if (_networkedMonitor == null)
+            _networkedMonitor = FindAnyObjectByType<NetworkedMonitor>();
+
+        if (_networkedMonitor == null)
+            return false;
+
+        return _networkedMonitor.ShouldPlayIntro
+            || _networkedMonitor.ShouldPlayPingPong
+            || _networkedMonitor.ShouldPlayOrgansOfGeneration
+            || _networkedMonitor.ShouldPlayHeart
+            || _networkedMonitor.ShouldPlayVibration
+            || _networkedMonitor.MasterOpacityActive
+            || _networkedMonitor.HeartbeatActive
+            || _networkedMonitor.GroupColorModeActive;
     }
 
     private void StartInfoButtonFlash()
