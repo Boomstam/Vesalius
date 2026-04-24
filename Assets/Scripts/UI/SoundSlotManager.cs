@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,8 @@ using UnityEngine.UI;
 public class SoundsSlotManager : MonoBehaviour
 {
     private const string DoNotDisturbObjectName = "Do Not Disturb Icons";
+    private const string TutorialOverlayObjectName = "Tutorial Color Overlay Stack";
+    private const string TutorialImageFaderObjectName = "Tutorial Sounds ImageFader Background";
     private const float TutorialOverlayFadeTime = 10f;
 
     [Header("Dependencies")]
@@ -18,6 +22,7 @@ public class SoundsSlotManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject soundsPanel;
     [SerializeField] private GameObject doNotDisturbIcons;
+    [SerializeField] private Slider tutorialSlider1;
 
     [Header("Tutorial Styling")]
     [SerializeField] private TMP_FontAsset tutorialFont;
@@ -25,11 +30,13 @@ public class SoundsSlotManager : MonoBehaviour
 
     private bool styleApplied;
     private bool backgroundOverlayCreated;
+    private GameObject tutorialBackgroundOverlayObject;
+    private GameObject tutorialBackgroundImageFaderObject;
 
     private void Start()
     {
         ApplyTutorialStyling();
-        EnsureTutorialBackgroundOverlay();
+        EnsureTutorialBackgrounds();
         ResolveOptionalObjects();
         HideSliderLabels();
 
@@ -64,6 +71,12 @@ public class SoundsSlotManager : MonoBehaviour
 
         if (soundsPanel != null)
             soundsPanel.SetActive(isSoundsSlot);
+
+        if (tutorialBackgroundOverlayObject != null)
+            tutorialBackgroundOverlayObject.SetActive(!isSoundsSlot);
+
+        if (tutorialBackgroundImageFaderObject != null)
+            tutorialBackgroundImageFaderObject.SetActive(isSoundsSlot);
 
         if (doNotDisturbIcons != null)
             doNotDisturbIcons.SetActive(showDoNotDisturbIcons);
@@ -139,14 +152,21 @@ public class SoundsSlotManager : MonoBehaviour
         button.targetGraphic = image;
     }
 
+    private void EnsureTutorialBackgrounds()
+    {
+        EnsureTutorialBackgroundOverlay();
+        EnsureTutorialBackgroundImageFader();
+    }
+
     private void EnsureTutorialBackgroundOverlay()
     {
         if (backgroundOverlayCreated)
             return;
 
-        Transform existing = transform.Find("Tutorial Color Overlay Stack");
+        Transform existing = transform.Find(TutorialOverlayObjectName);
         if (existing != null)
         {
+            tutorialBackgroundOverlayObject = existing.gameObject;
             ConfigureTutorialOverlay(existing.GetComponent<ColorOverlay>());
             backgroundOverlayCreated = true;
             return;
@@ -161,9 +181,10 @@ public class SoundsSlotManager : MonoBehaviour
             return;
 
         GameObject duplicate = Instantiate(source.gameObject, transform);
-        duplicate.name = "Tutorial Color Overlay Stack";
+        duplicate.name = TutorialOverlayObjectName;
         duplicate.SetActive(true);
         duplicate.transform.SetSiblingIndex(0);
+        tutorialBackgroundOverlayObject = duplicate;
 
         if (duplicate.TryGetComponent(out RectTransform duplicateRect))
         {
@@ -189,6 +210,124 @@ public class SoundsSlotManager : MonoBehaviour
             graphic.raycastTarget = false;
 
         backgroundOverlayCreated = true;
+    }
+
+    private void EnsureTutorialBackgroundImageFader()
+    {
+        if (tutorialBackgroundImageFaderObject != null)
+            return;
+
+        Transform existing = transform.Find(TutorialImageFaderObjectName);
+        if (existing != null)
+        {
+            tutorialBackgroundImageFaderObject = existing.gameObject;
+            return;
+        }
+
+        Slider slider1 = ResolveTutorialSlider1();
+        Sprite[] backgroundSprites = ResolveTutorialBackgroundSprites();
+        if (backgroundSprites == null || backgroundSprites.Length < 2)
+        {
+            Debug.LogWarning("SoundsSlotManager: could not resolve the nerves alternate images for the tutorial sounds background.");
+            return;
+        }
+
+        GameObject root = new(TutorialImageFaderObjectName, typeof(RectTransform));
+        root.transform.SetParent(transform, false);
+        root.transform.SetSiblingIndex(0);
+        root.SetActive(false);
+        tutorialBackgroundImageFaderObject = root;
+
+        RectTransform rootRect = root.GetComponent<RectTransform>();
+        rootRect.anchorMin = Vector2.zero;
+        rootRect.anchorMax = Vector2.one;
+        rootRect.offsetMin = Vector2.zero;
+        rootRect.offsetMax = Vector2.zero;
+        rootRect.anchoredPosition = Vector2.zero;
+
+        GameObject underlayObject = new("Black Underlay", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        underlayObject.transform.SetParent(root.transform, false);
+
+        RectTransform underlayRect = underlayObject.GetComponent<RectTransform>();
+        underlayRect.anchorMin = Vector2.zero;
+        underlayRect.anchorMax = Vector2.one;
+        underlayRect.offsetMin = Vector2.zero;
+        underlayRect.offsetMax = Vector2.zero;
+        underlayRect.anchoredPosition = Vector2.zero;
+
+        Image underlayImage = underlayObject.GetComponent<Image>();
+        underlayImage.color = Color.black;
+        underlayImage.raycastTarget = false;
+
+        Image[] images = new Image[backgroundSprites.Length];
+        for (int i = 0; i < backgroundSprites.Length; i++)
+        {
+            GameObject imageObject = new($"Image {i + 1}", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            imageObject.transform.SetParent(root.transform, false);
+
+            RectTransform imageRect = imageObject.GetComponent<RectTransform>();
+            imageRect.anchorMin = Vector2.zero;
+            imageRect.anchorMax = Vector2.one;
+            imageRect.offsetMin = Vector2.zero;
+            imageRect.offsetMax = Vector2.zero;
+            imageRect.anchoredPosition = Vector2.zero;
+
+            Image image = imageObject.GetComponent<Image>();
+            image.sprite = backgroundSprites[i];
+            image.color = new Color(1f, 1f, 1f, i == 0 ? 1f : 0f);
+            image.raycastTarget = false;
+            images[i] = image;
+        }
+
+        ImageFader imageFader = root.AddComponent<ImageFader>();
+        imageFader.images = images;
+        imageFader.alternateImages = Array.Empty<Sprite>();
+        imageFader.fadeSlider = slider1;
+        imageFader.alternateMode = false;
+        imageFader.fadeVal = 0f;
+    }
+
+    private Slider ResolveTutorialSlider1()
+    {
+        if (tutorialSlider1 != null)
+            return tutorialSlider1;
+
+        if (soundsPanel == null)
+            return null;
+
+        tutorialSlider1 = soundsPanel.GetComponentsInChildren<Slider>(true)
+            .FirstOrDefault(slider => string.Equals(slider.gameObject.name, "Tutorial Slider 1", StringComparison.Ordinal));
+
+        return tutorialSlider1;
+    }
+
+    private static Sprite[] ResolveTutorialBackgroundSprites()
+    {
+        ImageFader nervesFader = Resources.FindObjectsOfTypeAll<ImageFader>()
+            .FirstOrDefault(IsNervesAlternateImageFader);
+
+        if (nervesFader?.alternateImages == null || nervesFader.alternateImages.Length < 2)
+            return null;
+
+        return nervesFader.alternateImages
+            .Where(sprite => sprite != null)
+            .Take(2)
+            .ToArray();
+    }
+
+    private static bool IsNervesAlternateImageFader(ImageFader fader)
+    {
+        if (fader == null ||
+            !fader.gameObject.scene.IsValid() ||
+            fader.alternateImages == null ||
+            fader.alternateImages.Length < 2)
+        {
+            return false;
+        }
+
+        return fader.alternateImages.Any(sprite =>
+            sprite != null &&
+            sprite.name.IndexOf("Book IV The Nerves", StringComparison.OrdinalIgnoreCase) >= 0);
     }
 
     private static void ConfigureTutorialOverlay(ColorOverlay overlay)

@@ -173,15 +173,19 @@ public class ImageFader : MonoBehaviour
 
     private void EnsureInitialized()
     {
-        if (_initialized) return;
+        if (_initialized && CurrentNumImages > 0)
+            return;
+
+        if (images == null || images.Length == 0)
+            return;
 
         InitImageArray(ref images);
 
-        if (images != null)
-        {
-            _originalSprites = images.Select(img => img.sprite).ToArray();
-            _activeImages = images;
-        }
+        if (images == null || images.Length == 0)
+            return;
+
+        _originalSprites = images.Select(img => img.sprite).ToArray();
+        _activeImages = images;
 
         _initialized = true;
 

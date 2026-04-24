@@ -313,7 +313,7 @@ public class MonitorUI : MonoBehaviour
         if (vibrationLabel != null)
         {
             RenameObject(vibrationLabel.gameObject, "Vibration Label");
-            vibrationLabel.text = "Vibration";
+            vibrationLabel.text = "Vibrations";
         }
     }
 

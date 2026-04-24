@@ -104,6 +104,18 @@ public class AudioManager : MonoBehaviour
 
     public AudioOverlayState CurrentOverlayState => BuildOverlayState();
 
+    public static bool SupportsHandheldVibration
+    {
+        get
+        {
+#if UNITY_ANDROID || UNITY_IOS
+            return Application.isMobilePlatform;
+#else
+            return false;
+#endif
+        }
+    }
+
     private void Awake()
     {
         if (tutorialFader != null)
@@ -245,7 +257,8 @@ public class AudioManager : MonoBehaviour
     {
         StopAllSilent();
         vibrationActive = true;
-        StartVibrationLoop();
+        if (SupportsHandheldVibration)
+            StartVibrationLoop();
         NotifyOverlayStateChanged();
     }
 
@@ -448,14 +461,14 @@ public class AudioManager : MonoBehaviour
 
     private AudioOverlayState BuildOverlayState()
     {
-        if (vibrationActive)
+        if (vibrationActive && SupportsHandheldVibration)
         {
             return new AudioOverlayState(
                 AudioOverlayKind.VibrationSingle,
                 vibrationIntervalValue,
                 0f,
-                "FAST",
-                "SLOW",
+                "600 MS",
+                "4 S",
                 string.Empty,
                 string.Empty);
         }
@@ -567,11 +580,15 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator VibrationLoop()
     {
+        if (!SupportsHandheldVibration)
+        {
+            vibrationRoutine = null;
+            yield break;
+        }
+
         while (vibrationActive)
         {
-#if UNITY_ANDROID || UNITY_IOS
             Handheld.Vibrate();
-#endif
             yield return new WaitForSecondsRealtime(GetVibrationIntervalSeconds());
         }
 
