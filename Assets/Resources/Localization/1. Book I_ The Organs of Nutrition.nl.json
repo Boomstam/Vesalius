@@ -4,33 +4,33 @@
   "sourceGameObjectPath": "MainCanvas/Content/BookI_Nutrition",
   "entries": [
     {
-    "type": "image",
-    "key": "5. Digestion",
-    "title": "Book I: The Organs of Nutrition"
+      "type": "image",
+      "key": "5. Digestion",
+      "title": "Boek I: Het spijsverteringsstelsel"
     },
     {
       "type": "chapter",
       "key": "nutrition_fain_le_semont",
-      "title": "Book I: The Organs of Nutrition",
-      "content": "\"Fain le semont et point.\"\n(Hunger urges and drives him on.)"
+      "title": "Boek I: Het spijsverteringsstelsel",
+      "content": "\"Fain le semont et point.\"\n(Honger drijft hem voort.)"
     },
     {
       "type": "chapter",
       "key": "nutrition_food_enters",
-      "title": "Book I: The Organs of Nutrition",
-      "content": "Food enters, passes, is broken down—the stomach, liver, and intestines are not just body parts, but stages in a vital transformation."
+      "title": "Boek I: Het spijsverteringsstelsel",
+      "content": "Voedsel komt binnen, gaat door en wordt afgebroken — de maag, lever en darmen zijn niet alleen lichaamsdelen, maar fasen in een vitale transformatie."
     },
     {
       "type": "chapter",
       "key": "nutrition_galen",
-      "title": "Book I: The Organs of Nutrition",
-      "content": "Much of this still follows Galen, where blood is believed to be formed in the liver. Vesalius does not overturn this, but he looks closely—and in doing so, begins to unsettle it."
+      "title": "Boek I: Het spijsverteringsstelsel",
+      "content": "Veel hiervan volgt nog steeds Galenus, die geloofde dat bloed in de lever wordt gevormd. Vesalius weerlegt dit niet, maar hij bekijkt het nauwkeurig — en begint het daarmee te ontwrichten."
     },
     {
       "type": "chapter",
       "key": "nutrition_rhazes",
-      "title": "Book I: The Organs of Nutrition",
-      "content": "Like Rhazes, who observed how nourishment shapes the living body, Vesalius brings this process into view."
+      "title": "Boek I: Het spijsverteringsstelsel",
+      "content": "Net als Rhazes, die observeerde hoe voeding het levende lichaam vormt, brengt Vesalius dit proces in beeld."
     }
   ]
 }
