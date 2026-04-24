@@ -6906,7 +6906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioManager_VibrationLoop_mFD
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioManager_GetVibrationIntervalSeconds_mCF98DFA59E3462369923A4DC24518144F3857521 (AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:638>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:640>
 		float L_0 = __this->___vibrationIntervalValue;
 		float L_1;
 		L_1 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline((0.600000024f), (4.0f), L_0, NULL);
@@ -6925,7 +6925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioManager_EnsureGroupPingPongPlayer_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:643>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:645>
 		DoubleFader_t66F419038AB09BFC335A47E846A0691BDBF930D2* L_0 = __this->___pingPongFader;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6936,13 +6936,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioManager_EnsureGroupPingPongPlayer_m
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:644>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:646>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:646>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:648>
 		GroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27* L_2 = __this->___groupPingPongPlayer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -6953,7 +6953,7 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:647>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:649>
 		GroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27* L_4;
 		L_4 = Component_GetComponent_TisGroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27_mB0C7BBBF95F1CFEDDF00587ADCD058A9AB114FB3(__this, Component_GetComponent_TisGroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27_mB0C7BBBF95F1CFEDDF00587ADCD058A9AB114FB3_RuntimeMethod_var);
 		__this->___groupPingPongPlayer = L_4;
@@ -6962,7 +6962,7 @@ IL_000f:
 
 IL_0029:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:649>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:651>
 		GroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27* L_5 = __this->___groupPingPongPlayer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -6973,7 +6973,7 @@ IL_0029:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:650>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:652>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
 		L_7 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_7);
@@ -6985,12 +6985,12 @@ IL_0029:
 
 IL_0048:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:652>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:654>
 		GroupPingPongPlayer_t34AB8DA36D133ED26F303CC5B9A8909B30519E27* L_9 = __this->___groupPingPongPlayer;
 		DoubleFader_t66F419038AB09BFC335A47E846A0691BDBF930D2* L_10 = __this->___pingPongFader;
 		NullCheck(L_9);
 		GroupPingPongPlayer_SetFader_m13ED57420CD483E3D25685DBB326762724DAC17B_inline(L_9, L_10, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:653>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:655>
 		return;
 	}
 }
@@ -7004,9 +7004,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioManager_IsIntroOverlayAudible_mAC5D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:657>
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:658>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:659>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:660>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:661>
 		IntervalPlayer_tF0D1C32D8D89A015969786CAFCFFABE68C9D8E63* L_0 = __this->___introPlayer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7046,9 +7046,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioManager_IsHeartOverlayAudible_m4ABB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:664>
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:665>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:666>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:667>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:668>
 		DelayPlayer_t50B10F7A03E5A92C5C7B3663811F902A49CB3D60* L_0 = __this->___heartPlayer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7678,9 +7678,9 @@ IL_0017:
 
 IL_002e:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:629>
-		Handheld_Vibrate_m820B68A9A3A1C5C0173B99A94C2054778BC3A2F9(NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:630>
+		Handheld_Vibrate_m820B68A9A3A1C5C0173B99A94C2054778BC3A2F9(NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:632>
 		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_6 = V_1;
 		NullCheck(L_6);
 		float L_7;
@@ -7710,12 +7710,12 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:633>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:635>
 		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_11 = V_1;
 		NullCheck(L_11);
 		L_11->___vibrationRoutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_11->___vibrationRoutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:634>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Audio/AudioManager.cs:636>
 		return (bool)0;
 	}
 }

@@ -721,6 +721,9 @@ public class NetworkedMonitor : NetworkBehaviour
         }
 
         SendGroupAssignment(connection, groupIndex);
+
+        if (shouldPlayHeart.Value)
+            heartStaggerController?.RetryPendingTrigger(networkedMessageSystem);
     }
 
     private void ReassignGroupsForCurrentConnections()
