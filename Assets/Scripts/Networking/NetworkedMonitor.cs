@@ -79,9 +79,6 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private readonly Dictionary<string, int> groupAssignmentsByUniqueId = new();
 
-    [Header("Heart Stagger")]
-    [SerializeField] private HeartStaggerController heartStaggerController;
-
     [Header("Concert Reset")]
     [SerializeField] private int concertReadyPartNumber = TutorialPartNumber;
     [SerializeField] private bool concertReadyParticipationMode = false;
@@ -108,15 +105,12 @@ public class NetworkedMonitor : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
-        EnsureHeartStaggerController();
         StartCoroutine(FindMessageSystemCoroutine());
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
-
-        EnsureHeartStaggerController();
 
         currentPart.OnChange += OnCurrentPartChanged;
         participationMode.OnChange += OnParticipationModeChanged;
@@ -287,21 +281,11 @@ public class NetworkedMonitor : NetworkBehaviour
             return;
         }
 
-        if (asServer)
-        {
-            if (next)
-                heartStaggerController?.TriggerStagger(networkedMessageSystem);
-            else
-                heartStaggerController?.CancelAll();
-
-            return;
-        }
-
         if (SceneLoader.BuildType != BuildType.Client)
             return;
 
         if (next)
-            Instances.AudioManager.EnableHeartMode();
+            Instances.AudioManager.PlayHeart();
         else
             Instances.AudioManager.StopHeart();
     }
@@ -721,9 +705,6 @@ public class NetworkedMonitor : NetworkBehaviour
         }
 
         SendGroupAssignment(connection, groupIndex);
-
-        if (shouldPlayHeart.Value)
-            heartStaggerController?.RetryPendingTrigger(networkedMessageSystem);
     }
 
     private void ReassignGroupsForCurrentConnections()
@@ -891,17 +872,10 @@ public class NetworkedMonitor : NetworkBehaviour
         }
     }
 
-    private void EnsureHeartStaggerController()
-    {
-        if (heartStaggerController == null)
-            heartStaggerController = GetComponent<HeartStaggerController>();
-    }
-
     private void ApplyConcertReset()
     {
         int resetPart = ClampPart(concertReadyPartNumber);
 
-        heartStaggerController?.CancelAll();
         SetExclusiveAudioMode(AudioMode.None);
 
         currentPart.Value = resetPart;

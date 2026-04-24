@@ -1,57 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using FishNet.Connection;
 using FishNet.Object;
 using UnityEngine;
 
 /// <summary>
-/// Server-authoritative staggered start controller for the heart mode.
-/// The server snapshots connected clients when heart is enabled, assigns each
-/// one a delay within the 0-40 second lead-in window, and each client then
-/// keeps its own local 80-second playback lifetime.
+/// Legacy compatibility component. Heart audio now uses the same simple
+/// toggle-driven looping flow as the other continuous sound modes.
 /// </summary>
 public class HeartStaggerController : NetworkBehaviour
 {
-    private const float StaggerLeadInDurationSeconds = 40f;
-    private const float LocalPlaybackDurationSeconds = 80f;
-    private const float PendingTriggerRetryDelaySeconds = 0.5f;
-
-    private Coroutine localLifecycleRoutine;
-    private Coroutine pendingTriggerRoutine;
-    private uint localSequence;
-    private bool pendingTrigger;
-
     public void TriggerStagger(NetworkedMessageSystem messageSystem)
     {
-        if (!IsServerInitialized || messageSystem == null)
+        if (!IsServerInitialized)
             return;
 
-        List<NetworkConnection> connections = new(messageSystem.GetAllConnections());
-        int count = connections.Count;
-
-        if (count == 0)
-        {
-            pendingTrigger = true;
-            return;
-        }
-
-        pendingTrigger = false;
-        StopPendingTriggerRetry();
-
-        if (count == 1)
-        {
-            RpcStartWithDelay(connections[0], 0f);
-            return;
-        }
-
-        for (int index = 0; index < count; index++)
-        {
-            float delaySeconds = Mathf.Lerp(
-                0f,
-                StaggerLeadInDurationSeconds,
-                index / (float)(count - 1));
-            RpcStartWithDelay(connections[index], delaySeconds);
-        }
+        RpcSetHeartEnabled(true);
     }
 
     public void CancelAll()
@@ -59,81 +21,19 @@ public class HeartStaggerController : NetworkBehaviour
         if (!IsServerInitialized)
             return;
 
-        pendingTrigger = false;
-        StopPendingTriggerRetry();
-        RpcCancelAll();
+        RpcSetHeartEnabled(false);
     }
 
     public void RetryPendingTrigger(NetworkedMessageSystem messageSystem)
     {
-        if (!IsServerInitialized || !pendingTrigger || pendingTriggerRoutine != null)
-            return;
-
-        pendingTriggerRoutine = StartCoroutine(RetryPendingTriggerRoutine(messageSystem));
+        // Intentionally empty. Staggered retries are no longer used.
     }
 
     public override void OnStopClient()
     {
         base.OnStopClient();
-        CancelLocalLifecycle(stopAudio: true);
-    }
 
-    [TargetRpc]
-    private void RpcStartWithDelay(NetworkConnection connection, float delaySeconds)
-    {
         if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        CancelLocalLifecycle(stopAudio: false);
-        localLifecycleRoutine = StartCoroutine(LocalHeartLifecycle(++localSequence, delaySeconds));
-    }
-
-    [ObserversRpc]
-    private void RpcCancelAll()
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        CancelLocalLifecycle(stopAudio: true);
-    }
-
-    private IEnumerator LocalHeartLifecycle(uint sequence, float delaySeconds)
-    {
-        if (delaySeconds > 0f)
-            yield return new WaitForSeconds(delaySeconds);
-
-        if (sequence != localSequence)
-            yield break;
-
-        AudioManager audioManager = GetAudioManager();
-        if (audioManager == null)
-        {
-            localLifecycleRoutine = null;
-            yield break;
-        }
-
-        audioManager.PlayHeart();
-
-        yield return new WaitForSeconds(LocalPlaybackDurationSeconds);
-
-        if (sequence != localSequence)
-            yield break;
-
-        audioManager.StopHeartPlayback();
-        localLifecycleRoutine = null;
-    }
-
-    private void CancelLocalLifecycle(bool stopAudio)
-    {
-        localSequence++;
-
-        if (localLifecycleRoutine != null)
-        {
-            StopCoroutine(localLifecycleRoutine);
-            localLifecycleRoutine = null;
-        }
-
-        if (!stopAudio)
             return;
 
         AudioManager audioManager = GetAudioManager();
@@ -141,22 +41,20 @@ public class HeartStaggerController : NetworkBehaviour
             audioManager.StopHeart();
     }
 
-    private IEnumerator RetryPendingTriggerRoutine(NetworkedMessageSystem messageSystem)
+    [ObserversRpc]
+    private void RpcSetHeartEnabled(bool enabled)
     {
-        yield return new WaitForSeconds(PendingTriggerRetryDelaySeconds);
-        pendingTriggerRoutine = null;
-
-        if (pendingTrigger)
-            TriggerStagger(messageSystem);
-    }
-
-    private void StopPendingTriggerRetry()
-    {
-        if (pendingTriggerRoutine == null)
+        if (SceneLoader.BuildType != BuildType.Client)
             return;
 
-        StopCoroutine(pendingTriggerRoutine);
-        pendingTriggerRoutine = null;
+        AudioManager audioManager = GetAudioManager();
+        if (audioManager == null)
+            return;
+
+        if (enabled)
+            audioManager.PlayHeart();
+        else
+            audioManager.StopHeart();
     }
 
     private static AudioManager GetAudioManager()
