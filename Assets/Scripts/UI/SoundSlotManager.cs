@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class SoundsSlotManager : MonoBehaviour
 {
     private const string DoNotDisturbObjectName = "Do Not Disturb Icons";
+    private const float TutorialOverlayFadeTime = 10f;
 
     [Header("Dependencies")]
     [SerializeField] private InfoManager infoManager;
@@ -145,6 +146,7 @@ public class SoundsSlotManager : MonoBehaviour
         Transform existing = transform.Find("Tutorial Color Overlay Stack");
         if (existing != null)
         {
+            ConfigureTutorialOverlay(existing.GetComponent<ColorOverlay>());
             backgroundOverlayCreated = true;
             return;
         }
@@ -173,7 +175,10 @@ public class SoundsSlotManager : MonoBehaviour
 
         ColorOverlay overlay = duplicate.GetComponent<ColorOverlay>();
         if (overlay != null)
+        {
             overlay.RegisterAsSharedInstance = false;
+            ConfigureTutorialOverlay(overlay);
+        }
 
         ColorOverlay sourceOverlay = source.GetComponent<ColorOverlay>();
         if (sourceOverlay != null && sourceOverlay.RegisterAsSharedInstance)
@@ -183,6 +188,12 @@ public class SoundsSlotManager : MonoBehaviour
             graphic.raycastTarget = false;
 
         backgroundOverlayCreated = true;
+    }
+
+    private static void ConfigureTutorialOverlay(ColorOverlay overlay)
+    {
+        if (overlay != null)
+            overlay.ConfigureColorCycle(TutorialOverlayFadeTime, initializeWithFirstColor: true);
     }
 
     private void ResolveOptionalObjects()

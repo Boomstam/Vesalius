@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
+    private const float TutorialOverlayFadeTime = 10f;
+
     [Header("Dependencies")]
     [SerializeField] private InfoManager infoManager;
     [SerializeField] private TabManagement tabManagement;
@@ -232,6 +234,7 @@ public class TutorialManager : MonoBehaviour
         Transform existing = transform.Find("Tutorial Color Overlay Stack");
         if (existing != null)
         {
+            ConfigureTutorialOverlay(existing.GetComponent<ColorOverlay>());
             _backgroundOverlayCreated = true;
             return;
         }
@@ -260,7 +263,10 @@ public class TutorialManager : MonoBehaviour
 
         ColorOverlay overlay = duplicate.GetComponent<ColorOverlay>();
         if (overlay != null)
+        {
             overlay.RegisterAsSharedInstance = false;
+            ConfigureTutorialOverlay(overlay);
+        }
 
         ColorOverlay sourceOverlay = source.GetComponent<ColorOverlay>();
         if (sourceOverlay != null && sourceOverlay.RegisterAsSharedInstance)
@@ -270,5 +276,11 @@ public class TutorialManager : MonoBehaviour
             graphic.raycastTarget = false;
 
         _backgroundOverlayCreated = true;
+    }
+
+    private static void ConfigureTutorialOverlay(ColorOverlay overlay)
+    {
+        if (overlay != null)
+            overlay.ConfigureColorCycle(TutorialOverlayFadeTime, initializeWithFirstColor: true);
     }
 }

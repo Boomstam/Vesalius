@@ -17,6 +17,10 @@ public class NetworkedMonitor : NetworkBehaviour
 {
     private const int GroupA = 0;
     private const int GroupB = 1;
+    private const int MinimumPartNumber = 0;
+    private const int MaximumPartNumber = 10;
+    private const int TutorialPartNumber = 0;
+    private const int WordsOfVesaliusPartNumber = 5;
 
     private enum AudioMode
     {
@@ -31,7 +35,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private ViewManager viewManager;
     private TMP_InputField partInputField;
 
-    private readonly SyncVar<int> currentPart = new(-1);
+    private readonly SyncVar<int> currentPart = new(MinimumPartNumber);
     private readonly SyncVar<bool> participationMode = new(false);
     private readonly SyncVar<bool> completeAnatomyMode = new(false);
 
@@ -81,6 +85,7 @@ public class NetworkedMonitor : NetworkBehaviour
     public float MasterOpacityValue => masterOpacityValue.Value;
     public bool HeartbeatActive => heartbeatActive.Value;
     public bool GroupColorModeActive => groupColorModeActive.Value;
+    public int CurrentPart => ClampPart(currentPart.Value);
 
     public override void OnStartServer()
     {
@@ -502,11 +507,48 @@ public class NetworkedMonitor : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void RequestSetPartServerRpc(int part)
     {
-        currentPart.Value = part;
+        ApplyPartChange(part);
+    }
+
+    public void IncrementPart()
+    {
+        RequestAdjustPartServerRpc(1);
+    }
+
+    public void DecrementPart()
+    {
+        RequestAdjustPartServerRpc(-1);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void RequestAdjustPartServerRpc(int delta)
+    {
+        ApplyPartChange(currentPart.Value + delta);
+    }
+
+    private void ApplyPartChange(int requestedPart)
+    {
+        int clampedPart = ClampPart(requestedPart);
+        completeAnatomyMode.Value = ShouldAutoEnableCompleteAnatomy(clampedPart);
+
+        currentPart.Value = clampedPart;
+    }
+
+    private static int ClampPart(int part)
+    {
+        return Mathf.Clamp(part, MinimumPartNumber, MaximumPartNumber);
+    }
+
+    private static bool ShouldAutoEnableCompleteAnatomy(int part)
+    {
+        return part != TutorialPartNumber && part != WordsOfVesaliusPartNumber;
     }
 
     private void OnCurrentPartChanged(int prev, int next, bool asServer)
     {
+        if (partInputField != null)
+            partInputField.SetTextWithoutNotify(ClampPart(next).ToString());
+
         if (viewManager != null)
             viewManager.SetPart(next);
     }
@@ -530,6 +572,9 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnCompleteAnatomyModeChanged(bool prev, bool next, bool asServer)
     {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+            Instances.MonitorUI?.SetCompleteAnatomyModeState(next);
+
         ApplyCompleteAnatomyMode(next);
     }
 
@@ -577,6 +622,7 @@ public class NetworkedMonitor : NetworkBehaviour
                 partInputField = go.GetComponent<TMP_InputField>();
                 if (partInputField != null)
                 {
+                    partInputField.SetTextWithoutNotify(CurrentPart.ToString());
                     partInputField.onValueChanged.AddListener(OnPartInputChanged);
                     yield break;
                 }

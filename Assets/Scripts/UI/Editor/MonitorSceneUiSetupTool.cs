@@ -37,6 +37,11 @@ public static class MonitorSceneUiSetupTool
     private static readonly Vector2 ResetDeckButtonMax = new(0.47115386f, 0.13235295f);
     private static readonly Vector2 HardCutButtonMin = new(0.52884614f, 0.044117648f);
     private static readonly Vector2 HardCutButtonMax = new(0.9326923f, 0.13235295f);
+    private static readonly Vector2 PartNumberInputPosition = new(-520f, 205f);
+    private static readonly Vector2 PartNumberInputSize = new(260f, 88f);
+    private static readonly Vector2 PartNumberButtonSize = new(72f, 72f);
+    private static readonly Color PartNumberButtonColor = new(0.18f, 0.22f, 0.26f, 1f);
+    private const float PartNumberButtonGap = 16f;
 
     [MenuItem("Tools/Vesalius/Configure Monitor Scene UI")]
     public static void ConfigureMonitorSceneUi()
@@ -124,6 +129,7 @@ public static class MonitorSceneUiSetupTool
         SetObjectReference(serializedUi, "groupColorToggle", groupColorToggle);
         SetObjectReference(serializedUi, "participationToggle", participationToggle);
         SetObjectReference(serializedUi, "completeAnatomyToggle", completeAnatomyToggle);
+        ConfigurePartNumberControls(canvasTransform, serializedUi);
         serializedUi.ApplyModifiedPropertiesWithoutUndo();
     }
 
@@ -264,6 +270,131 @@ public static class MonitorSceneUiSetupTool
         toggleRect.sizeDelta = referenceRect.sizeDelta;
         toggleRect.anchoredPosition = referenceRect.anchoredPosition + new Vector2(0f, yOffset);
         toggleRect.localScale = Vector3.one;
+    }
+
+    private static void ConfigurePartNumberControls(Transform canvasTransform, SerializedObject serializedUi)
+    {
+        TMP_InputField partInputField = ResolvePartInputField();
+        if (partInputField == null)
+        {
+            Debug.LogError("[MonitorSceneUiSetupTool] Part Number input field was not found in the monitor scene.");
+            return;
+        }
+
+        ConfigureCenteredRect(partInputField.transform as RectTransform, PartNumberInputPosition, PartNumberInputSize);
+
+        TMP_Text inputText = partInputField.textComponent;
+        Button decrementButton = EnsurePartNumberButton(canvasTransform, "Part Number Decrement Button", "-", inputText);
+        Button incrementButton = EnsurePartNumberButton(canvasTransform, "Part Number Increment Button", "+", inputText);
+
+        float buttonOffset = (PartNumberInputSize.x * 0.5f) + PartNumberButtonGap + (PartNumberButtonSize.x * 0.5f);
+        ConfigureCenteredRect(
+            decrementButton.transform as RectTransform,
+            PartNumberInputPosition + new Vector2(-buttonOffset, 0f),
+            PartNumberButtonSize);
+        ConfigureCenteredRect(
+            incrementButton.transform as RectTransform,
+            PartNumberInputPosition + new Vector2(buttonOffset, 0f),
+            PartNumberButtonSize);
+
+        decrementButton.transform.SetSiblingIndex(partInputField.transform.GetSiblingIndex());
+        incrementButton.transform.SetSiblingIndex(partInputField.transform.GetSiblingIndex() + 1);
+
+        SetObjectReference(serializedUi, "decrementPartButton", decrementButton);
+        SetObjectReference(serializedUi, "incrementPartButton", incrementButton);
+    }
+
+    private static TMP_InputField ResolvePartInputField()
+    {
+        GameObject existing = GameObject.Find("Part Number");
+        if (existing != null && existing.TryGetComponent(out TMP_InputField inputField))
+            return inputField;
+
+        return null;
+    }
+
+    private static Button EnsurePartNumberButton(Transform parent, string name, string labelText, TMP_Text templateText)
+    {
+        Button button = ResolveButton(name);
+        if (button == null)
+            button = CreatePartNumberButton(parent, name, labelText, templateText);
+
+        SetButtonText(button, labelText);
+
+        Image image = button.GetComponent<Image>();
+        if (image != null)
+            image.color = PartNumberButtonColor;
+
+        ColorBlock colors = button.colors;
+        colors.normalColor = PartNumberButtonColor;
+        colors.highlightedColor = PartNumberButtonColor * new Color(1.08f, 1.08f, 1.08f, 1f);
+        colors.pressedColor = PartNumberButtonColor * new Color(0.9f, 0.9f, 0.9f, 1f);
+        colors.selectedColor = colors.highlightedColor;
+        colors.disabledColor = new Color(0.4f, 0.4f, 0.4f, 0.5f);
+        colors.fadeDuration = 0.1f;
+        button.colors = colors;
+
+        TMP_Text tmpLabel = button.GetComponentInChildren<TMP_Text>(true);
+        if (tmpLabel != null)
+        {
+            if (templateText != null && templateText.font != null)
+                tmpLabel.font = templateText.font;
+
+            tmpLabel.fontSize = 48f;
+            tmpLabel.alignment = TextAlignmentOptions.Center;
+            tmpLabel.color = Color.white;
+            tmpLabel.raycastTarget = false;
+        }
+
+        return button;
+    }
+
+    private static Button CreatePartNumberButton(Transform parent, string name, string labelText, TMP_Text templateText)
+    {
+        GameObject buttonObject = new(name, typeof(RectTransform), typeof(Image), typeof(Button));
+        buttonObject.transform.SetParent(parent, false);
+
+        RectTransform buttonRect = buttonObject.GetComponent<RectTransform>();
+        buttonRect.localScale = Vector3.one;
+
+        Image buttonImage = buttonObject.GetComponent<Image>();
+        buttonImage.color = PartNumberButtonColor;
+
+        Button button = buttonObject.GetComponent<Button>();
+        button.targetGraphic = buttonImage;
+
+        GameObject labelObject = new("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
+        labelObject.transform.SetParent(buttonObject.transform, false);
+
+        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+        labelRect.anchorMin = Vector2.zero;
+        labelRect.anchorMax = Vector2.one;
+        labelRect.offsetMin = Vector2.zero;
+        labelRect.offsetMax = Vector2.zero;
+        labelRect.localScale = Vector3.one;
+
+        TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
+        label.text = labelText;
+        label.color = Color.white;
+        label.alignment = TextAlignmentOptions.Center;
+        label.raycastTarget = false;
+        if (templateText != null && templateText.font != null)
+            label.font = templateText.font;
+
+        return button;
+    }
+
+    private static void ConfigureCenteredRect(RectTransform rect, Vector2 anchoredPosition, Vector2 sizeDelta)
+    {
+        if (rect == null)
+            return;
+
+        rect.anchorMin = new Vector2(0.5f, 0.5f);
+        rect.anchorMax = new Vector2(0.5f, 0.5f);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = anchoredPosition;
+        rect.sizeDelta = sizeDelta;
+        rect.localScale = Vector3.one;
     }
 
     private static void SetButtonText(Button button, string text)

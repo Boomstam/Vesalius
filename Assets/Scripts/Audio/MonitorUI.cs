@@ -33,6 +33,10 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Toggle participationToggle;
     [SerializeField] private Toggle completeAnatomyToggle;
 
+    [Header("Part Controls")]
+    [SerializeField] private Button decrementPartButton;
+    [SerializeField] private Button incrementPartButton;
+
     private bool initialised;
     private Text introLabel;
     private Text pingPongLabel;
@@ -77,6 +81,10 @@ public class MonitorUI : MonoBehaviour
             participationToggle.onValueChanged.RemoveListener(OnParticipationToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
+        if (decrementPartButton != null)
+            decrementPartButton.onClick.RemoveListener(OnDecrementPartClicked);
+        if (incrementPartButton != null)
+            incrementPartButton.onClick.RemoveListener(OnIncrementPartClicked);
     }
 
     public void Init(NetworkedMonitor nm)
@@ -93,6 +101,12 @@ public class MonitorUI : MonoBehaviour
 
         if (completeAnatomyToggle == null)
             completeAnatomyToggle = ResolveCompleteAnatomyToggle();
+
+        if (decrementPartButton == null)
+            decrementPartButton = ResolveButton(decrementPartButton, "Part Number Decrement Button");
+
+        if (incrementPartButton == null)
+            incrementPartButton = ResolveButton(incrementPartButton, "Part Number Increment Button");
 
         SyncStateFromServer(nm);
         WireListeners();
@@ -155,6 +169,10 @@ public class MonitorUI : MonoBehaviour
             participationToggle.onValueChanged.AddListener(OnParticipationToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.AddListener(OnCompleteAnatomyToggled);
+        if (decrementPartButton != null)
+            decrementPartButton.onClick.AddListener(OnDecrementPartClicked);
+        if (incrementPartButton != null)
+            incrementPartButton.onClick.AddListener(OnIncrementPartClicked);
     }
 
     private void OnMasterVolumeChanged(float value)
@@ -220,6 +238,22 @@ public class MonitorUI : MonoBehaviour
     private void OnCompleteAnatomyToggled(bool value)
     {
         Instances.NetworkedMonitor.SetCompleteAnatomyMode(value);
+    }
+
+    private void OnDecrementPartClicked()
+    {
+        Instances.NetworkedMonitor.DecrementPart();
+    }
+
+    private void OnIncrementPartClicked()
+    {
+        Instances.NetworkedMonitor.IncrementPart();
+    }
+
+    public void SetCompleteAnatomyModeState(bool value)
+    {
+        if (completeAnatomyToggle != null)
+            completeAnatomyToggle.SetIsOnWithoutNotify(value);
     }
 
     private void ResolveAudioControls()
@@ -327,6 +361,21 @@ public class MonitorUI : MonoBehaviour
         GameObject existing = GameObject.Find("Complete Anatomy");
         if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
             return existingToggle;
+
+        return null;
+    }
+
+    private Button ResolveButton(Button current, params string[] objectNames)
+    {
+        if (current != null)
+            return current;
+
+        foreach (string objectName in objectNames)
+        {
+            GameObject existing = GameObject.Find(objectName);
+            if (existing != null && existing.TryGetComponent(out Button button))
+                return button;
+        }
 
         return null;
     }

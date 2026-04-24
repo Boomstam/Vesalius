@@ -47,6 +47,23 @@ public class ColorOverlay : MonoBehaviour
         set => registerAsSharedInstance = value;
     }
 
+    public void ConfigureColorCycle(float newFadeTime, bool initializeWithFirstColor)
+    {
+        fadeTime = Mathf.Max(newFadeTime, 0.01f);
+
+        if (!initializeWithFirstColor || colors == null || colors.Length == 0)
+            return;
+
+        currentColorIndex = 0;
+        startColor = colors[0];
+        lastBaseColor = startColor;
+        previousColor = startColor;
+        targetColor = startColor;
+        isFading = false;
+        activationTime = Time.time;
+        ApplyColor(startColor);
+    }
+
     private void Awake()
     {
         if (overlayImage == null)
