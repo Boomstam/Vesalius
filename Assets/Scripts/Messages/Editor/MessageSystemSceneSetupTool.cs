@@ -121,21 +121,21 @@ public static class MessageSystemSceneSetupTool
         panelRect.anchorMax = new Vector2(0.5f, 0.5f);
         panelRect.pivot = new Vector2(0.5f, 0.5f);
         panelRect.anchoredPosition = new Vector2(-650f, -170f);
-        panelRect.sizeDelta = new Vector2(520f, 680f);
+        panelRect.sizeDelta = new Vector2(520f, 820f);
 
         Image panelImage = EnsureComponent<Image>(panel);
         panelImage.color = new Color(0.102f, 0.102f, 0.102f, 1f);
         panelImage.raycastTarget = false;
 
-        CreateLabel(panel.transform, "Label", "MESSAGE SYSTEM", new Vector2(0f, 290f), new Vector2(500f, 60f), 28f);
+        CreateLabel(panel.transform, "Label", "MESSAGE SYSTEM", new Vector2(0f, 350f), new Vector2(500f, 60f), 28f);
 
         GameObject grid = FindChild(panel.transform, "SoundButtonGrid") ?? CreateRectObject("SoundButtonGrid", panel.transform);
         RectTransform gridRect = grid.GetComponent<RectTransform>();
         gridRect.anchorMin = new Vector2(0.5f, 0.5f);
         gridRect.anchorMax = new Vector2(0.5f, 0.5f);
         gridRect.pivot = new Vector2(0.5f, 0.5f);
-        gridRect.anchoredPosition = new Vector2(0f, 60f);
-        gridRect.sizeDelta = new Vector2(480f, 360f);
+        gridRect.anchoredPosition = new Vector2(0f, 72f);
+        gridRect.sizeDelta = new Vector2(480f, 488f);
 
         GridLayoutGroup layout = EnsureComponent<GridLayoutGroup>(grid);
         layout.cellSize = new Vector2(220f, 110f);
@@ -146,31 +146,43 @@ public static class MessageSystemSceneSetupTool
         layout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         layout.constraintCount = 2;
 
-        Button chimes = CreateButton(grid.transform, "ChimesButton", "chimes", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button anvil = CreateButton(grid.transform, "AnvilButton", "anvil", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button waterphone = CreateButton(grid.transform, "WaterphoneButton", "waterphone", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button crotales = CreateButton(grid.transform, "CrotalesButton", "crotales", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button cymbal = CreateButton(grid.transform, "CymbalButton", "cymbal", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button waterStation = CreateButton(grid.transform, "WaterStationButton", "water station", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button chimes = CreateButton(grid.transform, "ChimesButton", "1\n(chimes)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        GameObject spacer = CreateSpacer(grid.transform, "SoundButtonSpacer", new Vector2(220f, 110f));
+        Button claves = CreateButton(grid.transform, "ClavesButton", "2\n(claves)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button anvil = CreateButton(grid.transform, "AnvilButton", "3\n(anvil)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button waterphone = CreateButton(grid.transform, "WaterphoneButton", "4\n(waterphone)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button crotales = CreateButton(grid.transform, "CrotalesButton", "5\n(crotales)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button cymbal = CreateButton(grid.transform, "CymbalButton", "6\n(cymbal)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button waterStation = CreateButton(grid.transform, "WaterStationButton", "7\n(water station)", Vector2.zero, new Vector2(220f, 110f), new Color(0.18f, 0.22f, 0.26f, 1f));
+
+        chimes.transform.SetSiblingIndex(0);
+        spacer.transform.SetSiblingIndex(1);
+        claves.transform.SetSiblingIndex(2);
+        anvil.transform.SetSiblingIndex(3);
+        waterphone.transform.SetSiblingIndex(4);
+        crotales.transform.SetSiblingIndex(5);
+        cymbal.transform.SetSiblingIndex(6);
+        waterStation.transform.SetSiblingIndex(7);
 
         GameObject divider = FindChild(panel.transform, "Divider") ?? CreateRectObject("Divider", panel.transform);
         RectTransform dividerRect = divider.GetComponent<RectTransform>();
         dividerRect.anchorMin = new Vector2(0.5f, 0.5f);
         dividerRect.anchorMax = new Vector2(0.5f, 0.5f);
         dividerRect.pivot = new Vector2(0.5f, 0.5f);
-        dividerRect.anchoredPosition = new Vector2(0f, -160f);
+        dividerRect.anchoredPosition = new Vector2(0f, -210f);
         dividerRect.sizeDelta = new Vector2(460f, 2f);
         Image dividerImage = EnsureComponent<Image>(divider);
         dividerImage.color = new Color(0.4f, 0.4f, 0.4f, 1f);
         dividerImage.raycastTarget = false;
 
-        Button groupMessage = CreateButton(panel.transform, "Go To Your Color Button", "Go To Your Color", new Vector2(0f, -185f), new Vector2(440f, 56f), new Color(0.18f, 0.22f, 0.26f, 1f));
-        Button resetDeck = CreateButton(panel.transform, "ResetDeckButton", "Reset Deck", new Vector2(-120f, -265f), new Vector2(210f, 80f), new Color(0.267f, 0.267f, 0.267f, 1f));
-        Button hardCut = CreateButton(panel.transform, "HardCutButton", "Hard Cut", new Vector2(120f, -265f), new Vector2(210f, 80f), new Color(0.545f, 0.102f, 0.102f, 1f));
+        Button groupMessage = CreateButton(panel.transform, "Go To Your Color Button", "Go To Your Color", new Vector2(0f, -245f), new Vector2(440f, 56f), new Color(0.18f, 0.22f, 0.26f, 1f));
+        Button resetDeck = CreateButton(panel.transform, "ResetDeckButton", "Reset Deck", new Vector2(-120f, -335f), new Vector2(210f, 80f), new Color(0.267f, 0.267f, 0.267f, 1f));
+        Button hardCut = CreateButton(panel.transform, "HardCutButton", "Hard Cut", new Vector2(120f, -335f), new Vector2(210f, 80f), new Color(0.545f, 0.102f, 0.102f, 1f));
 
         MonitorMessagePanel monitorPanel = EnsureComponent<MonitorMessagePanel>(panel);
         SerializedObject serializedPanel = new SerializedObject(monitorPanel);
         serializedPanel.FindProperty("_chimesButton").objectReferenceValue = chimes;
+        serializedPanel.FindProperty("_clavesButton").objectReferenceValue = claves;
         serializedPanel.FindProperty("_anvilButton").objectReferenceValue = anvil;
         serializedPanel.FindProperty("_waterphoneButton").objectReferenceValue = waterphone;
         serializedPanel.FindProperty("_crotalesButton").objectReferenceValue = crotales;
@@ -274,6 +286,25 @@ public static class MessageSystemSceneSetupTool
         tmp.raycastTarget = false;
 
         return button;
+    }
+
+    private static GameObject CreateSpacer(Transform parent, string name, Vector2 size)
+    {
+        GameObject spacer = FindChild(parent, name) ?? CreateRectObject(name, parent);
+        RectTransform rect = spacer.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0.5f, 0.5f);
+        rect.anchorMax = new Vector2(0.5f, 0.5f);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = size;
+
+        spacer.layer = 5;
+
+        Image image = EnsureComponent<Image>(spacer);
+        image.color = new Color(0f, 0f, 0f, 0f);
+        image.raycastTarget = false;
+
+        return spacer;
     }
 }
 #endif

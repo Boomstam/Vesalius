@@ -4511,6 +4511,8 @@ MonoBehaviour:
   connectedImage: {fileID: 198929957}
   contentImage: {fileID: 442898991}
   infoButtonHighlightColor: {r: 0.87058824, g: 0.87058824, b: 0.87058824, a: 0.87058824}
+  infoButtonFlashDuration: 5
+  infoButtonFlashSpeed: 3.5
   partToTest: 0
   testPart: 0
 --- !u!1 &760369689
@@ -5914,7 +5916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.92156863}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9748,6 +9750,7 @@ MonoBehaviour:
   singleSlider: {fileID: 1770327666}
   singleMinLabel: {fileID: 902600206}
   singleMaxLabel: {fileID: 1711138532}
+  showOverlayLabels: 0
 --- !u!1 &1657984688
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,9 +14,14 @@ public class MessageOverlay : MonoBehaviour
     [SerializeField] private GameObject _panel;
     [SerializeField] private TextMeshProUGUI _messageText;
     [SerializeField] private GameObject _backdrop;
+    [Header("Flash")]
+    [SerializeField] private float _flashSpeed = 4f;
+    [SerializeField] [Range(0f, 1f)] private float _textMinAlpha = 0.2f;
 
     private Coroutine _hideCoroutine;
+    private Coroutine _flashCoroutine;
     private Graphic _panelGraphic;
+    private Color _messageTextBaseColor = Color.white;
 
     public bool IsVisible => _panel != null && _panel.activeSelf;
 
@@ -33,6 +38,9 @@ public class MessageOverlay : MonoBehaviour
 
         if (_backdrop == null && _panel != null)
             _panelGraphic = _panel.GetComponent<Graphic>();
+
+        if (_messageText != null)
+            _messageTextBaseColor = _messageText.color;
 
         if (_panel != null)
             _panel.SetActive(false);
@@ -58,6 +66,7 @@ public class MessageOverlay : MonoBehaviour
         _messageText.text = word;
         SetBackdropVisible(showBackdrop);
         _panel.SetActive(true);
+        StartFlashing();
         _hideCoroutine = StartCoroutine(HideAfterDelay(duration));
 
         Debug.Log($"[MessageOverlay] Showing '{word}' for {duration}s.");
@@ -70,6 +79,8 @@ public class MessageOverlay : MonoBehaviour
             StopCoroutine(_hideCoroutine);
             _hideCoroutine = null;
         }
+
+        StopFlashing();
 
         if (_panel != null)
             _panel.SetActive(false);
@@ -93,5 +104,49 @@ public class MessageOverlay : MonoBehaviour
 
         if (_panelGraphic != null)
             _panelGraphic.enabled = visible;
+    }
+
+    private void StartFlashing()
+    {
+        StopFlashing();
+        RestoreVisualState();
+        _flashCoroutine = StartCoroutine(FlashRoutine());
+    }
+
+    private void StopFlashing()
+    {
+        if (_flashCoroutine != null)
+        {
+            StopCoroutine(_flashCoroutine);
+            _flashCoroutine = null;
+        }
+
+        RestoreVisualState();
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        while (true)
+        {
+            float pulse = (Mathf.Sin(Time.time * _flashSpeed * Mathf.PI * 2f) + 1f) * 0.5f;
+            float textAlpha = Mathf.Lerp(_textMinAlpha, 1f, pulse);
+
+            if (_messageText != null)
+                _messageText.color = WithAlpha(_messageTextBaseColor, _messageTextBaseColor.a * textAlpha);
+
+            yield return null;
+        }
+    }
+
+    private void RestoreVisualState()
+    {
+        if (_messageText != null)
+            _messageText.color = _messageTextBaseColor;
+    }
+
+    private static Color WithAlpha(Color color, float alpha)
+    {
+        color.a = alpha;
+        return color;
     }
 }

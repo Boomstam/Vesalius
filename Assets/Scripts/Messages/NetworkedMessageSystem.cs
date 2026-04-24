@@ -14,6 +14,17 @@ using UnityEngine;
 /// </summary>
 public class NetworkedMessageSystem : NetworkBehaviour
 {
+    private static readonly Dictionary<string, string> InstrumentDisplayLabels = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["chimes"] = "1\n(chimes)",
+        ["claves"] = "2\n(claves)",
+        ["anvil"] = "3\n(anvil)",
+        ["waterphone"] = "4\n(waterphone)",
+        ["crotales"] = "5\n(crotales)",
+        ["cymbal"] = "6\n(cymbal)",
+        ["water station"] = "7\n(water station)"
+    };
+
     [Header("Settings")]
     [Tooltip("How many clients receive each message press.")]
     [SerializeField] private int _targetsPerMessage = 3;
@@ -103,11 +114,12 @@ public class NetworkedMessageSystem : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SendMessageToTargets(string word)
     {
+        string displayWord = GetDisplayLabel(word);
         List<NetworkConnection> targets = PickTargets(_targetsPerMessage);
-        Debug.Log($"[NetworkedMessageSystem] '{word}' -> {targets.Count} client(s).");
+        Debug.Log($"[NetworkedMessageSystem] '{displayWord}' -> {targets.Count} client(s).");
 
         foreach (NetworkConnection conn in targets)
-            RpcReceiveMessage(conn, word, _messageDuration);
+            RpcReceiveMessage(conn, displayWord, _messageDuration);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -237,5 +249,15 @@ public class NetworkedMessageSystem : NetworkBehaviour
         }
 
         Debug.Log("[NetworkedMessageSystem] MessageOverlay cached.");
+    }
+
+    private static string GetDisplayLabel(string instrumentName)
+    {
+        if (string.IsNullOrWhiteSpace(instrumentName))
+            return string.Empty;
+
+        return InstrumentDisplayLabels.TryGetValue(instrumentName, out string displayLabel)
+            ? displayLabel
+            : instrumentName;
     }
 }
