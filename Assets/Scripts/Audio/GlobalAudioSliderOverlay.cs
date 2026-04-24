@@ -40,7 +40,6 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private bool syncingFromImageFader;
 
     public bool IsOverlayVisible => currentKind != AudioManager.AudioOverlayKind.None
-        && currentKind != AudioManager.AudioOverlayKind.TutorialDual
         && ((dualPrimarySlider != null && dualPrimarySlider.gameObject.activeInHierarchy)
             || (dualSecondarySlider != null && dualSecondarySlider.gameObject.activeInHierarchy)
             || (singleSlider != null && singleSlider.gameObject.activeInHierarchy));
@@ -301,6 +300,9 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
         switch (currentKind)
         {
+            case AudioManager.AudioOverlayKind.TutorialSingle:
+                audioManager.SetTutorialFade(value);
+                break;
             case AudioManager.AudioOverlayKind.IntroSingle:
                 audioManager.SetIntroFade(value);
                 break;
@@ -335,7 +337,9 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         suppressCallbacks = true;
 
         bool showDual = state.Kind == AudioManager.AudioOverlayKind.HeartDual;
+        bool showTutorialSingle = state.Kind == AudioManager.AudioOverlayKind.TutorialSingle;
         bool showSingle = state.Kind == AudioManager.AudioOverlayKind.IntroSingle
+                       || showTutorialSingle
                        || state.Kind == AudioManager.AudioOverlayKind.GroupPingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.PingPongSingle
                        || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle

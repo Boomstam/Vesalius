@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
         GenerationSingle,
         VibrationSingle,
         HeartDual,
-        TutorialDual,
+        TutorialSingle,
     }
 
     public readonly struct AudioOverlayState
@@ -88,6 +88,7 @@ public class AudioManager : MonoBehaviour
     private float vibrationIntervalValue = 0.5f;
     private float heartBandFadeValue = 0.5f;
     private float heartDelayValue = 0.5f;
+    private float tutorialFadeValue = 0.5f;
 
     private Coroutine vibrationRoutine;
 
@@ -101,7 +102,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         if (tutorialFader != null)
-            tutorialFader.SetBandFade(0.5f);
+            tutorialFader.SetBandFade(tutorialFadeValue);
 
         if (introPlayer != null)
             introPlayer.SetBandFade(introFadeValue);
@@ -125,14 +126,27 @@ public class AudioManager : MonoBehaviour
     {
         StopAllSilent();
         tutorialActive = true;
-        tutorialFader.Play();
+        if (tutorialFader != null)
+        {
+            tutorialFader.Play();
+            tutorialFader.SetBandFade(tutorialFadeValue);
+        }
         NotifyOverlayStateChanged();
     }
 
     public void StopTutorial()
     {
         tutorialActive = false;
-        tutorialFader.Stop();
+        if (tutorialFader != null)
+            tutorialFader.Stop();
+        NotifyOverlayStateChanged();
+    }
+
+    public void SetTutorialFade(float value)
+    {
+        tutorialFadeValue = Mathf.Clamp01(value);
+        if (tutorialFader != null)
+            tutorialFader.SetBandFade(tutorialFadeValue);
         NotifyOverlayStateChanged();
     }
 
@@ -497,13 +511,13 @@ public class AudioManager : MonoBehaviour
         if (tutorialActive)
         {
             return new AudioOverlayState(
-                AudioOverlayKind.TutorialDual,
-                0.5f,
-                0.5f,
+                AudioOverlayKind.TutorialSingle,
+                tutorialFadeValue,
+                0f,
                 "LOW",
                 "HIGH",
-                "SOFT",
-                "INTENSE");
+                string.Empty,
+                string.Empty);
         }
 
         return new AudioOverlayState(

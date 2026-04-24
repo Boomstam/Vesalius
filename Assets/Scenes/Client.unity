@@ -781,7 +781,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 55.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5555,7 +5555,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 61.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5790,7 +5790,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.35
+  m_fontSize: 37.2
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6266,7 +6266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1050153475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7474,8 +7474,8 @@ RectTransform:
   - {fileID: 515006200}
   m_Father: {fileID: 1461049939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.099301815, y: 0.16549325}
-  m_AnchorMax: {x: 0.47842538, y: 0.818817}
+  m_AnchorMin: {x: 0.33, y: 0.22}
+  m_AnchorMax: {x: 0.67, y: 0.81}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7543,25 +7543,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossfadePlayer
   lowClips:
-  - {fileID: 8300000, guid: 0c9492f42f88280418a7ab4ea89fa3aa, type: 3}
-  - {fileID: 8300000, guid: 0f22621b05ccc1849844d7a3d22a1031, type: 3}
   - {fileID: 8300000, guid: 11743b09b0251294ab876383297c201c, type: 3}
   - {fileID: 8300000, guid: e39b342f80d11b4429b61491db3a0d6b, type: 3}
-  - {fileID: 8300000, guid: 8985e708919bf6f4caabb86527708c5a, type: 3}
   - {fileID: 8300000, guid: 736adf156671dbd4ea98d77a5d756d5d, type: 3}
   - {fileID: 8300000, guid: 2babea095fd128f418255bcaa73ae574, type: 3}
   - {fileID: 8300000, guid: 727b58a2e8bfccf40afeafb3be5353bd, type: 3}
-  - {fileID: 8300000, guid: 9ed64d5eba15db041972d6d99ad3e9d9, type: 3}
   highClips:
-  - {fileID: 8300000, guid: 7bad7ea750dda2f4bbfd7aa871bf8b30, type: 3}
   - {fileID: 8300000, guid: f5d3b575ea57af445933518172f1ca47, type: 3}
-  - {fileID: 8300000, guid: da114a5f96b6b96428c888c40ad97875, type: 3}
   - {fileID: 8300000, guid: 6a791c5d9a21e6549b3cfaa0f31f9b24, type: 3}
-  - {fileID: 8300000, guid: 9ebca9a35e0138c41b4bc0d6aca85c10, type: 3}
   - {fileID: 8300000, guid: 2b16b0192d7307c409c2a190f052e542, type: 3}
   - {fileID: 8300000, guid: ad5460dc8dae66e449330b778399d6c1, type: 3}
   - {fileID: 8300000, guid: f9064c4528d6e51408d1959bc4f9053b, type: 3}
-  - {fileID: 8300000, guid: 51d6091b1d87efb46a247902c7dc82eb, type: 3}
   lowMixerGroup: {fileID: 5608151769061193697, guid: 0a316802b15da354097940bc3882233a, type: 2}
   highMixerGroup: {fileID: 3603058035107832124, guid: 0a316802b15da354097940bc3882233a, type: 2}
   lowParamName: Low
@@ -8474,7 +8466,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 55.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
