@@ -50,8 +50,10 @@ public class NetworkedMonitor : NetworkBehaviour
     [SerializeField] private Color heartbeatStartColor = new(0f, 0f, 0f, 0f);
     [Tooltip("Color at the peak of each heartbeat pulse.")]
     [SerializeField] private Color heartbeatEndColor = new(0.8f, 0f, 0f, 1f);
-    [Tooltip("Duration of one full heartbeat cycle in seconds.")]
-    [SerializeField] private float heartbeatBeatTime = 0.8f;
+    [Tooltip("Minimum random heartbeat speed picked when heartbeat mode is enabled.")]
+    [SerializeField] private int heartbeatMinBpm = 40;
+    [Tooltip("Maximum random heartbeat speed picked when heartbeat mode is enabled.")]
+    [SerializeField] private int heartbeatMaxBpm = 80;
 
     [Header("Group Color Mode")]
     [Tooltip("Exactly two colors: index 0 is Group A, index 1 is Group B.")]
@@ -127,6 +129,7 @@ public class NetworkedMonitor : NetworkBehaviour
         {
             GroupColorOverlay.EnsureExistsInScene();
             StartCoroutine(FindViewManagerCoroutine());
+            StartCoroutine(FindColorOverlayCoroutine());
             ApplyGroupColorVisibility(groupColorModeActive.Value);
         }
     }
@@ -401,10 +404,10 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnMasterOpacityActiveChanged(bool prev, bool next, bool asServer)
     {
-        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null)
+        if (SceneLoader.BuildType != BuildType.Client)
             return;
 
-        Instances.ColorOverlay.SetMasterOpacityActive(next);
+        ApplyColorOverlayState();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -415,10 +418,10 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnMasterOpacityValueChanged(float prev, float next, bool asServer)
     {
-        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null)
+        if (SceneLoader.BuildType != BuildType.Client)
             return;
 
-        Instances.ColorOverlay.SetMasterOpacity(next);
+        ApplyColorOverlayState();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -464,7 +467,7 @@ public class NetworkedMonitor : NetworkBehaviour
         {
             heartbeatStartColorSync.Value = heartbeatStartColor;
             heartbeatEndColorSync.Value = heartbeatEndColor;
-            heartbeatBeatTimeSync.Value = heartbeatBeatTime;
+            heartbeatBeatTimeSync.Value = GetRandomHeartbeatBeatTime();
         }
 
         heartbeatActive.Value = value;
@@ -472,20 +475,10 @@ public class NetworkedMonitor : NetworkBehaviour
 
     private void OnHeartbeatActiveChanged(bool prev, bool next, bool asServer)
     {
-        if (SceneLoader.BuildType != BuildType.Client || Instances.ColorOverlay == null)
+        if (SceneLoader.BuildType != BuildType.Client)
             return;
 
-        if (next)
-        {
-            Instances.ColorOverlay.StartHeartbeat(
-                heartbeatStartColorSync.Value,
-                heartbeatEndColorSync.Value,
-                heartbeatBeatTimeSync.Value);
-        }
-        else
-        {
-            Instances.ColorOverlay.StopHeartbeat();
-        }
+        ApplyColorOverlayState();
     }
 
     private void OnGroupColorModeActiveChanged(bool prev, bool next, bool asServer)
@@ -609,6 +602,22 @@ public class NetworkedMonitor : NetworkBehaviour
             }
 
             yield return new WaitForSeconds(1f);
+        }
+    }
+
+    private IEnumerator FindColorOverlayCoroutine()
+    {
+        while (SceneLoader.BuildType == BuildType.Client)
+        {
+            ColorOverlay overlay = FindSharedColorOverlay();
+            if (overlay != null)
+            {
+                Instances.ColorOverlay = overlay;
+                ApplyColorOverlayState();
+                yield break;
+            }
+
+            yield return new WaitForSeconds(0.25f);
         }
     }
 
@@ -802,6 +811,14 @@ public class NetworkedMonitor : NetworkBehaviour
         return groupColors[groupIndex == GroupA ? GroupA : GroupB];
     }
 
+    private float GetRandomHeartbeatBeatTime()
+    {
+        int minBpm = Mathf.Max(1, Mathf.Min(heartbeatMinBpm, heartbeatMaxBpm));
+        int maxBpm = Mathf.Max(minBpm, Mathf.Max(heartbeatMinBpm, heartbeatMaxBpm));
+        int bpm = Random.Range(minBpm, maxBpm + 1);
+        return 60f / bpm;
+    }
+
     private static void Shuffle<T>(List<T> list)
     {
         for (int i = list.Count - 1; i > 0; i--)
@@ -815,5 +832,63 @@ public class NetworkedMonitor : NetworkBehaviour
     {
         if (heartStaggerController == null)
             heartStaggerController = GetComponent<HeartStaggerController>();
+    }
+
+    private void ApplyColorOverlayState()
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        ColorOverlay overlay = FindSharedColorOverlay();
+        if (overlay == null)
+            return;
+
+        Instances.ColorOverlay = overlay;
+        bool shouldBeActive = heartbeatActive.Value || masterOpacityActive.Value;
+        if (overlay.gameObject.activeSelf != shouldBeActive)
+            overlay.gameObject.SetActive(shouldBeActive);
+
+        if (!shouldBeActive)
+            return;
+
+        overlay.SetMasterOpacityActive(masterOpacityActive.Value);
+        overlay.SetMasterOpacity(masterOpacityValue.Value);
+
+        if (heartbeatActive.Value && !overlay.HeartbeatActive)
+        {
+            overlay.StartHeartbeat(
+                heartbeatStartColorSync.Value,
+                heartbeatEndColorSync.Value,
+                heartbeatBeatTimeSync.Value);
+        }
+        else if (!heartbeatActive.Value && overlay.HeartbeatActive)
+        {
+            overlay.StopHeartbeat();
+        }
+    }
+
+    private ColorOverlay FindSharedColorOverlay()
+    {
+        if (Instances.ColorOverlay != null)
+            return Instances.ColorOverlay;
+
+        foreach (ColorOverlay overlay in Resources.FindObjectsOfTypeAll<ColorOverlay>())
+        {
+            if (overlay == null)
+                continue;
+
+            if (!overlay.gameObject.scene.IsValid())
+                continue;
+
+            if ((overlay.hideFlags & HideFlags.HideAndDontSave) != 0)
+                continue;
+
+            if (!overlay.RegisterAsSharedInstance)
+                continue;
+
+            return overlay;
+        }
+
+        return null;
     }
 }

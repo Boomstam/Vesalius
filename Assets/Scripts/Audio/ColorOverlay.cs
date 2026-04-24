@@ -40,12 +40,16 @@ public class ColorOverlay : MonoBehaviour
     private Color heartbeatEndColor;
     private float heartbeatBeatTime;
     private float heartbeatCycleStart;
+    private Color preHeartbeatColor;
+    private bool hasPreHeartbeatColor;
 
     public bool RegisterAsSharedInstance
     {
         get => registerAsSharedInstance;
         set => registerAsSharedInstance = value;
     }
+
+    public bool HeartbeatActive => heartbeatActive;
 
     public void ConfigureColorCycle(float newFadeTime, bool initializeWithFirstColor)
     {
@@ -137,11 +141,19 @@ public class ColorOverlay : MonoBehaviour
 
     public void StartHeartbeat(Color beatStartColor, Color beatEndColor, float beatTime)
     {
+        if (!heartbeatActive)
+        {
+            preHeartbeatColor = lastBaseColor;
+            hasPreHeartbeatColor = true;
+        }
+
         heartbeatStartColor = beatStartColor;
         heartbeatEndColor = beatEndColor;
         heartbeatBeatTime = Mathf.Max(beatTime, 0.01f);
         heartbeatCycleStart = Time.time;
+        isFading = false;
         heartbeatActive = true;
+        ApplyColor(heartbeatStartColor);
     }
 
     public void StartHeartbeat(object[] payload)
@@ -153,10 +165,9 @@ public class ColorOverlay : MonoBehaviour
     public void StopHeartbeat()
     {
         heartbeatActive = false;
-        currentColorIndex = 0;
         isFading = false;
         activationTime = Time.time;
-        ApplyColor(startColor);
+        ApplyColor(hasPreHeartbeatColor ? preHeartbeatColor : lastBaseColor);
     }
 
     private void UpdateHeartbeat()

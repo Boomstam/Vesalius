@@ -11,6 +11,8 @@ using UnityEngine.UI;
 /// </summary>
 public class GlobalAudioSliderOverlay : MonoBehaviour
 {
+    private const int OverlaySortingOrder = 50;
+
     public static GlobalAudioSliderOverlay Instance { get; private set; }
 
     [Header("Dual Slider Overlay")]
@@ -27,6 +29,8 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     [SerializeField] private TMP_Text singleMaxLabel;
 
     private AudioManager audioManager;
+    private Canvas overlayCanvas;
+    private GraphicRaycaster overlayRaycaster;
     private AudioManager.AudioOverlayKind currentKind = AudioManager.AudioOverlayKind.None;
     private bool suppressCallbacks;
     private bool subscribed;
@@ -55,6 +59,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        EnsureOverlayCanvasSorting();
         EnsureOverlayStructure();
         audioManager = FindAnyObjectByType<AudioManager>();
         HideAll();
@@ -62,6 +67,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
 
     private void OnEnable()
     {
+        EnsureOverlayCanvasSorting();
         EnsureOverlayStructure();
         EnsureSubscriptions();
         RefreshState();
@@ -182,6 +188,26 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         SetAnchoredRectIfValid(dualSecondaryMinLabel, DualRightBottomMin, DualRightBottomMax);
         SetAnchoredRectIfValid(singleMaxLabel, SingleTopMin, SingleTopMax);
         SetAnchoredRectIfValid(singleMinLabel, SingleBottomMin, SingleBottomMax);
+    }
+
+    private void EnsureOverlayCanvasSorting()
+    {
+        if (overlayCanvas == null)
+            overlayCanvas = GetComponent<Canvas>();
+
+        if (overlayCanvas == null)
+            overlayCanvas = gameObject.AddComponent<Canvas>();
+
+        overlayCanvas.overrideSorting = true;
+        overlayCanvas.sortingOrder = OverlaySortingOrder;
+
+        if (overlayRaycaster == null)
+            overlayRaycaster = GetComponent<GraphicRaycaster>();
+
+        if (overlayRaycaster == null)
+            overlayRaycaster = gameObject.AddComponent<GraphicRaycaster>();
+
+        transform.SetAsLastSibling();
     }
 
     private Slider EnsureSingleSlider(Slider template)
