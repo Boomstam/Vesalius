@@ -302,7 +302,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83566
+// Method Definition Index: 83714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m051EDD34236B7F963D71166E95A33203CB6E30CF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -315,8 +315,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tC4A299808061ECECB1711FDB41D9A
 	}
 	MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690 V_1;
-	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)215));
@@ -335,17 +333,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tC4A299808061ECECB1711FDB41D9A
 		(&V_0)->___TotalTypes = 4;
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690 L_6 = V_0;
-		V_1 = L_6;
-		goto IL_005d;
-	}
-
-IL_005d:
-	{
-		MonoScriptData_tC4A299808061ECECB1711FDB41D9A52CD7B60690 L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 83567
+// Method Definition Index: 83715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2A2AAEB96C3B2134C4872DA9BE9A99281D633FAC (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t86517A9AF51944B327188B90FCF98654CD70A5AF* __this, const RuntimeMethod* method) 
 {
 	{

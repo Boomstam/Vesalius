@@ -22,6 +22,8 @@ public class NetworkedMonitor : NetworkBehaviour
     private const int MaximumPartNumber = 10;
     private const int TutorialPartNumber = 0;
     private const int WordsOfVesaliusPartNumber = 5;
+    private const float DefaultMasterVolume = 1f;
+    private const float MinMasterVolume = 0.01f;
 
     private enum AudioMode
     {
@@ -45,6 +47,13 @@ public class NetworkedMonitor : NetworkBehaviour
     private readonly SyncVar<bool> shouldPlayOrgansOfGeneration = new(false);
     private readonly SyncVar<bool> shouldPlayHeart = new(false);
     private readonly SyncVar<bool> shouldPlayVibration = new(false);
+    private readonly SyncVar<float> masterVolume = new(DefaultMasterVolume);
+
+    [Header("Master Volume")]
+    [Tooltip("Duration of the Fade In button action in seconds.")]
+    [SerializeField] private float masterFadeInTime = 4f;
+    [Tooltip("Duration of the Fade Out button action in seconds.")]
+    [SerializeField] private float masterFadeOutTime = 4f;
 
     [Header("Heartbeat Config")]
     [Tooltip("Color at the trough of each heartbeat cycle (rest state).")]
@@ -80,6 +89,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private NetworkedMessageSystem networkedMessageSystem;
     private int myGroupIndex = UnassignedGroup;
     private Color myGroupColor = Color.clear;
+    private Coroutine masterVolumeFadeRoutine;
 
     public bool CompleteAnatomyMode => completeAnatomyMode.Value;
     public bool ParticipationMode => participationMode.Value;
@@ -88,6 +98,7 @@ public class NetworkedMonitor : NetworkBehaviour
     public bool ShouldPlayOrgansOfGeneration => shouldPlayOrgansOfGeneration.Value;
     public bool ShouldPlayHeart => shouldPlayHeart.Value;
     public bool ShouldPlayVibration => shouldPlayVibration.Value;
+    public float MasterVolume => masterVolume.Value;
     public bool MasterOpacityActive => masterOpacityActive.Value;
     public float MasterOpacityValue => masterOpacityValue.Value;
     public bool HeartbeatActive => heartbeatActive.Value;
@@ -116,6 +127,7 @@ public class NetworkedMonitor : NetworkBehaviour
         shouldPlayOrgansOfGeneration.OnChange += OnShouldPlayOrgansOfGenerationChanged;
         shouldPlayHeart.OnChange += OnShouldPlayHeartChanged;
         shouldPlayVibration.OnChange += OnShouldPlayVibrationChanged;
+        masterVolume.OnChange += OnMasterVolumeChanged;
 
         masterOpacityActive.OnChange += OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange += OnMasterOpacityValueChanged;
@@ -152,6 +164,7 @@ public class NetworkedMonitor : NetworkBehaviour
         shouldPlayOrgansOfGeneration.OnChange -= OnShouldPlayOrgansOfGenerationChanged;
         shouldPlayHeart.OnChange -= OnShouldPlayHeartChanged;
         shouldPlayVibration.OnChange -= OnShouldPlayVibrationChanged;
+        masterVolume.OnChange -= OnMasterVolumeChanged;
 
         masterOpacityActive.OnChange -= OnMasterOpacityActiveChanged;
         masterOpacityValue.OnChange -= OnMasterOpacityValueChanged;
@@ -331,76 +344,34 @@ public class NetworkedMonitor : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SetMasterVolume(float value)
     {
-        RpcSetMasterVolume(value);
-    }
-
-    [ObserversRpc]
-    private void RpcSetMasterVolume(float value)
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        Instances.AudioManager.SetMasterVolume(value);
+        StopMasterVolumeFade();
+        SetMasterVolumeState(value);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void TriggerMasterFadeIn()
     {
-        RpcTriggerMasterFadeIn();
-    }
-
-    [ObserversRpc]
-    private void RpcTriggerMasterFadeIn()
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        Instances.AudioManager.FadeIn();
+        StartMasterVolumeFade(true);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void TriggerMasterFadeOut()
     {
-        RpcTriggerMasterFadeOut();
-    }
-
-    [ObserversRpc]
-    private void RpcTriggerMasterFadeOut()
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        Instances.AudioManager.FadeOut();
+        StartMasterVolumeFade(false);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void TriggerMasterMute()
     {
-        RpcTriggerMasterMute();
-    }
-
-    [ObserversRpc]
-    private void RpcTriggerMasterMute()
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        Instances.AudioManager.MuteImmediate();
+        StopMasterVolumeFade();
+        SetMasterVolumeState(MinMasterVolume);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void TriggerMasterReset()
     {
-        RpcTriggerMasterReset();
-    }
-
-    [ObserversRpc]
-    private void RpcTriggerMasterReset()
-    {
-        if (SceneLoader.BuildType != BuildType.Client)
-            return;
-
-        Instances.AudioManager.ResetImmediate();
+        StopMasterVolumeFade();
+        SetMasterVolumeState(DefaultMasterVolume);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -452,6 +423,15 @@ public class NetworkedMonitor : NetworkBehaviour
             return;
 
         ApplyColorOverlayState();
+    }
+
+    private void OnMasterVolumeChanged(float prev, float next, bool asServer)
+    {
+        if (SceneLoader.BuildType == BuildType.Monitor)
+            Instances.MonitorUI?.SetMasterVolumeState(next);
+
+        if (SceneLoader.BuildType == BuildType.Client)
+            Instances.AudioManager?.SetMasterVolume(next);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -924,6 +904,8 @@ public class NetworkedMonitor : NetworkBehaviour
         currentPart.Value = resetPart;
         participationMode.Value = concertReadyParticipationMode;
         completeAnatomyMode.Value = ShouldAutoEnableCompleteAnatomy(resetPart);
+        StopMasterVolumeFade();
+        SetMasterVolumeState(DefaultMasterVolume);
 
         masterOpacityActive.Value = false;
         masterOpacityValue.Value = 1f;
@@ -942,6 +924,49 @@ public class NetworkedMonitor : NetworkBehaviour
         networkedMessageSystem?.HardCutAllServer();
 
         RpcResetClientsForConcert();
+    }
+
+    private void SetMasterVolumeState(float value)
+    {
+        masterVolume.Value = Mathf.Clamp(value, MinMasterVolume, DefaultMasterVolume);
+
+        if (SceneLoader.BuildType == BuildType.Monitor)
+            Instances.MonitorUI?.SetMasterVolumeState(masterVolume.Value);
+    }
+
+    private void StartMasterVolumeFade(bool fadeIn)
+    {
+        StopMasterVolumeFade();
+        masterVolumeFadeRoutine = StartCoroutine(FadeMasterVolumeCoroutine(fadeIn));
+    }
+
+    private void StopMasterVolumeFade()
+    {
+        if (masterVolumeFadeRoutine == null)
+            return;
+
+        StopCoroutine(masterVolumeFadeRoutine);
+        masterVolumeFadeRoutine = null;
+    }
+
+    private IEnumerator FadeMasterVolumeCoroutine(bool fadeIn)
+    {
+        float startVolume = masterVolume.Value;
+        float targetVolume = fadeIn ? DefaultMasterVolume : MinMasterVolume;
+        float duration = Mathf.Max(fadeIn ? masterFadeInTime : masterFadeOutTime, 0.01f);
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            SetMasterVolumeState(Mathf.Lerp(startVolume, targetVolume, t));
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        SetMasterVolumeState(targetVolume);
+        masterVolumeFadeRoutine = null;
     }
 
     private void ClearGroupAssignments()

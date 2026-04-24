@@ -69,9 +69,9 @@ public class AudioManager : MonoBehaviour
     [Header("Master Volume")]
     [SerializeField] private AudioMixerGroup masterMixerGroup;
     [Tooltip("Duration of the FadeIn() coroutine in seconds.")]
-    [SerializeField] private float fadeInTime = 2f;
+    [SerializeField] private float fadeInTime = 4f;
     [Tooltip("Duration of the FadeOut() coroutine in seconds.")]
-    [SerializeField] private float fadeOutTime = 2f;
+    [SerializeField] private float fadeOutTime = 4f;
 
     private const float MinVolume = 0.01f;
     private const float IntroOverlayAudibilityThreshold = 0.1f;

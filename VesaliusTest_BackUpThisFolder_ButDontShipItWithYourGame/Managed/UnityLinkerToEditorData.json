@@ -116,7 +116,9 @@
           },
           {
             "name": "AudioSource",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Client.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

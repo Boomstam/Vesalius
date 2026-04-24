@@ -126,7 +126,9 @@
     <None Include="Assets\Resources\Localization\2. Book III_ The Veins and Arteries.en.json" />
     <None Include="Assets\Resources\Localization\Film.en.json" />
     <None Include="Assets\Resources\Localization\1. Book I_ The Organs of Nutrition.en.json" />
+    <None Include="Assets\Resources\PerformanceTestRunSettings.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Resources\PerformanceTestRunInfo.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Resources\Localization\3. Book I_ The Organs of Generation.en.json" />
     <None Include="Assets\Graphics\Icons\Android AppIcons\android\mipmap-anydpi-v26\ic_launcher_round.xml" />

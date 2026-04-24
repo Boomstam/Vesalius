@@ -134,7 +134,6 @@ struct Dictionary_2_tA8FCB73A15BAAE25B6FE74051529692BB5582E9F;
 struct Dictionary_2_t4F027D03558814585D4CA606578FAE55E4C5DBFC;
 struct Dictionary_2_t270B30EEE150683DF911F84C9BFB9A533992AEA7;
 struct Dictionary_2_t2C81D5194F4982EDDD55F612708EB1625405EA91;
-struct Dictionary_2_tA6956B8D493D2FECA73D2AFD277C14FA2A563AD0;
 struct Dictionary_2_t7E91321A6BB099FCCBB020CECED663BE6613F242;
 struct Dictionary_2_tB21A79CD0FB62FB591F6722E0398CC6273CF61D4;
 struct Dictionary_2_t37C902EB0944524E61950F2A725BD5808CD707D5;
@@ -344,7 +343,6 @@ struct NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9;
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
 struct ObjectPool_t25FDDFABE0742736480E445F5038491FEC1C59F7;
 struct ObserverManager_t39318F60327B67B4F97121CF1AA6301DD911FE5C;
-struct PacketIdHistory_t559AB5A239AC3AC7946B1F8CB2B9104D6A21D790;
 struct PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB;
 struct Player_t73E4A5594D88EF91306CA56FA076B7234AB52121;
 struct PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2;
@@ -2605,8 +2603,6 @@ struct NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF  : public MonoBe
 	ObserverManager_t39318F60327B67B4F97121CF1AA6301DD911FE5C* ___U3CObserverManagerU3Ek__BackingField;
 	DebugManager_t729A43A1FC8248A61A15E9D9D706A22075E1D09B* ___U3CDebugManagerU3Ek__BackingField;
 	StatisticsManager_tB62A0D39815B440DBE93C2B9F8A00C3CA2323CD0* ___U3CStatisticsManagerU3Ek__BackingField;
-	Dictionary_2_tA6956B8D493D2FECA73D2AFD277C14FA2A563AD0* ____broadcastNames;
-	PacketIdHistory_t559AB5A239AC3AC7946B1F8CB2B9104D6A21D790* ___PacketIdHistory;
 	bool ____runInBackground;
 	bool ____dontDestroyOnLoad;
 	ObjectPool_t25FDDFABE0742736480E445F5038491FEC1C59F7* ____objectPool;
@@ -2786,7 +2782,6 @@ struct ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59  : public MonoBeh
 	int32_t ____nextClientTimeoutCheckIndex;
 	float ____nextTimeoutCheckTime;
 	NetworkTrafficStatistics_t7C65483926E324593A260F62B31DAEA3EE205EC0* ____networkTrafficStatistics;
-	PacketIdHistory_t559AB5A239AC3AC7946B1F8CB2B9104D6A21D790* ____packetIdHistory;
 };
 struct TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3329,8 +3324,6 @@ struct Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_StaticFields
 };
 struct Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED_StaticFields
 {
-	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* ___U3CLastNetworkObjectU3Ek__BackingField;
-	NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F* ___U3CLastNetworkBehaviourU3Ek__BackingField;
 	UTF8Encoding_t90B56215A1B0B7ED5CDEA772E695F0DDAFBCD3BE* ____encoding;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ____guidBuffer;
 };
@@ -5372,7 +5365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80219
+// Method Definition Index: 80652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCE6F16C5E455FC5C8A54AF49E5639E81FDC0AF6A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5385,8 +5378,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A45
 	}
 	MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777 V_1;
-	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)2773));
@@ -5405,17 +5396,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A45
 		(&V_0)->___TotalTypes = ((int32_t)48);
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777 L_6 = V_0;
-		V_1 = L_6;
-		goto IL_005f;
-	}
-
-IL_005f:
-	{
-		MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777 L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 80220
+// Method Definition Index: 80653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m57ABC3553486DBB7C11764CE261B4ED2E0B9E761 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t43B6D62D6E3ECC64191AF977B6BFD9E89EF22943* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5501,7 +5485,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t79FCF1E8BF6BE19B47339D3D57A4555F94F5A777_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80221
+// Method Definition Index: 80654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_OnTriggerEnter_m36EE8E693C077E09317B3256FBEE4E5CA5E382BA (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5517,60 +5501,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_OnTriggerEnter_m36EE8E693C07
 	Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* V_0 = NULL;
 	SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* V_1 = NULL;
 	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_2 = NULL;
-	bool V_3 = false;
-	bool V_4 = false;
-	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_5 = NULL;
+	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_3 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:11>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		V_3 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_3;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0013;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:12>
-		goto IL_0097;
+		return;
 	}
 
-IL_0013:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:14>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_3;
-		L_3 = LevelLoader_GetPlayerOwnedObject_mAC083BF6D4CDB043EF4374D3E8B6BE1F00CFD753(__this, L_2, NULL);
-		V_0 = L_3;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_1 = ___0_other;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_2;
+		L_2 = LevelLoader_GetPlayerOwnedObject_mAC083BF6D4CDB043EF4374D3E8B6BE1F00CFD753(__this, L_1, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:15>
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_4 = V_0;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_4 = L_5;
-		bool L_6 = V_4;
-		if (!L_6)
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_4)
 		{
-			goto IL_002a;
+			goto IL_001b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:16>
-		goto IL_0097;
+		return;
 	}
 
-IL_002a:
+IL_001b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:21>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
-		L_7 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_7);
-		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_8;
-		L_8 = GameObject_get_scene_m747D45E8CECC56DD47D1E103F9E51D5FBEDA4B01(L_7, NULL);
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_9 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
-		SceneLookupData__ctor_m70FF549B233CCD947913DB9C2F4C9B94168D04B7(L_9, L_8, NULL);
-		V_1 = L_9;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
+		L_5 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_5);
+		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_6;
+		L_6 = GameObject_get_scene_m747D45E8CECC56DD47D1E103F9E51D5FBEDA4B01(L_5, NULL);
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_7 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
+		SceneLookupData__ctor_m70FF549B233CCD947913DB9C2F4C9B94168D04B7(L_7, L_6, NULL);
+		V_1 = L_7;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:22>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:23>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:24>
@@ -5588,67 +5566,63 @@ IL_002a:
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:36>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:37>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:38>
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_10 = V_1;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_11 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
-		SceneLoadData__ctor_mAE9379AC418E6F70F9E4CFDF20FC94546EC56060(L_11, L_10, NULL);
-		V_5 = L_11;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_12 = V_5;
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_13 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
-		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_13, NULL);
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_14 = L_13;
-		NullCheck(L_14);
-		L_14->___AutomaticallyUnload = (bool)0;
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_8 = V_1;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_9 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
+		SceneLoadData__ctor_mAE9379AC418E6F70F9E4CFDF20FC94546EC56060(L_9, L_8, NULL);
+		V_3 = L_9;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_10 = V_3;
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_11 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
+		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_11, NULL);
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_12 = L_11;
 		NullCheck(L_12);
-		L_12->___Options = L_14;
-		Il2CppCodeGenWriteBarrier((void**)(&L_12->___Options), (void*)L_14);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_15 = V_5;
-		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_16 = (NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62*)(NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62*)SZArrayNew(NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62_il2cpp_TypeInfo_var, (uint32_t)1);
-		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_17 = L_16;
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_18 = V_0;
-		NullCheck(L_18);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_19;
-		L_19 = NetworkBehaviour_get_NetworkObject_m3EEBF47647F4FF04EE88BF6A321CBE2BA23FA64A_inline(L_18, NULL);
-		NullCheck(L_17);
-		ArrayElementTypeCheck (L_17, L_19);
-		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(0), (NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D*)L_19);
+		L_12->___AutomaticallyUnload = (bool)0;
+		NullCheck(L_10);
+		L_10->___Options = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&L_10->___Options), (void*)L_12);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_13 = V_3;
+		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_14 = (NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62*)(NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62*)SZArrayNew(NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62_il2cpp_TypeInfo_var, (uint32_t)1);
+		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_15 = L_14;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_16 = V_0;
+		NullCheck(L_16);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_17;
+		L_17 = NetworkBehaviour_get_NetworkObject_m3EEBF47647F4FF04EE88BF6A321CBE2BA23FA64A_inline(L_16, NULL);
 		NullCheck(L_15);
-		L_15->___MovedNetworkObjects = L_17;
-		Il2CppCodeGenWriteBarrier((void**)(&L_15->___MovedNetworkObjects), (void*)L_17);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_20 = V_5;
-		NullCheck(L_20);
-		L_20->___ReplaceScenes = 2;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_21 = V_5;
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_22 = V_1;
-		PreferredScene_t0ACDCF0CEA6355AE299AE67D24637B0421CBB5E3 L_23;
-		memset((&L_23), 0, sizeof(L_23));
-		PreferredScene__ctor_mE43BBADBE7B51B9BB4ECF8086E80521DF9E79516((&L_23), L_22, NULL);
-		NullCheck(L_21);
-		L_21->___PreferredActiveScene = L_23;
-		Il2CppCodeGenWriteBarrier((void**)&(((&L_21->___PreferredActiveScene))->___Client), (void*)NULL);
+		ArrayElementTypeCheck (L_15, L_17);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(0), (NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D*)L_17);
+		NullCheck(L_13);
+		L_13->___MovedNetworkObjects = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&L_13->___MovedNetworkObjects), (void*)L_15);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_18 = V_3;
+		NullCheck(L_18);
+		L_18->___ReplaceScenes = 2;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_19 = V_3;
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_20 = V_1;
+		PreferredScene_t0ACDCF0CEA6355AE299AE67D24637B0421CBB5E3 L_21;
+		memset((&L_21), 0, sizeof(L_21));
+		PreferredScene__ctor_mE43BBADBE7B51B9BB4ECF8086E80521DF9E79516((&L_21), L_20, NULL);
+		NullCheck(L_19);
+		L_19->___PreferredActiveScene = L_21;
+		Il2CppCodeGenWriteBarrier((void**)&(((&L_19->___PreferredActiveScene))->___Client), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((&L_21->___PreferredActiveScene))->___Server), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((&L_19->___PreferredActiveScene))->___Server), (void*)NULL);
 		#endif
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_24 = V_5;
-		V_2 = L_24;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_22 = V_3;
+		V_2 = L_22;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:40>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_25;
-		L_25 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_26 = V_0;
-		NullCheck(L_26);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_27;
-		L_27 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_26, NULL);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_28 = V_2;
-		NullCheck(L_25);
-		SceneManager_LoadConnectionScenes_m8064F8F8C8CB0FE71012442EF841E3AB626AFD35(L_25, L_27, L_28, NULL);
-	}
-
-IL_0097:
-	{
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_23;
+		L_23 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_24 = V_0;
+		NullCheck(L_24);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_25;
+		L_25 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_24, NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_26 = V_2;
+		NullCheck(L_23);
+		SceneManager_LoadConnectionScenes_m8064F8F8C8CB0FE71012442EF841E3AB626AFD35(L_23, L_25, L_26, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:41>
 		return;
 	}
 }
-// Method Definition Index: 80222
+// Method Definition Index: 80655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_OnTriggerExit_mA3448D1E2E3B6FF56B19A72211BFDD5F4016A7B6 (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5661,61 +5635,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_OnTriggerExit_mA3448D1E2E3B6
 		s_Il2CppMethodInitialized = true;
 	}
 	Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* V_0 = NULL;
-	SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* V_1 = NULL;
-	SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* V_2 = NULL;
-	bool V_3 = false;
-	bool V_4 = false;
+	SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* V_1 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:45>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		V_3 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_3;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:46>
-		goto IL_0064;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:48>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_3;
-		L_3 = LevelLoader_GetPlayerOwnedObject_mAC083BF6D4CDB043EF4374D3E8B6BE1F00CFD753(__this, L_2, NULL);
-		V_0 = L_3;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_1 = ___0_other;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_2;
+		L_2 = LevelLoader_GetPlayerOwnedObject_mAC083BF6D4CDB043EF4374D3E8B6BE1F00CFD753(__this, L_1, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:49>
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_4 = V_0;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_4 = L_5;
-		bool L_6 = V_4;
-		if (!L_6)
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_4)
 		{
-			goto IL_0027;
+			goto IL_001b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:50>
-		goto IL_0064;
+		return;
 	}
 
-IL_0027:
+IL_001b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:55>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
-		L_7 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_7);
-		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_8;
-		L_8 = GameObject_get_scene_m747D45E8CECC56DD47D1E103F9E51D5FBEDA4B01(L_7, NULL);
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_9 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
-		SceneLookupData__ctor_m70FF549B233CCD947913DB9C2F4C9B94168D04B7(L_9, L_8, NULL);
-		V_1 = L_9;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
+		L_5 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_5);
+		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_6;
+		L_6 = GameObject_get_scene_m747D45E8CECC56DD47D1E103F9E51D5FBEDA4B01(L_5, NULL);
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_7 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
+		SceneLookupData__ctor_m70FF549B233CCD947913DB9C2F4C9B94168D04B7(L_7, L_6, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:64>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:65>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:66>
@@ -5723,38 +5689,33 @@ IL_0027:
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:68>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:69>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:70>
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_10 = V_1;
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_11 = (SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40*)il2cpp_codegen_object_new(SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40_il2cpp_TypeInfo_var);
-		SceneUnloadData__ctor_mFC778BC930CFD4B23CEA9714FBBD72B089C9FF8B(L_11, L_10, NULL);
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_12 = L_11;
-		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_13 = (UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426*)il2cpp_codegen_object_new(UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426_il2cpp_TypeInfo_var);
-		UnloadOptions__ctor_mE0BBF5CB0719FA0694E23F6FC561D3A0875E803F(L_13, NULL);
-		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_14 = L_13;
-		NullCheck(L_14);
-		L_14->___Mode = 1;
-		NullCheck(L_12);
-		L_12->___Options = L_14;
-		Il2CppCodeGenWriteBarrier((void**)(&L_12->___Options), (void*)L_14);
-		V_2 = L_12;
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_8 = (SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40*)il2cpp_codegen_object_new(SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40_il2cpp_TypeInfo_var);
+		SceneUnloadData__ctor_mFC778BC930CFD4B23CEA9714FBBD72B089C9FF8B(L_8, L_7, NULL);
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_9 = L_8;
+		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_10 = (UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426*)il2cpp_codegen_object_new(UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426_il2cpp_TypeInfo_var);
+		UnloadOptions__ctor_mE0BBF5CB0719FA0694E23F6FC561D3A0875E803F(L_10, NULL);
+		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_11 = L_10;
+		NullCheck(L_11);
+		L_11->___Mode = 1;
+		NullCheck(L_9);
+		L_9->___Options = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&L_9->___Options), (void*)L_11);
+		V_1 = L_9;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:72>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_15;
-		L_15 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_16 = V_0;
-		NullCheck(L_16);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_17;
-		L_17 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_16, NULL);
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_18 = V_2;
-		NullCheck(L_15);
-		SceneManager_UnloadConnectionScenes_m8FE2BB275FB50B25B9EE47C0E229395DC53262A5(L_15, L_17, L_18, NULL);
-	}
-
-IL_0064:
-	{
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_12;
+		L_12 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_13 = V_0;
+		NullCheck(L_13);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_14;
+		L_14 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_13, NULL);
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_15 = V_1;
+		NullCheck(L_12);
+		SceneManager_UnloadConnectionScenes_m8FE2BB275FB50B25B9EE47C0E229395DC53262A5(L_12, L_14, L_15, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:73>
 		return;
 	}
 }
-// Method Definition Index: 80223
+// Method Definition Index: 80656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* LevelLoader_GetPlayerOwnedObject_mAC083BF6D4CDB043EF4374D3E8B6BE1F00CFD753 (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5765,9 +5726,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_t73E4A5594D88EF91306CA56FA076B7234AB52
 		s_Il2CppMethodInitialized = true;
 	}
 	Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* V_0 = NULL;
-	bool V_1 = false;
-	Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* V_2 = NULL;
-	bool V_3 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:83>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_other;
@@ -5780,58 +5738,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_t73E4A5594D88EF91306CA56FA076B7234AB52
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_1 = L_3;
-		bool L_4 = V_1;
-		if (!L_4)
+		if (!L_3)
 		{
-			goto IL_0017;
+			goto IL_0012;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:86>
-		V_2 = (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121*)NULL;
-		goto IL_0031;
+		return (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121*)NULL;
 	}
 
-IL_0017:
+IL_0012:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:88>
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_5 = V_0;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_4 = V_0;
+		NullCheck(L_4);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_5;
+		L_5 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_4, NULL);
 		NullCheck(L_5);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_6;
-		L_6 = NetworkBehaviour_get_Owner_m8CA2A8A2D757CACD11B2D06DC06D244A2994EB05(L_5, NULL);
-		NullCheck(L_6);
-		bool L_7;
-		L_7 = NetworkConnection_get_IsActive_mE561260E2F682628B60E99DF96A9051CA7C6CE6D(L_6, NULL);
-		V_3 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
-		bool L_8 = V_3;
-		if (!L_8)
+		bool L_6;
+		L_6 = NetworkConnection_get_IsActive_mE561260E2F682628B60E99DF96A9051CA7C6CE6D(L_5, NULL);
+		if (L_6)
 		{
-			goto IL_002d;
+			goto IL_0021;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:89>
-		V_2 = (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121*)NULL;
-		goto IL_0031;
+		return (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121*)NULL;
 	}
 
-IL_002d:
+IL_0021:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:91>
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_9 = V_0;
-		V_2 = L_9;
-		goto IL_0031;
-	}
-
-IL_0031:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/LevelLoader.cs:92>
-		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_10 = V_2;
-		return L_10;
+		Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* L_7 = V_0;
+		return L_7;
 	}
 }
-// Method Definition Index: 80224
+// Method Definition Index: 80657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader__ctor_m9245266A1A6884480D0F4882576C3405B5CD0C61 (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5846,7 +5790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader__ctor_m9245266A1A6884480D0F4
 		return;
 	}
 }
-// Method Definition Index: 80225
+// Method Definition Index: 80658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_NetworkInitialize___Early_mA5C866B17F03B522E11FF7B3D1CA581040E6E301 (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5867,7 +5811,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80226
+// Method Definition Index: 80659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_NetworkInitialize___Late_m68BE042F5186E48D2B27E4151A183340B302DD6E (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5888,7 +5832,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80227
+// Method Definition Index: 80660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_NetworkInitializeIfDisabled_m4CF658F6A04881022E5A6410CD672DCAC787B1D3 (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5897,7 +5841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_NetworkInitializeIfDisabled_
 		return;
 	}
 }
-// Method Definition Index: 80228
+// Method Definition Index: 80661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_Awake_mC0DC7CB485110E051E5F5D7C590DEDB361F70A7D (LevelLoader_t88294FAAF09D410FADFB8BE59E2D73254F407E98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5914,7 +5858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelLoader_Awake_mC0DC7CB485110E051E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80229
+// Method Definition Index: 80662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_OnOwnershipClient_mAC41010B6D10E0A74ADB1829A9F0C8F734EDBD9C (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_prevOwner, const RuntimeMethod* method) 
 {
 	{
@@ -5931,7 +5875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_OnOwnershipClient_mAC41010B6D10E0
 		return;
 	}
 }
-// Method Definition Index: 80230
+// Method Definition Index: 80663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Update_mE13501EC173CF09E44752BE2458D6D519FCA3A27 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5945,161 +5889,145 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Update_mE13501EC173CF09E44752BE24
 	memset((&V_0), 0, sizeof(V_0));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	bool V_4 = false;
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	bool V_6 = false;
-	bool V_7 = false;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:30>
 		bool L_0;
 		L_0 = Player_TryFindWaypoints_mF603073F67EE65EBBE1CA88A84DCFCE396D53564(__this, NULL);
-		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_2;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0013;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:31>
-		goto IL_012e;
+		return;
 	}
 
-IL_0013:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:33>
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_2 = __this->____wayPoints;
-		int32_t L_3 = __this->____goalIndex;
-		NullCheck(L_2);
-		Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* L_4;
-		L_4 = List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7(L_2, L_3, List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7_RuntimeMethod_var);
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_1 = __this->____wayPoints;
+		int32_t L_2 = __this->____goalIndex;
+		NullCheck(L_1);
+		Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* L_3;
+		L_3 = List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7(L_1, L_2, List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7_RuntimeMethod_var);
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
 		NullCheck(L_4);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
-		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_4, NULL);
-		NullCheck(L_5);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
-		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = __this->____goalOffset;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_6, L_7, NULL);
-		V_0 = L_8;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = __this->____goalOffset;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_5, L_6, NULL);
+		V_0 = L_7;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:34>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
+		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
-		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_10);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
-		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
-		float L_13 = __this->____moveRate;
-		float L_14;
-		L_14 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
-		L_15 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_11, L_12, ((float)il2cpp_codegen_multiply(L_13, L_14)), NULL);
 		NullCheck(L_9);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_9, L_15, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_9, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = V_0;
+		float L_12 = __this->____moveRate;
+		float L_13;
+		L_13 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_10, L_11, ((float)il2cpp_codegen_multiply(L_12, L_13)), NULL);
+		NullCheck(L_8);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_8, L_14, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:36>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_0;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
-		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_16);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_16, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
-		L_18 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_17, NULL);
+		L_18 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_15, L_17, NULL);
+		V_1 = L_18;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
-		L_19 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_16, L_18, NULL);
-		V_3 = L_19;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
-		L_20 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_3), NULL);
-		V_1 = L_20;
+		L_19 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:38>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = V_1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		L_22 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
-		bool L_23;
-		L_23 = Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline(L_21, L_22, NULL);
-		V_4 = L_23;
-		bool L_24 = V_4;
-		if (!L_24)
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
+		L_20 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		bool L_21;
+		L_21 = Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline(L_19, L_20, NULL);
+		if (!L_21)
 		{
-			goto IL_00e4;
+			goto IL_00ce;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:40>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_0;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
-		L_26 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_26);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
-		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_23);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
+		L_24 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_23, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
+		L_25 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_22, L_24, NULL);
+		V_1 = L_25;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
+		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_27);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
-		L_28 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_25, L_27, NULL);
-		V_3 = L_28;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
-		L_29 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_3), NULL);
+		L_28 = Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2(L_27, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_29;
+		L_29 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline(L_26, L_28, NULL);
+		V_2 = L_29;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:41>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
 		L_30 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_30);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
-		L_31 = Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2(L_30, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
+		L_31 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_31);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_32;
-		L_32 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline(L_29, L_31, NULL);
-		V_5 = L_32;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:41>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
-		L_33 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
-		L_34 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_34);
+		L_32 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_31, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_33 = V_2;
+		float L_34;
+		L_34 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_35;
-		L_35 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_34, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36 = V_5;
-		float L_37;
-		L_37 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38;
-		L_38 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_35, L_36, ((float)il2cpp_codegen_multiply((270.0f), L_37)), NULL);
-		NullCheck(L_33);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_33, L_38, NULL);
+		L_35 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_32, L_33, ((float)il2cpp_codegen_multiply((270.0f), L_34)), NULL);
+		NullCheck(L_30);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_30, L_35, NULL);
 	}
 
-IL_00e4:
+IL_00ce:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:45>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
-		L_39 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_39);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40;
-		L_40 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_39, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41 = V_0;
-		bool L_42;
-		L_42 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_40, L_41, NULL);
-		V_6 = L_42;
-		bool L_43 = V_6;
-		if (!L_43)
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36;
+		L_36 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_36);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_36, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38 = V_0;
+		bool L_39;
+		L_39 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_37, L_38, NULL);
+		if (!L_39)
 		{
-			goto IL_012e;
+			goto IL_0109;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:47>
-		int32_t L_44 = __this->____goalIndex;
-		__this->____goalIndex = ((int32_t)il2cpp_codegen_add(L_44, 1));
+		int32_t L_40 = __this->____goalIndex;
+		__this->____goalIndex = ((int32_t)il2cpp_codegen_add(L_40, 1));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:49>
-		int32_t L_45 = __this->____goalIndex;
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_46 = __this->____wayPoints;
-		NullCheck(L_46);
-		int32_t L_47;
-		L_47 = List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_inline(L_46, List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_RuntimeMethod_var);
-		V_7 = (bool)((((int32_t)((((int32_t)L_45) < ((int32_t)L_47))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_48 = V_7;
-		if (!L_48)
+		int32_t L_41 = __this->____goalIndex;
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_42 = __this->____wayPoints;
+		NullCheck(L_42);
+		int32_t L_43;
+		L_43 = List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_inline(L_42, List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_RuntimeMethod_var);
+		if ((((int32_t)L_41) < ((int32_t)L_43)))
 		{
-			goto IL_012d;
+			goto IL_0109;
 		}
 	}
 	{
@@ -6107,17 +6035,13 @@ IL_00e4:
 		__this->____goalIndex = 0;
 	}
 
-IL_012d:
-	{
-	}
-
-IL_012e:
+IL_0109:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:52>
 		return;
 	}
 }
-// Method Definition Index: 80231
+// Method Definition Index: 80664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Player_TryFindWaypoints_mF603073F67EE65EBBE1CA88A84DCFCE396D53564 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6137,11 +6061,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Player_TryFindWaypoints_mF603073F67EE65E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
 	Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* G_B9_0 = NULL;
 	List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* G_B9_1 = NULL;
 	Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* G_B9_2 = NULL;
@@ -6157,213 +6076,194 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Player_TryFindWaypoints_mF603073F67EE65E
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:57>
 		bool L_0 = __this->____foundWaypoints;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0012;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:58>
-		V_1 = (bool)1;
-		goto IL_0150;
+		return (bool)1;
 	}
 
-IL_0012:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:60>
-		bool L_2;
-		L_2 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		V_2 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		bool L_3 = V_2;
-		if (!L_3)
+		bool L_1;
+		L_1 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
+		if (L_1)
 		{
-			goto IL_0026;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:61>
-		V_1 = (bool)0;
-		goto IL_0150;
+		return (bool)0;
 	}
 
-IL_0026:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:63>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		WaypointU5BU5D_tADC7EB82E91E38AE2C775D838B07A929C86E7433* L_4;
-		L_4 = Object_FindObjectsOfType_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m003DFF876402F3018AF67ED3436BEB25586CB098(Object_FindObjectsOfType_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m003DFF876402F3018AF67ED3436BEB25586CB098_RuntimeMethod_var);
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_5;
-		L_5 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797((RuntimeObject*)L_4, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
-		__this->____wayPoints = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____wayPoints), (void*)L_5);
+		WaypointU5BU5D_tADC7EB82E91E38AE2C775D838B07A929C86E7433* L_2;
+		L_2 = Object_FindObjectsOfType_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m003DFF876402F3018AF67ED3436BEB25586CB098(Object_FindObjectsOfType_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m003DFF876402F3018AF67ED3436BEB25586CB098_RuntimeMethod_var);
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_3;
+		L_3 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797((RuntimeObject*)L_2, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
+		__this->____wayPoints = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____wayPoints), (void*)L_3);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:66>
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_6 = __this->____wayPoints;
-		NullCheck(L_6);
-		int32_t L_7;
-		L_7 = List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_inline(L_6, List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_RuntimeMethod_var);
-		V_3 = (bool)((((int32_t)((((int32_t)L_7) == ((int32_t)4))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_8 = V_3;
-		if (!L_8)
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_4 = __this->____wayPoints;
+		NullCheck(L_4);
+		int32_t L_5;
+		L_5 = List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_inline(L_4, List_1_get_Count_mD7CEF59F6D9624EBDC9F2829CCDFAB7775629059_RuntimeMethod_var);
+		if ((((int32_t)L_5) == ((int32_t)4)))
 		{
-			goto IL_0052;
+			goto IL_0034;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:67>
-		V_1 = (bool)0;
-		goto IL_0150;
+		return (bool)0;
 	}
 
-IL_0052:
+IL_0034:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:72>
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_9;
-		L_9 = NetworkBehaviour_get_ServerManager_m28A7E14C7EC4C02D5C7A922D08F30529CC4D9D32(__this, NULL);
-		NullCheck(L_9);
-		Dictionary_2_tB831FBE45C185F84DFBE5872AC5BF37E9E22C117* L_10 = L_9->___Clients;
-		NullCheck(L_10);
-		int32_t L_11;
-		L_11 = Dictionary_2_get_Count_m639D359FC5C10A76824D756450FED43672259B4C(L_10, Dictionary_2_get_Count_m639D359FC5C10A76824D756450FED43672259B4C_RuntimeMethod_var);
-		V_4 = (bool)((((int32_t)((int32_t)(L_11%2))) == ((int32_t)0))? 1 : 0);
-		bool L_12 = V_4;
-		if (!L_12)
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_6;
+		L_6 = NetworkBehaviour_get_ServerManager_m28A7E14C7EC4C02D5C7A922D08F30529CC4D9D32(__this, NULL);
+		NullCheck(L_6);
+		Dictionary_2_tB831FBE45C185F84DFBE5872AC5BF37E9E22C117* L_7 = L_6->___Clients;
+		NullCheck(L_7);
+		int32_t L_8;
+		L_8 = Dictionary_2_get_Count_m639D359FC5C10A76824D756450FED43672259B4C(L_7, Dictionary_2_get_Count_m639D359FC5C10A76824D756450FED43672259B4C_RuntimeMethod_var);
+		if (((int32_t)(L_8%2)))
 		{
-			goto IL_00c0;
+			goto IL_0099;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:74>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		memset((&L_13), 0, sizeof(L_13));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_13), (-0.5f), (0.0f), (0.0f), NULL);
-		__this->____goalOffset = L_13;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_9), (-0.5f), (0.0f), (0.0f), NULL);
+		__this->____goalOffset = L_9;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:75>
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_14 = __this->____wayPoints;
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_10 = __this->____wayPoints;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var);
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_15 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0;
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_16 = L_15;
-		if (L_16)
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_11 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0;
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_12 = L_11;
+		if (L_12)
 		{
-			G_B9_0 = L_16;
-			G_B9_1 = L_14;
+			G_B9_0 = L_12;
+			G_B9_1 = L_10;
 			G_B9_2 = __this;
-			goto IL_00ae;
+			goto IL_0088;
 		}
-		G_B8_0 = L_16;
-		G_B8_1 = L_14;
+		G_B8_0 = L_12;
+		G_B8_1 = L_10;
 		G_B8_2 = __this;
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var);
-		U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* L_17 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9;
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_18 = (Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659*)il2cpp_codegen_object_new(Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659_il2cpp_TypeInfo_var);
-		Func_2__ctor_mD66DB61674DA1BB6ADD84C0BCD6B65D29BFFA051(L_18, L_17, (intptr_t)((void*)U3CU3Ec_U3CTryFindWaypointsU3Eb__8_0_mF5EF837B76EE8B4D1A8B8D8C8E3793CFCEDF2860_RuntimeMethod_var), NULL);
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_19 = L_18;
-		((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0 = L_19;
-		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0), (void*)L_19);
-		G_B9_0 = L_19;
+		U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* L_13 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9;
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_14 = (Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659*)il2cpp_codegen_object_new(Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659_il2cpp_TypeInfo_var);
+		Func_2__ctor_mD66DB61674DA1BB6ADD84C0BCD6B65D29BFFA051(L_14, L_13, (intptr_t)((void*)U3CU3Ec_U3CTryFindWaypointsU3Eb__8_0_mF5EF837B76EE8B4D1A8B8D8C8E3793CFCEDF2860_RuntimeMethod_var), NULL);
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_15 = L_14;
+		((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0 = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_0), (void*)L_15);
+		G_B9_0 = L_15;
 		G_B9_1 = G_B8_1;
 		G_B9_2 = G_B8_2;
 	}
 
-IL_00ae:
+IL_0088:
 	{
-		RuntimeObject* L_20;
-		L_20 = Enumerable_OrderBy_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mC756D87806699E56F715C87BC3870BB6C1338F60(G_B9_1, G_B9_0, Enumerable_OrderBy_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mC756D87806699E56F715C87BC3870BB6C1338F60_RuntimeMethod_var);
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_21;
-		L_21 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797(L_20, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
+		RuntimeObject* L_16;
+		L_16 = Enumerable_OrderBy_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mC756D87806699E56F715C87BC3870BB6C1338F60(G_B9_1, G_B9_0, Enumerable_OrderBy_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mC756D87806699E56F715C87BC3870BB6C1338F60_RuntimeMethod_var);
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_17;
+		L_17 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797(L_16, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
 		NullCheck(G_B9_2);
-		G_B9_2->____wayPoints = L_21;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B9_2->____wayPoints), (void*)L_21);
-		goto IL_0111;
+		G_B9_2->____wayPoints = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B9_2->____wayPoints), (void*)L_17);
+		goto IL_00e8;
 	}
 
-IL_00c0:
+IL_0099:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:79>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		memset((&L_22), 0, sizeof(L_22));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_22), (0.5f), (0.0f), (0.0f), NULL);
-		__this->____goalOffset = L_22;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		memset((&L_18), 0, sizeof(L_18));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_18), (0.5f), (0.0f), (0.0f), NULL);
+		__this->____goalOffset = L_18;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:80>
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_23 = __this->____wayPoints;
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_19 = __this->____wayPoints;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var);
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_24 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1;
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_25 = L_24;
-		if (L_25)
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_20 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1;
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_21 = L_20;
+		if (L_21)
 		{
-			G_B12_0 = L_25;
-			G_B12_1 = L_23;
+			G_B12_0 = L_21;
+			G_B12_1 = L_19;
 			G_B12_2 = __this;
-			goto IL_0101;
+			goto IL_00d9;
 		}
-		G_B11_0 = L_25;
-		G_B11_1 = L_23;
+		G_B11_0 = L_21;
+		G_B11_1 = L_19;
 		G_B11_2 = __this;
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var);
-		U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* L_26 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9;
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_27 = (Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659*)il2cpp_codegen_object_new(Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659_il2cpp_TypeInfo_var);
-		Func_2__ctor_mD66DB61674DA1BB6ADD84C0BCD6B65D29BFFA051(L_27, L_26, (intptr_t)((void*)U3CU3Ec_U3CTryFindWaypointsU3Eb__8_1_m4ED964B3A3CC56142CE14F4FE11D359E15023357_RuntimeMethod_var), NULL);
-		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_28 = L_27;
-		((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1 = L_28;
-		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1), (void*)L_28);
-		G_B12_0 = L_28;
+		U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* L_22 = ((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9;
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_23 = (Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659*)il2cpp_codegen_object_new(Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659_il2cpp_TypeInfo_var);
+		Func_2__ctor_mD66DB61674DA1BB6ADD84C0BCD6B65D29BFFA051(L_23, L_22, (intptr_t)((void*)U3CU3Ec_U3CTryFindWaypointsU3Eb__8_1_m4ED964B3A3CC56142CE14F4FE11D359E15023357_RuntimeMethod_var), NULL);
+		Func_2_t2C1DCAF36D89BC97CF8B8ABEFD811287BF28D659* L_24 = L_23;
+		((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1 = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392_il2cpp_TypeInfo_var))->___U3CU3E9__8_1), (void*)L_24);
+		G_B12_0 = L_24;
 		G_B12_1 = G_B11_1;
 		G_B12_2 = G_B11_2;
 	}
 
-IL_0101:
+IL_00d9:
 	{
-		RuntimeObject* L_29;
-		L_29 = Enumerable_OrderByDescending_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m01C66B327664028EB59F3914963D2CEC92929992(G_B12_1, G_B12_0, Enumerable_OrderByDescending_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m01C66B327664028EB59F3914963D2CEC92929992_RuntimeMethod_var);
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_30;
-		L_30 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797(L_29, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
+		RuntimeObject* L_25;
+		L_25 = Enumerable_OrderByDescending_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m01C66B327664028EB59F3914963D2CEC92929992(G_B12_1, G_B12_0, Enumerable_OrderByDescending_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m01C66B327664028EB59F3914963D2CEC92929992_RuntimeMethod_var);
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_26;
+		L_26 = Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797(L_25, Enumerable_ToList_TisWaypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829_m2E833C091329D52A31BF8AC9963841CCC64AF797_RuntimeMethod_var);
 		NullCheck(G_B12_2);
-		G_B12_2->____wayPoints = L_30;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B12_2->____wayPoints), (void*)L_30);
+		G_B12_2->____wayPoints = L_26;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B12_2->____wayPoints), (void*)L_26);
 	}
 
-IL_0111:
+IL_00e8:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:84>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
-		L_31 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_32 = __this->____wayPoints;
-		NullCheck(L_32);
-		Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* L_33;
-		L_33 = List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7(L_32, 0, List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7_RuntimeMethod_var);
-		NullCheck(L_33);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
-		L_34 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_33, NULL);
-		NullCheck(L_34);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35;
-		L_35 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_34, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = __this->____goalOffset;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
-		L_37 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_35, L_36, NULL);
-		NullCheck(L_31);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_31, L_37, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
+		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		List_1_tC41C2FF96ABEE27704363CA6D0043177D79599A7* L_28 = __this->____wayPoints;
+		NullCheck(L_28);
+		Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* L_29;
+		L_29 = List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7(L_28, 0, List_1_get_Item_m45F5F322E534972E411483A580C99A26AFC7D7A7_RuntimeMethod_var);
+		NullCheck(L_29);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
+		L_30 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_29, NULL);
+		NullCheck(L_30);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_30, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = __this->____goalOffset;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
+		L_33 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_31, L_32, NULL);
+		NullCheck(L_27);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_27, L_33, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:86>
 		__this->____goalIndex = 1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:88>
 		__this->____foundWaypoints = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:90>
-		V_1 = (bool)1;
-		goto IL_0150;
-	}
-
-IL_0150:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/Player.cs:91>
-		bool L_38 = V_1;
-		return L_38;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 80232
+// Method Definition Index: 80665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player__ctor_mFA0ED5AD682D04078D852A78B22413AC3E98ABC6 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6387,7 +6287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player__ctor_mFA0ED5AD682D04078D852A78B2
 		return;
 	}
 }
-// Method Definition Index: 80233
+// Method Definition Index: 80666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_NetworkInitialize___Early_mDEA211FD702B234D8B1B1DA25113DAF521257EF4 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6408,7 +6308,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80234
+// Method Definition Index: 80667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_NetworkInitialize___Late_m6D055DE8FAB5D3BDA71B942CE0624F607E3DBF75 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6429,7 +6329,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80235
+// Method Definition Index: 80668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_NetworkInitializeIfDisabled_m9982635FBC4CFFC682A98150B7F8E8E8CBC3F479 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6438,7 +6338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_NetworkInitializeIfDisabled_m9982
 		return;
 	}
 }
-// Method Definition Index: 80236
+// Method Definition Index: 80669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Awake_m1FCDAAEEC181985D09FFB93BFCA6E21D6E2A87E2 (Player_t73E4A5594D88EF91306CA56FA076B7234AB52121* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6455,7 +6355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Player_Awake_m1FCDAAEEC181985D09FFB93BFC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80237
+// Method Definition Index: 80670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m4348665BEC133304372A60F890A3CCE95347FFAF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6472,7 +6372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m4348665BEC133304372A60F8
 		return;
 	}
 }
-// Method Definition Index: 80238
+// Method Definition Index: 80671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mED223E6EBC5B5BE1608326614477512E667640B4 (U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6480,7 +6380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mED223E6EBC5B5BE1608326614
 		return;
 	}
 }
-// Method Definition Index: 80239
+// Method Definition Index: 80672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t U3CU3Ec_U3CTryFindWaypointsU3Eb__8_0_mF5EF837B76EE8B4D1A8B8D8C8E3793CFCEDF2860 (U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* __this, Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* ___0_x, const RuntimeMethod* method) 
 {
 	{
@@ -6491,7 +6391,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t U3CU3Ec_U3CTryFindWaypointsU3Eb__8_0_
 		return L_1;
 	}
 }
-// Method Definition Index: 80240
+// Method Definition Index: 80673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t U3CU3Ec_U3CTryFindWaypointsU3Eb__8_1_m4ED964B3A3CC56142CE14F4FE11D359E15023357 (U3CU3Ec_tDB61BE91F28C526D20DC2AC3F2725BCEF0419392* __this, Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* ___0_x, const RuntimeMethod* method) 
 {
 	{
@@ -6510,7 +6410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t U3CU3Ec_U3CTryFindWaypointsU3Eb__8_1_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80241
+// Method Definition Index: 80674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_OnStartServer_mDFF441E0B9A4C4198A119EA43B98CF66B83A7D05 (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6523,18 +6423,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_OnStartServer_mDFF4
 	}
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
 	int32_t V_1 = 0;
-	String_t* V_2 = NULL;
-	SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* V_3 = NULL;
-	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_4 = NULL;
+	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_2 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:27>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = __this->____scenes;
 		V_0 = L_0;
 		V_1 = 0;
-		goto IL_0046;
+		goto IL_003b;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:27>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = V_0;
@@ -6542,12 +6440,9 @@ IL_000d:
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		String_t* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		V_2 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:29>
-		String_t* L_5 = V_2;
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_6 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
-		SceneLookupData__ctor_m07D958594DE044BB554E7706E0AB14E1ED9076A0(L_6, L_5, NULL);
-		V_3 = L_6;
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_5 = (SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3*)il2cpp_codegen_object_new(SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3_il2cpp_TypeInfo_var);
+		SceneLookupData__ctor_m07D958594DE044BB554E7706E0AB14E1ED9076A0(L_5, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:30>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:31>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:32>
@@ -6555,38 +6450,37 @@ IL_000d:
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:34>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:35>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:36>
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_7 = V_3;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_8 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
-		SceneLoadData__ctor_mAE9379AC418E6F70F9E4CFDF20FC94546EC56060(L_8, L_7, NULL);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_9 = L_8;
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_10 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
-		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_10, NULL);
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_11 = L_10;
-		NullCheck(L_11);
-		L_11->___AutomaticallyUnload = (bool)0;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_6 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
+		SceneLoadData__ctor_mAE9379AC418E6F70F9E4CFDF20FC94546EC56060(L_6, L_5, NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_7 = L_6;
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_8 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
+		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_8, NULL);
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_9 = L_8;
 		NullCheck(L_9);
-		L_9->___Options = L_11;
-		Il2CppCodeGenWriteBarrier((void**)(&L_9->___Options), (void*)L_11);
-		V_4 = L_9;
+		L_9->___AutomaticallyUnload = (bool)0;
+		NullCheck(L_7);
+		L_7->___Options = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&L_7->___Options), (void*)L_9);
+		V_2 = L_7;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:38>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_12;
-		L_12 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_13 = V_4;
-		NullCheck(L_12);
-		SceneManager_LoadConnectionScenes_m0E891FABAABD78DFB382CDEA55AA04A6CBCD2267(L_12, L_13, NULL);
-		int32_t L_14 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_10;
+		L_10 = NetworkBehaviour_get_SceneManager_m7E71B7C5BB8D6F28E949C4159012D28B58DD7B36(__this, NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_11 = V_2;
+		NullCheck(L_10);
+		SceneManager_LoadConnectionScenes_m0E891FABAABD78DFB382CDEA55AA04A6CBCD2267(L_10, L_11, NULL);
+		int32_t L_12 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_12, 1));
 	}
 
-IL_0046:
+IL_003b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager/Additive Scenes/Scripts/ServerScenePrewarmer.cs:27>
-		int32_t L_15 = V_1;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = V_0;
-		NullCheck(L_16);
-		if ((((int32_t)L_15) < ((int32_t)((int32_t)(((RuntimeArray*)L_16)->max_length)))))
+		int32_t L_13 = V_1;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = V_0;
+		NullCheck(L_14);
+		if ((((int32_t)L_13) < ((int32_t)((int32_t)(((RuntimeArray*)L_14)->max_length)))))
 		{
-			goto IL_000d;
+			goto IL_000b;
 		}
 	}
 	{
@@ -6594,7 +6488,7 @@ IL_0046:
 		return;
 	}
 }
-// Method Definition Index: 80242
+// Method Definition Index: 80675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer__ctor_mDA7558A334C0897243BBC12068E6C1FCD21CC8D3 (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6614,7 +6508,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer__ctor_mDA7558A334C0
 		return;
 	}
 }
-// Method Definition Index: 80243
+// Method Definition Index: 80676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_NetworkInitialize___Early_m852DEC9FFFE2F1C6F3043EE1A294A316CEC1CE32 (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6635,7 +6529,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80244
+// Method Definition Index: 80677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_NetworkInitialize___Late_mBB1EF3117167DA4B6558AC0257F37AB2C9E97AED (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6656,7 +6550,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80245
+// Method Definition Index: 80678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_NetworkInitializeIfDisabled_m9C996D0B0937AE26BE418E4F415DE23AF627FB1F (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6665,7 +6559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_NetworkInitializeIf
 		return;
 	}
 }
-// Method Definition Index: 80246
+// Method Definition Index: 80679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_Awake_m2C748436861B873FD600B4A44467CAAD9BD07C44 (ServerScenePrewarmer_tBCD8260A38B3FE124687FD1AAAC7B9ED02238501* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6682,7 +6576,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerScenePrewarmer_Awake_m2C748436861B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80247
+// Method Definition Index: 80680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Waypoint__ctor_m70D5363CE396CBA38AEEEAF7975ECAEB967AE1EA (Waypoint_tD7B4CD873C0C2DEE164C8BF61573A3D419CD9829* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6698,7 +6592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Waypoint__ctor_m70D5363CE396CBA38AEEEAF7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80248
+// Method Definition Index: 80681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Awake_m9B44B6C3F7FF667E0D05F0D053B38AC749FB3D57 (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6708,7 +6602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Awake_m9B44B6C3F7FF667E0D05F0D053B
 		return;
 	}
 }
-// Method Definition Index: 80249
+// Method Definition Index: 80682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Update_m909E03F584CA35CB16A5E260FB5463FFC3C7EEC9 (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6729,7 +6623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Update_m909E03F584CA35CB16A5E260FB
 		return;
 	}
 }
-// Method Definition Index: 80250
+// Method Definition Index: 80683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkTrigger_OnEnter_mC3181B25841BEC8FBE3A0574C50C5E97289C7972 (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_c, uint32_t ___1_tick, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6739,7 +6633,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkTrigger_OnEnter_mC3181B2584
 		s_Il2CppMethodInitialized = true;
 	}
 	RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* V_0 = NULL;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:27>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_c;
@@ -6752,33 +6645,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkTrigger_OnEnter_mC3181B2584
 		NullCheck(L_2);
 		bool L_3;
 		L_3 = Component_TryGetComponent_TisRigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4_m1A0F042AC6B08B8E0314C7FB86518F1835418F7A(L_2, (&V_0), Component_TryGetComponent_TisRigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4_m1A0F042AC6B08B8E0314C7FB86518F1835418F7A_RuntimeMethod_var);
-		V_1 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_1;
-		if (!L_4)
+		if (L_3)
 		{
-			goto IL_001c;
+			goto IL_0015;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:28>
-		goto IL_0023;
+		return;
 	}
 
-IL_001c:
+IL_0015:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:34>
-		RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* L_5 = V_0;
-		NullCheck(L_5);
-		RigidbodyPrediction_BoostHit_m575CA20B5B5E8C1C72A2DC30235576F83F3B6322(L_5, NULL);
-	}
-
-IL_0023:
-	{
+		RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* L_4 = V_0;
+		NullCheck(L_4);
+		RigidbodyPrediction_BoostHit_m575CA20B5B5E8C1C72A2DC30235576F83F3B6322(L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 80251
+// Method Definition Index: 80684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost__ctor_mCA145C13E2A939ACE8DE395D61DF647AECCE6C5F (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6795,7 +6682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost__ctor_mCA145C13E2A939ACE8DE395D61D
 		return;
 	}
 }
-// Method Definition Index: 80252
+// Method Definition Index: 80685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkInitialize___Early_m47FF53BD7A261496B4B75D1685203007F3AA4CAE (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6816,7 +6703,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80253
+// Method Definition Index: 80686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkInitialize___Late_mDB5008C7B33F3EA09AD2386D2DA271894AA15F88 (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6837,7 +6724,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80254
+// Method Definition Index: 80687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkInitializeIfDisabled_mB932E25FE8C99A938ECD39E487E2E252C146086D (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6846,7 +6733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_NetworkInitializeIfDisabled_mB932E
 		return;
 	}
 }
-// Method Definition Index: 80255
+// Method Definition Index: 80688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Awake_UserLogic_FishNet_Demo_Prediction_Rigidbodies_Boost_FishNet_Demos_dll_mAD77F4741BF5D0BFBBA114422530C096283488CE (Boost_tB982320F09707A3F9D040684239427CBDA6D8CA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6857,18 +6744,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Awake_UserLogic_FishNet_Demo_Predi
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisNetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9_m4CD5836CD0A7E468E3DB438BD5FE7911E0EF570E_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:14>
 		NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* L_0;
 		L_0 = Component_GetComponent_TisNetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9_m4CD5836CD0A7E468E3DB438BD5FE7911E0EF570E(__this, Component_GetComponent_TisNetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9_m4CD5836CD0A7E468E3DB438BD5FE7911E0EF570E_RuntimeMethod_var);
-		V_0 = L_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:17>
-		NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* L_1 = V_0;
-		Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D* L_2 = (Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D*)il2cpp_codegen_object_new(Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D_il2cpp_TypeInfo_var);
-		Action_2__ctor_m9BE1B21BCD02FD199629539B88B5B20063B70F2C(L_2, __this, (intptr_t)((void*)Boost_NetworkTrigger_OnEnter_mC3181B25841BEC8FBE3A0574C50C5E97289C7972_RuntimeMethod_var), NULL);
-		NullCheck(L_1);
-		NetworkCollider_add_OnEnter_mC016A7672FF35896209CD6F8DE7802D212873799(L_1, L_2, NULL);
+		Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D* L_1 = (Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D*)il2cpp_codegen_object_new(Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D_il2cpp_TypeInfo_var);
+		Action_2__ctor_m9BE1B21BCD02FD199629539B88B5B20063B70F2C(L_1, __this, (intptr_t)((void*)Boost_NetworkTrigger_OnEnter_mC3181B25841BEC8FBE3A0574C50C5E97289C7972_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		NetworkCollider_add_OnEnter_mC016A7672FF35896209CD6F8DE7802D212873799(L_0, L_1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Boost.cs:18>
 		return;
 	}
@@ -6881,7 +6765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Boost_Awake_UserLogic_FishNet_Demo_Predi
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80256
+// Method Definition Index: 80689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Awake_m3936811737C01B35A8D874AA513A35FE72357A63 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6891,7 +6775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Awake_m3936811737C01
 		return;
 	}
 }
-// Method Definition Index: 80257
+// Method Definition Index: 80690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_OnStartNetwork_mEC50FB1F18B4E315E05A4B03CE8028B7675E148B (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6901,7 +6785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_OnStartNetwork_mEC50
 		return;
 	}
 }
-// Method Definition Index: 80258
+// Method Definition Index: 80691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_TimeManager_OnTick_m606304975F52348A0E0EB3A1AF8AB206C6665F4F (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6913,7 +6797,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_TimeManager_OnTick_m
 		return;
 	}
 }
-// Method Definition Index: 80259
+// Method Definition Index: 80692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_TimeManager_OnPostTick_mBD23B521275A0E0ABC19255961A4C03523101EF6 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6923,7 +6807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_TimeManager_OnPostTi
 		return;
 	}
 }
-// Method Definition Index: 80260
+// Method Definition Index: 80693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 RigidbodyPrediction_BuildMoveData_mE9188ADB30812DFD0DF16D4BEC4F0A6F1EF8317C (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6938,66 +6822,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B
 	bool V_2 = false;
 	ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 V_3;
 	memset((&V_3), 0, sizeof(V_3));
-	bool V_4 = false;
-	ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 V_6;
-	memset((&V_6), 0, sizeof(V_6));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:166>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_4 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_4;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001e;
+			goto IL_0012;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:167>
-		il2cpp_codegen_initobj((&V_5), sizeof(ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8));
-		ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 L_2 = V_5;
-		V_6 = L_2;
-		goto IL_0053;
+		il2cpp_codegen_initobj((&V_3), sizeof(ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8));
+		ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 L_1 = V_3;
+		return L_1;
 	}
 
-IL_001e:
+IL_0012:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:169>
-		float L_3;
-		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
-		V_0 = L_3;
+		float L_2;
+		L_2 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:170>
-		float L_4;
-		L_4 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
-		V_1 = L_4;
+		float L_3;
+		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
+		V_1 = L_3;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:172>
-		bool L_5;
-		L_5 = Input_GetKey_mE5681EF775F3CEBA7EAD7C63984F7B34C8E8D434(((int32_t)304), NULL);
-		V_2 = L_5;
+		bool L_4;
+		L_4 = Input_GetKey_mE5681EF775F3CEBA7EAD7C63984F7B34C8E8D434(((int32_t)304), NULL);
+		V_2 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:174>
-		float L_6 = V_0;
-		float L_7 = V_1;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
-		memset((&L_8), 0, sizeof(L_8));
-		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_8), L_6, L_7, NULL);
-		bool L_9 = V_2;
-		ReplicateData__ctor_m8DAEC15830D79A42EA46CFA4BCDE55D2063CBDE4((&V_3), L_8, L_9, NULL);
+		float L_5 = V_0;
+		float L_6 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
+		memset((&L_7), 0, sizeof(L_7));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_7), L_5, L_6, NULL);
+		bool L_8 = V_2;
+		ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		ReplicateData__ctor_m8DAEC15830D79A42EA46CFA4BCDE55D2063CBDE4((&L_9), L_7, L_8, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:176>
-		ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 L_10 = V_3;
-		V_6 = L_10;
-		goto IL_0053;
-	}
-
-IL_0053:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:177>
-		ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 L_11 = V_6;
-		return L_11;
+		return L_9;
 	}
 }
-// Method Definition Index: 80261
+// Method Definition Index: 80694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_CreateReconcile_m7153673F244DE5FF5A7901C8B0D849CDBBC7073B (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5 V_0;
@@ -7017,7 +6886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_CreateReconcile_m715
 		return;
 	}
 }
-// Method Definition Index: 80262
+// Method Definition Index: 80695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReplicate_m5AC2A46EDA36B40F0BF2D2C0A734238788C8FB53 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7040,7 +6909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReplicate_m5A
 		return;
 	}
 }
-// Method Definition Index: 80263
+// Method Definition Index: 80696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReconcile_m87B566D7CF93FB419747FCB0F8CB828F5A7C233A (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7058,7 +6927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReconcile_m87
 		return;
 	}
 }
-// Method Definition Index: 80264
+// Method Definition Index: 80697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_BoostHit_m575CA20B5B5E8C1C72A2DC30235576F83F3B6322 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7069,7 +6938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_BoostHit_m575CA20B5B
 		return;
 	}
 }
-// Method Definition Index: 80265
+// Method Definition Index: 80698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_SpringHit_m38DCB5DC96CC0AB993B446FFB5BD954C2EC18C2E (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7085,7 +6954,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_SpringHit_m38DCB5DC9
 		return;
 	}
 }
-// Method Definition Index: 80266
+// Method Definition Index: 80699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction__ctor_m44CA4E07EA04AE6BB1CD97BD2D0DFD8204CDBD4C (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7118,13 +6987,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction__ctor_m44CA4E07EA04A
 		PredictionRigidbody__ctor_m808D796B07467DF97A2D93F2F19C490D3C2B57B2(L_2, NULL);
 		__this->____rearWheel = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____rearWheel), (void*)L_2);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:121>
-		__this->____boostStartTick = 0;
 		TickNetworkBehaviour__ctor_m3FC7C5D879A0695B83D78CCB6A1AD48B48A623E0(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 80267
+// Method Definition Index: 80700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_NetworkInitialize___Early_m4935F2CA73C947A47D404E33373EA6202FA543EF (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7190,7 +7057,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80268
+// Method Definition Index: 80701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_NetworkInitialize___Late_m54E2F5F28FFBF6CC5AFC2D25D863F905B403056B (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7211,7 +7078,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80269
+// Method Definition Index: 80702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_NetworkInitializeIfDisabled_m0F6CD06C5BD6AE0E31E419B93BAE10997732322D (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7220,7 +7087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_NetworkInitializeIfD
 		return;
 	}
 }
-// Method Definition Index: 80270
+// Method Definition Index: 80703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReplicate___UL_m2862F57F1BC7D69710A919A50A311223E976D837 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
@@ -7228,16 +7095,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReplicate___U
 	memset((&V_1), 0, sizeof(V_1));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_3 = NULL;
-	bool V_4 = false;
-	uint32_t V_5 = 0;
-	uint32_t V_6 = 0;
-	bool V_7 = false;
-	bool V_8 = false;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_9;
-	memset((&V_9), 0, sizeof(V_9));
-	bool V_10 = false;
-	int32_t G_B3_0 = 0;
+	uint32_t V_3 = 0;
+	uint32_t V_4 = 0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_5;
+	memset((&V_5), 0, sizeof(V_5));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:215>
 		uint32_t L_0;
@@ -7262,60 +7123,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReplicate___U
 		uint32_t L_10 = __this->____boostStartTick;
 		if (!L_10)
 		{
-			goto IL_006c;
+			goto IL_00ac;
 		}
 	}
 	{
 		uint32_t L_11 = V_0;
 		uint32_t L_12 = __this->____boostStartTick;
-		G_B3_0 = ((((int32_t)((!(((uint32_t)L_11) >= ((uint32_t)L_12)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_006d;
-	}
-
-IL_006c:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_006d:
-	{
-		V_4 = (bool)G_B3_0;
-		bool L_13 = V_4;
-		if (!L_13)
+		if ((!(((uint32_t)L_11) >= ((uint32_t)L_12))))
 		{
-			goto IL_00c6;
+			goto IL_00ac;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:236>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_2;
-		float L_15 = __this->____boostForce;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_2;
+		float L_14 = __this->____boostForce;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		memset((&L_15), 0, sizeof(L_15));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_15), (0.0f), (0.0f), L_14, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		memset((&L_16), 0, sizeof(L_16));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_16), (0.0f), (0.0f), L_15, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
-		L_17 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_14, L_16, NULL);
-		V_2 = L_17;
+		L_16 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_13, L_15, NULL);
+		V_2 = L_16;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:238>
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_18;
-		L_18 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		float L_19 = __this->____boostDuration;
-		NullCheck(L_18);
-		uint32_t L_20;
-		L_20 = TimeManager_TimeToTicks_m1E4D9A685FAEA0FE7768E73EB0EC1A07420B4853(L_18, ((double)L_19), 0, NULL);
-		V_5 = L_20;
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_17;
+		L_17 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		float L_18 = __this->____boostDuration;
+		NullCheck(L_17);
+		uint32_t L_19;
+		L_19 = TimeManager_TimeToTicks_m1E4D9A685FAEA0FE7768E73EB0EC1A07420B4853(L_17, ((double)L_18), 0, NULL);
+		V_3 = L_19;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:240>
-		uint32_t L_21 = __this->____boostStartTick;
-		uint32_t L_22 = V_5;
-		V_6 = ((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)L_22));
+		uint32_t L_20 = __this->____boostStartTick;
+		uint32_t L_21 = V_3;
+		V_4 = ((int32_t)il2cpp_codegen_add((int32_t)L_20, (int32_t)L_21));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:243>
-		uint32_t L_23 = V_0;
-		uint32_t L_24 = V_6;
-		V_7 = (bool)((((int32_t)((!(((uint32_t)L_23) >= ((uint32_t)L_24)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_25 = V_7;
-		if (!L_25)
+		uint32_t L_22 = V_0;
+		uint32_t L_23 = V_4;
+		if ((!(((uint32_t)L_22) >= ((uint32_t)L_23))))
 		{
-			goto IL_00c5;
+			goto IL_00ac;
 		}
 	}
 	{
@@ -7323,112 +7169,102 @@ IL_006d:
 		__this->____boostStartTick = 0;
 	}
 
-IL_00c5:
-	{
-	}
-
-IL_00c6:
+IL_00ac:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:247>
-		bool L_26 = __this->____springNextReplicate;
-		V_8 = L_26;
-		bool L_27 = V_8;
-		if (!L_27)
+		bool L_24 = __this->____springNextReplicate;
+		if (!L_24)
 		{
-			goto IL_00fb;
+			goto IL_00da;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:249>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
-		L_28 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
-		L_29 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_28, (10.0f), NULL);
-		V_9 = L_29;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
+		L_25 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_25, (10.0f), NULL);
+		V_5 = L_26;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:250>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_30 = __this->____root;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_9;
-		NullCheck(L_30);
-		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_30, L_31, 1, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_27 = __this->____root;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = V_5;
+		NullCheck(L_27);
+		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_27, L_28, 1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:252>
 		__this->____springNextReplicate = (bool)0;
 	}
 
-IL_00fb:
+IL_00da:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:256>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_32 = __this->____root;
-		NullCheck(L_32);
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_33;
-		L_33 = PredictionRigidbody_get_Rigidbody_m87FFA61164D95E170AE39B5A68012669856910E9_inline(L_32, NULL);
-		NullCheck(L_33);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
-		L_34 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_33, NULL);
-		V_3 = L_34;
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_29 = __this->____root;
+		NullCheck(L_29);
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_30;
+		L_30 = PredictionRigidbody_get_Rigidbody_m87FFA61164D95E170AE39B5A68012669856910E9_inline(L_29, NULL);
+		NullCheck(L_30);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
+		L_31 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_30, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:257>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35 = V_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32 = L_31;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33 = V_1;
+		NullCheck(L_32);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_32, L_33, NULL);
+		V_1 = L_34;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:258>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35 = L_32;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = V_2;
 		NullCheck(L_35);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
 		L_37 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_35, L_36, NULL);
-		V_1 = L_37;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:258>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_38 = V_3;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39 = V_2;
-		NullCheck(L_38);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40;
-		L_40 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_38, L_39, NULL);
-		V_2 = L_40;
+		V_2 = L_37;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:261>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41 = V_3;
-		NullCheck(L_41);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
-		L_42 = Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2(L_41, NULL);
-		float L_43 = L_42.___y;
-		V_10 = (bool)((((int32_t)((!(((float)L_43) <= ((float)(-0.100000001f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_44 = V_10;
-		if (!L_44)
+		NullCheck(L_35);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38;
+		L_38 = Transform_get_up_mE47A9D9D96422224DD0539AA5524DA5440145BB2(L_35, NULL);
+		float L_39 = L_38.___y;
+		if ((!(((float)L_39) <= ((float)(-0.100000001f)))))
 		{
-			goto IL_0143;
+			goto IL_0117;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:262>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = V_1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46;
-		L_46 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_45, (-1.0f), NULL);
-		V_1 = L_46;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41;
+		L_41 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_40, (-1.0f), NULL);
+		V_1 = L_41;
 	}
 
-IL_0143:
+IL_0117:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:269>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_47 = __this->____frontWheel;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48 = V_1;
-		NullCheck(L_47);
-		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_47, L_48, 0, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_42 = __this->____frontWheel;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43 = V_1;
+		NullCheck(L_42);
+		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_42, L_43, 0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:270>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_49 = __this->____rearWheel;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50 = V_2;
-		NullCheck(L_49);
-		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_49, L_50, 0, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_44 = __this->____rearWheel;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = V_2;
+		NullCheck(L_44);
+		PredictionRigidbody_AddForce_m804E05A4ED73CDD3CB38198DC9CCA7A261CDFC70(L_44, L_45, 0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:272>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_51 = __this->____root;
-		NullCheck(L_51);
-		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_51, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_46 = __this->____root;
+		NullCheck(L_46);
+		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_46, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:273>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_52 = __this->____frontWheel;
-		NullCheck(L_52);
-		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_52, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_47 = __this->____frontWheel;
+		NullCheck(L_47);
+		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_47, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:274>
-		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_53 = __this->____rearWheel;
-		NullCheck(L_53);
-		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_53, NULL);
+		PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* L_48 = __this->____rearWheel;
+		NullCheck(L_48);
+		PredictionRigidbody_Simulate_m3E3726D44F512CAA8947B031F9F915FD8AF44E0A(L_48, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/RigidbodyPrediction.cs:275>
 		return;
 	}
 }
-// Method Definition Index: 80271
+// Method Definition Index: 80704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReconcile___UL_m69DB20F2C4E6E7149A6DA9864F9F8EF66616705E (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	{
@@ -7462,7 +7298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_PerformReconcile___U
 		return;
 	}
 }
-// Method Definition Index: 80272
+// Method Definition Index: 80705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_EmptyReplicatesQueueIntoHistory_Start_mA9121D1E728F1999B04C7C8653202D68BC13F136 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7478,7 +7314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_EmptyReplicatesQueue
 		return;
 	}
 }
-// Method Definition Index: 80273
+// Method Definition Index: 80706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reconcile_Client_Start_m839B7EAB96EFD5F78A8831CB58DCB02F1C428065 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7496,7 +7332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reconcile_Client_Sta
 		return;
 	}
 }
-// Method Definition Index: 80274
+// Method Definition Index: 80707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Replicate_Replay_Start_m897131BA4AB7C0B72A3D39C79A7AC4078DD6A812 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, uint32_t ___0_replayTick0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7513,7 +7349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Replicate_Replay_Sta
 		return;
 	}
 }
-// Method Definition Index: 80275
+// Method Definition Index: 80708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_ClearReplicateCache_m222F0F78CD19807F1832A74C570338A75C472846 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7533,7 +7369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_ClearReplicateCache_
 		return;
 	}
 }
-// Method Definition Index: 80276
+// Method Definition Index: 80709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reader_Replicate___PerformReplicate_mBFFB41E68FC9A072C394806CC7BB54059F181BD0 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___1_NetworkConnection1, uint8_t ___2_Channel2, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7553,7 +7389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reader_Replicate___P
 		return;
 	}
 }
-// Method Definition Index: 80277
+// Method Definition Index: 80710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reader_Reconcile___PerformReconcile_mFE86937E2F34C3D0096A3BF10C5E1CDC72437C19 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, uint8_t ___1_Channel1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7569,7 +7405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Reader_Reconcile___P
 		return;
 	}
 }
-// Method Definition Index: 80278
+// Method Definition Index: 80711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RigidbodyPrediction_Awake_UserLogic_FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_FishNet_Demos_dll_m62554E5A8D89110DD4D64A1EF936F78F1A3EABE9 (RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7651,7 +7487,7 @@ IL2CPP_EXTERN_C void ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8_mar
 IL2CPP_EXTERN_C void ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8_marshal_com_cleanup(ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 80279
+// Method Definition Index: 80712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData__ctor_m8DAEC15830D79A42EA46CFA4BCDE55D2063CBDE4 (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_input, bool ___1_fire, const RuntimeMethod* method) 
 {
 	{
@@ -7674,7 +7510,7 @@ IL2CPP_EXTERN_C  void ReplicateData__ctor_m8DAEC15830D79A42EA46CFA4BCDE55D2063CB
 	_thisAdjusted = reinterpret_cast<ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8*>(__this + _offset);
 	ReplicateData__ctor_m8DAEC15830D79A42EA46CFA4BCDE55D2063CBDE4(_thisAdjusted, ___0_input, ___1_fire, method);
 }
-// Method Definition Index: 80280
+// Method Definition Index: 80713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_Dispose_m832993478AB727A5BAAB6EE76B672A44A5285C39 (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7689,7 +7525,7 @@ IL2CPP_EXTERN_C  void ReplicateData_Dispose_m832993478AB727A5BAAB6EE76B672A44A52
 	_thisAdjusted = reinterpret_cast<ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8*>(__this + _offset);
 	ReplicateData_Dispose_m832993478AB727A5BAAB6EE76B672A44A5285C39(_thisAdjusted, method);
 }
-// Method Definition Index: 80281
+// Method Definition Index: 80714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m8B28BDE3D326CCB7B7794E72EA6646427138C60A (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7707,7 +7543,7 @@ IL2CPP_EXTERN_C  uint32_t ReplicateData_GetTick_m8B28BDE3D326CCB7B7794E72EA66464
 	_returnValue = ReplicateData_GetTick_m8B28BDE3D326CCB7B7794E72EA6646427138C60A_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80282
+// Method Definition Index: 80715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m70A341258B9EF09F32F059861444B61C759C117D (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7786,7 +7622,7 @@ IL2CPP_EXTERN_C void ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5_mar
 IL2CPP_EXTERN_C void ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5_marshal_com_cleanup(ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 80283
+// Method Definition Index: 80716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData__ctor_mAE86856846EA6EFC19F7C8F084128785357D0C3C (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* ___0_root, PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* ___1_frontWheel, PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* ___2_rearWheel, uint32_t ___3_boostStartTick, bool ___4_springNextReplicate, const RuntimeMethod* method) 
 {
 	{
@@ -7821,7 +7657,7 @@ IL2CPP_EXTERN_C  void ReconcileData__ctor_mAE86856846EA6EFC19F7C8F084128785357D0
 	_thisAdjusted = reinterpret_cast<ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5*>(__this + _offset);
 	ReconcileData__ctor_mAE86856846EA6EFC19F7C8F084128785357D0C3C(_thisAdjusted, ___0_root, ___1_frontWheel, ___2_rearWheel, ___3_boostStartTick, ___4_springNextReplicate, method);
 }
-// Method Definition Index: 80284
+// Method Definition Index: 80717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_Dispose_m3B6BA6ECE759E7E101C79C21C5541CD4609A5CB7 (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7836,7 +7672,7 @@ IL2CPP_EXTERN_C  void ReconcileData_Dispose_m3B6BA6ECE759E7E101C79C21C5541CD4609
 	_thisAdjusted = reinterpret_cast<ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5*>(__this + _offset);
 	ReconcileData_Dispose_m3B6BA6ECE759E7E101C79C21C5541CD4609A5CB7(_thisAdjusted, method);
 }
-// Method Definition Index: 80285
+// Method Definition Index: 80718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mC633E2D811C2451EFA92434CD1AF6E67E31C15AE (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7854,7 +7690,7 @@ IL2CPP_EXTERN_C  uint32_t ReconcileData_GetTick_mC633E2D811C2451EFA92434CD1AF6E6
 	_returnValue = ReconcileData_GetTick_mC633E2D811C2451EFA92434CD1AF6E67E31C15AE_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80286
+// Method Definition Index: 80719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m86E222612CE64D60D8576F6ECD053F7B89FE67A1 (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7879,7 +7715,7 @@ IL2CPP_EXTERN_C  void ReconcileData_SetTick_m86E222612CE64D60D8576F6ECD053F7B89F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80287
+// Method Definition Index: 80720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Awake_mAFA281C4EAC7A8E853E7722EC476416054DF5B4F (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7889,7 +7725,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Awake_mAFA281C4EAC7A8E853E7722EC4
 		return;
 	}
 }
-// Method Definition Index: 80288
+// Method Definition Index: 80721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Update_m78F957CF0CB79572234428E10C5EFA67B0EE57D4 (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7910,7 +7746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Update_m78F957CF0CB79572234428E10
 		return;
 	}
 }
-// Method Definition Index: 80289
+// Method Definition Index: 80722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkTrigger_OnEnter_m175C79F55F38F2C8287EEADB6C5A72D142166DC7 (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_c, uint32_t ___1_tick, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7920,7 +7756,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkTrigger_OnEnter_m175C79F55
 		s_Il2CppMethodInitialized = true;
 	}
 	RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* V_0 = NULL;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:27>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_c;
@@ -7933,33 +7768,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkTrigger_OnEnter_m175C79F55
 		NullCheck(L_2);
 		bool L_3;
 		L_3 = Component_TryGetComponent_TisRigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4_m1A0F042AC6B08B8E0314C7FB86518F1835418F7A(L_2, (&V_0), Component_TryGetComponent_TisRigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4_m1A0F042AC6B08B8E0314C7FB86518F1835418F7A_RuntimeMethod_var);
-		V_1 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_1;
-		if (!L_4)
+		if (L_3)
 		{
-			goto IL_001c;
+			goto IL_0015;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:28>
-		goto IL_0023;
+		return;
 	}
 
-IL_001c:
+IL_0015:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:34>
-		RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* L_5 = V_0;
-		NullCheck(L_5);
-		RigidbodyPrediction_SpringHit_m38DCB5DC96CC0AB993B446FFB5BD954C2EC18C2E(L_5, NULL);
-	}
-
-IL_0023:
-	{
+		RigidbodyPrediction_t261343AED211EFF8F1EA275A5121910C658B8BC4* L_4 = V_0;
+		NullCheck(L_4);
+		RigidbodyPrediction_SpringHit_m38DCB5DC96CC0AB993B446FFB5BD954C2EC18C2E(L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 80290
+// Method Definition Index: 80723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring__ctor_m7AE849A22BB5F7971BE2403F8852B52C589181FC (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7976,7 +7805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring__ctor_m7AE849A22BB5F7971BE2403F88
 		return;
 	}
 }
-// Method Definition Index: 80291
+// Method Definition Index: 80724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkInitialize___Early_m8A4A235D9E9280857AF30B8AB43727441957CF56 (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7997,7 +7826,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80292
+// Method Definition Index: 80725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkInitialize___Late_m3E83B24B63CE85CBC09309054787E06A76C8AA45 (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8018,7 +7847,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80293
+// Method Definition Index: 80726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkInitializeIfDisabled_m421203A586604267121CCC0D0A080226EB6C8479 (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8027,7 +7856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_NetworkInitializeIfDisabled_m4212
 		return;
 	}
 }
-// Method Definition Index: 80294
+// Method Definition Index: 80727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Awake_UserLogic_FishNet_Demo_Prediction_Rigidbodies_Spring_FishNet_Demos_dll_mE7FF05DA41419942DA16224D3D27DC5A4516CA5C (Spring_t21E8AE8BAF3131D9632780F38E00D8A87378296B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8038,18 +7867,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Awake_UserLogic_FishNet_Demo_Pred
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Spring_NetworkTrigger_OnEnter_m175C79F55F38F2C8287EEADB6C5A72D142166DC7_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:14>
 		NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* L_0;
 		L_0 = Component_GetComponent_TisNetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9_m4CD5836CD0A7E468E3DB438BD5FE7911E0EF570E(__this, Component_GetComponent_TisNetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9_m4CD5836CD0A7E468E3DB438BD5FE7911E0EF570E_RuntimeMethod_var);
-		V_0 = L_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:17>
-		NetworkTrigger_tC3D480DC86DC341572B69F5C89319E743A686AC9* L_1 = V_0;
-		Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D* L_2 = (Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D*)il2cpp_codegen_object_new(Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D_il2cpp_TypeInfo_var);
-		Action_2__ctor_m9BE1B21BCD02FD199629539B88B5B20063B70F2C(L_2, __this, (intptr_t)((void*)Spring_NetworkTrigger_OnEnter_m175C79F55F38F2C8287EEADB6C5A72D142166DC7_RuntimeMethod_var), NULL);
-		NullCheck(L_1);
-		NetworkCollider_add_OnEnter_mC016A7672FF35896209CD6F8DE7802D212873799(L_1, L_2, NULL);
+		Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D* L_1 = (Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D*)il2cpp_codegen_object_new(Action_2_tF1DA8437F914A5B653C86F3D47AA8F02A163695D_il2cpp_TypeInfo_var);
+		Action_2__ctor_m9BE1B21BCD02FD199629539B88B5B20063B70F2C(L_1, __this, (intptr_t)((void*)Spring_NetworkTrigger_OnEnter_m175C79F55F38F2C8287EEADB6C5A72D142166DC7_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		NetworkCollider_add_OnEnter_mC016A7672FF35896209CD6F8DE7802D212873799(L_0, L_1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/Rigidbody/Scripts/Spring.cs:18>
 		return;
 	}
@@ -8062,7 +7888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Spring_Awake_UserLogic_FishNet_Demo_Pred
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80295
+// Method Definition Index: 80728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_add_OnOwner_m4E1439464512F8F6F548276C0A1CFD55BB670234 (Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8105,7 +7931,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 80296
+// Method Definition Index: 80729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_remove_OnOwner_m6160E93808E7E861904321CDB6E7E779EAFC60BD (Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8148,7 +7974,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 80297
+// Method Definition Index: 80730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CharacterControllerPrediction_get_Stamina_mB7D66192E38421C619C8324DA9B71384709A4D51 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8157,7 +7983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CharacterControllerPrediction_get_Stami
 		return L_0;
 	}
 }
-// Method Definition Index: 80298
+// Method Definition Index: 80731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_set_Stamina_m28C61A9CE8639A91E11D8A98CD76F79DA58454AB (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8167,7 +7993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_set_Stamin
 		return;
 	}
 }
-// Method Definition Index: 80299
+// Method Definition Index: 80732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Awake_m16D1FC8AF1BEEDC04E7DCF9285833A6F0CAD3F66 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8177,7 +8003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Awake_m16D
 		return;
 	}
 }
-// Method Definition Index: 80300
+// Method Definition Index: 80733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_OnOwnershipClient_m77AD4C928085FB8E0082DBC81CC3A072D3F60D0E (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_prevOwner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8186,48 +8012,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_OnOwnershi
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* G_B3_0 = NULL;
 	Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* G_B2_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:168>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_001d;
+			goto IL_0018;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:169>
-		Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* L_2 = ((CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E_StaticFields*)il2cpp_codegen_static_fields_for(CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E_il2cpp_TypeInfo_var))->___OnOwner;
-		Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* L_3 = L_2;
-		if (L_3)
+		Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* L_1 = ((CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E_StaticFields*)il2cpp_codegen_static_fields_for(CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E_il2cpp_TypeInfo_var))->___OnOwner;
+		Action_1_t0C1829268DB40E012B4FF5A198907DEEEA6AFC2B* L_2 = L_1;
+		if (L_2)
 		{
-			G_B3_0 = L_3;
-			goto IL_0016;
+			G_B3_0 = L_2;
+			goto IL_0012;
 		}
-		G_B2_0 = L_3;
+		G_B2_0 = L_2;
 	}
 	{
-		goto IL_001d;
+		return;
 	}
 
-IL_0016:
+IL_0012:
 	{
 		NullCheck(G_B3_0);
 		Action_1_Invoke_mD540E0F0AA055724A24BE29D991B10DD1AAA4B4E_inline(G_B3_0, __this, NULL);
 	}
 
-IL_001d:
+IL_0018:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:170>
 		return;
 	}
 }
-// Method Definition Index: 80301
+// Method Definition Index: 80734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Update_m035AFC53E459D04792946F1C27C3B083104D614F (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8237,52 +8060,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Update_m03
 		return;
 	}
 }
-// Method Definition Index: 80302
+// Method Definition Index: 80735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_SetOneTimeInputs_mEA9EF7EDE2DB615CDA1152CFDA57F0CA3502F1D8 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:182>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:183>
-		goto IL_0027;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:186>
-		bool L_2;
-		L_2 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)32), NULL);
-		V_1 = L_2;
-		bool L_3 = V_1;
-		if (!L_3)
+		bool L_1;
+		L_1 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)32), NULL);
+		if (!L_1)
 		{
-			goto IL_0027;
+			goto IL_001e;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:187>
-		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_4 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&__this->____oneTimeInputs);
-		L_4->___Jump = (bool)1;
+		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_2 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&__this->____oneTimeInputs);
+		L_2->___Jump = (bool)1;
 	}
 
-IL_0027:
+IL_001e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:188>
 		return;
 	}
 }
-// Method Definition Index: 80303
+// Method Definition Index: 80736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_TimeManager_OnTick_m0676B38ECF7079DB5259148EF5AC7C2D7B521BA9 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8294,7 +8111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_TimeManage
 		return;
 	}
 }
-// Method Definition Index: 80304
+// Method Definition Index: 80737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_TimeManager_OnPostTick_mD02F5656E199161E7BD1703F7CD32CB517C644D5 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8304,7 +8121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_TimeManage
 		return;
 	}
 }
-// Method Definition Index: 80305
+// Method Definition Index: 80738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 CharacterControllerPrediction_BuildMoveData_mCED3C9D9CA64C4988F618DDBE16BC4A25ED06A0A (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8319,70 +8136,55 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t4FA3F289800D5A2B673D96E8DF97D9
 	bool V_2 = false;
 	ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 V_3;
 	memset((&V_3), 0, sizeof(V_3));
-	bool V_4 = false;
-	ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 V_6;
-	memset((&V_6), 0, sizeof(V_6));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:214>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_4 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_4;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001e;
+			goto IL_0012;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:215>
-		il2cpp_codegen_initobj((&V_5), sizeof(ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461));
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_2 = V_5;
-		V_6 = L_2;
-		goto IL_0065;
+		il2cpp_codegen_initobj((&V_3), sizeof(ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461));
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_1 = V_3;
+		return L_1;
 	}
 
-IL_001e:
+IL_0012:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:217>
-		float L_3;
-		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
-		V_0 = L_3;
+		float L_2;
+		L_2 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:218>
-		float L_4;
-		L_4 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
-		V_1 = L_4;
+		float L_3;
+		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
+		V_1 = L_3;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:220>
-		bool L_5;
-		L_5 = Input_GetKey_mE5681EF775F3CEBA7EAD7C63984F7B34C8E8D434(((int32_t)304), NULL);
-		V_2 = L_5;
+		bool L_4;
+		L_4 = Input_GetKey_mE5681EF775F3CEBA7EAD7C63984F7B34C8E8D434(((int32_t)304), NULL);
+		V_2 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:222>
-		float L_6 = V_0;
-		float L_7 = V_1;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
-		memset((&L_8), 0, sizeof(L_8));
-		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_8), L_6, L_7, NULL);
-		bool L_9 = V_2;
-		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 L_10 = __this->____oneTimeInputs;
-		ReplicateData__ctor_mCB3979C183D6217575612B6B01A7FEBBC7232FA0((&V_3), L_8, L_9, L_10, NULL);
+		float L_5 = V_0;
+		float L_6 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
+		memset((&L_7), 0, sizeof(L_7));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_7), L_5, L_6, NULL);
+		bool L_8 = V_2;
+		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 L_9 = __this->____oneTimeInputs;
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_10;
+		memset((&L_10), 0, sizeof(L_10));
+		ReplicateData__ctor_mCB3979C183D6217575612B6B01A7FEBBC7232FA0((&L_10), L_7, L_8, L_9, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:225>
 		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_11 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&__this->____oneTimeInputs);
 		OneTimeInput_ResetState_mB0AAB944F626462B3893C8B511923AA54B46EDC1(L_11, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:227>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_12 = V_3;
-		V_6 = L_12;
-		goto IL_0065;
-	}
-
-IL_0065:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:228>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_13 = V_6;
-		return L_13;
+		return L_10;
 	}
 }
-// Method Definition Index: 80306
+// Method Definition Index: 80739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CreateReconcile_m52D55A9A95A504FA300D2A578C4B9971CE33E2D1 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 V_0;
@@ -8406,7 +8208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CreateReco
 		return;
 	}
 }
-// Method Definition Index: 80307
+// Method Definition Index: 80740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformReplicate_mFDFB340515A73DD8B7E4A5AAA2BB7BC517FDBC71 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8429,7 +8231,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformRep
 		return;
 	}
 }
-// Method Definition Index: 80308
+// Method Definition Index: 80741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformReconcile_mD84148BAA93628D095857236A21B123546A07B68 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8447,7 +8249,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformRec
 		return;
 	}
 }
-// Method Definition Index: 80309
+// Method Definition Index: 80742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CharacterTrigger_OnEnter_mE7495D4CC818300033F056CE4EC3697747A57761 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_c, uint32_t ___1_tick, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8457,42 +8259,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CharacterT
 		s_Il2CppMethodInitialized = true;
 	}
 	MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* V_0 = NULL;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:437>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_c;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE(L_0, (&V_0), Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE_RuntimeMethod_var);
-		V_1 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_1;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0012;
+			goto IL_000b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:438>
-		goto IL_0020;
+		return;
 	}
 
-IL_0012:
+IL_000b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:440>
-		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_3 = V_0;
-		__this->____currentPlatform = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____currentPlatform), (void*)L_3);
+		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_2 = V_0;
+		__this->____currentPlatform = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____currentPlatform), (void*)L_2);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:441>
 		CharacterControllerPrediction_SetParent_m6A29A978EACD61034699DE1D6952050E47E792AF(__this, NULL);
-	}
-
-IL_0020:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:442>
 		return;
 	}
 }
-// Method Definition Index: 80310
+// Method Definition Index: 80743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CharacterTrigger_OnExit_m4D3C68B4E560895B28B708690820ABB6816F606B (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_c, uint32_t ___1_tick, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8503,102 +8298,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_CharacterT
 		s_Il2CppMethodInitialized = true;
 	}
 	MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* V_0 = NULL;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:449>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_c;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_1 = L_1;
-		bool L_2 = V_1;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_000e;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:450>
-		goto IL_0053;
+		return;
 	}
 
-IL_000e:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:451>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = ___0_c;
-		NullCheck(L_3);
-		bool L_4;
-		L_4 = Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE(L_3, (&V_0), Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE_RuntimeMethod_var);
-		V_2 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
-		bool L_5 = V_2;
-		if (!L_5)
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_c;
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE(L_2, (&V_0), Component_TryGetComponent_TisMovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_m01C975BE5F88D79328066BF5A030CCF4D6DD39BE_RuntimeMethod_var);
+		if (L_3)
 		{
-			goto IL_001f;
+			goto IL_0015;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:452>
-		goto IL_0053;
+		return;
 	}
 
-IL_001f:
+IL_0015:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:455>
-		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_6 = __this->____currentPlatform;
+		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_4 = __this->____currentPlatform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_7;
-		L_7 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_3 = L_7;
-		bool L_8 = V_3;
-		if (!L_8)
+		bool L_5;
+		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_5)
 		{
-			goto IL_0031;
+			goto IL_0024;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:456>
-		goto IL_0053;
+		return;
 	}
 
-IL_0031:
+IL_0024:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:458>
-		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_9 = __this->____currentPlatform;
-		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_10 = V_0;
+		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_6 = __this->____currentPlatform;
+		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_7 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_11;
-		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, L_10, NULL);
-		V_4 = L_11;
-		bool L_12 = V_4;
-		if (!L_12)
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, L_7, NULL);
+		if (!L_8)
 		{
-			goto IL_0045;
+			goto IL_0033;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:459>
-		goto IL_0053;
+		return;
 	}
 
-IL_0045:
+IL_0033:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:462>
 		__this->____currentPlatform = (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____currentPlatform), (void*)(MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1*)NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:463>
 		CharacterControllerPrediction_SetParent_m6A29A978EACD61034699DE1D6952050E47E792AF(__this, NULL);
-	}
-
-IL_0053:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:464>
 		return;
 	}
 }
-// Method Definition Index: 80311
+// Method Definition Index: 80744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_SetParent_m6A29A978EACD61034699DE1D6952050E47E792AF (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8607,49 +8386,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_SetParent_
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:471>
 		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_0 = __this->____currentPlatform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_002a;
+			goto IL_0025;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:472>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_4 = __this->____currentPlatform;
-		NullCheck(L_4);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
-		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_4, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* L_3 = __this->____currentPlatform;
 		NullCheck(L_3);
-		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_3, L_5, NULL);
-		goto IL_0037;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
+		NullCheck(L_2);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_2, L_4, NULL);
+		return;
 	}
 
-IL_002a:
+IL_0025:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:474>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
-		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_6);
-		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_6, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
-	}
-
-IL_0037:
-	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_5);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_5, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:475>
 		return;
 	}
 }
-// Method Definition Index: 80312
+// Method Definition Index: 80745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_ModifyStamina_m0F81420F8E924D8C2A2D0DF0E2AEFBD7F73B896C (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -8668,49 +8440,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_ModifyStam
 		return;
 	}
 }
-// Method Definition Index: 80313
+// Method Definition Index: 80746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CharacterControllerPrediction_TryRemoveStamina_m91EA8635EF823C2B27471F3A180F7F8BCB6E04C7 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:492>
 		float L_0;
 		L_0 = CharacterControllerPrediction_get_Stamina_mB7D66192E38421C619C8324DA9B71384709A4D51_inline(__this, NULL);
 		float L_1 = ___0_value;
-		V_0 = (bool)((((float)L_0) < ((float)L_1))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if ((!(((float)L_0) < ((float)L_1))))
 		{
-			goto IL_0012;
+			goto IL_000b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:493>
-		V_1 = (bool)0;
-		goto IL_0025;
+		return (bool)0;
 	}
 
-IL_0012:
+IL_000b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:495>
-		float L_3;
-		L_3 = CharacterControllerPrediction_get_Stamina_mB7D66192E38421C619C8324DA9B71384709A4D51_inline(__this, NULL);
-		float L_4 = ___0_value;
-		CharacterControllerPrediction_set_Stamina_m28C61A9CE8639A91E11D8A98CD76F79DA58454AB_inline(__this, ((float)il2cpp_codegen_subtract(L_3, L_4)), NULL);
+		float L_2;
+		L_2 = CharacterControllerPrediction_get_Stamina_mB7D66192E38421C619C8324DA9B71384709A4D51_inline(__this, NULL);
+		float L_3 = ___0_value;
+		CharacterControllerPrediction_set_Stamina_m28C61A9CE8639A91E11D8A98CD76F79DA58454AB_inline(__this, ((float)il2cpp_codegen_subtract(L_2, L_3)), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:496>
-		V_1 = (bool)1;
-		goto IL_0025;
-	}
-
-IL_0025:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:497>
-		bool L_5 = V_1;
-		return L_5;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 80314
+// Method Definition Index: 80747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction__ctor_mCA48DC2154939FB358976F12B6E1D87C522FD5E7 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8718,17 +8477,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction__ctor_mCA4
 		__this->____jumpForce = (30.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:125>
 		__this->____moveRate = (4.0f);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:133>
-		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_0 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&__this->____oneTimeInputs);
-		il2cpp_codegen_initobj(L_0, sizeof(OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:137>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* L_1 = (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*)(&__this->____lastTickedReplicateData);
-		il2cpp_codegen_initobj(L_1, sizeof(ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461));
 		TickNetworkBehaviour__ctor_m3FC7C5D879A0695B83D78CCB6A1AD48B48A623E0(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 80315
+// Method Definition Index: 80748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_NetworkInitialize___Early_mD12EB7589DD34CBA4ACEBB4CACBB936F628ADD58 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8794,7 +8547,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80316
+// Method Definition Index: 80749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_NetworkInitialize___Late_m4A93A8018B63958C509DE3A1FA26142F719D7B0A (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8815,7 +8568,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80317
+// Method Definition Index: 80750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_NetworkInitializeIfDisabled_mC8BF0271AC9DFFFC9D84669AB71AD3B55481016D (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8824,7 +8577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_NetworkIni
 		return;
 	}
 }
-// Method Definition Index: 80318
+// Method Definition Index: 80751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformReplicate___UL_mBCD2DC40EADCEC04EB62BB940DCC1EA9DC3D8FC3 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8837,18 +8590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformRep
 	bool V_1 = false;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	float V_8 = 0.0f;
-	bool V_9 = false;
-	bool V_10 = false;
-	bool V_11 = false;
-	int32_t G_B3_0 = 0;
-	int32_t G_B19_0 = 0;
-	int32_t G_B25_0 = 0;
+	float V_3 = 0.0f;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:267>
 		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_0;
@@ -8864,142 +8606,111 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformRep
 		L_2 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
 		if (L_2)
 		{
-			goto IL_0023;
+			goto IL_0079;
 		}
 	}
 	{
 		bool L_3;
 		L_3 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		G_B3_0 = ((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		goto IL_0024;
-	}
-
-IL_0023:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0024:
-	{
-		V_3 = (bool)G_B3_0;
-		bool L_4 = V_3;
-		if (!L_4)
+		if (L_3)
 		{
-			goto IL_009c;
+			goto IL_0079;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:285>
-		uint8_t L_5 = ___1_state;
-		bool L_6;
-		L_6 = ReplicateStateExtensions_ContainsTicked_m99A6C72AC29C5AFF6347632D328A082D2722CC7C(L_5, NULL);
-		V_4 = L_6;
-		bool L_7 = V_4;
-		if (!L_7)
+		uint8_t L_4 = ___1_state;
+		bool L_5;
+		L_5 = ReplicateStateExtensions_ContainsTicked_m99A6C72AC29C5AFF6347632D328A082D2722CC7C(L_4, NULL);
+		if (!L_5)
 		{
-			goto IL_004c;
+			goto IL_003b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:290>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* L_8 = (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*)(&__this->____lastTickedReplicateData);
-		ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C60A83D(L_8, NULL);
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* L_6 = (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*)(&__this->____lastTickedReplicateData);
+		ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C60A83D(L_6, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:292>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_9 = ___0_rd;
-		__this->____lastTickedReplicateData = L_9;
-		goto IL_009b;
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_7 = ___0_rd;
+		__this->____lastTickedReplicateData = L_7;
+		goto IL_0079;
 	}
 
-IL_004c:
+IL_003b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:305>
-		uint8_t L_10 = ___1_state;
-		bool L_11;
-		L_11 = ReplicateStateExtensions_IsFuture_m50F8EBD26A18AA6C884C648CF7AB5FDB61B01CCD(L_10, NULL);
-		V_5 = L_11;
-		bool L_12 = V_5;
-		if (!L_12)
+		uint8_t L_8 = ___1_state;
+		bool L_9;
+		L_9 = ReplicateStateExtensions_IsFuture_m50F8EBD26A18AA6C884C648CF7AB5FDB61B01CCD(L_8, NULL);
+		if (!L_9)
 		{
-			goto IL_009b;
+			goto IL_0079;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:308>
-		uint32_t L_13;
-		L_13 = ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline((&___0_rd), NULL);
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* L_14 = (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*)(&__this->____lastTickedReplicateData);
-		uint32_t L_15;
-		L_15 = ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline(L_14, NULL);
-		V_6 = (bool)((!(((uint32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_13, (int32_t)L_15))) <= ((uint32_t)1)))? 1 : 0);
-		bool L_16 = V_6;
-		if (!L_16)
+		uint32_t L_10;
+		L_10 = ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline((&___0_rd), NULL);
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* L_11 = (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*)(&__this->____lastTickedReplicateData);
+		uint32_t L_12;
+		L_12 = ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline(L_11, NULL);
+		if ((!(((uint32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_10, (int32_t)L_12))) > ((uint32_t)1))))
 		{
-			goto IL_007b;
+			goto IL_005d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:310>
 		V_1 = (bool)1;
-		goto IL_009a;
+		goto IL_0079;
 	}
 
-IL_007b:
+IL_005d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:319>
 		ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C60A83D((&___0_rd), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:321>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_17 = __this->____lastTickedReplicateData;
-		___0_rd = L_17;
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_13 = __this->____lastTickedReplicateData;
+		___0_rd = L_13;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:328>
-		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_18 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&(&___0_rd)->___OneTimeInputs);
-		L_18->___Jump = (bool)0;
+		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* L_14 = (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39*)(&(&___0_rd)->___OneTimeInputs);
+		L_14->___Jump = (bool)0;
 	}
 
-IL_009a:
-	{
-	}
-
-IL_009b:
-	{
-	}
-
-IL_009c:
+IL_0079:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:339>
-		bool L_19 = V_1;
-		V_7 = L_19;
-		bool L_20 = V_7;
-		if (!L_20)
+		bool L_15 = V_1;
+		if (!L_15)
 		{
-			goto IL_00c0;
+			goto IL_0097;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:350>
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), (0.0f), (-1.0f), (0.0f), NULL);
-		goto IL_01b7;
+		goto IL_0174;
 	}
 
-IL_00c0:
+IL_0097:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:358>
-		float L_21 = V_0;
-		CharacterControllerPrediction_ModifyStamina_m0F81420F8E924D8C2A2D0DF0E2AEFBD7F73B896C(__this, ((float)il2cpp_codegen_multiply((25.0f), L_21)), NULL);
+		float L_16 = V_0;
+		CharacterControllerPrediction_ModifyStamina_m0F81420F8E924D8C2A2D0DF0E2AEFBD7F73B896C(__this, ((float)il2cpp_codegen_multiply((25.0f), L_16)), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:361>
-		float L_22 = __this->____verticalVelocity;
+		float L_17 = __this->____verticalVelocity;
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
-		L_23 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
-		float L_24 = L_23.___y;
-		float L_25 = V_0;
-		__this->____verticalVelocity = ((float)il2cpp_codegen_add(L_22, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_24, L_25)), (3.0f)))));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = Physics_get_gravity_m94393492AE4ED8B38A22ECCDCD2DDDB71BFA010D(NULL);
+		float L_19 = L_18.___y;
+		float L_20 = V_0;
+		__this->____verticalVelocity = ((float)il2cpp_codegen_add(L_17, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_19, L_20)), (3.0f)))));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:363>
-		float L_26 = __this->____verticalVelocity;
-		V_9 = (bool)((((float)L_26) < ((float)(-40.0f)))? 1 : 0);
-		bool L_27 = V_9;
-		if (!L_27)
+		float L_21 = __this->____verticalVelocity;
+		if ((!(((float)L_21) < ((float)(-40.0f)))))
 		{
-			goto IL_010c;
+			goto IL_00db;
 		}
 	}
 	{
@@ -9007,131 +8718,105 @@ IL_00c0:
 		__this->____verticalVelocity = (-40.0f);
 	}
 
-IL_010c:
+IL_00db:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:367>
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_28 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&(&___0_rd)->___Input);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29;
-		L_29 = Vector2_get_normalized_mF6722883AEFB5027690A778DF8ACC20F0FA65297_inline(L_28, NULL);
-		(&___0_rd)->___Input = L_29;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_22 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&(&___0_rd)->___Input);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23;
+		L_23 = Vector2_get_normalized_mF6722883AEFB5027690A778DF8ACC20F0FA65297_inline(L_22, NULL);
+		(&___0_rd)->___Input = L_23;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:376>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_30 = ___0_rd;
-		bool L_31 = L_30.___Run;
-		if (!L_31)
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_24 = ___0_rd;
+		bool L_25 = L_24.___Run;
+		if (!L_25)
 		{
-			goto IL_0136;
+			goto IL_010d;
 		}
 	}
 	{
-		float L_32 = V_0;
-		bool L_33;
-		L_33 = CharacterControllerPrediction_TryRemoveStamina_m91EA8635EF823C2B27471F3A180F7F8BCB6E04C7(__this, ((float)il2cpp_codegen_multiply((50.0f), L_32)), NULL);
-		G_B19_0 = ((int32_t)(L_33));
-		goto IL_0137;
-	}
-
-IL_0136:
-	{
-		G_B19_0 = 0;
-	}
-
-IL_0137:
-	{
-		V_10 = (bool)G_B19_0;
-		bool L_34 = V_10;
-		if (!L_34)
+		float L_26 = V_0;
+		bool L_27;
+		L_27 = CharacterControllerPrediction_TryRemoveStamina_m91EA8635EF823C2B27471F3A180F7F8BCB6E04C7(__this, ((float)il2cpp_codegen_multiply((50.0f), L_26)), NULL);
+		if (!L_27)
 		{
-			goto IL_0146;
+			goto IL_010d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:377>
-		V_8 = (1.5f);
-		goto IL_014d;
+		V_3 = (1.5f);
+		goto IL_0113;
 	}
 
-IL_0146:
+IL_010d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:379>
-		V_8 = (1.0f);
+		V_3 = (1.0f);
 	}
 
-IL_014d:
+IL_0113:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:385>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_35 = ___0_rd;
-		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 L_36 = L_35.___OneTimeInputs;
-		bool L_37 = L_36.___Jump;
-		if (!L_37)
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_28 = ___0_rd;
+		OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 L_29 = L_28.___OneTimeInputs;
+		bool L_30 = L_29.___Jump;
+		if (!L_30)
 		{
-			goto IL_0167;
+			goto IL_0139;
 		}
 	}
 	{
-		bool L_38;
-		L_38 = CharacterControllerPrediction_TryRemoveStamina_m91EA8635EF823C2B27471F3A180F7F8BCB6E04C7(__this, (30.0f), NULL);
-		G_B25_0 = ((int32_t)(L_38));
-		goto IL_0168;
-	}
-
-IL_0167:
-	{
-		G_B25_0 = 0;
-	}
-
-IL_0168:
-	{
-		V_11 = (bool)G_B25_0;
-		bool L_39 = V_11;
-		if (!L_39)
+		bool L_31;
+		L_31 = CharacterControllerPrediction_TryRemoveStamina_m91EA8635EF823C2B27471F3A180F7F8BCB6E04C7(__this, (30.0f), NULL);
+		if (!L_31)
 		{
-			goto IL_017a;
+			goto IL_0139;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:386>
-		float L_40 = __this->____jumpForce;
-		__this->____verticalVelocity = L_40;
+		float L_32 = __this->____jumpForce;
+		__this->____verticalVelocity = L_32;
 	}
 
-IL_017a:
+IL_0139:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:388>
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_41 = ___0_rd;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_42 = L_41.___Input;
-		float L_43 = L_42.___x;
-		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_44 = ___0_rd;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_45 = L_44.___Input;
-		float L_46 = L_45.___y;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
-		memset((&L_47), 0, sizeof(L_47));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_47), L_43, (0.0f), L_46, NULL);
-		float L_48 = __this->____moveRate;
-		float L_49 = V_8;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_50;
-		L_50 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_47, ((float)il2cpp_codegen_multiply(L_48, L_49)), NULL);
-		V_2 = L_50;
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_33 = ___0_rd;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_34 = L_33.___Input;
+		float L_35 = L_34.___x;
+		ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 L_36 = ___0_rd;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_37 = L_36.___Input;
+		float L_38 = L_37.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39;
+		memset((&L_39), 0, sizeof(L_39));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_39), L_35, (0.0f), L_38, NULL);
+		float L_40 = __this->____moveRate;
+		float L_41 = V_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
+		L_42 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_39, ((float)il2cpp_codegen_multiply(L_40, L_41)), NULL);
+		V_2 = L_42;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:390>
-		float L_51 = __this->____verticalVelocity;
-		(&V_2)->___y = L_51;
+		float L_43 = __this->____verticalVelocity;
+		(&V_2)->___y = L_43;
 	}
 
-IL_01b7:
+IL_0174:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:393>
-		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_52 = __this->____characterController;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_53 = V_2;
-		float L_54 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_55;
-		L_55 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_53, L_54, NULL);
-		NullCheck(L_52);
-		int32_t L_56;
-		L_56 = CharacterController_Move_mE3F7AC1B4A2D6955980811C088B68ED3A31D2DA4(L_52, L_55, NULL);
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_44 = __this->____characterController;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = V_2;
+		float L_46 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
+		L_47 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_45, L_46, NULL);
+		NullCheck(L_44);
+		int32_t L_48;
+		L_48 = CharacterController_Move_mE3F7AC1B4A2D6955980811C088B68ED3A31D2DA4(L_44, L_47, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/CharacterControllerPrediction.cs:394>
 		return;
 	}
 }
-// Method Definition Index: 80319
+// Method Definition Index: 80752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformReconcile___UL_m8F4CB7B448FFCEF56BCCEEDC4C74B840D4621583 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	{
@@ -9169,7 +8854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_PerformRec
 		return;
 	}
 }
-// Method Definition Index: 80320
+// Method Definition Index: 80753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_EmptyReplicatesQueueIntoHistory_Start_m2FBC784483E362A240147E1DAA0B52FC9C1E1284 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9185,7 +8870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_EmptyRepli
 		return;
 	}
 }
-// Method Definition Index: 80321
+// Method Definition Index: 80754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reconcile_Client_Start_m7C743B99A3D7BD60E6D4A1C656A317A507971474 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9203,7 +8888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reconcile_
 		return;
 	}
 }
-// Method Definition Index: 80322
+// Method Definition Index: 80755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Replicate_Replay_Start_mFD31A15131FCBFA5256B112CE5692E4FE3237427 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, uint32_t ___0_replayTick0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9220,7 +8905,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Replicate_
 		return;
 	}
 }
-// Method Definition Index: 80323
+// Method Definition Index: 80756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_ClearReplicateCache_mD00FFEAFA26A7094AE976690C7CB4569F52C7A6F (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9240,7 +8925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_ClearRepli
 		return;
 	}
 }
-// Method Definition Index: 80324
+// Method Definition Index: 80757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reader_Replicate___PerformReplicate_m91E83EAEBC75179772983C3F3500FBCE976CAE11 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___1_NetworkConnection1, uint8_t ___2_Channel2, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9260,7 +8945,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reader_Rep
 		return;
 	}
 }
-// Method Definition Index: 80325
+// Method Definition Index: 80758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reader_Reconcile___PerformReconcile_mE1A3F5E8DDA74DD9B701B0BDA81BC5E328F923EE (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, uint8_t ___1_Channel1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9276,7 +8961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Reader_Rec
 		return;
 	}
 }
-// Method Definition Index: 80326
+// Method Definition Index: 80759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterControllerPrediction_Awake_UserLogic_FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_FishNet_Demos_dll_mF9456ECC5500FC1C1E170B7D83E2037B865425E8 (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9352,7 +9037,7 @@ IL2CPP_EXTERN_C void OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39_mars
 IL2CPP_EXTERN_C void OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39_marshal_com_cleanup(OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 80327
+// Method Definition Index: 80760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OneTimeInput_ResetState_mB0AAB944F626462B3893C8B511923AA54B46EDC1 (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9437,7 +9122,7 @@ IL2CPP_EXTERN_C void ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461_mar
 {
 	OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39_marshal_com_cleanup(marshaled.___OneTimeInputs);
 }
-// Method Definition Index: 80328
+// Method Definition Index: 80761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData__ctor_mCB3979C183D6217575612B6B01A7FEBBC7232FA0 (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_input, bool ___1_run, OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 ___2_oneTimeInputs, const RuntimeMethod* method) 
 {
 	{
@@ -9463,7 +9148,7 @@ IL2CPP_EXTERN_C  void ReplicateData__ctor_mCB3979C183D6217575612B6B01A7FEBBC7232
 	_thisAdjusted = reinterpret_cast<ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*>(__this + _offset);
 	ReplicateData__ctor_mCB3979C183D6217575612B6B01A7FEBBC7232FA0(_thisAdjusted, ___0_input, ___1_run, ___2_oneTimeInputs, method);
 }
-// Method Definition Index: 80329
+// Method Definition Index: 80762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C60A83D (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9481,7 +9166,7 @@ IL2CPP_EXTERN_C  void ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C6
 	_thisAdjusted = reinterpret_cast<ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461*>(__this + _offset);
 	ReplicateData_Dispose_mBD832561AB6B0FEF2A883011D56389DD1C60A83D(_thisAdjusted, method);
 }
-// Method Definition Index: 80330
+// Method Definition Index: 80763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9499,7 +9184,7 @@ IL2CPP_EXTERN_C  uint32_t ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C
 	_returnValue = ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80331
+// Method Definition Index: 80764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m270CC71D314DE3E606711AB750EE9BE399FE2AA7 (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9578,7 +9263,7 @@ IL2CPP_EXTERN_C void ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056_mar
 IL2CPP_EXTERN_C void ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056_marshal_com_cleanup(ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 80332
+// Method Definition Index: 80765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData__ctor_m63B47A5E7652679EC1B41A54F9079C5EB8BA4C95 (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, float ___1_verticalVelocity, float ___2_stamina, MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* ___3_currentPlatform, const RuntimeMethod* method) 
 {
 	{
@@ -9608,7 +9293,7 @@ IL2CPP_EXTERN_C  void ReconcileData__ctor_m63B47A5E7652679EC1B41A54F9079C5EB8BA4
 	_thisAdjusted = reinterpret_cast<ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056*>(__this + _offset);
 	ReconcileData__ctor_m63B47A5E7652679EC1B41A54F9079C5EB8BA4C95(_thisAdjusted, ___0_position, ___1_verticalVelocity, ___2_stamina, ___3_currentPlatform, method);
 }
-// Method Definition Index: 80333
+// Method Definition Index: 80766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_Dispose_m6BC64BE19C4731EDD47403CD5565D95F136EEE0C (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9623,7 +9308,7 @@ IL2CPP_EXTERN_C  void ReconcileData_Dispose_m6BC64BE19C4731EDD47403CD5565D95F136
 	_thisAdjusted = reinterpret_cast<ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056*>(__this + _offset);
 	ReconcileData_Dispose_m6BC64BE19C4731EDD47403CD5565D95F136EEE0C(_thisAdjusted, method);
 }
-// Method Definition Index: 80334
+// Method Definition Index: 80767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mD9C38697E5602742C12B32CE1B83DEB4391774B4 (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9641,7 +9326,7 @@ IL2CPP_EXTERN_C  uint32_t ReconcileData_GetTick_mD9C38697E5602742C12B32CE1B83DEB
 	_returnValue = ReconcileData_GetTick_mD9C38697E5602742C12B32CE1B83DEB4391774B4_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80335
+// Method Definition Index: 80768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m2C60FD4823B6C8EC4CB95728222E90C182831205 (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9666,7 +9351,7 @@ IL2CPP_EXTERN_C  void ReconcileData_SetTick_m2C60FD4823B6C8EC4CB95728222E90C1828
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80336
+// Method Definition Index: 80769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Awake_mECB0819874843058C8DBAF4F0EC83C2DB2365A8C (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9676,7 +9361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Awake_mECB0819874843058C8
 		return;
 	}
 }
-// Method Definition Index: 80337
+// Method Definition Index: 80770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_OnStartNetwork_mB1CA80DBB5CF00103B75686217344D6A5F4DB50F (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9686,7 +9371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_OnStartNetwork_mB1CA80DBB
 		return;
 	}
 }
-// Method Definition Index: 80338
+// Method Definition Index: 80771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_TimeManager_OnTick_m7F3C93FC90DB964C371987A5995240C8B19AB461 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD V_0;
@@ -9702,7 +9387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_TimeManager_OnTick_m7F3C9
 		return;
 	}
 }
-// Method Definition Index: 80339
+// Method Definition Index: 80772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_CreateReconcile_m353C2690BEF1418DF21CB28DB17FB6FB3EDE628A (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 V_0;
@@ -9723,7 +9408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_CreateReconcile_m353C2690
 		return;
 	}
 }
-// Method Definition Index: 80340
+// Method Definition Index: 80773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate_m496CF2F8E876BACE3BAA82815DF3316F994B700E (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9746,7 +9431,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate_m496CF2F
 		return;
 	}
 }
-// Method Definition Index: 80341
+// Method Definition Index: 80774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReconcile_m0D203364C7CA3F34A9F1EA57A2DA38810580F225 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9764,7 +9449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReconcile_m0D20336
 		return;
 	}
 }
-// Method Definition Index: 80342
+// Method Definition Index: 80775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform__ctor_m65B70B8CE2C6AE83B12E70C336D5F5D3274D9A6A (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9786,7 +9471,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform__ctor_m65B70B8CE2C6AE83B1
 		return;
 	}
 }
-// Method Definition Index: 80343
+// Method Definition Index: 80776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_NetworkInitialize___Early_m3E35D209B0D732A18D7CCD6E408377EDBE9F6C60 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9852,7 +9537,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80344
+// Method Definition Index: 80777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_NetworkInitialize___Late_mDC70282369BBB17780B93BF5981C38E17F345634 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9873,7 +9558,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80345
+// Method Definition Index: 80778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_NetworkInitializeIfDisabled_m55FE05323E828DDBC4C5C7BB5C5A16C51744A50A (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9882,7 +9567,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_NetworkInitializeIfDisabl
 		return;
 	}
 }
-// Method Definition Index: 80346
+// Method Definition Index: 80779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate___UL_mFC4121DD742785B97BFE01187C6F4FCBF06946EE (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___0_rd, uint8_t ___1_state, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9897,8 +9582,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate___UL_mFC
 	memset((&V_1), 0, sizeof(V_1));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	bool V_4 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/MovingPlatform.cs:121>
 		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_0;
@@ -9937,28 +9620,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate___UL_mFC
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_1;
 		bool L_15;
 		L_15 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_13, L_14, NULL);
-		V_3 = L_15;
-		bool L_16 = V_3;
-		if (!L_16)
+		if (!L_15)
 		{
-			goto IL_0086;
+			goto IL_0077;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/MovingPlatform.cs:130>
-		uint8_t L_17 = __this->____goalIndex;
-		__this->____goalIndex = (uint8_t)((int32_t)(uint8_t)((int32_t)il2cpp_codegen_add((int32_t)L_17, 1)));
+		uint8_t L_16 = __this->____goalIndex;
+		__this->____goalIndex = (uint8_t)((int32_t)(uint8_t)((int32_t)il2cpp_codegen_add((int32_t)L_16, 1)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/MovingPlatform.cs:131>
-		uint8_t L_18 = __this->____goalIndex;
-		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_19 = __this->____goals;
-		NullCheck(L_19);
-		int32_t L_20;
-		L_20 = List_1_get_Count_m46EEFFA770BE665EA0CB3A5332E941DA4B3C1D37_inline(L_19, List_1_get_Count_m46EEFFA770BE665EA0CB3A5332E941DA4B3C1D37_RuntimeMethod_var);
-		V_4 = (bool)((((int32_t)((((int32_t)L_18) < ((int32_t)L_20))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_21 = V_4;
-		if (!L_21)
+		uint8_t L_17 = __this->____goalIndex;
+		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_18 = __this->____goals;
+		NullCheck(L_18);
+		int32_t L_19;
+		L_19 = List_1_get_Count_m46EEFFA770BE665EA0CB3A5332E941DA4B3C1D37_inline(L_18, List_1_get_Count_m46EEFFA770BE665EA0CB3A5332E941DA4B3C1D37_RuntimeMethod_var);
+		if ((((int32_t)L_17) < ((int32_t)L_19)))
 		{
-			goto IL_0085;
+			goto IL_0077;
 		}
 	}
 	{
@@ -9966,17 +9645,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReplicate___UL_mFC
 		__this->____goalIndex = (uint8_t)0;
 	}
 
-IL_0085:
-	{
-	}
-
-IL_0086:
+IL_0077:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Prediction/CharacterController/Scripts/MovingPlatform.cs:134>
 		return;
 	}
 }
-// Method Definition Index: 80347
+// Method Definition Index: 80780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReconcile___UL_m0FBBA6CD005D2C8E5A7AFCA2E94A7F2E4772A720 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 ___0_rd, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	{
@@ -9995,7 +9670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_PerformReconcile___UL_m0F
 		return;
 	}
 }
-// Method Definition Index: 80348
+// Method Definition Index: 80781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_EmptyReplicatesQueueIntoHistory_Start_m0FC2F3FEDA7938712B283B408574E0BCCDAFDB80 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10011,7 +9686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_EmptyReplicatesQueueIntoH
 		return;
 	}
 }
-// Method Definition Index: 80349
+// Method Definition Index: 80782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reconcile_Client_Start_mE8E185DFBDD98DF0623B370A76C04888E948F9F0 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10029,7 +9704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reconcile_Client_Start_mE
 		return;
 	}
 }
-// Method Definition Index: 80350
+// Method Definition Index: 80783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Replicate_Replay_Start_m0F1855F52FFEDE1C9B1958991C294E87D9349622 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, uint32_t ___0_replayTick0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10046,7 +9721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Replicate_Replay_Start_m0
 		return;
 	}
 }
-// Method Definition Index: 80351
+// Method Definition Index: 80784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_ClearReplicateCache_mB98611C2F3C8137D0CA1A495A38DDBBDF4D55130 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10066,7 +9741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_ClearReplicateCache_mB986
 		return;
 	}
 }
-// Method Definition Index: 80352
+// Method Definition Index: 80785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reader_Replicate___PerformReplicate_m29ADAE4DD1A869B0BE2F30FB9BCAE25191364E76 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___1_NetworkConnection1, uint8_t ___2_Channel2, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10086,7 +9761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reader_Replicate___Perfor
 		return;
 	}
 }
-// Method Definition Index: 80353
+// Method Definition Index: 80786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reader_Reconcile___PerformReconcile_mF71A3BB272A0FBCC55B9BE80D91BC4EF8B9DEC6E (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, uint8_t ___1_Channel1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10102,7 +9777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Reader_Reconcile___Perfor
 		return;
 	}
 }
-// Method Definition Index: 80354
+// Method Definition Index: 80787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Awake_UserLogic_FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_FishNet_Demos_dll_m87504A3F299B804B9FB26614C3B7D452E9EFE348 (MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10153,7 +9828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovingPlatform_Awake_UserLogic_FishNet_D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80355
+// Method Definition Index: 80788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData__ctor_mDAD7D807A9853CDFD7865E7D0489024AF87E6ABE (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, uint32_t ___0_unused, const RuntimeMethod* method) 
 {
 	{
@@ -10170,7 +9845,7 @@ IL2CPP_EXTERN_C  void ReplicateData__ctor_mDAD7D807A9853CDFD7865E7D0489024AF87E6
 	_thisAdjusted = reinterpret_cast<ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD*>(__this + _offset);
 	ReplicateData__ctor_mDAD7D807A9853CDFD7865E7D0489024AF87E6ABE(_thisAdjusted, ___0_unused, method);
 }
-// Method Definition Index: 80356
+// Method Definition Index: 80789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_Dispose_m17F88165AE0ADB3041D15C924B50019F73B0CBBD (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10185,7 +9860,7 @@ IL2CPP_EXTERN_C  void ReplicateData_Dispose_m17F88165AE0ADB3041D15C924B50019F73B
 	_thisAdjusted = reinterpret_cast<ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD*>(__this + _offset);
 	ReplicateData_Dispose_m17F88165AE0ADB3041D15C924B50019F73B0CBBD(_thisAdjusted, method);
 }
-// Method Definition Index: 80357
+// Method Definition Index: 80790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_mCEDC472206FB45E1710A3702923224EB4DBF29E2 (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10203,7 +9878,7 @@ IL2CPP_EXTERN_C  uint32_t ReplicateData_GetTick_mCEDC472206FB45E1710A3702923224E
 	_returnValue = ReplicateData_GetTick_mCEDC472206FB45E1710A3702923224EB4DBF29E2_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80358
+// Method Definition Index: 80791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m42D0F2937D2E20C851E129618681538346E4663B (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10228,7 +9903,7 @@ IL2CPP_EXTERN_C  void ReplicateData_SetTick_m42D0F2937D2E20C851E129618681538346E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80359
+// Method Definition Index: 80792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData__ctor_mECE275ACC025941B0DBE62230A22ECBAE0490465 (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, uint8_t ___1_goalIndex, const RuntimeMethod* method) 
 {
 	{
@@ -10251,7 +9926,7 @@ IL2CPP_EXTERN_C  void ReconcileData__ctor_mECE275ACC025941B0DBE62230A22ECBAE0490
 	_thisAdjusted = reinterpret_cast<ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4*>(__this + _offset);
 	ReconcileData__ctor_mECE275ACC025941B0DBE62230A22ECBAE0490465(_thisAdjusted, ___0_position, ___1_goalIndex, method);
 }
-// Method Definition Index: 80360
+// Method Definition Index: 80793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_Dispose_mEC292C20046F6DFBF5BF25E51111E102F7AF0BAF (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10266,7 +9941,7 @@ IL2CPP_EXTERN_C  void ReconcileData_Dispose_mEC292C20046F6DFBF5BF25E51111E102F7A
 	_thisAdjusted = reinterpret_cast<ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4*>(__this + _offset);
 	ReconcileData_Dispose_mEC292C20046F6DFBF5BF25E51111E102F7AF0BAF(_thisAdjusted, method);
 }
-// Method Definition Index: 80361
+// Method Definition Index: 80794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_m6263FC4AD45E83840FD2F70F67724FFC87D2BA92 (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10284,7 +9959,7 @@ IL2CPP_EXTERN_C  uint32_t ReconcileData_GetTick_m6263FC4AD45E83840FD2F70F67724FF
 	_returnValue = ReconcileData_GetTick_m6263FC4AD45E83840FD2F70F67724FFC87D2BA92_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 80362
+// Method Definition Index: 80795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m28924142D81BB3C53DC0F15C66ACF97A1F061181 (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10309,7 +9984,7 @@ IL2CPP_EXTERN_C  void ReconcileData_SetTick_m28924142D81BB3C53DC0F15C66ACF97A1F0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80363
+// Method Definition Index: 80796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5 (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10317,7 +9992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GridSpawner_get__range_mA3571A73C5F1094
 		return (25.0f);
 	}
 }
-// Method Definition Index: 80364
+// Method Definition Index: 80797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_OnStartServer_m997E569F5B01F8A701B3FFEE06CA6E84AB91FA52 (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10332,29 +10007,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_OnStartServer_m997E569F5B01F
 	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_2 = NULL;
 	Scene_tA1DC762B79745EB5140F054C884855B922318356 V_3;
 	memset((&V_3), 0, sizeof(V_3));
-	bool V_4 = false;
-	bool V_5 = false;
-	int32_t V_6 = 0;
-	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_7 = NULL;
-	bool V_8 = false;
+	int32_t V_4 = 0;
+	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_5 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:20>
 		float L_0;
 		L_0 = GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5(__this, NULL);
 		V_0 = il2cpp_codegen_cast_double_to_int<int32_t>(((float)il2cpp_codegen_multiply(L_0, (-1.0f))));
-		goto IL_007e;
+		goto IL_0072;
 	}
 
-IL_0011:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:22>
 		float L_1;
 		L_1 = GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5(__this, NULL);
 		V_1 = il2cpp_codegen_cast_double_to_int<int32_t>(((float)il2cpp_codegen_multiply(L_1, (-1.0f))));
-		goto IL_0064;
+		goto IL_005f;
 	}
 
-IL_0022:
+IL_0020:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:24>
 		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_2 = __this->____staticPrefab;
@@ -10385,83 +10057,77 @@ IL_0022:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
-IL_0064:
+IL_005f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:22>
 		int32_t L_14 = V_1;
 		float L_15;
 		L_15 = GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5(__this, NULL);
-		V_4 = (bool)((((float)((float)L_14)) < ((float)L_15))? 1 : 0);
-		bool L_16 = V_4;
-		if (L_16)
+		if ((((float)((float)L_14)) < ((float)L_15)))
 		{
-			goto IL_0022;
+			goto IL_0020;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:20>
-		int32_t L_17 = V_0;
-		uint8_t L_18 = __this->____spacing;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_17, (int32_t)L_18));
+		int32_t L_16 = V_0;
+		uint8_t L_17 = __this->____spacing;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_16, (int32_t)L_17));
 	}
 
-IL_007e:
+IL_0072:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:20>
-		int32_t L_19 = V_0;
-		float L_20;
-		L_20 = GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5(__this, NULL);
-		V_5 = (bool)((((float)((float)L_19)) < ((float)L_20))? 1 : 0);
-		bool L_21 = V_5;
-		if (L_21)
+		int32_t L_18 = V_0;
+		float L_19;
+		L_19 = GridSpawner_get__range_mA3571A73C5F1094325C8F5152FDB5EC2C3CF62E5(__this, NULL);
+		if ((((float)((float)L_18)) < ((float)L_19)))
 		{
-			goto IL_0011;
+			goto IL_0010;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:29>
-		V_6 = 0;
-		goto IL_00d1;
+		V_4 = 0;
+		goto IL_00bc;
 	}
 
-IL_0093:
+IL_0081:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:31>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_22 = __this->____movingPrefab;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_20 = __this->____movingPrefab;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
+		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_21);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
+		L_22 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_21, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
 		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_23);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
-		L_24 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_23, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25;
-		L_25 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_25);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_26;
-		L_26 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_25, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24;
+		L_24 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_23, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_27;
-		L_27 = Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF(L_22, L_24, L_26, Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF_RuntimeMethod_var);
-		V_7 = L_27;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_25;
+		L_25 = Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF(L_20, L_22, L_24, Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF_RuntimeMethod_var);
+		V_5 = L_25;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:32>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_28 = V_7;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_26 = V_5;
 		il2cpp_codegen_initobj((&V_3), sizeof(Scene_tA1DC762B79745EB5140F054C884855B922318356));
-		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_29 = V_3;
-		NetworkBehaviour_Spawn_m7210938ECAD47A19C3D82F37EB07605101F68553(__this, L_28, (NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*)NULL, L_29, NULL);
+		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_27 = V_3;
+		NetworkBehaviour_Spawn_m7210938ECAD47A19C3D82F37EB07605101F68553(__this, L_26, (NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*)NULL, L_27, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:29>
-		int32_t L_30 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_30, 1));
+		int32_t L_28 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_28, 1));
 	}
 
-IL_00d1:
+IL_00bc:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/GridSpawner.cs:29>
-		int32_t L_31 = V_6;
-		int32_t L_32 = __this->____movingCount;
-		V_8 = (bool)((((int32_t)L_31) < ((int32_t)L_32))? 1 : 0);
-		bool L_33 = V_8;
-		if (L_33)
+		int32_t L_29 = V_4;
+		int32_t L_30 = __this->____movingCount;
+		if ((((int32_t)L_29) < ((int32_t)L_30)))
 		{
-			goto IL_0093;
+			goto IL_0081;
 		}
 	}
 	{
@@ -10469,7 +10135,7 @@ IL_00d1:
 		return;
 	}
 }
-// Method Definition Index: 80365
+// Method Definition Index: 80798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner__ctor_m25199FDA4DF6FAF650CE8F0FA33B03636E2C0623 (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10488,7 +10154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner__ctor_m25199FDA4DF6FAF650CE8
 		return;
 	}
 }
-// Method Definition Index: 80366
+// Method Definition Index: 80799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_NetworkInitialize___Early_m53D33AF48D6123875AAA615D17A43DCB5B5F5BF6 (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10509,7 +10175,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80367
+// Method Definition Index: 80800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_NetworkInitialize___Late_mF792CF7FC6205AABA660FCFEB974417CF083FF7D (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10530,7 +10196,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80368
+// Method Definition Index: 80801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_NetworkInitializeIfDisabled_m9D9A2B1D5395258F0565996E137318AF247F898A (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10539,7 +10205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_NetworkInitializeIfDisabled_
 		return;
 	}
 }
-// Method Definition Index: 80369
+// Method Definition Index: 80802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_Awake_mD228775D74030B4684CDA2C81ADC622CB484104B (GridSpawner_tF19D9F322B68085A72CE153B89E78CACB4BC3B44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10556,59 +10222,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSpawner_Awake_mD228775D74030B4684CDA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80370
+// Method Definition Index: 80803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_Update_mE91FE45EBA0086EA7F48A990908C142E5F3E0B94 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:23>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsController_mB5B23244C080277D85C6DA6631CE7EEC9051D757(__this, NULL);
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:24>
-		goto IL_005f;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:26>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_3);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
-		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = __this->____goal;
-		float L_6 = __this->____moveRate;
-		float L_7;
-		L_7 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_4, L_5, ((float)il2cpp_codegen_multiply(L_6, L_7)), NULL);
 		NullCheck(L_2);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_2, L_8, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_2, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = __this->____goal;
+		float L_5 = __this->____moveRate;
+		float L_6;
+		L_6 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_3, L_4, ((float)il2cpp_codegen_multiply(L_5, L_6)), NULL);
+		NullCheck(L_1);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_1, L_7, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:27>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
-		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_9);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
-		L_10 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_9, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = __this->____goal;
-		bool L_12;
-		L_12 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_10, L_11, NULL);
-		V_1 = L_12;
-		bool L_13 = V_1;
-		if (!L_13)
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
+		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_8);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = __this->____goal;
+		bool L_11;
+		L_11 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_9, L_10, NULL);
+		if (!L_11)
 		{
-			goto IL_005f;
+			goto IL_0054;
 		}
 	}
 	{
@@ -10616,13 +10276,13 @@ IL_0010:
 		MoveRandomly_RandomizeGoal_mB678D5677ED2AB129ED0F82BF409970CBA522953(__this, NULL);
 	}
 
-IL_005f:
+IL_0054:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 80371
+// Method Definition Index: 80804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartNetwork_m3079D3616A03FAE4332B5C2817C0A89E50EBE8DD (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10639,10 +10299,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartNetwork_m3079D3616A0
 		return;
 	}
 }
-// Method Definition Index: 80372
+// Method Definition Index: 80805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartServer_m743B9885442A0EA41E57AB88664AF5EBC0C137CC (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:39>
 		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_0;
@@ -10650,37 +10309,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartServer_m743B9885442A
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = NetworkConnection_get_IsValid_m82A090A13D1FEFF6E22B8A5132CACCE58F6A4DB1(L_0, NULL);
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0030;
+			goto IL_0029;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:40>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = __this->____start;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->____start;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = MoveRandomly_RandomInsideRange_m42A586A7595F29F7CB28BD8852F44ACC389CA1C3(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
-		L_5 = MoveRandomly_RandomInsideRange_m42A586A7595F29F7CB28BD8852F44ACC389CA1C3(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
-		L_6 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_4, L_5, NULL);
-		NullCheck(L_3);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_3, L_6, NULL);
+		L_5 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_3, L_4, NULL);
+		NullCheck(L_2);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_2, L_5, NULL);
 	}
 
-IL_0030:
+IL_0029:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:41>
 		return;
 	}
 }
-// Method Definition Index: 80373
+// Method Definition Index: 80806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartClient_mA102693EC52968D62B6E64F0B6757AE68C49099D (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_1 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:45>
 		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_0;
@@ -10688,95 +10343,87 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStartClient_mA102693EC529
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = NetworkConnection_get_IsLocalClient_m2D89F43FC9BA82F338C04A2AE0CED565B2F9A263(L_0, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_00b3;
+			goto IL_00a6;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:47>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_3 = __this->____renderer;
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_2 = __this->____renderer;
+		NullCheck(L_2);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_3;
+		L_3 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_2, NULL);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4;
+		L_4 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
 		NullCheck(L_3);
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_4;
-		L_4 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_3, NULL);
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5;
-		L_5 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
-		NullCheck(L_4);
-		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_4, L_5, NULL);
+		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_3, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:48>
-		float L_6 = __this->____moveRate;
-		__this->____moveRate = ((float)il2cpp_codegen_multiply(L_6, (3.0f)));
+		float L_5 = __this->____moveRate;
+		__this->____moveRate = ((float)il2cpp_codegen_multiply(L_5, (3.0f)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:49>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = L_7;
-		NullCheck(L_8);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = L_6;
+		NullCheck(L_7);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
+		memset((&L_9), 0, sizeof(L_9));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_9), (0.0f), (0.0f), (1.0f), NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
-		memset((&L_10), 0, sizeof(L_10));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_10), (0.0f), (0.0f), (1.0f), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
-		L_11 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_9, L_10, NULL);
-		NullCheck(L_8);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_8, L_11, NULL);
+		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_8, L_9, NULL);
+		NullCheck(L_7);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_7, L_10, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:50>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_12;
-		L_12 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
-		V_1 = L_12;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_11;
+		L_11 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:51>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_13 = V_1;
-		NullCheck(L_13);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_12 = L_11;
+		NullCheck(L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_12, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
-		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_13, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
-		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_14);
-		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_14, L_15, NULL);
+		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_13, L_14, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:52>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_16 = V_1;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_15 = L_12;
+		NullCheck(L_15);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_15, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_16);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
-		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_16, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
-		L_18 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
-		NullCheck(L_17);
-		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_17, L_18, NULL);
+		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_16, L_17, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:53>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_19 = V_1;
-		NullCheck(L_19);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
-		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_19, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
-		memset((&L_21), 0, sizeof(L_21));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_21), (0.0f), (0.0f), (-5.0f), NULL);
-		NullCheck(L_20);
-		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_20, L_21, NULL);
-		goto IL_00cb;
+		NullCheck(L_15);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
+		L_18 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_15, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		memset((&L_19), 0, sizeof(L_19));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_19), (0.0f), (0.0f), (-5.0f), NULL);
+		NullCheck(L_18);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_18, L_19, NULL);
+		return;
 	}
 
-IL_00b3:
+IL_00a6:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:57>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_22 = __this->____renderer;
-		NullCheck(L_22);
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_23;
-		L_23 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_22, NULL);
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_24;
-		L_24 = Color_get_gray_m6D01087E0F20F34718EBA5B213853B4BB49F1DEF(NULL);
-		NullCheck(L_23);
-		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_23, L_24, NULL);
-	}
-
-IL_00cb:
-	{
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_20 = __this->____renderer;
+		NullCheck(L_20);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_21;
+		L_21 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_20, NULL);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_22;
+		L_22 = Color_get_gray_m6D01087E0F20F34718EBA5B213853B4BB49F1DEF(NULL);
+		NullCheck(L_21);
+		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_21, L_22, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:59>
 		return;
 	}
 }
-// Method Definition Index: 80374
+// Method Definition Index: 80807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStopClient_m7A8B93DCF8493883500F6F2E5B02088B726CB017 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10785,67 +10432,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_OnStopClient_m7A8B93DCF8493
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_1 = NULL;
-	bool V_2 = false;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:63>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_003e;
+			goto IL_0033;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:65>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
-		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
-		V_1 = L_2;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_1;
+		L_1 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		V_0 = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:66>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_3 = V_1;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_2 = L_4;
-		bool L_5 = V_2;
-		if (!L_5)
+		bool L_3;
+		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
 		{
-			goto IL_003d;
+			goto IL_0033;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:68>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_6 = V_1;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4 = V_0;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_4, NULL);
+		NullCheck(L_5);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_5, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:69>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_6 = V_0;
 		NullCheck(L_6);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_6, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_7);
-		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_7, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:69>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8 = V_1;
-		NullCheck(L_8);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
-		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_8, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
-		L_10 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
-		NullCheck(L_9);
-		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_9, L_10, NULL);
+		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_7, L_8, NULL);
 	}
 
-IL_003d:
-	{
-	}
-
-IL_003e:
+IL_0033:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 80375
+// Method Definition Index: 80808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_RandomizeGoal_mB678D5677ED2AB129ED0F82BF409970CBA522953 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10860,13 +10497,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_RandomizeGoal_mB678D5677ED2
 		return;
 	}
 }
-// Method Definition Index: 80376
+// Method Definition Index: 80809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 MoveRandomly_RandomInsideRange_m42A586A7595F29F7CB28BD8852F44ACC389CA1C3 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
-	memset((&V_1), 0, sizeof(V_1));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:81>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
@@ -10884,18 +10519,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		(&V_0)->___z = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:83>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = V_0;
-		V_1 = L_5;
-		goto IL_002c;
-	}
-
-IL_002c:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/HashGrid/Scripts/MoveRandomly.cs:84>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_1;
-		return L_6;
+		return L_5;
 	}
 }
-// Method Definition Index: 80377
+// Method Definition Index: 80810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly__ctor_m18818A399F5B3BE1B7493293204FEA7D73D4FBB0 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10912,7 +10539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly__ctor_m18818A399F5B3BE1B749
 		return;
 	}
 }
-// Method Definition Index: 80378
+// Method Definition Index: 80811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_NetworkInitialize___Early_m9A2894BA09167998EE919572AFC98A563B135EF5 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10933,7 +10560,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80379
+// Method Definition Index: 80812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_NetworkInitialize___Late_mFDD72AF7B27FB687C22B55C4A665EACE130066BC (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10954,7 +10581,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80380
+// Method Definition Index: 80813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_NetworkInitializeIfDisabled_m1FB536EF462D3AE9AA34BDB999C0352D1D02E3A8 (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10963,7 +10590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_NetworkInitializeIfDisabled
 		return;
 	}
 }
-// Method Definition Index: 80381
+// Method Definition Index: 80814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_Awake_m8B7ECB9A54A2C5F32A3EF56E516A934C95D67D8C (MoveRandomly_t2720B2D6A2B6EE8D734F6D46873581568451B359* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10980,7 +10607,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomly_Awake_m8B7ECB9A54A2C5F32A3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80382
+// Method Definition Index: 80815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartNetwork_m6E6341A91AF8C99F98B00F0A22B1ADE3CE32208C (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10989,16 +10616,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartNetwork_m6
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:64>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
 		if (L_0)
 		{
-			goto IL_0019;
+			goto IL_0023;
 		}
 	}
 	{
@@ -11007,22 +10631,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartNetwork_m6
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = NetworkConnection_get_IsLocalClient_m2D89F43FC9BA82F338C04A2AE0CED565B2F9A263(L_1, NULL);
-		G_B3_0 = ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_001a:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_3 = V_0;
-		if (!L_3)
+		if (L_2)
 		{
-			goto IL_0031;
+			goto IL_0023;
 		}
 	}
 	{
@@ -11031,232 +10642,201 @@ IL_001a:
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:67>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(__this, NULL);
-		goto IL_004f;
+		return;
 	}
 
-IL_0031:
+IL_0023:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:71>
-		bool L_4 = __this->____moveInUpdate;
-		V_1 = L_4;
-		bool L_5 = V_1;
-		if (!L_5)
+		bool L_3 = __this->____moveInUpdate;
+		if (!L_3)
 		{
-			goto IL_0046;
+			goto IL_0033;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:72>
 		TickNetworkBehaviour_SetTickCallbacks_mE647008CBE0BDAC72AE17A2E5C2277F54547A2A3(__this, 8, NULL);
-		goto IL_004e;
+		return;
 	}
 
-IL_0046:
+IL_0033:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:74>
 		TickNetworkBehaviour_SetTickCallbacks_mE647008CBE0BDAC72AE17A2E5C2277F54547A2A3(__this, 2, NULL);
-	}
-
-IL_004e:
-	{
-	}
-
-IL_004f:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 80383
+// Method Definition Index: 80816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_TimeManager_OnUpdate_m7AC7B9ECCC30A019661E0ECC9BFD497F45A779E5 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:80>
 		bool L_0 = __this->____moveInUpdate;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0017;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:81>
-		float L_2;
-		L_2 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F(__this, L_2, NULL);
-	}
-
-IL_0017:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:82>
-		return;
-	}
-}
-// Method Definition Index: 80384
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_TimeManager_OnTick_m9D4B50539147EBDCA5DED774716FB0C8FACF5671 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	float V_1 = 0.0f;
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:86>
-		bool L_0 = __this->____moveInUpdate;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0025;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:88>
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_2;
-		L_2 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		NullCheck(L_2);
-		double L_3;
-		L_3 = TimeManager_get_TickDelta_mAD7B3277F6932DB2CB2B3BD99748DDF43FC73A03_inline(L_2, NULL);
-		V_1 = ((float)L_3);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:89>
-		float L_4 = V_1;
-		MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F(__this, L_4, NULL);
-	}
-
-IL_0025:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:91>
-		return;
-	}
-}
-// Method Definition Index: 80385
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, float ___0_delta, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:95>
-		bool L_0 = __this->____isActive;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
 			goto IL_0013;
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:96>
-		goto IL_00d3;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:81>
+		float L_1;
+		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F(__this, L_1, NULL);
 	}
 
 IL_0013:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:97>
-		bool L_2;
-		L_2 = NetworkBehaviour_get_IsController_mB5B23244C080277D85C6DA6631CE7EEC9051D757(__this, NULL);
-		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		bool L_3 = V_1;
-		if (!L_3)
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:82>
+		return;
+	}
+}
+// Method Definition Index: 80817
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_TimeManager_OnTick_m9D4B50539147EBDCA5DED774716FB0C8FACF5671 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:86>
+		bool L_0 = __this->____moveInUpdate;
+		if (L_0)
 		{
-			goto IL_0025;
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:88>
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_1;
+		L_1 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		NullCheck(L_1);
+		double L_2;
+		L_2 = TimeManager_get_TickDelta_mAD7B3277F6932DB2CB2B3BD99748DDF43FC73A03_inline(L_1, NULL);
+		V_0 = ((float)L_2);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:89>
+		float L_3 = V_0;
+		MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F(__this, L_3, NULL);
+	}
+
+IL_001c:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:91>
+		return;
+	}
+}
+// Method Definition Index: 80818
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_Move_m38E8FAD69A9710FE1736E5B6B41E780AFB2F5D7F (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, float ___0_delta, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:95>
+		bool L_0 = __this->____isActive;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:96>
+		return;
+	}
+
+IL_0009:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:97>
+		bool L_1;
+		L_1 = NetworkBehaviour_get_IsController_mB5B23244C080277D85C6DA6631CE7EEC9051D757(__this, NULL);
+		if (L_1)
+		{
+			goto IL_0012;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:98>
-		goto IL_00d3;
+		return;
 	}
 
-IL_0025:
+IL_0012:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:99>
-		float L_4;
-		L_4 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_5 = __this->____nextMoveTime;
-		V_2 = (bool)((((float)L_4) < ((float)L_5))? 1 : 0);
-		bool L_6 = V_2;
-		if (!L_6)
+		float L_2;
+		L_2 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_3 = __this->____nextMoveTime;
+		if ((!(((float)L_2) < ((float)L_3))))
 		{
-			goto IL_003b;
+			goto IL_0020;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:100>
-		goto IL_00d3;
+		return;
 	}
 
-IL_003b:
+IL_0020:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:102>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
-		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_8);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = __this->____goalPosition;
-		float L_11 = __this->____moveRate;
-		float L_12 = ___0_delta;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_9, L_10, ((float)il2cpp_codegen_multiply(L_11, L_12)), NULL);
-		NullCheck(L_7);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_7, L_13, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_5);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = __this->____goalPosition;
+		float L_8 = __this->____moveRate;
+		float L_9 = ___0_delta;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_6, L_7, ((float)il2cpp_codegen_multiply(L_8, L_9)), NULL);
+		NullCheck(L_4);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_4, L_10, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:103>
-		bool L_14 = __this->____is2d;
-		V_3 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
-		bool L_15 = V_3;
-		if (!L_15)
+		bool L_11 = __this->____is2d;
+		if (L_11)
 		{
-			goto IL_009e;
+			goto IL_007c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:104>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
-		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
-		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_17);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
+		L_12 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14;
+		L_14 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_13, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_15 = __this->____goalRotation;
+		float L_16 = __this->____rotateRate;
+		float L_17 = ___0_delta;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
-		L_18 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_17, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19 = __this->____goalRotation;
-		float L_20 = __this->____rotateRate;
-		float L_21 = ___0_delta;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22;
-		L_22 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_18, L_19, ((float)il2cpp_codegen_multiply(L_20, L_21)), NULL);
-		NullCheck(L_16);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_16, L_22, NULL);
-		goto IL_00b0;
+		L_18 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_14, L_15, ((float)il2cpp_codegen_multiply(L_16, L_17)), NULL);
+		NullCheck(L_12);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_12, L_18, NULL);
+		goto IL_008d;
 	}
 
-IL_009e:
+IL_007c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:106>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
-		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24 = __this->____goalRotation;
-		NullCheck(L_23);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_23, L_24, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
+		L_19 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20 = __this->____goalRotation;
+		NullCheck(L_19);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_19, L_20, NULL);
 	}
 
-IL_00b0:
+IL_008d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:108>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25;
-		L_25 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_25);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
-		L_26 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_25, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = __this->____goalPosition;
-		bool L_28;
-		L_28 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_26, L_27, NULL);
-		V_4 = L_28;
-		bool L_29 = V_4;
-		if (!L_29)
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
+		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_21);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
+		L_22 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_21, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = __this->____goalPosition;
+		bool L_24;
+		L_24 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_22, L_23, NULL);
+		if (!L_24)
 		{
-			goto IL_00d3;
+			goto IL_00ab;
 		}
 	}
 	{
@@ -11264,13 +10844,13 @@ IL_00b0:
 		MoveRandomlyNonPhysics_SetNextGoal_m2970E3E1F308559A59B25C2468F53619A0FAF96C(__this, NULL);
 	}
 
-IL_00d3:
+IL_00ab:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:110>
 		return;
 	}
 }
-// Method Definition Index: 80386
+// Method Definition Index: 80819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartServer_m1BA22B7E69E9F426957AC11013DAA54637C55C76 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11280,7 +10860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartServer_m1B
 		return;
 	}
 }
-// Method Definition Index: 80387
+// Method Definition Index: 80820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartClient_mD9550C7BBDF2331A218800930AA586069B998263 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11290,90 +10870,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_OnStartClient_mD9
 		return;
 	}
 }
-// Method Definition Index: 80388
+// Method Definition Index: 80821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_TrySetFirstGoal_mF003944896317E4F7289DE2DCB723B2E23D6C814 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:124>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsController_mB5B23244C080277D85C6DA6631CE7EEC9051D757(__this, NULL);
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:125>
+		return;
+	}
+
+IL_0009:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:127>
+		MoveRandomlyNonPhysics_SetNextGoal_m2970E3E1F308559A59B25C2468F53619A0FAF96C(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:129>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = __this->____goalPosition;
+		NullCheck(L_1);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_1, L_2, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:130>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4 = __this->____goalRotation;
+		NullCheck(L_3);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_3, L_4, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:132>
+		__this->____nextMoveTime = (-(std::numeric_limits<float>::max)());
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:133>
+		return;
+	}
+}
+// Method Definition Index: 80822
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_SetNextGoal_m2970E3E1F308559A59B25C2468F53619A0FAF96C (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:137>
+		bool L_0 = __this->____randomMovement;
+		if (!L_0)
 		{
 			goto IL_0010;
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:125>
-		goto IL_0046;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:138>
+		MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__SetRandomGoalU7C26_1_m662CE5A198248EC9CCB88F6B80C2A707308A04F1(__this, NULL);
+		goto IL_0016;
 	}
 
 IL_0010:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:127>
-		MoveRandomlyNonPhysics_SetNextGoal_m2970E3E1F308559A59B25C2468F53619A0FAF96C(__this, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:129>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
-		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->____goalPosition;
-		NullCheck(L_2);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_2, L_3, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:130>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
-		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5 = __this->____goalRotation;
-		NullCheck(L_4);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_4, L_5, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:132>
-		__this->____nextMoveTime = (-(std::numeric_limits<float>::max)());
-	}
-
-IL_0046:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:133>
-		return;
-	}
-}
-// Method Definition Index: 80389
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_SetNextGoal_m2970E3E1F308559A59B25C2468F53619A0FAF96C (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:137>
-		bool L_0 = __this->____randomMovement;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:138>
-		MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__SetRandomGoalU7C26_1_m662CE5A198248EC9CCB88F6B80C2A707308A04F1(__this, NULL);
-		goto IL_001b;
-	}
-
-IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:140>
 		MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__SetSpecifiedGoalU7C26_0_mE14508EA549726FDBC0A4BB7CC1D8E7ED9AF2784(__this, NULL);
 	}
 
-IL_001b:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:142>
-		float L_2;
-		L_2 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_3 = __this->____delayBetweenMovements;
-		__this->____nextMoveTime = ((float)il2cpp_codegen_add(L_2, L_3));
+		float L_1;
+		L_1 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_2 = __this->____delayBetweenMovements;
+		__this->____nextMoveTime = ((float)il2cpp_codegen_add(L_1, L_2));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:205>
 		return;
 	}
 }
-// Method Definition Index: 80390
+// Method Definition Index: 80823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics__ctor_mD800BCA58CD01678D150594F7C113B613288DDCD (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11394,8 +10964,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics__ctor_mD800BCA58C
 		__this->____rotationChance = (0.330000013f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:35>
 		__this->____delayBetweenMovements = (1.5f);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:37>
-		__this->____yOffsetPerInstance = (0.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:39>
 		__this->____randomMovement = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:41>
@@ -11403,23 +10971,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics__ctor_mD800BCA58C
 		List_1__ctor_mE898276697951CD63A7C7B907CABBCFC8EEB0AAB(L_0, List_1__ctor_mE898276697951CD63A7C7B907CABBCFC8EEB0AAB_RuntimeMethod_var);
 		__this->____goalDatas = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____goalDatas), (void*)L_0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:43>
-		__this->____moveInUpdate = (bool)0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:46>
 		__this->____moveRate = (3.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:49>
 		__this->____rotateRate = (30.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:52>
 		__this->____range = (6.0f);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:59>
-		__this->____nextGoalDataIndex = 0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:60>
 		__this->____nextMoveTime = (-(std::numeric_limits<float>::max)());
 		TickNetworkBehaviour__ctor_m3FC7C5D879A0695B83D78CCB6A1AD48B48A623E0(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 80391
+// Method Definition Index: 80824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__SetSpecifiedGoalU7C26_0_mE14508EA549726FDBC0A4BB7CC1D8E7ED9AF2784 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11430,39 +10994,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_U3CSetNextGoalU3E
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:146>
 		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_0 = __this->____goalDatas;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_inline(L_0, List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_RuntimeMethod_var);
-		V_1 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_1;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0015;
+			goto IL_000e;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:147>
-		goto IL_007e;
+		return;
 	}
 
-IL_0015:
+IL_000e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:149>
-		int32_t L_3 = __this->____nextGoalDataIndex;
-		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_4 = __this->____goalDatas;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_inline(L_4, List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_RuntimeMethod_var);
-		V_2 = (bool)((((int32_t)((((int32_t)L_3) < ((int32_t)L_5))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_6 = V_2;
-		if (!L_6)
+		int32_t L_2 = __this->____nextGoalDataIndex;
+		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_3 = __this->____goalDatas;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_inline(L_3, List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_RuntimeMethod_var);
+		if ((((int32_t)L_2) < ((int32_t)L_4)))
 		{
-			goto IL_0036;
+			goto IL_0028;
 		}
 	}
 	{
@@ -11470,335 +11028,267 @@ IL_0015:
 		__this->____nextGoalDataIndex = 0;
 	}
 
-IL_0036:
+IL_0028:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:152>
-		int32_t L_7 = __this->____nextGoalDataIndex;
-		V_0 = L_7;
+		int32_t L_5 = __this->____nextGoalDataIndex;
+		V_0 = L_5;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:153>
-		int32_t L_8 = __this->____nextGoalDataIndex;
-		__this->____nextGoalDataIndex = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		int32_t L_6 = __this->____nextGoalDataIndex;
+		__this->____nextGoalDataIndex = ((int32_t)il2cpp_codegen_add(L_6, 1));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:155>
-		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_9 = __this->____goalDatas;
-		int32_t L_10 = V_0;
-		NullCheck(L_9);
-		GoalData_t437467DE34EE45158A7D2E7FA290A7C2BC7DB9AA L_11;
-		L_11 = List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1(L_9, L_10, List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1_RuntimeMethod_var);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___Position;
-		__this->____goalPosition = L_12;
+		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_7 = __this->____goalDatas;
+		int32_t L_8 = V_0;
+		NullCheck(L_7);
+		GoalData_t437467DE34EE45158A7D2E7FA290A7C2BC7DB9AA L_9;
+		L_9 = List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1(L_7, L_8, List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1_RuntimeMethod_var);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = L_9.___Position;
+		__this->____goalPosition = L_10;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:156>
-		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_13 = __this->____goalDatas;
-		int32_t L_14 = V_0;
-		NullCheck(L_13);
-		GoalData_t437467DE34EE45158A7D2E7FA290A7C2BC7DB9AA L_15;
-		L_15 = List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1(L_13, L_14, List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1_RuntimeMethod_var);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = L_15.___Eulers;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17;
-		L_17 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_16, NULL);
-		__this->____goalRotation = L_17;
-	}
-
-IL_007e:
-	{
+		List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* L_11 = __this->____goalDatas;
+		int32_t L_12 = V_0;
+		NullCheck(L_11);
+		GoalData_t437467DE34EE45158A7D2E7FA290A7C2BC7DB9AA L_13;
+		L_13 = List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1(L_11, L_12, List_1_get_Item_mC66EFB27D844770B2826079F4FF758E277BAC0D1_RuntimeMethod_var);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = L_13.___Eulers;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_15;
+		L_15 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_14, NULL);
+		__this->____goalRotation = L_15;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:157>
 		return;
 	}
 }
-// Method Definition Index: 80392
+// Method Definition Index: 80825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__SetRandomGoalU7C26_1_m662CE5A198248EC9CCB88F6B80C2A707308A04F1 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	bool V_8 = false;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_9;
-	memset((&V_9), 0, sizeof(V_9));
-	bool V_10 = false;
-	float V_11 = 0.0f;
-	int32_t G_B4_0 = 0;
-	int32_t G_B9_0 = 0;
-	int32_t G_B14_0 = 0;
-	float G_B26_0 = 0.0f;
+	float V_3 = 0.0f;
+	float G_B20_0 = 0.0f;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:161>
 		uint8_t L_0 = __this->____axes;
-		V_0 = (bool)((((int32_t)L_0) > ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
-			goto IL_00c9;
+			goto IL_00aa;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:163>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
-		L_2 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
-		float L_3 = __this->____range;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
-		L_4 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_2, L_3, NULL);
-		V_1 = L_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
+		float L_2 = __this->____range;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_1, L_2, NULL);
+		V_0 = L_3;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:164>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
-		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_5);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
-		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
-		V_2 = L_6;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_4);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
+		V_1 = L_5;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:166>
-		uint8_t L_7 = __this->____axes;
-		if ((((int32_t)L_7) < ((int32_t)1)))
+		uint8_t L_6 = __this->____axes;
+		if ((((int32_t)L_6) < ((int32_t)1)))
 		{
-			goto IL_0040;
+			goto IL_0047;
 		}
 	}
 	{
-		bool L_8;
-		L_8 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
-		G_B4_0 = ((int32_t)(L_8));
-		goto IL_0041;
-	}
-
-IL_0040:
-	{
-		G_B4_0 = 0;
-	}
-
-IL_0041:
-	{
-		V_3 = (bool)G_B4_0;
-		bool L_9 = V_3;
-		if (!L_9)
+		bool L_7;
+		L_7 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
+		if (!L_7)
 		{
-			goto IL_0052;
+			goto IL_0047;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:167>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_1;
-		float L_11 = L_10.___x;
-		(&V_2)->___x = L_11;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
+		float L_9 = L_8.___x;
+		(&V_1)->___x = L_9;
 	}
 
-IL_0052:
+IL_0047:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:168>
-		uint8_t L_12 = __this->____axes;
-		if ((((int32_t)L_12) < ((int32_t)2)))
+		uint8_t L_10 = __this->____axes;
+		if ((((int32_t)L_10) < ((int32_t)2)))
 		{
-			goto IL_0063;
+			goto IL_0065;
 		}
 	}
 	{
-		bool L_13;
-		L_13 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
-		G_B9_0 = ((int32_t)(L_13));
-		goto IL_0064;
-	}
-
-IL_0063:
-	{
-		G_B9_0 = 0;
-	}
-
-IL_0064:
-	{
-		V_4 = (bool)G_B9_0;
-		bool L_14 = V_4;
-		if (!L_14)
+		bool L_11;
+		L_11 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
+		if (!L_11)
 		{
-			goto IL_0077;
+			goto IL_0065;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:169>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_1;
-		float L_16 = L_15.___y;
-		(&V_2)->___y = L_16;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
+		float L_13 = L_12.___y;
+		(&V_1)->___y = L_13;
 	}
 
-IL_0077:
+IL_0065:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:170>
-		uint8_t L_17 = __this->____axes;
-		if ((((int32_t)L_17) < ((int32_t)3)))
+		uint8_t L_14 = __this->____axes;
+		if ((((int32_t)L_14) < ((int32_t)3)))
 		{
-			goto IL_0088;
+			goto IL_0083;
 		}
 	}
 	{
-		bool L_18;
-		L_18 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
-		G_B14_0 = ((int32_t)(L_18));
-		goto IL_0089;
-	}
-
-IL_0088:
-	{
-		G_B14_0 = 0;
-	}
-
-IL_0089:
-	{
-		V_5 = (bool)G_B14_0;
-		bool L_19 = V_5;
-		if (!L_19)
+		bool L_15;
+		L_15 = MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426(__this, NULL);
+		if (!L_15)
 		{
-			goto IL_009c;
+			goto IL_0083;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:171>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_1;
-		float L_21 = L_20.___z;
-		(&V_2)->___z = L_21;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_0;
+		float L_17 = L_16.___z;
+		(&V_1)->___z = L_17;
 	}
 
-IL_009c:
+IL_0083:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:174>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_2;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
-		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_23);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
-		L_24 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_23, NULL);
-		bool L_25;
-		L_25 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_22, L_24, NULL);
-		V_6 = L_25;
-		bool L_26 = V_6;
-		if (!L_26)
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
+		L_19 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_19);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
+		L_20 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_19, NULL);
+		bool L_21;
+		L_21 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_18, L_20, NULL);
+		if (!L_21)
 		{
-			goto IL_00c0;
+			goto IL_00a3;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:175>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = V_1;
-		float L_28 = L_27.___x;
-		(&V_2)->___x = L_28;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_0;
+		float L_23 = L_22.___x;
+		(&V_1)->___x = L_23;
 	}
 
-IL_00c0:
+IL_00a3:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:179>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = V_2;
-		__this->____goalPosition = L_29;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_1;
+		__this->____goalPosition = L_24;
 	}
 
-IL_00c9:
+IL_00aa:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:182>
-		float L_30 = __this->____rotationChance;
-		V_7 = (bool)((((float)L_30) > ((float)(0.0f)))? 1 : 0);
-		bool L_31 = V_7;
-		if (!L_31)
+		float L_25 = __this->____rotationChance;
+		if ((!(((float)L_25) > ((float)(0.0f)))))
 		{
-			goto IL_0183;
+			goto IL_013f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:184>
-		float L_32;
-		L_32 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (1.0f), NULL);
-		float L_33 = __this->____rotationChance;
-		V_8 = (bool)((((int32_t)((!(((float)L_32) <= ((float)L_33)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_34 = V_8;
-		if (!L_34)
+		float L_26;
+		L_26 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (1.0f), NULL);
+		float L_27 = __this->____rotationChance;
+		if ((!(((float)L_26) <= ((float)L_27))))
 		{
-			goto IL_016f;
+			goto IL_012e;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:187>
-		bool L_35 = __this->____is2d;
-		V_10 = (bool)((((int32_t)L_35) == ((int32_t)0))? 1 : 0);
-		bool L_36 = V_10;
-		if (!L_36)
+		bool L_28 = __this->____is2d;
+		if (L_28)
 		{
-			goto IL_0125;
+			goto IL_00eb;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:189>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
-		L_37 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38;
-		L_38 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_37, (180.0f), NULL);
-		V_9 = L_38;
-		goto IL_015f;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
+		L_29 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
+		L_30 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_29, (180.0f), NULL);
+		V_2 = L_30;
+		goto IL_0121;
 	}
 
-IL_0125:
+IL_00eb:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:193>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
-		L_39 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_39);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40;
-		L_40 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_39, NULL);
-		float L_41 = L_40.___y;
-		if ((((float)L_41) == ((float)(0.0f))))
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
+		L_31 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_31);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32;
+		L_32 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_31, NULL);
+		float L_33 = L_32.___y;
+		if ((((float)L_33) == ((float)(0.0f))))
 		{
-			goto IL_0144;
+			goto IL_0109;
 		}
 	}
 	{
-		G_B26_0 = (0.0f);
-		goto IL_0149;
+		G_B20_0 = (0.0f);
+		goto IL_010e;
 	}
 
-IL_0144:
+IL_0109:
 	{
-		G_B26_0 = (180.0f);
+		G_B20_0 = (180.0f);
 	}
 
-IL_0149:
+IL_010e:
 	{
-		V_11 = G_B26_0;
+		V_3 = G_B20_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:194>
-		float L_42 = V_11;
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_9), (0.0f), L_42, (0.0f), NULL);
+		float L_34 = V_3;
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), (0.0f), L_34, (0.0f), NULL);
 	}
 
-IL_015f:
+IL_0121:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:197>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43 = V_9;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_44;
-		L_44 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_43, NULL);
-		__this->____goalRotation = L_44;
-		goto IL_0182;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35 = V_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36;
+		L_36 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_35, NULL);
+		__this->____goalRotation = L_36;
+		return;
 	}
 
-IL_016f:
+IL_012e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:201>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
-		L_45 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_45);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_46;
-		L_46 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_45, NULL);
-		__this->____goalRotation = L_46;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_37;
+		L_37 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_37);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38;
+		L_38 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_37, NULL);
+		__this->____goalRotation = L_38;
 	}
 
-IL_0182:
-	{
-	}
-
-IL_0183:
+IL_013f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyNonPhysics.cs:204>
 		return;
 	}
 }
-// Method Definition Index: 80393
+// Method Definition Index: 80826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MoveRandomlyNonPhysics_U3CSetNextGoalU3Eg__RandomizeAxesU7C26_2_mB1A4446EFF84261C42196A86C7370544022E8426 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11809,7 +11299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MoveRandomlyNonPhysics_U3CSetNextGoalU3E
 		return (bool)((((int32_t)((!(((float)L_0) <= ((float)L_1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 80394
+// Method Definition Index: 80827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_NetworkInitialize___Early_m0D29B7545EE6D19074C0F3A152295B010B9FD170 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11830,7 +11320,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80395
+// Method Definition Index: 80828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_NetworkInitialize___Late_mFD26F395BD6ADC77AA5F7CB0F1ECB71F02AC74CB (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11851,7 +11341,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80396
+// Method Definition Index: 80829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_NetworkInitializeIfDisabled_m5C5E2AB253B632F5FF5CE0C3A82F9F26B52810D7 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11860,7 +11350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_NetworkInitialize
 		return;
 	}
 }
-// Method Definition Index: 80397
+// Method Definition Index: 80830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_Awake_m74B4CA23300FC7C1D34F11D9B5C7202525506614 (MoveRandomlyNonPhysics_tA5635CE4487F3EF4FC0C7EFAC56BE1B7C8F7AFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11886,7 +11376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyNonPhysics_Awake_m74B4CA2330
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80398
+// Method Definition Index: 80831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Awake_m9745C5A735C61D4BB1347CC6AA723D2673A184ED (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11896,7 +11386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Awake_m9745C5A735C61
 		return;
 	}
 }
-// Method Definition Index: 80399
+// Method Definition Index: 80832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_OnStartNetwork_m5D40BC31A54BCEF1FF95308C050F83CD1B05A5B5 (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11905,44 +11395,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_OnStartNetwork_m5D40
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:33>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_002e;
+			goto IL_0022;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:35>
 		TickNetworkBehaviour_SetTickCallbacks_mE647008CBE0BDAC72AE17A2E5C2277F54547A2A3(__this, 0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:36>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2 = __this->____rigidbody;
-		NullCheck(L_2);
-		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_2, (bool)1, NULL);
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->____rigidbody;
+		NullCheck(L_1);
+		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_1, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:37>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(__this, NULL);
-		goto IL_0038;
+		return;
 	}
 
-IL_002e:
+IL_0022:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:41>
 		TickNetworkBehaviour_SetTickCallbacks_mE647008CBE0BDAC72AE17A2E5C2277F54547A2A3(__this, 2, NULL);
-	}
-
-IL_0038:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 80400
+// Method Definition Index: 80833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_TimeManager_OnTick_mDBD3C631581B43ED3BD67EB62FEA6B8645D5589B (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11952,7 +11435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_TimeManager_OnTick_m
 		return;
 	}
 }
-// Method Definition Index: 80401
+// Method Definition Index: 80834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Move_m6893AFC7F5AC48F9F3F065493AB61980446B10BB (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11964,148 +11447,132 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Move_m6893AFC7F5AC48
 	uint32_t V_0 = 0;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
-	bool V_5 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:52>
 		bool L_0 = __this->____isActive;
-		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_2;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0013;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:53>
-		goto IL_00ed;
+		return;
 	}
 
-IL_0013:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:55>
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_2;
-		L_2 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		NullCheck(L_2);
-		uint32_t L_3;
-		L_3 = TimeManager_get_LocalTick_m33B90F5CF081E02D356737AB650141634B970275(L_2, NULL);
-		V_0 = L_3;
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_1;
+		L_1 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		NullCheck(L_1);
+		uint32_t L_2;
+		L_2 = TimeManager_get_LocalTick_m33B90F5CF081E02D356737AB650141634B970275(L_1, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:56>
-		uint32_t L_4 = V_0;
-		uint32_t L_5 = __this->____nextForceTick;
-		V_3 = (bool)((!(((uint32_t)L_4) >= ((uint32_t)L_5)))? 1 : 0);
-		bool L_6 = V_3;
-		if (!L_6)
+		uint32_t L_3 = V_0;
+		uint32_t L_4 = __this->____nextForceTick;
+		if ((!(((uint32_t)L_3) < ((uint32_t)L_4))))
 		{
-			goto IL_0031;
+			goto IL_001f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:57>
-		goto IL_00ed;
+		return;
 	}
 
-IL_0031:
+IL_001f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:59>
-		uint32_t L_7 = V_0;
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_8;
-		L_8 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		FloatRange_tEA6B86356EA817365D3F1759BCE0D10CD8091A96* L_9 = (FloatRange_tEA6B86356EA817365D3F1759BCE0D10CD8091A96*)(&__this->____interval);
-		float L_10;
-		L_10 = FloatRange_RandomInclusive_m81CF15B4488923F3A0EE88EE9BE8A27EDF1D4A39(L_9, NULL);
-		NullCheck(L_8);
-		uint32_t L_11;
-		L_11 = TimeManager_TimeToTicks_m1E4D9A685FAEA0FE7768E73EB0EC1A07420B4853(L_8, ((double)L_10), 0, NULL);
-		__this->____nextForceTick = ((int32_t)il2cpp_codegen_add((int32_t)L_7, (int32_t)L_11));
+		uint32_t L_5 = V_0;
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_6;
+		L_6 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		FloatRange_tEA6B86356EA817365D3F1759BCE0D10CD8091A96* L_7 = (FloatRange_tEA6B86356EA817365D3F1759BCE0D10CD8091A96*)(&__this->____interval);
+		float L_8;
+		L_8 = FloatRange_RandomInclusive_m81CF15B4488923F3A0EE88EE9BE8A27EDF1D4A39(L_7, NULL);
+		NullCheck(L_6);
+		uint32_t L_9;
+		L_9 = TimeManager_TimeToTicks_m1E4D9A685FAEA0FE7768E73EB0EC1A07420B4853(L_6, ((double)L_8), 0, NULL);
+		__this->____nextForceTick = ((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)L_9));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:61>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
+		float L_11 = __this->____force;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
-		L_12 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
-		float L_13 = __this->____force;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
-		L_14 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_12, L_13, NULL);
-		V_1 = L_14;
+		L_12 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_10, L_11, NULL);
+		V_1 = L_12;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:64>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_1;
-		float L_16 = L_15.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_1;
+		float L_14 = L_13.___x;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		int32_t L_17;
-		L_17 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_16, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
-		L_18 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_18);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
-		L_19 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_18, NULL);
-		float L_20 = L_19.___x;
-		int32_t L_21;
-		L_21 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_20, NULL);
-		V_4 = (bool)((((int32_t)L_17) == ((int32_t)L_21))? 1 : 0);
-		bool L_22 = V_4;
-		if (!L_22)
+		int32_t L_15;
+		L_15 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_14, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_16);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_16, NULL);
+		float L_18 = L_17.___x;
+		int32_t L_19;
+		L_19 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_18, NULL);
+		if ((!(((uint32_t)L_15) == ((uint32_t)L_19))))
 		{
-			goto IL_009a;
+			goto IL_0082;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:65>
-		float* L_23 = (float*)(&(&V_1)->___x);
-		float* L_24 = L_23;
-		float L_25 = *((float*)L_24);
-		*((float*)L_24) = (float)((float)il2cpp_codegen_multiply(L_25, (-1.0f)));
+		float* L_20 = (float*)(&(&V_1)->___x);
+		float* L_21 = L_20;
+		float L_22 = *((float*)L_21);
+		*((float*)L_21) = (float)((float)il2cpp_codegen_multiply(L_22, (-1.0f)));
 	}
 
-IL_009a:
+IL_0082:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:66>
-		float L_26 = __this->____force;
-		(&V_1)->___y = L_26;
+		float L_23 = __this->____force;
+		(&V_1)->___y = L_23;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:67>
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = V_1;
-		float L_28 = L_27.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_1;
+		float L_25 = L_24.___z;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		int32_t L_29;
-		L_29 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_28, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
-		L_30 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_30);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
-		L_31 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_30, NULL);
-		float L_32 = L_31.___z;
-		int32_t L_33;
-		L_33 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_32, NULL);
-		V_5 = (bool)((((int32_t)L_29) == ((int32_t)L_33))? 1 : 0);
-		bool L_34 = V_5;
-		if (!L_34)
+		int32_t L_26;
+		L_26 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_25, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
+		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_27);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		L_28 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_27, NULL);
+		float L_29 = L_28.___z;
+		int32_t L_30;
+		L_30 = Math_Sign_mE85A053D9EFD3D62A630EB983D849F2FC331DE4A(L_29, NULL);
+		if ((!(((uint32_t)L_26) == ((uint32_t)L_30))))
 		{
-			goto IL_00df;
+			goto IL_00c1;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:68>
-		float* L_35 = (float*)(&(&V_1)->___z);
-		float* L_36 = L_35;
-		float L_37 = *((float*)L_36);
-		*((float*)L_36) = (float)((float)il2cpp_codegen_multiply(L_37, (-1.0f)));
+		float* L_31 = (float*)(&(&V_1)->___z);
+		float* L_32 = L_31;
+		float L_33 = *((float*)L_32);
+		*((float*)L_32) = (float)((float)il2cpp_codegen_multiply(L_33, (-1.0f)));
 	}
 
-IL_00df:
+IL_00c1:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:70>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_38 = __this->____rigidbody;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39 = V_1;
-		NullCheck(L_38);
-		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_38, L_39, 1, NULL);
-	}
-
-IL_00ed:
-	{
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_34 = __this->____rigidbody;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35 = V_1;
+		NullCheck(L_34);
+		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_34, L_35, 1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 80402
+// Method Definition Index: 80835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics__ctor_mAF6E54E8F30A858009FB99E01A4D158C997604DF (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12118,13 +11585,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics__ctor_mAF6E54E8F30A8
 		memset((&L_0), 0, sizeof(L_0));
 		FloatRange__ctor_m9EE180C6C3AA894E8E2E49FA22EC5289650F1075((&L_0), (3.0f), (10.0f), NULL);
 		__this->____interval = L_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/MoveRandomlyPhysics.cs:23>
-		__this->____nextForceTick = 0;
 		TickNetworkBehaviour__ctor_m3FC7C5D879A0695B83D78CCB6A1AD48B48A623E0(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 80403
+// Method Definition Index: 80836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_NetworkInitialize___Early_mCC343D3F8F13EEA54DA95BFAEC3BA7399E88A090 (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12145,7 +11610,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80404
+// Method Definition Index: 80837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_NetworkInitialize___Late_m8A94E54B5FC4575264B5391E7ACFE2AC1951E645 (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12166,7 +11631,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80405
+// Method Definition Index: 80838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_NetworkInitializeIfDisabled_mEB091537D2ABEFDCF680FBAE9F3F155C4CB7F556 (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12175,7 +11640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_NetworkInitializeIfD
 		return;
 	}
 }
-// Method Definition Index: 80406
+// Method Definition Index: 80839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Awake_UserLogic_FishNet_Demo_Benchmarks_NetworkTransforms_MoveRandomlyPhysics_FishNet_Demos_dll_mD346F3B34278A0F4A24FC25F8B9FD78F1A3F4CFA (MoveRandomlyPhysics_t03AB1FB0F0248A5AED71102D9EE2FD3DBD8404FD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12202,7 +11667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoveRandomlyPhysics_Awake_UserLogic_Fish
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80407
+// Method Definition Index: 80840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_OnStartServer_m3354BCD02BCFF4F54177B27666F71E152DFC7369 (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12217,23 +11682,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_OnStartServer_m3354BCD02BC
 	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_0 = NULL;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	int32_t V_3 = 0;
-	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_4 = NULL;
-	Scene_tA1DC762B79745EB5140F054C884855B922318356 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	bool V_6 = false;
+	int32_t V_2 = 0;
+	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_3 = NULL;
+	Scene_tA1DC762B79745EB5140F054C884855B922318356 V_4;
+	memset((&V_4), 0, sizeof(V_4));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:32>
 		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_0 = __this->____prefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_2 = L_1;
-		bool L_2 = V_2;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_001f;
+			goto IL_0019;
 		}
 	}
 	{
@@ -12241,67 +11702,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_OnStartServer_m3354BCD02BC
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral6B4D168E7ED16781FAD117DB99AC452824291667, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:35>
-		goto IL_006d;
+		return;
 	}
 
-IL_001f:
+IL_0019:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:38>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_3 = __this->____prefab;
-		V_0 = L_3;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_2 = __this->____prefab;
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:39>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
-		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_4);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
-		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
-		V_1 = L_5;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_3, NULL);
+		V_1 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:41>
-		V_3 = 0;
-		goto IL_005e;
+		V_2 = 0;
+		goto IL_0053;
 	}
 
-IL_0036:
+IL_0030:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:43>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_6 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = V_1;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8;
-		L_8 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_5 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7;
+		L_7 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_9;
-		L_9 = Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF(L_6, L_7, L_8, Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF_RuntimeMethod_var);
-		V_4 = L_9;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_8;
+		L_8 = Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF(L_5, L_6, L_7, Object_Instantiate_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m21D73E09041190F9C1F6E74FFC6287D5EC4FB8AF_RuntimeMethod_var);
+		V_3 = L_8;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:44>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_10 = V_4;
-		il2cpp_codegen_initobj((&V_5), sizeof(Scene_tA1DC762B79745EB5140F054C884855B922318356));
-		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_11 = V_5;
-		NetworkBehaviour_Spawn_m7210938ECAD47A19C3D82F37EB07605101F68553(__this, L_10, (NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*)NULL, L_11, NULL);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_9 = V_3;
+		il2cpp_codegen_initobj((&V_4), sizeof(Scene_tA1DC762B79745EB5140F054C884855B922318356));
+		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_10 = V_4;
+		NetworkBehaviour_Spawn_m7210938ECAD47A19C3D82F37EB07605101F68553(__this, L_9, (NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*)NULL, L_10, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:41>
-		int32_t L_12 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_12, 1));
+		int32_t L_11 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
-IL_005e:
+IL_0053:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:41>
-		int32_t L_13 = V_3;
-		int32_t L_14 = __this->____count;
-		V_6 = (bool)((((int32_t)L_13) < ((int32_t)L_14))? 1 : 0);
-		bool L_15 = V_6;
-		if (L_15)
+		int32_t L_12 = V_2;
+		int32_t L_13 = __this->____count;
+		if ((((int32_t)L_12) < ((int32_t)L_13)))
 		{
-			goto IL_0036;
+			goto IL_0030;
 		}
 	}
-
-IL_006d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:46>
 		return;
 	}
 }
-// Method Definition Index: 80408
+// Method Definition Index: 80841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_OnSpawnServer_m9831943A884A3DD07A441522CB92CBF8A3275DD3 (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_connection, const RuntimeMethod* method) 
 {
 	{
@@ -12313,7 +11770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_OnSpawnServer_m9831943A884
 		return;
 	}
 }
-// Method Definition Index: 80409
+// Method Definition Index: 80842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_Update_m20273851FA2ED86BF7CBD690C084B59A92B3AFBA (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12333,83 +11790,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_Update_m20273851FA2ED86BF7
 		s_Il2CppMethodInitialized = true;
 	}
 	uint32_t V_0 = 0;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
-	BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* V_4 = NULL;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* V_8 = NULL;
-	float V_9 = 0.0f;
-	float V_10 = 0.0f;
-	uint16_t V_11 = 0;
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* V_12 = NULL;
-	int32_t G_B7_0 = 0;
+	BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* V_1 = NULL;
+	float V_2 = 0.0f;
+	uint16_t V_3 = 0;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* V_4 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:56>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->____displayText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_1 = L_1;
-		bool L_2 = V_1;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0016;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:57>
-		goto IL_018c;
+		return;
 	}
 
-IL_0016:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:58>
-		bool L_3;
-		L_3 = NetworkBehaviour_get_IsServerInitialized_mFC7177578BCB5DF0AE6633ADEB8F03E4D62DE42A(__this, NULL);
-		V_2 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_2;
-		if (!L_4)
+		bool L_2;
+		L_2 = NetworkBehaviour_get_IsServerInitialized_mFC7177578BCB5DF0AE6633ADEB8F03E4D62DE42A(__this, NULL);
+		if (L_2)
 		{
-			goto IL_0028;
+			goto IL_0018;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:59>
-		goto IL_018c;
+		return;
 	}
 
-IL_0028:
+IL_0018:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:61>
-		float L_5 = __this->____resetBandwidthTime;
-		if ((((float)L_5) == ((float)(-std::numeric_limits<float>::infinity()))))
+		float L_3 = __this->____resetBandwidthTime;
+		if ((((float)L_3) == ((float)(-std::numeric_limits<float>::infinity()))))
 		{
-			goto IL_0047;
+			goto IL_005c;
 		}
 	}
 	{
-		float L_6;
-		L_6 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_7 = __this->____resetBandwidthTime;
-		G_B7_0 = ((((int32_t)((!(((float)L_6) >= ((float)L_7)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0048;
-	}
-
-IL_0047:
-	{
-		G_B7_0 = 0;
-	}
-
-IL_0048:
-	{
-		V_3 = (bool)G_B7_0;
-		bool L_8 = V_3;
-		if (!L_8)
+		float L_4;
+		L_4 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_5 = __this->____resetBandwidthTime;
+		if ((!(((float)L_4) >= ((float)L_5))))
 		{
-			goto IL_0083;
+			goto IL_005c;
 		}
 	}
 	{
@@ -12417,52 +11848,44 @@ IL_0048:
 		__this->____resetBandwidthTime = (-std::numeric_limits<float>::infinity());
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:64>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_9;
-		L_9 = Object_FindObjectOfType_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m611D5E744215012951AEB1D7D04552F7037CE758(Object_FindObjectOfType_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m611D5E744215012951AEB1D7D04552F7037CE758_RuntimeMethod_var);
-		V_4 = L_9;
+		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_6;
+		L_6 = Object_FindObjectOfType_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m611D5E744215012951AEB1D7D04552F7037CE758(Object_FindObjectOfType_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m611D5E744215012951AEB1D7D04552F7037CE758_RuntimeMethod_var);
+		V_1 = L_6;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:65>
-		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_10 = V_4;
-		bool L_11;
-		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_5 = L_11;
-		bool L_12 = V_5;
-		if (!L_12)
+		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_7 = V_1;
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
 		{
-			goto IL_0082;
+			goto IL_005c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:67>
-		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_13 = V_4;
-		NullCheck(L_13);
-		BandwidthDisplay_ResetAverages_mA882E4EC68816076D37D9039B94CA138EA14130C(L_13, NULL);
+		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_9 = V_1;
+		NullCheck(L_9);
+		BandwidthDisplay_ResetAverages_mA882E4EC68816076D37D9039B94CA138EA14130C(L_9, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:68>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralCA5F92040DC361EC2CE069CF9B3461E1E5162B1D, NULL);
 	}
 
-IL_0082:
-	{
-	}
-
-IL_0083:
+IL_005c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:72>
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_14;
-		L_14 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		NullCheck(L_14);
-		uint16_t L_15;
-		L_15 = TimeManager_get_TickRate_m82924518D1C59038F7F69BEAA57C0179F78FA8A6_inline(L_14, NULL);
-		int32_t L_16;
-		L_16 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(((float)L_15)/(4.0f))), NULL);
-		V_0 = L_16;
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_10;
+		L_10 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		NullCheck(L_10);
+		uint16_t L_11;
+		L_11 = TimeManager_get_TickRate_m82924518D1C59038F7F69BEAA57C0179F78FA8A6_inline(L_10, NULL);
+		int32_t L_12;
+		L_12 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(((float)L_11)/(4.0f))), NULL);
+		V_0 = L_12;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:73>
-		uint32_t L_17 = V_0;
-		V_6 = (bool)((!(((uint32_t)L_17) >= ((uint32_t)1)))? 1 : 0);
-		bool L_18 = V_6;
-		if (!L_18)
+		uint32_t L_13 = V_0;
+		if ((!(((uint32_t)L_13) < ((uint32_t)1))))
 		{
-			goto IL_00a7;
+			goto IL_007a;
 		}
 	}
 	{
@@ -12470,118 +11893,112 @@ IL_0083:
 		V_0 = 1;
 	}
 
-IL_00a7:
+IL_007a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:76>
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_19;
-		L_19 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		NullCheck(L_19);
-		uint32_t L_20;
-		L_20 = TimeManager_get_LocalTick_m33B90F5CF081E02D356737AB650141634B970275(L_19, NULL);
-		uint32_t L_21 = V_0;
-		V_7 = (bool)((((int32_t)((int32_t)((uint32_t)(int32_t)L_20%(uint32_t)(int32_t)L_21))) == ((int32_t)0))? 1 : 0);
-		bool L_22 = V_7;
-		if (!L_22)
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_14;
+		L_14 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		NullCheck(L_14);
+		uint32_t L_15;
+		L_15 = TimeManager_get_LocalTick_m33B90F5CF081E02D356737AB650141634B970275(L_14, NULL);
+		uint32_t L_16 = V_0;
+		if (((int32_t)((uint32_t)(int32_t)L_15%(uint32_t)(int32_t)L_16)))
 		{
-			goto IL_018c;
+			goto IL_0148;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:78>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_23 = __this->____displayText;
-		int32_t* L_24 = (int32_t*)(&__this->____count);
-		String_t* L_25;
-		L_25 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_24, NULL);
-		String_t* L_26;
-		L_26 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA50F052B50F35E13B49A92D3F6B57C4D34A4059C, L_25, NULL);
-		NullCheck(L_23);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_23, L_26);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_17 = __this->____displayText;
+		int32_t* L_18 = (int32_t*)(&__this->____count);
+		String_t* L_19;
+		L_19 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_18, NULL);
+		String_t* L_20;
+		L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA50F052B50F35E13B49A92D3F6B57C4D34A4059C, L_19, NULL);
+		NullCheck(L_17);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_17, L_20);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:79>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_27 = __this->____displayText;
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_28 = L_27;
-		NullCheck(L_28);
-		String_t* L_29;
-		L_29 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_28);
-		String_t* L_30;
-		L_30 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
-		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_31;
-		L_31 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
-		NullCheck(L_31);
-		uint16_t L_32;
-		L_32 = TimeManager_get_TickRate_m82924518D1C59038F7F69BEAA57C0179F78FA8A6_inline(L_31, NULL);
-		V_11 = L_32;
-		String_t* L_33;
-		L_33 = UInt16_ToString_m57629B7E74D92A54414073D5C27D6827C93A4DD5((&V_11), NULL);
-		String_t* L_34;
-		L_34 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_29, L_30, _stringLiteral7BA6BF9DAE51F176E0764767E54A22F7ED11DBCD, L_33, NULL);
-		NullCheck(L_28);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_28, L_34);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_21 = __this->____displayText;
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_22 = L_21;
+		NullCheck(L_22);
+		String_t* L_23;
+		L_23 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_22);
+		String_t* L_24;
+		L_24 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
+		TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* L_25;
+		L_25 = NetworkBehaviour_get_TimeManager_m104242F56940440A8CCD95A35328B957EAE0356D(__this, NULL);
+		NullCheck(L_25);
+		uint16_t L_26;
+		L_26 = TimeManager_get_TickRate_m82924518D1C59038F7F69BEAA57C0179F78FA8A6_inline(L_25, NULL);
+		V_3 = L_26;
+		String_t* L_27;
+		L_27 = UInt16_ToString_m57629B7E74D92A54414073D5C27D6827C93A4DD5((&V_3), NULL);
+		String_t* L_28;
+		L_28 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_23, L_24, _stringLiteral7BA6BF9DAE51F176E0764767E54A22F7ED11DBCD, L_27, NULL);
+		NullCheck(L_22);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_22, L_28);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:81>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_35;
-		L_35 = NetworkBehaviour_get_NetworkManager_m7C58BEBD68C8BA2DF9DB1FAF86ACB63E5FD57327(__this, NULL);
-		NullCheck(L_35);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36;
-		L_36 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_35, NULL);
-		NullCheck(L_36);
-		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_37;
-		L_37 = GameObject_GetComponent_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m2493EF83B1A5E6EF3FE36B20BE63295CA46E44FA(L_36, GameObject_GetComponent_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m2493EF83B1A5E6EF3FE36B20BE63295CA46E44FA_RuntimeMethod_var);
-		V_8 = L_37;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_29;
+		L_29 = NetworkBehaviour_get_NetworkManager_m7C58BEBD68C8BA2DF9DB1FAF86ACB63E5FD57327(__this, NULL);
+		NullCheck(L_29);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
+		L_30 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_29, NULL);
+		NullCheck(L_30);
+		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_31;
+		L_31 = GameObject_GetComponent_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m2493EF83B1A5E6EF3FE36B20BE63295CA46E44FA(L_30, GameObject_GetComponent_TisBandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E_m2493EF83B1A5E6EF3FE36B20BE63295CA46E44FA_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:82>
-		BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* L_38 = V_8;
-		NullCheck(L_38);
-		InOutAverage_t194246D30BA77B14306F01335D83095DE28BDB91* L_39;
-		L_39 = BandwidthDisplay_get_ServerAverages_mA97BEE3E582C0AD5B3CEA43C777F651DE51DAA12_inline(L_38, NULL);
-		NullCheck(L_39);
-		float L_40;
-		L_40 = InOutAverage_GetAverage_mC6DA78AE578DB9432DBEA7E3C9CB1CEB5246DD1B(L_39, (bool)0, NULL);
-		V_9 = L_40;
+		NullCheck(L_31);
+		InOutAverage_t194246D30BA77B14306F01335D83095DE28BDB91* L_32;
+		L_32 = BandwidthDisplay_get_ServerAverages_mA97BEE3E582C0AD5B3CEA43C777F651DE51DAA12_inline(L_31, NULL);
+		NullCheck(L_32);
+		float L_33;
+		L_33 = InOutAverage_GetAverage_mC6DA78AE578DB9432DBEA7E3C9CB1CEB5246DD1B(L_32, (bool)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:84>
-		float L_41 = V_9;
-		int32_t L_42 = __this->____count;
-		V_10 = ((float)(L_41/((float)L_42)));
+		int32_t L_34 = __this->____count;
+		V_2 = ((float)(L_33/((float)L_34)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:85>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_43 = __this->____displayText;
-		V_12 = L_43;
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_44 = V_12;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_45 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_46 = L_45;
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_47 = V_12;
-		NullCheck(L_47);
-		String_t* L_48;
-		L_48 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_47);
-		NullCheck(L_46);
-		(L_46)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_48);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_49 = L_46;
-		String_t* L_50;
-		L_50 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
-		NullCheck(L_49);
-		(L_49)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_50);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_51 = L_49;
-		NullCheck(L_51);
-		(L_51)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralA0D8E9F5483134902B88EB71CCB86DFFFA9380DB);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_52 = L_51;
-		float L_53 = V_10;
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_35 = __this->____displayText;
+		V_4 = L_35;
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_36 = V_4;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_37 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_38 = L_37;
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_39 = V_4;
+		NullCheck(L_39);
+		String_t* L_40;
+		L_40 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_39);
+		NullCheck(L_38);
+		(L_38)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_40);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_41 = L_38;
+		String_t* L_42;
+		L_42 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
+		NullCheck(L_41);
+		(L_41)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_42);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_43 = L_41;
+		NullCheck(L_43);
+		(L_43)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralA0D8E9F5483134902B88EB71CCB86DFFFA9380DB);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_44 = L_43;
+		float L_45 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(NetworkTrafficStatistics_t7C65483926E324593A260F62B31DAEA3EE205EC0_il2cpp_TypeInfo_var);
-		String_t* L_54;
-		L_54 = NetworkTrafficStatistics_FormatBytesToLargest_m5E62DCAF65079DEC3F035956BE6CA41A098CBD15(L_53, NULL);
-		NullCheck(L_52);
-		(L_52)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_54);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_55 = L_52;
-		NullCheck(L_55);
-		(L_55)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral0FC803AE0BF156F9E4BDDC572B23DAB06292265E);
-		String_t* L_56;
-		L_56 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_55, NULL);
+		String_t* L_46;
+		L_46 = NetworkTrafficStatistics_FormatBytesToLargest_m5E62DCAF65079DEC3F035956BE6CA41A098CBD15(L_45, NULL);
 		NullCheck(L_44);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_44, L_56);
+		(L_44)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_46);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_47 = L_44;
+		NullCheck(L_47);
+		(L_47)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral0FC803AE0BF156F9E4BDDC572B23DAB06292265E);
+		String_t* L_48;
+		L_48 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_47, NULL);
+		NullCheck(L_36);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_36, L_48);
 	}
 
-IL_018c:
+IL_0148:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Benchmarks/NetworkTransform/Scripts/PrefabSpawner.cs:87>
 		return;
 	}
 }
-// Method Definition Index: 80410
+// Method Definition Index: 80843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner__ctor_m1381C1B8E0B68822BF2CAD5834A3F8FFE96226B0 (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12600,7 +12017,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner__ctor_m1381C1B8E0B68822BF2
 		return;
 	}
 }
-// Method Definition Index: 80411
+// Method Definition Index: 80844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_NetworkInitialize___Early_m62E1E224BF19935F6938DE7401A721DED57CECD7 (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12621,7 +12038,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80412
+// Method Definition Index: 80845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_NetworkInitialize___Late_mF190FBFB95F8CC6608F5DA75995E4795E6676F7F (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12642,7 +12059,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80413
+// Method Definition Index: 80846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_NetworkInitializeIfDisabled_m0094E6B84D175654368141A8FA77D7C3A55BB865 (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12651,7 +12068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_NetworkInitializeIfDisable
 		return;
 	}
 }
-// Method Definition Index: 80414
+// Method Definition Index: 80847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_Awake_m5F0D8074C45640BDD55733B3DF94DFC940D4134F (PrefabSpawner_tFD242AAEE33921846D61C2AF9575F3CE880D585C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12668,7 +12085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PrefabSpawner_Awake_m5F0D8074C45640BDD55
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80415
+// Method Definition Index: 80848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_SetAllowHostAuthentication_mF5129A59ABBFA4B9B9A3CF687A03A53458D438BE (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -12678,7 +12095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_SetAllowHostAuthentica
 		return;
 	}
 }
-// Method Definition Index: 80416
+// Method Definition Index: 80849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HostAuthenticator_GetAllowHostAuthentication_m5096D0D9AFAEB8A52E54DE9509138034CD021165 (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12687,7 +12104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HostAuthenticator_GetAllowHostAuthentica
 		return L_0;
 	}
 }
-// Method Definition Index: 80417
+// Method Definition Index: 80850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_InitializeOnce_m80D5601C6F5E8E91B41E352E2794E94CE8D7D747 (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* ___0_networkManager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12728,7 +12145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_InitializeOnce_m80D560
 		return;
 	}
 }
-// Method Definition Index: 80418
+// Method Definition Index: 80851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_ServerManager_OnServerConnectionState_mF610DCBB34492F535E59D34E0D139CFAFC13B006 (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 ___0_obj, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -12739,20 +12156,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_ServerManager_OnServer
 		int32_t L_1 = L_0.___ConnectionState;
 		if ((((int32_t)L_1) == ((int32_t)8)))
 		{
-			goto IL_000d;
+			goto IL_000c;
 		}
 	}
 	{
 		G_B3_0 = 0;
-		goto IL_000f;
+		goto IL_000e;
 	}
 
-IL_000d:
+IL_000c:
 	{
 		G_B3_0 = ((int32_t)25);
 	}
 
-IL_000f:
+IL_000e:
 	{
 		V_0 = G_B3_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:65>
@@ -12762,7 +12179,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 80419
+// Method Definition Index: 80852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_OnHostPasswordBroadcast_m4390DD49324CEF429A1B4FE848C66769BBF419DA (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A ___1_hpb, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12772,73 +12189,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_OnHostPasswordBroadcas
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:76>
 		bool L_0 = __this->____allowHostAuthentication;
-		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_1;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0019;
+			goto IL_0010;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:78>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_2 = ___0_conn;
-		NullCheck(L_2);
-		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_2, (bool)1, NULL);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_1 = ___0_conn;
+		NullCheck(L_1);
+		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_1, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:79>
-		goto IL_0048;
+		return;
 	}
 
-IL_0019:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:84>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_3 = ___0_conn;
-		NullCheck(L_3);
-		bool L_4;
-		L_4 = NetworkConnection_get_IsAuthenticated_mE4D6289CC2DEDB78437ED9E9DE0F19931CF3A808_inline(L_3, NULL);
-		V_2 = L_4;
-		bool L_5 = V_2;
-		if (!L_5)
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_2 = ___0_conn;
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = NetworkConnection_get_IsAuthenticated_mE4D6289CC2DEDB78437ED9E9DE0F19931CF3A808_inline(L_2, NULL);
+		if (!L_3)
 		{
-			goto IL_002e;
+			goto IL_0020;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:86>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_6 = ___0_conn;
-		NullCheck(L_6);
-		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_6, (bool)1, NULL);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_4 = ___0_conn;
+		NullCheck(L_4);
+		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_4, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:87>
-		goto IL_0048;
+		return;
 	}
 
-IL_002e:
+IL_0020:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:90>
-		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_7 = ___1_hpb;
-		String_t* L_8 = L_7.___Password;
+		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_5 = ___1_hpb;
+		String_t* L_6 = L_5.___Password;
 		il2cpp_codegen_runtime_class_init_inline(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var);
-		String_t* L_9 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
-		bool L_10;
-		L_10 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_8, L_9, NULL);
-		V_0 = L_10;
+		String_t* L_7 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
+		bool L_8;
+		L_8 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_6, L_7, NULL);
+		V_0 = L_8;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:91>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_11 = ___0_conn;
-		bool L_12 = V_0;
-		VirtualActionInvoker2< NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*, bool >::Invoke(8, __this, L_11, L_12);
-	}
-
-IL_0048:
-	{
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_9 = ___0_conn;
+		bool L_10 = V_0;
+		VirtualActionInvoker2< NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C*, bool >::Invoke(8, __this, L_9, L_10);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:92>
 		return;
 	}
 }
-// Method Definition Index: 80421
+// Method Definition Index: 80854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_SetHostHash_mB2C682D0ED7941801CCD4EAEC64474DE492D4BF2 (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, int32_t ___0_length, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12852,62 +12259,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator_SetHostHash_mB2C682D0E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	StringBuilder_t* V_1 = NULL;
-	RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* V_2 = NULL;
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_3 = NULL;
-	uint32_t V_4 = 0;
-	bool V_5 = false;
+	StringBuilder_t* V_0 = NULL;
+	RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* V_1 = NULL;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_2 = NULL;
+	uint32_t V_3 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:107>
 		int32_t L_0 = ___0_length;
-		V_0 = (bool)((((int32_t)((((int32_t)L_0) > ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if ((((int32_t)L_0) > ((int32_t)0)))
 		{
-			goto IL_001a;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:109>
-		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+		String_t* L_1 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		il2cpp_codegen_runtime_class_init_inline(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var);
-		((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash), (void*)L_2);
-		goto IL_008b;
+		((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash), (void*)L_1);
+		return;
 	}
 
-IL_001a:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:114>
-		StringBuilder_t* L_3 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
-		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_3, NULL);
-		V_1 = L_3;
+		StringBuilder_t* L_2 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
+		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_2, NULL);
+		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:115>
-		RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_4 = (RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170*)il2cpp_codegen_object_new(RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170_il2cpp_TypeInfo_var);
-		RNGCryptoServiceProvider__ctor_m605146E692C0209B3FFE83F7AC94335CA089CA09(L_4, NULL);
-		V_2 = L_4;
+		RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_3 = (RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170*)il2cpp_codegen_object_new(RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170_il2cpp_TypeInfo_var);
+		RNGCryptoServiceProvider__ctor_m605146E692C0209B3FFE83F7AC94335CA089CA09(L_3, NULL);
+		V_1 = L_3;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0074:
+FINALLY_005b:
 			{
 				{
-					RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_5 = V_2;
-					if (!L_5)
+					RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_4 = V_1;
+					if (!L_4)
 					{
-						goto IL_007e;
+						goto IL_0064;
 					}
 				}
 				{
-					RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_6 = V_2;
-					NullCheck(L_6);
-					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_6);
+					RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_5 = V_1;
+					NullCheck(L_5);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
 				}
 
-IL_007e:
+IL_0064:
 				{
 					return;
 				}
@@ -12917,52 +12320,51 @@ IL_007e:
 		{
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:117>
-				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)4);
-				V_3 = L_7;
-				goto IL_0062_1;
+				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)4);
+				V_2 = L_6;
+				goto IL_0050_1;
 			}
 
-IL_0031_1:
+IL_0024_1:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:120>
-				RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_8 = V_2;
-				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_3;
-				NullCheck(L_8);
-				VirtualActionInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(6, L_8, L_9);
+				RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170* L_7 = V_1;
+				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8 = V_2;
+				NullCheck(L_7);
+				VirtualActionInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(6, L_7, L_8);
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:121>
-				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = V_3;
-				uint32_t L_11;
-				L_11 = BitConverter_ToUInt32_m177FADD1E9B033C11D74E8DD1F957F62EF0BA177(L_10, 0, NULL);
-				V_4 = L_11;
+				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_2;
+				uint32_t L_10;
+				L_10 = BitConverter_ToUInt32_m177FADD1E9B033C11D74E8DD1F957F62EF0BA177(L_9, 0, NULL);
+				V_3 = L_10;
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:122>
-				StringBuilder_t* L_12 = V_1;
-				uint32_t L_13 = V_4;
+				StringBuilder_t* L_11 = V_0;
+				uint32_t L_12 = V_3;
 				NullCheck(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB);
-				int32_t L_14;
-				L_14 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB, NULL);
+				int32_t L_13;
+				L_13 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB, NULL);
 				NullCheck(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB);
-				Il2CppChar L_15;
-				L_15 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB, ((int32_t)((uint32_t)(int32_t)L_13%(uint32_t)(int32_t)L_14)), NULL);
-				NullCheck(L_12);
-				StringBuilder_t* L_16;
-				L_16 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_12, L_15, NULL);
+				Il2CppChar L_14;
+				L_14 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(_stringLiteralDF8A055951041B659CB58F0943B52A541C50D4BB, ((int32_t)((uint32_t)(int32_t)L_12%(uint32_t)(int32_t)L_13)), NULL);
+				NullCheck(L_11);
+				StringBuilder_t* L_15;
+				L_15 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_11, L_14, NULL);
 			}
 
-IL_0062_1:
+IL_0050_1:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:118>
-				int32_t L_17 = ___0_length;
-				int32_t L_18 = L_17;
-				___0_length = ((int32_t)il2cpp_codegen_subtract(L_18, 1));
-				V_5 = (bool)((((int32_t)L_18) > ((int32_t)0))? 1 : 0);
-				bool L_19 = V_5;
-				if (L_19)
+				int32_t L_16 = ___0_length;
+				int32_t L_17 = L_16;
+				___0_length = ((int32_t)il2cpp_codegen_subtract(L_17, 1));
+				if ((((int32_t)L_17) > ((int32_t)0)))
 				{
-					goto IL_0031_1;
+					goto IL_0024_1;
 				}
 			}
 			{
-				goto IL_007f;
+				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:124>
+				goto IL_0065;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -12971,25 +12373,21 @@ IL_0062_1:
 		}
 	}
 
-IL_007f:
+IL_0065:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:126>
-		StringBuilder_t* L_20 = V_1;
-		NullCheck(L_20);
-		String_t* L_21;
-		L_21 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_20);
+		StringBuilder_t* L_18 = V_0;
+		NullCheck(L_18);
+		String_t* L_19;
+		L_19 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_18);
 		il2cpp_codegen_runtime_class_init_inline(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var);
-		((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash = L_21;
-		Il2CppCodeGenWriteBarrier((void**)(&((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash), (void*)L_21);
-	}
-
-IL_008b:
-	{
+		((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash = L_19;
+		Il2CppCodeGenWriteBarrier((void**)(&((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash), (void*)L_19);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:128>
 		return;
 	}
 }
-// Method Definition Index: 80422
+// Method Definition Index: 80855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HostAuthenticator_TryAuthenticateAsClientHost_mC03532E56E1E2AE5DBD60CC4524990CC3661B34B (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13001,83 +12399,66 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HostAuthenticator_TryAuthenticateAsClien
 	}
 	HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
-	HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A V_4;
-	memset((&V_4), 0, sizeof(V_4));
+	HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:136>
 		bool L_0 = __this->____allowHostAuthentication;
-		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_1;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0012;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:137>
-		V_2 = (bool)0;
-		goto IL_0057;
+		return (bool)0;
 	}
 
-IL_0012:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:140>
 		il2cpp_codegen_runtime_class_init_inline(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var);
-		String_t* L_2 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
-		String_t* L_3 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
-		bool L_4;
-		L_4 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, L_3, NULL);
-		V_3 = L_4;
-		bool L_5 = V_3;
-		if (!L_5)
+		String_t* L_1 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
+		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+		bool L_3;
+		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_1, L_2, NULL);
+		if (!L_3)
 		{
-			goto IL_0029;
+			goto IL_001d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:141>
-		V_2 = (bool)0;
-		goto IL_0057;
+		return (bool)0;
 	}
 
-IL_0029:
+IL_001d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:144>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:145>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:146>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:147>
-		il2cpp_codegen_initobj((&V_4), sizeof(HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A));
+		il2cpp_codegen_initobj((&V_1), sizeof(HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A));
 		il2cpp_codegen_runtime_class_init_inline(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var);
-		String_t* L_6 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
-		(&V_4)->___Password = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_4)->___Password), (void*)L_6);
-		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_7 = V_4;
-		V_0 = L_7;
+		String_t* L_4 = ((HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_StaticFields*)il2cpp_codegen_static_fields_for(HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3_il2cpp_TypeInfo_var))->____hostHash;
+		(&V_1)->___Password = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___Password), (void*)L_4);
+		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_5 = V_1;
+		V_0 = L_5;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:149>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_8;
-		L_8 = Authenticator_get_NetworkManager_m6E83AF25D5E1F5B7BB819E6DD6D7473E2B393E47_inline(__this, NULL);
-		NullCheck(L_8);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_9;
-		L_9 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_8, NULL);
-		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_10 = V_0;
-		NullCheck(L_9);
-		ClientManager_Broadcast_TisHostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A_m16888EA6E4F84CDEEA8D3D0486194FE06CDB7341(L_9, L_10, 0, ClientManager_Broadcast_TisHostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A_m16888EA6E4F84CDEEA8D3D0486194FE06CDB7341_RuntimeMethod_var);
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_6;
+		L_6 = Authenticator_get_NetworkManager_m6E83AF25D5E1F5B7BB819E6DD6D7473E2B393E47_inline(__this, NULL);
+		NullCheck(L_6);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_7;
+		L_7 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_6, NULL);
+		HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A L_8 = V_0;
+		NullCheck(L_7);
+		ClientManager_Broadcast_TisHostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A_m16888EA6E4F84CDEEA8D3D0486194FE06CDB7341(L_7, L_8, 0, ClientManager_Broadcast_TisHostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A_m16888EA6E4F84CDEEA8D3D0486194FE06CDB7341_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:150>
-		V_2 = (bool)1;
-		goto IL_0057;
-	}
-
-IL_0057:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/HostAuthenticator.cs:151>
-		bool L_11 = V_2;
-		return L_11;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 80423
+// Method Definition Index: 80856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator__ctor_m48F4AE66F6E40A00F6EA3CB3919F471EFF9D5BE0 (HostAuthenticator_t0D6643ED686B6F834567F269C05033CDB81DB5E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13085,7 +12466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator__ctor_m48F4AE66F6E40A0
 		return;
 	}
 }
-// Method Definition Index: 80424
+// Method Definition Index: 80857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator__cctor_mA463D713A36B678EC5A293D322B71F6E04F5499F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13110,7 +12491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAuthenticator__cctor_mA463D713A36B67
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80425
+// Method Definition Index: 80858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnGUI_m559ECB7C5F8B68D9FE90408173903A311211435A (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13130,9 +12511,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnGUI_m559ECB7C5F8B68
 	int32_t V_2 = 0;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_3;
 	memset((&V_3), 0, sizeof(V_3));
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:102>
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0;
@@ -13184,42 +12562,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnGUI_m559ECB7C5F8B68
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_16;
 		L_16 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
-		V_4 = (bool)((((int32_t)((((int32_t)L_16) == ((int32_t)((int32_t)17)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_17 = V_4;
-		if (!L_17)
+		if ((((int32_t)L_16) == ((int32_t)((int32_t)17))))
 		{
-			goto IL_0104;
+			goto IL_00ee;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:114>
-		int32_t L_18 = __this->____serverState;
+		int32_t L_17 = __this->____serverState;
+		String_t* L_18;
+		L_18 = NetworkHudCanvases_U3COnGUIU3Eg__GetNextStateTextU7C10_0_m2DF3FFFB3C7DADA7F9AFD90E72E02F4210A31502(L_17, NULL);
 		String_t* L_19;
-		L_19 = NetworkHudCanvases_U3COnGUIU3Eg__GetNextStateTextU7C10_0_m2DF3FFFB3C7DADA7F9AFD90E72E02F4210A31502(L_18, NULL);
-		String_t* L_20;
-		L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_19, _stringLiteral215AB231A47F739D51F76BA12A26F00FB9759F28, NULL);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_21 = (GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)SZArrayNew(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2_il2cpp_TypeInfo_var, (uint32_t)2);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_22 = L_21;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = V_3;
-		float L_24 = L_23.___x;
-		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_25;
-		L_25 = GUILayout_Width_m3FADF145F37481F9FEFF0E89E8A466CF5532DCE3(L_24, NULL);
-		NullCheck(L_22);
-		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(0), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_25);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_26 = L_22;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = V_3;
-		float L_28 = L_27.___y;
-		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_29;
-		L_29 = GUILayout_Height_m5E1526C541663A21437ED06E233FDDA08A856B91(L_28, NULL);
-		NullCheck(L_26);
-		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(1), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_29);
-		bool L_30;
-		L_30 = GUILayout_Button_m8CF27DB531C6A54FF0F7BD8CDE4FB5030B159E9E(L_20, L_26, NULL);
-		V_5 = L_30;
-		bool L_31 = V_5;
-		if (!L_31)
+		L_19 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_18, _stringLiteral215AB231A47F739D51F76BA12A26F00FB9759F28, NULL);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_20 = (GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)SZArrayNew(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2_il2cpp_TypeInfo_var, (uint32_t)2);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_21 = L_20;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_22 = V_3;
+		float L_23 = L_22.___x;
+		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_24;
+		L_24 = GUILayout_Width_m3FADF145F37481F9FEFF0E89E8A466CF5532DCE3(L_23, NULL);
+		NullCheck(L_21);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(0), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_24);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_25 = L_21;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26 = V_3;
+		float L_27 = L_26.___y;
+		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_28;
+		L_28 = GUILayout_Height_m5E1526C541663A21437ED06E233FDDA08A856B91(L_27, NULL);
+		NullCheck(L_25);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(1), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_28);
+		bool L_29;
+		L_29 = GUILayout_Button_m8CF27DB531C6A54FF0F7BD8CDE4FB5030B159E9E(L_19, L_25, NULL);
+		if (!L_29)
 		{
-			goto IL_00f8;
+			goto IL_00e4;
 		}
 	}
 	{
@@ -13227,42 +12601,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnGUI_m559ECB7C5F8B68
 		NetworkHudCanvases_OnClick_Server_mF64F18EE3A9F4B4BC1CF310D822C55D3DB7750E8(__this, NULL);
 	}
 
-IL_00f8:
+IL_00e4:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:116>
 		GUILayout_Space_m9254FBF173F9260DDB6C83C0066447FC9D9CA597((10.0f), NULL);
 	}
 
-IL_0104:
+IL_00ee:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:120>
-		int32_t L_32 = __this->____clientState;
-		String_t* L_33;
-		L_33 = NetworkHudCanvases_U3COnGUIU3Eg__GetNextStateTextU7C10_0_m2DF3FFFB3C7DADA7F9AFD90E72E02F4210A31502(L_32, NULL);
-		String_t* L_34;
-		L_34 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_33, _stringLiteral37EBFE438DB8CFD1C17E9D61C950407F9535EBD2, NULL);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_35 = (GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)SZArrayNew(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2_il2cpp_TypeInfo_var, (uint32_t)2);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_36 = L_35;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_37 = V_3;
-		float L_38 = L_37.___x;
-		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_39;
-		L_39 = GUILayout_Width_m3FADF145F37481F9FEFF0E89E8A466CF5532DCE3(L_38, NULL);
-		NullCheck(L_36);
-		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(0), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_39);
-		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_40 = L_36;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_41 = V_3;
-		float L_42 = L_41.___y;
-		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_43;
-		L_43 = GUILayout_Height_m5E1526C541663A21437ED06E233FDDA08A856B91(L_42, NULL);
-		NullCheck(L_40);
-		(L_40)->SetAt(static_cast<il2cpp_array_size_t>(1), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_43);
-		bool L_44;
-		L_44 = GUILayout_Button_m8CF27DB531C6A54FF0F7BD8CDE4FB5030B159E9E(L_34, L_40, NULL);
-		V_6 = L_44;
-		bool L_45 = V_6;
-		if (!L_45)
+		int32_t L_30 = __this->____clientState;
+		String_t* L_31;
+		L_31 = NetworkHudCanvases_U3COnGUIU3Eg__GetNextStateTextU7C10_0_m2DF3FFFB3C7DADA7F9AFD90E72E02F4210A31502(L_30, NULL);
+		String_t* L_32;
+		L_32 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_31, _stringLiteral37EBFE438DB8CFD1C17E9D61C950407F9535EBD2, NULL);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_33 = (GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2*)SZArrayNew(GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2_il2cpp_TypeInfo_var, (uint32_t)2);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_34 = L_33;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_35 = V_3;
+		float L_36 = L_35.___x;
+		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_37;
+		L_37 = GUILayout_Width_m3FADF145F37481F9FEFF0E89E8A466CF5532DCE3(L_36, NULL);
+		NullCheck(L_34);
+		(L_34)->SetAt(static_cast<il2cpp_array_size_t>(0), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_37);
+		GUILayoutOptionU5BU5D_t24AB80AB9355D784F2C65E12A4D0CC2E0C914CA2* L_38 = L_34;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = V_3;
+		float L_40 = L_39.___y;
+		GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14* L_41;
+		L_41 = GUILayout_Height_m5E1526C541663A21437ED06E233FDDA08A856B91(L_40, NULL);
+		NullCheck(L_38);
+		(L_38)->SetAt(static_cast<il2cpp_array_size_t>(1), (GUILayoutOption_t8B0AA056521747053A3176FCC43E9C3608940A14*)L_41);
+		bool L_42;
+		L_42 = GUILayout_Button_m8CF27DB531C6A54FF0F7BD8CDE4FB5030B159E9E(L_32, L_38, NULL);
+		if (!L_42)
 		{
-			goto IL_014d;
+			goto IL_0132;
 		}
 	}
 	{
@@ -13270,20 +12642,20 @@ IL_0104:
 		NetworkHudCanvases_OnClick_Client_mB2265087236F7B1F86FE090F013CFB51CC8C0ED2(__this, NULL);
 	}
 
-IL_014d:
+IL_0132:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:123>
-		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_46 = V_1;
-		int32_t L_47 = V_2;
-		NullCheck(L_46);
-		GUIStyle_set_fontSize_m7F6DFD61AC55072C95DC3825B77FAE3F75F1CCFF(L_46, L_47, NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_43 = V_1;
+		int32_t L_44 = V_2;
+		NullCheck(L_43);
+		GUIStyle_set_fontSize_m7F6DFD61AC55072C95DC3825B77FAE3F75F1CCFF(L_43, L_44, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:125>
 		GUILayout_EndArea_m3A9C6B4D373E8A871A71E0D8D2D9249D9F62F079(NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:127>
 		return;
 	}
 }
-// Method Definition Index: 80426
+// Method Definition Index: 80859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_Start_m1D9B089E97AE5EA35291F072573EE813B05B5A0D (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13300,12 +12672,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_Start_m1D9B089E97AE5E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral02BFBD83487AAF2118C78BEC8377371B8E1E2CB4);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	int32_t G_B5_0 = 0;
-	int32_t G_B11_0 = 0;
-	int32_t G_B13_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:137>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->____serverIndicator;
@@ -13337,11 +12703,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_Start_m1D9B089E97AE5E
 		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_7 = __this->____networkManager;
 		bool L_8;
 		L_8 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_8;
-		bool L_9 = V_0;
-		if (!L_9)
+		if (!L_8)
 		{
-			goto IL_005b;
+			goto IL_0050;
 		}
 	}
 	{
@@ -13349,128 +12713,95 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_Start_m1D9B089E97AE5E
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral02BFBD83487AAF2118C78BEC8377371B8E1E2CB4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:145>
-		goto IL_00fd;
+		return;
 	}
 
-IL_005b:
+IL_0050:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:149>
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_10 = (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)(&__this->____serverIndicator);
-		NetworkHudCanvases_UpdateColor_m050D27FBC74D8C932F1E9F5BA8C3E4E35D0E4FC7(__this, 1, L_10, NULL);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_9 = (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)(&__this->____serverIndicator);
+		NetworkHudCanvases_UpdateColor_m050D27FBC74D8C932F1E9F5BA8C3E4E35D0E4FC7(__this, 1, L_9, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:150>
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_11 = (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)(&__this->____clientIndicator);
-		NetworkHudCanvases_UpdateColor_m050D27FBC74D8C932F1E9F5BA8C3E4E35D0E4FC7(__this, 1, L_11, NULL);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_10 = (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)(&__this->____clientIndicator);
+		NetworkHudCanvases_UpdateColor_m050D27FBC74D8C932F1E9F5BA8C3E4E35D0E4FC7(__this, 1, L_10, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:151>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_12 = __this->____networkManager;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_11 = __this->____networkManager;
+		NullCheck(L_11);
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_12;
+		L_12 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_11, NULL);
+		Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* L_13 = (Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE*)il2cpp_codegen_object_new(Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE_il2cpp_TypeInfo_var);
+		Action_1__ctor_m048681A8AC8A03B21254FF612BBD498CC5C61211(L_13, __this, (intptr_t)((void*)NetworkHudCanvases_ServerManager_OnServerConnectionState_m08EF0D36B9BDEF57E8F98645BB2378C05B0C23C6_RuntimeMethod_var), NULL);
 		NullCheck(L_12);
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_13;
-		L_13 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_12, NULL);
-		Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* L_14 = (Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE*)il2cpp_codegen_object_new(Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE_il2cpp_TypeInfo_var);
-		Action_1__ctor_m048681A8AC8A03B21254FF612BBD498CC5C61211(L_14, __this, (intptr_t)((void*)NetworkHudCanvases_ServerManager_OnServerConnectionState_m08EF0D36B9BDEF57E8F98645BB2378C05B0C23C6_RuntimeMethod_var), NULL);
-		NullCheck(L_13);
-		ServerManager_add_OnServerConnectionState_mDC16272B770E62F6CDBB7FE5259776EDF6767AAC(L_13, L_14, NULL);
+		ServerManager_add_OnServerConnectionState_mDC16272B770E62F6CDBB7FE5259776EDF6767AAC(L_12, L_13, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:152>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_15 = __this->____networkManager;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_14 = __this->____networkManager;
+		NullCheck(L_14);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_15;
+		L_15 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_14, NULL);
+		Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* L_16 = (Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD*)il2cpp_codegen_object_new(Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD_il2cpp_TypeInfo_var);
+		Action_1__ctor_mF6E47E991B0A64C730507127FB96AF69E6CBE84E(L_16, __this, (intptr_t)((void*)NetworkHudCanvases_ClientManager_OnClientConnectionState_mA290D857CD7FDCD254DA227E47C4A762ECA717D9_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_16;
-		L_16 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_15, NULL);
-		Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* L_17 = (Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD*)il2cpp_codegen_object_new(Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD_il2cpp_TypeInfo_var);
-		Action_1__ctor_mF6E47E991B0A64C730507127FB96AF69E6CBE84E(L_17, __this, (intptr_t)((void*)NetworkHudCanvases_ClientManager_OnClientConnectionState_mA290D857CD7FDCD254DA227E47C4A762ECA717D9_RuntimeMethod_var), NULL);
-		NullCheck(L_16);
-		ClientManager_add_OnClientConnectionState_m11B448872D7AF07AA2350590DE7C7792B2A01AA3(L_16, L_17, NULL);
+		ClientManager_add_OnClientConnectionState_m11B448872D7AF07AA2350590DE7C7792B2A01AA3(L_15, L_16, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:155>
+		int32_t L_17 = __this->____autoStartType;
+		if ((((int32_t)L_17) == ((int32_t)1)))
+		{
+			goto IL_00b4;
+		}
+	}
+	{
 		int32_t L_18 = __this->____autoStartType;
-		if ((((int32_t)L_18) == ((int32_t)1)))
+		if ((!(((uint32_t)L_18) == ((uint32_t)2))))
 		{
-			goto IL_00c7;
+			goto IL_00ba;
 		}
 	}
-	{
-		int32_t L_19 = __this->____autoStartType;
-		G_B5_0 = ((((int32_t)L_19) == ((int32_t)2))? 1 : 0);
-		goto IL_00c8;
-	}
 
-IL_00c7:
-	{
-		G_B5_0 = 1;
-	}
-
-IL_00c8:
-	{
-		V_1 = (bool)G_B5_0;
-		bool L_20 = V_1;
-		if (!L_20)
-		{
-			goto IL_00d3;
-		}
-	}
+IL_00b4:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:156>
 		NetworkHudCanvases_OnClick_Server_mF64F18EE3A9F4B4BC1CF310D822C55D3DB7750E8(__this, NULL);
 	}
 
-IL_00d3:
+IL_00ba:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:157>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
-		bool L_21;
-		L_21 = Application_get_isBatchMode_mDE2DA11B2DAC8D8239BACD75A56A6EE6BAA4DC36(NULL);
-		if (L_21)
+		bool L_19;
+		L_19 = Application_get_isBatchMode_mDE2DA11B2DAC8D8239BACD75A56A6EE6BAA4DC36(NULL);
+		if (L_19)
 		{
-			goto IL_00f1;
+			goto IL_00d9;
 		}
 	}
 	{
-		int32_t L_22 = __this->____autoStartType;
-		if ((((int32_t)L_22) == ((int32_t)1)))
+		int32_t L_20 = __this->____autoStartType;
+		if ((((int32_t)L_20) == ((int32_t)1)))
 		{
-			goto IL_00ee;
+			goto IL_00d3;
 		}
 	}
 	{
-		int32_t L_23 = __this->____autoStartType;
-		G_B11_0 = ((((int32_t)L_23) == ((int32_t)3))? 1 : 0);
-		goto IL_00ef;
-	}
-
-IL_00ee:
-	{
-		G_B11_0 = 1;
-	}
-
-IL_00ef:
-	{
-		G_B13_0 = G_B11_0;
-		goto IL_00f2;
-	}
-
-IL_00f1:
-	{
-		G_B13_0 = 0;
-	}
-
-IL_00f2:
-	{
-		V_2 = (bool)G_B13_0;
-		bool L_24 = V_2;
-		if (!L_24)
+		int32_t L_21 = __this->____autoStartType;
+		if ((!(((uint32_t)L_21) == ((uint32_t)3))))
 		{
-			goto IL_00fd;
+			goto IL_00d9;
 		}
 	}
+
+IL_00d3:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:158>
 		NetworkHudCanvases_OnClick_Client_mB2265087236F7B1F86FE090F013CFB51CC8C0ED2(__this, NULL);
 	}
 
-IL_00fd:
+IL_00d9:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:159>
 		return;
 	}
 }
-// Method Definition Index: 80427
+// Method Definition Index: 80860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnDestroy_m89426988716B53FB2F11C3F4F4766F8A6042EABF (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13483,115 +12814,102 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnDestroy_m8942698871
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:163>
 		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_0 = __this->____networkManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:164>
-		goto IL_004d;
+		return;
 	}
 
-IL_0013:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:166>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_3 = __this->____networkManager;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_2 = __this->____networkManager;
+		NullCheck(L_2);
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_3;
+		L_3 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_2, NULL);
+		Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* L_4 = (Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE*)il2cpp_codegen_object_new(Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE_il2cpp_TypeInfo_var);
+		Action_1__ctor_m048681A8AC8A03B21254FF612BBD498CC5C61211(L_4, __this, (intptr_t)((void*)NetworkHudCanvases_ServerManager_OnServerConnectionState_m08EF0D36B9BDEF57E8F98645BB2378C05B0C23C6_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_4;
-		L_4 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_3, NULL);
-		Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* L_5 = (Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE*)il2cpp_codegen_object_new(Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE_il2cpp_TypeInfo_var);
-		Action_1__ctor_m048681A8AC8A03B21254FF612BBD498CC5C61211(L_5, __this, (intptr_t)((void*)NetworkHudCanvases_ServerManager_OnServerConnectionState_m08EF0D36B9BDEF57E8F98645BB2378C05B0C23C6_RuntimeMethod_var), NULL);
-		NullCheck(L_4);
-		ServerManager_remove_OnServerConnectionState_mCEF5B3C4043461E79DC18D5F688102E29AB44CE8(L_4, L_5, NULL);
+		ServerManager_remove_OnServerConnectionState_mCEF5B3C4043461E79DC18D5F688102E29AB44CE8(L_3, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:167>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_6 = __this->____networkManager;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5 = __this->____networkManager;
+		NullCheck(L_5);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_6;
+		L_6 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_5, NULL);
+		Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* L_7 = (Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD*)il2cpp_codegen_object_new(Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD_il2cpp_TypeInfo_var);
+		Action_1__ctor_mF6E47E991B0A64C730507127FB96AF69E6CBE84E(L_7, __this, (intptr_t)((void*)NetworkHudCanvases_ClientManager_OnClientConnectionState_mA290D857CD7FDCD254DA227E47C4A762ECA717D9_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_7;
-		L_7 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_6, NULL);
-		Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* L_8 = (Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD*)il2cpp_codegen_object_new(Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD_il2cpp_TypeInfo_var);
-		Action_1__ctor_mF6E47E991B0A64C730507127FB96AF69E6CBE84E(L_8, __this, (intptr_t)((void*)NetworkHudCanvases_ClientManager_OnClientConnectionState_mA290D857CD7FDCD254DA227E47C4A762ECA717D9_RuntimeMethod_var), NULL);
-		NullCheck(L_7);
-		ClientManager_remove_OnClientConnectionState_mF144BF473A23E23B1F3DB5D48FA6CEFBBCB2ABE1(L_7, L_8, NULL);
-	}
-
-IL_004d:
-	{
+		ClientManager_remove_OnClientConnectionState_mF144BF473A23E23B1F3DB5D48FA6CEFBBCB2ABE1(L_6, L_7, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:168>
 		return;
 	}
 }
-// Method Definition Index: 80428
+// Method Definition Index: 80861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_UpdateColor_m050D27FBC74D8C932F1E9F5BA8C3E4E35D0E4FC7 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, int32_t ___0_state, Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** ___1_img, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	bool V_1 = false;
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:178>
 		int32_t L_0 = ___0_state;
-		V_1 = (bool)((((int32_t)L_0) == ((int32_t)8))? 1 : 0);
-		bool L_1 = V_1;
-		if (!L_1)
+		if ((!(((uint32_t)L_0) == ((uint32_t)8))))
 		{
-			goto IL_0012;
+			goto IL_000d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:179>
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = __this->____startedColor;
-		V_0 = L_2;
-		goto IL_002a;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = __this->____startedColor;
+		V_0 = L_1;
+		goto IL_0021;
 	}
 
-IL_0012:
+IL_000d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:180>
-		int32_t L_3 = ___0_state;
-		V_2 = (bool)((((int32_t)L_3) == ((int32_t)1))? 1 : 0);
-		bool L_4 = V_2;
-		if (!L_4)
+		int32_t L_2 = ___0_state;
+		if ((!(((uint32_t)L_2) == ((uint32_t)1))))
 		{
-			goto IL_0023;
+			goto IL_001a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:181>
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = __this->____stoppedColor;
-		V_0 = L_5;
-		goto IL_002a;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = __this->____stoppedColor;
+		V_0 = L_3;
+		goto IL_0021;
 	}
 
-IL_0023:
+IL_001a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:183>
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = __this->____changingColor;
-		V_0 = L_6;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->____changingColor;
+		V_0 = L_4;
 	}
 
-IL_002a:
+IL_0021:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:185>
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_7 = ___1_img;
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = *((Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)L_7);
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
-		NullCheck(L_8);
-		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_8, L_9);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E** L_5 = ___1_img;
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = *((Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E**)L_5);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_0;
+		NullCheck(L_6);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_6, L_7);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:186>
 		return;
 	}
 }
-// Method Definition Index: 80429
+// Method Definition Index: 80862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_ClientManager_OnClientConnectionState_mA290D857CD7FDCD254DA227E47C4A762ECA717D9 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B ___0_obj, const RuntimeMethod* method) 
 {
 	{
@@ -13608,7 +12926,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_ClientManager_OnClien
 		return;
 	}
 }
-// Method Definition Index: 80430
+// Method Definition Index: 80863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_ServerManager_OnServerConnectionState_m08EF0D36B9BDEF57E8F98645BB2378C05B0C23C6 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 ___0_obj, const RuntimeMethod* method) 
 {
 	{
@@ -13625,7 +12943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_ServerManager_OnServe
 		return;
 	}
 }
-// Method Definition Index: 80431
+// Method Definition Index: 80864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnClick_Server_mF64F18EE3A9F4B4BC1CF310D822C55D3DB7750E8 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13634,74 +12952,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnClick_Server_mF64F1
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:202>
 		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_0 = __this->____networkManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:203>
-		goto IL_004f;
+		return;
 	}
 
-IL_0013:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:205>
-		int32_t L_3 = __this->____serverState;
-		V_1 = (bool)((((int32_t)((((int32_t)L_3) == ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_1;
-		if (!L_4)
+		int32_t L_2 = __this->____serverState;
+		if ((((int32_t)L_2) == ((int32_t)1)))
 		{
-			goto IL_0037;
+			goto IL_002c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:206>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5 = __this->____networkManager;
-		NullCheck(L_5);
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_6;
-		L_6 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_5, NULL);
-		NullCheck(L_6);
-		bool L_7;
-		L_7 = ServerManager_StopConnection_m7A29CC2BC9570150637ADBB41661B048A2D4F510(L_6, (bool)1, NULL);
-		goto IL_0048;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_3 = __this->____networkManager;
+		NullCheck(L_3);
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_4;
+		L_4 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_3, NULL);
+		NullCheck(L_4);
+		bool L_5;
+		L_5 = ServerManager_StopConnection_m7A29CC2BC9570150637ADBB41661B048A2D4F510(L_4, (bool)1, NULL);
+		goto IL_003d;
 	}
 
-IL_0037:
+IL_002c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:208>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_8 = __this->____networkManager;
-		NullCheck(L_8);
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_9;
-		L_9 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_8, NULL);
-		NullCheck(L_9);
-		bool L_10;
-		L_10 = ServerManager_StartConnection_mE73F916F7DBFDECDBF4D5F717FA85F3C4532BBB4(L_9, NULL);
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_6 = __this->____networkManager;
+		NullCheck(L_6);
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_7;
+		L_7 = NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline(L_6, NULL);
+		NullCheck(L_7);
+		bool L_8;
+		L_8 = ServerManager_StartConnection_mE73F916F7DBFDECDBF4D5F717FA85F3C4532BBB4(L_7, NULL);
 	}
 
-IL_0048:
+IL_003d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:210>
 		NetworkHudCanvases_DeselectButtons_m876190780E82E09FBFF2C84387A3F98B2AA46A34(__this, NULL);
-	}
-
-IL_004f:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:211>
 		return;
 	}
 }
-// Method Definition Index: 80432
+// Method Definition Index: 80865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnClick_Client_mB2265087236F7B1F86FE090F013CFB51CC8C0ED2 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13710,74 +13018,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_OnClick_Client_mB2265
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:215>
 		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_0 = __this->____networkManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:216>
-		goto IL_004e;
+		return;
 	}
 
-IL_0013:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:218>
-		int32_t L_3 = __this->____clientState;
-		V_1 = (bool)((((int32_t)((((int32_t)L_3) == ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_1;
-		if (!L_4)
+		int32_t L_2 = __this->____clientState;
+		if ((((int32_t)L_2) == ((int32_t)1)))
 		{
-			goto IL_0036;
+			goto IL_002b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:219>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5 = __this->____networkManager;
-		NullCheck(L_5);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_6;
-		L_6 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_5, NULL);
-		NullCheck(L_6);
-		bool L_7;
-		L_7 = ClientManager_StopConnection_m80B49A55827CFEF37E200B14B872E74BAF947737(L_6, NULL);
-		goto IL_0047;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_3 = __this->____networkManager;
+		NullCheck(L_3);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_4;
+		L_4 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_3, NULL);
+		NullCheck(L_4);
+		bool L_5;
+		L_5 = ClientManager_StopConnection_m80B49A55827CFEF37E200B14B872E74BAF947737(L_4, NULL);
+		goto IL_003c;
 	}
 
-IL_0036:
+IL_002b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:221>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_8 = __this->____networkManager;
-		NullCheck(L_8);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_9;
-		L_9 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_8, NULL);
-		NullCheck(L_9);
-		bool L_10;
-		L_10 = ClientManager_StartConnection_mA7E97777100292E18FC542947F63134E570F42C4(L_9, NULL);
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_6 = __this->____networkManager;
+		NullCheck(L_6);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_7;
+		L_7 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_6, NULL);
+		NullCheck(L_7);
+		bool L_8;
+		L_8 = ClientManager_StartConnection_mA7E97777100292E18FC542947F63134E570F42C4(L_7, NULL);
 	}
 
-IL_0047:
+IL_003c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:223>
 		NetworkHudCanvases_DeselectButtons_m876190780E82E09FBFF2C84387A3F98B2AA46A34(__this, NULL);
-	}
-
-IL_004e:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:224>
 		return;
 	}
 }
-// Method Definition Index: 80433
+// Method Definition Index: 80866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_SetEventSystem_m0C10DCC95511FC97C336326ABDF5E0949569CBAE (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13785,7 +13083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_SetEventSystem_m0C10D
 		return;
 	}
 }
-// Method Definition Index: 80434
+// Method Definition Index: 80867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_DeselectButtons_m876190780E82E09FBFF2C84387A3F98B2AA46A34 (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13793,12 +13091,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases_DeselectButtons_m8761
 		return;
 	}
 }
-// Method Definition Index: 80435
+// Method Definition Index: 80868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases__ctor_m6BBB0E2554515325A31C56ECB5AB57FFEB6BAF6A (NetworkHudCanvases_t680353C151606BD1925E15FA455A183AD0D9CA89* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:30>
-		__this->____autoStartType = 0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:72>
 		__this->____clientState = 1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:76>
@@ -13807,7 +13103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkHudCanvases__ctor_m6BBB0E25545153
 		return;
 	}
 }
-// Method Definition Index: 80436
+// Method Definition Index: 80869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NetworkHudCanvases_U3COnGUIU3Eg__GetNextStateTextU7C10_0_m2DF3FFFB3C7DADA7F9AFD90E72E02F4210A31502 (int32_t ___0_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13820,90 +13116,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NetworkHudCanvases_U3COnGUIU3Eg__Ge
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC627B7EB283B93AF36808F8CB32E5EE6303ABD8D);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	String_t* V_1 = NULL;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:90>
 		int32_t L_0 = ___0_state;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)1))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_0011;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:91>
-		V_1 = _stringLiteral8243A16D425F93AF62CAAB2BFAE01A2D6246A5FE;
-		goto IL_004b;
+		return _stringLiteral8243A16D425F93AF62CAAB2BFAE01A2D6246A5FE;
 	}
 
-IL_0011:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:92>
-		int32_t L_2 = ___0_state;
-		V_2 = (bool)((((int32_t)L_2) == ((int32_t)4))? 1 : 0);
-		bool L_3 = V_2;
-		if (!L_3)
+		int32_t L_1 = ___0_state;
+		if ((!(((uint32_t)L_1) == ((uint32_t)4))))
 		{
-			goto IL_0021;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:93>
-		V_1 = _stringLiteral59FBA4715B07AAEA6020C7F1178AAFE2DF553DD1;
-		goto IL_004b;
+		return _stringLiteral59FBA4715B07AAEA6020C7F1178AAFE2DF553DD1;
 	}
 
-IL_0021:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:94>
-		int32_t L_4 = ___0_state;
-		V_3 = (bool)((((int32_t)L_4) == ((int32_t)2))? 1 : 0);
-		bool L_5 = V_3;
-		if (!L_5)
+		int32_t L_2 = ___0_state;
+		if ((!(((uint32_t)L_2) == ((uint32_t)2))))
 		{
-			goto IL_0031;
+			goto IL_001e;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:95>
-		V_1 = _stringLiteralC627B7EB283B93AF36808F8CB32E5EE6303ABD8D;
-		goto IL_004b;
+		return _stringLiteralC627B7EB283B93AF36808F8CB32E5EE6303ABD8D;
 	}
 
-IL_0031:
+IL_001e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:96>
-		int32_t L_6 = ___0_state;
-		V_4 = (bool)((((int32_t)L_6) == ((int32_t)8))? 1 : 0);
-		bool L_7 = V_4;
-		if (!L_7)
+		int32_t L_3 = ___0_state;
+		if ((!(((uint32_t)L_3) == ((uint32_t)8))))
 		{
-			goto IL_0043;
+			goto IL_0028;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:97>
-		V_1 = _stringLiteral800C762D9EF92B399EC87C776239043ACEEC0717;
-		goto IL_004b;
+		return _stringLiteral800C762D9EF92B399EC87C776239043ACEEC0717;
 	}
 
-IL_0043:
+IL_0028:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:99>
-		V_1 = _stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E;
-		goto IL_004b;
-	}
-
-IL_004b:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Scripts/NetworkHudCanvases.cs:100>
-		String_t* L_8 = V_1;
-		return L_8;
+		return _stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E;
 	}
 }
 #ifdef __clang__
@@ -13922,7 +13193,7 @@ IL_004b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80437
+// Method Definition Index: 80870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Awake_m975B61157A21AA382CC830973FA54EB3CA691EA4 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13932,35 +13203,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Awake_m975B61157A21AA38
 		return;
 	}
 }
-// Method Definition Index: 80438
+// Method Definition Index: 80871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnStartClient_m7B6B44696C5A33672C15C341F607ADA8F7EFF654 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:23>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0018;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:24>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->____camera;
-		NullCheck(L_2);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->____camera;
+		NullCheck(L_1);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)1, NULL);
 	}
 
-IL_0018:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:25>
 		return;
 	}
 }
-// Method Definition Index: 80439
+// Method Definition Index: 80872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Update_m50FA30C0CA1A0E176885CB1063E0FA7BF53A7A0E (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13973,172 +13241,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Update_m50FA30C0CA1A0E1
 	}
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
-	bool V_5 = false;
-	int32_t G_B6_0 = 0;
-	int32_t G_B8_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:29>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_2;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0013;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:30>
-		goto IL_00e7;
+		return;
 	}
 
-IL_0013:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:32>
-		float L_2;
-		L_2 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
-		V_0 = L_2;
+		float L_1;
+		L_1 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
+		V_0 = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:33>
-		float L_3;
-		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
-		V_1 = L_3;
+		float L_2;
+		L_2 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
+		V_1 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:38>
+		bool L_3 = __this->____clientAuth;
+		if (L_3)
+		{
+			goto IL_0037;
+		}
+	}
+	{
 		bool L_4 = __this->____clientAuth;
 		if (L_4)
 		{
-			goto IL_0044;
+			goto IL_00ab;
 		}
 	}
 	{
-		bool L_5 = __this->____clientAuth;
-		if (L_5)
+		bool L_5;
+		L_5 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
+		if (!L_5)
 		{
-			goto IL_0041;
+			goto IL_00ab;
 		}
 	}
-	{
-		bool L_6;
-		L_6 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		G_B6_0 = ((int32_t)(L_6));
-		goto IL_0042;
-	}
 
-IL_0041:
-	{
-		G_B6_0 = 0;
-	}
-
-IL_0042:
-	{
-		G_B8_0 = G_B6_0;
-		goto IL_0045;
-	}
-
-IL_0044:
-	{
-		G_B8_0 = 1;
-	}
-
-IL_0045:
-	{
-		V_3 = (bool)G_B8_0;
-		bool L_7 = V_3;
-		if (!L_7)
-		{
-			goto IL_00c7;
-		}
-	}
+IL_0037:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:40>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
-		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_8);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_6);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_8), (0.0f), (0.300000012f), (0.0f), NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
-		memset((&L_10), 0, sizeof(L_10));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_10), (0.0f), (0.300000012f), (0.0f), NULL);
+		L_9 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_7, L_8, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_10);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
-		L_11 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_9, L_10, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
-		L_12 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_12);
+		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		L_12 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_12, NULL);
+		L_13 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_12, (20.0f), NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
-		L_14 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
-		L_15 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_14, (20.0f), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		L_16 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_13, L_15, NULL);
+		L_14 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_11, L_13, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
-		bool L_17;
-		L_17 = Physics_Linecast_mA0E7B9AFA161F5A8432CA7CDDA25E20EC00AF2A5(L_11, L_16, NULL);
-		V_4 = (bool)((((int32_t)L_17) == ((int32_t)0))? 1 : 0);
-		bool L_18 = V_4;
-		if (!L_18)
+		bool L_15;
+		L_15 = Physics_Linecast_mA0E7B9AFA161F5A8432CA7CDDA25E20EC00AF2A5(L_9, L_14, NULL);
+		if (L_15)
 		{
-			goto IL_00c6;
+			goto IL_00ab;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:41>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
-		L_19 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20 = L_19;
-		NullCheck(L_20);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
-		L_21 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_20, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		memset((&L_22), 0, sizeof(L_22));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_22), (0.0f), (3.0f), (0.0f), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
-		L_23 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_21, L_22, NULL);
-		NullCheck(L_20);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_20, L_23, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17 = L_16;
+		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_17, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		memset((&L_19), 0, sizeof(L_19));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_19), (0.0f), (3.0f), (0.0f), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
+		L_20 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_18, L_19, NULL);
+		NullCheck(L_17);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_17, L_20, NULL);
 	}
 
-IL_00c6:
-	{
-	}
-
-IL_00c7:
+IL_00ab:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:44>
-		bool L_24 = __this->____clientAuth;
-		V_5 = L_24;
-		bool L_25 = V_5;
-		if (!L_25)
+		bool L_21 = __this->____clientAuth;
+		if (!L_21)
 		{
-			goto IL_00de;
+			goto IL_00bc;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:45>
-		float L_26 = V_0;
-		float L_27 = V_1;
-		PlayerController_Move_mA82F29EB26805251E832CCC30DF8087F64DE93F6(__this, L_26, L_27, NULL);
-		goto IL_00e7;
+		float L_22 = V_0;
+		float L_23 = V_1;
+		PlayerController_Move_mA82F29EB26805251E832CCC30DF8087F64DE93F6(__this, L_22, L_23, NULL);
+		return;
 	}
 
-IL_00de:
+IL_00bc:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:47>
-		float L_28 = V_0;
-		float L_29 = V_1;
-		PlayerController_ServerMove_m43C4A5C31E5FAE39E99D880301B1A0A22624E26E(__this, L_28, L_29, NULL);
-	}
-
-IL_00e7:
-	{
+		float L_24 = V_0;
+		float L_25 = V_1;
+		PlayerController_ServerMove_m43C4A5C31E5FAE39E99D880301B1A0A22624E26E(__this, L_24, L_25, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:48>
 		return;
 	}
 }
-// Method Definition Index: 80440
+// Method Definition Index: 80873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ServerMove_m43C4A5C31E5FAE39E99D880301B1A0A22624E26E (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, float ___0_hor, float ___1_ver, const RuntimeMethod* method) 
 {
 	{
@@ -14148,7 +13374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ServerMove_m43C4A5C31E5
 		return;
 	}
 }
-// Method Definition Index: 80441
+// Method Definition Index: 80874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Move_mA82F29EB26805251E832CCC30DF8087F64DE93F6 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, float ___0_hor, float ___1_ver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14158,11 +13384,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Move_mA82F29EB26805251E
 		s_Il2CppMethodInitialized = true;
 	}
 	float V_0 = 0.0f;
-	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 V_1;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:58>
 		float L_0;
@@ -14183,18 +13406,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Move_mA82F29EB26805251E
 		L_5 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline(L_5, NULL);
-		Ray__ctor_mE298992FD10A3894C38373198385F345C58BD64C_inline((&V_1), L_4, L_6, NULL);
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_7;
+		memset((&L_7), 0, sizeof(L_7));
+		Ray__ctor_mE298992FD10A3894C38373198385F345C58BD64C_inline((&L_7), L_4, L_6, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:61>
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_7 = V_1;
 		float L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		bool L_9;
 		L_9 = Physics_Raycast_m7A0FEA813B93A82713C06D8466F0A21325743488(L_7, ((float)il2cpp_codegen_add((0.100000001f), ((-L_8)))), NULL);
-		V_3 = L_9;
-		bool L_10 = V_3;
-		if (!L_10)
+		if (!L_9)
 		{
-			goto IL_005a;
+			goto IL_0054;
 		}
 	}
 	{
@@ -14202,48 +13424,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Move_mA82F29EB26805251E
 		V_0 = (0.0f);
 	}
 
-IL_005a:
+IL_0054:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:65>
-		float L_11 = V_0;
-		float L_12 = ___1_ver;
-		float L_13 = __this->____moveRate;
-		float L_14;
-		L_14 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), (0.0f), L_11, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_12, L_13)), L_14)), NULL);
+		float L_10 = V_0;
+		float L_11 = ___1_ver;
+		float L_12 = __this->____moveRate;
+		float L_13;
+		L_13 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), (0.0f), L_10, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_11, L_12)), L_13)), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:67>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
-		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = L_15;
-		NullCheck(L_16);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
-		L_17 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_16, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
-		L_18 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_2;
-		NullCheck(L_18);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
+		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = L_14;
+		NullCheck(L_15);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_1;
+		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		L_19 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_17, L_18, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
-		L_20 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_18, L_19, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
-		L_21 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_17, L_20, NULL);
-		NullCheck(L_16);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_16, L_21, NULL);
+		L_20 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_16, L_19, NULL);
+		NullCheck(L_15);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_15, L_20, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:68>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22;
-		L_22 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		float L_23 = ___0_hor;
-		float L_24;
-		L_24 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
-		memset((&L_25), 0, sizeof(L_25));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_25), (0.0f), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_23, (100.0f))), L_24)), (0.0f), NULL);
-		NullCheck(L_22);
-		Transform_Rotate_m2A308205498AFEEA3DF784B1C86E4F7C126CA2EE(L_22, L_25, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
+		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		float L_22 = ___0_hor;
+		float L_23;
+		L_23 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
+		memset((&L_24), 0, sizeof(L_24));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_24), (0.0f), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_22, (100.0f))), L_23)), (0.0f), NULL);
+		NullCheck(L_21);
+		Transform_Rotate_m2A308205498AFEEA3DF784B1C86E4F7C126CA2EE(L_21, L_24, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/PlayerController.cs:69>
 		return;
 	}
 }
-// Method Definition Index: 80442
+// Method Definition Index: 80875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mFEEB1E7E601CA9BD0074CBBB06A4781E355CBF7E (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14262,7 +13484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mFEEB1E7E601CA9BD
 		return;
 	}
 }
-// Method Definition Index: 80443
+// Method Definition Index: 80876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_NetworkInitialize___Early_m707493770A019C253A8C97E8A50F801487A632A7 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14293,7 +13515,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80444
+// Method Definition Index: 80877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_NetworkInitialize___Late_mF7A9B6F3E8BA22023B9C5D986BDE42D85D2F12B8 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14314,7 +13536,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80445
+// Method Definition Index: 80878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_NetworkInitializeIfDisabled_m79E6B82D804542C9AD4CA92204F9E4CD1639E032 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14323,7 +13545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_NetworkInitializeIfDisa
 		return;
 	}
 }
-// Method Definition Index: 80446
+// Method Definition Index: 80879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RpcWriter___Server_ServerMove___1138564871_m119FB707A1F065462FB0A980BFB87189E36E88D3 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, float ___0_hor, float ___1_ver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14397,7 +13619,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 80447
+// Method Definition Index: 80880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RpcLogic___ServerMove___1138564871_m2626458C8C66A945B280BC869D444FD4D42F186D (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, float ___0_p, float ___1_p, const RuntimeMethod* method) 
 {
 	{
@@ -14409,7 +13631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RpcLogic___ServerMove__
 		return;
 	}
 }
-// Method Definition Index: 80448
+// Method Definition Index: 80881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RpcReader___Server_ServerMove___1138564871_m2C2DE47A0E4365BBA0F1F8E18FDE0EE7DD63C74B (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, uint8_t ___1_channel, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___2_conn, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -14458,7 +13680,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 80449
+// Method Definition Index: 80882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Awake_UserLogic_FishNet_Example_Scened_PlayerController_FishNet_Demos_dll_m801376A41C3CC3022EFFBA2400A7FB6CEB1A4486 (PlayerController_tC1130F6ED7E101166892FA6F9A59EAA74525D029* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14491,7 +13713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Awake_UserLogic_FishNet
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80450
+// Method Definition Index: 80883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_OnTriggerEnter_mDD98026C12F6A66E43A0C96204EB9C4DEDC71DB1 (SceneLoaderExample_tBAEF585C24FEACF8737F211AD1D4D2A6B448D9C8* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14500,7 +13722,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_OnTriggerEnter_mDD980
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		bool L_0;
 		L_0 = InstanceFinder_get_IsServerStarted_m903F09532CF2C1DDE78855E070EF72C2B6E8DCC3(NULL);
@@ -14517,35 +13738,29 @@ IL_000c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:69>
 		bool L_1 = __this->____onTriggerEnter;
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_001d;
+			goto IL_0016;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:70>
-		goto IL_002a;
+		return;
 	}
 
-IL_001d:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:72>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = ___0_other;
-		NullCheck(L_3);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_4;
-		L_4 = Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B(L_3, Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
-		SceneLoaderExample_LoadScene_m223888BADDD27B6C9672D44C46427FE239873CE3(__this, L_4, NULL);
-	}
-
-IL_002a:
-	{
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
+		NullCheck(L_2);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_3;
+		L_3 = Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B(L_2, Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
+		SceneLoaderExample_LoadScene_m223888BADDD27B6C9672D44C46427FE239873CE3(__this, L_3, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:73>
 		return;
 	}
 }
-// Method Definition Index: 80451
+// Method Definition Index: 80884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_OnTriggerExit_mB5AFBC2C1710EE7D788C73C133DB8EFDF84935CD (SceneLoaderExample_tBAEF585C24FEACF8737F211AD1D4D2A6B448D9C8* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14554,7 +13769,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_OnTriggerExit_mB5AFBC
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		bool L_0;
 		L_0 = InstanceFinder_get_IsServerStarted_m903F09532CF2C1DDE78855E070EF72C2B6E8DCC3(NULL);
@@ -14571,35 +13785,29 @@ IL_000c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:78>
 		bool L_1 = __this->____onTriggerEnter;
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_001a;
+			goto IL_0016;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:79>
-		goto IL_0027;
+		return;
 	}
 
-IL_001a:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:81>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = ___0_other;
-		NullCheck(L_3);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_4;
-		L_4 = Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B(L_3, Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
-		SceneLoaderExample_LoadScene_m223888BADDD27B6C9672D44C46427FE239873CE3(__this, L_4, NULL);
-	}
-
-IL_0027:
-	{
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
+		NullCheck(L_2);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_3;
+		L_3 = Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B(L_2, Component_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m4FB19B602F50F144B346C3720AC62B9D52102B5B_RuntimeMethod_var);
+		SceneLoaderExample_LoadScene_m223888BADDD27B6C9672D44C46427FE239873CE3(__this, L_3, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:82>
 		return;
 	}
 }
-// Method Definition Index: 80452
+// Method Definition Index: 80885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_LoadScene_m223888BADDD27B6C9672D44C46427FE239873CE3 (SceneLoaderExample_tBAEF585C24FEACF8737F211AD1D4D2A6B448D9C8* __this, NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* ___0_triggeringIdentity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14629,19 +13837,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_LoadScene_m223888BADD
 	List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* V_1 = NULL;
 	LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* V_2 = NULL;
 	SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* V_3 = NULL;
-	bool V_4 = false;
-	bool V_5 = false;
-	bool V_6 = false;
-	bool V_7 = false;
-	bool V_8 = false;
-	Enumerator_tC0A9739605EC726EF4220DD9A609A02C2B113C1F V_9;
-	memset((&V_9), 0, sizeof(V_9));
-	NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* V_10 = NULL;
-	Enumerator_t2D31B9C8FEAD6E34279B9A85AA94082B53B0BFDB V_11;
-	memset((&V_11), 0, sizeof(V_11));
-	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_12 = NULL;
-	bool V_13 = false;
-	bool V_14 = false;
+	Enumerator_tC0A9739605EC726EF4220DD9A609A02C2B113C1F V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Enumerator_t2D31B9C8FEAD6E34279B9A85AA94082B53B0BFDB V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* V_6 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:86>
 		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_0;
@@ -14649,187 +13849,171 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample_LoadScene_m223888BADD
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = NetworkManager_get_IsServerStarted_mCC914DE3253124ACB1CAC20DEA8D57453B445F65(L_0, NULL);
-		V_4 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_4;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0019;
+			goto IL_000d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:87>
-		goto IL_0199;
+		return;
 	}
 
-IL_0019:
+IL_000d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:90>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_3 = ___0_triggeringIdentity;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_2 = ___0_triggeringIdentity;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_5 = L_4;
-		bool L_5 = V_5;
-		if (!L_5)
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0017;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:91>
-		goto IL_0199;
+		return;
 	}
 
-IL_002b:
+IL_0017:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:95>
-		Dictionary_2_t4BFB97F1924749368BB601163786AB69D55809D7* L_6 = __this->____triggeredTimes;
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_7 = ___0_triggeringIdentity;
-		NullCheck(L_7);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_8;
-		L_8 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_7, NULL);
-		NullCheck(L_6);
-		bool L_9;
-		L_9 = Dictionary_2_TryGetValue_mE3F77F3525F264C315C2A8152BBBE45128DAA13A(L_6, L_8, (&V_0), Dictionary_2_TryGetValue_mE3F77F3525F264C315C2A8152BBBE45128DAA13A_RuntimeMethod_var);
-		V_6 = L_9;
-		bool L_10 = V_6;
-		if (!L_10)
+		Dictionary_2_t4BFB97F1924749368BB601163786AB69D55809D7* L_4 = __this->____triggeredTimes;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_5 = ___0_triggeringIdentity;
+		NullCheck(L_5);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_6;
+		L_6 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_5, NULL);
+		NullCheck(L_4);
+		bool L_7;
+		L_7 = Dictionary_2_TryGetValue_mE3F77F3525F264C315C2A8152BBBE45128DAA13A(L_4, L_6, (&V_0), Dictionary_2_TryGetValue_mE3F77F3525F264C315C2A8152BBBE45128DAA13A_RuntimeMethod_var);
+		if (!L_7)
 		{
-			goto IL_005f;
+			goto IL_003b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:97>
-		float L_11;
-		L_11 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_12 = V_0;
-		V_7 = (bool)((((float)((float)il2cpp_codegen_subtract(L_11, L_12))) < ((float)(0.5f)))? 1 : 0);
-		bool L_13 = V_7;
-		if (!L_13)
+		float L_8;
+		L_8 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_9 = V_0;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_8, L_9))) < ((float)(0.5f)))))
 		{
-			goto IL_005e;
+			goto IL_003b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:98>
-		goto IL_0199;
+		return;
 	}
 
-IL_005e:
-	{
-	}
-
-IL_005f:
+IL_003b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:100>
-		Dictionary_2_t4BFB97F1924749368BB601163786AB69D55809D7* L_14 = __this->____triggeredTimes;
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_15 = ___0_triggeringIdentity;
-		NullCheck(L_15);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_16;
-		L_16 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_15, NULL);
-		float L_17;
-		L_17 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		NullCheck(L_14);
-		Dictionary_2_set_Item_mA96C2C04BE3DCCBFC16C3405250C354BEAA8E4A1(L_14, L_16, L_17, Dictionary_2_set_Item_mA96C2C04BE3DCCBFC16C3405250C354BEAA8E4A1_RuntimeMethod_var);
+		Dictionary_2_t4BFB97F1924749368BB601163786AB69D55809D7* L_10 = __this->____triggeredTimes;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_11 = ___0_triggeringIdentity;
+		NullCheck(L_11);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_12;
+		L_12 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_11, NULL);
+		float L_13;
+		L_13 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		NullCheck(L_10);
+		Dictionary_2_set_Item_mA96C2C04BE3DCCBFC16C3405250C354BEAA8E4A1(L_10, L_12, L_13, Dictionary_2_set_Item_mA96C2C04BE3DCCBFC16C3405250C354BEAA8E4A1_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:103>
-		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_18 = (List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6*)il2cpp_codegen_object_new(List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6_il2cpp_TypeInfo_var);
-		List_1__ctor_m6DD6AA3253CF89AFEBA288A02C4C54264D59E2F9(L_18, List_1__ctor_m6DD6AA3253CF89AFEBA288A02C4C54264D59E2F9_RuntimeMethod_var);
-		V_1 = L_18;
+		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_14 = (List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6*)il2cpp_codegen_object_new(List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6_il2cpp_TypeInfo_var);
+		List_1__ctor_m6DD6AA3253CF89AFEBA288A02C4C54264D59E2F9(L_14, List_1__ctor_m6DD6AA3253CF89AFEBA288A02C4C54264D59E2F9_RuntimeMethod_var);
+		V_1 = L_14;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:104>
-		bool L_19 = __this->____moveAllObjects;
-		V_8 = L_19;
-		bool L_20 = V_8;
-		if (!L_20)
+		bool L_15 = __this->____moveAllObjects;
+		if (!L_15)
 		{
-			goto IL_0107;
+			goto IL_00cf;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:106>
-		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_21;
-		L_21 = InstanceFinder_get_ServerManager_m6BF5361EE7E5DB19213FB837F85673A38C8C4046(NULL);
-		NullCheck(L_21);
-		Dictionary_2_tB831FBE45C185F84DFBE5872AC5BF37E9E22C117* L_22 = L_21->___Clients;
-		NullCheck(L_22);
-		ValueCollection_tC594B05A9F5557CE7874F0F46DA4AE2894BFBBF2* L_23;
-		L_23 = Dictionary_2_get_Values_m45BEFC9676BBF0CE2576B409C388FEE913232A49(L_22, Dictionary_2_get_Values_m45BEFC9676BBF0CE2576B409C388FEE913232A49_RuntimeMethod_var);
-		NullCheck(L_23);
-		Enumerator_tC0A9739605EC726EF4220DD9A609A02C2B113C1F L_24;
-		L_24 = ValueCollection_GetEnumerator_mC0A0A43F6DF1C94E9FBE3690787DE5FBEAB7E6E3(L_23, ValueCollection_GetEnumerator_mC0A0A43F6DF1C94E9FBE3690787DE5FBEAB7E6E3_RuntimeMethod_var);
-		V_9 = L_24;
+		ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* L_16;
+		L_16 = InstanceFinder_get_ServerManager_m6BF5361EE7E5DB19213FB837F85673A38C8C4046(NULL);
+		NullCheck(L_16);
+		Dictionary_2_tB831FBE45C185F84DFBE5872AC5BF37E9E22C117* L_17 = L_16->___Clients;
+		NullCheck(L_17);
+		ValueCollection_tC594B05A9F5557CE7874F0F46DA4AE2894BFBBF2* L_18;
+		L_18 = Dictionary_2_get_Values_m45BEFC9676BBF0CE2576B409C388FEE913232A49(L_17, Dictionary_2_get_Values_m45BEFC9676BBF0CE2576B409C388FEE913232A49_RuntimeMethod_var);
+		NullCheck(L_18);
+		Enumerator_tC0A9739605EC726EF4220DD9A609A02C2B113C1F L_19;
+		L_19 = ValueCollection_GetEnumerator_mC0A0A43F6DF1C94E9FBE3690787DE5FBEAB7E6E3(L_18, ValueCollection_GetEnumerator_mC0A0A43F6DF1C94E9FBE3690787DE5FBEAB7E6E3_RuntimeMethod_var);
+		V_4 = L_19;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_00f5:
+FINALLY_00c1:
 			{
-				Enumerator_Dispose_mC14B1A68E9E3C77C4D3367F4936E5AF291CC214B((&V_9), Enumerator_Dispose_mC14B1A68E9E3C77C4D3367F4936E5AF291CC214B_RuntimeMethod_var);
+				Enumerator_Dispose_mC14B1A68E9E3C77C4D3367F4936E5AF291CC214B((&V_4), Enumerator_Dispose_mC14B1A68E9E3C77C4D3367F4936E5AF291CC214B_RuntimeMethod_var);
 				return;
 			}
 		});
 		try
 		{
 			{
-				goto IL_00ea_1;
+				goto IL_00b6_1;
 			}
 
-IL_00a2_1:
+IL_0077_1:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:106>
-				NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_25;
-				L_25 = Enumerator_get_Current_mA9F46ED765A44E9F599C73891DC0DB64F4F54DEB_inline((&V_9), Enumerator_get_Current_mA9F46ED765A44E9F599C73891DC0DB64F4F54DEB_RuntimeMethod_var);
-				V_10 = L_25;
+				NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_20;
+				L_20 = Enumerator_get_Current_mA9F46ED765A44E9F599C73891DC0DB64F4F54DEB_inline((&V_4), Enumerator_get_Current_mA9F46ED765A44E9F599C73891DC0DB64F4F54DEB_RuntimeMethod_var);
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:108>
-				NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_26 = V_10;
-				NullCheck(L_26);
-				HashSet_1_t521764AA06C3080DD826EB2C2C43B542FF824ACB* L_27 = L_26->___Objects;
-				NullCheck(L_27);
-				Enumerator_t2D31B9C8FEAD6E34279B9A85AA94082B53B0BFDB L_28;
-				L_28 = HashSet_1_GetEnumerator_mBA52A4A875C2C823D4D09C6186251A714E71B063(L_27, HashSet_1_GetEnumerator_mBA52A4A875C2C823D4D09C6186251A714E71B063_RuntimeMethod_var);
-				V_11 = L_28;
+				NullCheck(L_20);
+				HashSet_1_t521764AA06C3080DD826EB2C2C43B542FF824ACB* L_21 = L_20->___Objects;
+				NullCheck(L_21);
+				Enumerator_t2D31B9C8FEAD6E34279B9A85AA94082B53B0BFDB L_22;
+				L_22 = HashSet_1_GetEnumerator_mBA52A4A875C2C823D4D09C6186251A714E71B063(L_21, HashSet_1_GetEnumerator_mBA52A4A875C2C823D4D09C6186251A714E71B063_RuntimeMethod_var);
+				V_5 = L_22;
 			}
 			{
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_00da_1:
+FINALLY_00a8_1:
 					{
-						Enumerator_Dispose_m68EF559A8A9F4BAB90F0F36EBAC0ACCA372C4921((&V_11), Enumerator_Dispose_m68EF559A8A9F4BAB90F0F36EBAC0ACCA372C4921_RuntimeMethod_var);
+						Enumerator_Dispose_m68EF559A8A9F4BAB90F0F36EBAC0ACCA372C4921((&V_5), Enumerator_Dispose_m68EF559A8A9F4BAB90F0F36EBAC0ACCA372C4921_RuntimeMethod_var);
 						return;
 					}
 				});
 				try
 				{
 					{
-						goto IL_00cf_2;
+						goto IL_009d_2;
 					}
 
-IL_00bd_2:
+IL_008c_2:
 					{
 						//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:108>
-						NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_29;
-						L_29 = Enumerator_get_Current_mA972D352088D654DF59B06C0095DDAE0B77459AF_inline((&V_11), Enumerator_get_Current_mA972D352088D654DF59B06C0095DDAE0B77459AF_RuntimeMethod_var);
-						V_12 = L_29;
+						NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_23;
+						L_23 = Enumerator_get_Current_mA972D352088D654DF59B06C0095DDAE0B77459AF_inline((&V_5), Enumerator_get_Current_mA972D352088D654DF59B06C0095DDAE0B77459AF_RuntimeMethod_var);
+						V_6 = L_23;
 						//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:109>
-						List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_30 = V_1;
-						NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_31 = V_12;
-						NullCheck(L_30);
-						List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_inline(L_30, L_31, List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_RuntimeMethod_var);
+						List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_24 = V_1;
+						NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_25 = V_6;
+						NullCheck(L_24);
+						List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_inline(L_24, L_25, List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_RuntimeMethod_var);
 					}
 
-IL_00cf_2:
+IL_009d_2:
 					{
 						//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:108>
-						bool L_32;
-						L_32 = Enumerator_MoveNext_mD13D30A03DD3D35113B70DF258E4E47C1F280EEA((&V_11), Enumerator_MoveNext_mD13D30A03DD3D35113B70DF258E4E47C1F280EEA_RuntimeMethod_var);
-						if (L_32)
+						bool L_26;
+						L_26 = Enumerator_MoveNext_mD13D30A03DD3D35113B70DF258E4E47C1F280EEA((&V_5), Enumerator_MoveNext_mD13D30A03DD3D35113B70DF258E4E47C1F280EEA_RuntimeMethod_var);
+						if (L_26)
 						{
-							goto IL_00bd_2;
+							goto IL_008c_2;
 						}
 					}
 					{
-						goto IL_00e9_1;
+						goto IL_00b6_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -14838,22 +14022,18 @@ IL_00cf_2:
 				}
 			}
 
-IL_00e9_1:
-			{
-			}
-
-IL_00ea_1:
+IL_00b6_1:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:106>
-				bool L_33;
-				L_33 = Enumerator_MoveNext_m25806A1810AD501BED9474B67B0CAC70D5F235DC((&V_9), Enumerator_MoveNext_m25806A1810AD501BED9474B67B0CAC70D5F235DC_RuntimeMethod_var);
-				if (L_33)
+				bool L_27;
+				L_27 = Enumerator_MoveNext_m25806A1810AD501BED9474B67B0CAC70D5F235DC((&V_4), Enumerator_MoveNext_m25806A1810AD501BED9474B67B0CAC70D5F235DC_RuntimeMethod_var);
+				if (L_27)
 				{
-					goto IL_00a2_1;
+					goto IL_0077_1;
 				}
 			}
 			{
-				goto IL_0104;
+				goto IL_00de;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -14862,125 +14042,112 @@ IL_00ea_1:
 		}
 	}
 
-IL_0104:
-	{
-		goto IL_011d;
-	}
-
-IL_0107:
+IL_00cf:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:112>
-		bool L_34 = __this->____moveObject;
-		V_13 = L_34;
-		bool L_35 = V_13;
-		if (!L_35)
+		bool L_28 = __this->____moveObject;
+		if (!L_28)
 		{
-			goto IL_011d;
+			goto IL_00de;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:114>
-		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_36 = V_1;
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_37 = ___0_triggeringIdentity;
-		NullCheck(L_36);
-		List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_inline(L_36, L_37, List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_RuntimeMethod_var);
+		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_29 = V_1;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_30 = ___0_triggeringIdentity;
+		NullCheck(L_29);
+		List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_inline(L_29, L_30, List_1_Add_m8C28EF7241FB05BF32F0C013AC1FD5076CF5D9AA_RuntimeMethod_var);
 	}
 
-IL_011d:
+IL_00de:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:117>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:118>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:119>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:120>
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_38 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
-		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_38, NULL);
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_39 = L_38;
-		bool L_40 = __this->____automaticallyUnload;
-		NullCheck(L_39);
-		L_39->___AutomaticallyUnload = L_40;
-		V_2 = L_39;
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_31 = (LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3*)il2cpp_codegen_object_new(LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3_il2cpp_TypeInfo_var);
+		LoadOptions__ctor_mAEB55E4A4BC15B32628184FED7DC6FE3588D3BD6(L_31, NULL);
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_32 = L_31;
+		bool L_33 = __this->____automaticallyUnload;
+		NullCheck(L_32);
+		L_32->___AutomaticallyUnload = L_33;
+		V_2 = L_32;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:123>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_41 = __this->____scenes;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_42 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
-		SceneLoadData__ctor_m317BE21BC05ECA61D93E674D115284275204CC21(L_42, L_41, NULL);
-		V_3 = L_42;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_34 = __this->____scenes;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_35 = (SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3*)il2cpp_codegen_object_new(SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3_il2cpp_TypeInfo_var);
+		SceneLoadData__ctor_m317BE21BC05ECA61D93E674D115284275204CC21(L_35, L_34, NULL);
+		V_3 = L_35;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:124>
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_43 = V_3;
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_44 = V_3;
-		NullCheck(L_44);
-		SceneLookupDataU5BU5D_tA2B56CA004DD8D141EF3046EE3FD17945BEDA6ED* L_45 = L_44->___SceneLookupDatas;
-		NullCheck(L_45);
-		int32_t L_46 = 0;
-		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_47 = (L_45)->GetAt(static_cast<il2cpp_array_size_t>(L_46));
-		PreferredScene_t0ACDCF0CEA6355AE299AE67D24637B0421CBB5E3 L_48;
-		memset((&L_48), 0, sizeof(L_48));
-		PreferredScene__ctor_mE43BBADBE7B51B9BB4ECF8086E80521DF9E79516((&L_48), L_47, NULL);
-		NullCheck(L_43);
-		L_43->___PreferredActiveScene = L_48;
-		Il2CppCodeGenWriteBarrier((void**)&(((&L_43->___PreferredActiveScene))->___Client), (void*)NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_36 = V_3;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_37 = V_3;
+		NullCheck(L_37);
+		SceneLookupDataU5BU5D_tA2B56CA004DD8D141EF3046EE3FD17945BEDA6ED* L_38 = L_37->___SceneLookupDatas;
+		NullCheck(L_38);
+		int32_t L_39 = 0;
+		SceneLookupData_t8F9A7C4B10AE575DE8310E9AA16618CEBC15E6E3* L_40 = (L_38)->GetAt(static_cast<il2cpp_array_size_t>(L_39));
+		PreferredScene_t0ACDCF0CEA6355AE299AE67D24637B0421CBB5E3 L_41;
+		memset((&L_41), 0, sizeof(L_41));
+		PreferredScene__ctor_mE43BBADBE7B51B9BB4ECF8086E80521DF9E79516((&L_41), L_40, NULL);
+		NullCheck(L_36);
+		L_36->___PreferredActiveScene = L_41;
+		Il2CppCodeGenWriteBarrier((void**)&(((&L_36->___PreferredActiveScene))->___Client), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((&L_43->___PreferredActiveScene))->___Server), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((&L_36->___PreferredActiveScene))->___Server), (void*)NULL);
 		#endif
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:125>
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_49 = V_3;
-		uint8_t L_50 = __this->____replaceOption;
-		NullCheck(L_49);
-		L_49->___ReplaceScenes = L_50;
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_42 = V_3;
+		uint8_t L_43 = __this->____replaceOption;
+		NullCheck(L_42);
+		L_42->___ReplaceScenes = L_43;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:126>
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_51 = V_3;
-		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_52 = V_2;
-		NullCheck(L_51);
-		L_51->___Options = L_52;
-		Il2CppCodeGenWriteBarrier((void**)(&L_51->___Options), (void*)L_52);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_44 = V_3;
+		LoadOptions_t098F0F306CA755EBA68DA6890C77FC00AC4086A3* L_45 = V_2;
+		NullCheck(L_44);
+		L_44->___Options = L_45;
+		Il2CppCodeGenWriteBarrier((void**)(&L_44->___Options), (void*)L_45);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:127>
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_53 = V_3;
-		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_54 = V_1;
-		NullCheck(L_54);
-		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_55;
-		L_55 = List_1_ToArray_m6ECCE0011F1C20AC7D1A022B6EFC95486778C796(L_54, List_1_ToArray_m6ECCE0011F1C20AC7D1A022B6EFC95486778C796_RuntimeMethod_var);
-		NullCheck(L_53);
-		L_53->___MovedNetworkObjects = L_55;
-		Il2CppCodeGenWriteBarrier((void**)(&L_53->___MovedNetworkObjects), (void*)L_55);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_46 = V_3;
+		List_1_t762542A548AFEBFC9DD5CA278456B8AF2FACE3A6* L_47 = V_1;
+		NullCheck(L_47);
+		NetworkObjectU5BU5D_t15586B7DAF38596F9D70BFDC2292D8DEECE37B62* L_48;
+		L_48 = List_1_ToArray_m6ECCE0011F1C20AC7D1A022B6EFC95486778C796(L_47, List_1_ToArray_m6ECCE0011F1C20AC7D1A022B6EFC95486778C796_RuntimeMethod_var);
+		NullCheck(L_46);
+		L_46->___MovedNetworkObjects = L_48;
+		Il2CppCodeGenWriteBarrier((void**)(&L_46->___MovedNetworkObjects), (void*)L_48);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:130>
-		bool L_56 = __this->____connectionOnly;
-		V_14 = L_56;
-		bool L_57 = V_14;
-		if (!L_57)
+		bool L_49 = __this->____connectionOnly;
+		if (!L_49)
 		{
-			goto IL_018d;
+			goto IL_0148;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:131>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_58;
-		L_58 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_59 = ___0_triggeringIdentity;
-		NullCheck(L_59);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_60;
-		L_60 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_59, NULL);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_61 = V_3;
-		NullCheck(L_58);
-		SceneManager_LoadConnectionScenes_m8064F8F8C8CB0FE71012442EF841E3AB626AFD35(L_58, L_60, L_61, NULL);
-		goto IL_0199;
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_50;
+		L_50 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_51 = ___0_triggeringIdentity;
+		NullCheck(L_51);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_52;
+		L_52 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_51, NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_53 = V_3;
+		NullCheck(L_50);
+		SceneManager_LoadConnectionScenes_m8064F8F8C8CB0FE71012442EF841E3AB626AFD35(L_50, L_52, L_53, NULL);
+		return;
 	}
 
-IL_018d:
+IL_0148:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:134>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_62;
-		L_62 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
-		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_63 = V_3;
-		NullCheck(L_62);
-		SceneManager_LoadGlobalScenes_mDD9B08D3BEF47D3A1585167B3F84C1AAE6A4DE2C(L_62, L_63, NULL);
-	}
-
-IL_0199:
-	{
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_54;
+		L_54 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
+		SceneLoadData_tF49F5D521904D018DCC9E7E8B36906717B143FA3* L_55 = V_3;
+		NullCheck(L_54);
+		SceneManager_LoadGlobalScenes_mDD9B08D3BEF47D3A1585167B3F84C1AAE6A4DE2C(L_54, L_55, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneLoaderExample.cs:135>
 		return;
 	}
 }
-// Method Definition Index: 80453
+// Method Definition Index: 80886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample__ctor_m2DACA1CE78B320B1E730DDC75C7B0F62AC0DEF8E (SceneLoaderExample_tBAEF585C24FEACF8737F211AD1D4D2A6B448D9C8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15021,7 +14188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoaderExample__ctor_m2DACA1CE78B320
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80454
+// Method Definition Index: 80887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_OnTriggerEnter_m30E04568A69FF9E90C81774FE2F7794380C4019E (SceneUnloaderExample_tF8A559FE3F5847044221BED687E3121F234DDA9C* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15030,7 +14197,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_OnTriggerEnter_m30E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		bool L_0;
 		L_0 = InstanceFinder_get_IsServerStarted_m903F09532CF2C1DDE78855E070EF72C2B6E8DCC3(NULL);
@@ -15047,38 +14213,32 @@ IL_000c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:41>
 		bool L_1 = __this->____onTriggerEnter;
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_001d;
+			goto IL_0016;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:42>
-		goto IL_002f;
+		return;
 	}
 
-IL_001d:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:44>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = ___0_other;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
+		NullCheck(L_2);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_2, NULL);
 		NullCheck(L_3);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
-		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_3, NULL);
-		NullCheck(L_4);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_5;
-		L_5 = GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED(L_4, GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
-		SceneUnloaderExample_UnloadScenes_m9A34B80CF4693966ACD57DE82E138E8960FBFDCE(__this, L_5, NULL);
-	}
-
-IL_002f:
-	{
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_4;
+		L_4 = GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED(L_3, GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
+		SceneUnloaderExample_UnloadScenes_m9A34B80CF4693966ACD57DE82E138E8960FBFDCE(__this, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 80455
+// Method Definition Index: 80888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_OnTriggerExit_mECF32669B15A0E14F61346376AE93EEF746F0025 (SceneUnloaderExample_tF8A559FE3F5847044221BED687E3121F234DDA9C* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15087,7 +14247,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_OnTriggerExit_mECF3
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		bool L_0;
 		L_0 = InstanceFinder_get_IsServerStarted_m903F09532CF2C1DDE78855E070EF72C2B6E8DCC3(NULL);
@@ -15104,38 +14263,32 @@ IL_000c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:50>
 		bool L_1 = __this->____onTriggerEnter;
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_001a;
+			goto IL_0016;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:51>
-		goto IL_002c;
+		return;
 	}
 
-IL_001a:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:53>
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = ___0_other;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = ___0_other;
+		NullCheck(L_2);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_2, NULL);
 		NullCheck(L_3);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
-		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_3, NULL);
-		NullCheck(L_4);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_5;
-		L_5 = GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED(L_4, GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
-		SceneUnloaderExample_UnloadScenes_m9A34B80CF4693966ACD57DE82E138E8960FBFDCE(__this, L_5, NULL);
-	}
-
-IL_002c:
-	{
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_4;
+		L_4 = GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED(L_3, GameObject_GetComponent_TisNetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D_m2002DD86A637211E55D29C8B9EB951A47824B4ED_RuntimeMethod_var);
+		SceneUnloaderExample_UnloadScenes_m9A34B80CF4693966ACD57DE82E138E8960FBFDCE(__this, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 80456
+// Method Definition Index: 80889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_UnloadScenes_m9A34B80CF4693966ACD57DE82E138E8960FBFDCE (SceneUnloaderExample_tF8A559FE3F5847044221BED687E3121F234DDA9C* __this, NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* ___0_triggeringIdentity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15148,9 +14301,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_UnloadScenes_m9A34B
 	}
 	UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* V_0 = NULL;
 	SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* V_1 = NULL;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
 	UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* G_B6_0 = NULL;
 	UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* G_B6_1 = NULL;
 	UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* G_B5_0 = NULL;
@@ -15165,126 +14315,116 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample_UnloadScenes_m9A34B
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = NetworkManager_get_IsServerStarted_mCC914DE3253124ACB1CAC20DEA8D57453B445F65(L_0, NULL);
-		V_2 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_2;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0014;
+			goto IL_000d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:63>
-		goto IL_0078;
+		return;
 	}
 
-IL_0014:
+IL_000d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:66>
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_3 = ___0_triggeringIdentity;
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_2 = ___0_triggeringIdentity;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_3 = L_4;
-		bool L_5 = V_3;
-		if (!L_5)
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
 		{
-			goto IL_0021;
+			goto IL_0017;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:67>
-		goto IL_0078;
+		return;
 	}
 
-IL_0021:
+IL_0017:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:69>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:70>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:71>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:72>
-		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_6 = (UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426*)il2cpp_codegen_object_new(UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426_il2cpp_TypeInfo_var);
-		UnloadOptions__ctor_mE0BBF5CB0719FA0694E23F6FC561D3A0875E803F(L_6, NULL);
-		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_7 = L_6;
-		bool L_8 = __this->____unloadUnused;
-		if (L_8)
+		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_4 = (UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426*)il2cpp_codegen_object_new(UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426_il2cpp_TypeInfo_var);
+		UnloadOptions__ctor_mE0BBF5CB0719FA0694E23F6FC561D3A0875E803F(L_4, NULL);
+		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_5 = L_4;
+		bool L_6 = __this->____unloadUnused;
+		if (L_6)
 		{
-			G_B6_0 = L_7;
-			G_B6_1 = L_7;
-			goto IL_0032;
+			G_B6_0 = L_5;
+			G_B6_1 = L_5;
+			goto IL_0028;
 		}
-		G_B5_0 = L_7;
-		G_B5_1 = L_7;
+		G_B5_0 = L_5;
+		G_B5_1 = L_5;
 	}
 	{
 		G_B7_0 = 1;
 		G_B7_1 = G_B5_0;
 		G_B7_2 = G_B5_1;
-		goto IL_0033;
+		goto IL_0029;
 	}
 
-IL_0032:
+IL_0028:
 	{
 		G_B7_0 = 0;
 		G_B7_1 = G_B6_0;
 		G_B7_2 = G_B6_1;
 	}
 
-IL_0033:
+IL_0029:
 	{
 		NullCheck(G_B7_1);
 		G_B7_1->___Mode = G_B7_0;
 		V_0 = G_B7_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:74>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = __this->____scenes;
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_10 = (SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40*)il2cpp_codegen_object_new(SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40_il2cpp_TypeInfo_var);
-		SceneUnloadData__ctor_m1AFB4641D86D2844BD18CEEDF284E5F1764FB0B1(L_10, L_9, NULL);
-		V_1 = L_10;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = __this->____scenes;
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_8 = (SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40*)il2cpp_codegen_object_new(SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40_il2cpp_TypeInfo_var);
+		SceneUnloadData__ctor_m1AFB4641D86D2844BD18CEEDF284E5F1764FB0B1(L_8, L_7, NULL);
+		V_1 = L_8;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:75>
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_11 = V_1;
-		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_12 = V_0;
-		NullCheck(L_11);
-		L_11->___Options = L_12;
-		Il2CppCodeGenWriteBarrier((void**)(&L_11->___Options), (void*)L_12);
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_9 = V_1;
+		UnloadOptions_t49564D79455E7FF6A53FD160566AD425FB421426* L_10 = V_0;
+		NullCheck(L_9);
+		L_9->___Options = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&L_9->___Options), (void*)L_10);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:78>
-		bool L_13 = __this->____connectionOnly;
-		V_4 = L_13;
-		bool L_14 = V_4;
-		if (!L_14)
+		bool L_11 = __this->____connectionOnly;
+		if (!L_11)
 		{
-			goto IL_006c;
+			goto IL_005c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:79>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_15;
-		L_15 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
-		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_16 = ___0_triggeringIdentity;
-		NullCheck(L_16);
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_17;
-		L_17 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_16, NULL);
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_18 = V_1;
-		NullCheck(L_15);
-		SceneManager_UnloadConnectionScenes_m8FE2BB275FB50B25B9EE47C0E229395DC53262A5(L_15, L_17, L_18, NULL);
-		goto IL_0078;
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_12;
+		L_12 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
+		NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* L_13 = ___0_triggeringIdentity;
+		NullCheck(L_13);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_14;
+		L_14 = NetworkObject_get_Owner_mC4659F51ACA91EFD2D7DD154846C5021349B60C0(L_13, NULL);
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_15 = V_1;
+		NullCheck(L_12);
+		SceneManager_UnloadConnectionScenes_m8FE2BB275FB50B25B9EE47C0E229395DC53262A5(L_12, L_14, L_15, NULL);
+		return;
 	}
 
-IL_006c:
+IL_005c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:82>
-		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_19;
-		L_19 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
-		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_20 = V_1;
-		NullCheck(L_19);
-		SceneManager_UnloadGlobalScenes_mFC26BBABF5BA3F84895F288FF32E8F675F04F6F8(L_19, L_20, NULL);
-	}
-
-IL_0078:
-	{
+		SceneManager_t8C570C55CF16F714895A0FD786058027920CF888* L_16;
+		L_16 = InstanceFinder_get_SceneManager_mEF0B66C39AAD22D5734AAF6652440C0901337AF3(NULL);
+		SceneUnloadData_tA5D6442B1CDE3B59393C428C87C5A0FAD7888B40* L_17 = V_1;
+		NullCheck(L_16);
+		SceneManager_UnloadGlobalScenes_mFC26BBABF5BA3F84895F288FF32E8F675F04F6F8(L_16, L_17, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/SceneManager (Old Examples)/Scripts/SceneUnloaderExample.cs:83>
 		return;
 	}
 }
-// Method Definition Index: 80457
+// Method Definition Index: 80890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample__ctor_m3AE55B255F325685D7ACB0E81255AEE8FF34E351 (SceneUnloaderExample_tF8A559FE3F5847044221BED687E3121F234DDA9C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15314,7 +14454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneUnloaderExample__ctor_m3AE55B255F32
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80458
+// Method Definition Index: 80891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 IntermediateLayerCipher_HandleIncoming_m3D59677F59324B081049699CDD59349C03DAC071 (IntermediateLayerCipher_t25BF47F8BBFE9FA8A3F5E7170C8E94BAE90FCEE3* __this, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___0_src, bool ___1_fromServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15331,10 +14471,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	int16_t V_4 = 0;
-	bool V_5 = false;
-	bool V_6 = false;
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_7;
-	memset((&V_7), 0, sizeof(V_7));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:28>
 		il2cpp_codegen_runtime_class_init_inline(ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093_il2cpp_TypeInfo_var);
@@ -15353,10 +14489,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 		int32_t L_3;
 		L_3 = ArraySegment_1_get_Offset_m28FEFF65E8FA9A92DF84966071346BFD426CC3AA_inline((&___0_src), ArraySegment_1_get_Offset_m28FEFF65E8FA9A92DF84966071346BFD426CC3AA_RuntimeMethod_var);
 		V_3 = L_3;
-		goto IL_004d;
+		goto IL_0044;
 	}
 
-IL_0023:
+IL_0022:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:34>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = V_0;
@@ -15367,60 +14503,48 @@ IL_0023:
 		V_4 = ((int16_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_7, 5)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:35>
 		int16_t L_8 = V_4;
-		V_5 = (bool)((((int32_t)L_8) < ((int32_t)0))? 1 : 0);
-		bool L_9 = V_5;
-		if (!L_9)
+		if ((((int32_t)L_8) >= ((int32_t)0)))
 		{
-			goto IL_0042;
+			goto IL_003a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:36>
-		int16_t L_10 = V_4;
-		V_4 = ((int16_t)((int32_t)il2cpp_codegen_add((int32_t)L_10, ((int32_t)256))));
+		int16_t L_9 = V_4;
+		V_4 = ((int16_t)((int32_t)il2cpp_codegen_add((int32_t)L_9, ((int32_t)256))));
 	}
 
-IL_0042:
+IL_003a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:37>
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_11 = V_0;
-		int32_t L_12 = V_3;
-		int16_t L_13 = V_4;
-		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(L_12), (uint8_t)((int32_t)(uint8_t)L_13));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = V_0;
+		int32_t L_11 = V_3;
+		int16_t L_12 = V_4;
+		NullCheck(L_10);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(L_11), (uint8_t)((int32_t)(uint8_t)L_12));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:32>
-		int32_t L_14 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+		int32_t L_13 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
-IL_004d:
+IL_0044:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:32>
-		int32_t L_15 = V_3;
-		int32_t L_16 = V_2;
-		int32_t L_17 = V_1;
-		V_6 = (bool)((((int32_t)L_15) < ((int32_t)((int32_t)il2cpp_codegen_add(L_16, L_17))))? 1 : 0);
-		bool L_18 = V_6;
-		if (L_18)
+		int32_t L_14 = V_3;
+		int32_t L_15 = V_2;
+		int32_t L_16 = V_1;
+		if ((((int32_t)L_14) < ((int32_t)((int32_t)il2cpp_codegen_add(L_15, L_16)))))
 		{
-			goto IL_0023;
+			goto IL_0022;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:40>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_19 = ___0_src;
-		V_7 = L_19;
-		goto IL_005e;
-	}
-
-IL_005e:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:41>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_20 = V_7;
-		return L_20;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_17 = ___0_src;
+		return L_17;
 	}
 }
-// Method Definition Index: 80459
+// Method Definition Index: 80892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 IntermediateLayerCipher_HandleOutgoing_m5133D9F9E67EA7B0D6DFC659E3C9390774B45765 (IntermediateLayerCipher_t25BF47F8BBFE9FA8A3F5E7170C8E94BAE90FCEE3* __this, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___0_src, bool ___1_toServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15437,10 +14561,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	int16_t V_4 = 0;
-	bool V_5 = false;
-	bool V_6 = false;
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_7;
-	memset((&V_7), 0, sizeof(V_7));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:46>
 		il2cpp_codegen_runtime_class_init_inline(ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093_il2cpp_TypeInfo_var);
@@ -15458,10 +14578,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:50>
 		int32_t L_3 = V_2;
 		V_3 = L_3;
-		goto IL_004b;
+		goto IL_0042;
 	}
 
-IL_001d:
+IL_001c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:52>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = V_0;
@@ -15472,60 +14592,48 @@ IL_001d:
 		V_4 = ((int16_t)((int32_t)il2cpp_codegen_add((int32_t)L_7, 5)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:53>
 		int16_t L_8 = V_4;
-		V_5 = (bool)((((int32_t)L_8) > ((int32_t)((int32_t)255)))? 1 : 0);
-		bool L_9 = V_5;
-		if (!L_9)
+		if ((((int32_t)L_8) <= ((int32_t)((int32_t)255))))
 		{
-			goto IL_0040;
+			goto IL_0038;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:54>
-		int16_t L_10 = V_4;
-		V_4 = ((int16_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_10, ((int32_t)256))));
+		int16_t L_9 = V_4;
+		V_4 = ((int16_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_9, ((int32_t)256))));
 	}
 
-IL_0040:
+IL_0038:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:55>
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_11 = V_0;
-		int32_t L_12 = V_3;
-		int16_t L_13 = V_4;
-		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(L_12), (uint8_t)((int32_t)(uint8_t)L_13));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = V_0;
+		int32_t L_11 = V_3;
+		int16_t L_12 = V_4;
+		NullCheck(L_10);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(L_11), (uint8_t)((int32_t)(uint8_t)L_12));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:50>
-		int32_t L_14 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+		int32_t L_13 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
-IL_004b:
+IL_0042:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:50>
-		int32_t L_15 = V_3;
-		int32_t L_16 = V_2;
-		int32_t L_17 = V_1;
-		V_6 = (bool)((((int32_t)L_15) < ((int32_t)((int32_t)il2cpp_codegen_add(L_16, L_17))))? 1 : 0);
-		bool L_18 = V_6;
-		if (L_18)
+		int32_t L_14 = V_3;
+		int32_t L_15 = V_2;
+		int32_t L_16 = V_1;
+		if ((((int32_t)L_14) < ((int32_t)((int32_t)il2cpp_codegen_add(L_15, L_16)))))
 		{
-			goto IL_001d;
+			goto IL_001c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:58>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_19 = ___0_src;
-		V_7 = L_19;
-		goto IL_005c;
-	}
-
-IL_005c:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/IntermediateLayer/Scripts/IntermediateLayerCipher.cs:59>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_20 = V_7;
-		return L_20;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_17 = ___0_src;
+		return L_17;
 	}
 }
-// Method Definition Index: 80460
+// Method Definition Index: 80893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntermediateLayerCipher__ctor_m5817BB8B5C014958CE551CFB7CFE6B12361211A2 (IntermediateLayerCipher_t25BF47F8BBFE9FA8A3F5E7170C8E94BAE90FCEE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15541,7 +14649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntermediateLayerCipher__ctor_m5817BB8B5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80461
+// Method Definition Index: 80894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_Awake_mB134C04495BA6AC5076DFD0A6A204043257C8937 (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15551,7 +14659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_Awake_mB134C04495BA6
 		return;
 	}
 }
-// Method Definition Index: 80462
+// Method Definition Index: 80895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour__structy_OnChange_m955637EFC334B5E548FA900CAD53FDD1638D8EFE (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, uint8_t ___0_op, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_oldItem, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___2_newItem, bool ___3_asServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15602,63 +14710,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour__structy_OnChange_m9
 		return;
 	}
 }
-// Method Definition Index: 80463
+// Method Definition Index: 80896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_Update_mC18EA456DC3AC839EDE5E12DD409EC9FB4B44902 (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructSyncBehaviour.cs:28>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0019;
+			goto IL_0036;
 		}
 	}
 	{
 		int32_t L_1;
 		L_1 = Time_get_frameCount_m4A42E558A71301A216BDC49EC402D62F19C79667(NULL);
-		G_B3_0 = ((((int32_t)((int32_t)(L_1%((int32_t)200)))) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_001a:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (((int32_t)(L_1%((int32_t)200))))
 		{
-			goto IL_0042;
+			goto IL_0036;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructSyncBehaviour.cs:31>
-		StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* L_3 = __this->____structy;
-		NullCheck(L_3);
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF* L_4 = (Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF*)(&L_3->___Value);
-		uint16_t* L_5 = (uint16_t*)(&L_4->___Age);
-		uint16_t* L_6 = L_5;
-		int32_t L_7 = *((uint16_t*)L_6);
-		*((int16_t*)L_6) = (int16_t)((int32_t)(uint16_t)((int32_t)il2cpp_codegen_add(L_7, 1)));
+		StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* L_2 = __this->____structy;
+		NullCheck(L_2);
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF* L_3 = (Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF*)(&L_2->___Value);
+		uint16_t* L_4 = (uint16_t*)(&L_3->___Age);
+		uint16_t* L_5 = L_4;
+		int32_t L_6 = *((uint16_t*)L_5);
+		*((int16_t*)L_5) = (int16_t)((int32_t)(uint16_t)((int32_t)il2cpp_codegen_add(L_6, 1)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructSyncBehaviour.cs:32>
-		StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* L_8 = __this->____structy;
-		NullCheck(L_8);
-		StructySync_ValuesChanged_m8CBADE062FBA5524682918D7ACC98F09AEF0349D(L_8, NULL);
+		StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* L_7 = __this->____structy;
+		NullCheck(L_7);
+		StructySync_ValuesChanged_m8CBADE062FBA5524682918D7ACC98F09AEF0349D(L_7, NULL);
 	}
 
-IL_0042:
+IL_0036:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructSyncBehaviour.cs:34>
 		return;
 	}
 }
-// Method Definition Index: 80464
+// Method Definition Index: 80897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour__ctor_mA1199757C732AE4AF783C1C497AD98F490DF3499 (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15679,7 +14772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour__ctor_mA1199757C732A
 		return;
 	}
 }
-// Method Definition Index: 80465
+// Method Definition Index: 80898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_NetworkInitialize___Early_mF5733C4737C58968F55613C9E4066792B1D4CF3A (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15703,7 +14796,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80466
+// Method Definition Index: 80899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_NetworkInitialize___Late_m81149D95CA7685D404642F26CBA0F9179E638F92 (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15727,7 +14820,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80467
+// Method Definition Index: 80900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_NetworkInitializeIfDisabled_m50DDA13A66230A97B13A825D1A6C1E6A6596EB5C (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15736,7 +14829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_NetworkInitializeIfD
 		return;
 	}
 }
-// Method Definition Index: 80468
+// Method Definition Index: 80901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructSyncBehaviour_Awake_UserLogic_FishNet_Example_CustomSyncObject_StructSyncBehaviour_FishNet_Demos_dll_mCADE8E6CCE194E3A92968356F0AF4152A1E86EB6 (StructSyncBehaviour_tC98ACBCCCCDC3EA24E5E593C8EEF4A99A1EA98F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15801,7 +14894,7 @@ IL2CPP_EXTERN_C void Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_marshal_c
 	il2cpp_codegen_marshal_free_bstring(marshaled.___Name);
 	marshaled.___Name = NULL;
 }
-// Method Definition Index: 80469
+// Method Definition Index: 80902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Structy__ctor_m322EEAA7689975E30AE4F3296F697CFE1EAB4E6D (Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF* __this, String_t* ___0_name, uint16_t ___1_age, const RuntimeMethod* method) 
 {
 	{
@@ -15831,7 +14924,7 @@ IL2CPP_EXTERN_C  void Structy__ctor_m322EEAA7689975E30AE4F3296F697CFE1EAB4E6D_Ad
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80470
+// Method Definition Index: 80903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_add_OnChange_mCAD5C9D3824503A00EAE3CAB20392CD902AA363B (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15874,7 +14967,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 80471
+// Method Definition Index: 80904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_remove_OnChange_m327228E84BBF12E179A45B79EDDE6A9D4CC44BF5 (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15917,7 +15010,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 80472
+// Method Definition Index: 80905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_Initialized_mD0247FA23F920DFB5183CBD6EC4179923137AA46 (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15931,7 +15024,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_Initialized_mD0247FA23F920DF
 		return;
 	}
 }
-// Method Definition Index: 80473
+// Method Definition Index: 80906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_AddOperation_m360A6797F533E7EBD350A36DBDB280424515CEB8 (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, uint8_t ___0_operation, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_prev, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___2_next, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15945,119 +15038,97 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_AddOperation_m360A6797F533E7
 	bool V_0 = false;
 	ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	bool V_3 = false;
-	int32_t G_B5_0 = 0;
-	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B9_0 = NULL;
-	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B8_0 = NULL;
+	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B7_0 = NULL;
+	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B6_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:116>
 		bool L_0;
 		L_0 = SyncBase_get_IsInitialized_m953427A1256C4170AF0C6289C83B74D67C9F33E1_inline(__this, NULL);
-		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_2;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:117>
-		goto IL_0083;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:119>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_2 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkManager;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_1 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_3)
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_2)
 		{
-			goto IL_002e;
+			goto IL_0035;
 		}
 	}
 	{
-		NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F* L_4 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkBehaviour;
-		NullCheck(L_4);
-		bool L_5;
-		L_5 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(L_4, NULL);
-		G_B5_0 = ((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
-		goto IL_002f;
-	}
-
-IL_002e:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_002f:
-	{
-		V_3 = (bool)G_B5_0;
-		bool L_6 = V_3;
-		if (!L_6)
+		NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F* L_3 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkBehaviour;
+		NullCheck(L_3);
+		bool L_4;
+		L_4 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(L_3, NULL);
+		if (L_4)
 		{
-			goto IL_0047;
+			goto IL_0035;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:121>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_7 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkManager;
-		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_7, _stringLiteralF65366778C101ECCD6BFC52FE30EA0BC930569C1, NULL);
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5 = ((SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D*)__this)->___NetworkManager;
+		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_5, _stringLiteralF65366778C101ECCD6BFC52FE30EA0BC930569C1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:122>
-		goto IL_0083;
+		return;
 	}
 
-IL_0047:
+IL_0035:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:130>
 		__this->____valuesChanged = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:131>
-		bool L_8;
-		L_8 = SyncBase_Dirty_mA90F50CFAADEBDA0872E940807D150A830F8B475(__this, NULL);
+		bool L_6;
+		L_6 = SyncBase_Dirty_mA90F50CFAADEBDA0872E940807D150A830F8B475(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:134>
 		V_0 = (bool)1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:136>
-		uint8_t L_9 = ___0_operation;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_10 = ___2_next;
-		ChangeData__ctor_m3C5CE9C86ABD706623A82DD199DB4270731AA59F((&V_1), L_9, L_10, NULL);
+		uint8_t L_7 = ___0_operation;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_8 = ___2_next;
+		ChangeData__ctor_m3C5CE9C86ABD706623A82DD199DB4270731AA59F((&V_1), L_7, L_8, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:137>
-		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_11 = __this->____changed;
-		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_12 = V_1;
-		NullCheck(L_11);
-		List_1_Add_m1168315383070F7A0B825DF69E51B44EE911B17B_inline(L_11, L_12, List_1_Add_m1168315383070F7A0B825DF69E51B44EE911B17B_RuntimeMethod_var);
+		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_9 = __this->____changed;
+		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_10 = V_1;
+		NullCheck(L_9);
+		List_1_Add_m1168315383070F7A0B825DF69E51B44EE911B17B_inline(L_9, L_10, List_1_Add_m1168315383070F7A0B825DF69E51B44EE911B17B_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:138>
-		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_13 = __this->___OnChange;
-		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_14 = L_13;
-		if (L_14)
+		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_11 = __this->___OnChange;
+		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_12 = L_11;
+		if (L_12)
 		{
-			G_B9_0 = L_14;
-			goto IL_0079;
+			G_B7_0 = L_12;
+			goto IL_0065;
 		}
-		G_B8_0 = L_14;
+		G_B6_0 = L_12;
 	}
 	{
-		goto IL_0083;
-	}
-
-IL_0079:
-	{
-		uint8_t L_15 = ___0_operation;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_16 = ___1_prev;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_17 = ___2_next;
-		bool L_18 = V_0;
-		NullCheck(G_B9_0);
-		CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_inline(G_B9_0, L_15, L_16, L_17, L_18, NULL);
+		return;
 	}
 
-IL_0083:
+IL_0065:
 	{
+		uint8_t L_13 = ___0_operation;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_14 = ___1_prev;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_15 = ___2_next;
+		bool L_16 = V_0;
+		NullCheck(G_B7_0);
+		CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_inline(G_B7_0, L_13, L_14, L_15, L_16, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:139>
 		return;
 	}
 }
-// Method Definition Index: 80474
+// Method Definition Index: 80907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_WriteDelta_mACDA37DDF1A5F60E2C133D6B1C206E06914D632C (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* ___0_writer, bool ___1_resetSyncTick, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16071,9 +15142,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_WriteDelta_mACDA37DDF1A5F60E
 	int32_t V_0 = 0;
 	ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:148>
 		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_0 = ___0_writer;
@@ -16089,10 +15157,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_WriteDelta_mACDA37DDF1A5F60E
 		Writer_WriteInt32_mBF2AC2EDEED5CF91177396064070C045487E1451(L_2, L_4, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:151>
 		V_0 = 0;
-		goto IL_0084;
+		goto IL_0070;
 	}
 
-IL_0020:
+IL_001d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:153>
 		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_5 = __this->____changed;
@@ -16110,78 +15178,72 @@ IL_0020:
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:157>
 		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_11 = V_1;
 		uint8_t L_12 = L_11.___Operation;
-		V_2 = (bool)((((int32_t)L_12) == ((int32_t)2))? 1 : 0);
-		bool L_13 = V_2;
-		if (!L_13)
+		if ((!(((uint32_t)L_12) == ((uint32_t)2))))
 		{
-			goto IL_005e;
+			goto IL_0052;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:159>
-		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_14 = ___0_writer;
-		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_15 = V_1;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_16 = L_15.___Data;
-		uint16_t L_17 = L_16.___Age;
-		NullCheck(L_14);
-		Writer_WriteUInt16_m6A9309EF022295E54E7FC403B61E7EB03597D2AB(L_14, L_17, NULL);
-		goto IL_007f;
+		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_13 = ___0_writer;
+		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_14 = V_1;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_15 = L_14.___Data;
+		uint16_t L_16 = L_15.___Age;
+		NullCheck(L_13);
+		Writer_WriteUInt16_m6A9309EF022295E54E7FC403B61E7EB03597D2AB(L_13, L_16, NULL);
+		goto IL_006c;
 	}
 
-IL_005e:
+IL_0052:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:161>
-		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_18 = V_1;
-		uint8_t L_19 = L_18.___Operation;
-		V_3 = (bool)((((int32_t)L_19) == ((int32_t)1))? 1 : 0);
-		bool L_20 = V_3;
-		if (!L_20)
+		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_17 = V_1;
+		uint8_t L_18 = L_17.___Operation;
+		if ((!(((uint32_t)L_18) == ((uint32_t)1))))
 		{
-			goto IL_007f;
+			goto IL_006c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:163>
-		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_21 = ___0_writer;
-		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_22 = V_1;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_23 = L_22.___Data;
-		String_t* L_24 = L_23.___Name;
-		NullCheck(L_21);
-		Writer_WriteString_m288F0F5C096931ACC6F2CCE0B41FD69A76C2BE3A(L_21, L_24, NULL);
+		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_19 = ___0_writer;
+		ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE L_20 = V_1;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_21 = L_20.___Data;
+		String_t* L_22 = L_21.___Name;
+		NullCheck(L_19);
+		Writer_WriteString_m288F0F5C096931ACC6F2CCE0B41FD69A76C2BE3A(L_19, L_22, NULL);
 	}
 
-IL_007f:
+IL_006c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:151>
-		int32_t L_25 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_25, 1));
+		int32_t L_23 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 	}
 
-IL_0084:
+IL_0070:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:151>
-		int32_t L_26 = V_0;
-		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_27 = __this->____changed;
-		NullCheck(L_27);
-		int32_t L_28;
-		L_28 = List_1_get_Count_m203174CCF20ABDE1C9743A6B016025F2ABF86F32_inline(L_27, List_1_get_Count_m203174CCF20ABDE1C9743A6B016025F2ABF86F32_RuntimeMethod_var);
-		V_4 = (bool)((((int32_t)L_26) < ((int32_t)L_28))? 1 : 0);
-		bool L_29 = V_4;
-		if (L_29)
+		int32_t L_24 = V_0;
+		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_25 = __this->____changed;
+		NullCheck(L_25);
+		int32_t L_26;
+		L_26 = List_1_get_Count_m203174CCF20ABDE1C9743A6B016025F2ABF86F32_inline(L_25, List_1_get_Count_m203174CCF20ABDE1C9743A6B016025F2ABF86F32_RuntimeMethod_var);
+		if ((((int32_t)L_24) < ((int32_t)L_26)))
 		{
-			goto IL_0020;
+			goto IL_001d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:167>
-		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_30 = __this->____changed;
-		NullCheck(L_30);
-		List_1_Clear_mCC5FF69B4991EB0D6E51F757C695E79AD78AC2AD_inline(L_30, List_1_Clear_mCC5FF69B4991EB0D6E51F757C695E79AD78AC2AD_RuntimeMethod_var);
+		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_27 = __this->____changed;
+		NullCheck(L_27);
+		List_1_Clear_mCC5FF69B4991EB0D6E51F757C695E79AD78AC2AD_inline(L_27, List_1_Clear_mCC5FF69B4991EB0D6E51F757C695E79AD78AC2AD_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:168>
 		return;
 	}
 }
-// Method Definition Index: 80475
+// Method Definition Index: 80908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_WriteFull_m28990314B98E7E181CA5960FD3346BAC4EC20607 (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* ___0_writer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16190,49 +15252,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_WriteFull_m28990314B98E7E181
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Writer_Write_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_m3D537943985A12A92E80DA248AE1D36AE74117A6_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:176>
 		bool L_0 = __this->____valuesChanged;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:177>
-		goto IL_0036;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:179>
-		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_2 = ___0_writer;
-		SyncBase_WriteHeader_m1806717BBF45C4AE042308ED0877EAAA1492187D(__this, L_2, (bool)0, NULL);
+		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_1 = ___0_writer;
+		SyncBase_WriteHeader_m1806717BBF45C4AE042308ED0877EAAA1492187D(__this, L_1, (bool)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:181>
+		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_2 = ___0_writer;
+		NullCheck(L_2);
+		Writer_WriteInt32_mBF2AC2EDEED5CF91177396064070C045487E1451(L_2, 1, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:183>
 		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_3 = ___0_writer;
 		NullCheck(L_3);
-		Writer_WriteInt32_mBF2AC2EDEED5CF91177396064070C045487E1451(L_3, 1, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:183>
-		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_4 = ___0_writer;
-		NullCheck(L_4);
-		Writer_WriteUInt8Unpacked_mC36CB1E3EC109F8A074366FED518FBF8AD80036A(L_4, (uint8_t)0, NULL);
+		Writer_WriteUInt8Unpacked_mC36CB1E3EC109F8A074366FED518FBF8AD80036A(L_3, (uint8_t)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:185>
-		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_5 = ___0_writer;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_6 = __this->___Value;
-		NullCheck(L_5);
-		Writer_Write_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_m3D537943985A12A92E80DA248AE1D36AE74117A6(L_5, L_6, Writer_Write_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_m3D537943985A12A92E80DA248AE1D36AE74117A6_RuntimeMethod_var);
-	}
-
-IL_0036:
-	{
+		PooledWriter_tF7ADFC89674F8C1A5FAF14C1FA904D6FD93F2EB3* L_4 = ___0_writer;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_5 = __this->___Value;
+		NullCheck(L_4);
+		Writer_Write_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_m3D537943985A12A92E80DA248AE1D36AE74117A6(L_4, L_5, Writer_Write_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_m3D537943985A12A92E80DA248AE1D36AE74117A6_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:186>
 		return;
 	}
 }
-// Method Definition Index: 80476
+// Method Definition Index: 80909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_Read_m6FF5CB718DA0C10F50E92F0A76CCEBC2AD7FED58 (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_reader, bool ___1_asServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16251,12 +15306,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_Read_m6FF5CB718DA0C10F50E92F
 	memset((&V_6), 0, sizeof(V_6));
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF V_7;
 	memset((&V_7), 0, sizeof(V_7));
-	bool V_8 = false;
-	bool V_9 = false;
-	bool V_10 = false;
-	bool V_11 = false;
-	bool V_12 = false;
-	bool V_13 = false;
 	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B12_0 = NULL;
 	CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* G_B11_0 = NULL;
 	{
@@ -16272,10 +15321,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_Read_m6FF5CB718DA0C10F50E92F
 		V_2 = L_3;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:198>
 		V_4 = 0;
-		goto IL_00b1;
+		goto IL_008e;
 	}
 
-IL_001f:
+IL_001a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:200>
 		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_4 = ___0_reader;
@@ -16291,136 +15340,124 @@ IL_001f:
 		V_7 = L_7;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:205>
 		uint8_t L_8 = V_5;
-		V_8 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
-		bool L_9 = V_8;
-		if (!L_9)
+		if (L_8)
 		{
-			goto IL_0049;
+			goto IL_003c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:206>
-		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_10 = ___0_reader;
-		NullCheck(L_10);
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_11;
-		L_11 = Reader_Read_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_mF5081CC178DB6D8B08F9FADBF6DAA604AD9894B3(L_10, Reader_Read_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_mF5081CC178DB6D8B08F9FADBF6DAA604AD9894B3_RuntimeMethod_var);
-		V_7 = L_11;
-		goto IL_007b;
+		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_9 = ___0_reader;
+		NullCheck(L_9);
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_10;
+		L_10 = Reader_Read_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_mF5081CC178DB6D8B08F9FADBF6DAA604AD9894B3(L_9, Reader_Read_TisStructy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_mF5081CC178DB6D8B08F9FADBF6DAA604AD9894B3_RuntimeMethod_var);
+		V_7 = L_10;
+		goto IL_0062;
 	}
 
-IL_0049:
+IL_003c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:208>
-		uint8_t L_12 = V_5;
-		V_9 = (bool)((((int32_t)L_12) == ((int32_t)1))? 1 : 0);
-		bool L_13 = V_9;
-		if (!L_13)
+		uint8_t L_11 = V_5;
+		if ((!(((uint32_t)L_11) == ((uint32_t)1))))
 		{
-			goto IL_0063;
+			goto IL_0050;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:209>
-		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_14 = ___0_reader;
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = Reader_ReadStringAllocated_m2BBB2E4B268CE648765A9372E99E4B4B99D46BB8(L_14, NULL);
-		(&V_7)->___Name = L_15;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_7)->___Name), (void*)L_15);
-		goto IL_007b;
+		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_12 = ___0_reader;
+		NullCheck(L_12);
+		String_t* L_13;
+		L_13 = Reader_ReadStringAllocated_m2BBB2E4B268CE648765A9372E99E4B4B99D46BB8(L_12, NULL);
+		(&V_7)->___Name = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_7)->___Name), (void*)L_13);
+		goto IL_0062;
 	}
 
-IL_0063:
+IL_0050:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:211>
-		uint8_t L_16 = V_5;
-		V_10 = (bool)((((int32_t)L_16) == ((int32_t)2))? 1 : 0);
-		bool L_17 = V_10;
-		if (!L_17)
+		uint8_t L_14 = V_5;
+		if ((!(((uint32_t)L_14) == ((uint32_t)2))))
 		{
-			goto IL_007b;
+			goto IL_0062;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:212>
-		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_18 = ___0_reader;
-		NullCheck(L_18);
-		uint16_t L_19;
-		L_19 = Reader_ReadUInt16_mEE148D80516D2A798EE060ABF105EFBBDF13E112(L_18, NULL);
-		(&V_7)->___Age = L_19;
+		PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* L_15 = ___0_reader;
+		NullCheck(L_15);
+		uint16_t L_16;
+		L_16 = Reader_ReadUInt16_mEE148D80516D2A798EE060ABF105EFBBDF13E112(L_15, NULL);
+		(&V_7)->___Age = L_16;
 	}
 
-IL_007b:
+IL_0062:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:214>
-		bool L_20 = V_1;
-		V_11 = L_20;
-		bool L_21 = V_11;
-		if (!L_21)
+		bool L_17 = V_1;
+		if (!L_17)
 		{
-			goto IL_008a;
+			goto IL_006d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:215>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_22 = V_7;
-		__this->___Value = L_22;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_18 = V_7;
+		__this->___Value = L_18;
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___Value))->___Name), (void*)NULL);
 	}
 
-IL_008a:
+IL_006d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:217>
-		bool L_23 = V_0;
-		V_12 = L_23;
-		bool L_24 = V_12;
-		if (!L_24)
+		bool L_19 = V_0;
+		if (!L_19)
 		{
-			goto IL_00aa;
+			goto IL_0088;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:218>
-		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_25 = __this->___OnChange;
-		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_26 = L_25;
-		if (L_26)
+		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_20 = __this->___OnChange;
+		CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* L_21 = L_20;
+		if (L_21)
 		{
-			G_B12_0 = L_26;
-			goto IL_009d;
+			G_B12_0 = L_21;
+			goto IL_007c;
 		}
-		G_B11_0 = L_26;
+		G_B11_0 = L_21;
 	}
 	{
-		goto IL_00aa;
+		goto IL_0088;
 	}
 
-IL_009d:
+IL_007c:
 	{
-		uint8_t L_27 = V_5;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_28 = V_6;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_29 = V_7;
-		bool L_30 = ___1_asServer;
+		uint8_t L_22 = V_5;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_23 = V_6;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_24 = V_7;
+		bool L_25 = ___1_asServer;
 		NullCheck(G_B12_0);
-		CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_inline(G_B12_0, L_27, L_28, L_29, L_30, NULL);
+		CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_inline(G_B12_0, L_22, L_23, L_24, L_25, NULL);
 	}
 
-IL_00aa:
+IL_0088:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:198>
-		int32_t L_31 = V_4;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_31, 1));
+		int32_t L_26 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_26, 1));
 	}
 
-IL_00b1:
+IL_008e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:198>
-		int32_t L_32 = V_4;
-		int32_t L_33 = V_2;
-		V_13 = (bool)((((int32_t)L_32) < ((int32_t)L_33))? 1 : 0);
-		bool L_34 = V_13;
-		if (L_34)
+		int32_t L_27 = V_4;
+		int32_t L_28 = V_2;
+		if ((((int32_t)L_27) < ((int32_t)L_28)))
 		{
-			goto IL_001f;
+			goto IL_001a;
 		}
 	}
 	{
@@ -16428,15 +15465,13 @@ IL_00b1:
 		return;
 	}
 }
-// Method Definition Index: 80477
+// Method Definition Index: 80910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_ValuesChanged_m8CBADE062FBA5524682918D7ACC98F09AEF0349D (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, const RuntimeMethod* method) 
 {
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	bool V_3 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:227>
 		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_0 = __this->____lastDirtied;
@@ -16451,52 +15486,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_ValuesChanged_m8CBADE062FBA5
 		String_t* L_5 = L_4.___Name;
 		bool L_6;
 		L_6 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_3, L_5, NULL);
-		V_2 = L_6;
-		bool L_7 = V_2;
-		if (!L_7)
+		if (!L_6)
 		{
-			goto IL_002e;
+			goto IL_002a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:231>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_8 = V_0;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_9 = V_1;
-		StructySync_AddOperation_m360A6797F533E7EBD350A36DBDB280424515CEB8(__this, 1, L_8, L_9, NULL);
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_7 = V_0;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_8 = V_1;
+		StructySync_AddOperation_m360A6797F533E7EBD350A36DBDB280424515CEB8(__this, 1, L_7, L_8, NULL);
 	}
 
-IL_002e:
+IL_002a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:232>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_10 = V_0;
-		uint16_t L_11 = L_10.___Age;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_12 = V_1;
-		uint16_t L_13 = L_12.___Age;
-		V_3 = (bool)((((int32_t)((((int32_t)L_11) == ((int32_t)L_13))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_14 = V_3;
-		if (!L_14)
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_9 = V_0;
+		uint16_t L_10 = L_9.___Age;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_11 = V_1;
+		uint16_t L_12 = L_11.___Age;
+		if ((((int32_t)L_10) == ((int32_t)L_12)))
 		{
-			goto IL_004d;
+			goto IL_0041;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:233>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_15 = V_0;
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_16 = V_1;
-		StructySync_AddOperation_m360A6797F533E7EBD350A36DBDB280424515CEB8(__this, 2, L_15, L_16, NULL);
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_13 = V_0;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_14 = V_1;
+		StructySync_AddOperation_m360A6797F533E7EBD350A36DBDB280424515CEB8(__this, 2, L_13, L_14, NULL);
 	}
 
-IL_004d:
+IL_0041:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:235>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_17 = __this->___Value;
-		__this->____lastDirtied = L_17;
+		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF L_15 = __this->___Value;
+		__this->____lastDirtied = L_15;
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->____lastDirtied))->___Name), (void*)NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:236>
 		return;
 	}
 }
-// Method Definition Index: 80478
+// Method Definition Index: 80911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_ResetState_mD4B9082440756242040BDC05527B183D335A61CF (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, bool ___0_asServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16523,7 +15554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync_ResetState_mD4B9082440756242
 		return;
 	}
 }
-// Method Definition Index: 80479
+// Method Definition Index: 80912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StructySync_GetSerializedType_m0F428205FFDBFAA97E80C000F91B34F6C95D551E (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16541,7 +15572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StructySync_GetSerializedType_
 		return L_1;
 	}
 }
-// Method Definition Index: 80480
+// Method Definition Index: 80913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync__ctor_m0D4E0CB985B84A795FB73ADE6B8B499EB7B0B91B (StructySync_tBFF2CB3293AA78E7A5DF1E4EA6B0B8AF4808840A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16552,17 +15583,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StructySync__ctor_m0D4E0CB985B84A795FB73
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:79>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF* L_0 = (Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF*)(&__this->___Value);
-		il2cpp_codegen_initobj(L_0, sizeof(Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:90>
-		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_1 = (List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF*)il2cpp_codegen_object_new(List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF_il2cpp_TypeInfo_var);
-		List_1__ctor_mB737850A46537B4734A558D640D931C134978006(L_1, List_1__ctor_mB737850A46537B4734A558D640D931C134978006_RuntimeMethod_var);
-		__this->____changed = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____changed), (void*)L_1);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Custom Struct Sync/StructySync.cs:98>
-		Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF* L_2 = (Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF*)(&__this->____lastDirtied);
-		il2cpp_codegen_initobj(L_2, sizeof(Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF));
+		List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* L_0 = (List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF*)il2cpp_codegen_object_new(List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF_il2cpp_TypeInfo_var);
+		List_1__ctor_mB737850A46537B4734A558D640D931C134978006(L_0, List_1__ctor_mB737850A46537B4734A558D640D931C134978006_RuntimeMethod_var);
+		__this->____changed = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____changed), (void*)L_0);
 		SyncBase__ctor_mF2F83C729C77F0494B7934AC927EF5A609773236(__this, NULL);
 		return;
 	}
@@ -16619,7 +15644,7 @@ IL2CPP_EXTERN_C void ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE_marsha
 {
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_marshal_com_cleanup(marshaled.___Data);
 }
-// Method Definition Index: 80481
+// Method Definition Index: 80914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChangeData__ctor_m3C5CE9C86ABD706623A82DD199DB4270731AA59F (ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE* __this, uint8_t ___0_operation, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_data, const RuntimeMethod* method) 
 {
 	{
@@ -16699,7 +15724,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_CustomChanged_t1735AE59FFAB7268FAAB
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF_marshal_pinvoke_cleanup(____2_newItem_marshaled);
 
 }
-// Method Definition Index: 80482
+// Method Definition Index: 80915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomChanged__ctor_mFF7177B7136C8EB247B59FA0E08E7BE5F2E9384F (CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -16728,13 +15753,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomChanged__ctor_mFF7177B7136C8EB247B
 	}
 	__this->___extra_arg = (intptr_t)&CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_Multicast;
 }
-// Method Definition Index: 80483
+// Method Definition Index: 80916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB (CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* __this, uint8_t ___0_op, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_oldItem, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___2_newItem, bool ___3_asServer, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_op, ___1_oldItem, ___2_newItem, ___3_asServer, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 80484
+// Method Definition Index: 80917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CustomChanged_BeginInvoke_m928B09CAA192E10ADDF0337DB5D57DE92305E7C7 (CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* __this, uint8_t ___0_op, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_oldItem, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___2_newItem, bool ___3_asServer, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___4_callback, RuntimeObject* ___5_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16751,7 +15776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CustomChanged_BeginInvoke_m928
 	__d_args[3] = Box(il2cpp_defaults.boolean_class, &___3_asServer);
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___4_callback, (RuntimeObject*)___5_object);
 }
-// Method Definition Index: 80485
+// Method Definition Index: 80918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomChanged_EndInvoke_mF7021418C97B2D5DF91AFF0B17C2B61546F11CCD (CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -16764,7 +15789,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomChanged_EndInvoke_mF7021418C97B2D5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80486
+// Method Definition Index: 80919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMonoScript_Start_mE80BEC19BF6C73EFE40AE2F5DCA7FC0D029713E7 (AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16772,7 +15797,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMonoScript_Start_mE80BEC19BF6C73EFE40AE
 		return;
 	}
 }
-// Method Definition Index: 80487
+// Method Definition Index: 80920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMonoScript__ctor_m78501DA89AF1330740A8D9A7AB5112944DE901D9 (AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16788,7 +15813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMonoScript__ctor_m78501DA89AF1330740A8D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80507
+// Method Definition Index: 80940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMSSerializer_WriteAMS_m0D17CF191BA3B2EFFF685E60A7901667F1C8612B (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_w, AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -16796,21 +15821,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AMSSerializer_WriteAMS_m0D17CF191BA3B2EF
 		return;
 	}
 }
-// Method Definition Index: 80508
+// Method Definition Index: 80941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* AMSSerializer_ReadAMS_mFDEA3A24750F45338B976C36A8BD34A7D2B8A62C (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_r, const RuntimeMethod* method) 
 {
-	AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentSyncStateBehaviour.cs:14>
-		V_0 = (AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF*)NULL;
-		goto IL_0005;
-	}
-
-IL_0005:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentSyncStateBehaviour.cs:15>
-		AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* L_0 = V_0;
-		return L_0;
+		return (AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF*)NULL;
 	}
 }
 #ifdef __clang__
@@ -16821,7 +15837,7 @@ IL_0005:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80509
+// Method Definition Index: 80942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Awake_m2A4CEA65A8CC6CCBBB301898EA4A4EDA68B92616 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16831,7 +15847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Awake_m2A4CE
 		return;
 	}
 }
-// Method Definition Index: 80510
+// Method Definition Index: 80943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour__syncScript_OnChange_m980C22E92C7D6FEEB103BEE7B0FD4EEAB8D17BD0 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, AMonoScript_t017A0D6FF6A11A4E3902DAAA90636F1B451509EF* ___0_component, bool ___1_prevState, bool ___2_nextState, bool ___3_asServer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16864,7 +15880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour__syncScript_
 		return;
 	}
 }
-// Method Definition Index: 80511
+// Method Definition Index: 80944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Update_m2B12920246FAB85304F3BFEBE2C278AC7F934315 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16874,56 +15890,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Update_m2B12
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ComponentStateSync_1_set_Enabled_mDB687CB44707ABCDE17F3EFFAC6EE4D7E18B5A03_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentSyncStateBehaviour.cs:45>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0019;
+			goto IL_002e;
 		}
 	}
 	{
 		int32_t L_1;
 		L_1 = Time_get_frameCount_m4A42E558A71301A216BDC49EC402D62F19C79667(NULL);
-		G_B3_0 = ((((int32_t)((int32_t)(L_1%((int32_t)200)))) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_001a:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (((int32_t)(L_1%((int32_t)200))))
 		{
-			goto IL_0038;
+			goto IL_002e;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentSyncStateBehaviour.cs:46>
+		ComponentStateSync_1_tC25B3D584C1FAA3D18F76A917D45F3DE485BC4AB* L_2 = __this->____syncScript;
 		ComponentStateSync_1_tC25B3D584C1FAA3D18F76A917D45F3DE485BC4AB* L_3 = __this->____syncScript;
-		ComponentStateSync_1_tC25B3D584C1FAA3D18F76A917D45F3DE485BC4AB* L_4 = __this->____syncScript;
-		NullCheck(L_4);
-		bool L_5;
-		L_5 = ComponentStateSync_1_get_Enabled_m3A0906B273E6CBC1902EF8FEE970B090D7B0CC68(L_4, ComponentStateSync_1_get_Enabled_m3A0906B273E6CBC1902EF8FEE970B090D7B0CC68_RuntimeMethod_var);
 		NullCheck(L_3);
-		ComponentStateSync_1_set_Enabled_mDB687CB44707ABCDE17F3EFFAC6EE4D7E18B5A03(L_3, (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0), ComponentStateSync_1_set_Enabled_mDB687CB44707ABCDE17F3EFFAC6EE4D7E18B5A03_RuntimeMethod_var);
+		bool L_4;
+		L_4 = ComponentStateSync_1_get_Enabled_m3A0906B273E6CBC1902EF8FEE970B090D7B0CC68(L_3, ComponentStateSync_1_get_Enabled_m3A0906B273E6CBC1902EF8FEE970B090D7B0CC68_RuntimeMethod_var);
+		NullCheck(L_2);
+		ComponentStateSync_1_set_Enabled_mDB687CB44707ABCDE17F3EFFAC6EE4D7E18B5A03(L_2, (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0), ComponentStateSync_1_set_Enabled_mDB687CB44707ABCDE17F3EFFAC6EE4D7E18B5A03_RuntimeMethod_var);
 	}
 
-IL_0038:
+IL_002e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/CustomSyncType/Component State Sync/ComponentSyncStateBehaviour.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 80512
+// Method Definition Index: 80945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour__ctor_m4512EF0F8E74939D0BDD226D3CCC16DDA18AF028 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16945,7 +15946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour__ctor_m4512E
 		return;
 	}
 }
-// Method Definition Index: 80513
+// Method Definition Index: 80946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_NetworkInitialize___Early_m9DE52641A5B80082F29F5388F17E8638392CA8A3 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16969,7 +15970,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80514
+// Method Definition Index: 80947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_NetworkInitialize___Late_m7171476F0F156970199540CEF45DA963641A97FB (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16993,7 +15994,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80515
+// Method Definition Index: 80948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_NetworkInitializeIfDisabled_m06267F99107BAB9B65A157249877478B544012D5 (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17002,7 +16003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_NetworkIniti
 		return;
 	}
 }
-// Method Definition Index: 80516
+// Method Definition Index: 80949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Awake_UserLogic_FishNet_Example_ComponentStateSync_ComponentSyncStateBehaviour_FishNet_Demos_dll_mF89D775055A69BBFF0DE6CD54AB1F61D33C5FCAA (ComponentSyncStateBehaviour_t480B6C1EBE8629A83AD89172686804A2ED2EB5CB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17044,7 +16045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComponentSyncStateBehaviour_Awake_UserLo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80517
+// Method Definition Index: 80950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DestroyAfterDelay_Awake_m2528F6F8F5E1E60CE65748C6B4C94DB0E9B60812 (DestroyAfterDelay_tA2866F4CF9BA97038972528DC8DA257DAB4DAC77* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17064,7 +16065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DestroyAfterDelay_Awake_m2528F6F8F5E1E60
 		return;
 	}
 }
-// Method Definition Index: 80518
+// Method Definition Index: 80951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DestroyAfterDelay__ctor_mAC4DAE11D0240B08A5AD669190F776D6C4EA9EDC (DestroyAfterDelay_tA2866F4CF9BA97038972528DC8DA257DAB4DAC77* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17082,7 +16083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DestroyAfterDelay__ctor_mAC4DAE11D0240B0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80519
+// Method Definition Index: 80952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* Aim_get_PlayerCamera_m40D24F736CCDD9ACDF94A799A3428D86985D5507 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17091,7 +16092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerCamera_tA490CD125789BAA7737A7B712A319EA
 		return L_0;
 	}
 }
-// Method Definition Index: 80520
+// Method Definition Index: 80953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_set_PlayerCamera_m80128407CA99117E85D53D13DD69BA6279B11A89 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -17102,7 +16103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_set_PlayerCamera_m80128407CA99117E85
 		return;
 	}
 }
-// Method Definition Index: 80521
+// Method Definition Index: 80954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_OnStartClient_m3D4FB33C4A0FD9CC116D60FB9BD5A8C8A34333E9 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17111,38 +16112,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_OnStartClient_m3D4FB33C4A0FD9CC116D6
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisPlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2_mE49BBF3D9B75D812D746D6556409B442A6B84125_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:17>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0021;
+			goto IL_001d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:18>
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
-		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_1;
+		L_1 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_1, NULL);
 		NullCheck(L_2);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_2, NULL);
-		NullCheck(L_3);
-		PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* L_4;
-		L_4 = Component_GetComponent_TisPlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2_mE49BBF3D9B75D812D746D6556409B442A6B84125(L_3, Component_GetComponent_TisPlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2_mE49BBF3D9B75D812D746D6556409B442A6B84125_RuntimeMethod_var);
-		Aim_set_PlayerCamera_m80128407CA99117E85D53D13DD69BA6279B11A89_inline(__this, L_4, NULL);
+		PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* L_3;
+		L_3 = Component_GetComponent_TisPlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2_mE49BBF3D9B75D812D746D6556409B442A6B84125(L_2, Component_GetComponent_TisPlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2_mE49BBF3D9B75D812D746D6556409B442A6B84125_RuntimeMethod_var);
+		Aim_set_PlayerCamera_m80128407CA99117E85D53D13DD69BA6279B11A89_inline(__this, L_3, NULL);
 	}
 
-IL_0021:
+IL_001d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 80522
+// Method Definition Index: 80955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_Update_mA8DED4E1F2AF3890498223E7FD4054DC465FB189 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17151,15 +16149,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_Update_mA8DED4E1F2AF3890498223E7FD40
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:23>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0017;
+			goto IL_0016;
 		}
 	}
 	{
@@ -17168,30 +16164,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_Update_mA8DED4E1F2AF3890498223E7FD40
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0018;
+		if (!L_2)
+		{
+			goto IL_0017;
+		}
+	}
+
+IL_0016:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:24>
+		return;
 	}
 
 IL_0017:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0018:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_3 = V_0;
-		if (!L_3)
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:24>
-		goto IL_003a;
-	}
-
-IL_001e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:26>
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
@@ -17201,15 +16186,11 @@ IL_001e:
 		Aim_MoveAim_m2A2C712D7739F999E806CA06BEFB1E9E59F6360B(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:29>
 		Aim_MoveCamera_m32AFA36102672D1A63CA0B038B34D77091D8538D(__this, NULL);
-	}
-
-IL_003a:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:30>
 		return;
 	}
 }
-// Method Definition Index: 80523
+// Method Definition Index: 80956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_MoveAim_m2A2C712D7739F999E806CA06BEFB1E9E59F6360B (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17221,7 +16202,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_MoveAim_m2A2C712D7739F999E806CA06BEF
 	}
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:37>
 		V_0 = (2.0f);
@@ -17252,55 +16232,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_MoveAim_m2A2C712D7739F999E806CA06BEF
 		V_1 = ((float)il2cpp_codegen_subtract(L_7, ((float)il2cpp_codegen_multiply(L_8, L_9))));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:44>
 		float L_10 = V_1;
-		V_2 = (bool)((((float)L_10) > ((float)(180.0f)))? 1 : 0);
-		bool L_11 = V_2;
-		if (!L_11)
+		if ((!(((float)L_10) > ((float)(180.0f)))))
 		{
-			goto IL_0065;
+			goto IL_005f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:45>
-		float L_12 = V_1;
-		V_1 = ((float)il2cpp_codegen_subtract(L_12, (360.0f)));
+		float L_11 = V_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_11, (360.0f)));
 	}
 
-IL_0065:
+IL_005f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:46>
-		float L_13 = V_1;
-		float L_14;
-		L_14 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_13, (-89.0f), (89.0f), NULL);
-		V_1 = L_14;
+		float L_12 = V_1;
+		float L_13;
+		L_13 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_12, (-89.0f), (89.0f), NULL);
+		V_1 = L_13;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:48>
-		PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* L_15;
-		L_15 = Aim_get_PlayerCamera_m40D24F736CCDD9ACDF94A799A3428D86985D5507_inline(__this, NULL);
+		PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* L_14;
+		L_14 = Aim_get_PlayerCamera_m40D24F736CCDD9ACDF94A799A3428D86985D5507_inline(__this, NULL);
+		NullCheck(L_14);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
+		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_14, NULL);
+		float L_16 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_17, NULL);
+		float L_19 = L_18.___y;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_20);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
+		L_21 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_20, NULL);
+		float L_22 = L_21.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
+		memset((&L_23), 0, sizeof(L_23));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_23), L_16, L_19, L_22, NULL);
 		NullCheck(L_15);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
-		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_15, NULL);
-		float L_17 = V_1;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
-		L_18 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_18);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
-		L_19 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_18, NULL);
-		float L_20 = L_19.___y;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
-		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_21);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		L_22 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_21, NULL);
-		float L_23 = L_22.___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
-		memset((&L_24), 0, sizeof(L_24));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_24), L_17, L_20, L_23, NULL);
-		NullCheck(L_16);
-		Transform_set_eulerAngles_m9F0BC484A7915A51FAB87230644229B75BACA004(L_16, L_24, NULL);
+		Transform_set_eulerAngles_m9F0BC484A7915A51FAB87230644229B75BACA004(L_15, L_23, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/Aim.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 80524
+// Method Definition Index: 80957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_MoveCamera_m32AFA36102672D1A63CA0B038B34D77091D8538D (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17355,7 +16333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_MoveCamera_m32AFA36102672D1A63CA0B03
 		return;
 	}
 }
-// Method Definition Index: 80525
+// Method Definition Index: 80958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim__ctor_m61A0129DC05F46887E3A5E9BCC14DA8468546316 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17375,7 +16353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim__ctor_m61A0129DC05F46887E3A5E9BCC14D
 		return;
 	}
 }
-// Method Definition Index: 80526
+// Method Definition Index: 80959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_NetworkInitialize___Early_mEAE0A64834956BE202BB845B3099ABAACFCE66B5 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17396,7 +16374,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80527
+// Method Definition Index: 80960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_NetworkInitialize___Late_m86A3949A97CAA71D7244147AEBF5D5703D881160 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17417,7 +16395,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80528
+// Method Definition Index: 80961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_NetworkInitializeIfDisabled_m85A0055D97308B4CB5AB41ABE6326127DAEA2B5A (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17426,7 +16404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_NetworkInitializeIfDisabled_m85A0055
 		return;
 	}
 }
-// Method Definition Index: 80529
+// Method Definition Index: 80962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_Awake_m5373F31942F74E1BBA10FCD8B667766224AD0685 (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17443,7 +16421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Aim_Awake_m5373F31942F74E1BBA10FCD8B6677
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80530
+// Method Definition Index: 80963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire__ctor_m7657A0D048DC552AD86DFFDAFD718C8D3A5085B6 (Fire_t8599DE1AD0C34E7256EED7E71B7ED512C02B57B8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17458,7 +16436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire__ctor_m7657A0D048DC552AD86DFFDAFD71
 		return;
 	}
 }
-// Method Definition Index: 80531
+// Method Definition Index: 80964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_NetworkInitialize___Early_mF1D7FC860697D021D2A9261B18E03C7D4BAD6979 (Fire_t8599DE1AD0C34E7256EED7E71B7ED512C02B57B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17479,7 +16457,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80532
+// Method Definition Index: 80965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_NetworkInitialize___Late_mACD8D943C88EE7BF4064F20C7282DF579360B454 (Fire_t8599DE1AD0C34E7256EED7E71B7ED512C02B57B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17500,7 +16478,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80533
+// Method Definition Index: 80966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_NetworkInitializeIfDisabled_m94627DE40EBD70A744FC0A62CAE48DA466A96CA8 (Fire_t8599DE1AD0C34E7256EED7E71B7ED512C02B57B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17509,7 +16487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_NetworkInitializeIfDisabled_m94627D
 		return;
 	}
 }
-// Method Definition Index: 80534
+// Method Definition Index: 80967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_Awake_mB9617EE522986233FC0AFFD5D60A14749857ECA2 (Fire_t8599DE1AD0C34E7256EED7E71B7ED512C02B57B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17526,7 +16504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Fire_Awake_mB9617EE522986233FC0AFFD5D60A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80535
+// Method Definition Index: 80968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerCamera__ctor_m07B41A235F1E21197E21719A33BE1A31A57C4D8B (PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17542,7 +16520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerCamera__ctor_m07B41A235F1E21197E21
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80536
+// Method Definition Index: 80969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_OnStartClient_m3606A39127D9BEB0A22BE574E30BE45B626CA47A (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17551,45 +16529,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_OnStartClient_m3606A39127D9B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:18>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0017;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:19>
-		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_2;
-		L_2 = Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040(__this, Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var);
-		__this->____characterController = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____characterController), (void*)L_2);
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_1;
+		L_1 = Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040(__this, Component_GetComponent_TisCharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A_m96B48A644EDC97C5C82F154D1FEA551B2E392040_RuntimeMethod_var);
+		__this->____characterController = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____characterController), (void*)L_1);
 	}
 
-IL_0017:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 80537
+// Method Definition Index: 80970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Update_m0D69F1798A3989DBBF7AA4081C997865FA16346E (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:24>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsOwner_mB7C23CED62A216796F3F0DF460E8B66E940F31BF(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0014;
+			goto IL_000e;
 		}
 	}
 	{
@@ -17597,13 +16569,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Update_m0D69F1798A3989DBBF7A
 		PlayerMotor_Move_m18C5EDAC957C8C54E47525028D08A53EA27D531F(__this, NULL);
 	}
 
-IL_0014:
+IL_000e:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 80538
+// Method Definition Index: 80971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Move_m18C5EDAC957C8C54E47525028D08A53EA27D531F (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17618,68 +16590,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Move_m18C5EDAC957C8C54E47525
 	memset((&V_0), 0, sizeof(V_0));
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:32>
 		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_0 = __this->____characterController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_2 = L_1;
-		bool L_2 = V_2;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:33>
-		goto IL_007b;
+		return;
 	}
 
-IL_0013:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:35>
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), (0.0f), (-10.0f), (0.0f), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:36>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		float L_3;
+		L_3 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
 		float L_4;
-		L_4 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E, NULL);
-		float L_5;
-		L_5 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
+		L_4 = Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4(_stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
+		memset((&L_5), 0, sizeof(L_5));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_5), L_3, (0.0f), L_4, NULL);
+		NullCheck(L_2);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
-		memset((&L_6), 0, sizeof(L_6));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_6), L_4, (0.0f), L_5, NULL);
-		NullCheck(L_3);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
-		L_7 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_3, L_6, NULL);
-		V_1 = L_7;
+		L_6 = Transform_TransformDirection_m9BE1261DF2D48B7A4A27D31EE24D2D97F89E7757(L_2, L_5, NULL);
+		V_1 = L_6;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:38>
-		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_8 = __this->____characterController;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_1;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
-		L_11 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_9, L_10, NULL);
-		float L_12 = __this->____moveRate;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_11, L_12, NULL);
-		float L_14;
-		L_14 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
-		L_15 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_13, L_14, NULL);
-		NullCheck(L_8);
-		int32_t L_16;
-		L_16 = CharacterController_Move_mE3F7AC1B4A2D6955980811C088B68ED3A31D2DA4(L_8, L_15, NULL);
-	}
-
-IL_007b:
-	{
+		CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* L_7 = __this->____characterController;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
+		L_10 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_8, L_9, NULL);
+		float L_11 = __this->____moveRate;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		L_12 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_10, L_11, NULL);
+		float L_13;
+		L_13 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_12, L_13, NULL);
+		NullCheck(L_7);
+		int32_t L_15;
+		L_15 = CharacterController_Move_mE3F7AC1B4A2D6955980811C088B68ED3A31D2DA4(L_7, L_14, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Player/PlayerMotor.cs:39>
 		return;
 	}
 }
-// Method Definition Index: 80539
+// Method Definition Index: 80972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor__ctor_mD4E8175EA8FE93238F4709071131666EC946D7C5 (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17696,7 +16661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor__ctor_mD4E8175EA8FE93238F470
 		return;
 	}
 }
-// Method Definition Index: 80540
+// Method Definition Index: 80973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_NetworkInitialize___Early_m43F1E170A670E928619CD1CC98EB99E0D5FE291B (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17717,7 +16682,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80541
+// Method Definition Index: 80974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_NetworkInitialize___Late_m8EEAA3118841E25A4174364F6D38D2059A960DD6 (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17738,7 +16703,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80542
+// Method Definition Index: 80975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_NetworkInitializeIfDisabled_m3EA14558D0B6E85FA39DF54728D1E14FDA3AA5B8 (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17747,7 +16712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_NetworkInitializeIfDisabled_
 		return;
 	}
 }
-// Method Definition Index: 80543
+// Method Definition Index: 80976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Awake_m3301D00D70BFB63AF6750DA6F52013353938C335 (PlayerMotor_t1869355696646E3BB27F0CBBB8F545B5733A0F68* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17764,7 +16729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMotor_Awake_m3301D00D70BFB63AF6750
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80544
+// Method Definition Index: 80977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_ShowDifference_m0031EEB94762A94C50F40470E28F2D018C4F63D9 (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* ___0_clientObject, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_rolledBack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17815,7 +16780,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 80545
+// Method Definition Index: 80978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_TargetShowDifference_m295304BE320E35D19E5BFF2FDB03130735A5B357 (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_rollback, const RuntimeMethod* method) 
 {
 	{
@@ -17826,7 +16791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_TargetShowDifference_
 		return;
 	}
 }
-// Method Definition Index: 80546
+// Method Definition Index: 80979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer__ctor_m08FA4E2F454DBCE9EE3F920D13ADC91AE9EC900D (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17848,7 +16813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer__ctor_m08FA4E2F454DBC
 		return;
 	}
 }
-// Method Definition Index: 80547
+// Method Definition Index: 80980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_NetworkInitialize___Early_m45011580B5370A0BC44764C545890B57531D4585 (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17879,7 +16844,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80548
+// Method Definition Index: 80981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_NetworkInitialize___Late_m8B8CDECC9445CE249F20DEDBD2EDF7C198A90938 (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17900,7 +16865,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80549
+// Method Definition Index: 80982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_NetworkInitializeIfDisabled_m4908A801CCD329D1C5E34D13E52D04AD83F22C9D (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17909,7 +16874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_NetworkInitializeIfDi
 		return;
 	}
 }
-// Method Definition Index: 80550
+// Method Definition Index: 80983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcWriter___Target_TargetShowDifference___2390343144_mB5D8A7326ED05915FBFB59508BCBCFA9A609CC5A (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_rollback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17964,7 +16929,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 80551
+// Method Definition Index: 80984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcLogic___TargetShowDifference___2390343144_m34E5AF2A07E2DFF6E7F91E662337893665B50B6E (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_p, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_p, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_p, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17989,9 +16954,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcLogic___TargetShow
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	String_t* V_2 = NULL;
-	TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* V_3 = NULL;
-	bool V_4 = false;
-	bool V_5 = false;
 	String_t* G_B7_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:37>
@@ -18023,11 +16985,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcLogic___TargetShow
 		V_0 = L_12;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:41>
 		float L_13 = V_0;
-		V_4 = (bool)((((int32_t)((!(((float)L_13) <= ((float)(9.99999975E-06f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_14 = V_4;
-		if (!L_14)
+		if ((!(((float)L_13) <= ((float)(9.99999975E-06f)))))
 		{
-			goto IL_0050;
+			goto IL_0046;
 		}
 	}
 	{
@@ -18035,110 +16995,106 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcLogic___TargetShow
 		V_0 = (0.0f);
 	}
 
-IL_0050:
+IL_0046:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:44>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_15 = __this->____differences;
-		float L_16 = V_0;
-		NullCheck(L_15);
-		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_15, L_16, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_14 = __this->____differences;
+		float L_15 = V_0;
+		NullCheck(L_14);
+		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_14, L_15, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:45>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_17 = __this->____differences;
-		NullCheck(L_17);
-		int32_t L_18;
-		L_18 = List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_inline(L_17, List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_RuntimeMethod_var);
-		V_5 = (bool)((((int32_t)L_18) > ((int32_t)((int32_t)20)))? 1 : 0);
-		bool L_19 = V_5;
-		if (!L_19)
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_16 = __this->____differences;
+		NullCheck(L_16);
+		int32_t L_17;
+		L_17 = List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_inline(L_16, List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_RuntimeMethod_var);
+		if ((((int32_t)L_17) <= ((int32_t)((int32_t)20))))
 		{
-			goto IL_007f;
+			goto IL_006d;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:46>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_20 = __this->____differences;
-		NullCheck(L_20);
-		List_1_RemoveAt_m02AAC9739BBFB220DD397843A7825154D07F2C93(L_20, 0, List_1_RemoveAt_m02AAC9739BBFB220DD397843A7825154D07F2C93_RuntimeMethod_var);
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_18 = __this->____differences;
+		NullCheck(L_18);
+		List_1_RemoveAt_m02AAC9739BBFB220DD397843A7825154D07F2C93(L_18, 0, List_1_RemoveAt_m02AAC9739BBFB220DD397843A7825154D07F2C93_RuntimeMethod_var);
 	}
 
-IL_007f:
+IL_006d:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:47>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_19 = __this->____differences;
+		float L_20;
+		L_20 = Enumerable_Sum_m1374719E4DC4497F0842561BCCA42070CECA9AD0(L_19, NULL);
 		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_21 = __this->____differences;
-		float L_22;
-		L_22 = Enumerable_Sum_m1374719E4DC4497F0842561BCCA42070CECA9AD0(L_21, NULL);
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_23 = __this->____differences;
-		NullCheck(L_23);
-		int32_t L_24;
-		L_24 = List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_inline(L_23, List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_RuntimeMethod_var);
-		V_1 = ((float)(L_22/((float)L_24)));
+		NullCheck(L_21);
+		int32_t L_22;
+		L_22 = List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_inline(L_21, List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_RuntimeMethod_var);
+		V_1 = ((float)(L_20/((float)L_22)));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:49>
-		bool L_25;
-		L_25 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		if (L_25)
+		bool L_23;
+		L_23 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
+		if (L_23)
 		{
-			goto IL_00e3;
+			goto IL_00d1;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_26 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27 = L_26;
-		NullCheck(L_27);
-		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral707893305C767F096A549E11213147CAD6B89FC3);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = L_27;
-		String_t* L_29;
-		L_29 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_0), _stringLiteral40C3754113912BBB2324B9A85745EAD27C43B49F, NULL);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25 = L_24;
+		NullCheck(L_25);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral707893305C767F096A549E11213147CAD6B89FC3);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_26 = L_25;
+		String_t* L_27;
+		L_27 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_0), _stringLiteral40C3754113912BBB2324B9A85745EAD27C43B49F, NULL);
+		NullCheck(L_26);
+		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_27);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = L_26;
 		NullCheck(L_28);
-		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_29);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = L_28;
-		NullCheck(L_30);
-		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralFC5966D077ADDE99379504EEEF07404DEA3BA3D3);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = L_30;
-		String_t* L_32;
-		L_32 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_1), _stringLiteral40C3754113912BBB2324B9A85745EAD27C43B49F, NULL);
+		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralFC5966D077ADDE99379504EEEF07404DEA3BA3D3);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_29 = L_28;
+		String_t* L_30;
+		L_30 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_1), _stringLiteral40C3754113912BBB2324B9A85745EAD27C43B49F, NULL);
+		NullCheck(L_29);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_30);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = L_29;
 		NullCheck(L_31);
-		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_32);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_33 = L_31;
-		NullCheck(L_33);
-		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralC89F5735BA3F925A6E6F94A65810A3A38745A9DC);
-		String_t* L_34;
-		L_34 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_33, NULL);
-		G_B7_0 = L_34;
-		goto IL_00f7;
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralC89F5735BA3F925A6E6F94A65810A3A38745A9DC);
+		String_t* L_32;
+		L_32 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_31, NULL);
+		G_B7_0 = L_32;
+		goto IL_00e5;
 	}
 
-IL_00e3:
+IL_00d1:
 	{
-		String_t* L_35;
-		L_35 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
-		String_t* L_36;
-		L_36 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6292E026B5E1ECE12790349DEC5DF31C2C4EC772, L_35, _stringLiteral285CC41563A31267CFE1C5B01E17AA0726D9922A, NULL);
-		G_B7_0 = L_36;
+		String_t* L_33;
+		L_33 = Environment_get_NewLine_m8BF68A4EFDAFFB66500984CE779629811BA98FFF(NULL);
+		String_t* L_34;
+		L_34 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6292E026B5E1ECE12790349DEC5DF31C2C4EC772, L_33, _stringLiteral285CC41563A31267CFE1C5B01E17AA0726D9922A, NULL);
+		G_B7_0 = L_34;
 	}
 
-IL_00f7:
+IL_00e5:
 	{
 		V_2 = G_B7_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:51>
-		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_37 = __this->____textCanvasPrefab;
+		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_35 = __this->____textCanvasPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_38;
-		L_38 = Object_Instantiate_TisTextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_m8BB486E312B492FB3450D02B69BE52E1363775DC(L_37, Object_Instantiate_TisTextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_m8BB486E312B492FB3450D02B69BE52E1363775DC_RuntimeMethod_var);
-		V_3 = L_38;
+		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_36;
+		L_36 = Object_Instantiate_TisTextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_m8BB486E312B492FB3450D02B69BE52E1363775DC(L_35, Object_Instantiate_TisTextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_m8BB486E312B492FB3450D02B69BE52E1363775DC_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:52>
-		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_39 = V_3;
-		String_t* L_40 = V_2;
-		NullCheck(L_39);
-		TextCanvas_SetText_mF7F8505E7D4E18952381CAF0835C2BC5B223A2B6(L_39, L_40, NULL);
+		String_t* L_37 = V_2;
+		NullCheck(L_36);
+		TextCanvas_SetText_mF7F8505E7D4E18952381CAF0835C2BC5B223A2B6(L_36, L_37, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:53>
-		String_t* L_41 = V_2;
+		String_t* L_38 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_41, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_38, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/RollbackVisualizer.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 80552
+// Method Definition Index: 80985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_RpcReader___Target_TargetShowDifference___2390343144_m82DFA21E1DA0478D0DA0BED977F12AB00B82E6D4 (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, PooledReader_t9534917D71978827C99AB5F767B74EE807D9B448* ___0_PooledReader0, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -18177,7 +17133,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 80553
+// Method Definition Index: 80986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_Awake_m6E5AF5DE25BA4B16F3026D3F546FDC9293883ACE (RollbackVisualizer_t3BCBAFF0800C36865A8C41011A05BB5FEDFA0B31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18194,7 +17150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollbackVisualizer_Awake_m6E5AF5DE25BA4B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80554
+// Method Definition Index: 80987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas_Awake_mED5A5E06911553EB35CB554DF119C6F1450E2568 (TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18204,31 +17160,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas_Awake_mED5A5E06911553EB35CB55
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/TextCanvas.cs:14>
 		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_0 = ((TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_StaticFields*)il2cpp_codegen_static_fields_for(TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_il2cpp_TypeInfo_var))->____instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_0 = L_1;
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0020;
+			goto IL_001c;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/TextCanvas.cs:15>
-		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_3 = ((TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_StaticFields*)il2cpp_codegen_static_fields_for(TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_il2cpp_TypeInfo_var))->____instance;
-		NullCheck(L_3);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
-		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_3, NULL);
+		TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* L_2 = ((TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_StaticFields*)il2cpp_codegen_static_fields_for(TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_il2cpp_TypeInfo_var))->____instance;
+		NullCheck(L_2);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_3, NULL);
 	}
 
-IL_0020:
+IL_001c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Rollback Visualization/TextCanvas.cs:17>
 		((TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_StaticFields*)il2cpp_codegen_static_fields_for(TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F_il2cpp_TypeInfo_var))->____instance = __this;
@@ -18237,7 +17190,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 80555
+// Method Definition Index: 80988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas_SetText_mF7F8505E7D4E18952381CAF0835C2BC5B223A2B6 (TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* __this, String_t* ___0_text, const RuntimeMethod* method) 
 {
 	{
@@ -18250,7 +17203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas_SetText_mF7F8505E7D4E18952381
 		return;
 	}
 }
-// Method Definition Index: 80556
+// Method Definition Index: 80989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas__ctor_mE042589116554734F374160E93023BE10CDD41DD (TextCanvas_tF1B8D4568E8AF47B0800F3371888814B6EBA721F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18266,7 +17219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextCanvas__ctor_mE042589116554734F37416
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80557
+// Method Definition Index: 80990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_OnStartServer_m1B6789D6E3AF0C00652317698E2F5CDB1056EB1F (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18282,115 +17235,105 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_OnStartServer_m1B6789D6E3AF0C0065
 		return;
 	}
 }
-// Method Definition Index: 80558
+// Method Definition Index: 80991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_Update_m3DA2FDD202F999887A084D0AD314A8BEEAA78D88 (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	float V_1 = 0.0f;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
+	float V_0 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	float G_B4_0 = 0.0f;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:20>
 		bool L_0;
 		L_0 = NetworkBehaviour_get_IsServerStarted_m2C9620DB99905E83F9ABE705B9CD7EE515E7EEE0(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_00aa;
+			goto IL_00a2;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:22>
-		bool L_2 = __this->____movingRight;
-		if (L_2)
+		bool L_1 = __this->____movingRight;
+		if (L_1)
 		{
-			goto IL_0026;
+			goto IL_0022;
 		}
 	}
 	{
-		float L_3 = __this->____startX;
-		float L_4 = __this->___MoveDistance;
-		G_B4_0 = ((float)il2cpp_codegen_subtract(L_3, L_4));
-		goto IL_0033;
+		float L_2 = __this->____startX;
+		float L_3 = __this->___MoveDistance;
+		G_B4_0 = ((float)il2cpp_codegen_subtract(L_2, L_3));
+		goto IL_002f;
 	}
 
-IL_0026:
+IL_0022:
 	{
-		float L_5 = __this->____startX;
-		float L_6 = __this->___MoveDistance;
-		G_B4_0 = ((float)il2cpp_codegen_add(L_5, L_6));
+		float L_4 = __this->____startX;
+		float L_5 = __this->___MoveDistance;
+		G_B4_0 = ((float)il2cpp_codegen_add(L_4, L_5));
 	}
 
-IL_0033:
+IL_002f:
 	{
-		V_1 = G_B4_0;
+		V_0 = G_B4_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:23>
-		float L_7 = V_1;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
-		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_8);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
-		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
-		float L_10 = L_9.___y;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
-		L_11 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_11);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
-		L_12 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_11, NULL);
-		float L_13 = L_12.___z;
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), L_7, L_10, L_13, NULL);
+		float L_6 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
+		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_7);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
+		float L_9 = L_8.___y;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_10);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
+		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
+		float L_12 = L_11.___z;
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), L_6, L_9, L_12, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:24>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
 		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
-		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_15);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = V_2;
-		float L_18 = __this->___MoveRate;
-		float L_19;
-		L_19 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
-		L_20 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_16, L_17, ((float)il2cpp_codegen_multiply(L_18, L_19)), NULL);
 		NullCheck(L_14);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_14, L_20, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		L_15 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_14, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_1;
+		float L_17 = __this->___MoveRate;
+		float L_18;
+		L_18 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		L_19 = Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline(L_15, L_16, ((float)il2cpp_codegen_multiply(L_17, L_18)), NULL);
+		NullCheck(L_13);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_13, L_19, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:25>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
-		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_21);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
-		L_22 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_21, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
-		bool L_24;
-		L_24 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_22, L_23, NULL);
-		V_3 = L_24;
-		bool L_25 = V_3;
-		if (!L_25)
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_20);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
+		L_21 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_20, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_1;
+		bool L_23;
+		L_23 = Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline(L_21, L_22, NULL);
+		if (!L_23)
 		{
-			goto IL_00a9;
+			goto IL_00a2;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:26>
-		bool L_26 = __this->____movingRight;
-		__this->____movingRight = (bool)((((int32_t)L_26) == ((int32_t)0))? 1 : 0);
+		bool L_24 = __this->____movingRight;
+		__this->____movingRight = (bool)((((int32_t)L_24) == ((int32_t)0))? 1 : 0);
 	}
 
-IL_00a9:
-	{
-	}
-
-IL_00aa:
+IL_00a2:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/ColliderRollback/Scripts/Strafe.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 80559
+// Method Definition Index: 80992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe__ctor_m5C43B2D7A7FFDE42E0D62C260BDD8A9DD3090C66 (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18411,7 +17354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe__ctor_m5C43B2D7A7FFDE42E0D62C260B
 		return;
 	}
 }
-// Method Definition Index: 80560
+// Method Definition Index: 80993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_NetworkInitialize___Early_mA48A2FBF14CEFF70B9D3F7D1288C46B4ADF6034B (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18432,7 +17375,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80561
+// Method Definition Index: 80994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_NetworkInitialize___Late_mB3BFE6E1495F31253363EC45F000DD95623E40CF (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18453,7 +17396,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 80562
+// Method Definition Index: 80995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_NetworkInitializeIfDisabled_m0508196C5CF89A5049AA8E2BDC2906A1AD462B98 (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18462,7 +17405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_NetworkInitializeIfDisabled_m0508
 		return;
 	}
 }
-// Method Definition Index: 80563
+// Method Definition Index: 80996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Strafe_Awake_m1B82283372417A037F1BAEB9C3AA8BF05BC3E26F (Strafe_t9F03FCB7C98D1EEF645BD5D4E2AE5884907F9F7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18585,7 +17528,7 @@ IL2CPP_EXTERN_C void ResponseBroadcast_t9D2F4C8589FE7819F65203FC178F6B2EEF6570A8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80564
+// Method Definition Index: 80997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_add_OnAuthenticationResult_m106503B9CF6EF694329D92B9E2443C1BD6A365F9 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18628,7 +17571,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 80565
+// Method Definition Index: 80998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_remove_OnAuthenticationResult_m3175D83B89D93810C13BF6094ECF3B5BABC45411 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18671,7 +17614,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 80566
+// Method Definition Index: 80999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_InitializeOnce_m3030B527A7CBFB97DF6B8FBEA7D2045DAC13B059 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* ___0_networkManager, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18725,7 +17668,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_InitializeOnce_m30
 		return;
 	}
 }
-// Method Definition Index: 80567
+// Method Definition Index: 81000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_ClientManager_OnClientConnectionState_m8F24DAB6A6D658E01C89C40E8C9C1F4044537C1E (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B ___0_args, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18736,77 +17679,66 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_ClientManager_OnCl
 	}
 	PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	bool V_1 = false;
-	bool V_2 = false;
-	PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 V_3;
-	memset((&V_3), 0, sizeof(V_3));
+	PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:57>
 		ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B L_0 = ___0_args;
 		int32_t L_1 = L_0.___ConnectionState;
-		V_1 = (bool)((((int32_t)((((int32_t)L_1) == ((int32_t)8))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_1;
+		if ((((int32_t)L_1) == ((int32_t)8)))
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:58>
+		return;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:63>
+		bool L_2;
+		L_2 = HostAuthenticator_TryAuthenticateAsClientHost_mC03532E56E1E2AE5DBD60CC4524990CC3661B34B(__this, NULL);
 		if (!L_2)
 		{
 			goto IL_0013;
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:58>
-		goto IL_0049;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:64>
+		return;
 	}
 
 IL_0013:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:63>
-		bool L_3;
-		L_3 = HostAuthenticator_TryAuthenticateAsClientHost_mC03532E56E1E2AE5DBD60CC4524990CC3661B34B(__this, NULL);
-		V_2 = L_3;
-		bool L_4 = V_2;
-		if (!L_4)
-		{
-			goto IL_001f;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:64>
-		goto IL_0049;
-	}
-
-IL_001f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:68>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:69>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:70>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:71>
-		il2cpp_codegen_initobj((&V_3), sizeof(PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0));
-		String_t* L_5 = __this->____password;
-		(&V_3)->___Password = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_3)->___Password), (void*)L_5);
-		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_6 = V_3;
-		V_0 = L_6;
+		il2cpp_codegen_initobj((&V_1), sizeof(PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0));
+		String_t* L_3 = __this->____password;
+		(&V_1)->___Password = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___Password), (void*)L_3);
+		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_4 = V_1;
+		V_0 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:73>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_7;
-		L_7 = Authenticator_get_NetworkManager_m6E83AF25D5E1F5B7BB819E6DD6D7473E2B393E47_inline(__this, NULL);
-		NullCheck(L_7);
-		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_8;
-		L_8 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_7, NULL);
-		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_9 = V_0;
-		NullCheck(L_8);
-		ClientManager_Broadcast_TisPasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0_mA729AEAE583A617CA16A0B2DA6C8B769A31C3E45(L_8, L_9, 0, ClientManager_Broadcast_TisPasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0_mA729AEAE583A617CA16A0B2DA6C8B769A31C3E45_RuntimeMethod_var);
-	}
-
-IL_0049:
-	{
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5;
+		L_5 = Authenticator_get_NetworkManager_m6E83AF25D5E1F5B7BB819E6DD6D7473E2B393E47_inline(__this, NULL);
+		NullCheck(L_5);
+		ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* L_6;
+		L_6 = NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline(L_5, NULL);
+		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_7 = V_0;
+		NullCheck(L_6);
+		ClientManager_Broadcast_TisPasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0_mA729AEAE583A617CA16A0B2DA6C8B769A31C3E45(L_6, L_7, 0, ClientManager_Broadcast_TisPasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0_mA729AEAE583A617CA16A0B2DA6C8B769A31C3E45_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:74>
 		return;
 	}
 }
-// Method Definition Index: 80568
+// Method Definition Index: 81001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnPasswordBroadcast_m4CC2D57681A4826517ADC4CB7D9ED1D638439982 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 ___1_pb, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
-	bool V_1 = false;
 	Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* G_B4_0 = NULL;
 	Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* G_B3_0 = NULL;
 	{
@@ -18815,64 +17747,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnPasswordBroadcas
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = NetworkConnection_get_IsAuthenticated_mE4D6289CC2DEDB78437ED9E9DE0F19931CF3A808_inline(L_0, NULL);
-		V_1 = L_1;
-		bool L_2 = V_1;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_0016;
+			goto IL_0010;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:88>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_3 = ___0_conn;
-		NullCheck(L_3);
-		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_3, (bool)1, NULL);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_2 = ___0_conn;
+		NullCheck(L_2);
+		NetworkConnection_Disconnect_m063BF633EB7B581BD13467D0AB3ADEEFFCAABEB7(L_2, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:89>
-		goto IL_0045;
+		return;
 	}
 
-IL_0016:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:92>
-		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_4 = ___1_pb;
-		String_t* L_5 = L_4.___Password;
-		String_t* L_6 = __this->____password;
-		bool L_7;
-		L_7 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_5, L_6, NULL);
-		V_0 = L_7;
+		PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 L_3 = ___1_pb;
+		String_t* L_4 = L_3.___Password;
+		String_t* L_5 = __this->____password;
+		bool L_6;
+		L_6 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_4, L_5, NULL);
+		V_0 = L_6;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:93>
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_8 = ___0_conn;
-		bool L_9 = V_0;
-		PasswordAuthenticator_SendAuthenticationResponse_mE62097916A929DFAC1353E0A9002D39415B909E0(__this, L_8, L_9, NULL);
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_7 = ___0_conn;
+		bool L_8 = V_0;
+		PasswordAuthenticator_SendAuthenticationResponse_mE62097916A929DFAC1353E0A9002D39415B909E0(__this, L_7, L_8, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:97>
-		Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* L_10 = __this->___OnAuthenticationResult;
-		Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* L_11 = L_10;
-		if (L_11)
+		Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* L_9 = __this->___OnAuthenticationResult;
+		Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* L_10 = L_9;
+		if (L_10)
 		{
-			G_B4_0 = L_11;
-			goto IL_003d;
+			G_B4_0 = L_10;
+			goto IL_0035;
 		}
-		G_B3_0 = L_11;
+		G_B3_0 = L_10;
 	}
 	{
-		goto IL_0045;
+		return;
 	}
 
-IL_003d:
+IL_0035:
 	{
-		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_12 = ___0_conn;
-		bool L_13 = V_0;
+		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_11 = ___0_conn;
+		bool L_12 = V_0;
 		NullCheck(G_B4_0);
-		Action_2_Invoke_m99D22936005A923A5C452AB50D3863C2F8F6CD3B_inline(G_B4_0, L_12, L_13, NULL);
-	}
-
-IL_0045:
-	{
+		Action_2_Invoke_m99D22936005A923A5C452AB50D3863C2F8F6CD3B_inline(G_B4_0, L_11, L_12, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:98>
 		return;
 	}
 }
-// Method Definition Index: 80569
+// Method Definition Index: 81002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnResponseBroadcast_m7B31D4133E59DF3656AAFECBFEC486A68B4002F0 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, ResponseBroadcast_t9D2F4C8589FE7819F65203FC178F6B2EEF6570A8 ___0_rb, uint8_t ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18890,20 +17816,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnResponseBroadcas
 		bool L_1 = L_0.___Passed;
 		if (L_1)
 		{
-			goto IL_0010;
+			goto IL_000f;
 		}
 	}
 	{
 		G_B3_0 = _stringLiteralC2E1FC1D9676528EE5F6E97ADDFA10B43D783629;
-		goto IL_0015;
+		goto IL_0014;
 	}
 
-IL_0010:
+IL_000f:
 	{
 		G_B3_0 = _stringLiteral883F5F9C2EC2331F1B5879E70BB1BBA35887AA9B;
 	}
 
-IL_0015:
+IL_0014:
 	{
 		V_0 = G_B3_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:107>
@@ -18915,7 +17841,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 80570
+// Method Definition Index: 81003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_SendAuthenticationResponse_mE62097916A929DFAC1353E0A9002D39415B909E0 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, bool ___1_authenticated, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18952,7 +17878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_SendAuthentication
 		return;
 	}
 }
-// Method Definition Index: 80571
+// Method Definition Index: 81004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnHostAuthenticationResult_mAECDB3C657CCC97887C7DF1E7BE8C1CAA4A5EEBE (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* ___0_conn, bool ___1_authenticated, const RuntimeMethod* method) 
 {
 	Action_2_tADEFA7D9250C23780AA85B4147709663FBDA8F39* G_B2_0 = NULL;
@@ -18968,29 +17894,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator_OnHostAuthenticati
 		if (L_3)
 		{
 			G_B2_0 = L_3;
-			goto IL_0016;
+			goto IL_0013;
 		}
 		G_B1_0 = L_3;
 	}
 	{
-		goto IL_001e;
+		return;
 	}
 
-IL_0016:
+IL_0013:
 	{
 		NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* L_4 = ___0_conn;
 		bool L_5 = ___1_authenticated;
 		NullCheck(G_B2_0);
 		Action_2_Invoke_m99D22936005A923A5C452AB50D3863C2F8F6CD3B_inline(G_B2_0, L_4, L_5, NULL);
-	}
-
-IL_001e:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/FishNet/Demos/Authenticator/Scripts/PasswordAuthenticator.cs:134>
 		return;
 	}
 }
-// Method Definition Index: 80572
+// Method Definition Index: 81005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator__ctor_m4C98223C518C527D91D3957717C971E1FA7CEFC3 (PasswordAuthenticator_t36F2A68A1FA1ACFDF6A780D2608D680EA116CCCB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19041,7 +17963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordAuthenticator__ctor_m4C98223C518
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80573
+// Method Definition Index: 81006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_InitializeOnce_m4AB9FEB7CD7F4BCD5948AB10C980589C48672BA9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19107,7 +18029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_Initialize
 		return;
 	}
 }
-// Method Definition Index: 80574
+// Method Definition Index: 81007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateData_mB4F4B1782F0E109DAEC41E4691CBB5A8CDC682CF (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___0_value0, ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___1_value1, const RuntimeMethod* method) 
 {
 	{
@@ -19137,14 +18059,14 @@ IL_0035:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 80575
+// Method Definition Index: 81008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___UnityEngine_Vector2_mD85C81843F1AB3F5C28696B00A232AA997A257CB (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_value1, const RuntimeMethod* method) 
 {
 	{
 		return (bool)((((RuntimeObject*)(intptr_t)(&___0_value0)) == ((RuntimeObject*)(intptr_t)(&___1_value1)))? 1 : 0);
 	}
 }
-// Method Definition Index: 80576
+// Method Definition Index: 81009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___System_Boolean_m57C5A52ABD4493E51A9149156E035888F244847E (bool ___0_value0, bool ___1_value1, const RuntimeMethod* method) 
 {
 	{
@@ -19153,7 +18075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer__
 		return (bool)((((int32_t)L_0) == ((int32_t)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 80577
+// Method Definition Index: 81010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateData_mB9657C3D10E06B2ADD98880C7E7DC6B5D82E0AC4 (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___0_value0, const RuntimeMethod* method) 
 {
 	ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 V_0;
@@ -19167,7 +18089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault_
 		return L_2;
 	}
 }
-// Method Definition Index: 80578
+// Method Definition Index: 81011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateData_m448FA0388583AE8FA22CCA5F2A28C6FFEC6C58C2 (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___0_value0, ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___1_value1, const RuntimeMethod* method) 
 {
 	{
@@ -19207,7 +18129,7 @@ IL_0051:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 80579
+// Method Definition Index: 81012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_OneTimeInput_m270AC07CFBB93E19BEE4CC13CEE385B8D09B065D (OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 ___0_value0, OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 ___1_value1, const RuntimeMethod* method) 
 {
 	{
@@ -19227,7 +18149,7 @@ IL_0019:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 80580
+// Method Definition Index: 81013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateData_m5248D6FB93B16596BB232B880D610AD37F77E51C (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___0_value0, const RuntimeMethod* method) 
 {
 	ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 V_0;
@@ -19241,14 +18163,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault_
 		return L_2;
 	}
 }
-// Method Definition Index: 80581
+// Method Definition Index: 81014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_Comparer___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateData_mEDF4ECFFCF959ABB4C84EA33E2F77F4371F2FFF5 (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___0_value0, ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___1_value1, const RuntimeMethod* method) 
 {
 	{
 		return (bool)1;
 	}
 }
-// Method Definition Index: 80582
+// Method Definition Index: 81015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateData_m14676E90592658A1D1F935391EB8995B1CD6B874 (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___0_value0, const RuntimeMethod* method) 
 {
 	ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD V_0;
@@ -19270,7 +18192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GeneratedComparers___Internal_IsDefault_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80583
+// Method Definition Index: 81016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOnce_m0BC37BE145AD6260653DA8CF2647EF22C35B6147 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19378,7 +18300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOn
 		return;
 	}
 }
-// Method Definition Index: 80584
+// Method Definition Index: 81017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Example_Authenticating_HostPasswordBroadcastFishNet_Serializing_Generated_mCB6A0FEF947633D007C4C8332EA161BD09DFCD3D (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19390,7 +18312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80585
+// Method Definition Index: 81018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Example_Authenticating_PasswordBroadcastFishNet_Serializing_Generated_m312B07D5273B88A1E992E34120F794D465B1ACEF (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19402,7 +18324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80586
+// Method Definition Index: 81019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Example_Authenticating_ResponseBroadcastFishNet_Serializing_Generated_m5F7FEE3C438FBB04CBCCAED8C370E1B8DB4C5C37 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ResponseBroadcast_t9D2F4C8589FE7819F65203FC178F6B2EEF6570A8 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19414,7 +18336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80587
+// Method Definition Index: 81020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateDataFishNet_Serializing_Generated_mB17838FB82A264CAD8C1DA3FE0CB98189A21D5FA (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19431,7 +18353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80588
+// Method Definition Index: 81021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateDataU5BU5DFishNet_Serializing_Generated_mA3477A4D653FE399424BD7B179A9E36784C84168 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateDataU5BU5D_tFAB57A860AF1FA7BE550A1DD0E302AA5810423A7* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19448,7 +18370,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80589
+// Method Definition Index: 81022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReconcileDataFishNet_Serializing_Generated_mE4E77702CCB428B5646E03EE645AF77A5F48ADDE (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5 ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19486,7 +18408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80590
+// Method Definition Index: 81023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Object_Prediction_PredictionRigidbodyFishNet_Serializing_Generated_mBD556002832EE0FB19C4B237AB0BDB4A415C43CD (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19511,7 +18433,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 80591
+// Method Definition Index: 81024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateDataFishNet_Serializing_Generated_m300CB23FDFC09744B6CEF0836EA284EFFF2C958D (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19532,7 +18454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80592
+// Method Definition Index: 81025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_OneTimeInputFishNet_Serializing_Generated_mF2CE5C662F203A4493BA93CBE7DA66B2E733B8EB (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19544,7 +18466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80593
+// Method Definition Index: 81026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateDataU5BU5DFishNet_Serializing_Generated_m35D1F163732A6092380937CC8E0B0C43ED4ED042 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateDataU5BU5D_t5FCF7E62F6302AF1422FCEEFE81E023682175E19* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19561,7 +18483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80594
+// Method Definition Index: 81027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReconcileDataFishNet_Serializing_Generated_mC054B666FFF66FBBCF5E640DA2B29F1E9181B979 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19587,7 +18509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80595
+// Method Definition Index: 81028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_MovingPlatformFishNet_Serializing_Generated_m61AE7E13DB033D9A35D8DD2D2F498C0CB430997A (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19598,14 +18520,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80596
+// Method Definition Index: 81029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateDataFishNet_Serializing_Generated_mF41DCC1A9E8B4E43387759B8B104165810D374FF (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD ___1_value, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 80597
+// Method Definition Index: 81030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateDataU5BU5DFishNet_Serializing_Generated_m1DDE4F153F9AD6CFECF63911AC564950DD144E56 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReplicateDataU5BU5D_tD2A02056F23F483A25064B0E05FC7040AC043281* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19622,7 +18544,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80598
+// Method Definition Index: 81031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReconcileDataFishNet_Serializing_Generated_m005A24C280C82A1B027A5E1E003D957F97C737C5 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19639,7 +18561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 		return;
 	}
 }
-// Method Definition Index: 80599
+// Method Definition Index: 81032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___FishNet_Example_CustomSyncObject_StructyFishNet_Serializing_Generated_m07984E6BC1855BF655551BACC1FAE9D6EB5CD057 (Writer_tCAA1EDF933A12E7970BA243F6B87AEAA551FF02B* ___0_writer, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -19664,7 +18586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_GWrite___Fis
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80600
+// Method Definition Index: 81033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedReaders___Internal_InitializeOnce_mBD82471BC72BE0C16DD914DB19C1FEA973B36A9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19772,7 +18694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedReaders___Internal_InitializeOn
 		return;
 	}
 }
-// Method Definition Index: 80601
+// Method Definition Index: 81034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A GeneratedReaders___Internal_GRead___FishNet_Example_Authenticating_HostPasswordBroadcastFishNet_Serializing_Generateds_m3A6690395A6631637ECAE330AFE7A6B5309D9393 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	HostPasswordBroadcast_t103974BABA4EFB66BA607DD3FFD25B6D1324537A V_0;
@@ -19789,7 +18711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HostPasswordBroadcast_t103974BABA4EFB66BA607D
 		return L_2;
 	}
 }
-// Method Definition Index: 80602
+// Method Definition Index: 81035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 GeneratedReaders___Internal_GRead___FishNet_Example_Authenticating_PasswordBroadcastFishNet_Serializing_Generateds_m2E795D9012AAECCB1177CC9EA5807D09E9ABB536 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	PasswordBroadcast_t750C98E990E8611061552674012929A7F5B30BB0 V_0;
@@ -19806,7 +18728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PasswordBroadcast_t750C98E990E861106155267401
 		return L_2;
 	}
 }
-// Method Definition Index: 80603
+// Method Definition Index: 81036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ResponseBroadcast_t9D2F4C8589FE7819F65203FC178F6B2EEF6570A8 GeneratedReaders___Internal_GRead___FishNet_Example_Authenticating_ResponseBroadcastFishNet_Serializing_Generateds_m0CEF733DA452381C821BB23999CCE1879F7376BB (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ResponseBroadcast_t9D2F4C8589FE7819F65203FC178F6B2EEF6570A8 V_0;
@@ -19822,7 +18744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ResponseBroadcast_t9D2F4C8589FE7819F65203FC17
 		return L_2;
 	}
 }
-// Method Definition Index: 80604
+// Method Definition Index: 81037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateDataFishNet_Serializing_Generateds_m16770B6D9FCB37711DB3E473DCF340B785D4CE27 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8 V_0;
@@ -19843,7 +18765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B
 		return L_4;
 	}
 }
-// Method Definition Index: 80605
+// Method Definition Index: 81038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_tFAB57A860AF1FA7BE550A1DD0E302AA5810423A7* GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReplicateDataU5BU5DFishNet_Serializing_Generateds_mCCFE8EDDC89740205BDE3632B8C375FE5DC13431 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19860,7 +18782,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_tFAB57A860AF1FA7BE550A1DD
 		return L_1;
 	}
 }
-// Method Definition Index: 80606
+// Method Definition Index: 81039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_Rigidbodies_RigidbodyPrediction_ReconcileDataFishNet_Serializing_Generateds_m086D3D6B25BDFDC02F403CAF4BA436153EEA8D07 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19905,7 +18827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_t93BA4611851EFCA110BF249F093D0F
 		return L_10;
 	}
 }
-// Method Definition Index: 80607
+// Method Definition Index: 81040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* GeneratedReaders___Internal_GRead___FishNet_Object_Prediction_PredictionRigidbodyFishNet_Serializing_Generateds_m33E02495FF21B12CE1C7924189A037D920C99187 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19941,7 +18863,7 @@ IL_0018:
 		return L_4;
 	}
 }
-// Method Definition Index: 80608
+// Method Definition Index: 81041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateDataFishNet_Serializing_Generateds_m97D76795927A0D6C2B87B6F9ECB5E46D7B9C5658 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461 V_0;
@@ -19966,7 +18888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t4FA3F289800D5A2B673D96E8DF97D9
 		return L_6;
 	}
 }
-// Method Definition Index: 80609
+// Method Definition Index: 81042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_OneTimeInputFishNet_Serializing_Generateds_m0E821154F68688E195B296FF3987E22C4504871B (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C20D6E40C39 V_0;
@@ -19982,7 +18904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OneTimeInput_tE22826DEE4D8EE59D203B158C7AC6C2
 		return L_2;
 	}
 }
-// Method Definition Index: 80610
+// Method Definition Index: 81043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_t5FCF7E62F6302AF1422FCEEFE81E023682175E19* GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReplicateDataU5BU5DFishNet_Serializing_Generateds_m241C4444F8F70AA681CD1CBF87974E520E43553A (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19999,7 +18921,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_t5FCF7E62F6302AF1422FCEEF
 		return L_1;
 	}
 }
-// Method Definition Index: 80611
+// Method Definition Index: 81044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_CharacterControllerPrediction_ReconcileDataFishNet_Serializing_Generateds_m9645EB718D79BD512D9C1C8DB47272B96B6A967C (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056 V_0;
@@ -20030,7 +18952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70
 		return L_8;
 	}
 }
-// Method Definition Index: 80612
+// Method Definition Index: 81045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1* GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_MovingPlatformFishNet_Serializing_Generateds_mD0434F30397F831C5AA3BFC9BB4409B68611DFB9 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20047,7 +18969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MovingPlatform_t3CE273018A26629EE0C62EA118DDA
 		return ((MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1*)CastclassClass((RuntimeObject*)L_1, MovingPlatform_t3CE273018A26629EE0C62EA118DDA74D152F3BD1_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 80613
+// Method Definition Index: 81046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateDataFishNet_Serializing_Generateds_m9D56F8EEEAEDBED18237E92CF31BFCC520381CFE (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD V_0;
@@ -20058,7 +18980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateData_t841CED3BD1195C975F4F546B1B4B28
 		return L_0;
 	}
 }
-// Method Definition Index: 80614
+// Method Definition Index: 81047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_tD2A02056F23F483A25064B0E05FC7040AC043281* GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReplicateDataU5BU5DFishNet_Serializing_Generateds_m91E8A2AD51BFED604B6E1F10166384A4F5645183 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20075,7 +18997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReplicateDataU5BU5D_tD2A02056F23F483A25064B0E
 		return L_1;
 	}
 }
-// Method Definition Index: 80615
+// Method Definition Index: 81048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 GeneratedReaders___Internal_GRead___FishNet_Demo_Prediction_CharacterControllers_MovingPlatform_ReconcileDataFishNet_Serializing_Generateds_mC29E758AFEA5DD720CC62ADEF6E76F8039FFF430 (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4 V_0;
@@ -20096,7 +19018,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D771
 		return L_4;
 	}
 }
-// Method Definition Index: 80616
+// Method Definition Index: 81049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF GeneratedReaders___Internal_GRead___FishNet_Example_CustomSyncObject_StructyFishNet_Serializing_Generateds_m35DEE7D94119BD05CD8C4E4FE01E17D57FFFE54F (Reader_t309A9B13BD9C2974ED67A140EC99505C84C7B1ED* ___0_reader, const RuntimeMethod* method) 
 {
 	Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF V_0;
@@ -20121,7 +19043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 37087
+// Method Definition Index: 36800
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* NetworkBehaviour_get_NetworkObject_m3EEBF47647F4FF04EE88BF6A321CBE2BA23FA64A_inline (NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20130,7 +19052,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkObject_tF16653E72A1AB4D782
 		return L_0;
 	}
 }
-// Method Definition Index: 51889
+// Method Definition Index: 42141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20156,7 +19078,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 51851
+// Method Definition Index: 42103
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_current, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_maxDistanceDelta, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20288,7 +19210,7 @@ IL_00ad:
 		return L_43;
 	}
 }
-// Method Definition Index: 51890
+// Method Definition Index: 42142
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20314,7 +19236,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 51866
+// Method Definition Index: 42118
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20323,7 +19245,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 51881
+// Method Definition Index: 42133
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20337,7 +19259,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 51896
+// Method Definition Index: 42148
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -20348,7 +19270,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 51916
+// Method Definition Index: 42168
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_upwards, const RuntimeMethod* method) 
 {
 	{
@@ -20357,7 +19279,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_0;
 	}
 }
-// Method Definition Index: 51933
+// Method Definition Index: 42185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_from, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_to, float ___2_maxDegreesDelta, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -20400,7 +19322,7 @@ IL_0034:
 		return L_8;
 	}
 }
-// Method Definition Index: 51895
+// Method Definition Index: 42147
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -20442,7 +19364,7 @@ IL_0043:
 		return L_19;
 	}
 }
-// Method Definition Index: 51854
+// Method Definition Index: 42106
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -20455,7 +19377,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 51892
+// Method Definition Index: 42144
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20478,7 +19400,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 52004
+// Method Definition Index: 42257
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -20489,7 +19411,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 51885
+// Method Definition Index: 42137
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20503,7 +19425,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 80281
+// Method Definition Index: 80714
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m8B28BDE3D326CCB7B7794E72EA6646427138C60A_inline (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20512,7 +19434,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m8
 		return L_0;
 	}
 }
-// Method Definition Index: 37466
+// Method Definition Index: 37179
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* PredictionRigidbody_get_Rigidbody_m87FFA61164D95E170AE39B5A68012669856910E9_inline (PredictionRigidbody_tCDCB81B5FB43C452F930BB83961C804D8D2DF1DB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20521,7 +19443,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Rigidbody_t268697F5A994213ED97393
 		return L_0;
 	}
 }
-// Method Definition Index: 80282
+// Method Definition Index: 80715
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m70A341258B9EF09F32F059861444B61C759C117D_inline (ReplicateData_t1BA36838E376335C6BD4E63FAF9F7B99169750E8* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20531,7 +19453,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m70A34
 		return;
 	}
 }
-// Method Definition Index: 80285
+// Method Definition Index: 80718
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mC633E2D811C2451EFA92434CD1AF6E67E31C15AE_inline (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20540,7 +19462,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 80286
+// Method Definition Index: 80719
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m86E222612CE64D60D8576F6ECD053F7B89FE67A1_inline (ReconcileData_t93BA4611851EFCA110BF249F093D0FD9C618A5F5* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20550,7 +19472,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m86E22
 		return;
 	}
 }
-// Method Definition Index: 80297
+// Method Definition Index: 80730
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float CharacterControllerPrediction_get_Stamina_mB7D66192E38421C619C8324DA9B71384709A4D51_inline (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20559,7 +19481,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float CharacterControllerPredicti
 		return L_0;
 	}
 }
-// Method Definition Index: 51982
+// Method Definition Index: 42234
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___0_value, float ___1_min, float ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -20610,7 +19532,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 80298
+// Method Definition Index: 80731
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CharacterControllerPrediction_set_Stamina_m28C61A9CE8639A91E11D8A98CD76F79DA58454AB_inline (CharacterControllerPrediction_t5C957FD930287E3CA3860F6DB18997397EB32A1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20620,7 +19542,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CharacterControllerPredictio
 		return;
 	}
 }
-// Method Definition Index: 39718
+// Method Definition Index: 39421
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double TimeManager_get_TickDelta_mAD7B3277F6932DB2CB2B3BD99748DDF43FC73A03_inline (TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20629,7 +19551,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double TimeManager_get_TickDelta_
 		return L_0;
 	}
 }
-// Method Definition Index: 80330
+// Method Definition Index: 80763
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m0882019BB87C4693A1ADFBD985B006C9C64AE83F_inline (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20638,7 +19560,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_m0
 		return L_0;
 	}
 }
-// Method Definition Index: 52010
+// Method Definition Index: 42263
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_normalized_mF6722883AEFB5027690A778DF8ACC20F0FA65297_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20647,7 +19569,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 80331
+// Method Definition Index: 80764
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m270CC71D314DE3E606711AB750EE9BE399FE2AA7_inline (ReplicateData_t4FA3F289800D5A2B673D96E8DF97D95B0D093461* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20657,7 +19579,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m270CC
 		return;
 	}
 }
-// Method Definition Index: 80334
+// Method Definition Index: 80767
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mD9C38697E5602742C12B32CE1B83DEB4391774B4_inline (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20666,7 +19588,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_mD
 		return L_0;
 	}
 }
-// Method Definition Index: 80335
+// Method Definition Index: 80768
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m2C60FD4823B6C8EC4CB95728222E90C182831205_inline (ReconcileData_t56AEEB3712F8DE7DF3A647E020DB70693C37C056* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20676,7 +19598,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m2C60F
 		return;
 	}
 }
-// Method Definition Index: 80357
+// Method Definition Index: 80790
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_mCEDC472206FB45E1710A3702923224EB4DBF29E2_inline (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20685,7 +19607,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReplicateData_GetTick_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 80358
+// Method Definition Index: 80791
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m42D0F2937D2E20C851E129618681538346E4663B_inline (ReplicateData_t841CED3BD1195C975F4F546B1B4B283706CCBCAD* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20695,7 +19617,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReplicateData_SetTick_m42D0F
 		return;
 	}
 }
-// Method Definition Index: 80361
+// Method Definition Index: 80794
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_m6263FC4AD45E83840FD2F70F67724FFC87D2BA92_inline (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20704,7 +19626,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t ReconcileData_GetTick_m6
 		return L_0;
 	}
 }
-// Method Definition Index: 80362
+// Method Definition Index: 80795
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m28924142D81BB3C53DC0F15C66ACF97A1F061181_inline (ReconcileData_tF75B5A78F48AAB9E8AD257A6B2D7711B84B55EC4* __this, uint32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20714,7 +19636,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReconcileData_SetTick_m28924
 		return;
 	}
 }
-// Method Definition Index: 51919
+// Method Definition Index: 42171
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20728,7 +19650,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_0;
 	}
 }
-// Method Definition Index: 51737
+// Method Definition Index: 41989
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline (const RuntimeMethod* method) 
 {
 	{
@@ -20738,7 +19660,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 51882
+// Method Definition Index: 42134
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20752,7 +19674,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 51931
+// Method Definition Index: 42183
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_euler, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20767,7 +19689,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_2;
 	}
 }
-// Method Definition Index: 39726
+// Method Definition Index: 39429
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint16_t TimeManager_get_TickRate_m82924518D1C59038F7F69BEAA57C0179F78FA8A6_inline (TimeManager_tC7ABD26ED98438244671E717BA653CE562333891* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20776,7 +19698,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint16_t TimeManager_get_TickRate
 		return L_0;
 	}
 }
-// Method Definition Index: 51979
+// Method Definition Index: 42231
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20801,7 +19723,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 38068
+// Method Definition Index: 37781
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InOutAverage_t194246D30BA77B14306F01335D83095DE28BDB91* BandwidthDisplay_get_ServerAverages_mA97BEE3E582C0AD5B3CEA43C777F651DE51DAA12_inline (BandwidthDisplay_t2DC3E664999F744EA1B758EA658893F509B94F2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20810,7 +19732,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InOutAverage_t194246D30BA77B14306
 		return L_0;
 	}
 }
-// Method Definition Index: 39917
+// Method Definition Index: 39620
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* Authenticator_get_NetworkManager_m6E83AF25D5E1F5B7BB819E6DD6D7473E2B393E47_inline (Authenticator_tE8723F8FD1952857C160B9288FCD4E415433F238* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20819,7 +19741,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkManager_t3CF56E00215CFB653
 		return L_0;
 	}
 }
-// Method Definition Index: 38728
+// Method Definition Index: 38441
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ServerManager_tDBBF56D80FF61E862EFF37E29B4D0934E0B7DA59* NetworkManager_get_ServerManager_m32E7F02C9CB3A1AD788743D76789FD354D08200A_inline (NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20828,7 +19750,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ServerManager_tDBBF56D80FF61E862E
 		return L_0;
 	}
 }
-// Method Definition Index: 39844
+// Method Definition Index: 39547
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool NetworkConnection_get_IsAuthenticated_mE4D6289CC2DEDB78437ED9E9DE0F19931CF3A808_inline (NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20845,7 +19767,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 38730
+// Method Definition Index: 38443
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ClientManager_t4C708A22F4C0BD3CB5EB1E131909D787D5198FA4* NetworkManager_get_ClientManager_mD5B9A88CFAC2F93A669483088DC42F0C61A564CA_inline (NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20854,7 +19776,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ClientManager_t4C708A22F4C0BD3CB5
 		return L_0;
 	}
 }
-// Method Definition Index: 50402
+// Method Definition Index: 40658
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -20869,7 +19791,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 51796
+// Method Definition Index: 42048
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 Matrix4x4_TRS_mCC04FD47347234B451ACC6CCD2CE6D02E1E0E1E3_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_pos, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_q, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_s, const RuntimeMethod* method) 
 {
 	{
@@ -20878,7 +19800,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59
 		return L_0;
 	}
 }
-// Method Definition Index: 51891
+// Method Definition Index: 42143
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20898,7 +19820,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_6;
 	}
 }
-// Method Definition Index: 50390
+// Method Definition Index: 40646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Ray__ctor_mE298992FD10A3894C38373198385F345C58BD64C_inline (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_origin, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_direction, const RuntimeMethod* method) 
 {
 	{
@@ -20911,7 +19833,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Ray__ctor_mE298992FD10A3894C
 		return;
 	}
 }
-// Method Definition Index: 37894
+// Method Definition Index: 37607
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SyncBase_get_IsInitialized_m953427A1256C4170AF0C6289C83B74D67C9F33E1_inline (SyncBase_t76EBEEC00F8300C5890886038B9872E72128829D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20920,13 +19842,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SyncBase_get_IsInitialized_m
 		return L_0;
 	}
 }
-// Method Definition Index: 80483
+// Method Definition Index: 80916
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CustomChanged_Invoke_m60BF27976DA02B4489ABF667763BDCB65F8EF6CB_inline (CustomChanged_t1735AE59FFAB7268FAAB01C88621284C20B2BD69* __this, uint8_t ___0_op, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___1_oldItem, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF ___2_newItem, bool ___3_asServer, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF, Structy_tCDD00FA69F789D90924F9BAFFDE219CFB16E33BF, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_op, ___1_oldItem, ___2_newItem, ___3_asServer, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 80520
+// Method Definition Index: 80953
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Aim_set_PlayerCamera_m80128407CA99117E85D53D13DD69BA6279B11A89_inline (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -20937,7 +19859,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Aim_set_PlayerCamera_m801284
 		return;
 	}
 }
-// Method Definition Index: 80519
+// Method Definition Index: 80952
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerCamera_tA490CD125789BAA7737A7B712A319EADC30097C2* Aim_get_PlayerCamera_m40D24F736CCDD9ACDF94A799A3428D86985D5507_inline (Aim_t81C00999979545ED7D6166CA74EFC586D5CFBADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20946,7 +19868,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerCamera_tA490CD125789BAA7737
 		return L_0;
 	}
 }
-// Method Definition Index: 51930
+// Method Definition Index: 42182
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline (float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -20964,7 +19886,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_3;
 	}
 }
-// Method Definition Index: 51872
+// Method Definition Index: 42124
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21012,7 +19934,7 @@ IL_0040:
 		return L_19;
 	}
 }
-// Method Definition Index: 52032
+// Method Definition Index: 42285
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -21043,7 +19965,7 @@ IL_002e:
 		return L_12;
 	}
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21057,7 +19979,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m46EEFFA770BE665EA0CB3A5332E941DA4B3C1D37_gshared_inline (List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21065,7 +19987,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m46EEFFA
 		return L_0;
 	}
 }
-// Method Definition Index: 10612
+// Method Definition Index: 10428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m79E50C4F592B1703F4B76A8BE7B4855515460CA1_gshared_inline (List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_item, const RuntimeMethod* method) 
 {
 	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* V_0 = NULL;
@@ -21103,7 +20025,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mBB5E53D3F7472CB89DE93C0512A5135AFDC046D2_gshared_inline (List_1_tDA2550A540AB84155C3B6D8EE5396C4547D84225* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21111,7 +20033,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mBB5E53D
 		return L_0;
 	}
 }
-// Method Definition Index: 10546
+// Method Definition Index: 10370
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m1412A508E37D95E08FB60E8976FB75714BE934C1_gshared_inline (Enumerator_tC17DB73F53085145D57EE2A8168426239B0B569D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21119,7 +20041,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 80161
+// Method Definition Index: 80596
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21127,7 +20049,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 10612
+// Method Definition Index: 10428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -21165,7 +20087,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 944
+// Method Definition Index: 943
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ArraySegment_1_get_Array_m85F374406C1E34FDEFA7F160336A247891AF8105_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21173,7 +20095,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB
 		return L_0;
 	}
 }
-// Method Definition Index: 946
+// Method Definition Index: 945
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Count_m7B026228B16D905890B805EA70E9114D1517B053_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21181,7 +20103,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Count_
 		return L_0;
 	}
 }
-// Method Definition Index: 945
+// Method Definition Index: 944
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Offset_m28FEFF65E8FA9A92DF84966071346BFD426CC3AA_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21189,7 +20111,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Offset
 		return L_0;
 	}
 }
-// Method Definition Index: 10612
+// Method Definition Index: 10428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m1168315383070F7A0B825DF69E51B44EE911B17B_gshared_inline (List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* __this, ChangeData_tA6218042EF118E53D087451E0B81EC89EB5BA5EE ___0_item, const RuntimeMethod* method) 
 {
 	ChangeDataU5BU5D_t3BCD90DC4793EE8FA10AAF6E77F18CB671872A20* V_0 = NULL;
@@ -21227,7 +20149,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m203174CCF20ABDE1C9743A6B016025F2ABF86F32_gshared_inline (List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21235,7 +20157,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m203174C
 		return L_0;
 	}
 }
-// Method Definition Index: 10620
+// Method Definition Index: 10436
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mCC5FF69B4991EB0D6E51F757C695E79AD78AC2AD_gshared_inline (List_1_t6B4EFD9DDB5B2A7699DAF377EB6E1623A58623DF* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -21265,7 +20187,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 10612
+// Method Definition Index: 10428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_gshared_inline (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* __this, float ___0_item, const RuntimeMethod* method) 
 {
 	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* V_0 = NULL;
@@ -21303,7 +20225,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m545762F67009314D9C63DD209B42FFF950569B05_gshared_inline (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21317,7 +20239,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_mB2DD87F61EB
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 36518
+// Method Definition Index: 36236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_IsDefault_mE9B1F0219C7E9946DF248E9EFF99CE545F092D93_gshared_inline (Func_2_t5EA4D31E10151048C64853212938BF0EDFA0946B* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21328,7 +20250,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_mBE3F625F9CFAD6AC2A76A8E8B60989BF714073F8_gshared_inline (Func_3_t533766DEADE2660311942F85F945755095AB10DF* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21339,7 +20261,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36518
+// Method Definition Index: 36236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_IsDefault_mD91381E33E8D0F02450357DF984137889FFD940F_gshared_inline (Func_2_t8C8EFDBB67D8DD17B179709B68DF09107AFCAB08* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21350,7 +20272,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_m415B733830C530794D5479F1CF584265A61BF8DD_gshared_inline (Func_3_t1977F84BF4C8AF22460919F2B17831A9885AB859* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21361,7 +20283,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_mC5D46B0896E245F2F7E8E256B40AAB2DFC805D20_gshared_inline (Func_3_tE2867DA915514BA60DD731A5E8961D4720F39935* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21372,7 +20294,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36518
+// Method Definition Index: 36236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_IsDefault_m84CABF17EC5FEC2AD17373835D8332EB0DEE1B50_gshared_inline (Func_2_t5CA9DFC48A0F7E702013B80CF739BFB787D1F96A* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21383,7 +20305,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_m56651D56AA60E5150D7F3C117C5EE4AFBB6856E7_gshared_inline (Func_3_t29CDB430BF2E39509FA4E867BAACB0344948A3ED* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21394,7 +20316,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_mEC7A895DBF857C3BD35E7EE4A14A467F1CF922F3_gshared_inline (Func_3_t8405246FA4174D01D5F07F8A51737739EE5376F3* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21405,7 +20327,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 36520
+// Method Definition Index: 36238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set_Compare_m62AD8DA19DDD928E4E06EDDC4267D8517578C721_gshared_inline (Func_3_t5C21403860EED861F6CFC91F620024C13321FC72* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21416,7 +20338,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PublicPropertyComparer_1_set
 		return;
 	}
 }
-// Method Definition Index: 51864
+// Method Definition Index: 42116
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21480,7 +20402,7 @@ IL_0050:
 		return L_14;
 	}
 }
-// Method Definition Index: 51927
+// Method Definition Index: 42179
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Angle_m6F61044E1B167471D24A2B26A85AF2C064F46BC9_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -21529,7 +20451,7 @@ IL_003c:
 		return L_9;
 	}
 }
-// Method Definition Index: 51966
+// Method Definition Index: 42218
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -21566,7 +20488,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 51909
+// Method Definition Index: 42161
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_SlerpUnclamped_m6EE729E421AF8BF8672942540951427AF8AC856C_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	{
@@ -21578,7 +20500,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_3;
 	}
 }
-// Method Definition Index: 51710
+// Method Definition Index: 41962
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -21593,7 +20515,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 51865
+// Method Definition Index: 42117
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3_Normalize_mC749B887A4C74BA0A2E13E6377F17CCAEB0AADA8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -21635,7 +20557,7 @@ IL_0065:
 		return;
 	}
 }
-// Method Definition Index: 51874
+// Method Definition Index: 42126
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21657,7 +20579,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6
 		return ((float)L_6);
 	}
 }
-// Method Definition Index: 51925
+// Method Definition Index: 42177
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1FD9EAD0C8EEF7D5396ADF612FA105_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, const RuntimeMethod* method) 
 {
 	{
@@ -21680,7 +20602,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11)))), ((float)il2cpp_codegen_multiply(L_13, L_15))));
 	}
 }
-// Method Definition Index: 51924
+// Method Definition Index: 42176
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m9C672201C918C2D1E739F559DBE4406F95997CBD_inline (float ___0_dot, const RuntimeMethod* method) 
 {
 	{

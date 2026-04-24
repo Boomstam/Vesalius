@@ -53,7 +53,6 @@ struct ConcurrentQueue_1_t2C88F64ACA26D5300522987C12D393FBBAA93AD5;
 struct Dictionary_2_tE11D6F75DB229FE0E3D32CB27D9C5851D4A07E69;
 struct Dictionary_2_t93211A579A65760C4203A07FF35D1D189239AAD5;
 struct Dictionary_2_t270B30EEE150683DF911F84C9BFB9A533992AEA7;
-struct Dictionary_2_tA6956B8D493D2FECA73D2AFD277C14FA2A563AD0;
 struct HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2;
 struct ICollection_1_t828FEFDDBF830D003AFB480F0898186B499E26B0;
 struct IEqualityComparer_1_tDBFC8496F14612776AF930DBF84AFE7D06D1F0E9;
@@ -86,7 +85,6 @@ struct NetworkConnection_tFE41A2309E8A7E07677B7E6A6CD2DB3A0E94B30C;
 struct NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF;
 struct ObjectPool_t25FDDFABE0742736480E445F5038491FEC1C59F7;
 struct ObserverManager_t39318F60327B67B4F97121CF1AA6301DD911FE5C;
-struct PacketIdHistory_t559AB5A239AC3AC7946B1F8CB2B9104D6A21D790;
 struct PredictionManager_t8BB914EA74A2C8D879BA7924B5540F56ADA28383;
 struct PrefabObjects_t471A82416100CEC675A9CBB5CC72E805DD57C035;
 struct RollbackManager_tBDA1D8C460D072FE0AC1428C6E4CC1DB85DBD8C6;
@@ -805,8 +803,6 @@ struct NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF  : public MonoBe
 	ObserverManager_t39318F60327B67B4F97121CF1AA6301DD911FE5C* ___U3CObserverManagerU3Ek__BackingField;
 	DebugManager_t729A43A1FC8248A61A15E9D9D706A22075E1D09B* ___U3CDebugManagerU3Ek__BackingField;
 	StatisticsManager_tB62A0D39815B440DBE93C2B9F8A00C3CA2323CD0* ___U3CStatisticsManagerU3Ek__BackingField;
-	Dictionary_2_tA6956B8D493D2FECA73D2AFD277C14FA2A563AD0* ____broadcastNames;
-	PacketIdHistory_t559AB5A239AC3AC7946B1F8CB2B9104D6A21D790* ___PacketIdHistory;
 	bool ____runInBackground;
 	bool ____dontDestroyOnLoad;
 	ObjectPool_t25FDDFABE0742736480E445F5038491FEC1C59F7* ____objectPool;
@@ -1001,7 +997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ServerSocket_GetConnectionAddress_m4D9DB2C45442786FD6BF52ACBF5F3352A8D91E0E (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113 (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ServerSocket_GetConnectionState_m5FCB00BCD6F346A0587CA302A6D146ACEE21722E (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) ;
 inline void Action_1_Invoke_m84B71F6BFFEE03633D78E1A7E31945AF680AE8B4_inline (Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* __this, ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B ___0_obj, const RuntimeMethod* method)
 {
@@ -1030,7 +1026,7 @@ inline void Action_1_Invoke_m655A15FAC9DF19002FBAF305802C2B0394FA77A0_inline (Ac
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SanitizeChannel_m72D60F755B5216A698E7B24072B2767D754A5FFA (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t* ___0_channelId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_SendToServer_m62E20B819D3AA15E2ED51F63B6310DD617804CE2 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_SendToClient_m2BED696F3ECA9DF564052D920D5DA95CE49022CB_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, int32_t ___2_connectionId, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline (Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0 (NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* ___0_networkManager, String_t* ___1_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartServer_m4221205A1826ABE40EC47594C1EE903D8156C839 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) ;
@@ -1225,7 +1221,7 @@ inline void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83211
+// Method Definition Index: 83418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m877C4B5548A220204447B83943ECE386AD85AEB3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1238,8 +1234,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D
 	}
 	MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565 V_1;
-	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)290));
@@ -1258,17 +1252,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D
 		(&V_0)->___TotalTypes = 7;
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565 L_6 = V_0;
-		V_1 = L_6;
-		goto IL_005d;
-	}
-
-IL_005d:
-	{
-		MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565 L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 83212
+// Method Definition Index: 83419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE7542AF481C95F22AF4933C8212E531B92D8DF26 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t007431C448D2FD60CFD33D79E295ADAA84D263DF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1354,7 +1341,7 @@ IL2CPP_EXTERN_C void MonoScriptData_tB461ACBE95DA2E4B55767E4C1DB6D859842A7565_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83213
+// Method Definition Index: 83420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_OnDestroy_mD4021BAE16372B9D7B580C816E456946B28CE31F (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1364,10 +1351,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_OnDestroy_mD4021BAE16372B9D7B580C8
 		return;
 	}
 }
-// Method Definition Index: 83214
+// Method Definition Index: 83421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Bayou_GetConnectionAddress_m8DD6B066485986D7A640AAC4AFAC2250F3B9F1BF (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
-	String_t* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:105>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
@@ -1375,18 +1361,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Bayou_GetConnectionAddress_m8DD6B06
 		NullCheck(L_0);
 		String_t* L_2;
 		L_2 = ServerSocket_GetConnectionAddress_m4D9DB2C45442786FD6BF52ACBF5F3352A8D91E0E(L_0, L_1, NULL);
-		V_0 = L_2;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:106>
-		String_t* L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
-// Method Definition Index: 83215
+// Method Definition Index: 83422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_add_OnClientConnectionState_m8ACFC7C86B315AB9D7EEE6597468F308F93AE27C (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1429,7 +1407,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83216
+// Method Definition Index: 83423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_remove_OnClientConnectionState_m797EE3375C63D99AF0D6FD5C84FD32BB7D500D17 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1472,7 +1450,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83217
+// Method Definition Index: 83424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_add_OnServerConnectionState_m639DF039258ADFE15902C701CD1774476510D9F7 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1515,7 +1493,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83218
+// Method Definition Index: 83425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_remove_OnServerConnectionState_m99EAFA3782691E4B15B5745EC761596143061173 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1558,7 +1536,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83219
+// Method Definition Index: 83426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_add_OnRemoteConnectionState_m913DAD97FB48A78DDAE4832DE42973158DAACE0B (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t1944A3F884E13BC83AD461CC8EBD0B37BFDF1794* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1601,7 +1579,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83220
+// Method Definition Index: 83427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_remove_OnRemoteConnectionState_m1FF7124BD7704EA5D6D228CD522427157C4CE67D (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t1944A3F884E13BC83AD461CC8EBD0B37BFDF1794* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1644,53 +1622,39 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83221
+// Method Definition Index: 83428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Bayou_GetConnectionState_mAF585E4E664023A2649180335B3481505599922A (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_server, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	int32_t V_1 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:125>
 		bool L_0 = ___0_server;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0014;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:126>
-		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_2 = __this->____server;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(L_2, NULL);
-		V_1 = L_3;
-		goto IL_0022;
+		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_1 = __this->____server;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(L_1, NULL);
+		return L_2;
 	}
 
-IL_0014:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:128>
-		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_4 = __this->____client;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(L_4, NULL);
-		V_1 = L_5;
-		goto IL_0022;
-	}
-
-IL_0022:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:129>
-		int32_t L_6 = V_1;
-		return L_6;
+		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_3 = __this->____client;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(L_3, NULL);
+		return L_4;
 	}
 }
-// Method Definition Index: 83222
+// Method Definition Index: 83429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t Bayou_GetConnectionState_m93CCD31256AC87139FAAFE5C44124A503FEBC2DD (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
-	uint8_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:136>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
@@ -1698,18 +1662,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t Bayou_GetConnectionState_m93CCD31256A
 		NullCheck(L_0);
 		uint8_t L_2;
 		L_2 = ServerSocket_GetConnectionState_m5FCB00BCD6F346A0587CA302A6D146ACEE21722E(L_0, L_1, NULL);
-		V_0 = L_2;
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:137>
-		uint8_t L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
-// Method Definition Index: 83223
+// Method Definition Index: 83430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleClientConnectionState_m92552D2B5611762430A364BB613C1B5DA2195313 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B ___0_connectionStateArgs, const RuntimeMethod* method) 
 {
 	Action_1_tA27AB252E46E34F0C10009EDA6F593E45D7DC3DD* G_B2_0 = NULL;
@@ -1721,28 +1677,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleClientConnectionState_m92552
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000d;
+			goto IL_000b;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0014;
+		return;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B L_2 = ___0_connectionStateArgs;
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m84B71F6BFFEE03633D78E1A7E31945AF680AE8B4_inline(G_B2_0, L_2, NULL);
-	}
-
-IL_0014:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:145>
 		return;
 	}
 }
-// Method Definition Index: 83224
+// Method Definition Index: 83431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleServerConnectionState_m9B58B6FFDDBE6A88848A0098421984ECD1421595 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 ___0_connectionStateArgs, const RuntimeMethod* method) 
 {
 	Action_1_t0FEC20BB28574D1519CC323E81F831BA2AF9B3EE* G_B2_0 = NULL;
@@ -1754,28 +1706,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleServerConnectionState_m9B58B
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000d;
+			goto IL_000b;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0014;
+		return;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 L_2 = ___0_connectionStateArgs;
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m7D855B23256033515D44C612FAE95525AA248CDE_inline(G_B2_0, L_2, NULL);
-	}
-
-IL_0014:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:153>
 		return;
 	}
 }
-// Method Definition Index: 83225
+// Method Definition Index: 83432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleRemoteConnectionState_mF2324BA0A38E4BD0CF9338CA8DE6005606B56CFA (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD ___0_connectionStateArgs, const RuntimeMethod* method) 
 {
 	Action_1_t1944A3F884E13BC83AD461CC8EBD0B37BFDF1794* G_B2_0 = NULL;
@@ -1787,100 +1735,82 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleRemoteConnectionState_mF2324
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000d;
+			goto IL_000b;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0014;
+		return;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD L_2 = ___0_connectionStateArgs;
 		NullCheck(G_B2_0);
 		Action_1_Invoke_mCEB34569A64DB236638B15FB70E1E088C2E4EDFC_inline(G_B2_0, L_2, NULL);
-	}
-
-IL_0014:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:161>
 		return;
 	}
 }
-// Method Definition Index: 83226
+// Method Definition Index: 83433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_IterateIncoming_m76C28C359F8A811ED53A1664ACB9765C00AF1FE1 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_server, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:171>
 		bool L_0 = ___0_server;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0014;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:172>
-		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_2 = __this->____server;
-		NullCheck(L_2);
-		ServerSocket_IterateIncoming_mE1435FF34A5BF53BC00CB33CAEC3F9FC75E184BA_inline(L_2, NULL);
-		goto IL_0020;
+		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_1 = __this->____server;
+		NullCheck(L_1);
+		ServerSocket_IterateIncoming_mE1435FF34A5BF53BC00CB33CAEC3F9FC75E184BA_inline(L_1, NULL);
+		return;
 	}
 
-IL_0014:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:174>
-		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_3 = __this->____client;
-		NullCheck(L_3);
-		ClientSocket_IterateIncoming_m36CA3EF1807AC33EADA72833D3EB8DEA945C3F06(L_3, NULL);
-	}
-
-IL_0020:
-	{
+		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_2 = __this->____client;
+		NullCheck(L_2);
+		ClientSocket_IterateIncoming_m36CA3EF1807AC33EADA72833D3EB8DEA945C3F06(L_2, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:175>
 		return;
 	}
 }
-// Method Definition Index: 83227
+// Method Definition Index: 83434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_IterateOutgoing_m05B239599D3334C9D4453A213DBBC93D27C5A68D (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_server, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:183>
 		bool L_0 = ___0_server;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0014;
+			goto IL_000f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:184>
-		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_2 = __this->____server;
-		NullCheck(L_2);
-		ServerSocket_IterateOutgoing_m17B7081255CDBDA3CEC1C98B8B892986D225DF87(L_2, NULL);
-		goto IL_0020;
+		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_1 = __this->____server;
+		NullCheck(L_1);
+		ServerSocket_IterateOutgoing_m17B7081255CDBDA3CEC1C98B8B892986D225DF87(L_1, NULL);
+		return;
 	}
 
-IL_0014:
+IL_000f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:186>
-		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_3 = __this->____client;
-		NullCheck(L_3);
-		ClientSocket_IterateOutgoing_m115541512C770FA600F827A02875FDBFADF5DB4C(L_3, NULL);
-	}
-
-IL_0020:
-	{
+		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_2 = __this->____client;
+		NullCheck(L_2);
+		ClientSocket_IterateOutgoing_m115541512C770FA600F827A02875FDBFADF5DB4C(L_2, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:187>
 		return;
 	}
 }
-// Method Definition Index: 83228
+// Method Definition Index: 83435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_add_OnClientReceivedData_m787EFAA5F938370F1B7B3DA15ACA4EC6DEC02941 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t50A02B45D5E6047C9FF8CAFD8CD7958099FCC0FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1923,7 +1853,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83229
+// Method Definition Index: 83436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_remove_OnClientReceivedData_mA09C344D44AABC04222EC838C55CC7C6295534D1 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t50A02B45D5E6047C9FF8CAFD8CD7958099FCC0FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1966,7 +1896,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83230
+// Method Definition Index: 83437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleClientReceivedDataArgs_m8DDD6B3DE5E832C925A0E5F6908D1BB751F3BFA5 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 ___0_receivedDataArgs, const RuntimeMethod* method) 
 {
 	Action_1_t50A02B45D5E6047C9FF8CAFD8CD7958099FCC0FD* G_B2_0 = NULL;
@@ -1978,28 +1908,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleClientReceivedDataArgs_m8DDD
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000d;
+			goto IL_000b;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0014;
+		return;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 L_2 = ___0_receivedDataArgs;
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m66B7043C366DE4AD4D1ABEA74D28E7E5D7F64103_inline(G_B2_0, L_2, NULL);
-	}
-
-IL_0014:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:202>
 		return;
 	}
 }
-// Method Definition Index: 83231
+// Method Definition Index: 83438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_add_OnServerReceivedData_m5E7A6653A1AB233FAE60261A18432C8912E17708 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t52F07609F7F96685B9249B16A8A3FBC1D8D795DC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2042,7 +1968,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83232
+// Method Definition Index: 83439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_remove_OnServerReceivedData_m4463A556D938F372AB681626569972CDB7EDEEF4 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, Action_1_t52F07609F7F96685B9249B16A8A3FBC1D8D795DC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2085,7 +2011,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 83233
+// Method Definition Index: 83440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleServerReceivedDataArgs_m45E3A2FF5C125FFABECBA1C9964DAA30610882A6 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE ___0_receivedDataArgs, const RuntimeMethod* method) 
 {
 	Action_1_t52F07609F7F96685B9249B16A8A3FBC1D8D795DC* G_B2_0 = NULL;
@@ -2097,28 +2023,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_HandleServerReceivedDataArgs_m45E3
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000d;
+			goto IL_000b;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0014;
+		return;
 	}
 
-IL_000d:
+IL_000b:
 	{
 		ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE L_2 = ___0_receivedDataArgs;
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m655A15FAC9DF19002FBAF305802C2B0394FA77A0_inline(G_B2_0, L_2, NULL);
-	}
-
-IL_0014:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:214>
 		return;
 	}
 }
-// Method Definition Index: 83234
+// Method Definition Index: 83441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SendToServer_m16C8F23FCE9111C16AC71E5D62B737904565FB2A (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, const RuntimeMethod* method) 
 {
 	{
@@ -2134,7 +2056,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SendToServer_m16C8F23FCE9111C16AC7
 		return;
 	}
 }
-// Method Definition Index: 83235
+// Method Definition Index: 83442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SendToClient_mA46A9DF67604883BC5C44F56A577BBC18A8F0790 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, int32_t ___2_connectionId, const RuntimeMethod* method) 
 {
 	{
@@ -2151,7 +2073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SendToClient_mA46A9DF67604883BC5C4
 		return;
 	}
 }
-// Method Definition Index: 83236
+// Method Definition Index: 83443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetUseWSS_mA98FBEC054F8E90D9D684C6EF6E3FD370E92F136 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_useWss, const RuntimeMethod* method) 
 {
 	{
@@ -2162,45 +2084,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetUseWSS_mA98FBEC054F8E90D9D684C6
 		return;
 	}
 }
-// Method Definition Index: 83237
+// Method Definition Index: 83444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bayou_GetTimeout_m80207920CDF7FC3471CE4D6CD149F3D07F445524 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_asServer, const RuntimeMethod* method) 
 {
-	float V_0 = 0.0f;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:259>
-		V_0 = (-1.0f);
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:260>
-		float L_0 = V_0;
-		return L_0;
+		return (-1.0f);
 	}
 }
-// Method Definition Index: 83238
+// Method Definition Index: 83445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Bayou_GetMaximumClients_mB635D6953697EFA6D17EF3AB7771EAC5414DDE67 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:267>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA(L_0, NULL);
-		V_0 = L_1;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:268>
-		int32_t L_2 = V_0;
-		return L_2;
+		L_1 = ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA_inline(L_0, NULL);
+		return L_1;
 	}
 }
-// Method Definition Index: 83239
+// Method Definition Index: 83446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetMaximumClients_m61E17C63900179C733C52589007AC6DDE8EFE526 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2209,42 +2113,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetMaximumClients_m61E17C63900179C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC5DA42258457804C93C794C8FE0A3663A712148B);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:275>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(L_0, NULL);
-		V_0 = (bool)((((int32_t)((((int32_t)L_1) == ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(L_0, NULL);
+		if ((((int32_t)L_1) == ((int32_t)1)))
 		{
-			goto IL_0029;
+			goto IL_001f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:276>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_3;
-		L_3 = Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline(__this, NULL);
-		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_3, _stringLiteralC5DA42258457804C93C794C8FE0A3663A712148B, NULL);
-		goto IL_0030;
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_2;
+		L_2 = Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline(__this, NULL);
+		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_2, _stringLiteralC5DA42258457804C93C794C8FE0A3663A712148B, NULL);
+		return;
 	}
 
-IL_0029:
+IL_001f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:278>
-		int32_t L_4 = ___0_value;
-		__this->____maximumClients = L_4;
-	}
-
-IL_0030:
-	{
+		int32_t L_3 = ___0_value;
+		__this->____maximumClients = L_3;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:279>
 		return;
 	}
 }
-// Method Definition Index: 83240
+// Method Definition Index: 83447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetClientAddress_mBBCB853DFE443FE93386C44E6C31D17B5537EF9B (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, String_t* ___0_address, const RuntimeMethod* method) 
 {
 	{
@@ -2256,25 +2153,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetClientAddress_mBBCB853DFE443FE9
 		return;
 	}
 }
-// Method Definition Index: 83241
+// Method Definition Index: 83448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Bayou_GetClientAddress_mFD037052A7C5F05640DCEDAA8E4861C7D63D82D2 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
-	String_t* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:293>
 		String_t* L_0 = __this->____clientAddress;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:294>
-		String_t* L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 83242
+// Method Definition Index: 83449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetServerBindAddress_m17B0F5420D4DC608F5F26B4449ED0D6FFE9315E2 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, String_t* ___0_address, uint8_t ___1_addressType, const RuntimeMethod* method) 
 {
 	{
@@ -2282,7 +2170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetServerBindAddress_m17B0F5420D4D
 		return;
 	}
 }
-// Method Definition Index: 83243
+// Method Definition Index: 83450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Bayou_GetServerBindAddress_m88A9C3E7CC01C2B23EE74A8753A0DD27CCCD1CB2 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t ___0_addressType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2291,21 +2179,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Bayou_GetServerBindAddress_m88A9C3E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5FC154761871B7293BA5D77E57A16A71359FE4E5);
 		s_Il2CppMethodInitialized = true;
 	}
-	String_t* V_0 = NULL;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:307>
-		V_0 = _stringLiteral5FC154761871B7293BA5D77E57A16A71359FE4E5;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:308>
-		String_t* L_0 = V_0;
-		return L_0;
+		return _stringLiteral5FC154761871B7293BA5D77E57A16A71359FE4E5;
 	}
 }
-// Method Definition Index: 83244
+// Method Definition Index: 83451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetPort_m7373E3A9B11700C4CA3909236E4A170A5865C9D1 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint16_t ___0_port, const RuntimeMethod* method) 
 {
 	{
@@ -2316,125 +2195,81 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SetPort_m7373E3A9B11700C4CA3909236
 		return;
 	}
 }
-// Method Definition Index: 83245
+// Method Definition Index: 83452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t Bayou_GetPort_m2DCD85E27C8857A25989FCF0303941AAD710E665 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
-	uint16_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:323>
 		uint16_t L_0 = __this->____port;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:324>
-		uint16_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 83246
+// Method Definition Index: 83453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartConnection_m148F06EEE039400D2B44C89516604207425A7844 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_server, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:334>
 		bool L_0 = ___0_server;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_000f;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:335>
-		bool L_2;
-		L_2 = Bayou_StartServer_m4221205A1826ABE40EC47594C1EE903D8156C839(__this, NULL);
-		V_1 = L_2;
-		goto IL_001e;
+		bool L_1;
+		L_1 = Bayou_StartServer_m4221205A1826ABE40EC47594C1EE903D8156C839(__this, NULL);
+		return L_1;
 	}
 
-IL_000f:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:337>
-		String_t* L_3 = __this->____clientAddress;
-		bool L_4;
-		L_4 = Bayou_StartClient_m51AA7F326E2EF84904702D4EC2F768D18D0B4BC4(__this, L_3, NULL);
-		V_1 = L_4;
-		goto IL_001e;
-	}
-
-IL_001e:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:338>
-		bool L_5 = V_1;
-		return L_5;
+		String_t* L_2 = __this->____clientAddress;
+		bool L_3;
+		L_3 = Bayou_StartClient_m51AA7F326E2EF84904702D4EC2F768D18D0B4BC4(__this, L_2, NULL);
+		return L_3;
 	}
 }
-// Method Definition Index: 83247
+// Method Definition Index: 83454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopConnection_m105329B4715F33A8DDA248D8ABD08E839E842036 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, bool ___0_server, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:346>
 		bool L_0 = ___0_server;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_000f;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:347>
-		bool L_2;
-		L_2 = Bayou_StopServer_m1D6410E78C57CA73413AE695CA58913F8D77F916(__this, NULL);
-		V_1 = L_2;
-		goto IL_0018;
+		bool L_1;
+		L_1 = Bayou_StopServer_m1D6410E78C57CA73413AE695CA58913F8D77F916(__this, NULL);
+		return L_1;
 	}
 
-IL_000f:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:349>
-		bool L_3;
-		L_3 = Bayou_StopClient_mE8AE43F2B65D774E622279869EB724CE562DA0F6(__this, NULL);
-		V_1 = L_3;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:350>
-		bool L_4 = V_1;
-		return L_4;
+		bool L_2;
+		L_2 = Bayou_StopClient_mE8AE43F2B65D774E622279869EB724CE562DA0F6(__this, NULL);
+		return L_2;
 	}
 }
-// Method Definition Index: 83248
+// Method Definition Index: 83455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopConnection_m87104EEE6EB862A2DB29D2B941D24EEC9DFEA738 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, int32_t ___0_connectionId, bool ___1_immediately, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:359>
 		int32_t L_0 = ___0_connectionId;
 		bool L_1 = ___1_immediately;
 		bool L_2;
 		L_2 = Bayou_StopClient_mBF4E524BF237EB9BC5F3BCCE1F0305574E0FE219(__this, L_0, L_1, NULL);
-		V_0 = L_2;
-		goto IL_000c;
-	}
-
-IL_000c:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:360>
-		bool L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
-// Method Definition Index: 83249
+// Method Definition Index: 83456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_Shutdown_m59429BFAFD5729F0EFB69CB33C85354B8AEBD356 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2448,12 +2283,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_Shutdown_m59429BFAFD5729F0EFB69CB3
 		return;
 	}
 }
-// Method Definition Index: 83250
+// Method Definition Index: 83457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartServer_m4221205A1826ABE40EC47594C1EE903D8156C839 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
 	SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:382>
 		il2cpp_codegen_initobj((&V_0), sizeof(SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F));
@@ -2470,42 +2304,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartServer_m4221205A1826ABE40EC47
 		NullCheck(L_3);
 		bool L_6;
 		L_6 = ServerSocket_StartConnection_mBEF4A47F861D80B63707CAF697523A13927BCBDC(L_3, L_4, L_5, NULL);
-		V_1 = L_6;
-		goto IL_0037;
-	}
-
-IL_0037:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:386>
-		bool L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 83251
+// Method Definition Index: 83458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopServer_m1D6410E78C57CA73413AE695CA58913F8D77F916 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:393>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = ServerSocket_StopConnection_m51C56DBAD88325980723C4A106148A9750475379(L_0, NULL);
-		V_0 = L_1;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:394>
-		bool L_2 = V_0;
-		return L_2;
+		return L_1;
 	}
 }
-// Method Definition Index: 83252
+// Method Definition Index: 83459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartClient_m51AA7F326E2EF84904702D4EC2F768D18D0B4BC4 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, String_t* ___0_address, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:402>
 		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_0 = __this->____client;
@@ -2520,42 +2336,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StartClient_m51AA7F326E2EF84904702
 		NullCheck(L_2);
 		bool L_6;
 		L_6 = ClientSocket_StartConnection_m84CBC397F5A171BFBE566F44C13F1FF1675A1340(L_2, L_3, L_4, L_5, NULL);
-		V_0 = L_6;
-		goto IL_002f;
-	}
-
-IL_002f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:404>
-		bool L_7 = V_0;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 83253
+// Method Definition Index: 83460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopClient_mE8AE43F2B65D774E622279869EB724CE562DA0F6 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:411>
 		ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* L_0 = __this->____client;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = ClientSocket_StopConnection_m0FA0D5B5BA440EBDBFB8C9D585293DC5B7FC9C84(L_0, NULL);
-		V_0 = L_1;
-		goto IL_000f;
-	}
-
-IL_000f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:412>
-		bool L_2 = V_0;
-		return L_2;
+		return L_1;
 	}
 }
-// Method Definition Index: 83254
+// Method Definition Index: 83461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopClient_mBF4E524BF237EB9BC5F3BCCE1F0305574E0FE219 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, int32_t ___0_connectionId, bool ___1_immediately, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:421>
 		ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* L_0 = __this->____server;
@@ -2564,18 +2362,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bayou_StopClient_mBF4E524BF237EB9BC5F3BC
 		NullCheck(L_0);
 		bool L_3;
 		L_3 = ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84(L_0, L_1, L_2, NULL);
-		V_0 = L_3;
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:422>
-		bool L_4 = V_0;
-		return L_4;
+		return L_3;
 	}
 }
-// Method Definition Index: 83255
+// Method Definition Index: 83462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SanitizeChannel_m72D60F755B5216A698E7B24072B2767D754A5FFA (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t* ___0_channelId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2584,79 +2374,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou_SanitizeChannel_m72D60F755B5216A69
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2B45F8CA393655CC1C2451C4F16D52BE3DA42F30);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:433>
 		uint8_t* L_0 = ___0_channelId;
 		int32_t L_1 = *((uint8_t*)L_0);
 		if ((((int32_t)L_1) < ((int32_t)0)))
 		{
-			goto IL_0010;
+			goto IL_000a;
 		}
 	}
 	{
 		uint8_t* L_2 = ___0_channelId;
 		int32_t L_3 = *((uint8_t*)L_2);
-		G_B3_0 = ((((int32_t)((((int32_t)L_3) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0011;
-	}
-
-IL_0010:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0011:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_4 = V_0;
-		if (!L_4)
+		if ((((int32_t)L_3) < ((int32_t)2)))
 		{
-			goto IL_0037;
+			goto IL_0029;
 		}
 	}
+
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:435>
-		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_5;
-		L_5 = Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline(__this, NULL);
-		uint8_t* L_6 = ___0_channelId;
-		int32_t L_7 = *((uint8_t*)L_6);
-		uint8_t L_8 = ((uint8_t)L_7);
-		RuntimeObject* L_9 = Box(il2cpp_defaults.byte_class, &L_8);
-		String_t* L_10;
-		L_10 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2B45F8CA393655CC1C2451C4F16D52BE3DA42F30, L_9, NULL);
-		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_5, L_10, NULL);
+		NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* L_4;
+		L_4 = Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline(__this, NULL);
+		uint8_t* L_5 = ___0_channelId;
+		int32_t L_6 = *((uint8_t*)L_5);
+		uint8_t L_7 = ((uint8_t)L_6);
+		RuntimeObject* L_8 = Box(il2cpp_defaults.byte_class, &L_7);
+		String_t* L_9;
+		L_9 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2B45F8CA393655CC1C2451C4F16D52BE3DA42F30, L_8, NULL);
+		NetworkManagerExtensions_LogWarning_m99816E891AC92D8D31D94F2E085E746A21F98CC0(L_4, L_9, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:436>
-		uint8_t* L_11 = ___0_channelId;
-		*((int8_t*)L_11) = (int8_t)0;
+		uint8_t* L_10 = ___0_channelId;
+		*((int8_t*)L_10) = (int8_t)0;
 	}
 
-IL_0037:
+IL_0029:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:438>
 		return;
 	}
 }
-// Method Definition Index: 83256
+// Method Definition Index: 83463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Bayou_GetMTU_m7CA6272766A554DADC1CBA8ADBDD972300839F5D (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, uint8_t ___0_channel, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:447>
 		int32_t L_0 = __this->____mtu;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:448>
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 83257
+// Method Definition Index: 83464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou__ctor_m6C546439FA234CB90146BC6B867BFD75D523DDD4 (Bayou_tD040B01E42B4B1458D7330807C8307FE0BC04F1C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2668,8 +2436,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou__ctor_m6C546439FA234CB90146BC6B867
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:22>
-		__this->____useWss = (bool)0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:42>
 		__this->____mtu = ((int32_t)1023);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Bayou.cs:50>
@@ -2701,98 +2467,79 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bayou__ctor_m6C546439FA234CB90146BC6B867
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83258
+// Method Definition Index: 83465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113 (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:21>
 		int32_t L_0 = __this->____connectionState;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:22>
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 83259
+// Method Definition Index: 83466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, int32_t ___0_connectionState, bool ___1_asServer, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:30>
 		int32_t L_0 = ___0_connectionState;
 		int32_t L_1 = __this->____connectionState;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)L_1))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if ((!(((uint32_t)L_0) == ((uint32_t)L_1))))
 		{
-			goto IL_0010;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:31>
-		goto IL_0058;
+		return;
 	}
 
-IL_0010:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:33>
-		int32_t L_3 = ___0_connectionState;
-		__this->____connectionState = L_3;
+		int32_t L_2 = ___0_connectionState;
+		__this->____connectionState = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:34>
-		bool L_4 = ___1_asServer;
-		V_1 = L_4;
-		bool L_5 = V_1;
-		if (!L_5)
+		bool L_3 = ___1_asServer;
+		if (!L_3)
 		{
-			goto IL_003b;
+			goto IL_0031;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:35>
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_4 = __this->___Transport;
+		int32_t L_5 = ___0_connectionState;
 		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_6 = __this->___Transport;
-		int32_t L_7 = ___0_connectionState;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_8 = __this->___Transport;
-		NullCheck(L_8);
-		int32_t L_9;
-		L_9 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_8, NULL);
-		ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 L_10;
-		memset((&L_10), 0, sizeof(L_10));
-		ServerConnectionStateArgs__ctor_mAEDB9560BB7281ADF5A348A305AFB9B4C24DE7CF((&L_10), L_7, L_9, NULL);
 		NullCheck(L_6);
-		VirtualActionInvoker1< ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 >::Invoke(13, L_6, L_10);
-		goto IL_0058;
+		int32_t L_7;
+		L_7 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_6, NULL);
+		ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		ServerConnectionStateArgs__ctor_mAEDB9560BB7281ADF5A348A305AFB9B4C24DE7CF((&L_8), L_5, L_7, NULL);
+		NullCheck(L_4);
+		VirtualActionInvoker1< ServerConnectionStateArgs_t00983A7C26F33832269034FCAFD16FFDB2C65165 >::Invoke(13, L_4, L_8);
+		return;
 	}
 
-IL_003b:
+IL_0031:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:37>
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_9 = __this->___Transport;
+		int32_t L_10 = ___0_connectionState;
 		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_11 = __this->___Transport;
-		int32_t L_12 = ___0_connectionState;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_13 = __this->___Transport;
-		NullCheck(L_13);
-		int32_t L_14;
-		L_14 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_13, NULL);
-		ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B L_15;
-		memset((&L_15), 0, sizeof(L_15));
-		ClientConnectionStateArgs__ctor_mDD40A0F864C949206CA4FCF046E1A2FBDC65D030((&L_15), L_12, L_14, NULL);
 		NullCheck(L_11);
-		VirtualActionInvoker1< ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B >::Invoke(12, L_11, L_15);
-	}
-
-IL_0058:
-	{
+		int32_t L_12;
+		L_12 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_11, NULL);
+		ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B L_13;
+		memset((&L_13), 0, sizeof(L_13));
+		ClientConnectionStateArgs__ctor_mDD40A0F864C949206CA4FCF046E1A2FBDC65D030((&L_13), L_10, L_12, NULL);
+		NullCheck(L_9);
+		VirtualActionInvoker1< ClientConnectionStateArgs_tD41B01C830E5D6189B4B8BD680F3FFB2A669C40B >::Invoke(12, L_9, L_13);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 83260
+// Method Definition Index: 83467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_Send_mC45A017B3D1B43141EE3C9370898AF844166358B (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** ___0_queue, uint8_t ___1_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___2_segment, int32_t ___3_connectionId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2803,45 +2550,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_Send_mC45A017B3D1B43141EE3C
 	}
 	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:53>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		V_1 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)8))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_1;
-		if (!L_1)
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((((int32_t)L_0) == ((int32_t)8)))
 		{
-			goto IL_0013;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:54>
-		goto IL_0027;
+		return;
 	}
 
-IL_0013:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:57>
-		int32_t L_2 = ___3_connectionId;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3 = ___2_segment;
-		uint8_t L_4 = ___1_channelId;
-		Packet__ctor_mEF6722DCFB22A5CA2B37B7EA3D47C5173BDAC652((&V_0), L_2, L_3, L_4, NULL);
+		int32_t L_1 = ___3_connectionId;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_2 = ___2_segment;
+		uint8_t L_3 = ___1_channelId;
+		Packet__ctor_mEF6722DCFB22A5CA2B37B7EA3D47C5173BDAC652((&V_0), L_1, L_2, L_3, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:58>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_5 = ___0_queue;
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_6 = *((Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)L_5);
-		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_7 = V_0;
-		NullCheck(L_6);
-		Queue_1_Enqueue_mCA7E2D8718869F20577C07ADC5C2F2F2627F4761(L_6, L_7, Queue_1_Enqueue_mCA7E2D8718869F20577C07ADC5C2F2F2627F4761_RuntimeMethod_var);
-	}
-
-IL_0027:
-	{
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_4 = ___0_queue;
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_5 = *((Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)L_4);
+		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_6 = V_0;
+		NullCheck(L_5);
+		Queue_1_Enqueue_mCA7E2D8718869F20577C07ADC5C2F2F2627F4761(L_5, L_6, Queue_1_Enqueue_mCA7E2D8718869F20577C07ADC5C2F2F2627F4761_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:59>
 		return;
 	}
 }
-// Method Definition Index: 83261
+// Method Definition Index: 83468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_ClearPacketQueue_mEB6CA317CE9CB1ED36DCB445E080E38AF077E819 (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** ___0_queue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2855,7 +2595,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_ClearPacketQueue_mEB6CA317C
 	int32_t V_1 = 0;
 	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:67>
 		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_0 = ___0_queue;
@@ -2866,10 +2605,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_ClearPacketQueue_mEB6CA317C
 		V_0 = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:68>
 		V_1 = 0;
-		goto IL_0023;
+		goto IL_001f;
 	}
 
-IL_000d:
+IL_000c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:70>
 		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_3 = ___0_queue;
@@ -2885,16 +2624,14 @@ IL_000d:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
-IL_0023:
+IL_001f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:68>
 		int32_t L_7 = V_1;
 		int32_t L_8 = V_0;
-		V_3 = (bool)((((int32_t)L_7) < ((int32_t)L_8))? 1 : 0);
-		bool L_9 = V_3;
-		if (L_9)
+		if ((((int32_t)L_7) < ((int32_t)L_8)))
 		{
-			goto IL_000d;
+			goto IL_000c;
 		}
 	}
 	{
@@ -2902,7 +2639,7 @@ IL_0023:
 		return;
 	}
 }
-// Method Definition Index: 83262
+// Method Definition Index: 83469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_AddChannel_mF7D179498DF78FCCE0EDE1D8FDA08225641D479C (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* ___0_packet, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -2926,7 +2663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket_AddChannel_mF7D179498DF78FC
 		return;
 	}
 }
-// Method Definition Index: 83263
+// Method Definition Index: 83470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 CommonSocket_RemoveChannel_m3FFA3B758910895D110D1EFFA6CEFB1AC26D80B8 (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___0_segment, uint8_t* ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2940,8 +2677,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 	}
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
 	int32_t V_1 = 0;
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_2;
-	memset((&V_2), 0, sizeof(V_2));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:91>
 		il2cpp_codegen_runtime_class_init_inline(ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093_il2cpp_TypeInfo_var);
@@ -2966,26 +2701,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		ArraySegment_1__ctor_m664EA6AD314FAA6BCA4F6D0586AEF01559537F20((&L_9), L_7, 0, ((int32_t)il2cpp_codegen_subtract(L_8, 1)), ArraySegment_1__ctor_m664EA6AD314FAA6BCA4F6D0586AEF01559537F20_RuntimeMethod_var);
-		V_2 = L_9;
-		goto IL_0025;
-	}
-
-IL_0025:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:96>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_10 = V_2;
-		return L_10;
+		return L_9;
 	}
 }
-// Method Definition Index: 83264
+// Method Definition Index: 83471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommonSocket__ctor_m705ADE9A384446978E7D339BEA784F0434C4F7C0 (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, const RuntimeMethod* method) 
 {
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:14>
 		__this->____connectionState = 1;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:45>
-		__this->___Transport = (Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Transport), (void*)(Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4*)NULL);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
@@ -3052,7 +2776,7 @@ IL2CPP_EXTERN_C void SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F_
 	il2cpp_codegen_marshal_free_bstring(marshaled.___CertificatePassword);
 	marshaled.___CertificatePassword = NULL;
 }
-// Method Definition Index: 83265
+// Method Definition Index: 83472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SslConfiguration__ctor_m4AC3067904A52444716E7ADD3460A889BD3D8AC5 (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* __this, bool ___0_enabled, String_t* ___1_certPath, String_t* ___2_certPassword, int32_t ___3_sslProtocols, const RuntimeMethod* method) 
 {
 	{
@@ -3141,7 +2865,7 @@ IL2CPP_EXTERN_C void Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98_marshal_co
 	il2cpp_codegen_com_destroy_safe_array(marshaled.___Data);
 	marshaled.___Data = NULL;
 }
-// Method Definition Index: 83266
+// Method Definition Index: 83473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet__ctor_mC99B85892C53778C8C93E17212F132C353FB9541 (Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* __this, int32_t ___0_connectionId, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_data, int32_t ___2_length, uint8_t ___3_channel, const RuntimeMethod* method) 
 {
 	{
@@ -3169,7 +2893,7 @@ IL2CPP_EXTERN_C  void Packet__ctor_mC99B85892C53778C8C93E17212F132C353FB9541_Adj
 	_thisAdjusted = reinterpret_cast<Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98*>(__this + _offset);
 	Packet__ctor_mC99B85892C53778C8C93E17212F132C353FB9541(_thisAdjusted, ___0_connectionId, ___1_data, ___2_length, ___3_channel, method);
 }
-// Method Definition Index: 83267
+// Method Definition Index: 83474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet__ctor_mEF6722DCFB22A5CA2B37B7EA3D47C5173BDAC652 (Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* __this, int32_t ___0_sender, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, uint8_t ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3222,7 +2946,7 @@ IL2CPP_EXTERN_C  void Packet__ctor_mEF6722DCFB22A5CA2B37B7EA3D47C5173BDAC652_Adj
 	_thisAdjusted = reinterpret_cast<Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98*>(__this + _offset);
 	Packet__ctor_mEF6722DCFB22A5CA2B37B7EA3D47C5173BDAC652(_thisAdjusted, ___0_sender, ___1_segment, ___2_channel, method);
 }
-// Method Definition Index: 83268
+// Method Definition Index: 83475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF (Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3231,8 +2955,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ArraySegment_1__ctor_m664EA6AD314FAA6BCA4F6D0586AEF01559537F20_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_0;
-	memset((&V_0), 0, sizeof(V_0));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:36>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___Data;
@@ -3240,15 +2962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArraySegment_1_t3DC888623B720A071D69279F1FCB9
 		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		ArraySegment_1__ctor_m664EA6AD314FAA6BCA4F6D0586AEF01559537F20((&L_2), L_0, 0, L_1, ArraySegment_1__ctor_m664EA6AD314FAA6BCA4F6D0586AEF01559537F20_RuntimeMethod_var);
-		V_0 = L_2;
-		goto IL_0016;
-	}
-
-IL_0016:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:37>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
 IL2CPP_EXTERN_C  ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -3260,7 +2974,7 @@ IL2CPP_EXTERN_C  ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 Packet
 	_returnValue = Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 83269
+// Method Definition Index: 83476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet_AddLength_mBB3D9730D8B50983EEBAF77402660D23A14D3967 (Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* __this, int32_t ___0_length, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3270,7 +2984,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet_AddLength_mBB3D9730D8B50983EEBAF7
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:45>
 		int32_t L_0 = __this->___Length;
@@ -3280,26 +2993,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet_AddLength_mBB3D9730D8B50983EEBAF7
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___Data;
 		NullCheck(L_2);
 		int32_t L_3 = V_0;
-		V_1 = (bool)((((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))) < ((int32_t)L_3))? 1 : 0);
-		bool L_4 = V_1;
-		if (!L_4)
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))) >= ((int32_t)L_3)))
 		{
-			goto IL_0026;
+			goto IL_0020;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:47>
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** L_5 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031**)(&__this->___Data);
-		int32_t L_6 = V_0;
-		Array_Resize_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mDEA5A67641D397AE82678232B46E377173ED4297(L_5, L_6, Array_Resize_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mDEA5A67641D397AE82678232B46E377173ED4297_RuntimeMethod_var);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** L_4 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031**)(&__this->___Data);
+		int32_t L_5 = V_0;
+		Array_Resize_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mDEA5A67641D397AE82678232B46E377173ED4297(L_4, L_5, Array_Resize_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mDEA5A67641D397AE82678232B46E377173ED4297_RuntimeMethod_var);
 	}
 
-IL_0026:
+IL_0020:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:49>
-		int32_t L_7 = __this->___Length;
-		int32_t L_8 = ___0_length;
-		__this->___Length = ((int32_t)il2cpp_codegen_add(L_7, L_8));
+		int32_t L_6 = __this->___Length;
+		int32_t L_7 = ___0_length;
+		__this->___Length = ((int32_t)il2cpp_codegen_add(L_6, L_7));
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/Supporting.cs:50>
 		return;
 	}
@@ -3311,7 +3022,7 @@ IL2CPP_EXTERN_C  void Packet_AddLength_mBB3D9730D8B50983EEBAF77402660D23A14D3967
 	_thisAdjusted = reinterpret_cast<Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98*>(__this + _offset);
 	Packet_AddLength_mBB3D9730D8B50983EEBAF77402660D23A14D3967(_thisAdjusted, ___0_length, method);
 }
-// Method Definition Index: 83270
+// Method Definition Index: 83477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0 (Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3344,7 +3055,7 @@ IL2CPP_EXTERN_C  void Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0_A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83271
+// Method Definition Index: 83478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ServerSocket_GetConnectionState_m5FCB00BCD6F346A0587CA302A6D146ACEE21722E (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3353,9 +3064,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ServerSocket_GetConnectionState_m5FCB
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	uint8_t V_0 = 0;
-	uint8_t V_1 = 0;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:18>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_0 = __this->____clients;
@@ -3365,45 +3073,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ServerSocket_GetConnectionState_m5FCB
 		L_2 = HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1(L_0, L_1, HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
 		if (L_2)
 		{
-			goto IL_0012;
+			goto IL_0010;
 		}
 	}
 	{
-		G_B3_0 = 0;
-		goto IL_0013;
+		return (uint8_t)(0);
 	}
 
-IL_0012:
+IL_0010:
 	{
-		G_B3_0 = 2;
-	}
-
-IL_0013:
-	{
-		V_0 = G_B3_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:19>
-		uint8_t L_3 = V_0;
-		V_1 = L_3;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:20>
-		uint8_t L_4 = V_1;
-		return L_4;
+		return (uint8_t)(2);
 	}
 }
-// Method Definition Index: 83272
+// Method Definition Index: 83479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_Finalize_mF67051EBAB990DCB98C583B22F0BD6EA0C99497F (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	{
-	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_000b:
+FINALLY_0009:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:69>
 				Object_Finalize_mC98C96301CCABFE00F1A7EF8E15DF507CACD42B2(__this, NULL);
@@ -3415,7 +3105,7 @@ FINALLY_000b:
 			//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:68>
 			bool L_0;
 			L_0 = ServerSocket_StopConnection_m51C56DBAD88325980723C4A106148A9750475379(__this, NULL);
-			goto IL_0013;
+			goto IL_0010;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -3423,13 +3113,13 @@ FINALLY_000b:
 		}
 	}
 
-IL_0013:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:69>
 		return;
 	}
 }
-// Method Definition Index: 83273
+// Method Definition Index: 83480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_Initialize_mE62526712DB988145AF7CD1BA581279129607AF4 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* ___0_t, int32_t ___1_unreliableMTU, SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F ___2_config, const RuntimeMethod* method) 
 {
 	{
@@ -3451,7 +3141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_Initialize_mE62526712DB9881
 		return;
 	}
 }
-// Method Definition Index: 83274
+// Method Definition Index: 83481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_Socket_mB1049D0D1242AABDB076764153DC10667D7070D1 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3471,89 +3161,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_Socket_mB1049D0D1242AABDB07
 	memset((&V_0), 0, sizeof(V_0));
 	SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:88>
 		TcpConfig__ctor_mBDEF46E64151B4B93828D763B586B58C0172C35A((&V_0), (bool)0, ((int32_t)5000), ((int32_t)20000), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:90>
 		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_0 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
 		bool L_1 = L_0->___Enabled;
-		V_2 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_2;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_002f;
+			goto IL_0029;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:91>
 		il2cpp_codegen_initobj((&V_1), sizeof(SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E));
-		goto IL_0062;
+		goto IL_005c;
 	}
 
-IL_002f:
+IL_0029:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:93>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:94>
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_3 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		bool L_4 = L_3->___Enabled;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_5 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		String_t* L_6 = L_5->___CertificatePath;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_7 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		String_t* L_8 = L_7->___CertificatePassword;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_9 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		int32_t L_10 = L_9->___SslProtocol;
-		SslConfig__ctor_m0ED259A5AB7AC75BFC08993D7D845676D0AD8929((&V_1), L_4, L_6, L_8, L_10, NULL);
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_2 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		bool L_3 = L_2->___Enabled;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_4 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		String_t* L_5 = L_4->___CertificatePath;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_6 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		String_t* L_7 = L_6->___CertificatePassword;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_8 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		int32_t L_9 = L_8->___SslProtocol;
+		SslConfig__ctor_m0ED259A5AB7AC75BFC08993D7D845676D0AD8929((&V_1), L_3, L_5, L_7, L_9, NULL);
 	}
 
-IL_0062:
+IL_005c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:95>
-		TcpConfig_tF8C8FAF37C879ED10DC3D6F1BBB6D1AFC6E8B884 L_11 = V_0;
-		int32_t L_12 = __this->____mtu;
-		SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E L_13 = V_1;
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = (SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)il2cpp_codegen_object_new(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799_il2cpp_TypeInfo_var);
-		SimpleWebServer__ctor_mA32BC22CEE822FC3E84C589C376139A0EB976A11(L_14, ((int32_t)5000), L_11, L_12, ((int32_t)5000), L_13, NULL);
-		__this->____server = L_14;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____server), (void*)L_14);
+		TcpConfig_tF8C8FAF37C879ED10DC3D6F1BBB6D1AFC6E8B884 L_10 = V_0;
+		int32_t L_11 = __this->____mtu;
+		SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E L_12 = V_1;
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_13 = (SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)il2cpp_codegen_object_new(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799_il2cpp_TypeInfo_var);
+		SimpleWebServer__ctor_mA32BC22CEE822FC3E84C589C376139A0EB976A11(L_13, ((int32_t)5000), L_10, L_11, ((int32_t)5000), L_12, NULL);
+		__this->____server = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____server), (void*)L_13);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:97>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_15 = __this->____server;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_16 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
-		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_16, __this, (intptr_t)((void*)ServerSocket__server_onConnect_m680A286EA2C7441DA37E1ADB135E7E448442029C_RuntimeMethod_var), NULL);
-		NullCheck(L_15);
-		SimpleWebServer_add_onConnect_mB6F6EB060E904D2BBA583CF1947F7F60B431273D(L_15, L_16, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = __this->____server;
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_15 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_15, __this, (intptr_t)((void*)ServerSocket__server_onConnect_m680A286EA2C7441DA37E1ADB135E7E448442029C_RuntimeMethod_var), NULL);
+		NullCheck(L_14);
+		SimpleWebServer_add_onConnect_mB6F6EB060E904D2BBA583CF1947F7F60B431273D(L_14, L_15, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:98>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_17 = __this->____server;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_18 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
-		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_18, __this, (intptr_t)((void*)ServerSocket__server_onDisconnect_m0E959B1067B791BA6E1873078FA97DAB06E8CA0B_RuntimeMethod_var), NULL);
-		NullCheck(L_17);
-		SimpleWebServer_add_onDisconnect_mE9CCA430BCCF9A1BB3925DBA405C414A757AF595(L_17, L_18, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_16 = __this->____server;
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_17 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_17, __this, (intptr_t)((void*)ServerSocket__server_onDisconnect_m0E959B1067B791BA6E1873078FA97DAB06E8CA0B_RuntimeMethod_var), NULL);
+		NullCheck(L_16);
+		SimpleWebServer_add_onDisconnect_mE9CCA430BCCF9A1BB3925DBA405C414A757AF595(L_16, L_17, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:99>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_19 = __this->____server;
-		Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E* L_20 = (Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E*)il2cpp_codegen_object_new(Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E_il2cpp_TypeInfo_var);
-		Action_2__ctor_m9DD325FFD17E78823DB4542941E757F225BB7FD8(L_20, __this, (intptr_t)((void*)ServerSocket__server_onData_m0CC1717AB1EA3582D3905765442900BB8FFB9E78_RuntimeMethod_var), NULL);
-		NullCheck(L_19);
-		SimpleWebServer_add_onData_m266FA0FB7BD9595C51184A61BC8D15EC0F1A36CA(L_19, L_20, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_18 = __this->____server;
+		Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E* L_19 = (Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E*)il2cpp_codegen_object_new(Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E_il2cpp_TypeInfo_var);
+		Action_2__ctor_m9DD325FFD17E78823DB4542941E757F225BB7FD8(L_19, __this, (intptr_t)((void*)ServerSocket__server_onData_m0CC1717AB1EA3582D3905765442900BB8FFB9E78_RuntimeMethod_var), NULL);
+		NullCheck(L_18);
+		SimpleWebServer_add_onData_m266FA0FB7BD9595C51184A61BC8D15EC0F1A36CA(L_18, L_19, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:100>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_21 = __this->____server;
-		Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE* L_22 = (Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE*)il2cpp_codegen_object_new(Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE_il2cpp_TypeInfo_var);
-		Action_2__ctor_m3881742154C8898BD33DB80DBC9C37F8EE26BA2E(L_22, __this, (intptr_t)((void*)ServerSocket__server_onError_mEA534222D7AE7E374E3F08F6076449CC46DCB473_RuntimeMethod_var), NULL);
-		NullCheck(L_21);
-		SimpleWebServer_add_onError_mD510BC99B2B81F88BA25F11374E41EDAD8A63ACF(L_21, L_22, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_20 = __this->____server;
+		Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE* L_21 = (Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE*)il2cpp_codegen_object_new(Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE_il2cpp_TypeInfo_var);
+		Action_2__ctor_m3881742154C8898BD33DB80DBC9C37F8EE26BA2E(L_21, __this, (intptr_t)((void*)ServerSocket__server_onError_mEA534222D7AE7E374E3F08F6076449CC46DCB473_RuntimeMethod_var), NULL);
+		NullCheck(L_20);
+		SimpleWebServer_add_onError_mD510BC99B2B81F88BA25F11374E41EDAD8A63ACF(L_20, L_21, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:102>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 4, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:103>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_23 = __this->____server;
-		uint16_t L_24 = __this->____port;
-		NullCheck(L_23);
-		SimpleWebServer_Start_m129AF2A5D802D020D775BAA75D147833195263A2(L_23, L_24, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_22 = __this->____server;
+		uint16_t L_23 = __this->____port;
+		NullCheck(L_22);
+		SimpleWebServer_Start_m129AF2A5D802D020D775BAA75D147833195263A2(L_22, L_23, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:104>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 8, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:105>
 		return;
 	}
 }
-// Method Definition Index: 83275
+// Method Definition Index: 83482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onError_mEA534222D7AE7E374E3F08F6076449CC46DCB473 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, Exception_t* ___1_arg2, const RuntimeMethod* method) 
 {
 	{
@@ -3564,7 +3251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onError_mEA534222D7
 		return;
 	}
 }
-// Method Definition Index: 83276
+// Method Definition Index: 83483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_ConnectionStoppedOnSocket_mB0DB9C8EAA07FA06B9D1428ED500B20180D2D6E7 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3573,7 +3260,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_ConnectionStoppedOnSocket_m
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:121>
 		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_0 = __this->____clients;
@@ -3581,35 +3267,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_ConnectionStoppedOnSocket_m
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_0, L_1, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		V_0 = L_2;
-		bool L_3 = V_0;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_002f;
+			goto IL_002b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:122>
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_4 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		int32_t L_5 = ___0_connectionId;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_6 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		NullCheck(L_6);
-		int32_t L_7;
-		L_7 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_6, NULL);
-		RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD L_8;
-		memset((&L_8), 0, sizeof(L_8));
-		RemoteConnectionStateArgs__ctor_m99C3FAC3FD94F3CEF41CEDA91A8B931CAABC6A34((&L_8), 0, L_5, L_7, NULL);
-		NullCheck(L_4);
-		VirtualActionInvoker1< RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD >::Invoke(14, L_4, L_8);
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_3 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		int32_t L_4 = ___0_connectionId;
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_5 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		NullCheck(L_5);
+		int32_t L_6;
+		L_6 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_5, NULL);
+		RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD L_7;
+		memset((&L_7), 0, sizeof(L_7));
+		RemoteConnectionStateArgs__ctor_m99C3FAC3FD94F3CEF41CEDA91A8B931CAABC6A34((&L_7), 0, L_4, L_6, NULL);
+		NullCheck(L_3);
+		VirtualActionInvoker1< RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD >::Invoke(14, L_3, L_7);
 	}
 
-IL_002f:
+IL_002b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:123>
 		return;
 	}
 }
-// Method Definition Index: 83277
+// Method Definition Index: 83484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onData_m0CC1717AB1EA3582D3905765442900BB8FFB9E78 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_clientId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_data, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0;
@@ -3617,14 +3301,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onData_m0CC1717AB1E
 	memset((&V_1), 0, sizeof(V_1));
 	ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:130>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
 		if (!L_0)
 		{
-			goto IL_0019;
+			goto IL_0015;
 		}
 	}
 	{
@@ -3632,59 +3314,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onData_m0CC1717AB1E
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = SimpleWebServer_get_Active_m0CB95FC48933AB4748B7B7B9A3DCC62D749586D4_inline(L_1, NULL);
-		G_B3_0 = ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001a:
-	{
-		V_3 = (bool)G_B3_0;
-		bool L_3 = V_3;
-		if (!L_3)
+		if (L_2)
 		{
-			goto IL_0020;
+			goto IL_0016;
 		}
 	}
+
+IL_0015:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:131>
-		goto IL_004c;
+		return;
 	}
 
-IL_0020:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:134>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_4 = ___1_data;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_5;
-		L_5 = CommonSocket_RemoveChannel_m3FFA3B758910895D110D1EFFA6CEFB1AC26D80B8(__this, L_4, (&V_0), NULL);
-		V_1 = L_5;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3 = ___1_data;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_4;
+		L_4 = CommonSocket_RemoveChannel_m3FFA3B758910895D110D1EFFA6CEFB1AC26D80B8(__this, L_3, (&V_0), NULL);
+		V_1 = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:136>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_6 = V_1;
-		uint8_t L_7 = V_0;
-		int32_t L_8 = ___0_clientId;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_9 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		NullCheck(L_9);
-		int32_t L_10;
-		L_10 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_9, NULL);
-		ServerReceivedDataArgs__ctor_m38CBE53C343D1B35E89274F958B8FB50934B319C((&V_2), L_6, L_7, L_8, L_10, NULL);
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_5 = V_1;
+		uint8_t L_6 = V_0;
+		int32_t L_7 = ___0_clientId;
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_8 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		NullCheck(L_8);
+		int32_t L_9;
+		L_9 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_8, NULL);
+		ServerReceivedDataArgs__ctor_m38CBE53C343D1B35E89274F958B8FB50934B319C((&V_2), L_5, L_6, L_7, L_9, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:137>
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_11 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE L_12 = V_2;
-		NullCheck(L_11);
-		VirtualActionInvoker1< ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE >::Invoke(24, L_11, L_12);
-	}
-
-IL_004c:
-	{
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_10 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE L_11 = V_2;
+		NullCheck(L_10);
+		VirtualActionInvoker1< ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE >::Invoke(24, L_10, L_11);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:138>
 		return;
 	}
 }
-// Method Definition Index: 83278
+// Method Definition Index: 83485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onConnect_m680A286EA2C7441DA37E1ADB135E7E448442029C (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_clientId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3695,15 +3362,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onConnect_m680A286E
 		s_Il2CppMethodInitialized = true;
 	}
 	uint8_t V_0 = 0;
-	bool V_1 = false;
-	bool V_2 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:145>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
 		if (!L_0)
 		{
-			goto IL_0019;
+			goto IL_0015;
 		}
 	}
 	{
@@ -3711,87 +3375,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onConnect_m680A286E
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = SimpleWebServer_get_Active_m0CB95FC48933AB4748B7B7B9A3DCC62D749586D4_inline(L_1, NULL);
-		G_B3_0 = ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001a:
-	{
-		V_1 = (bool)G_B3_0;
-		bool L_3 = V_1;
-		if (!L_3)
+		if (L_2)
 		{
-			goto IL_0020;
+			goto IL_0016;
 		}
 	}
+
+IL_0015:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:146>
-		goto IL_0077;
+		return;
 	}
 
-IL_0020:
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:148>
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_4 = __this->____clients;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_inline(L_4, HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_RuntimeMethod_var);
-		int32_t L_6 = __this->____maximumClients;
-		V_2 = (bool)((((int32_t)((((int32_t)L_5) < ((int32_t)L_6))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_7 = V_2;
-		if (!L_7)
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_3 = __this->____clients;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_inline(L_3, HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_RuntimeMethod_var);
+		int32_t L_5 = __this->____maximumClients;
+		if ((((int32_t)L_4) < ((int32_t)L_5)))
 		{
-			goto IL_004a;
+			goto IL_0037;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:150>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_8 = __this->____server;
-		int32_t L_9 = ___0_clientId;
-		NullCheck(L_8);
-		bool L_10;
-		L_10 = SimpleWebServer_KickClient_m2ECAB598FE1EAF4F13D367BE32B4C761717848A2(L_8, L_9, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_6 = __this->____server;
+		int32_t L_7 = ___0_clientId;
+		NullCheck(L_6);
+		bool L_8;
+		L_8 = SimpleWebServer_KickClient_m2ECAB598FE1EAF4F13D367BE32B4C761717848A2(L_6, L_7, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:151>
-		goto IL_0077;
+		return;
 	}
 
-IL_004a:
+IL_0037:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:154>
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_11 = __this->____clients;
-		int32_t L_12 = ___0_clientId;
-		NullCheck(L_11);
-		bool L_13;
-		L_13 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_11, L_12, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_9 = __this->____clients;
+		int32_t L_10 = ___0_clientId;
+		NullCheck(L_9);
+		bool L_11;
+		L_11 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_9, L_10, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:155>
 		V_0 = 2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:156>
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_14 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		uint8_t L_15 = V_0;
-		int32_t L_16 = ___0_clientId;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_17 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		NullCheck(L_17);
-		int32_t L_18;
-		L_18 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_17, NULL);
-		RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD L_19;
-		memset((&L_19), 0, sizeof(L_19));
-		RemoteConnectionStateArgs__ctor_m99C3FAC3FD94F3CEF41CEDA91A8B931CAABC6A34((&L_19), L_15, L_16, L_18, NULL);
-		NullCheck(L_14);
-		VirtualActionInvoker1< RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD >::Invoke(14, L_14, L_19);
-	}
-
-IL_0077:
-	{
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_12 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		uint8_t L_13 = V_0;
+		int32_t L_14 = ___0_clientId;
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_15 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		NullCheck(L_15);
+		int32_t L_16;
+		L_16 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_15, NULL);
+		RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD L_17;
+		memset((&L_17), 0, sizeof(L_17));
+		RemoteConnectionStateArgs__ctor_m99C3FAC3FD94F3CEF41CEDA91A8B931CAABC6A34((&L_17), L_13, L_14, L_16, NULL);
+		NullCheck(L_12);
+		VirtualActionInvoker1< RemoteConnectionStateArgs_t994C883827D25E5D8520523A1569788C834ABDCD >::Invoke(14, L_12, L_17);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:157>
 		return;
 	}
 }
-// Method Definition Index: 83279
+// Method Definition Index: 83486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onDisconnect_m0E959B1067B791BA6E1873078FA97DAB06E8CA0B (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
 	{
@@ -3802,18 +3449,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__server_onDisconnect_m0E959
 		return;
 	}
 }
-// Method Definition Index: 83280
+// Method Definition Index: 83487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ServerSocket_GetConnectionAddress_m4D9DB2C45442786FD6BF52ACBF5F3352A8D91E0E (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	String_t* V_1 = NULL;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:174>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
 		if (!L_0)
 		{
-			goto IL_0019;
+			goto IL_0015;
 		}
 	}
 	{
@@ -3821,172 +3465,116 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ServerSocket_GetConnectionAddress_m
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = SimpleWebServer_get_Active_m0CB95FC48933AB4748B7B7B9A3DCC62D749586D4_inline(L_1, NULL);
-		G_B3_0 = ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		goto IL_001a;
-	}
-
-IL_0019:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001a:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_3 = V_0;
-		if (!L_3)
+		if (L_2)
 		{
-			goto IL_0026;
+			goto IL_001b;
 		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:175>
-		String_t* L_4 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
-		V_1 = L_4;
-		goto IL_0035;
-	}
-
-IL_0026:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:177>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_5 = __this->____server;
-		int32_t L_6 = ___0_connectionId;
-		NullCheck(L_5);
-		String_t* L_7;
-		L_7 = SimpleWebServer_GetClientAddress_mAF764D4346A32402E13D39A3B5274FD6A9C12C98(L_5, L_6, NULL);
-		V_1 = L_7;
-		goto IL_0035;
-	}
-
-IL_0035:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:178>
-		String_t* L_8 = V_1;
-		return L_8;
-	}
-}
-// Method Definition Index: 83281
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ServerSocket_StartConnection_mBEF4A47F861D80B63707CAF697523A13927BCBDC (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, uint16_t ___0_port, int32_t ___1_maximumClients, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	bool V_1 = false;
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:185>
-		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		V_0 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:186>
-		V_1 = (bool)0;
-		goto IL_003e;
 	}
 
 IL_0015:
 	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:175>
+		String_t* L_3 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+		return L_3;
+	}
+
+IL_001b:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:177>
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_4 = __this->____server;
+		int32_t L_5 = ___0_connectionId;
+		NullCheck(L_4);
+		String_t* L_6;
+		L_6 = SimpleWebServer_GetClientAddress_mAF764D4346A32402E13D39A3B5274FD6A9C12C98(L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 83488
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ServerSocket_StartConnection_mBEF4A47F861D80B63707CAF697523A13927BCBDC (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, uint16_t ___0_port, int32_t ___1_maximumClients, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:185>
+		int32_t L_0;
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((((int32_t)L_0) == ((int32_t)1)))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:186>
+		return (bool)0;
+	}
+
+IL_000b:
+	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:188>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 4, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:191>
-		uint16_t L_2 = ___0_port;
-		__this->____port = L_2;
+		uint16_t L_1 = ___0_port;
+		__this->____port = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:192>
-		int32_t L_3 = ___1_maximumClients;
-		__this->____maximumClients = L_3;
+		int32_t L_2 = ___1_maximumClients;
+		__this->____maximumClients = L_2;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:193>
 		ServerSocket_ResetQueues_mB1D90FEDFCED51A61FFC76E7C0B5A09BE59655A0(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:194>
 		ServerSocket_Socket_mB1049D0D1242AABDB076764153DC10667D7070D1_inline(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:195>
-		V_1 = (bool)1;
-		goto IL_003e;
-	}
-
-IL_003e:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:196>
-		bool L_4 = V_1;
-		return L_4;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 83282
+// Method Definition Index: 83489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ServerSocket_StopConnection_m51C56DBAD88325980723C4A106148A9750475379 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
-	int32_t G_B4_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:203>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
 		if (!L_0)
 		{
-			goto IL_001d;
+			goto IL_001a;
 		}
 	}
 	{
 		int32_t L_1;
-		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
+		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
 		if ((((int32_t)L_1) == ((int32_t)1)))
 		{
-			goto IL_001d;
+			goto IL_001a;
 		}
 	}
 	{
 		int32_t L_2;
-		L_2 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		G_B4_0 = ((((int32_t)L_2) == ((int32_t)2))? 1 : 0);
-		goto IL_001e;
-	}
-
-IL_001d:
-	{
-		G_B4_0 = 1;
-	}
-
-IL_001e:
-	{
-		V_0 = (bool)G_B4_0;
-		bool L_3 = V_0;
-		if (!L_3)
+		L_2 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((!(((uint32_t)L_2) == ((uint32_t)2))))
 		{
-			goto IL_0026;
+			goto IL_001c;
 		}
 	}
+
+IL_001a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:204>
-		V_1 = (bool)0;
-		goto IL_004f;
+		return (bool)0;
 	}
 
-IL_0026:
+IL_001c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:206>
 		ServerSocket_ResetQueues_mB1D90FEDFCED51A61FFC76E7C0B5A09BE59655A0(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:207>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 2, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:208>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_4 = __this->____server;
-		NullCheck(L_4);
-		SimpleWebServer_Stop_mA4936162A7642F227280817A6D2829BF7EDF3C69(L_4, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_3 = __this->____server;
+		NullCheck(L_3);
+		SimpleWebServer_Stop_mA4936162A7642F227280817A6D2829BF7EDF3C69(L_3, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:209>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 1, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:211>
-		V_1 = (bool)1;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:212>
-		bool L_5 = V_1;
-		return L_5;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 83283
+// Method Definition Index: 83490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, int32_t ___0_connectionId, bool ___1_immediately, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3995,90 +3583,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ServerSocket_StopConnection_m633243DECF1
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:220>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
 		if (!L_0)
 		{
-			goto IL_0017;
+			goto IL_0011;
 		}
 	}
 	{
 		int32_t L_1;
-		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		G_B3_0 = ((((int32_t)((((int32_t)L_1) == ((int32_t)8))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0018;
-	}
-
-IL_0017:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0018:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((((int32_t)L_1) == ((int32_t)8)))
 		{
-			goto IL_0020;
+			goto IL_0013;
 		}
 	}
+
+IL_0011:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:221>
-		V_1 = (bool)0;
-		goto IL_0048;
+		return (bool)0;
 	}
 
-IL_0020:
+IL_0013:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:224>
-		bool L_3 = ___1_immediately;
-		V_2 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		bool L_4 = V_2;
-		if (!L_4)
+		bool L_2 = ___1_immediately;
+		if (L_2)
 		{
-			goto IL_0037;
+			goto IL_0024;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:225>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_5 = __this->____disconnectingNext;
-		int32_t L_6 = ___0_connectionId;
-		NullCheck(L_5);
-		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_5, L_6, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
-		goto IL_0044;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_3 = __this->____disconnectingNext;
+		int32_t L_4 = ___0_connectionId;
+		NullCheck(L_3);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_3, L_4, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		goto IL_0031;
 	}
 
-IL_0037:
+IL_0024:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:228>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_7 = __this->____server;
-		int32_t L_8 = ___0_connectionId;
-		NullCheck(L_7);
-		bool L_9;
-		L_9 = SimpleWebServer_KickClient_m2ECAB598FE1EAF4F13D367BE32B4C761717848A2(L_7, L_8, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_5 = __this->____server;
+		int32_t L_6 = ___0_connectionId;
+		NullCheck(L_5);
+		bool L_7;
+		L_7 = SimpleWebServer_KickClient_m2ECAB598FE1EAF4F13D367BE32B4C761717848A2(L_5, L_6, NULL);
 	}
 
-IL_0044:
+IL_0031:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:230>
-		V_1 = (bool)1;
-		goto IL_0048;
-	}
-
-IL_0048:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:231>
-		bool L_10 = V_1;
-		return L_10;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 83284
+// Method Definition Index: 83491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_ResetQueues_mB1D90FEDFCED51A61FFC76E7C0B5A09BE59655A0 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4108,7 +3670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_ResetQueues_mB1D90FEDFCED51
 		return;
 	}
 }
-// Method Definition Index: 83285
+// Method Definition Index: 83492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconnects_m7367001CA9A7B3E443FAA684943FD8D911F84530 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4121,12 +3683,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconnects_m7367001
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
+	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	bool V_3 = false;
-	bool V_4 = false;
-	int32_t V_5 = 0;
-	bool V_6 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:252>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_0 = __this->____disconnectingNow;
@@ -4136,118 +3694,110 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconnects_m7367001
 		V_0 = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:254>
 		int32_t L_2 = V_0;
-		V_1 = (bool)((((int32_t)L_2) > ((int32_t)0))? 1 : 0);
-		bool L_3 = V_1;
-		if (!L_3)
+		if ((((int32_t)L_2) <= ((int32_t)0)))
 		{
-			goto IL_0047;
+			goto IL_003b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		V_2 = 0;
-		goto IL_0032;
+		V_1 = 0;
+		goto IL_002c;
 	}
 
-IL_001a:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:257>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_4 = __this->____disconnectingNow;
-		int32_t L_5 = V_2;
-		NullCheck(L_4);
-		int32_t L_6;
-		L_6 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_4, L_5, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		bool L_7;
-		L_7 = ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84(__this, L_6, (bool)1, NULL);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_3 = __this->____disconnectingNow;
+		int32_t L_4 = V_1;
+		NullCheck(L_3);
+		int32_t L_5;
+		L_5 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_3, L_4, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
+		bool L_6;
+		L_6 = ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84(__this, L_5, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		int32_t L_8 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		int32_t L_7 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		int32_t L_9 = V_2;
-		int32_t L_10 = V_0;
-		V_3 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
-		bool L_11 = V_3;
-		if (L_11)
+		int32_t L_8 = V_1;
+		int32_t L_9 = V_0;
+		if ((((int32_t)L_8) < ((int32_t)L_9)))
 		{
-			goto IL_001a;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:259>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_12 = __this->____disconnectingNow;
-		NullCheck(L_12);
-		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_12, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_10 = __this->____disconnectingNow;
+		NullCheck(L_10);
+		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_10, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
 	}
 
-IL_0047:
+IL_003b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:262>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_13 = __this->____disconnectingNext;
-		NullCheck(L_13);
-		int32_t L_14;
-		L_14 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_13, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
-		V_0 = L_14;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_11 = __this->____disconnectingNext;
+		NullCheck(L_11);
+		int32_t L_12;
+		L_12 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_11, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
+		V_0 = L_12;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:264>
-		int32_t L_15 = V_0;
-		V_4 = (bool)((((int32_t)L_15) > ((int32_t)0))? 1 : 0);
-		bool L_16 = V_4;
-		if (!L_16)
+		int32_t L_13 = V_0;
+		if ((((int32_t)L_13) <= ((int32_t)0)))
 		{
-			goto IL_009a;
+			goto IL_0079;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		V_5 = 0;
-		goto IL_0082;
+		V_2 = 0;
+		goto IL_006a;
 	}
 
-IL_0063:
+IL_004f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:267>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_17 = __this->____disconnectingNow;
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_18 = __this->____disconnectingNext;
-		int32_t L_19 = V_5;
-		NullCheck(L_18);
-		int32_t L_20;
-		L_20 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_18, L_19, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		NullCheck(L_17);
-		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_17, L_20, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_14 = __this->____disconnectingNow;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_15 = __this->____disconnectingNext;
+		int32_t L_16 = V_2;
+		NullCheck(L_15);
+		int32_t L_17;
+		L_17 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_15, L_16, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
+		NullCheck(L_14);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_14, L_17, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		int32_t L_21 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_21, 1));
+		int32_t L_18 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
-IL_0082:
+IL_006a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		int32_t L_22 = V_5;
-		int32_t L_23 = V_0;
-		V_6 = (bool)((((int32_t)L_22) < ((int32_t)L_23))? 1 : 0);
-		bool L_24 = V_6;
-		if (L_24)
+		int32_t L_19 = V_2;
+		int32_t L_20 = V_0;
+		if ((((int32_t)L_19) < ((int32_t)L_20)))
 		{
-			goto IL_0063;
+			goto IL_004f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:269>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_25 = __this->____disconnectingNext;
-		NullCheck(L_25);
-		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_25, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_21 = __this->____disconnectingNext;
+		NullCheck(L_21);
+		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_21, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
 	}
 
-IL_009a:
+IL_0079:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:271>
 		return;
 	}
 }
-// Method Definition Index: 83286
+// Method Definition Index: 83493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_DequeueOutgoing_mF39CACB96AD41841D4F95A7B907BC4C07152FD77 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4257,210 +3807,173 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_DequeueOutgoing_mF39CACB96A
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
+	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	int32_t V_4 = 0;
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	bool V_6 = false;
-	bool V_7 = false;
-	int32_t G_B3_0 = 0;
+	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t V_3 = 0;
+	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_4;
+	memset((&V_4), 0, sizeof(V_4));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:279>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)8))))
 		{
-			goto IL_0015;
+			goto IL_0011;
 		}
 	}
 	{
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_1 = __this->____server;
-		G_B3_0 = ((((RuntimeObject*)(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)L_1) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		goto IL_0016;
+		if (L_1)
+		{
+			goto IL_001e;
+		}
 	}
 
-IL_0015:
+IL_0011:
 	{
-		G_B3_0 = 1;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:282>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_2 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
+		CommonSocket_ClearPacketQueue_mEB6CA317CE9CB1ED36DCB445E080E38AF077E819(__this, L_2, NULL);
+		return;
 	}
 
-IL_0016:
+IL_001e:
 	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:286>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_3 = __this->____outgoing;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_inline(L_3, Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
+		V_0 = L_4;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		V_1 = 0;
+		goto IL_0084;
+	}
+
+IL_002e:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:289>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_5 = __this->____outgoing;
+		NullCheck(L_5);
+		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_6;
+		L_6 = Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07(L_5, Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07_RuntimeMethod_var);
+		V_2 = L_6;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:290>
+		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_7 = V_2;
+		int32_t L_8 = L_7.___ConnectionId;
+		V_3 = L_8;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:291>
+		CommonSocket_AddChannel_mF7D179498DF78FCCE0EDE1D8FDA08225641D479C(__this, (&V_2), NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:292>
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_9;
+		L_9 = Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF((&V_2), NULL);
+		V_4 = L_9;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:295>
+		int32_t L_10 = V_3;
+		if ((!(((uint32_t)L_10) == ((uint32_t)(-1)))))
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:296>
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_11 = __this->____server;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_12 = __this->____clients;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_13 = V_4;
+		NullCheck(L_11);
+		SimpleWebServer_SendAll_m6516F6B452164CAA8186840A0A4E9590506DBBA1(L_11, L_12, L_13, NULL);
+		goto IL_0079;
+	}
+
+IL_006b:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:299>
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = __this->____server;
+		int32_t L_15 = V_3;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_16 = V_4;
+		NullCheck(L_14);
+		SimpleWebServer_SendOne_m92C606E28204075B741ADB01B3A6837FDE338445(L_14, L_15, L_16, NULL);
+	}
+
+IL_0079:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:301>
+		Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0((&V_2), NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		int32_t L_17 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
+	}
+
+IL_0084:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		int32_t L_18 = V_1;
+		int32_t L_19 = V_0;
+		if ((((int32_t)L_18) < ((int32_t)L_19)))
 		{
 			goto IL_002e;
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:282>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_3 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
-		CommonSocket_ClearPacketQueue_mEB6CA317CE9CB1ED36DCB445E080E38AF077E819(__this, L_3, NULL);
-		goto IL_00af;
-	}
-
-IL_002e:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:286>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_4 = __this->____outgoing;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_inline(L_4, Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
-		V_1 = L_5;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		V_2 = 0;
-		goto IL_00a4;
-	}
-
-IL_003f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:289>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_6 = __this->____outgoing;
-		NullCheck(L_6);
-		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_7;
-		L_7 = Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07(L_6, Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07_RuntimeMethod_var);
-		V_3 = L_7;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:290>
-		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_8 = V_3;
-		int32_t L_9 = L_8.___ConnectionId;
-		V_4 = L_9;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:291>
-		CommonSocket_AddChannel_mF7D179498DF78FCCE0EDE1D8FDA08225641D479C(__this, (&V_3), NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:292>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_10;
-		L_10 = Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF((&V_3), NULL);
-		V_5 = L_10;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:295>
-		int32_t L_11 = V_4;
-		V_6 = (bool)((((int32_t)L_11) == ((int32_t)(-1)))? 1 : 0);
-		bool L_12 = V_6;
-		if (!L_12)
-		{
-			goto IL_0087;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:296>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_13 = __this->____server;
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_14 = __this->____clients;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_15 = V_5;
-		NullCheck(L_13);
-		SimpleWebServer_SendAll_m6516F6B452164CAA8186840A0A4E9590506DBBA1(L_13, L_14, L_15, NULL);
-		goto IL_0097;
-	}
-
-IL_0087:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:299>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_16 = __this->____server;
-		int32_t L_17 = V_4;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_18 = V_5;
-		NullCheck(L_16);
-		SimpleWebServer_SendOne_m92C606E28204075B741ADB01B3A6837FDE338445(L_16, L_17, L_18, NULL);
-	}
-
-IL_0097:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:301>
-		Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0((&V_3), NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		int32_t L_19 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_19, 1));
-	}
-
-IL_00a4:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		int32_t L_20 = V_2;
-		int32_t L_21 = V_1;
-		V_7 = (bool)((((int32_t)L_20) < ((int32_t)L_21))? 1 : 0);
-		bool L_22 = V_7;
-		if (L_22)
-		{
-			goto IL_003f;
-		}
-	}
-	{
-	}
-
-IL_00af:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:304>
 		return;
 	}
 }
-// Method Definition Index: 83287
+// Method Definition Index: 83494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_IterateOutgoing_m17B7081255CDBDA3CEC1C98B8B892986D225DF87 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:311>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
-		V_0 = (bool)((((RuntimeObject*)(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:312>
-		goto IL_001e;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:314>
 		ServerSocket_DequeueOutgoing_mF39CACB96AD41841D4F95A7B907BC4C07152FD77_inline(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:315>
 		ServerSocket_DequeueDisconnects_m7367001CA9A7B3E443FAA684943FD8D911F84530_inline(__this, NULL);
-	}
-
-IL_001e:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:316>
 		return;
 	}
 }
-// Method Definition Index: 83288
+// Method Definition Index: 83495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_IterateIncoming_mE1435FF34A5BF53BC00CB33CAEC3F9FC75E184BA (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:324>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
-		V_0 = (bool)((((RuntimeObject*)(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:325>
-		goto IL_001c;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:329>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_2 = __this->____server;
-		NullCheck(L_2);
-		SimpleWebServer_ProcessMessageQueue_m42C8C2C6A3603670B41824A36550ABE8801BA540(L_2, NULL);
-	}
-
-IL_001c:
-	{
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_1 = __this->____server;
+		NullCheck(L_1);
+		SimpleWebServer_ProcessMessageQueue_m42C8C2C6A3603670B41824A36550ABE8801BA540(L_1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:330>
 		return;
 	}
 }
-// Method Definition Index: 83289
+// Method Definition Index: 83496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_SendToClient_m2BED696F3ECA9DF564052D920D5DA95CE49022CB (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, int32_t ___2_connectionId, const RuntimeMethod* method) 
 {
 	{
@@ -4474,25 +3987,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket_SendToClient_m2BED696F3ECA9
 		return;
 	}
 }
-// Method Definition Index: 83290
+// Method Definition Index: 83497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:347>
 		int32_t L_0 = __this->____maximumClients;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:348>
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 83291
+// Method Definition Index: 83498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerSocket__ctor_mC930C57FE15C4750996F1DB3EF81143BDE6DBA07 (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4573,7 +4077,7 @@ IL2CPP_EXTERN_C void RemoteConnectionEvent_t312A8B9DD8CA36136483051BC40EE8F4BB38
 IL2CPP_EXTERN_C void RemoteConnectionEvent_t312A8B9DD8CA36136483051BC40EE8F4BB38E3F5_marshal_com_cleanup(RemoteConnectionEvent_t312A8B9DD8CA36136483051BC40EE8F4BB38E3F5_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 83292
+// Method Definition Index: 83499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RemoteConnectionEvent__ctor_mC80AAACFC515A14B690A6BAF60D9AD06F8DACEB3 (RemoteConnectionEvent_t312A8B9DD8CA36136483051BC40EE8F4BB38E3F5* __this, bool ___0_connected, int32_t ___1_connectionId, const RuntimeMethod* method) 
 {
 	{
@@ -4602,16 +4106,14 @@ IL2CPP_EXTERN_C  void RemoteConnectionEvent__ctor_mC80AAACFC515A14B690A6BAF60D9A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83293
+// Method Definition Index: 83500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_Finalize_m37E732DBD1DC4FF9A4B3D79621CB17FCEBF83FE7 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
-	{
-	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_000b:
+FINALLY_0009:
 			{
 				//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:13>
 				Object_Finalize_mC98C96301CCABFE00F1A7EF8E15DF507CACD42B2(__this, NULL);
@@ -4623,7 +4125,7 @@ FINALLY_000b:
 			//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:12>
 			bool L_0;
 			L_0 = ClientSocket_StopConnection_m0FA0D5B5BA440EBDBFB8C9D585293DC5B7FC9C84(__this, NULL);
-			goto IL_0013;
+			goto IL_0010;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -4631,13 +4133,13 @@ FINALLY_000b:
 		}
 	}
 
-IL_0013:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:13>
 		return;
 	}
 }
-// Method Definition Index: 83294
+// Method Definition Index: 83501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_Initialize_mCCC6F3BAB41A2FFB2FC45D4E19BA58767A67F088 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* ___0_t, int32_t ___1_mtu, const RuntimeMethod* method) 
 {
 	{
@@ -4652,7 +4154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_Initialize_mCCC6F3BAB41A2FF
 		return;
 	}
 }
-// Method Definition Index: 83295
+// Method Definition Index: 83502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_Socket_m413E64D78626D89E63B8315DD0BE6E5AE282057D (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, bool ___0_useWss, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4712,20 +4214,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_Socket_m413E64D78626D89E63B
 		bool L_10 = ___0_useWss;
 		if (L_10)
 		{
-			goto IL_0094;
+			goto IL_008f;
 		}
 	}
 	{
 		G_B3_0 = _stringLiteral587B0E053519266A1A5628C5DBE03AA33A3BBE95;
-		goto IL_0099;
+		goto IL_0094;
 	}
 
-IL_0094:
+IL_008f:
 	{
 		G_B3_0 = _stringLiteral56D7741BCA89552362FD24D11BB8980E3D8A444C;
 	}
 
-IL_0099:
+IL_0094:
 	{
 		V_1 = G_B3_0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:67>
@@ -4763,7 +4265,7 @@ IL_0099:
 		return;
 	}
 }
-// Method Definition Index: 83296
+// Method Definition Index: 83503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onError_m22BF41255C55CC11525C41FD0D9CA952375A3A13 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, Exception_t* ___0_obj, const RuntimeMethod* method) 
 {
 	{
@@ -4774,20 +4276,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onError_m22BF41255C
 		return;
 	}
 }
-// Method Definition Index: 83297
+// Method Definition Index: 83504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onData_m544167365CAC059547BCD86D8A01E878FEB72F18 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___0_data, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0;
 	ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:84>
 		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_0 = __this->____client;
 		if (!L_0)
 		{
-			goto IL_001c;
+			goto IL_0016;
 		}
 	}
 	{
@@ -4795,58 +4295,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onData_m544167365CA
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = SimpleWebClient_get_ConnectionState_mB9DAB0D7DA4EEFA2100D2F8B4EDB5EE4865DB35D_inline(L_1, NULL);
-		G_B3_0 = ((((int32_t)((((int32_t)L_2) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_001d;
-	}
-
-IL_001c:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001d:
-	{
-		V_2 = (bool)G_B3_0;
-		bool L_3 = V_2;
-		if (!L_3)
+		if ((((int32_t)L_2) == ((int32_t)2)))
 		{
-			goto IL_0023;
+			goto IL_0017;
 		}
 	}
+
+IL_0016:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:85>
-		goto IL_004f;
+		return;
 	}
 
-IL_0023:
+IL_0017:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:88>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_4 = ___0_data;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_5;
-		L_5 = CommonSocket_RemoveChannel_m3FFA3B758910895D110D1EFFA6CEFB1AC26D80B8(__this, L_4, (&V_0), NULL);
-		___0_data = L_5;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3 = ___0_data;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_4;
+		L_4 = CommonSocket_RemoveChannel_m3FFA3B758910895D110D1EFFA6CEFB1AC26D80B8(__this, L_3, (&V_0), NULL);
+		___0_data = L_4;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:89>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_6 = ___0_data;
-		uint8_t L_7 = V_0;
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_8 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		NullCheck(L_8);
-		int32_t L_9;
-		L_9 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_8, NULL);
-		ClientReceivedDataArgs__ctor_m61E315788074BC8D42000B0A1B360F60BDFF759D((&V_1), L_6, L_7, L_9, NULL);
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_5 = ___0_data;
+		uint8_t L_6 = V_0;
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_7 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		NullCheck(L_7);
+		int32_t L_8;
+		L_8 = Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline(L_7, NULL);
+		ClientReceivedDataArgs__ctor_m61E315788074BC8D42000B0A1B360F60BDFF759D((&V_1), L_5, L_6, L_8, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:90>
-		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_10 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
-		ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 L_11 = V_1;
-		NullCheck(L_10);
-		VirtualActionInvoker1< ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 >::Invoke(21, L_10, L_11);
-	}
-
-IL_004f:
-	{
+		Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* L_9 = ((CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988*)__this)->___Transport;
+		ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 L_10 = V_1;
+		NullCheck(L_9);
+		VirtualActionInvoker1< ClientReceivedDataArgs_t89BF54B277C9871472E6CFDE4FBC0A8284BBD354 >::Invoke(21, L_9, L_10);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:91>
 		return;
 	}
 }
-// Method Definition Index: 83298
+// Method Definition Index: 83505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onDisconnect_mC0572CB73540D381CFFEB7CEA61227E873D0768A (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4857,7 +4342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onDisconnect_mC0572
 		return;
 	}
 }
-// Method Definition Index: 83299
+// Method Definition Index: 83506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onConnect_mD701D8BFD20B2F0A7C00B2F2C4379F321274CF5B (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4867,121 +4352,85 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__client_onConnect_mD701D8BF
 		return;
 	}
 }
-// Method Definition Index: 83300
+// Method Definition Index: 83507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ClientSocket_StartConnection_m84CBC397F5A171BFBE566F44C13F1FF1675A1340 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, String_t* ___0_address, uint16_t ___1_port, bool ___2_useWss, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:113>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		V_0 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
-			goto IL_0015;
+			goto IL_000b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:114>
-		V_1 = (bool)0;
-		goto IL_003f;
+		return (bool)0;
 	}
 
-IL_0015:
+IL_000b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:116>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 4, (bool)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:118>
-		uint16_t L_2 = ___1_port;
-		__this->____port = L_2;
+		uint16_t L_1 = ___1_port;
+		__this->____port = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:119>
-		String_t* L_3 = ___0_address;
-		__this->____address = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____address), (void*)L_3);
+		String_t* L_2 = ___0_address;
+		__this->____address = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____address), (void*)L_2);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:121>
 		ClientSocket_ResetQueues_m384EB454ECC9AB6488B86E59B790377B97E17C3F_inline(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:122>
-		bool L_4 = ___2_useWss;
-		ClientSocket_Socket_m413E64D78626D89E63B8315DD0BE6E5AE282057D(__this, L_4, NULL);
+		bool L_3 = ___2_useWss;
+		ClientSocket_Socket_m413E64D78626D89E63B8315DD0BE6E5AE282057D(__this, L_3, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:124>
-		V_1 = (bool)1;
-		goto IL_003f;
-	}
-
-IL_003f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:125>
-		bool L_5 = V_1;
-		return L_5;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 83301
+// Method Definition Index: 83508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ClientSocket_StopConnection_m0FA0D5B5BA440EBDBFB8C9D585293DC5B7FC9C84 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
-	bool V_1 = false;
-	int32_t G_B3_0 = 0;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:133>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
 		if ((((int32_t)L_0) == ((int32_t)1)))
 		{
-			goto IL_0015;
+			goto IL_0012;
 		}
 	}
 	{
 		int32_t L_1;
-		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		G_B3_0 = ((((int32_t)L_1) == ((int32_t)2))? 1 : 0);
-		goto IL_0016;
-	}
-
-IL_0015:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0016:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		L_1 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
 		{
-			goto IL_001e;
+			goto IL_0014;
 		}
 	}
+
+IL_0012:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:134>
-		V_1 = (bool)0;
-		goto IL_0040;
+		return (bool)0;
 	}
 
-IL_001e:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:136>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 2, (bool)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:137>
-		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_3 = __this->____client;
-		NullCheck(L_3);
-		VirtualActionInvoker0::Invoke(5, L_3);
+		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_2 = __this->____client;
+		NullCheck(L_2);
+		VirtualActionInvoker0::Invoke(5, L_2);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:138>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 1, (bool)0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:139>
-		V_1 = (bool)1;
-		goto IL_0040;
-	}
-
-IL_0040:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:140>
-		bool L_4 = V_1;
-		return L_4;
+		return (bool)1;
 	}
 }
-// Method Definition Index: 83302
+// Method Definition Index: 83509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_ResetQueues_m384EB454ECC9AB6488B86E59B790377B97E17C3F (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4992,7 +4441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_ResetQueues_m384EB454ECC9AB
 		return;
 	}
 }
-// Method Definition Index: 83303
+// Method Definition Index: 83510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_DequeueOutgoing_mD6DB85E0A591E7F177A8DFB0F89EF311332ABFE0 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5006,7 +4455,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_DequeueOutgoing_mD6DB85E0A5
 	int32_t V_1 = 0;
 	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:157>
 		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_0 = __this->____outgoing;
@@ -5016,10 +4464,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_DequeueOutgoing_mD6DB85E0A5
 		V_0 = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:158>
 		V_1 = 0;
-		goto IL_0047;
+		goto IL_0041;
 	}
 
-IL_0011:
+IL_0010:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:160>
 		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_2 = __this->____outgoing;
@@ -5042,16 +4490,14 @@ IL_0011:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
-IL_0047:
+IL_0041:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:158>
 		int32_t L_7 = V_1;
 		int32_t L_8 = V_0;
-		V_3 = (bool)((((int32_t)L_7) < ((int32_t)L_8))? 1 : 0);
-		bool L_9 = V_3;
-		if (L_9)
+		if ((((int32_t)L_7) < ((int32_t)L_8)))
 		{
-			goto IL_0011;
+			goto IL_0010;
 		}
 	}
 	{
@@ -5059,7 +4505,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 83304
+// Method Definition Index: 83511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_IterateOutgoing_m115541512C770FA600F827A02875FDBFADF5DB4C (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5069,75 +4515,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_IterateOutgoing_m115541512C
 		return;
 	}
 }
-// Method Definition Index: 83305
+// Method Definition Index: 83512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_IterateIncoming_m36CA3EF1807AC33EADA72833D3EB8DEA945C3F06 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:180>
 		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_0 = __this->____client;
-		V_0 = (bool)((((RuntimeObject*)(SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:181>
-		goto IL_001c;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:185>
-		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_2 = __this->____client;
-		NullCheck(L_2);
-		SimpleWebClient_ProcessMessageQueue_m17E36B515D16E4EFDF4FF95E7338B56E4BFE3854(L_2, NULL);
-	}
-
-IL_001c:
-	{
+		SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* L_1 = __this->____client;
+		NullCheck(L_1);
+		SimpleWebClient_ProcessMessageQueue_m17E36B515D16E4EFDF4FF95E7338B56E4BFE3854(L_1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:186>
 		return;
 	}
 }
-// Method Definition Index: 83306
+// Method Definition Index: 83513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket_SendToServer_m62E20B819D3AA15E2ED51F63B6310DD617804CE2 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:194>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
-		V_0 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)8))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
+		if ((((int32_t)L_0) == ((int32_t)8)))
 		{
-			goto IL_0013;
+			goto IL_000a;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:195>
-		goto IL_0023;
+		return;
 	}
 
-IL_0013:
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:197>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_2 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
-		uint8_t L_3 = ___0_channelId;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_4 = ___1_segment;
-		CommonSocket_Send_mC45A017B3D1B43141EE3C9370898AF844166358B(__this, L_2, L_3, L_4, (-1), NULL);
-	}
-
-IL_0023:
-	{
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_1 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
+		uint8_t L_2 = ___0_channelId;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3 = ___1_segment;
+		CommonSocket_Send_mC45A017B3D1B43141EE3C9370898AF844166358B(__this, L_1, L_2, L_3, (-1), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ClientSocket.cs:198>
 		return;
 	}
 }
-// Method Definition Index: 83307
+// Method Definition Index: 83514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__ctor_mC2FC68CA864695EFD2F3173BD2AC6F78F97D2E75 (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5193,7 +4625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClientSocket__ctor_mC2FC68CA864695EFD2F3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83308
+// Method Definition Index: 83515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_InitializeOnce_m8166D15A6BBF5F0A2BB981E0FD7200DA41B4BAA0 (const RuntimeMethod* method) 
 {
 	{
@@ -5208,7 +4640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_Initialize
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83309
+// Method Definition Index: 83516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOnce_m3D1B3284A4ACD163F50652EA929A8B0C52CBBFF7 (const RuntimeMethod* method) 
 {
 	{
@@ -5223,7 +4655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOn
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 83310
+// Method Definition Index: 83517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedReaders___Internal_InitializeOnce_m593D4FD62051C328F2834E7B56B630E2A5A752AB (const RuntimeMethod* method) 
 {
 	{
@@ -5233,40 +4665,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedReaders___Internal_InitializeOn
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 83288
+// Method Definition Index: 83465
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline (CommonSocket_tF387567F7C893AE9D03AF21BBB7FD46DE4B67988* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/CommonSocket.cs:21>
+		int32_t L_0 = __this->____connectionState;
+		return L_0;
+	}
+}
+// Method Definition Index: 83495
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_IterateIncoming_mE1435FF34A5BF53BC00CB33CAEC3F9FC75E184BA_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:324>
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_0 = __this->____server;
-		V_0 = (bool)((((RuntimeObject*)(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0010;
+			goto IL_0009;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:325>
-		goto IL_001c;
+		return;
 	}
 
-IL_0010:
+IL_0009:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:329>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_2 = __this->____server;
-		NullCheck(L_2);
-		SimpleWebServer_ProcessMessageQueue_m42C8C2C6A3603670B41824A36550ABE8801BA540(L_2, NULL);
-	}
-
-IL_001c:
-	{
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_1 = __this->____server;
+		NullCheck(L_1);
+		SimpleWebServer_ProcessMessageQueue_m42C8C2C6A3603670B41824A36550ABE8801BA540(L_1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:330>
 		return;
 	}
 }
-// Method Definition Index: 83289
+// Method Definition Index: 83496
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_SendToClient_m2BED696F3ECA9DF564052D920D5DA95CE49022CB_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, uint8_t ___0_channelId, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___1_segment, int32_t ___2_connectionId, const RuntimeMethod* method) 
 {
 	{
@@ -5280,7 +4714,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_SendToClient_m2
 		return;
 	}
 }
-// Method Definition Index: 36592
+// Method Definition Index: 83497
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ServerSocket_GetMaximumClients_m464A1DAD256D784D8351200746242D79357A61AA_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:347>
+		int32_t L_0 = __this->____maximumClients;
+		return L_0;
+	}
+}
+// Method Definition Index: 36310
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkManager_t3CF56E00215CFB653E23B2207E7BE9A958E975BF* Transport_get_NetworkManager_mF18CA26AA6F55FD7232A4B7B3AA39C17A4202893_inline (Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5289,7 +4732,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkManager_t3CF56E00215CFB653
 		return L_0;
 	}
 }
-// Method Definition Index: 36594
+// Method Definition Index: 36312
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Transport_get_Index_m9BB079139383E30A7AD811A4A87F738FEF4F5FBB_inline (Transport_t74F46BF901F855BF415E70B20226D81B82EADCB4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5298,7 +4741,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Transport_get_Index_m9BB0
 		return L_0;
 	}
 }
-// Method Definition Index: 81218
+// Method Definition Index: 81396
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SimpleWebServer_get_Active_m0CB95FC48933AB4748B7B7B9A3DCC62D749586D4_inline (SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5307,7 +4750,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SimpleWebServer_get_Active_m
 		return L_0;
 	}
 }
-// Method Definition Index: 83274
+// Method Definition Index: 83481
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_Socket_mB1049D0D1242AABDB076764153DC10667D7070D1_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5327,89 +4770,86 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_Socket_mB1049D0
 	memset((&V_0), 0, sizeof(V_0));
 	SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:88>
 		TcpConfig__ctor_mBDEF46E64151B4B93828D763B586B58C0172C35A((&V_0), (bool)0, ((int32_t)5000), ((int32_t)20000), NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:90>
 		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_0 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
 		bool L_1 = L_0->___Enabled;
-		V_2 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_2;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_002f;
+			goto IL_0029;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:91>
 		il2cpp_codegen_initobj((&V_1), sizeof(SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E));
-		goto IL_0062;
+		goto IL_005c;
 	}
 
-IL_002f:
+IL_0029:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:93>
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:94>
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_3 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		bool L_4 = L_3->___Enabled;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_5 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		String_t* L_6 = L_5->___CertificatePath;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_7 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		String_t* L_8 = L_7->___CertificatePassword;
-		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_9 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
-		int32_t L_10 = L_9->___SslProtocol;
-		SslConfig__ctor_m0ED259A5AB7AC75BFC08993D7D845676D0AD8929((&V_1), L_4, L_6, L_8, L_10, NULL);
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_2 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		bool L_3 = L_2->___Enabled;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_4 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		String_t* L_5 = L_4->___CertificatePath;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_6 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		String_t* L_7 = L_6->___CertificatePassword;
+		SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F* L_8 = (SslConfiguration_t4D9E0D8459C766BF702A04312377A8D90E8B4C6F*)(&__this->____sslConfiguration);
+		int32_t L_9 = L_8->___SslProtocol;
+		SslConfig__ctor_m0ED259A5AB7AC75BFC08993D7D845676D0AD8929((&V_1), L_3, L_5, L_7, L_9, NULL);
 	}
 
-IL_0062:
+IL_005c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:95>
-		TcpConfig_tF8C8FAF37C879ED10DC3D6F1BBB6D1AFC6E8B884 L_11 = V_0;
-		int32_t L_12 = __this->____mtu;
-		SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E L_13 = V_1;
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = (SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)il2cpp_codegen_object_new(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799_il2cpp_TypeInfo_var);
-		SimpleWebServer__ctor_mA32BC22CEE822FC3E84C589C376139A0EB976A11(L_14, ((int32_t)5000), L_11, L_12, ((int32_t)5000), L_13, NULL);
-		__this->____server = L_14;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____server), (void*)L_14);
+		TcpConfig_tF8C8FAF37C879ED10DC3D6F1BBB6D1AFC6E8B884 L_10 = V_0;
+		int32_t L_11 = __this->____mtu;
+		SslConfig_tB6902470619DCAC6B93B0FFDEECB13F72F97382E L_12 = V_1;
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_13 = (SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)il2cpp_codegen_object_new(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799_il2cpp_TypeInfo_var);
+		SimpleWebServer__ctor_mA32BC22CEE822FC3E84C589C376139A0EB976A11(L_13, ((int32_t)5000), L_10, L_11, ((int32_t)5000), L_12, NULL);
+		__this->____server = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____server), (void*)L_13);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:97>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_15 = __this->____server;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_16 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
-		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_16, __this, (intptr_t)((void*)ServerSocket__server_onConnect_m680A286EA2C7441DA37E1ADB135E7E448442029C_RuntimeMethod_var), NULL);
-		NullCheck(L_15);
-		SimpleWebServer_add_onConnect_mB6F6EB060E904D2BBA583CF1947F7F60B431273D(L_15, L_16, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = __this->____server;
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_15 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_15, __this, (intptr_t)((void*)ServerSocket__server_onConnect_m680A286EA2C7441DA37E1ADB135E7E448442029C_RuntimeMethod_var), NULL);
+		NullCheck(L_14);
+		SimpleWebServer_add_onConnect_mB6F6EB060E904D2BBA583CF1947F7F60B431273D(L_14, L_15, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:98>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_17 = __this->____server;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_18 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
-		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_18, __this, (intptr_t)((void*)ServerSocket__server_onDisconnect_m0E959B1067B791BA6E1873078FA97DAB06E8CA0B_RuntimeMethod_var), NULL);
-		NullCheck(L_17);
-		SimpleWebServer_add_onDisconnect_mE9CCA430BCCF9A1BB3925DBA405C414A757AF595(L_17, L_18, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_16 = __this->____server;
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_17 = (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*)il2cpp_codegen_object_new(Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1BA854F3F4319EA4A4294DDFDA21C395B8D0FF87(L_17, __this, (intptr_t)((void*)ServerSocket__server_onDisconnect_m0E959B1067B791BA6E1873078FA97DAB06E8CA0B_RuntimeMethod_var), NULL);
+		NullCheck(L_16);
+		SimpleWebServer_add_onDisconnect_mE9CCA430BCCF9A1BB3925DBA405C414A757AF595(L_16, L_17, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:99>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_19 = __this->____server;
-		Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E* L_20 = (Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E*)il2cpp_codegen_object_new(Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E_il2cpp_TypeInfo_var);
-		Action_2__ctor_m9DD325FFD17E78823DB4542941E757F225BB7FD8(L_20, __this, (intptr_t)((void*)ServerSocket__server_onData_m0CC1717AB1EA3582D3905765442900BB8FFB9E78_RuntimeMethod_var), NULL);
-		NullCheck(L_19);
-		SimpleWebServer_add_onData_m266FA0FB7BD9595C51184A61BC8D15EC0F1A36CA(L_19, L_20, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_18 = __this->____server;
+		Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E* L_19 = (Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E*)il2cpp_codegen_object_new(Action_2_t959877CB7CAF347CECE7BC7588CE3B3D88817A2E_il2cpp_TypeInfo_var);
+		Action_2__ctor_m9DD325FFD17E78823DB4542941E757F225BB7FD8(L_19, __this, (intptr_t)((void*)ServerSocket__server_onData_m0CC1717AB1EA3582D3905765442900BB8FFB9E78_RuntimeMethod_var), NULL);
+		NullCheck(L_18);
+		SimpleWebServer_add_onData_m266FA0FB7BD9595C51184A61BC8D15EC0F1A36CA(L_18, L_19, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:100>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_21 = __this->____server;
-		Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE* L_22 = (Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE*)il2cpp_codegen_object_new(Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE_il2cpp_TypeInfo_var);
-		Action_2__ctor_m3881742154C8898BD33DB80DBC9C37F8EE26BA2E(L_22, __this, (intptr_t)((void*)ServerSocket__server_onError_mEA534222D7AE7E374E3F08F6076449CC46DCB473_RuntimeMethod_var), NULL);
-		NullCheck(L_21);
-		SimpleWebServer_add_onError_mD510BC99B2B81F88BA25F11374E41EDAD8A63ACF(L_21, L_22, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_20 = __this->____server;
+		Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE* L_21 = (Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE*)il2cpp_codegen_object_new(Action_2_tF8C0F0A01D1F06981730BD35D00434BC9FEA40CE_il2cpp_TypeInfo_var);
+		Action_2__ctor_m3881742154C8898BD33DB80DBC9C37F8EE26BA2E(L_21, __this, (intptr_t)((void*)ServerSocket__server_onError_mEA534222D7AE7E374E3F08F6076449CC46DCB473_RuntimeMethod_var), NULL);
+		NullCheck(L_20);
+		SimpleWebServer_add_onError_mD510BC99B2B81F88BA25F11374E41EDAD8A63ACF(L_20, L_21, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:102>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 4, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:103>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_23 = __this->____server;
-		uint16_t L_24 = __this->____port;
-		NullCheck(L_23);
-		SimpleWebServer_Start_m129AF2A5D802D020D775BAA75D147833195263A2(L_23, L_24, NULL);
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_22 = __this->____server;
+		uint16_t L_23 = __this->____port;
+		NullCheck(L_22);
+		SimpleWebServer_Start_m129AF2A5D802D020D775BAA75D147833195263A2(L_22, L_23, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:104>
 		CommonSocket_SetConnectionState_m587D800790A2840C4BCA18BA1C65CE0DEE9B5D3E(__this, 8, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:105>
 		return;
 	}
 }
-// Method Definition Index: 83286
+// Method Definition Index: 83493
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_DequeueOutgoing_mF39CACB96AD41841D4F95A7B907BC4C07152FD77_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5419,144 +4859,121 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_DequeueOutgoing
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
+	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	int32_t V_4 = 0;
-	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_5;
-	memset((&V_5), 0, sizeof(V_5));
-	bool V_6 = false;
-	bool V_7 = false;
-	int32_t G_B3_0 = 0;
+	Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t V_3 = 0;
+	ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 V_4;
+	memset((&V_4), 0, sizeof(V_4));
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:279>
 		int32_t L_0;
-		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113(__this, NULL);
+		L_0 = CommonSocket_GetConnectionState_m3DD7E84BC993DBB22802063B48344BCEEA8C0113_inline(__this, NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)8))))
 		{
-			goto IL_0015;
+			goto IL_0011;
 		}
 	}
 	{
 		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_1 = __this->____server;
-		G_B3_0 = ((((RuntimeObject*)(SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799*)L_1) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		goto IL_0016;
+		if (L_1)
+		{
+			goto IL_001e;
+		}
 	}
 
-IL_0015:
+IL_0011:
 	{
-		G_B3_0 = 1;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:282>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_2 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
+		CommonSocket_ClearPacketQueue_mEB6CA317CE9CB1ED36DCB445E080E38AF077E819(__this, L_2, NULL);
+		return;
 	}
 
-IL_0016:
+IL_001e:
 	{
-		V_0 = (bool)G_B3_0;
-		bool L_2 = V_0;
-		if (!L_2)
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:286>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_3 = __this->____outgoing;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_inline(L_3, Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
+		V_0 = L_4;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		V_1 = 0;
+		goto IL_0084;
+	}
+
+IL_002e:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:289>
+		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_5 = __this->____outgoing;
+		NullCheck(L_5);
+		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_6;
+		L_6 = Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07(L_5, Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07_RuntimeMethod_var);
+		V_2 = L_6;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:290>
+		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_7 = V_2;
+		int32_t L_8 = L_7.___ConnectionId;
+		V_3 = L_8;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:291>
+		CommonSocket_AddChannel_mF7D179498DF78FCCE0EDE1D8FDA08225641D479C(__this, (&V_2), NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:292>
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_9;
+		L_9 = Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF((&V_2), NULL);
+		V_4 = L_9;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:295>
+		int32_t L_10 = V_3;
+		if ((!(((uint32_t)L_10) == ((uint32_t)(-1)))))
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:296>
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_11 = __this->____server;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_12 = __this->____clients;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_13 = V_4;
+		NullCheck(L_11);
+		SimpleWebServer_SendAll_m6516F6B452164CAA8186840A0A4E9590506DBBA1(L_11, L_12, L_13, NULL);
+		goto IL_0079;
+	}
+
+IL_006b:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:299>
+		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_14 = __this->____server;
+		int32_t L_15 = V_3;
+		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_16 = V_4;
+		NullCheck(L_14);
+		SimpleWebServer_SendOne_m92C606E28204075B741ADB01B3A6837FDE338445(L_14, L_15, L_16, NULL);
+	}
+
+IL_0079:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:301>
+		Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0((&V_2), NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		int32_t L_17 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
+	}
+
+IL_0084:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
+		int32_t L_18 = V_1;
+		int32_t L_19 = V_0;
+		if ((((int32_t)L_18) < ((int32_t)L_19)))
 		{
 			goto IL_002e;
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:282>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD** L_3 = (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD**)(&__this->____outgoing);
-		CommonSocket_ClearPacketQueue_mEB6CA317CE9CB1ED36DCB445E080E38AF077E819(__this, L_3, NULL);
-		goto IL_00af;
-	}
-
-IL_002e:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:286>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_4 = __this->____outgoing;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_inline(L_4, Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_RuntimeMethod_var);
-		V_1 = L_5;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		V_2 = 0;
-		goto IL_00a4;
-	}
-
-IL_003f:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:289>
-		Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* L_6 = __this->____outgoing;
-		NullCheck(L_6);
-		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_7;
-		L_7 = Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07(L_6, Queue_1_Dequeue_mE3FB30A687F9FBB25A27D6201E0C2CB038A74F07_RuntimeMethod_var);
-		V_3 = L_7;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:290>
-		Packet_t95438F1A679FFC6782AB9C8F51FE7FF12D769D98 L_8 = V_3;
-		int32_t L_9 = L_8.___ConnectionId;
-		V_4 = L_9;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:291>
-		CommonSocket_AddChannel_mF7D179498DF78FCCE0EDE1D8FDA08225641D479C(__this, (&V_3), NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:292>
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_10;
-		L_10 = Packet_GetArraySegment_mC8B1BA5236EBC460B17F1553F00F64FB029D70FF((&V_3), NULL);
-		V_5 = L_10;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:295>
-		int32_t L_11 = V_4;
-		V_6 = (bool)((((int32_t)L_11) == ((int32_t)(-1)))? 1 : 0);
-		bool L_12 = V_6;
-		if (!L_12)
-		{
-			goto IL_0087;
-		}
-	}
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:296>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_13 = __this->____server;
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_14 = __this->____clients;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_15 = V_5;
-		NullCheck(L_13);
-		SimpleWebServer_SendAll_m6516F6B452164CAA8186840A0A4E9590506DBBA1(L_13, L_14, L_15, NULL);
-		goto IL_0097;
-	}
-
-IL_0087:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:299>
-		SimpleWebServer_t05E862857D3452CA57A1AE048D1A2120435AA799* L_16 = __this->____server;
-		int32_t L_17 = V_4;
-		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_18 = V_5;
-		NullCheck(L_16);
-		SimpleWebServer_SendOne_m92C606E28204075B741ADB01B3A6837FDE338445(L_16, L_17, L_18, NULL);
-	}
-
-IL_0097:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:301>
-		Packet_Dispose_m319B1982EBF59FF0D6B13EDA45A5C0783F5080E0((&V_3), NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		int32_t L_19 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_19, 1));
-	}
-
-IL_00a4:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:287>
-		int32_t L_20 = V_2;
-		int32_t L_21 = V_1;
-		V_7 = (bool)((((int32_t)L_20) < ((int32_t)L_21))? 1 : 0);
-		bool L_22 = V_7;
-		if (L_22)
-		{
-			goto IL_003f;
-		}
-	}
-	{
-	}
-
-IL_00af:
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:304>
 		return;
 	}
 }
-// Method Definition Index: 83285
+// Method Definition Index: 83492
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconnects_m7367001CA9A7B3E443FAA684943FD8D911F84530_inline (ServerSocket_t0D1935D36E124FDF6BD1317FF9B685728190FE98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5569,12 +4986,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconne
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
+	int32_t V_1 = 0;
 	int32_t V_2 = 0;
-	bool V_3 = false;
-	bool V_4 = false;
-	int32_t V_5 = 0;
-	bool V_6 = false;
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:252>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_0 = __this->____disconnectingNow;
@@ -5584,118 +4997,110 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ServerSocket_DequeueDisconne
 		V_0 = L_1;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:254>
 		int32_t L_2 = V_0;
-		V_1 = (bool)((((int32_t)L_2) > ((int32_t)0))? 1 : 0);
-		bool L_3 = V_1;
-		if (!L_3)
+		if ((((int32_t)L_2) <= ((int32_t)0)))
 		{
-			goto IL_0047;
+			goto IL_003b;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		V_2 = 0;
-		goto IL_0032;
+		V_1 = 0;
+		goto IL_002c;
 	}
 
-IL_001a:
+IL_0014:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:257>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_4 = __this->____disconnectingNow;
-		int32_t L_5 = V_2;
-		NullCheck(L_4);
-		int32_t L_6;
-		L_6 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_4, L_5, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		bool L_7;
-		L_7 = ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84(__this, L_6, (bool)1, NULL);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_3 = __this->____disconnectingNow;
+		int32_t L_4 = V_1;
+		NullCheck(L_3);
+		int32_t L_5;
+		L_5 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_3, L_4, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
+		bool L_6;
+		L_6 = ServerSocket_StopConnection_m633243DECF18CED1D1ADED0195493CA0A6AC5A84(__this, L_5, (bool)1, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		int32_t L_8 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		int32_t L_7 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:256>
-		int32_t L_9 = V_2;
-		int32_t L_10 = V_0;
-		V_3 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
-		bool L_11 = V_3;
-		if (L_11)
+		int32_t L_8 = V_1;
+		int32_t L_9 = V_0;
+		if ((((int32_t)L_8) < ((int32_t)L_9)))
 		{
-			goto IL_001a;
+			goto IL_0014;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:259>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_12 = __this->____disconnectingNow;
-		NullCheck(L_12);
-		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_12, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_10 = __this->____disconnectingNow;
+		NullCheck(L_10);
+		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_10, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
 	}
 
-IL_0047:
+IL_003b:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:262>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_13 = __this->____disconnectingNext;
-		NullCheck(L_13);
-		int32_t L_14;
-		L_14 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_13, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
-		V_0 = L_14;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_11 = __this->____disconnectingNext;
+		NullCheck(L_11);
+		int32_t L_12;
+		L_12 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_11, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
+		V_0 = L_12;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:264>
-		int32_t L_15 = V_0;
-		V_4 = (bool)((((int32_t)L_15) > ((int32_t)0))? 1 : 0);
-		bool L_16 = V_4;
-		if (!L_16)
+		int32_t L_13 = V_0;
+		if ((((int32_t)L_13) <= ((int32_t)0)))
 		{
-			goto IL_009a;
+			goto IL_0079;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		V_5 = 0;
-		goto IL_0082;
+		V_2 = 0;
+		goto IL_006a;
 	}
 
-IL_0063:
+IL_004f:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:267>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_17 = __this->____disconnectingNow;
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_18 = __this->____disconnectingNext;
-		int32_t L_19 = V_5;
-		NullCheck(L_18);
-		int32_t L_20;
-		L_20 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_18, L_19, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		NullCheck(L_17);
-		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_17, L_20, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_14 = __this->____disconnectingNow;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_15 = __this->____disconnectingNext;
+		int32_t L_16 = V_2;
+		NullCheck(L_15);
+		int32_t L_17;
+		L_17 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_15, L_16, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
+		NullCheck(L_14);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_14, L_17, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		int32_t L_21 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_21, 1));
+		int32_t L_18 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
-IL_0082:
+IL_006a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:266>
-		int32_t L_22 = V_5;
-		int32_t L_23 = V_0;
-		V_6 = (bool)((((int32_t)L_22) < ((int32_t)L_23))? 1 : 0);
-		bool L_24 = V_6;
-		if (L_24)
+		int32_t L_19 = V_2;
+		int32_t L_20 = V_0;
+		if ((((int32_t)L_19) < ((int32_t)L_20)))
 		{
-			goto IL_0063;
+			goto IL_004f;
 		}
 	}
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:269>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_25 = __this->____disconnectingNext;
-		NullCheck(L_25);
-		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_25, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_21 = __this->____disconnectingNext;
+		NullCheck(L_21);
+		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_21, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
 	}
 
-IL_009a:
+IL_0079:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Plugins/Bayou/Core/ServerSocket.cs:271>
 		return;
 	}
 }
-// Method Definition Index: 81053
+// Method Definition Index: 81231
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SimpleWebClient_get_ConnectionState_mB9DAB0D7DA4EEFA2100D2F8B4EDB5EE4865DB35D_inline (SimpleWebClient_t41772028748A519FC6DA64F336A84809DC721CAA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5704,7 +5109,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SimpleWebClient_get_Conne
 		return L_0;
 	}
 }
-// Method Definition Index: 83302
+// Method Definition Index: 83509
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ClientSocket_ResetQueues_m384EB454ECC9AB6488B86E59B790377B97E17C3F_inline (ClientSocket_tF8426D62C322C92F0C325627BB0B76AEBD59D053* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5745,7 +5150,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m655A15FAC9D
 	typedef void (*FunctionPointerType) (RuntimeObject*, ServerReceivedDataArgs_tFCCC3DEFCA6982ECFBBBC751BD74A8F1521EE6FE, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 10704
+// Method Definition Index: 10520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_m199A0BA743CF7E901C7DE52128423671B95CDF06_gshared_inline (Queue_1_t836CF0A25FC3B43F0E2D5279C812ADF71985CEFD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5753,7 +5158,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Queue_1_get_Count_m199A0B
 		return L_0;
 	}
 }
-// Method Definition Index: 944
+// Method Definition Index: 943
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ArraySegment_1_get_Array_m85F374406C1E34FDEFA7F160336A247891AF8105_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5761,7 +5166,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB
 		return L_0;
 	}
 }
-// Method Definition Index: 946
+// Method Definition Index: 945
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Count_m7B026228B16D905890B805EA70E9114D1517B053_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5769,7 +5174,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Count_
 		return L_0;
 	}
 }
-// Method Definition Index: 945
+// Method Definition Index: 944
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Offset_m28FEFF65E8FA9A92DF84966071346BFD426CC3AA_gshared_inline (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5777,7 +5182,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ArraySegment_1_get_Offset
 		return L_0;
 	}
 }
-// Method Definition Index: 80127
+// Method Definition Index: 80562
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_gshared_inline (HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5785,7 +5190,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_mB717
 		return L_0;
 	}
 }
-// Method Definition Index: 10612
+// Method Definition Index: 10428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) 
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_0 = NULL;
@@ -5823,7 +5228,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 10620
+// Method Definition Index: 10436
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5843,7 +5248,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 10602
+// Method Definition Index: 10418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method) 
 {
 	{

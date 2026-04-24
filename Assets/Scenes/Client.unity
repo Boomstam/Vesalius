@@ -251,8 +251,8 @@ MonoBehaviour:
   organsOfGenerationPlayer: {fileID: 974394320}
   heartPlayer: {fileID: 1994772341}
   masterMixerGroup: {fileID: 24300002, guid: 0a316802b15da354097940bc3882233a, type: 2}
-  fadeInTime: 2
-  fadeOutTime: 2
+  fadeInTime: 4
+  fadeOutTime: 4
 --- !u!114 &7110683
 MonoBehaviour:
   m_ObjectHideFlags: 0

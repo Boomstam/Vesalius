@@ -154,6 +154,8 @@ public class MonitorUI : MonoBehaviour
 
     private void SyncStateFromServer(NetworkedMonitor nm)
     {
+        SetMasterVolumeState(nm.MasterVolume);
+
         if (introToggle != null)
             introToggle.SetIsOnWithoutNotify(nm.ShouldPlayIntro);
 
@@ -244,7 +246,6 @@ public class MonitorUI : MonoBehaviour
 
     private void OnResetAllClicked()
     {
-        SetMasterVolumeSliderValue(1f);
         Instances.NetworkedMonitor.ResetAllForConcert();
     }
 
@@ -352,6 +353,11 @@ public class MonitorUI : MonoBehaviour
 
         if (partShortNameText != null)
             partShortNameText.text = ResolvePartShortName(part);
+    }
+
+    public void SetMasterVolumeState(float value)
+    {
+        SetMasterVolumeSliderValue(value);
     }
 
     private void ResolveAudioControls()
