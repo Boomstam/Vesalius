@@ -108,7 +108,7 @@ RectTransform:
   m_Father: {fileID: 4209258468068703375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: -0.00018310547}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -181,8 +181,8 @@ RectTransform:
   - {fileID: 1069070554996459571}
   m_Father: {fileID: 7789012172187365259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0}
-  m_AnchorMax: {x: 0.75, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -4.999939}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -294,7 +294,7 @@ RectTransform:
   m_Father: {fileID: 9047462465026742649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: -0.00018310547}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -406,10 +406,10 @@ RectTransform:
   - {fileID: 4209258468068703375}
   m_Father: {fileID: 4121875703565448996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00073242, y: 0.010559}
-  m_SizeDelta: {x: 1084.8, y: 1919.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.032836914, y: -0.30639648}
+  m_SizeDelta: {x: 1.554079, y: -5.4879932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4683698059807543614
 MonoBehaviour:
@@ -494,8 +494,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7789012172187365259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0}
-  m_AnchorMax: {x: 0.75, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -670,6 +670,7 @@ MonoBehaviour:
   - {fileID: 7471757358728341684}
   - {fileID: 5376669655084414793}
   alternateImages: []
+  fadeSlider: {fileID: 0}
   alternateMode: 0
   fadeVal: 0
 --- !u!1 &7923679228105267135

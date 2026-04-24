@@ -92,12 +92,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 109.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 1000
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
@@ -169,8 +169,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8054554446271360966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.10051863, y: 0}
-  m_AnchorMax: {x: 0.8879318, y: 1}
+  m_AnchorMin: {x: 0.15769896, y: 0}
+  m_AnchorMax: {x: 0.84222555, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -307,7 +307,7 @@ RectTransform:
   - {fileID: 8786170245424303051}
   m_Father: {fileID: 8054554446271360966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8879305, y: -0.000012836242}
+  m_AnchorMin: {x: 0.84222555, y: 0}
   m_AnchorMax: {x: 0.99999535, y: 1.0000061}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -576,7 +576,6 @@ MonoBehaviour:
   displayImage: {fileID: 0}
   imageTitleText: {fileID: 3346997603328522025}
   imageAssets: []
-  chaptersJsonResourcePath: 
 --- !u!1 &5819143749608406936
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,8 +762,8 @@ RectTransform:
   - {fileID: 1273808310708810393}
   m_Father: {fileID: 8054554446271360966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: -0.0000135118335}
-  m_AnchorMax: {x: 0.10051852, y: 1.0000054}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.15769896, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.000030517578, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -912,12 +911,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 109.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 1000
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
