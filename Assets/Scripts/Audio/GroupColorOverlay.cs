@@ -10,6 +10,8 @@ public class GroupColorOverlay : MonoBehaviour
     private const string RootName = "Group Color Overlay";
     private const string OverlayImageName = "Overlay";
     private const string MarbleLayerName = "Marble Layer";
+    private const string MainCanvasName = "MainCanvas";
+    private const string MessageOverlayRootName = "MessageOverlayRoot";
     private static readonly Color DefaultMarbleColor = new(1f, 1f, 1f, 0.35f);
 
     [SerializeField] private bool registerAsSharedInstance = true;
@@ -24,19 +26,20 @@ public class GroupColorOverlay : MonoBehaviour
     public static GroupColorOverlay EnsureExistsInScene()
     {
         if (Instances.GroupColorOverlay != null)
+        {
+            Instances.GroupColorOverlay.EnsureDisplayOrder();
             return Instances.GroupColorOverlay;
+        }
 
-        Canvas canvas = Object.FindObjectOfType<Canvas>();
+        Canvas canvas = FindTargetCanvas();
         if (canvas == null)
         {
             Debug.LogWarning("[GroupColorOverlay] No Canvas found in scene.");
             return null;
         }
 
-        Transform existingRoot = canvas.transform.Find(RootName);
-        GroupColorOverlay overlay = existingRoot != null
-            ? existingRoot.GetComponent<GroupColorOverlay>()
-            : null;
+        GroupColorOverlay overlay = FindExistingOverlayInScene();
+        Transform existingRoot = overlay != null ? overlay.transform : canvas.transform.Find(RootName);
 
         if (overlay == null)
         {
@@ -50,20 +53,25 @@ public class GroupColorOverlay : MonoBehaviour
 
             overlay.overlayImage = EnsureOverlayImage(root.transform);
             overlay.marbleOverlayImage = EnsureMarbleOverlayImage(root.transform, canvas.transform);
-
-            InsertBeforeMessageOverlay(root.transform);
+        }
+        else if (overlay.transform.parent != canvas.transform)
+        {
+            overlay.transform.SetParent(canvas.transform, false);
+            Stretch((RectTransform)overlay.transform);
         }
 
         overlay.overlayImage = EnsureOverlayImage(overlay.transform);
         overlay.marbleOverlayImage = EnsureMarbleOverlayImage(overlay.transform, canvas.transform);
 
         overlay.InitializeRuntimeReferences();
+        overlay.EnsureDisplayOrder();
         return overlay;
     }
 
     private void Awake()
     {
         InitializeRuntimeReferences();
+        EnsureDisplayOrder();
     }
 
     private void OnDestroy()
@@ -77,6 +85,7 @@ public class GroupColorOverlay : MonoBehaviour
         currentColor = color;
         currentColor.a = 1f;
         isVisible = true;
+        EnsureDisplayOrder();
         ApplyState();
     }
 
@@ -100,6 +109,19 @@ public class GroupColorOverlay : MonoBehaviour
         ApplyState();
     }
 
+    private void EnsureDisplayOrder()
+    {
+        Canvas canvas = FindTargetCanvas();
+        if (canvas == null)
+            return;
+
+        if (transform.parent != canvas.transform)
+            transform.SetParent(canvas.transform, false);
+
+        Stretch((RectTransform)transform);
+        InsertBeforeProtectedUi(transform);
+    }
+
     private void ApplyState()
     {
         if (overlayImage == null)
@@ -112,9 +134,19 @@ public class GroupColorOverlay : MonoBehaviour
             marbleOverlayImage.enabled = isVisible;
     }
 
-    private static void InsertBeforeMessageOverlay(Transform overlayRoot)
+    private static void InsertBeforeProtectedUi(Transform overlayRoot)
     {
         Transform parent = overlayRoot.parent;
+        if (parent == null)
+            return;
+
+        Transform messageOverlayRoot = parent.Find(MessageOverlayRootName);
+        if (messageOverlayRoot != null)
+        {
+            overlayRoot.SetSiblingIndex(messageOverlayRoot.GetSiblingIndex());
+            return;
+        }
+
         for (int i = 0; i < parent.childCount; i++)
         {
             Transform child = parent.GetChild(i);
@@ -238,6 +270,53 @@ public class GroupColorOverlay : MonoBehaviour
 
             if (canvasTransform == null || rawImage.transform.root == canvasTransform.root)
                 return rawImage;
+        }
+
+        return null;
+    }
+
+    private static Canvas FindTargetCanvas()
+    {
+        Canvas namedCanvas = GameObject.Find(MainCanvasName)?.GetComponent<Canvas>();
+        if (IsUsableRootCanvas(namedCanvas))
+            return namedCanvas;
+
+        Canvas fallbackCanvas = null;
+        foreach (Canvas canvas in Resources.FindObjectsOfTypeAll<Canvas>())
+        {
+            if (!IsUsableRootCanvas(canvas))
+                continue;
+
+            if (canvas.renderMode == RenderMode.ScreenSpaceOverlay)
+                return canvas;
+
+            fallbackCanvas ??= canvas;
+        }
+
+        return fallbackCanvas;
+    }
+
+    private static bool IsUsableRootCanvas(Canvas canvas)
+    {
+        return canvas != null
+            && canvas.gameObject.scene.IsValid()
+            && (canvas.hideFlags & HideFlags.HideAndDontSave) == 0
+            && canvas.isActiveAndEnabled
+            && canvas.rootCanvas == canvas;
+    }
+
+    private static GroupColorOverlay FindExistingOverlayInScene()
+    {
+        foreach (GroupColorOverlay overlay in Resources.FindObjectsOfTypeAll<GroupColorOverlay>())
+        {
+            if (overlay == null ||
+                !overlay.gameObject.scene.IsValid() ||
+                (overlay.hideFlags & HideFlags.HideAndDontSave) != 0)
+            {
+                continue;
+            }
+
+            return overlay;
         }
 
         return null;

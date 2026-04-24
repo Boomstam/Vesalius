@@ -9,6 +9,8 @@ using UnityEngine.UI;
 /// </summary>
 public class MessageOverlay : MonoBehaviour
 {
+    private const int OverlaySortingOrder = 100;
+
     public static MessageOverlay Instance { get; private set; }
 
     [SerializeField] private GameObject _panel;
@@ -22,12 +24,14 @@ public class MessageOverlay : MonoBehaviour
     private Coroutine _flashCoroutine;
     private Graphic _panelGraphic;
     private Color _messageTextBaseColor = Color.white;
+    private Canvas _overlayCanvas;
 
     public bool IsVisible => _panel != null && _panel.activeSelf;
 
     private void Awake()
     {
         Instance = this;
+        EnsureOverlayCanvasSorting();
 
         if (_backdrop == null && _panel != null)
         {
@@ -46,8 +50,15 @@ public class MessageOverlay : MonoBehaviour
             _panel.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        EnsureOverlayCanvasSorting();
+    }
+
     private void OnDestroy()
     {
+        GlobalAudioSliderOverlay.Instance?.SetInteractionBlocked(false);
+
         if (Instance == this)
             Instance = null;
     }
@@ -59,6 +70,9 @@ public class MessageOverlay : MonoBehaviour
             Debug.LogWarning("[MessageOverlay] Panel or message text is not assigned.");
             return;
         }
+
+        EnsureOverlayCanvasSorting();
+        GlobalAudioSliderOverlay.Instance?.SetInteractionBlocked(true);
 
         if (_hideCoroutine != null)
             StopCoroutine(_hideCoroutine);
@@ -81,6 +95,7 @@ public class MessageOverlay : MonoBehaviour
         }
 
         StopFlashing();
+        GlobalAudioSliderOverlay.Instance?.SetInteractionBlocked(false);
 
         if (_panel != null)
             _panel.SetActive(false);
@@ -148,5 +163,22 @@ public class MessageOverlay : MonoBehaviour
     {
         color.a = alpha;
         return color;
+    }
+
+    private void EnsureOverlayCanvasSorting()
+    {
+        if (_overlayCanvas == null)
+            _overlayCanvas = GetComponent<Canvas>();
+
+        if (_overlayCanvas == null)
+            _overlayCanvas = gameObject.AddComponent<Canvas>();
+
+        _overlayCanvas.overrideSorting = true;
+        _overlayCanvas.sortingOrder = OverlaySortingOrder;
+
+        if (_panel != null && _panel.transform.parent != transform)
+            _panel.transform.SetParent(transform, false);
+
+        transform.SetAsLastSibling();
     }
 }

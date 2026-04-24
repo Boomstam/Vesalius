@@ -38,6 +38,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private bool suppressCallbacks;
     private bool subscribed;
     private bool syncingFromImageFader;
+    private bool interactionBlocked;
 
     public bool IsOverlayVisible => currentKind != AudioManager.AudioOverlayKind.None
         && ((dualPrimarySlider != null && dualPrimarySlider.gameObject.activeInHierarchy)
@@ -215,6 +216,7 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         if (overlayRaycaster == null)
             overlayRaycaster = gameObject.AddComponent<GraphicRaycaster>();
 
+        UpdateOverlayInteractivity();
         transform.SetAsLastSibling();
     }
 
@@ -345,9 +347,6 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
                        || state.Kind == AudioManager.AudioOverlayKind.GenerationSingle
                        || state.Kind == AudioManager.AudioOverlayKind.VibrationSingle;
 
-        SetDualOverlayActive(showDual);
-        SetSingleOverlayActive(showSingle);
-
         if (showDual)
         {
             SetSliderValue(dualPrimarySlider, state.PrimaryValue);
@@ -365,7 +364,12 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
             SetLabelText(singleMaxLabel, state.PrimaryMaxLabel);
         }
 
+        bool shouldRenderOverlay = !interactionBlocked;
+        SetDualOverlayActive(showDual && shouldRenderOverlay);
+        SetSingleOverlayActive(showSingle && shouldRenderOverlay);
+
         suppressCallbacks = false;
+        UpdateOverlayInteractivity();
         UpdateImageFaderBinding();
     }
 
@@ -423,9 +427,35 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
         return true;
     }
 
+    public void SetInteractionBlocked(bool blocked)
+    {
+        interactionBlocked = blocked;
+        RefreshState();
+    }
+
     private bool ShouldSyncFromImageFader(AudioManager.AudioOverlayKind previousKind, AudioManager.AudioOverlayKind nextKind)
     {
         return previousKind != nextKind && IsDrivingKind(nextKind);
+    }
+
+    private void UpdateOverlayInteractivity()
+    {
+        bool isInteractable = !interactionBlocked && IsOverlayVisible;
+
+        if (overlayRaycaster != null)
+            overlayRaycaster.enabled = isInteractable;
+
+        SetSliderInteractable(dualPrimarySlider, isInteractable);
+        SetSliderInteractable(dualSecondarySlider, isInteractable);
+        SetSliderInteractable(singleSlider, isInteractable);
+    }
+
+    private static void SetSliderInteractable(Slider slider, bool isInteractable)
+    {
+        if (slider == null)
+            return;
+
+        slider.interactable = isInteractable;
     }
 
     private void SyncAudioStateFromImageFader(AudioManager.AudioOverlayKind overlayKind)

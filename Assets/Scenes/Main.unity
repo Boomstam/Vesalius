@@ -302,6 +302,14 @@ PrefabInstance:
       propertyPath: WasActiveDuringEdit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5329286037219193757, guid: 5b7f916f831ef7c4a88dc736ecfb40cf, type: 3}
+      propertyPath: heartbeatStartColor.a
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329286037219193757, guid: 5b7f916f831ef7c4a88dc736ecfb40cf, type: 3}
+      propertyPath: heartbeatStartColor.r
+      value: 0.27058825
+      objectReference: {fileID: 0}
     - target: {fileID: 7962740683270287126, guid: 5b7f916f831ef7c4a88dc736ecfb40cf, type: 3}
       propertyPath: m_Name
       value: Networked Monitor
