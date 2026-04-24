@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7923679228105267135, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3751,6 +3755,26 @@ PrefabInstance:
       propertyPath: 'images.Array.data[3]'
       value: 
       objectReference: {fileID: 1324462438}
+    - target: {fileID: 355726459194140434, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: alternateImages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 355726459194140434, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: 'alternateImages.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4355e1815fde42b46b8ea4bc59161a28, type: 3}
+    - target: {fileID: 355726459194140434, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: 'alternateImages.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 8792a53343d23b846bc6d8131dd9c224, type: 3}
+    - target: {fileID: 355726459194140434, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: 'alternateImages.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fcca825c13dde354f92e70ff1fa78143, type: 3}
+    - target: {fileID: 355726459194140434, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
+      propertyPath: 'alternateImages.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 0add78f100103ab4995d60112a1ae131, type: 3}
     - target: {fileID: 2781106862663502299, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
       propertyPath: m_SizeDelta.x
       value: -4.845
@@ -3899,7 +3923,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4121875703565448996, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1324462437}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfac2c083762b234a8ca5580f2f87191, type: 3}
