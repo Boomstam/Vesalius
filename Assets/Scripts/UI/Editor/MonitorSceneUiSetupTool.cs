@@ -65,6 +65,7 @@ public static class MonitorSceneUiSetupTool
         Toggle introToggle = ResolveToggle("Intro Toggle", "Organs Of Nutrition Toggle");
         Toggle generationToggle = ResolveToggle("Organs Of Generation Toggle");
         Toggle heartToggle = ResolveToggle("Heart Toggle");
+        Toggle participationToggle = ResolveToggle("Participation");
         Toggle completeAnatomyToggle = ResolveToggle("Complete Anatomy");
 
         Text introLabel = ResolveLabel("Intro Label", "Organs Of Nutrition Label");
@@ -84,12 +85,16 @@ public static class MonitorSceneUiSetupTool
         Text pingPongLabel = EnsureLabelClone(canvasTransform, "Ping Pong Label", introLabel);
         Toggle groupColorToggle = EnsureToggleClone(canvasTransform, "Group Color Toggle", introToggle);
         Text groupColorLabel = EnsureLabelClone(canvasTransform, "Group Color Label", introLabel);
+        participationToggle = participationToggle != null
+            ? participationToggle
+            : EnsureToggleClone(canvasTransform, "Participation", completeAnatomyToggle != null ? completeAnatomyToggle : introToggle);
 
         ApplyRect(introToggle.transform as RectTransform, IntroToggleMin, IntroToggleMax);
         ApplyRect(pingPongToggle.transform as RectTransform, PingPongToggleMin, PingPongToggleMax);
         ApplyRect(generationToggle != null ? generationToggle.transform as RectTransform : null, GenerationToggleMin, GenerationToggleMax);
         ApplyRect(heartToggle != null ? heartToggle.transform as RectTransform : null, HeartToggleMin, HeartToggleMax);
         ApplyRect(groupColorToggle.transform as RectTransform, GroupColorToggleMin, GroupColorToggleMax);
+        PositionAbove(participationToggle, completeAnatomyToggle, 72f);
 
         ApplyRect(introLabel.transform as RectTransform, IntroLabelMin, IntroLabelMax);
         ApplyRect(pingPongLabel.transform as RectTransform, PingPongLabelMin, PingPongLabelMax);
@@ -102,6 +107,7 @@ public static class MonitorSceneUiSetupTool
         if (generationLabel != null) generationLabel.text = "Organs of Generation";
         if (heartLabel != null) heartLabel.text = "Heart";
         groupColorLabel.text = "Go To Your Color";
+        SetToggleText(participationToggle, "Participation");
 
         MonitorUI monitorUi = Object.FindFirstObjectByType<MonitorUI>();
         if (monitorUi == null)
@@ -116,6 +122,7 @@ public static class MonitorSceneUiSetupTool
         SetObjectReference(serializedUi, "organsOfGenerationToggle", generationToggle);
         SetObjectReference(serializedUi, "heartToggle", heartToggle);
         SetObjectReference(serializedUi, "groupColorToggle", groupColorToggle);
+        SetObjectReference(serializedUi, "participationToggle", participationToggle);
         SetObjectReference(serializedUi, "completeAnatomyToggle", completeAnatomyToggle);
         serializedUi.ApplyModifiedPropertiesWithoutUndo();
     }
@@ -241,6 +248,24 @@ public static class MonitorSceneUiSetupTool
         rect.localScale = Vector3.one;
     }
 
+    private static void PositionAbove(Toggle toggle, Toggle reference, float yOffset)
+    {
+        if (toggle == null || reference == null)
+            return;
+
+        RectTransform toggleRect = toggle.transform as RectTransform;
+        RectTransform referenceRect = reference.transform as RectTransform;
+        if (toggleRect == null || referenceRect == null)
+            return;
+
+        toggleRect.anchorMin = referenceRect.anchorMin;
+        toggleRect.anchorMax = referenceRect.anchorMax;
+        toggleRect.pivot = referenceRect.pivot;
+        toggleRect.sizeDelta = referenceRect.sizeDelta;
+        toggleRect.anchoredPosition = referenceRect.anchoredPosition + new Vector2(0f, yOffset);
+        toggleRect.localScale = Vector3.one;
+    }
+
     private static void SetButtonText(Button button, string text)
     {
         if (button == null)
@@ -251,6 +276,20 @@ public static class MonitorSceneUiSetupTool
             tmpLabel.text = text;
 
         Text label = button.GetComponentInChildren<Text>(true);
+        if (label != null)
+            label.text = text;
+    }
+
+    private static void SetToggleText(Toggle toggle, string text)
+    {
+        if (toggle == null)
+            return;
+
+        TMP_Text tmpLabel = toggle.GetComponentInChildren<TMP_Text>(true);
+        if (tmpLabel != null)
+            tmpLabel.text = text;
+
+        Text label = toggle.GetComponentInChildren<Text>(true);
         if (label != null)
             label.text = text;
     }

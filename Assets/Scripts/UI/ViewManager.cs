@@ -87,6 +87,12 @@ public class ViewManager : MonoBehaviour
         }
     }
 
+    public void SetParticipationMode(bool enabled)
+    {
+        if (part0ContentInfoManager != null)
+            part0ContentInfoManager.SetParticipationMode(enabled);
+    }
+
     /// <summary>
     /// Called by the server/network layer to advance to a part.
     /// Always lands on Content view.

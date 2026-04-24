@@ -30,6 +30,7 @@ public class MonitorUI : MonoBehaviour
     [SerializeField] private Toggle groupColorToggle;
 
     [Header("View Toggles")]
+    [SerializeField] private Toggle participationToggle;
     [SerializeField] private Toggle completeAnatomyToggle;
 
     private bool initialised;
@@ -43,6 +44,7 @@ public class MonitorUI : MonoBehaviour
     private void Start()
     {
         ResolveAudioControls();
+        participationToggle = ResolveParticipationToggle();
         completeAnatomyToggle = ResolveCompleteAnatomyToggle();
     }
 
@@ -71,6 +73,8 @@ public class MonitorUI : MonoBehaviour
             vibrationToggle.onValueChanged.RemoveListener(OnVibrationToggled);
         if (groupColorToggle != null)
             groupColorToggle.onValueChanged.RemoveListener(OnGroupColorToggled);
+        if (participationToggle != null)
+            participationToggle.onValueChanged.RemoveListener(OnParticipationToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.RemoveListener(OnCompleteAnatomyToggled);
     }
@@ -83,6 +87,9 @@ public class MonitorUI : MonoBehaviour
         initialised = true;
 
         ResolveAudioControls();
+
+        if (participationToggle == null)
+            participationToggle = ResolveParticipationToggle();
 
         if (completeAnatomyToggle == null)
             completeAnatomyToggle = ResolveCompleteAnatomyToggle();
@@ -110,6 +117,9 @@ public class MonitorUI : MonoBehaviour
 
         if (groupColorToggle != null)
             groupColorToggle.SetIsOnWithoutNotify(nm.GroupColorModeActive);
+
+        if (participationToggle != null)
+            participationToggle.SetIsOnWithoutNotify(nm.ParticipationMode);
 
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.SetIsOnWithoutNotify(nm.CompleteAnatomyMode);
@@ -141,6 +151,8 @@ public class MonitorUI : MonoBehaviour
             vibrationToggle.onValueChanged.AddListener(OnVibrationToggled);
         if (groupColorToggle != null)
             groupColorToggle.onValueChanged.AddListener(OnGroupColorToggled);
+        if (participationToggle != null)
+            participationToggle.onValueChanged.AddListener(OnParticipationToggled);
         if (completeAnatomyToggle != null)
             completeAnatomyToggle.onValueChanged.AddListener(OnCompleteAnatomyToggled);
     }
@@ -198,6 +210,11 @@ public class MonitorUI : MonoBehaviour
     private void OnGroupColorToggled(bool value)
     {
         Instances.NetworkedMonitor.SetGroupColorModeActive(value);
+    }
+
+    private void OnParticipationToggled(bool value)
+    {
+        Instances.NetworkedMonitor.SetParticipationMode(value);
     }
 
     private void OnCompleteAnatomyToggled(bool value)
@@ -308,6 +325,18 @@ public class MonitorUI : MonoBehaviour
             return completeAnatomyToggle;
 
         GameObject existing = GameObject.Find("Complete Anatomy");
+        if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
+            return existingToggle;
+
+        return null;
+    }
+
+    private Toggle ResolveParticipationToggle()
+    {
+        if (participationToggle != null)
+            return participationToggle;
+
+        GameObject existing = GameObject.Find("Participation");
         if (existing != null && existing.TryGetComponent(out Toggle existingToggle))
             return existingToggle;
 

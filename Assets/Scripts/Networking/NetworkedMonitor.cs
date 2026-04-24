@@ -32,6 +32,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private TMP_InputField partInputField;
 
     private readonly SyncVar<int> currentPart = new(-1);
+    private readonly SyncVar<bool> participationMode = new(false);
     private readonly SyncVar<bool> completeAnatomyMode = new(false);
 
     private readonly SyncVar<bool> shouldPlayIntro = new(false);
@@ -70,6 +71,7 @@ public class NetworkedMonitor : NetworkBehaviour
     private Color myGroupColor = Color.clear;
 
     public bool CompleteAnatomyMode => completeAnatomyMode.Value;
+    public bool ParticipationMode => participationMode.Value;
     public bool ShouldPlayIntro => shouldPlayIntro.Value;
     public bool ShouldPlayPingPong => shouldPlayPingPong.Value;
     public bool ShouldPlayOrgansOfGeneration => shouldPlayOrgansOfGeneration.Value;
@@ -94,6 +96,7 @@ public class NetworkedMonitor : NetworkBehaviour
         EnsureHeartStaggerController();
 
         currentPart.OnChange += OnCurrentPartChanged;
+        participationMode.OnChange += OnParticipationModeChanged;
         completeAnatomyMode.OnChange += OnCompleteAnatomyModeChanged;
 
         shouldPlayIntro.OnChange += OnShouldPlayIntroChanged;
@@ -128,6 +131,7 @@ public class NetworkedMonitor : NetworkBehaviour
         base.OnStopClient();
 
         currentPart.OnChange -= OnCurrentPartChanged;
+        participationMode.OnChange -= OnParticipationModeChanged;
         completeAnatomyMode.OnChange -= OnCompleteAnatomyModeChanged;
 
         shouldPlayIntro.OnChange -= OnShouldPlayIntroChanged;
@@ -508,6 +512,17 @@ public class NetworkedMonitor : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
+    public void SetParticipationMode(bool value)
+    {
+        participationMode.Value = value;
+    }
+
+    private void OnParticipationModeChanged(bool prev, bool next, bool asServer)
+    {
+        ApplyParticipationMode(next);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
     public void SetCompleteAnatomyMode(bool value)
     {
         completeAnatomyMode.Value = value;
@@ -527,6 +542,15 @@ public class NetworkedMonitor : NetworkBehaviour
             viewManager.SetCompleteAnatomyMode(enabled);
     }
 
+    private void ApplyParticipationMode(bool enabled)
+    {
+        if (SceneLoader.BuildType != BuildType.Client)
+            return;
+
+        if (viewManager != null)
+            viewManager.SetParticipationMode(enabled);
+    }
+
     private IEnumerator FindViewManagerCoroutine()
     {
         while (true)
@@ -535,6 +559,7 @@ public class NetworkedMonitor : NetworkBehaviour
             if (viewManager != null)
             {
                 viewManager.SetCompleteAnatomyMode(completeAnatomyMode.Value);
+                viewManager.SetParticipationMode(participationMode.Value);
                 yield break;
             }
 

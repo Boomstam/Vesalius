@@ -42,6 +42,10 @@ public class InfoManager : MonoBehaviour
     public string chaptersJsonResourcePath;
     [SerializeField] private ChapterData[] chapters;
 
+    [Header("Participation Mode")]
+    [Tooltip("When participation mode is enabled, this 0-based chapter index will be skipped. Use -1 to disable.")]
+    [SerializeField] private int participationSkippedChapterIndex = -1;
+
     public event Action<int> OnChapterChanged;
 
     public int CurrentIndex => _currentIndex;
@@ -65,6 +69,7 @@ public class InfoManager : MonoBehaviour
     private string[] _slotTypes;
     private string _localizedResourceBasePath;
     private string _displayTitleOverride;
+    private int _skippedChapterIndex = -1;
 
     private void Awake()
     {
@@ -98,7 +103,7 @@ public class InfoManager : MonoBehaviour
     public void ResetToStart()
     {
         if (ChapterCount == 0) return;
-        _currentIndex = 0;
+        _currentIndex = GetFirstAccessibleChapterIndex();
         DisplayChapter(_currentIndex);
     }
 
@@ -107,9 +112,46 @@ public class InfoManager : MonoBehaviour
         if (ChapterCount == 0) return;
 
         index = Mathf.Clamp(index, 0, ChapterCount - 1);
+        index = GetNearestAccessibleChapterIndex(index, 1);
         _currentIndex = index;
         DisplayChapter(_currentIndex);
         OnChapterChanged?.Invoke(_currentIndex);
+    }
+
+    public void SetSkippedChapterIndex(int index)
+    {
+        int newIndex = index >= 0 ? index : -1;
+        if (_skippedChapterIndex == newIndex)
+            return;
+
+        _skippedChapterIndex = newIndex;
+
+        if (ChapterCount == 0)
+            return;
+
+        int adjustedIndex = GetNearestAccessibleChapterIndex(Mathf.Clamp(_currentIndex, 0, ChapterCount - 1), 1);
+        _currentIndex = adjustedIndex;
+        DisplayChapter(_currentIndex);
+        OnChapterChanged?.Invoke(_currentIndex);
+    }
+
+    public void SetParticipationMode(bool enabled)
+    {
+        SetSkippedChapterIndex(enabled ? participationSkippedChapterIndex : -1);
+    }
+
+    public int GetLastAccessibleChapterIndex()
+    {
+        if (ChapterCount == 0)
+            return -1;
+
+        for (int i = ChapterCount - 1; i >= 0; i--)
+        {
+            if (!IsChapterSkipped(i))
+                return i;
+        }
+
+        return Mathf.Clamp(_currentIndex, 0, ChapterCount - 1);
     }
 
     public void SetDisplayedTitleOverride(string title)
@@ -123,7 +165,7 @@ public class InfoManager : MonoBehaviour
     private void OnPrevious()
     {
         if (ChapterCount == 0) return;
-        _currentIndex = (_currentIndex - 1 + ChapterCount) % ChapterCount;
+        _currentIndex = GetAdjacentAccessibleChapterIndex(_currentIndex, -1);
         DisplayChapter(_currentIndex);
         OnChapterChanged?.Invoke(_currentIndex);
     }
@@ -131,7 +173,7 @@ public class InfoManager : MonoBehaviour
     private void OnNext()
     {
         if (ChapterCount == 0) return;
-        _currentIndex = (_currentIndex + 1) % ChapterCount;
+        _currentIndex = GetAdjacentAccessibleChapterIndex(_currentIndex, 1);
         DisplayChapter(_currentIndex);
         OnChapterChanged?.Invoke(_currentIndex);
     }
@@ -216,8 +258,54 @@ public class InfoManager : MonoBehaviour
 
         if (ChapterCount == 0) return;
 
-        _currentIndex = Mathf.Clamp(_currentIndex, 0, ChapterCount - 1);
+        _currentIndex = GetNearestAccessibleChapterIndex(Mathf.Clamp(_currentIndex, 0, ChapterCount - 1), 1);
         DisplayChapter(_currentIndex);
+    }
+
+    private int GetFirstAccessibleChapterIndex()
+    {
+        return GetNearestAccessibleChapterIndex(0, 1);
+    }
+
+    private int GetNearestAccessibleChapterIndex(int index, int direction)
+    {
+        if (ChapterCount == 0)
+            return 0;
+
+        index = Mathf.Clamp(index, 0, ChapterCount - 1);
+        if (!IsChapterSkipped(index))
+            return index;
+
+        int candidate = index;
+        for (int i = 0; i < ChapterCount; i++)
+        {
+            candidate = (candidate + direction + ChapterCount) % ChapterCount;
+            if (!IsChapterSkipped(candidate))
+                return candidate;
+        }
+
+        return index;
+    }
+
+    private int GetAdjacentAccessibleChapterIndex(int currentIndex, int direction)
+    {
+        if (ChapterCount == 0)
+            return 0;
+
+        int candidate = Mathf.Clamp(currentIndex, 0, ChapterCount - 1);
+        for (int i = 0; i < ChapterCount; i++)
+        {
+            candidate = (candidate + direction + ChapterCount) % ChapterCount;
+            if (!IsChapterSkipped(candidate))
+                return candidate;
+        }
+
+        return candidate;
+    }
+
+    private bool IsChapterSkipped(int index)
+    {
+        return ChapterCount > 1 && _skippedChapterIndex >= 0 && index == _skippedChapterIndex;
     }
 
     private void OnLanguageChanged(LanguageManager.AppLanguage _)
