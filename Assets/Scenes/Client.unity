@@ -846,6 +846,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/8. Book VI_ The Brain.en
       objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
@@ -1058,6 +1062,10 @@ PrefabInstance:
     - target: {fileID: 2078155791008700353, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: chaptersJsonResourcePath
       value: Localization/10. Book VII_ The Heart.en
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
@@ -2644,6 +2652,10 @@ PrefabInstance:
     - target: {fileID: 2078155791008700353, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: chaptersJsonResourcePath
       value: Localization/3. Book I_ The Organs of Generation.en
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
@@ -4838,12 +4850,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 100
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 100
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -5050,6 +5062,10 @@ PrefabInstance:
     - target: {fileID: 2078155791008700353, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: chaptersJsonResourcePath
       value: Localization/4. Book II_ The Ligaments and Muscles.en
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
@@ -5953,6 +5969,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/5. The Words of Vesalius.en
       objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
@@ -6486,6 +6506,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/1. Book I_ The Organs of Nutrition.en
       objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
@@ -6835,6 +6859,10 @@ PrefabInstance:
     - target: {fileID: 2078155791008700353, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: chaptersJsonResourcePath
       value: Localization/6. Book IV_ The Nerves.en
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
@@ -8103,6 +8131,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/9. Book VI_ The Senses.en
       objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
@@ -9172,6 +9204,10 @@ PrefabInstance:
       propertyPath: chaptersJsonResourcePath
       value: Localization/2. Book III_ The Veins and Arteries.en
       objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
@@ -9557,6 +9593,10 @@ PrefabInstance:
     - target: {fileID: 2078155791008700353, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: chaptersJsonResourcePath
       value: Localization/7. Book V_ The Bones and Cartilages.en
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
@@ -11950,6 +11990,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 861213433}
     m_Modifications:
+    - target: {fileID: 2285452756668101300, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4442976498049056164, guid: d89dfda04e3690c4396cbfaca3c2608a, type: 3}
       propertyPath: displayImage
       value: 
