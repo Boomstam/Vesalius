@@ -19,19 +19,25 @@
       "type": "chapter",
       "key": "vesalius",
       "title": "Vesalius",
-      "content": "Onder deze tab kan je het boeiende leven van Vesalius wat beter leren kennen.\n\nDe info is samengesteld door Dr. Thomas Moors."
+      "content": "Als je op het informatie-icoon linksboven klikt; kan je wat achtergrond-informatie vinden. Dit zal wijzigen per deel van de voorstelling.\n\nDe info is samengesteld door Dr. Thomas Moors."
     },
     {
       "type": "chapter",
-      "key": "voorstelling",
-      "title": "Voorstelling",
-      "content": "De voorstelling is gebaseerd op het leven en werk van Vesalius. Het werk van Vesalius werd geinterpreteerd in de compositie van Mathias Coppens. De teksten zijn samengesteld door dr. Thomas Moore. Het leven van Vesalius wordt verklankt in de compositie van Mireille Capelle."
+      "key": "voorstelling 1",
+      "title": "voorstelling",
+      "content": "De compositie van Mathias Coppens neemt het werk van Vesalius als leidraad.\n\nDie muziek gaat gepaard met live visuals van Klaas Verpoest en Jan Duerinck. Ieder deel wordt voorafgegaan door een introductie-video van Complete Anatomy."
+    },
+    {
+      "type": "chapter",
+      "key": "voorstelling 2",
+      "title": "voorstelling",
+      "content": "Het leven van Vesalius wordt verklankt in de architecture sonore van Mireille Capelle. De geluidskunst is van de hand van Bodo Peeters, de video is gecreëerd door Ezayona Capelle.\n\nHet geheel wordt samengebracht in een regie van Fleur Khani."
     },
     {
       "type": "chapter",
       "key": "sounds_uitleg",
       "title": "Sounds",
-      "content": "Op de volgende pagina kan je al eens experimenteren met het bedienen van de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon zullen komen en zo deel zullen uitmaken van het muzikale geheel.\n\nHet principe is dat je via sliders de klank kan aanpassen. Speel ermee zoveel je wil!"
+      "content": "Op de volgende pagina kan je al eens experimenteren met het bedienen van de geluiden die op een paar momenten tijdens de voorstelling uit je telefoon zullen komen en zo deel zullen uitmaken van het muzikale geheel.\n\nHet principe is dat je via sliders de klank kan aanpassen. Experimenteer gerust!"
     },
     {
       "type": "sound",
@@ -43,13 +49,13 @@
       "type": "chapter",
       "key": "participatie",
       "title": "Participation",
-      "content": "Op een aantal momenten tijdens de voorstelling krijgt een groep mensen de kans om naar voren te komen, willekeurig gekozen.\n\nDaar wordt dan duidelijk gemaakt wat op dat moment de bedoeling is. Het gaat telkens om heel eenvoudige handelingen."
+      "content": "Op een aantal momenten tijdens de voorstelling krijgt een groep mensen de kans om naar voor te komen, willekeurig gekozen.\n\nDaar wordt dan duidelijk gemaakt wat op dat moment de bedoeling is. Het gaat telkens om heel eenvoudige handelingen."
     },
     {
       "type": "chapter",
       "key": "effecten",
       "title": "Effects",
-      "content": "Verder zal je gsm soms iets doen, bijvoorbeeld visueel. Soms zal je gsm trillen.\n\nAls je geen sliders ziet om klank te manipuleren of geen boodschap krijgt om naar voren te gaan, hoef je niet met de app te interageren, maar draag je automatisch bij aan de sfeer van de muziek.\n\nVergeet niet het volume van je gsm maximaal te zetten."
+      "content": "Verder zal je gsm soms iets doen, bijvoorbeeld visueel, soms zal je gsm zelfs trillen.\n\nAls je geen sliders ziet om de klank te manipuleren of geen boodschap krijgt, hoef je niet met je gsm te interageren, maar draag je automatisch bij aan de sfeer van de muziek.\n\nVergeet niet het volume van je gsm maximaal te zetten."
     },
     {
       "type": "chapter",
