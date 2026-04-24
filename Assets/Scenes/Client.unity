@@ -11058,6 +11058,8 @@ MonoBehaviour:
   _panel: {fileID: 992377775}
   _messageText: {fileID: 1293012385}
   _backdrop: {fileID: 0}
+  _flashSpeed: 1
+  _textMinAlpha: 0.2
 --- !u!1 &2063235199
 GameObject:
   m_ObjectHideFlags: 0
