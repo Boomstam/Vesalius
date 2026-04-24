@@ -28,6 +28,9 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     [SerializeField] private TMP_Text singleMinLabel;
     [SerializeField] private TMP_Text singleMaxLabel;
 
+    [Header("Display")]
+    [SerializeField] private bool showOverlayLabels = false;
+
     private AudioManager audioManager;
     private Canvas overlayCanvas;
     private GraphicRaycaster overlayRaycaster;
@@ -35,6 +38,12 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     private bool suppressCallbacks;
     private bool subscribed;
     private bool syncingFromImageFader;
+
+    public bool IsOverlayVisible => currentKind != AudioManager.AudioOverlayKind.None
+        && currentKind != AudioManager.AudioOverlayKind.TutorialDual
+        && ((dualPrimarySlider != null && dualPrimarySlider.gameObject.activeInHierarchy)
+            || (dualSecondarySlider != null && dualSecondarySlider.gameObject.activeInHierarchy)
+            || (singleSlider != null && singleSlider.gameObject.activeInHierarchy));
 
     private static readonly Vector2 DualLeftMin = new(0.15f, 0.23f);
     private static readonly Vector2 DualLeftMax = new(0.45f, 0.80f);
@@ -366,17 +375,17 @@ public class GlobalAudioSliderOverlay : MonoBehaviour
     {
         SetComponentGameObjectActive(dualPrimarySlider, isActive);
         SetComponentGameObjectActive(dualSecondarySlider, isActive);
-        SetComponentGameObjectActive(dualPrimaryMinLabel, isActive);
-        SetComponentGameObjectActive(dualPrimaryMaxLabel, isActive);
-        SetComponentGameObjectActive(dualSecondaryMinLabel, isActive);
-        SetComponentGameObjectActive(dualSecondaryMaxLabel, isActive);
+        SetComponentGameObjectActive(dualPrimaryMinLabel, isActive && showOverlayLabels);
+        SetComponentGameObjectActive(dualPrimaryMaxLabel, isActive && showOverlayLabels);
+        SetComponentGameObjectActive(dualSecondaryMinLabel, isActive && showOverlayLabels);
+        SetComponentGameObjectActive(dualSecondaryMaxLabel, isActive && showOverlayLabels);
     }
 
     private void SetSingleOverlayActive(bool isActive)
     {
         SetComponentGameObjectActive(singleSlider, isActive);
-        SetComponentGameObjectActive(singleMinLabel, isActive);
-        SetComponentGameObjectActive(singleMaxLabel, isActive);
+        SetComponentGameObjectActive(singleMinLabel, isActive && showOverlayLabels);
+        SetComponentGameObjectActive(singleMaxLabel, isActive && showOverlayLabels);
     }
 
     private void SetSliderValue(Slider slider, float value)

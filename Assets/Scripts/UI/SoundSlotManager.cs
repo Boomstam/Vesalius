@@ -31,6 +31,7 @@ public class SoundsSlotManager : MonoBehaviour
         ApplyTutorialStyling();
         EnsureTutorialBackgroundOverlay();
         ResolveOptionalObjects();
+        HideSliderLabels();
 
         infoManager.OnChapterChanged += OnChapterChanged;
         if (LanguageManager.Instance != null)
@@ -204,5 +205,17 @@ public class SoundsSlotManager : MonoBehaviour
             if (child != null)
                 doNotDisturbIcons = child.gameObject;
         }
+    }
+
+    private void HideSliderLabels()
+    {
+        if (soundsPanel == null)
+            return;
+
+        foreach (TMP_Text text in soundsPanel.GetComponentsInChildren<TMP_Text>(true))
+            text.gameObject.SetActive(false);
+
+        foreach (Text text in soundsPanel.GetComponentsInChildren<Text>(true))
+            text.gameObject.SetActive(false);
     }
 }

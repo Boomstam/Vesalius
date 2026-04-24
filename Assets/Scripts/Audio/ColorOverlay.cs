@@ -50,6 +50,10 @@ public class ColorOverlay : MonoBehaviour
     }
 
     public bool HeartbeatActive => heartbeatActive;
+    public bool IsBlockingOverlayVisible =>
+        overlayImage != null &&
+        overlayImage.enabled &&
+        (heartbeatActive || masterFadeCoroutine != null || (masterOpacityActive && masterOpacityValue > 0.001f));
 
     public void ConfigureColorCycle(float newFadeTime, bool initializeWithFirstColor)
     {

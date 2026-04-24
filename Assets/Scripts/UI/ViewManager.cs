@@ -27,6 +27,8 @@ public class ViewManager : MonoBehaviour
     [SerializeField] private Image connectedImage;
     [SerializeField] private GameObject contentImage;
     [SerializeField] private Color infoButtonHighlightColor = Color.white;
+    [SerializeField] private float infoButtonFlashDuration = 5f;
+    [SerializeField] private float infoButtonFlashSpeed = 3.5f;
     
     public int  CurrentPart => _currentPart;
     public View CurrentView => _currentView;
@@ -34,6 +36,8 @@ public class ViewManager : MonoBehaviour
     private int  _currentPart = -1;
     private View _currentView = View.Content;
     private Color _defaultButtonColor;
+    private bool _isLockedToContent;
+    private float _infoButtonFlashEndTime;
 
     // -------------------------------------------------------------------------
 
@@ -48,6 +52,9 @@ public class ViewManager : MonoBehaviour
             
             testPart = false;
         }
+
+        RefreshContentLockState();
+        UpdateInfoButtonFlash();
     }
 
     private void Awake()
@@ -100,10 +107,19 @@ public class ViewManager : MonoBehaviour
     public void SetPart(int part)
     {
         contentImage.SetActive(false);
-        
+
+        int previousPart = _currentPart;
         _currentPart = Mathf.Clamp(part, 0, contentViews.Length - 1);
         _currentView = View.Content;
         ApplyCurrentView();
+
+        if (_currentPart == 0)
+        {
+            _infoButtonFlashEndTime = 0f;
+            RefreshInfoButtonState();
+        }
+        else if (previousPart != _currentPart)
+            StartInfoButtonFlash();
     }
 
     /// <summary>
@@ -111,6 +127,9 @@ public class ViewManager : MonoBehaviour
     /// </summary>
     public void ToggleView()
     {
+        if (_isLockedToContent)
+            return;
+
         contentImage.SetActive(false);
         _currentView = (_currentView == View.Content) ? View.Info : View.Content;
         ApplyCurrentView();
@@ -132,7 +151,7 @@ public class ViewManager : MonoBehaviour
         }
 
         RefreshActiveInfoManager();
-        RefreshInfoButtonColor();
+        RefreshInfoButtonState();
     }
 
     /// <summary>
@@ -141,12 +160,20 @@ public class ViewManager : MonoBehaviour
     /// Resets to normal color otherwise.
     /// Hides the language button and connected image in that same case.
     /// </summary>
-    private void RefreshInfoButtonColor()
+    private void RefreshInfoButtonState()
     {
         if (infoToggleButton == null) return;
 
+        bool showInfoButton = !_isLockedToContent;
+        if (infoToggleButton.gameObject.activeSelf != showInfoButton)
+            infoToggleButton.gameObject.SetActive(showInfoButton);
+
+        if (!showInfoButton)
+            return;
+
         bool useHighlight = _currentView == View.Content && _currentPart != 0;
-        infoToggleButton.image.color = useHighlight ? infoButtonHighlightColor : _defaultButtonColor;
+        Color baseColor = useHighlight ? infoButtonHighlightColor : _defaultButtonColor;
+        infoToggleButton.image.color = GetDisplayedInfoButtonColor(baseColor);
 
         if (languageButton != null)
             languageButton.gameObject.SetActive(!useHighlight);
@@ -174,5 +201,72 @@ public class ViewManager : MonoBehaviour
         {
             part0ContentInfoManager.GoToChapter(part0ContentInfoManager.CurrentIndex);
         }
+    }
+
+    private void RefreshContentLockState()
+    {
+        bool shouldLock = IsBlockingOverlayActive();
+        if (_isLockedToContent == shouldLock)
+            return;
+
+        _isLockedToContent = shouldLock;
+
+        if (_isLockedToContent && _currentView != View.Content)
+        {
+            _currentView = View.Content;
+            ApplyCurrentView();
+            return;
+        }
+
+        RefreshInfoButtonState();
+    }
+
+    private bool IsBlockingOverlayActive()
+    {
+        if (GlobalAudioSliderOverlay.Instance != null && GlobalAudioSliderOverlay.Instance.IsOverlayVisible)
+            return true;
+
+        if (MessageOverlay.Instance != null && MessageOverlay.Instance.IsVisible)
+            return true;
+
+        if (Instances.ColorOverlay != null && Instances.ColorOverlay.IsBlockingOverlayVisible)
+            return true;
+
+        if (Instances.GroupColorOverlay != null && Instances.GroupColorOverlay.IsVisible)
+            return true;
+
+        return false;
+    }
+
+    private void StartInfoButtonFlash()
+    {
+        _infoButtonFlashEndTime = Time.unscaledTime + Mathf.Max(0f, infoButtonFlashDuration);
+        RefreshInfoButtonState();
+    }
+
+    private void UpdateInfoButtonFlash()
+    {
+        if (_infoButtonFlashEndTime <= 0f)
+            return;
+
+        if (Time.unscaledTime >= _infoButtonFlashEndTime)
+        {
+            _infoButtonFlashEndTime = 0f;
+            RefreshInfoButtonState();
+            return;
+        }
+
+        if (!_isLockedToContent && infoToggleButton != null && infoToggleButton.gameObject.activeInHierarchy)
+            RefreshInfoButtonState();
+    }
+
+    private Color GetDisplayedInfoButtonColor(Color baseColor)
+    {
+        if (_infoButtonFlashEndTime <= Time.unscaledTime)
+            return baseColor;
+
+        float pulse = Mathf.PingPong(Time.unscaledTime * Mathf.Max(0.01f, infoButtonFlashSpeed), 1f);
+        Color dimmedColor = new(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.2f);
+        return Color.Lerp(dimmedColor, baseColor, pulse);
     }
 }

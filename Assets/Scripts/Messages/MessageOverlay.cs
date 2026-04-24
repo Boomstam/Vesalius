@@ -9,6 +9,8 @@ using UnityEngine.UI;
 /// </summary>
 public class MessageOverlay : MonoBehaviour
 {
+    public static MessageOverlay Instance { get; private set; }
+
     [SerializeField] private GameObject _panel;
     [SerializeField] private TextMeshProUGUI _messageText;
     [SerializeField] private GameObject _backdrop;
@@ -16,8 +18,12 @@ public class MessageOverlay : MonoBehaviour
     private Coroutine _hideCoroutine;
     private Graphic _panelGraphic;
 
+    public bool IsVisible => _panel != null && _panel.activeSelf;
+
     private void Awake()
     {
+        Instance = this;
+
         if (_backdrop == null && _panel != null)
         {
             Transform backdropTransform = _panel.transform.Find("Backdrop");
@@ -30,6 +36,12 @@ public class MessageOverlay : MonoBehaviour
 
         if (_panel != null)
             _panel.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
     }
 
     public void ShowMessage(string word, float duration, bool showBackdrop = true)
