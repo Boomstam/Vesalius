@@ -30,13 +30,28 @@ struct VirtualFuncInvoker0
 struct Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404;
 struct Action_1_tB93AB717F9D419A1BEC832FF76E74EAA32184CC1;
 struct Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180;
+struct Dictionary_2_tE933749BC6E1C0015EEDCBA1AB5581D0585B6E90;
+struct Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588;
+struct Dictionary_2_tB21A79CD0FB62FB591F6722E0398CC6273CF61D4;
+struct Dictionary_2_t37C902EB0944524E61950F2A725BD5808CD707D5;
+struct Dictionary_2_t8875B27A0A1C290E414FDBCF938028CB06B065D9;
+struct Dictionary_2_t98C17D3E1D098839833F0A30C8D78A81FC0C37AC;
+struct Dictionary_2_tD060B562DA79684A04EFA1D5DC91558E2D91FD94;
+struct Dictionary_2_t9373C411124AAE79614E2C9B1000CE6FC8A719FD;
+struct Dictionary_2_tE4730DF8B45737060445973F4351E8436543E777;
 struct Func_2_tBBA6428480C3B38374D4DCA6BE0CA05167238EFD;
 struct Func_2_t214A23A1D63CC0B9EFDD1BEEE8C80BD9854279F5;
 struct Func_3_tC721DF8CDD07ED66A4833A19A2ED2302608C906C;
 struct Func_3_t6F6D9932638EA1A5A45303C6626C818C25D164E5;
+struct HashSet_1_t41A9F1F7CB7A9AA6F8F9BC55D44E9C5138738CA5;
 struct List_1_t2CDCA768E7F493F5EDEBC75AEB200FD621354E35;
 struct List_1_tE6BB71ABF15905EFA2BE92C38A2716547AEADB19;
 struct List_1_t3A076A19AF26E22A128C32B5C19804DDD2877607;
+struct List_1_tC01261BCE7FA4EB2940DFFF54E766ED16588ACBC;
+struct SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927;
+struct SyncVar_1_t48E12CC2A8291D1C8F15DB98CB20E37F61A9B443;
+struct SyncVar_1_tF7A1A77E4D9CBE25B3ED0B980B971EB94B113683;
+struct SyncVar_1_t555A29B71A642D3B7B4543A016FF990F5053B3EE;
 struct TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4;
 struct TMP_TextProcessingStack_1U5BU5D_t08293E0BB072311BB96170F351D1083BCA97B9B2;
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
@@ -90,6 +105,7 @@ struct GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0;
 struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931;
 struct GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B;
 struct GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D;
+struct HeartStaggerController_t8241118978ED997A695A8244C2A1A3BB06AA2C03;
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 struct ITextPreprocessor_tDBB49C8B68D7B80E8D233B9D9666C43981EFAAB9;
@@ -104,6 +120,9 @@ struct MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95;
 struct MethodInfo_t;
 struct MonitorUI_t90ED28C6969D262AE977CD386F2383C04CB299B9;
 struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D;
+struct NetworkTrafficStatistics_t7C65483926E324593A260F62B31DAEA3EE205EC0;
+struct NetworkedMessageSystem_tC0F4C073CC9C4CAE694EB457D0285F5E93B078D3;
 struct NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3;
 struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
@@ -116,9 +135,11 @@ struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 struct Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F;
 struct Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99;
 struct String_t;
+struct StringBuilder_t;
 struct TMP_Character_t7D37A55EF1A9FF6D0BFE6D50E86A00F80E7FAF35;
 struct TMP_ColorGradient_t17B51752B4E9499A1FF7D875DCEC1D15A0F4AEBB;
 struct TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160;
+struct TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F;
 struct TMP_SpriteAnimator_t2E0F016A61CA343E3222FF51E7CF0E53F9F256E4;
 struct TMP_SpriteAsset_t81F779E6F705CE190DC0D1F93A954CB8B1774B39;
 struct TMP_Style_tA9E5B1B35EBFE24EF980CEA03251B638282E120C;
@@ -132,6 +153,7 @@ struct TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC;
 struct TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957;
 struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+struct TransportManager_t95A6A47A62F301E35D436CA02371559328532A54;
 struct TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF;
 struct UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7;
 struct UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977;
@@ -166,6 +188,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralFDBE497ABCBA200798FFF30E76965D1A12AD0751
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_m0C4C5268B54C7097888C6B109527A680772EBCB5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentsInChildren_TisImageFader_tF80D43B3C3BF9ECB82713ABD8C7F3823E878AD0A_mAA4E164A7D805588DED6D3D11D2CB439727392DB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindAnyObjectByType_TisNetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3_mFA1A88128562F04CF2AC9BCEC1F61C1C5B62BCF3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CAnimateColorU3Ed__9_System_Collections_IEnumerator_Reset_m420E275C343BE09B7DE01E2478F73F032114AD09_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass12_0_U3CAwakeU3Eb__0_m62F92F66C4E8CF4990800F12FB44AC649357C914_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ViewManager_ToggleView_m75C6908D09D07B5D8B1CC7801975A293930FC6A6_RuntimeMethod_var;
@@ -845,6 +868,27 @@ struct TextureMappingOptions_t0E1A47C529DEB45A875486256E7026E97C940DAE
 {
 	int32_t ___value__;
 };
+struct TransformProperties_t19CF25A6BC8F4EF672C33BDC58A9A7F166BE15C4 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Position;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Rotation;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Scale;
+	bool ___IsValid;
+};
+struct TransformProperties_t19CF25A6BC8F4EF672C33BDC58A9A7F166BE15C4_marshaled_pinvoke
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Position;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Rotation;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Scale;
+	int32_t ___IsValid;
+};
+struct TransformProperties_t19CF25A6BC8F4EF672C33BDC58A9A7F166BE15C4_marshaled_com
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Position;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Rotation;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___Scale;
+	int32_t ___IsValid;
+};
 struct VertexGradient_t2C057B53C0EA6E987C2B7BAB0305E686DA1C9A8F 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___topLeft;
@@ -1286,6 +1330,7 @@ struct GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0  : pub
 	bool ___suppressCallbacks;
 	bool ___subscribed;
 	bool ___syncingFromImageFader;
+	bool ___interactionBlocked;
 };
 struct GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1339,6 +1384,45 @@ struct MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95  : public MonoBe
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ____flashCoroutine;
 	Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ____panelGraphic;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ____messageTextBaseColor;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ____overlayCanvas;
+};
+struct NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	bool ___U3COnStartServerCalledU3Ek__BackingField;
+	bool ___U3COnStartClientCalledU3Ek__BackingField;
+	bool ____onStartNetworkCalled;
+	bool ____onStopNetworkCalled;
+	bool ___U3CIsBehaviourReconcilingU3Ek__BackingField;
+	bool ___UsesPrediction;
+	bool ___IsReconcileRemote;
+	Dictionary_2_t8875B27A0A1C290E414FDBCF938028CB06B065D9* ____replicateRpcDelegates;
+	Dictionary_2_t37C902EB0944524E61950F2A725BD5808CD707D5* ____reconcileRpcDelegates;
+	int32_t ____remainingReplicateResends;
+	int32_t ____remainingReconcileResends;
+	uint32_t ____lastReplicateReadRemoteTick;
+	uint32_t ____replicateCurrentStartTick;
+	uint32_t ____lastOrderedReplicatedTick;
+	uint32_t ____lastReadReplicateTick;
+	uint32_t ____lastReadReconcileRemoteTick;
+	uint32_t ____lastReconcileTick;
+	TransformProperties_t19CF25A6BC8F4EF672C33BDC58A9A7F166BE15C4 ____lastCheckedTransformProperties;
+	Dictionary_2_t98C17D3E1D098839833F0A30C8D78A81FC0C37AC* ____rpcLinks;
+	Dictionary_2_tD060B562DA79684A04EFA1D5DC91558E2D91FD94* ____serverRpcDelegates;
+	Dictionary_2_tB21A79CD0FB62FB591F6722E0398CC6273CF61D4* ____observersRpcDelegates;
+	Dictionary_2_tB21A79CD0FB62FB591F6722E0398CC6273CF61D4* ____targetRpcDelegates;
+	uint32_t ____rpcMethodCount;
+	uint8_t ____rpcHashSize;
+	Dictionary_2_tE4730DF8B45737060445973F4351E8436543E777* ____bufferedRpcs;
+	HashSet_1_t41A9F1F7CB7A9AA6F8F9BC55D44E9C5138738CA5* ____networkConnectionCache;
+	Dictionary_2_t9373C411124AAE79614E2C9B1000CE6FC8A719FD* ____syncTypesCache;
+	bool ___SyncTypeDirty;
+	uint8_t ____componentIndexCache;
+	TransportManager_t95A6A47A62F301E35D436CA02371559328532A54* ____transportManagerCache;
+	NetworkObject_tF16653E72A1AB4D78279E81890A691907E35ED7D* ____networkObjectCache;
+	bool ____initializedOnceServer;
+	bool ____initializedOnceClient;
+	NetworkTrafficStatistics_t7C65483926E324593A260F62B31DAEA3EE205EC0* ____networkTrafficStatistics;
+	String_t* ____typeName;
 };
 struct TabManagement_tC6EFB665138578BA1D7783B669159803B903418C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1401,6 +1485,7 @@ struct ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98  : public MonoBehav
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ____defaultButtonColor;
 	bool ____isLockedToContent;
 	float ____infoButtonFlashEndTime;
+	NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* ____networkedMonitor;
 	int32_t ___partToTest;
 	bool ___testPart;
 };
@@ -1425,6 +1510,44 @@ struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931  : public UIBehaviour_t
 	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___m_CachedUvs;
 	TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4* ___m_ColorTweenRunner;
 	bool ___U3CuseLegacyMeshGenerationU3Ek__BackingField;
+};
+struct NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3  : public NetworkBehaviour_t656DE977C2B8950187BBC215DADD8630C393A73F
+{
+	ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* ___viewManager;
+	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ___partInputField;
+	SyncVar_1_tF7A1A77E4D9CBE25B3ED0B980B971EB94B113683* ___currentPart;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___participationMode;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___completeAnatomyMode;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___shouldPlayIntro;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___shouldPlayPingPong;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___shouldPlayOrgansOfGeneration;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___shouldPlayHeart;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___shouldPlayVibration;
+	SyncVar_1_t555A29B71A642D3B7B4543A016FF990F5053B3EE* ___masterVolume;
+	float ___masterFadeInTime;
+	float ___masterFadeOutTime;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___heartbeatStartColor;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___heartbeatEndColor;
+	int32_t ___heartbeatMinBpm;
+	int32_t ___heartbeatMaxBpm;
+	ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* ___groupColors;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___masterOpacityActive;
+	SyncVar_1_t555A29B71A642D3B7B4543A016FF990F5053B3EE* ___masterOpacityValue;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___heartbeatActive;
+	SyncVar_1_t48E12CC2A8291D1C8F15DB98CB20E37F61A9B443* ___heartbeatStartColorSync;
+	SyncVar_1_t48E12CC2A8291D1C8F15DB98CB20E37F61A9B443* ___heartbeatEndColorSync;
+	SyncVar_1_t555A29B71A642D3B7B4543A016FF990F5053B3EE* ___heartbeatBeatTimeSync;
+	SyncVar_1_tE74EE1A3F22BC0D9A069C340027B6D0F610EF927* ___groupColorModeActive;
+	Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* ___groupAssignmentsByUniqueId;
+	HeartStaggerController_t8241118978ED997A695A8244C2A1A3BB06AA2C03* ___heartStaggerController;
+	int32_t ___concertReadyPartNumber;
+	bool ___concertReadyParticipationMode;
+	NetworkedMessageSystem_tC0F4C073CC9C4CAE694EB457D0285F5E93B078D3* ___networkedMessageSystem;
+	int32_t ___myGroupIndex;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___myGroupColor;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___masterVolumeFadeRoutine;
+	bool ___NetworkInitialize___EarlyNetworkedMonitorAssemblyU2DCSharp_dll_Excuted;
+	bool ___NetworkInitialize___LateNetworkedMonitorAssemblyU2DCSharp_dll_Excuted;
 };
 struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
 {
@@ -2013,6 +2136,7 @@ struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArr
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* GameObject_GetComponentsInChildren_TisRuntimeObject_m511E687BF2424F8D832EA2EAA459870887FB9540_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_includeInactive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindAnyObjectByType_TisRuntimeObject_mE7A79400E013891ADB85E4C6A5CF95B447D374BA_gshared (const RuntimeMethod* method) ;
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m8EC1B5D85D3CFD39B32B585CA06D21B2A37B38A4 (U3CU3Ec_tA52CE1A04AE939B075AC66C462823C0B0B959497* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -2076,6 +2200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ViewManager_GetDisplayedInfoButtonColor_mD6804A69EE02EE0B19907CA67805998B003C3607 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_baseColor, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ViewManager_IsBlockingOverlayActive_m17552DDDB3B7ABC3F8B61DF835C5AD50B1BB30F2 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ViewManager_IsServerOverlayToggleActive_m3BF409C9547189D6F70B0056E59408C7860ECEEC (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GlobalAudioSliderOverlay_get_IsOverlayVisible_m483128E2FA246E8B8C70ECDD8401A71E0F5A84BA (GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline (const RuntimeMethod* method) ;
@@ -2084,6 +2209,18 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ColorOverlay_t760F80C575D03264F83
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ColorOverlay_get_IsBlockingOverlayVisible_m9AEEBF303A9E9A7E21956EEE93C8D5F8922A7D71 (ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GroupColorOverlay_get_IsVisible_mADB27D7BADCB100ACEB60679B179E27686F361DB (GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* __this, const RuntimeMethod* method) ;
+inline NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* Object_FindAnyObjectByType_TisNetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3_mFA1A88128562F04CF2AC9BCEC1F61C1C5B62BCF3 (const RuntimeMethod* method)
+{
+	return ((  NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* (*) (const RuntimeMethod*))Object_FindAnyObjectByType_TisRuntimeObject_mE7A79400E013891ADB85E4C6A5CF95B447D374BA_gshared)(method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_ShouldPlayIntro_m5D1A7A583C4592712B3004664BB441A8046D81BE (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_ShouldPlayPingPong_m229246F78B722DF7A3AE915102899C74866D512B (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_ShouldPlayOrgansOfGeneration_m68741AD61B4659E114BC8D6A975C48D58E4CA32F (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_ShouldPlayHeart_m88B2CFDB5D438A2D80B630040D88410CCEBC713F (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_ShouldPlayVibration_m1762FB9BCFB3EEDB2C107AA2DE3BB838F8EA62C5 (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_MasterOpacityActive_m52C205A05DFB4795993412C5515FF708A60FBD37 (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_HeartbeatActive_mCA11325BB1C73558A4D8122FE65BFBBDE52EF527 (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedMonitor_get_GroupColorModeActive_m27DF566FA9F39D67DD7B1271AEA57ADA940A9A73 (NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503 (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
@@ -2098,7 +2235,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75436
+// Method Definition Index: 75460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mE7937CFC71C11539E26CE7B59C3E2B6D757C6AE5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2115,7 +2252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mE7937CFC71C11539E26CE7B5
 		return;
 	}
 }
-// Method Definition Index: 75437
+// Method Definition Index: 75461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m8EC1B5D85D3CFD39B32B585CA06D21B2A37B38A4 (U3CU3Ec_tA52CE1A04AE939B075AC66C462823C0B0B959497* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2123,7 +2260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m8EC1B5D85D3CFD39B32B585CA
 		return;
 	}
 }
-// Method Definition Index: 75438
+// Method Definition Index: 75462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CResolveTutorialSlider1U3Eb__24_0_m2189964EAE6DABFEAC100F60F5CDE87C63E87CD1 (U3CU3Ec_tA52CE1A04AE939B075AC66C462823C0B0B959497* __this, Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___0_slider, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2146,7 +2283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CResolveTutorialSlider1U3Eb__2
 		return L_3;
 	}
 }
-// Method Definition Index: 75439
+// Method Definition Index: 75463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CResolveTutorialBackgroundSpritesU3Eb__25_0_m64164B9F7B35B16356B1510782919030F01F4BAE (U3CU3Ec_tA52CE1A04AE939B075AC66C462823C0B0B959497* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2164,7 +2301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CResolveTutorialBackgroundSpri
 		return L_1;
 	}
 }
-// Method Definition Index: 75440
+// Method Definition Index: 75464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CIsNervesAlternateImageFaderU3Eb__26_0_mC66E097BF1395EDAC5F9D358D468B1EF8B35BBA3 (U3CU3Ec_tA52CE1A04AE939B075AC66C462823C0B0B959497* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2218,7 +2355,7 @@ IL_0021:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75441
+// Method Definition Index: 75465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TabManagement_get_CurrentTab_m20441779D441D8742B9F5D45056EB78DEBBBE261 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2227,7 +2364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TabManagement_get_CurrentTab_m2044177
 		return L_0;
 	}
 }
-// Method Definition Index: 75442
+// Method Definition Index: 75466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_Awake_m3C1FCFD83F07102F59B1AF5F8D99A68BDEC2A0A2 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2340,7 +2477,7 @@ IL_0095:
 		return;
 	}
 }
-// Method Definition Index: 75443
+// Method Definition Index: 75467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_LockTabZero_m21DCFC748EEF87275D4D6F0C05E945C1E1B28B13 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2350,7 +2487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_LockTabZero_m21DCFC748EEF8
 		return;
 	}
 }
-// Method Definition Index: 75444
+// Method Definition Index: 75468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_UnlockTabZero_m614F7638ADC4736A541464C235D2376CA9BDFBDA (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2360,7 +2497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_UnlockTabZero_m614F7638ADC
 		return;
 	}
 }
-// Method Definition Index: 75445
+// Method Definition Index: 75469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_ShowTab_mB5BC77454761656003B629266C9D0746D41AA25D (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, int32_t ___0_tab, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2579,7 +2716,7 @@ IL_00f5:
 		return;
 	}
 }
-// Method Definition Index: 75446
+// Method Definition Index: 75470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_DisableAllTabsButTheFirst_m10E671D910BACA7F0DF9070C4EF2C22204DBC2A4 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -2619,7 +2756,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 75447
+// Method Definition Index: 75471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement_EnableAllTabsButTheFirst_m395E61EA0EEC3251111E37857341275B1898C609 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -2659,7 +2796,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 75448
+// Method Definition Index: 75472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabManagement__ctor_m84A425A6D7DA096C917D4FAEC0BC001AFD3CF702 (TabManagement_tC6EFB665138578BA1D7783B669159803B903418C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2748,7 +2885,7 @@ IL2CPP_EXTERN_C void Tab_tA63962195236425049F7A11BEE3D2C79D4242E6F_marshal_com_c
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75449
+// Method Definition Index: 75473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0__ctor_m964382DBD1C05FDC773C3F0B0329A5B9C1ED2715 (U3CU3Ec__DisplayClass12_0_t20012BC1F7B6DA947EE460D5D80313E275E873E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2756,7 +2893,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0__ctor_m964382D
 		return;
 	}
 }
-// Method Definition Index: 75450
+// Method Definition Index: 75474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0_U3CAwakeU3Eb__0_m62F92F66C4E8CF4990800F12FB44AC649357C914 (U3CU3Ec__DisplayClass12_0_t20012BC1F7B6DA947EE460D5D80313E275E873E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2800,7 +2937,7 @@ IL_0016:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75451
+// Method Definition Index: 75475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TestImageBuild__ctor_mAD50ABF4CBFBF40C27983B8B4F58A25EF6D768A0 (TestImageBuild_tD2BB136F41F74840C57B3E0E97153BEFDD1AAF1D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2816,7 +2953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TestImageBuild__ctor_mAD50ABF4CBFBF40C27
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75452
+// Method Definition Index: 75476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator_Awake_mB7C64D707535C2066EEC1648BDB4B3C8AE9B9F76 (TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2841,7 +2978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator_Awake_mB7C64D707535C20
 		return;
 	}
 }
-// Method Definition Index: 75453
+// Method Definition Index: 75477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator_StartAnimation_mF7B99B5381FB15FE55FFFC064548F775D7977F56 (TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2871,7 +3008,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 75454
+// Method Definition Index: 75478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator_StopAnimation_mB8F6B3D9E546E31ACFBE6FEE32912DB8B5CC3A01 (TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2902,7 +3039,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 75455
+// Method Definition Index: 75479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TextColorAnimator_AnimateColor_mE5B1AB0513D60AF9591C75E32033D96D8888B86C (TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2921,7 +3058,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TextColorAnimator_AnimateColor
 		return L_1;
 	}
 }
-// Method Definition Index: 75456
+// Method Definition Index: 75480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator__ctor_m0AA92D88D4A5B64EF8D126636F72235D20CF783A (TextColorAnimator_t189FDE30C0233AD00C7E6C4F6322FC7A536B4BAC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2948,7 +3085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextColorAnimator__ctor_m0AA92D88D4A5B64
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75457
+// Method Definition Index: 75481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateColorU3Ed__9__ctor_m484C7BF0FA23DF26119D9D74CA7F9C0B40D3F4B8 (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -2958,14 +3095,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateColorU3Ed__9__ctor_m484C7BF0FA
 		return;
 	}
 }
-// Method Definition Index: 75458
+// Method Definition Index: 75482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateColorU3Ed__9_System_IDisposable_Dispose_m530306B7FE6A896C52AE3CEB6A95D7D07613BD8D (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 75459
+// Method Definition Index: 75483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateColorU3Ed__9_MoveNext_m11AA30F978EAE3BC3080C617A807E5D9AE0175B4 (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -3153,7 +3290,7 @@ IL_0120:
 		goto IL_0095;
 	}
 }
-// Method Definition Index: 75460
+// Method Definition Index: 75484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateColorU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4162C8CC7F910E1B38C6D5BCA64A52363133C4BE (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3161,7 +3298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateColorU3Ed__9_System_
 		return L_0;
 	}
 }
-// Method Definition Index: 75461
+// Method Definition Index: 75485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateColorU3Ed__9_System_Collections_IEnumerator_Reset_m420E275C343BE09B7DE01E2478F73F032114AD09 (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3170,7 +3307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateColorU3Ed__9_System_Collection
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateColorU3Ed__9_System_Collections_IEnumerator_Reset_m420E275C343BE09B7DE01E2478F73F032114AD09_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 75462
+// Method Definition Index: 75486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateColorU3Ed__9_System_Collections_IEnumerator_get_Current_mEDC01786B9E3F70D5BFCC012E32FE25F69C92D41 (U3CAnimateColorU3Ed__9_tA89926ADAE0B2F16F57900CDF7DBD10C927F63C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3186,7 +3323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateColorU3Ed__9_System_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75463
+// Method Definition Index: 75487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ViewManager_get_CurrentPart_m18F04FFF0FFCD32821E1FA0573A50E09AAEBF22A (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3195,7 +3332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ViewManager_get_CurrentPart_m18F04FFF
 		return L_0;
 	}
 }
-// Method Definition Index: 75464
+// Method Definition Index: 75488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ViewManager_get_CurrentView_m6AD30F8545D1E4708CEDF80AE3C0274AF278DA2F (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3204,11 +3341,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ViewManager_get_CurrentView_m6AD30F85
 		return L_0;
 	}
 }
-// Method Definition Index: 75465
+// Method Definition Index: 75489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Update_m6568096518F1C4D76962547A102EB8A839F67A80 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:49>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:50>
 		bool L_0 = __this->___testPart;
 		if (!L_0)
 		{
@@ -3216,24 +3353,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Update_m6568096518F1C4D76962
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:51>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:52>
 		int32_t L_1 = __this->___partToTest;
 		ViewManager_SetPart_m525AF6E22424F6CD4945348E78E562A0AE45C51C(__this, L_1, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:53>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:54>
 		__this->___testPart = (bool)0;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:56>
-		ViewManager_RefreshContentLockState_mFBA3D93DD0A4884D2C2DE7082435DACB9FC9705B(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:57>
-		ViewManager_UpdateInfoButtonFlash_mEE65C2C7190F7E55D770FCDAD0EA5CBBCCE144F6(__this, NULL);
+		ViewManager_RefreshContentLockState_mFBA3D93DD0A4884D2C2DE7082435DACB9FC9705B(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:58>
+		ViewManager_UpdateInfoButtonFlash_mEE65C2C7190F7E55D770FCDAD0EA5CBBCCE144F6(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:59>
 		return;
 	}
 }
-// Method Definition Index: 75466
+// Method Definition Index: 75490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Awake_m912B69D18C086E9BB231C293708BFD53859C4A29 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3243,7 +3380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Awake_m912B69D18C086E9BB231C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:62>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:63>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___infoToggleButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3254,7 +3391,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Awake_m912B69D18C086E9BB231C
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:63>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:64>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___infoToggleButton;
 		NullCheck(L_2);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3;
@@ -3267,11 +3404,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Awake_m912B69D18C086E9BB231C
 
 IL_0024:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:64>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:65>
 		return;
 	}
 }
-// Method Definition Index: 75467
+// Method Definition Index: 75491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Start_m6504ED26B6C08664041D8A360FBBA0C65BB6F3F7 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3282,11 +3419,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Start_m6504ED26B6C08664041D8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:68>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:69>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___contentImage;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:69>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:70>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___infoToggleButton;
 		NullCheck(L_1);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_2;
@@ -3295,13 +3432,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_Start_m6504ED26B6C08664041D8
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_3, __this, (intptr_t)((void*)ViewManager_ToggleView_m75C6908D09D07B5D8B1CC7801975A293930FC6A6_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_2, L_3, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:70>
-		ViewManager_SetPart_m525AF6E22424F6CD4945348E78E562A0AE45C51C(__this, 0, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:71>
+		ViewManager_SetPart_m525AF6E22424F6CD4945348E78E562A0AE45C51C(__this, 0, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 75468
+// Method Definition Index: 75492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_OnDestroy_mBC96631EE198E9EC652588127E640EF445A19EAB (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3312,7 +3449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_OnDestroy_mBC96631EE198E9EC6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:75>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:76>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___infoToggleButton;
 		NullCheck(L_0);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_1;
@@ -3321,11 +3458,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_OnDestroy_mBC96631EE198E9EC6
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_2, __this, (intptr_t)((void*)ViewManager_ToggleView_m75C6908D09D07B5D8B1CC7801975A293930FC6A6_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_1, L_2, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:76>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:77>
 		return;
 	}
 }
-// Method Definition Index: 75469
+// Method Definition Index: 75493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetCompleteAnatomyMode_m6123CB77AED4CEED11AD55332FE230199D9A994E (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3339,14 +3476,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetCompleteAnatomyMode_m6123
 	ImageFaderU5BU5D_tF60EFEE7BC50639073A6CC48A78C2E8D04A14ADF* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:87>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:88>
 		V_0 = 1;
 		goto IL_003e;
 	}
 
 IL_0004:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:89>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:90>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = __this->___contentViews;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -3361,7 +3498,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:91>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:92>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_5 = __this->___contentViews;
 		int32_t L_6 = V_0;
 		NullCheck(L_5);
@@ -3370,7 +3507,7 @@ IL_0004:
 		NullCheck(L_8);
 		ImageFaderU5BU5D_tF60EFEE7BC50639073A6CC48A78C2E8D04A14ADF* L_9;
 		L_9 = GameObject_GetComponentsInChildren_TisImageFader_tF80D43B3C3BF9ECB82713ABD8C7F3823E878AD0A_mAA4E164A7D805588DED6D3D11D2CB439727392DB(L_8, (bool)1, GameObject_GetComponentsInChildren_TisImageFader_tF80D43B3C3BF9ECB82713ABD8C7F3823E878AD0A_mAA4E164A7D805588DED6D3D11D2CB439727392DB_RuntimeMethod_var);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:92>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:93>
 		V_1 = L_9;
 		V_2 = 0;
 		goto IL_0034;
@@ -3378,13 +3515,13 @@ IL_0004:
 
 IL_0027:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:92>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:93>
 		ImageFaderU5BU5D_tF60EFEE7BC50639073A6CC48A78C2E8D04A14ADF* L_10 = V_1;
 		int32_t L_11 = V_2;
 		NullCheck(L_10);
 		int32_t L_12 = L_11;
 		ImageFader_tF80D43B3C3BF9ECB82713ABD8C7F3823E878AD0A* L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:93>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:94>
 		bool L_14 = ___0_enabled;
 		NullCheck(L_13);
 		L_13->___alternateMode = L_14;
@@ -3394,7 +3531,7 @@ IL_0027:
 
 IL_0034:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:92>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:93>
 		int32_t L_16 = V_2;
 		ImageFaderU5BU5D_tF60EFEE7BC50639073A6CC48A78C2E8D04A14ADF* L_17 = V_1;
 		NullCheck(L_17);
@@ -3406,14 +3543,14 @@ IL_0034:
 
 IL_003a:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:87>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:88>
 		int32_t L_18 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
 IL_003e:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:87>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:88>
 		int32_t L_19 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_20 = __this->___contentViews;
 		NullCheck(L_20);
@@ -3423,11 +3560,11 @@ IL_003e:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:95>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:96>
 		return;
 	}
 }
-// Method Definition Index: 75470
+// Method Definition Index: 75494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetParticipationMode_m85A066D34BA1FC0770DA3CBE4DD8E452E7A39837 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3437,7 +3574,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetParticipationMode_m85A066
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:99>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:100>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_0 = __this->___part0ContentInfoManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3448,7 +3585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetParticipationMode_m85A066
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:100>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:101>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_2 = __this->___part0ContentInfoManager;
 		bool L_3 = ___0_enabled;
 		NullCheck(L_2);
@@ -3457,34 +3594,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetParticipationMode_m85A066
 
 IL_001a:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:101>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:102>
 		return;
 	}
 }
-// Method Definition Index: 75471
+// Method Definition Index: 75495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetPart_m525AF6E22424F6CD4945348E78E562A0AE45C51C (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, int32_t ___0_part, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:109>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:110>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___contentImage;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:111>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:112>
 		int32_t L_1 = __this->____currentPart;
 		V_0 = L_1;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:112>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:113>
 		int32_t L_2 = ___0_part;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_3 = __this->___contentViews;
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_2, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_3)->max_length)), 1)), NULL);
 		__this->____currentPart = L_4;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:113>
-		__this->____currentView = 0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:114>
+		__this->____currentView = 0;
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:115>
 		ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD(__this, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:116>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:117>
 		int32_t L_5 = __this->____currentPart;
 		if (L_5)
 		{
@@ -3492,16 +3629,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_SetPart_m525AF6E22424F6CD494
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:118>
-		__this->____infoButtonFlashEndTime = (0.0f);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:119>
+		__this->____infoButtonFlashEndTime = (0.0f);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:120>
 		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
 		return;
 	}
 
 IL_0051:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:121>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:122>
 		int32_t L_6 = V_0;
 		int32_t L_7 = __this->____currentPart;
 		if ((((int32_t)L_6) == ((int32_t)L_7)))
@@ -3510,17 +3647,17 @@ IL_0051:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:122>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:123>
 		ViewManager_StartInfoButtonFlash_mF7C9FCA1B5F9C13B5D6DCE20692F240EA7C4269A(__this, NULL);
 	}
 
 IL_0060:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:123>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:124>
 		return;
 	}
 }
-// Method Definition Index: 75472
+// Method Definition Index: 75496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_ToggleView_m75C6908D09D07B5D8B1CC7801975A293930FC6A6 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* G_B4_0 = NULL;
@@ -3528,7 +3665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_ToggleView_m75C6908D09D07B5D
 	int32_t G_B5_0 = 0;
 	ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* G_B5_1 = NULL;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:130>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:131>
 		bool L_0 = __this->____isLockedToContent;
 		if (!L_0)
 		{
@@ -3536,17 +3673,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_ToggleView_m75C6908D09D07B5D
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:131>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:132>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:133>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:134>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___contentImage;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:134>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:135>
 		int32_t L_2 = __this->____currentView;
 		if (!L_2)
 		{
@@ -3571,13 +3708,13 @@ IL_0022:
 	{
 		NullCheck(G_B5_1);
 		G_B5_1->____currentView = G_B5_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:135>
-		ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:136>
+		ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:137>
 		return;
 	}
 }
-// Method Definition Index: 75473
+// Method Definition Index: 75497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3597,18 +3734,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_ApplyCurrentView_m3527FD52E5
 	int32_t G_B10_0 = 0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B10_1 = NULL;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:143>
 		V_0 = 0;
 		goto IL_006a;
 	}
 
 IL_0004:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:144>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:145>
 		int32_t L_0 = V_0;
 		int32_t L_1 = __this->____currentPart;
 		V_1 = (bool)((((int32_t)L_0) == ((int32_t)L_1))? 1 : 0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:146>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:147>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = __this->___contentViews;
 		int32_t L_3 = V_0;
 		NullCheck(L_2);
@@ -3623,7 +3760,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:147>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:148>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = __this->___contentViews;
 		int32_t L_8 = V_0;
 		NullCheck(L_7);
@@ -3658,7 +3795,7 @@ IL_0035:
 
 IL_003a:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:149>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:150>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_13 = __this->___infoViews;
 		int32_t L_14 = V_0;
 		NullCheck(L_13);
@@ -3673,7 +3810,7 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:150>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:151>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_18 = __this->___infoViews;
 		int32_t L_19 = V_0;
 		NullCheck(L_18);
@@ -3708,14 +3845,14 @@ IL_0061:
 
 IL_0066:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:143>
 		int32_t L_24 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_24, 1));
 	}
 
 IL_006a:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:142>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:143>
 		int32_t L_25 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_26 = __this->___contentViews;
 		NullCheck(L_26);
@@ -3725,15 +3862,15 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:153>
-		ViewManager_RefreshActiveInfoManager_mA46FDF955709A9C1CB96A21C97C61CB26B3BF6B0(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:154>
-		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
+		ViewManager_RefreshActiveInfoManager_mA46FDF955709A9C1CB96A21C97C61CB26B3BF6B0(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:155>
+		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:156>
 		return;
 	}
 }
-// Method Definition Index: 75474
+// Method Definition Index: 75498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3750,7 +3887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshInfoButtonState_m8456
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F G_B12_0;
 	memset((&G_B12_0), 0, sizeof(G_B12_0));
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:165>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:166>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___infoToggleButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3761,16 +3898,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshInfoButtonState_m8456
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:165>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:166>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:167>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:168>
 		bool L_2 = __this->____isLockedToContent;
 		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:168>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:169>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___infoToggleButton;
 		NullCheck(L_3);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
@@ -3785,7 +3922,7 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:169>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:170>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___infoToggleButton;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -3797,7 +3934,7 @@ IL_000f:
 
 IL_003d:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:171>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:172>
 		bool L_10 = V_0;
 		if (L_10)
 		{
@@ -3805,13 +3942,13 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:172>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:173>
 		return;
 	}
 
 IL_0041:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:174>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:175>
 		int32_t L_11 = __this->____currentView;
 		if (L_11)
 		{
@@ -3832,7 +3969,7 @@ IL_0054:
 IL_0055:
 	{
 		V_1 = (bool)G_B9_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:175>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:176>
 		bool L_13 = V_1;
 		if (L_13)
 		{
@@ -3854,7 +3991,7 @@ IL_0061:
 IL_0067:
 	{
 		V_2 = G_B12_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:176>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:177>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___infoToggleButton;
 		NullCheck(L_16);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17;
@@ -3864,7 +4001,7 @@ IL_0067:
 		L_19 = ViewManager_GetDisplayedInfoButtonColor_mD6804A69EE02EE0B19907CA67805998B003C3607(__this, L_18, NULL);
 		NullCheck(L_17);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_17, L_19);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:178>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:179>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->___languageButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -3875,7 +4012,7 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:179>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:180>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_22 = __this->___languageButton;
 		NullCheck(L_22);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23;
@@ -3887,7 +4024,7 @@ IL_0067:
 
 IL_00a1:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:181>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:182>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_25 = __this->___connectedImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_26;
@@ -3898,7 +4035,7 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:182>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:183>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_27 = __this->___connectedImage;
 		NullCheck(L_27);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
@@ -3910,11 +4047,11 @@ IL_00a1:
 
 IL_00c3:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:183>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:184>
 		return;
 	}
 }
-// Method Definition Index: 75475
+// Method Definition Index: 75499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA46FDF955709A9C1CB96A21C97C61CB26B3BF6B0 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3924,7 +4061,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:192>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:193>
 		int32_t L_0 = __this->____currentView;
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
@@ -3932,7 +4069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA4
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:194>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:195>
 		int32_t L_1 = __this->____currentPart;
 		InfoManagerU5BU5D_tC739E2E11F8850FE48C8318CE104801D7519FFFE* L_2 = __this->___infoManagers;
 		NullCheck(L_2);
@@ -3956,13 +4093,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA4
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:196>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:197>
 		InfoManagerU5BU5D_tC739E2E11F8850FE48C8318CE104801D7519FFFE* L_8 = __this->___infoManagers;
 		int32_t L_9 = __this->____currentPart;
 		NullCheck(L_8);
 		int32_t L_10 = L_9;
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:197>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:198>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_12 = L_11;
 		NullCheck(L_12);
 		int32_t L_13;
@@ -3974,7 +4111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshActiveInfoManager_mA4
 
 IL_0047:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:200>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:201>
 		int32_t L_14 = __this->____currentPart;
 		if (L_14)
 		{
@@ -3992,7 +4129,7 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:202>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:203>
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_17 = __this->___part0ContentInfoManager;
 		InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* L_18 = __this->___part0ContentInfoManager;
 		NullCheck(L_18);
@@ -4004,20 +4141,20 @@ IL_0047:
 
 IL_0073:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:204>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:205>
 		return;
 	}
 }
-// Method Definition Index: 75476
+// Method Definition Index: 75500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshContentLockState_mFBA3D93DD0A4884D2C2DE7082435DACB9FC9705B (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:208>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:209>
 		bool L_0;
 		L_0 = ViewManager_IsBlockingOverlayActive_m17552DDDB3B7ABC3F8B61DF835C5AD50B1BB30F2(__this, NULL);
 		V_0 = L_0;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:209>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:210>
 		bool L_1 = __this->____isLockedToContent;
 		bool L_2 = V_0;
 		if ((!(((uint32_t)L_1) == ((uint32_t)L_2))))
@@ -4026,16 +4163,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_RefreshContentLockState_mFBA
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:210>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:211>
 		return;
 	}
 
 IL_0011:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:212>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:213>
 		bool L_3 = V_0;
 		__this->____isLockedToContent = L_3;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:214>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:215>
 		bool L_4 = __this->____isLockedToContent;
 		if (!L_4)
 		{
@@ -4050,23 +4187,23 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:216>
-		__this->____currentView = 0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:217>
-		ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD(__this, NULL);
+		__this->____currentView = 0;
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:218>
+		ViewManager_ApplyCurrentView_m3527FD52E5F55B233C3A2B12B19B4D2105A60CCD(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:219>
 		return;
 	}
 
 IL_0036:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:221>
-		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:222>
+		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:223>
 		return;
 	}
 }
-// Method Definition Index: 75477
+// Method Definition Index: 75501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ViewManager_IsBlockingOverlayActive_m17552DDDB3B7ABC3F8B61DF835C5AD50B1BB30F2 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4077,146 +4214,300 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ViewManager_IsBlockingOverlayActive_m175
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:226>
-		il2cpp_codegen_runtime_class_init_inline(GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0_il2cpp_TypeInfo_var);
-		GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* L_0;
-		L_0 = GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline(NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_1)
-		{
-			goto IL_001b;
-		}
-	}
-	{
-		il2cpp_codegen_runtime_class_init_inline(GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0_il2cpp_TypeInfo_var);
-		GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* L_2;
-		L_2 = GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline(NULL);
-		NullCheck(L_2);
-		bool L_3;
-		L_3 = GlobalAudioSliderOverlay_get_IsOverlayVisible_m483128E2FA246E8B8C70ECDD8401A71E0F5A84BA(L_2, NULL);
-		if (!L_3)
-		{
-			goto IL_001b;
-		}
-	}
-	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:227>
+		bool L_0;
+		L_0 = ViewManager_IsServerOverlayToggleActive_m3BF409C9547189D6F70B0056E59408C7860ECEEC(__this, NULL);
+		if (!L_0)
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:228>
 		return (bool)1;
 	}
 
-IL_001b:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:229>
-		MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* L_4;
-		L_4 = MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline(NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_5)
-		{
-			goto IL_0036;
-		}
-	}
-	{
-		MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* L_6;
-		L_6 = MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline(NULL);
-		NullCheck(L_6);
-		bool L_7;
-		L_7 = MessageOverlay_get_IsVisible_m4674916A1227A9060A006EF7566EE49CCD11F9D3(L_6, NULL);
-		if (!L_7)
-		{
-			goto IL_0036;
-		}
-	}
+IL_000a:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:230>
+		il2cpp_codegen_runtime_class_init_inline(GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0_il2cpp_TypeInfo_var);
+		GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* L_1;
+		L_1 = GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_2)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0_il2cpp_TypeInfo_var);
+		GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* L_3;
+		L_3 = GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline(NULL);
+		NullCheck(L_3);
+		bool L_4;
+		L_4 = GlobalAudioSliderOverlay_get_IsOverlayVisible_m483128E2FA246E8B8C70ECDD8401A71E0F5A84BA(L_3, NULL);
+		if (!L_4)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:231>
 		return (bool)1;
 	}
 
-IL_0036:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:232>
-		ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* L_8;
-		L_8 = Instances_get_ColorOverlay_mBD12CACD014D68C87C9C1EF0DD9F2B03EA9AF52C_inline(NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_9;
-		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_9)
-		{
-			goto IL_0051;
-		}
-	}
-	{
-		ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* L_10;
-		L_10 = Instances_get_ColorOverlay_mBD12CACD014D68C87C9C1EF0DD9F2B03EA9AF52C_inline(NULL);
-		NullCheck(L_10);
-		bool L_11;
-		L_11 = ColorOverlay_get_IsBlockingOverlayVisible_m9AEEBF303A9E9A7E21956EEE93C8D5F8922A7D71(L_10, NULL);
-		if (!L_11)
-		{
-			goto IL_0051;
-		}
-	}
+IL_0025:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:233>
+		MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* L_5;
+		L_5 = MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* L_7;
+		L_7 = MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline(NULL);
+		NullCheck(L_7);
+		bool L_8;
+		L_8 = MessageOverlay_get_IsVisible_m4674916A1227A9060A006EF7566EE49CCD11F9D3(L_7, NULL);
+		if (!L_8)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:234>
 		return (bool)1;
 	}
 
-IL_0051:
-	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:235>
-		GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* L_12;
-		L_12 = Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline(NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_13;
-		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_13)
-		{
-			goto IL_006c;
-		}
-	}
-	{
-		GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* L_14;
-		L_14 = Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline(NULL);
-		NullCheck(L_14);
-		bool L_15;
-		L_15 = GroupColorOverlay_get_IsVisible_mADB27D7BADCB100ACEB60679B179E27686F361DB(L_14, NULL);
-		if (!L_15)
-		{
-			goto IL_006c;
-		}
-	}
+IL_0040:
 	{
 		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:236>
+		ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* L_9;
+		L_9 = Instances_get_ColorOverlay_mBD12CACD014D68C87C9C1EF0DD9F2B03EA9AF52C_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_10)
+		{
+			goto IL_005b;
+		}
+	}
+	{
+		ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* L_11;
+		L_11 = Instances_get_ColorOverlay_mBD12CACD014D68C87C9C1EF0DD9F2B03EA9AF52C_inline(NULL);
+		NullCheck(L_11);
+		bool L_12;
+		L_12 = ColorOverlay_get_IsBlockingOverlayVisible_m9AEEBF303A9E9A7E21956EEE93C8D5F8922A7D71(L_11, NULL);
+		if (!L_12)
+		{
+			goto IL_005b;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:237>
 		return (bool)1;
 	}
 
-IL_006c:
+IL_005b:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:238>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:239>
+		GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* L_13;
+		L_13 = Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_14;
+		L_14 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_13, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_14)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* L_15;
+		L_15 = Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline(NULL);
+		NullCheck(L_15);
+		bool L_16;
+		L_16 = GroupColorOverlay_get_IsVisible_mADB27D7BADCB100ACEB60679B179E27686F361DB(L_15, NULL);
+		if (!L_16)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:240>
+		return (bool)1;
+	}
+
+IL_0076:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:242>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 75478
+// Method Definition Index: 75502
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ViewManager_IsServerOverlayToggleActive_m3BF409C9547189D6F70B0056E59408C7860ECEEC (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindAnyObjectByType_TisNetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3_mFA1A88128562F04CF2AC9BCEC1F61C1C5B62BCF3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:247>
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_0 = __this->____networkedMonitor;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:248>
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_2;
+		L_2 = Object_FindAnyObjectByType_TisNetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3_mFA1A88128562F04CF2AC9BCEC1F61C1C5B62BCF3(Object_FindAnyObjectByType_TisNetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3_mFA1A88128562F04CF2AC9BCEC1F61C1C5B62BCF3_RuntimeMethod_var);
+		__this->____networkedMonitor = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____networkedMonitor), (void*)L_2);
+	}
+
+IL_0019:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:250>
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_3 = __this->____networkedMonitor;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_4)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:251>
+		return (bool)0;
+	}
+
+IL_0029:
+	{
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:253>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:254>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:255>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:256>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:257>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:258>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:259>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:260>
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_5 = __this->____networkedMonitor;
+		NullCheck(L_5);
+		bool L_6;
+		L_6 = NetworkedMonitor_get_ShouldPlayIntro_m5D1A7A583C4592712B3004664BB441A8046D81BE(L_5, NULL);
+		if (L_6)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_7 = __this->____networkedMonitor;
+		NullCheck(L_7);
+		bool L_8;
+		L_8 = NetworkedMonitor_get_ShouldPlayPingPong_m229246F78B722DF7A3AE915102899C74866D512B(L_7, NULL);
+		if (L_8)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_9 = __this->____networkedMonitor;
+		NullCheck(L_9);
+		bool L_10;
+		L_10 = NetworkedMonitor_get_ShouldPlayOrgansOfGeneration_m68741AD61B4659E114BC8D6A975C48D58E4CA32F(L_9, NULL);
+		if (L_10)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_11 = __this->____networkedMonitor;
+		NullCheck(L_11);
+		bool L_12;
+		L_12 = NetworkedMonitor_get_ShouldPlayHeart_m88B2CFDB5D438A2D80B630040D88410CCEBC713F(L_11, NULL);
+		if (L_12)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_13 = __this->____networkedMonitor;
+		NullCheck(L_13);
+		bool L_14;
+		L_14 = NetworkedMonitor_get_ShouldPlayVibration_m1762FB9BCFB3EEDB2C107AA2DE3BB838F8EA62C5(L_13, NULL);
+		if (L_14)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_15 = __this->____networkedMonitor;
+		NullCheck(L_15);
+		bool L_16;
+		L_16 = NetworkedMonitor_get_MasterOpacityActive_m52C205A05DFB4795993412C5515FF708A60FBD37(L_15, NULL);
+		if (L_16)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_17 = __this->____networkedMonitor;
+		NullCheck(L_17);
+		bool L_18;
+		L_18 = NetworkedMonitor_get_HeartbeatActive_mCA11325BB1C73558A4D8122FE65BFBBDE52EF527(L_17, NULL);
+		if (L_18)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		NetworkedMonitor_tE014D9ADF8C15A87A15701F5305125D85418D4F3* L_19 = __this->____networkedMonitor;
+		NullCheck(L_19);
+		bool L_20;
+		L_20 = NetworkedMonitor_get_GroupColorModeActive_m27DF566FA9F39D67DD7B1271AEA57ADA940A9A73(L_19, NULL);
+		return L_20;
+	}
+
+IL_0090:
+	{
+		return (bool)1;
+	}
+}
+// Method Definition Index: 75503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_StartInfoButtonFlash_mF7C9FCA1B5F9C13B5D6DCE20692F240EA7C4269A (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:243>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:265>
 		float L_0;
 		L_0 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		float L_1 = __this->___infoButtonFlashDuration;
 		float L_2;
 		L_2 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.0f), L_1, NULL);
 		__this->____infoButtonFlashEndTime = ((float)il2cpp_codegen_add(L_0, L_2));
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:244>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:266>
 		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:245>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:267>
 		return;
 	}
 }
-// Method Definition Index: 75479
+// Method Definition Index: 75504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_UpdateInfoButtonFlash_mEE65C2C7190F7E55D770FCDAD0EA5CBBCCE144F6 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4226,7 +4517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_UpdateInfoButtonFlash_mEE65C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:249>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:271>
 		float L_0 = __this->____infoButtonFlashEndTime;
 		if ((!(((float)L_0) <= ((float)(0.0f)))))
 		{
@@ -4234,13 +4525,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager_UpdateInfoButtonFlash_mEE65C
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:250>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:272>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:252>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:274>
 		float L_1;
 		L_1 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		float L_2 = __this->____infoButtonFlashEndTime;
@@ -4250,17 +4541,17 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:254>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:276>
 		__this->____infoButtonFlashEndTime = (0.0f);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:255>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:277>
 		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:256>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:278>
 		return;
 	}
 
 IL_002d:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:259>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:281>
 		bool L_3 = __this->____isLockedToContent;
 		if (L_3)
 		{
@@ -4291,22 +4582,22 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:260>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:282>
 		ViewManager_RefreshInfoButtonState_m84566BC1FBF9568910C69C12944A3E7947534455(__this, NULL);
 	}
 
 IL_005b:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:261>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:283>
 		return;
 	}
 }
-// Method Definition Index: 75480
+// Method Definition Index: 75505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ViewManager_GetDisplayedInfoButtonColor_mD6804A69EE02EE0B19907CA67805998B003C3607 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_baseColor, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:265>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:287>
 		float L_0 = __this->____infoButtonFlashEndTime;
 		float L_1;
 		L_1 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
@@ -4316,14 +4607,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:266>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:288>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = ___0_baseColor;
 		return L_2;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:268>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:290>
 		float L_3;
 		L_3 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		float L_4 = __this->___infoButtonFlashSpeed;
@@ -4332,7 +4623,7 @@ IL_000f:
 		float L_6;
 		L_6 = Mathf_PingPong_mB1D6A10F386CE1EEA99DB69486DDA6DA531D799D_inline(((float)il2cpp_codegen_multiply(L_3, L_5)), (1.0f), NULL);
 		V_0 = L_6;
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:269>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:291>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = ___0_baseColor;
 		float L_8 = L_7.___r;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = ___0_baseColor;
@@ -4344,7 +4635,7 @@ IL_000f:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15;
 		memset((&L_15), 0, sizeof(L_15));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_15), L_8, L_10, L_12, ((float)il2cpp_codegen_multiply(L_14, (0.200000003f))), NULL);
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:270>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/UI/ViewManager.cs:292>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_16 = ___0_baseColor;
 		float L_17 = V_0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18;
@@ -4352,7 +4643,7 @@ IL_000f:
 		return L_18;
 	}
 }
-// Method Definition Index: 75481
+// Method Definition Index: 75506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager__ctor_mB424E5EFC02E882C8636706B14CE5AE5E2E857D1 (ViewManager_tEFC120302D382939B3F67BC4A0D34BA507F58D98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4386,7 +4677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ViewManager__ctor_mB424E5EFC02E882C86367
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75482
+// Method Definition Index: 75507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4420,7 +4711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 75483
+// Method Definition Index: 75508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4530,7 +4821,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75484
+// Method Definition Index: 75509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_InitializeOnce_mD291A8EE928E34C4ACE789442E6F330CCD1E088F (const RuntimeMethod* method) 
 {
 	{
@@ -4545,7 +4836,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedComparers___Internal_Initialize
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75485
+// Method Definition Index: 75510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOnce_mAA3E280D41052AA56EEA27461CCAE69FEF3C5046 (const RuntimeMethod* method) 
 {
 	{
@@ -4560,7 +4851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedWriters___Internal_InitializeOn
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 75486
+// Method Definition Index: 75511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GeneratedReaders___Internal_InitializeOnce_m165BE950CF88ED63DAEF9E3A1BA13DD04D81D220 (const RuntimeMethod* method) 
 {
 	{
@@ -4579,7 +4870,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 75330
+// Method Definition Index: 75354
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* TutorialManager_get_InfoManager_m0B3AD0E62C26AA149D628909C113478BCE3C7E34_inline (TutorialManager_tA517EF826FE03300C6A8ED492158E82A0E210CCF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4588,7 +4879,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InfoManager_t73157E1073D2EC397502
 		return L_0;
 	}
 }
-// Method Definition Index: 75286
+// Method Definition Index: 75310
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t InfoManager_get_CurrentIndex_mBF08EBCEF1B2C3E929301DBD36E142C0D0B4B4D1_inline (InfoManager_t73157E1073D2EC397502729FF09B72E6233AFEEF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4728,7 +5019,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 74660
+// Method Definition Index: 74664
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlobalAudioSliderOverlay_t467DEB7EB9C6B64DBD22559BCBD1B5468ED9A6A0* GlobalAudioSliderOverlay_get_Instance_mE3C93FEAF498391EA1BBA4D561A065794A7E7B11_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4744,7 +5035,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GlobalAudioSliderOverlay_t467DEB7
 		return L_0;
 	}
 }
-// Method Definition Index: 74869
+// Method Definition Index: 74882
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* MessageOverlay_get_Instance_m176EA49E0DF3FFDBBF431172BAD206C8666D1246_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4754,12 +5045,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MessageOverlay_t07119D4898FD18995
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Messages/MessageOverlay.cs:12>
+		//<source_info:C:/Users/Gebruiker/Documents/Unity/Vesalius/Assets/Scripts/Messages/MessageOverlay.cs:14>
 		MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95* L_0 = ((MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95_StaticFields*)il2cpp_codegen_static_fields_for(MessageOverlay_t07119D4898FD18995E26D4E20379BD580017DC95_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 74745
+// Method Definition Index: 74756
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ColorOverlay_t760F80C575D03264F8396E8B028F6794E37AD468* Instances_get_ColorOverlay_mBD12CACD014D68C87C9C1EF0DD9F2B03EA9AF52C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4774,7 +5065,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ColorOverlay_t760F80C575D03264F83
 		return L_0;
 	}
 }
-// Method Definition Index: 74747
+// Method Definition Index: 74758
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GroupColorOverlay_t31F01C9D97488CCFC70D90424731F43867D81D3D* Instances_get_GroupColorOverlay_m507423420E62E13957E87C15BFA6F9EA2A6803CA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

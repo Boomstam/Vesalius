@@ -97,6 +97,7 @@ public class NetworkedMessageSystem : NetworkBehaviour
 
         if (_connectionsByUniqueId.TryGetValue(uniqueId, out NetworkConnection previousConn) && previousConn != sender)
         {
+            Debug.LogWarning($"[NetworkedMessageSystem] UniqueId '{uniqueId}' moved from conn {previousConn.ClientId} to conn {sender.ClientId}.");
             _connectedClients.Remove(previousConn);
             _deckRemaining.Remove(previousConn);
         }

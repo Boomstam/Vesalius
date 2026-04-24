@@ -3,6 +3,10 @@ using FishNet;
 using FishNet.Transporting;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using ParrelSync;
+#endif
+
 /// <summary>
 /// Generates and stores a permanent per-install unique ID in PlayerPrefs.
 /// Sends it to the server once the FishNet client connection is established.
@@ -10,19 +14,25 @@ using UnityEngine;
 public class ClientIdentity : MonoBehaviour
 {
     private const string PrefKey = "ClientUniqueId";
+    private const int RegistrationRetryCount = 5;
+    private const float RegistrationRetryDelaySeconds = 2f;
 
     public static string UniqueId { get; private set; }
 
+    private Coroutine registrationRoutine;
+
     private void Awake()
     {
-        if (!PlayerPrefs.HasKey(PrefKey))
+        string resolvedPrefKey = ResolvePrefKey();
+
+        if (!PlayerPrefs.HasKey(resolvedPrefKey))
         {
-            PlayerPrefs.SetString(PrefKey, System.Guid.NewGuid().ToString());
+            PlayerPrefs.SetString(resolvedPrefKey, System.Guid.NewGuid().ToString());
             PlayerPrefs.Save();
         }
 
-        UniqueId = PlayerPrefs.GetString(PrefKey);
-        Debug.Log($"[ClientIdentity] UniqueId = {UniqueId}");
+        UniqueId = PlayerPrefs.GetString(resolvedPrefKey);
+        Debug.Log($"[ClientIdentity] UniqueId = {UniqueId} (key: {resolvedPrefKey})");
     }
 
     private void OnEnable()
@@ -33,6 +43,8 @@ public class ClientIdentity : MonoBehaviour
 
     private void OnDisable()
     {
+        StopRegistrationRoutine();
+
         if (InstanceFinder.ClientManager != null)
             InstanceFinder.ClientManager.OnClientConnectionState -= OnClientConnectionState;
     }
@@ -40,22 +52,65 @@ public class ClientIdentity : MonoBehaviour
     private void OnClientConnectionState(ClientConnectionStateArgs args)
     {
         if (args.ConnectionState == LocalConnectionState.Started)
-            StartCoroutine(RegisterWhenReady());
+        {
+            StopRegistrationRoutine();
+            registrationRoutine = StartCoroutine(RegisterWhenReady());
+        }
+        else if (args.ConnectionState == LocalConnectionState.Stopped)
+        {
+            StopRegistrationRoutine();
+        }
     }
 
     private IEnumerator RegisterWhenReady()
     {
-        NetworkedMessageSystem nms = null;
-
-        while (nms == null)
+        for (int attempt = 1; attempt <= RegistrationRetryCount; attempt++)
         {
-            nms = FindObjectOfType<NetworkedMessageSystem>();
+            if (InstanceFinder.ClientManager == null || !InstanceFinder.ClientManager.Started)
+                yield break;
 
-            if (nms == null)
-                yield return new WaitForSeconds(0.5f);
+            NetworkedMessageSystem nms = null;
+            while (nms == null)
+            {
+                if (InstanceFinder.ClientManager == null || !InstanceFinder.ClientManager.Started)
+                    yield break;
+
+                nms = FindObjectOfType<NetworkedMessageSystem>();
+                if (nms == null)
+                    yield return new WaitForSeconds(0.25f);
+            }
+
+            nms.RegisterClient(UniqueId);
+            Debug.Log($"[ClientIdentity] Registration sent to server ({attempt}/{RegistrationRetryCount}).");
+
+            if (attempt < RegistrationRetryCount)
+                yield return new WaitForSeconds(RegistrationRetryDelaySeconds);
         }
 
-        nms.RegisterClient(UniqueId);
-        Debug.Log("[ClientIdentity] Registration sent to server.");
+        registrationRoutine = null;
+    }
+
+    private void StopRegistrationRoutine()
+    {
+        if (registrationRoutine == null)
+            return;
+
+        StopCoroutine(registrationRoutine);
+        registrationRoutine = null;
+    }
+
+    private static string ResolvePrefKey()
+    {
+#if UNITY_EDITOR
+        if (ClonesManager.IsClone())
+        {
+            string cloneArgument = ClonesManager.GetArgument();
+            if (!string.IsNullOrWhiteSpace(cloneArgument))
+                return $"{PrefKey}_{cloneArgument}";
+
+            return $"{PrefKey}_Clone";
+        }
+#endif
+        return PrefKey;
     }
 }
