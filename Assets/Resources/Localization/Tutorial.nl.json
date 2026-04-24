@@ -10,7 +10,7 @@
       "content": "Dit is de tutorial, bedoeld om je wegwijs te maken in de app. Je kan hem, voor de voorstelling begint, steeds opnieuw openen via het informatie-icoon linksboven.\n\nDaarnaast vind je daar ook de knop om van taal te veranderen."
     },
     {
-      "type": "chapter",
+      "type": "do_not_disturb",
       "key": "niet_storen",
       "title": "Niet Storen",
       "content": "Zet de telefoon op 'Niet Storen'."

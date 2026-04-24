@@ -9,11 +9,14 @@ using UnityEngine.UI;
 /// </summary>
 public class SoundsSlotManager : MonoBehaviour
 {
+    private const string DoNotDisturbObjectName = "Do Not Disturb Icons";
+
     [Header("Dependencies")]
     [SerializeField] private InfoManager infoManager;
 
     [Header("UI")]
     [SerializeField] private GameObject soundsPanel;
+    [SerializeField] private GameObject doNotDisturbIcons;
 
     [Header("Tutorial Styling")]
     [SerializeField] private TMP_FontAsset tutorialFont;
@@ -26,8 +29,12 @@ public class SoundsSlotManager : MonoBehaviour
     {
         ApplyTutorialStyling();
         EnsureTutorialBackgroundOverlay();
+        ResolveOptionalObjects();
 
         infoManager.OnChapterChanged += OnChapterChanged;
+        if (LanguageManager.Instance != null)
+            LanguageManager.Instance.LanguageChanged += OnLanguageChanged;
+
         Refresh(infoManager.CurrentIndex);
     }
 
@@ -35,18 +42,29 @@ public class SoundsSlotManager : MonoBehaviour
     {
         if (infoManager != null)
             infoManager.OnChapterChanged -= OnChapterChanged;
+
+        if (LanguageManager.Instance != null)
+            LanguageManager.Instance.LanguageChanged -= OnLanguageChanged;
     }
 
     private void OnChapterChanged(int index) => Refresh(index);
+
+    private void OnLanguageChanged(LanguageManager.AppLanguage _) => Refresh(infoManager.CurrentIndex);
 
     private void Refresh(int index)
     {
         string slotType = infoManager.GetSlotType(index);
         bool isSoundsSlot =
-            string.Equals(slotType, "sounds", System.StringComparison.OrdinalIgnoreCase) ||
-            string.Equals(slotType, "sound", System.StringComparison.OrdinalIgnoreCase);
+            string.Equals(slotType, InfoManager.SoundsType, System.StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(slotType, InfoManager.SoundType, System.StringComparison.OrdinalIgnoreCase);
+        bool showDoNotDisturbIcons =
+            string.Equals(slotType, InfoManager.DoNotDisturbType, System.StringComparison.OrdinalIgnoreCase);
 
-        soundsPanel.SetActive(isSoundsSlot);
+        if (soundsPanel != null)
+            soundsPanel.SetActive(isSoundsSlot);
+
+        if (doNotDisturbIcons != null)
+            doNotDisturbIcons.SetActive(showDoNotDisturbIcons);
     }
 
     private void ApplyTutorialStyling()
@@ -165,5 +183,15 @@ public class SoundsSlotManager : MonoBehaviour
             graphic.raycastTarget = false;
 
         backgroundOverlayCreated = true;
+    }
+
+    private void ResolveOptionalObjects()
+    {
+        if (doNotDisturbIcons == null)
+        {
+            Transform child = transform.Find(DoNotDisturbObjectName);
+            if (child != null)
+                doNotDisturbIcons = child.gameObject;
+        }
     }
 }

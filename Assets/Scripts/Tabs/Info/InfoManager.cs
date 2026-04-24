@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class InfoManager : MonoBehaviour
 {
+    public const string ChapterType = "chapter";
+    public const string ImageType = "image";
+    public const string SoundType = "sound";
+    public const string SoundsType = "sounds";
+    public const string DoNotDisturbType = "do_not_disturb";
+
     [System.Serializable]
     public struct ChapterData
     {
@@ -216,7 +222,8 @@ public class InfoManager : MonoBehaviour
         {
             if (entry == null) continue;
 
-            if (string.Equals(entry.type, "chapter", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(entry.type, ChapterType, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(entry.type, DoNotDisturbType, StringComparison.OrdinalIgnoreCase))
             {
                 ChapterData chapter = chapterIndex < chapters.Length
                     ? chapters[chapterIndex]
@@ -228,23 +235,23 @@ public class InfoManager : MonoBehaviour
                     chapter.content = entry.content;
 
                 result.Add(chapter);
-                slotTypes.Add("chapter");
+                slotTypes.Add(entry.type);
                 chapterIndex++;
             }
-            else if (string.Equals(entry.type, "image", StringComparison.OrdinalIgnoreCase))
+            else if (string.Equals(entry.type, ImageType, StringComparison.OrdinalIgnoreCase))
             {
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
-                slotTypes.Add("image");
+                slotTypes.Add(ImageType);
             }
-            else if (string.Equals(entry.type, "sound", StringComparison.OrdinalIgnoreCase))
+            else if (string.Equals(entry.type, SoundType, StringComparison.OrdinalIgnoreCase))
             {
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
-                slotTypes.Add("sound");
+                slotTypes.Add(SoundType);
             }
-            else if (string.Equals(entry.type, "sounds", StringComparison.OrdinalIgnoreCase))
+            else if (string.Equals(entry.type, SoundsType, StringComparison.OrdinalIgnoreCase))
             {
                 result.Add(new ChapterData { title = entry.title ?? string.Empty });
-                slotTypes.Add("sounds");
+                slotTypes.Add(SoundsType);
             }
         }
 

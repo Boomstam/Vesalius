@@ -4591,6 +4591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundsSlotManager
   infoManager: {fileID: 760369691}
   soundsPanel: {fileID: 1461049938}
+  doNotDisturbIcons: {fileID: 646292179}
   tutorialFont: {fileID: 11400000, guid: c47951f199fb4d04dabff811d2053391, type: 2}
   navigationArrowSprite: {fileID: 21300000, guid: f189512864dd0b24a845f2667e6f1230, type: 3}
 --- !u!1 &767118003
