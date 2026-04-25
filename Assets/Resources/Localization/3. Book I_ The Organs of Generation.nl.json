@@ -6,36 +6,36 @@
     {
       "type": "image",
       "key": "8.1 Organs of Generation Male",
-      "title": "Book I: The Organs of Generation"
+      "title": "Boek I: De voortplantingsorganen"
     },
     {
       "type": "image",
       "key": "8.2 Organs of Generation Female",
-      "title": "Book I: The Organs of Generation"
+      "title": "Boek I: De voortplantingsorganen"
     },
     {
       "type": "chapter",
       "key": "generation_ex_ovo",
-      "title": "Book I: The Organs of Generation",
-      "content": "\"Ex ovo omnia.\"\n(Everything comes from the egg.)"
+      "title": "Boek I: De voortplantingsorganen",
+      "content": "\"Ex ovo omnia.\"\n(Alles komt uit het ei.)"
     },
     {
       "type": "chapter",
       "key": "generation_origins_life",
-      "title": "Book I: The Organs of Generation",
-      "content": "The focus turns to the origins of life. The male and female reproductive systems are set out in structure: the uterus as a single organ, the testes and their vessels traced, the anatomy of the penis described with clarity."
+      "title": "Boek I: De voortplantingsorganen",
+      "content": "De aandacht richt zich op de oorsprong van het leven. De mannelijke en vrouwelijke voortplantingssystemen worden in hun structuur uiteengezet: de baarmoeder als een enkel orgaan, de testikels en hun bloedvaten in kaart gebracht, de anatomie van de penis duidelijk beschreven."
     },
     {
       "type": "chapter",
       "key": "generation_uneven_account",
-      "title": "Book I: The Organs of Generation",
-      "content": "Yet this account is uneven. His descriptions of female anatomy contain notable inaccuracies—reflecting limited access to female bodies, and the social and cultural limits of his time."
+      "title": "Boek I: De voortplantingsorganen",
+      "content": "Toch is dit verslag onevenwichtig. Zijn beschrijvingen van de vrouwelijke anatomie bevatten opvallende onnauwkeurigheden — een weerspiegeling van de beperkte toegang tot vrouwelijke lichamen en de sociale en culturele beperkingen van zijn tijd."
     },
     {
       "type": "chapter",
       "key": "generation_what_is_shown",
-      "title": "Book I: The Organs of Generation",
-      "content": "What is shown shapes what is known."
+      "title": "Boek I: De voortplantingsorganen",
+      "content": "Wat wordt getoond, bepaalt wat bekend is."
     }
   ]
 }

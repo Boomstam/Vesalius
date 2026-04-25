@@ -6,31 +6,31 @@
     {
       "type": "image",
       "key": "9. Senses",
-      "title": "Book VI: The Senses"
+      "title": "Boek VI: De zintuigen"
     },
     {
       "type": "chapter",
       "key": "senses_greek_quote",
-      "title": "Book VI: The Senses",
-      "content": "\"Αἱ αἰσθήσεις μάρτυρες τῆς ἀληθείας εἰσίν.\"\n(The senses are witnesses of the truth.)"
+      "title": "Boek VI: De zintuigen",
+      "content": "\"Αἱ αἰσθήσεις μάρτυρες τῆς ἀληθείας εἰσίν.\"\n(De zintuigen zijn getuigen van de waarheid.)"
     },
     {
       "type": "chapter",
       "key": "senses_perception_enters",
-      "title": "Book VI: The Senses",
-      "content": "Perception enters the body. Sight, hearing, smell, taste, and touch are traced through sense organs and nerves, linking the external world to the brain."
+      "title": "Boek VI: De zintuigen",
+      "content": "Waarneming dringt het lichaam binnen. Zicht, gehoor, reuk, smaak en tastzin worden via zintuigen en zenuwen doorgegeven, waardoor de buitenwereld met de hersenen wordt verbonden."
     },
     {
       "type": "chapter",
       "key": "senses_perception_path",
-      "title": "Book VI: The Senses",
-      "content": "Perception follows a path—from sense organs, through nerves, to the brain."
+      "title": "Boek VI: De zintuigen",
+      "content": "Waarneming volgt een pad—van zintuigen, via zenuwen, naar de hersenen."
     },
     {
       "type": "chapter",
       "key": "senses_unseen",
-      "title": "Book VI: The Senses",
-      "content": "What was once unseen becomes something that can be followed, examined, and questioned."
+      "title": "Boek VI: De zintuigen",
+      "content": "Wat eens onzichtbaar was, wordt iets dat gevolgd, onderzocht en in twijfel getrokken kan worden."
     }
   ]
 }

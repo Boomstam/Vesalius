@@ -6,25 +6,25 @@
     {
       "type": "image",
       "key": "4. Nerves",
-      "title": "Book IV: The Nerves"
+      "title": "Boek IV: De zenuwen"
     },
     {
       "type": "chapter",
       "key": "nerves_greek_quote",
-      "title": "Book IV: The Nerves",
-      "content": "\"Τὰ νεῦρα ὁδοὶ τῶν τοῦ σώματος σημάτων.\"\n(The nerves are the pathways through which the body's signals travel.)"
+      "title": "Boek IV: De zenuwen",
+      "content": "\"Τὰ νεῦρα ὁδοὶ τῶν τοῦ σώματος σημάτων.\"\n(De zenuwen zijn de banen waarlangs de signalen van het lichaam reizen.)"
     },
     {
       "type": "chapter",
       "key": "nerves_network",
-      "title": "Book IV: The Nerves",
-      "content": "The body becomes a network. Nerves form unseen pathways linking movement, sensation, and coordination."
+      "title": "Boek IV: De zenuwen",
+      "content": "Het lichaam wordt een netwerk. Zenuwen vormen onzichtbare banen die beweging, gewaarwording en coördinatie met elkaar verbinden."
     },
     {
       "type": "chapter",
       "key": "nerves_directed",
-      "title": "Book IV: The Nerves",
-      "content": "The body is not only moved—it is directed. Signals pass, connect, and organise. The brain begins to emerge as a centre of control."
+      "title": "Boek IV: De zenuwen",
+      "content": "Het lichaam wordt niet alleen bewogen — het wordt aangestuurd. Signalen gaan door, verbinden en organiseren. De hersenen beginnen zich te ontpoppen als een controlecentrum."
     }
   ]
 }

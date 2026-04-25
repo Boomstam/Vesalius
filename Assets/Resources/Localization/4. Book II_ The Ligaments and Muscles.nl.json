@@ -6,31 +6,31 @@
     {
       "type": "image",
       "key": "2. Muscles",
-      "title": "Book II: The Ligaments and Muscles"
+      "title": "Boek II: De ligamenten en spieren"
     },
     {
       "type": "chapter",
       "key": "muscles_il_movimento",
-      "title": "Book II: The Ligaments and Muscles",
-      "content": "\"Il movimento è armonia di forze.\"\n(Movement is the harmony of forces.)"
+      "title": "Boek II: De ligamenten en spieren",
+      "content": "\"Il movimento è armonia di forze.\"\n(Beweging is de harmonie van krachten.)"
     },
     {
       "type": "chapter",
       "key": "muscles_stillness_motion",
-      "title": "Book II: The Ligaments and Muscles",
-      "content": "Stillness gives way to motion. Muscles and ligaments are no longer confused—muscles act, ligaments stabilise."
+      "title": "Boek II: De ligamenten en spieren",
+      "content": "Rust maakt plaats voor beweging. Spieren en ligamenten worden niet langer door elkaar gehaald — spieren werken, ligamenten stabiliseren."
     },
     {
       "type": "chapter",
       "key": "muscles_coordination",
-      "title": "Book II: The Ligaments and Muscles",
-      "content": "Movement depends on coordination and balance between opposing actions—forces working together rather than alone."
+      "title": "Boek II: De ligamenten en spieren",
+      "content": "Beweging hangt af van coördinatie en evenwicht tussen tegengestelde krachten — krachten die samenwerken in plaats van afzonderlijk."
     },
     {
       "type": "chapter",
       "key": "muscles_vesalius_quote",
-      "title": "Book II: The Ligaments and Muscles",
-      "content": "\"I am not so much concerned with the muscles as with the movements they produce.\" — Andreas Vesalius"
+      "title": "Boek II: De ligamenten en spieren",
+      "content": "\"Ik ben niet zozeer geïnteresseerd in de spieren als wel in de bewegingen die ze voortbrengen.\" — Andreas Vesalius"
     }
   ]
 }
