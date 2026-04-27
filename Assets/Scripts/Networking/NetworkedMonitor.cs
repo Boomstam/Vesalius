@@ -983,7 +983,12 @@ public class NetworkedMonitor : NetworkBehaviour
             overlay.gameObject.SetActive(shouldBeActive);
 
         if (!shouldBeActive)
+        {
+            if (overlay.HeartbeatActive)
+                overlay.StopHeartbeat();
+            overlay.SetMasterOpacityActive(false);
             return;
+        }
 
         overlay.SetMasterOpacityActive(masterOpacityActive.Value);
         overlay.SetMasterOpacity(masterOpacityValue.Value);
