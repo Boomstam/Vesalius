@@ -25,9 +25,6 @@ public class NetworkedMessageSystem : NetworkBehaviour
         ["water station"] = "7\n(water station)"
     };
 
-    [Header("Settings")]
-    [Tooltip("How many clients receive each message press.")]
-    [SerializeField] private int _targetsPerMessage = 3;
 
     [Tooltip("Seconds the message stays visible on each client.")]
     [SerializeField] private float _messageDuration = 60f;
@@ -113,10 +110,10 @@ public class NetworkedMessageSystem : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SendMessageToTargets(string word)
+    public void SendMessageToTargets(string word, int targetsPerMessage)
     {
         string displayWord = GetDisplayLabel(word);
-        List<NetworkConnection> targets = PickTargets(_targetsPerMessage);
+        List<NetworkConnection> targets = PickTargets(targetsPerMessage);
         Debug.Log($"[NetworkedMessageSystem] '{displayWord}' -> {targets.Count} client(s).");
 
         foreach (NetworkConnection conn in targets)

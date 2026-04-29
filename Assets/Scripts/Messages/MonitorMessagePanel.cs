@@ -8,6 +8,10 @@ using UnityEngine.UI;
 /// </summary>
 public class MonitorMessagePanel : MonoBehaviour
 {
+    [Header("Settings")]
+    [Tooltip("How many clients receive each message press Set on Monitor.")]
+    [SerializeField] private int _targetsPerMessage = 2;
+    
     [Header("Sound Buttons")]
     [SerializeField] private Button _chimesButton;
     [SerializeField] private Button _clavesButton;
@@ -64,13 +68,13 @@ public class MonitorMessagePanel : MonoBehaviour
 
         Debug.Log("[MonitorMessagePanel] Wiring buttons.");
 
-        _sendChimes = () => _nms.SendMessageToTargets("chimes");
-        _sendClaves = () => _nms.SendMessageToTargets("claves");
-        _sendAnvil = () => _nms.SendMessageToTargets("anvil");
-        _sendWaterphone = () => _nms.SendMessageToTargets("waterphone");
-        _sendCrotales = () => _nms.SendMessageToTargets("crotales");
-        _sendCymbal = () => _nms.SendMessageToTargets("cymbal");
-        _sendWaterStation = () => _nms.SendMessageToTargets("water station");
+        _sendChimes = () => _nms.SendMessageToTargets("chimes", _targetsPerMessage);
+        _sendClaves = () => _nms.SendMessageToTargets("claves", _targetsPerMessage);
+        _sendAnvil = () => _nms.SendMessageToTargets("anvil", _targetsPerMessage);
+        _sendWaterphone = () => _nms.SendMessageToTargets("waterphone", _targetsPerMessage);
+        _sendCrotales = () => _nms.SendMessageToTargets("crotales", _targetsPerMessage);
+        _sendCymbal = () => _nms.SendMessageToTargets("cymbal", _targetsPerMessage);
+        _sendWaterStation = () => _nms.SendMessageToTargets("water station", _targetsPerMessage);
         _resetDeck = () => _nms.ResetDeck();
         _hardCut = () => _nms.HardCutAll();
         _groupMessage = () => _networkedMonitor.TriggerGroupMessageMode();
